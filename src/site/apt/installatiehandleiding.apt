@@ -1,0 +1,7 @@
+~~ http://maven.apache.org/doxia/references/apt-format.html
+
+Installatie handleiding
+
+%{toc|section=1|fromDepth=0|toDepth=2}
+
+*{Stap 1}
