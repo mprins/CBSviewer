@@ -128,8 +128,7 @@
 						</manifest>
 						<manifestEntries>
 							<Implementation-Build>
-								branch: ${buildScmBranch} rev:
-								${buildNumber} timestamp: ${timestamp}
+								branch: ${buildScmBranch} rev: ${buildNumber} timestamp: ${timestamp}
 							</Implementation-Build>
 							<SCM-Revision>${scm.revision}</SCM-Revision>
 							<url>${project.url}</url>
@@ -152,9 +151,7 @@
 							<force>true</force>
 							<nosuffix>true</nosuffix>
 							<failOnWarning>false</failOnWarning>
-							<excludes>
-								<exclude>**/*.js</exclude>
-							</excludes>
+							<excludes />
 						</configuration>
 					</execution>
 				</executions>
