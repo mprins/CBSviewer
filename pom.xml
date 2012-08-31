@@ -27,21 +27,21 @@
 		<url>https://github.com/MinELenI/CBSviewer/issues/</url>
 	</issueManagement>
 	<scm>
+		<url>https://github.com/MinELenI/CBSviewer</url>
 		<connection>scm:git:git@github.com:git://github.com/MinELenI/CBSviewer.git</connection>
 		<developerConnection>scm:git:git@github.com:git@github.com:MinELenI/CBSviewer.git</developerConnection>
-		<url>https://github.com/MinELenI/CBSviewer.git</url>
 		<tag>master</tag>
 	</scm>
 	<ciManagement>
 		<system>Jenkins</system>
-		<url>http://gisdemo.agro.nl/jenkins/job/cbsviewer/</url>
+		<url>http://gisdemo.agro.nl/jenkins/job/CBS-viewer/</url>
 	</ciManagement>
 	<prerequisites>
 		<maven>3.0.4</maven>
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>8-SNAPSHOT</geotools.version>
+		<geotools.version>8.0</geotools.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
@@ -54,9 +54,16 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
+			<properties>
+				<github.site.dryRun>false</github.site.dryRun>
+			</properties>
 		</profile>
 		<profile>
 			<id>jenkins</id>
+			<properties>
+				<github.password></github.password>
+				<github.site.dryRun>true</github.site.dryRun>
+			</properties>
 		</profile>
 	</profiles>
 	<build>
@@ -285,9 +292,10 @@
 				<artifactId>site-maven-plugin</artifactId>
 				<version>0.7</version>
 				<configuration>
-					<message>site voor ${project.version}</message>
+					<message>site update voor versie ${project.version}</message>
 					<password>${github.password}</password>
 					<userName>${github.username}</userName>
+					<host>api.github.com</host>
 				</configuration>
 				<executions>
 					<execution>

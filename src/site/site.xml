@@ -30,15 +30,16 @@
 			<item name="Issues dashboard" href="${project.issueManagement.url}" />
 		</links>
 		<menu name="Informatie">
-			<item name="FAQ" href="/faq.html" />
-			<item name="Release notes" href="/releasenotes.html" />
+			<item name="Wiki" href="https://github.com/MinELenI/CBSviewer/wiki" />
 			<item name="Ontwikkel handleiding" href="/ontwikkelhandleiding.html" />
+			<item name="Release notes" href="/releasenotes.html" />
 			<item name="Technisch ontwerp" href="/technischontwerp.html" />
 		</menu>
 		<menu name="Installatie">
 			<item name="Installatie handleiding" href="/installatiehandleiding.html" />
 		</menu>
 		<menu name="Maven 2.0">
+			<item name="FAQ" href="/faq.html" />
 			<item name="APT Format" href="format.html" />
 		</menu>
 		<menu ref="reports" />
