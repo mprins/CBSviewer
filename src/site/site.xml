@@ -42,6 +42,9 @@
 			<item name="FAQ" href="/faq.html" />
 			<item name="APT Format" href="format.html" />
 		</menu>
+		<menu name="WCAG testing">
+			<item name="Webrichtlijnen Quickscan" href="http://versie1.webrichtlijnen.nl/toetsen/report/171162/347929/" />
+		</menu>
 		<menu ref="reports" />
 	</body>
 </project>
