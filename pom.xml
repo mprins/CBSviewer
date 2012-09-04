@@ -42,11 +42,12 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<geotools.version>8.0</geotools.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
 		<github.password />
+		<http.proxyHost />
+		<http.proxyPort>0</http.proxyPort>		
 	</properties>
 	<profiles>
 		<profile>
@@ -57,18 +58,156 @@
 			<properties>
 				<github.site.dryRun>false</github.site.dryRun>
 			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.mortbay.jetty</groupId>
+						<artifactId>jetty-maven-plugin</artifactId>
+						<version>8.1.5.v20120716</version>
+						<configuration>
+							<scanIntervalSeconds>5</scanIntervalSeconds>
+							<webAppConfig>
+								<baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
+								 	<resourcesAsCSV>src/main/webapp,target/cbsviewer</resourcesAsCSV>
+								</baseResource>
+							</webAppConfig>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<!-- specify this profile to build openlayers as part of the build, ie. -Popenlayers -->
+			<id>openlayers</id>
+			<properties>
+				<github.site.dryRun>false</github.site.dryRun>
+				<openlayers.checkout.url>scm:git:https://github.com/openlayers/openlayers.git</openlayers.checkout.url>
+				<!-- tag, branch, ... -->
+				<openlayers.checkout.versiontype>branch</openlayers.checkout.versiontype>
+				<openlayers.checkout.version>master</openlayers.checkout.version>
+				<!-- this can be any other OL build compressor or none -->
+				<openlayers.compress.build>closure</openlayers.compress.build>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-scm-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<id>getOpenLayers</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>checkout</goal>
+								</goals>
+								<configuration>
+									<connectionUrl>${openlayers.checkout.url}</connectionUrl>
+									<checkoutDirectory>${project.build.directory}/OLcheckout</checkoutDirectory>
+									<scmVersion>${openlayers.checkout.version}</scmVersion>
+									<scmVersionType>${openlayers.checkout.versiontype}</scmVersionType>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.2.1</version>
+						<executions>
+							<execution>
+								<id>buildOpenLayers</id>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<phase>compile</phase>
+								<configuration> 
+									<!-- note: python executable needs to be in the path --> 
+									<executable>python</executable>
+									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
+									<arguments>
+										<argument>build.py</argument>
+										<argument>-c</argument>
+										<argument>${openlayers.compress.build}</argument>
+										<argument>${basedir}/OL-build.cfg</argument>
+									</arguments>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<id>prepareOpenLayers</id>
+								<phase>process-sources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<get src="https://closure-compiler.googlecode.com/files/compiler-latest.zip" dest="${basedir}" usetimestamp="true" />
+										<unzip src="${basedir}/compiler-latest.zip" dest="${basedir}/target">
+											<patternset>
+												<include name="**/compiler.jar" />
+											</patternset>
+										</unzip>
+										<copy file="${basedir}/target/compiler.jar" tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar" overwrite="true" />
+									</target>
+								</configuration>
+							</execution>
+							<execution>
+								<id>copyOpenLayers</id>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<!-- copy files into build -->
+									<target>
+										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers.js" tofile="src/main/webapp/lib/OpenLayers.js" />
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 		<profile>
 			<id>jenkins</id>
 			<properties>
 				<github.password></github.password>
-				<github.site.dryRun>true</github.site.dryRun>
+				<github.site.dryRun>false</github.site.dryRun>
 			</properties>
 		</profile>
 	</profiles>
 	<build>
 		<finalName>${proj.finalname}</finalName>
+		<defaultGoal>install</defaultGoal>
 		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<doCheck>false</doCheck>
+					<doUpdate>false</doUpdate>
+					<timestampFormat>{0,date,yyyy-MM-dd HH:mm}</timestampFormat>
+					<shortRevisionLength>7</shortRevisionLength>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -128,7 +267,7 @@
 						</manifest>
 						<manifestEntries>
 							<Implementation-Build>
-								branch: ${buildScmBranch} rev: ${buildNumber} timestamp: ${timestamp}
+								branch: ${scmBranch} rev: ${buildNumber} timestamp: ${timestamp}
 							</Implementation-Build>
 							<SCM-Revision>${scm.revision}</SCM-Revision>
 							<url>${project.url}</url>
@@ -151,7 +290,25 @@
 							<force>true</force>
 							<nosuffix>true</nosuffix>
 							<failOnWarning>false</failOnWarning>
-							<excludes />
+							<excludes>
+								<exclude>**/lib/*.js</exclude>
+							</excludes>
+							<!-- 
+							<includes>
+								<include>**/js/*.js</include>
+								<include>cbsviewer.js</include>
+							</includes>
+							 -->
+							<outputDirectory>${project.build.directory}/${project.build.finalName}/js</outputDirectory>
+							<aggregations>
+								<aggregation>
+									<includes>
+										<include>**/Viewer.js</include>
+									</includes>
+									<output>${project.build.directory}/${project.build.finalName}/js/cbsviewer.js</output>
+									<removeIncluded>true</removeIncluded>
+								</aggregation>
+							</aggregations>
 						</configuration>
 					</execution>
 				</executions>
@@ -326,6 +483,27 @@
 									</pluginExecutionFilter>
 									<action>
 										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											com.github.jlgrock.javascript-framework
+										</groupId>
+										<artifactId>
+											closure-compiler-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.13.0,)
+										</versionRange>
+										<goals>
+											<goal>
+												js-closure-compile
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>

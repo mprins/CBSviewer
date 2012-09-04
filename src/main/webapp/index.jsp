@@ -23,7 +23,12 @@
 <body>
 	<h1>Hello World!</h1>
 
+	<div id="kaart" class="kaart"></div>
 	<%-- scripts als laatste laden --%>
+	<script type="text/javascript" src="lib/OpenLayers.js"></script>
+	<script type="text/javascript" src="lib/jquery-1.8.1.min.js"></script>
+	<script type="text/javascript" src="js/cbsviewer-min.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
