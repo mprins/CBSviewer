@@ -182,6 +182,7 @@
 			<properties>
 				<github.password></github.password>
 				<github.site.dryRun>false</github.site.dryRun>
+				<github.site.skip>true</github.site.skip>
 			</properties>
 		</profile>
 	</profiles>
@@ -205,7 +206,7 @@
 					<doCheck>false</doCheck>
 					<doUpdate>false</doUpdate>
 					<timestampFormat>{0,date,yyyy-MM-dd HH:mm}</timestampFormat>
-					<shortRevisionLength>7</shortRevisionLength>
+					<shortRevisionLength>10</shortRevisionLength>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -256,7 +257,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<warSourceExcludes>**/*.html,**/*.psd,**/*.css,**/*.js</warSourceExcludes>
+					<warSourceExcludes>**/*.html,**/*.psd,**/*.css,**/js/*.js</warSourceExcludes>
 					<archive>
 						<forced>true</forced>
 						<index>true</index>
@@ -269,7 +270,7 @@
 							<Implementation-Build>
 								branch: ${scmBranch} rev: ${buildNumber} timestamp: ${timestamp}
 							</Implementation-Build>
-							<SCM-Revision>${scm.revision}</SCM-Revision>
+							<SCM-Revision>${buildNumber}</SCM-Revision>
 							<url>${project.url}</url>
 							<release>${project.version}</release>
 						</manifestEntries>
@@ -293,12 +294,6 @@
 							<excludes>
 								<exclude>**/lib/*.js</exclude>
 							</excludes>
-							<!-- 
-							<includes>
-								<include>**/js/*.js</include>
-								<include>cbsviewer.js</include>
-							</includes>
-							 -->
 							<outputDirectory>${project.build.directory}/${project.build.finalName}/js</outputDirectory>
 							<aggregations>
 								<aggregation>
