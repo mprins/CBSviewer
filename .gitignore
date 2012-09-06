@@ -3,3 +3,4 @@ target/
 .project
 .classpath
 /src/main/webapp/lib/OpenLayers.js
+compiler-latest.zip
