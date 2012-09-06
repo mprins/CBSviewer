@@ -4,3 +4,22 @@
 	width: 500px;
 	height: 500px;
 }
+
+.olHandlerBoxZoomBox {
+	border: 2px solid #9900FF;
+	position: absolute;
+	background-color: #9900FF;
+	opacity: 0.50;
+	font-size: 1px;
+	filter: alpha(opacity = 50);
+	border-bottom-color: #6B00B3;
+	border-right-color: #6B00B3;
+	border-top-color: #C266FF;
+	border-left-color: #C266FF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow: 2px 2px 2px #000;
+	-webkit-box-shadow: 2px 2px 2px #000;
+}
