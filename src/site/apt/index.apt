@@ -1,16 +1,15 @@
  -----
- The Site
+ CBS Viewer Site
  -----
- The Maven Team
+ mprins
  -----
 
-Maven Site for your project
+~~ http://maven.apache.org/doxia/references/apt-format.html
 
- Congratulations! If you are looking at this page then you have successfully generated a
- template site employing the site archetype and you have run:
+CBS Viewer Site
+
+  Dit is de Maven Site voor CBS Viewer, een {{{http://www.webrichtlijnen.nl/wat-en-waarom}Webrichtlijnen}} 
+  compliant viewer.
+
+ 
   
-+-----+
-
-m2 site:site
-
-+-----+

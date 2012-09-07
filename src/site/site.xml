@@ -30,10 +30,12 @@
 			<item name="Issues dashboard" href="${project.issueManagement.url}" />
 		</links>
 		<menu name="Informatie">
+			<item name="Home" href="/index.html" />
 			<item name="Wiki" href="https://github.com/MinELenI/CBSviewer/wiki" />
 			<item name="Ontwikkel handleiding" href="/ontwikkelhandleiding.html" />
 			<item name="Release notes" href="/releasenotes.html" />
 			<item name="Technisch ontwerp" href="/technischontwerp.html" />
+			<item name="Functioneel ontwerp" href="/functioneelontwerp.html" />
 		</menu>
 		<menu name="Installatie">
 			<item name="Installatie handleiding" href="/installatiehandleiding.html" />
@@ -47,4 +49,9 @@
 		</menu>
 		<menu ref="reports" />
 	</body>
+	<poweredBy>
+		<logo name="Github" href="https://github.com/MinELenI/CBSviewer" img="images/github.png"/>
+		<logo name="Geotools" href="http://www.geotools.org/" img="images/geotools.png" />
+		<logo name="OpenLayers" href="http://openlayers.org/" img="images/openlayers.png" />
+	</poweredBy>
 </project>
