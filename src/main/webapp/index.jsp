@@ -22,7 +22,11 @@
 </head>
 <body>
 	<h1>Hello World!</h1>
-
+	<div id="accessContainer">
+		<a class="accesskey" href="" accesskey="1"
+			onclick="document.getElementById('kaart').focus();return false;">
+			Activeer de kaart</a>
+	</div>
 	<div id="kaart" class="kaart"></div>
 
 	<%-- scripts als laatste laden --%>

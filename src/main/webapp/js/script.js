@@ -1,12 +1,12 @@
-jQuery(document).ready(function(){
+jQuery(document).ready(function() {
 	// create map
-	Viewer.create(config);
+	Viewer.init(config);
 });
 
 var setupPage = {
-		init: function(){
-			OpenLayers.Lang.setCode('nl');
-		}
-}
+	init : function() {
+		OpenLayers.Lang.setCode('nl');
+	}
+};
 
 setupPage.init();
