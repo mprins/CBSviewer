@@ -15,7 +15,8 @@ var setupPage = {
 		OpenLayers.Lang.setCode('nl');
 
 		// a11y link toevoegen in de DOM
-		var aLink = '<div><a class="accesskey" href="" accesskey="1" onclick="document.getElementById(\"' + config.mapDiv
+		var aLink = '<div><a class="accesskey" href="" accesskey="1" onclick="document.getElementById(\"'
+				+ config.mapDiv
 				+ '\").focus(); return false;" title="' 
 				+ OpenLayers.i18n('keyboardNavTtl') + '">'
 				+ OpenLayers.i18n('keyboardnav') + '</a></div>';
