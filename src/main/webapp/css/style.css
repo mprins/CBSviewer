@@ -1,6 +1,7 @@
 @CHARSET "UTF-8";
 
 a.accesskey {
+	/* instellen op achtergrond kleur */
 	color: white;
 }
 
@@ -14,13 +15,17 @@ a.accesskey:focus {
 	height: 500px;
 }
 
+.kaart:focus {
+	outline-style: solid;
+}
+
 .olHandlerBoxZoomBox {
 	border: 2px solid #9900FF;
 	position: absolute;
 	background-color: #9900FF;
 	opacity: 0.50;
 	font-size: 1px;
-	filter: alpha(opacity = 50);
+	filter: alpha(opacity =   50);
 	border-bottom-color: #6B00B3;
 	border-right-color: #6B00B3;
 	border-top-color: #C266FF;
@@ -31,4 +36,63 @@ a.accesskey:focus {
 	box-shadow: 2px 2px 2px #000;
 	-moz-box-shadow: 2px 2px 2px #000;
 	-webkit-box-shadow: 2px 2px 2px #000;
+}
+
+div.olControlZoom {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 4px;
+	padding: 2px;
+}
+
+div.olControlZoom a {
+	display: block;
+	margin: 1px;
+	padding: 0;
+	color: white;
+	font-size: 18px;
+	font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica,
+		sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	height: 22px;
+	width: 22px;
+	line-height: 19px;
+	background: #130085;
+	/* fallback for IE - IE6 requires background shorthand*/
+	background: rgba(0, 60, 136, 0.5);
+	filter: alpha(opacity = 80);
+}
+
+div.olControlZoom a:hover {
+	background: #130085; /* fallback for IE */
+	background: rgba(0, 60, 136, 0.7);
+	filter: alpha(opacity = 100);
+}
+
+@media only screen and (max-width: 600px) {
+	div.olControlZoom a:hover {
+		background: rgba(0, 60, 136, 0.5);
+	}
+}
+
+a.olControlZoomIn {
+	border-radius: 4px 4px 0 0;
+}
+
+a.olControlZoomOut {
+	border-radius: 0 0 4px 4px;
+}
+
+/**
+ * Animations
+ */
+.olLayerGrid .olTileImage {
+	-webkit-transition: opacity 0.2s linear;
+	-moz-transition: opacity 0.2s linear;
+	-o-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
 }

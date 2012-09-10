@@ -47,7 +47,8 @@
 		<github.username />
 		<github.password />
 		<http.proxyHost />
-		<http.proxyPort>0</http.proxyPort>		
+		<http.proxyPort>0</http.proxyPort>
+		<debug>false</debug>
 	</properties>
 	<profiles>
 		<profile>
@@ -57,6 +58,7 @@
 			</activation>
 			<properties>
 				<github.site.dryRun>false</github.site.dryRun>
+				<debug>true</debug>
 			</properties>
 			<build>
 				<plugins>
@@ -65,10 +67,24 @@
 						<artifactId>jetty-maven-plugin</artifactId>
 						<version>8.1.5.v20120716</version>
 						<configuration>
+							<connectors>
+								<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
+									<port>8020</port>
+									<maxIdleTime>60000</maxIdleTime>
+								</connector>
+							</connectors>
 							<webAppConfig>
-								<baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
-								 	<resourcesAsCSV>src/main/webapp,target/cbsviewer</resourcesAsCSV>
+								<baseResource
+									implementation="org.eclipse.jetty.util.resource.ResourceCollection">
+									<resourcesAsCSV>src/main/webapp,target/cbsviewer</resourcesAsCSV>
 								</baseResource>
+								<sessionHandler
+									implementation="org.eclipse.jetty.server.session.SessionHandler">
+									<sessionManager
+										implementation="org.eclipse.jetty.server.session.HashSessionManager">
+										<usingCookies>false</usingCookies>
+									</sessionManager>
+								</sessionHandler>
 							</webAppConfig>
 							<reload>manual</reload>
 						</configuration>
@@ -77,7 +93,8 @@
 			</build>
 		</profile>
 		<profile>
-			<!-- specify this profile to build openlayers as part of the build, ie. -Popenlayers -->
+			<!-- specify this profile to build openlayers as part of the build, ie. 
+				-Popenlayers -->
 			<id>openlayers</id>
 			<properties>
 				<github.site.dryRun>false</github.site.dryRun>
@@ -121,8 +138,8 @@
 									<goal>exec</goal>
 								</goals>
 								<phase>compile</phase>
-								<configuration> 
-									<!-- note: python executable needs to be in the path --> 
+								<configuration>
+									<!-- note: python executable needs to be in the path -->
 									<executable>python</executable>
 									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
 									<arguments>
@@ -149,13 +166,17 @@
 								<configuration>
 									<target>
 										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
-										<get src="https://closure-compiler.googlecode.com/files/compiler-latest.zip" dest="${basedir}" usetimestamp="true" />
+										<get
+											src="https://closure-compiler.googlecode.com/files/compiler-latest.zip"
+											dest="${basedir}" usetimestamp="true" />
 										<unzip src="${basedir}/compiler-latest.zip" dest="${basedir}/target">
 											<patternset>
 												<include name="**/compiler.jar" />
 											</patternset>
 										</unzip>
-										<copy file="${basedir}/target/compiler.jar" tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar" overwrite="true" />
+										<copy file="${basedir}/target/compiler.jar"
+											tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar"
+											overwrite="true" />
 									</target>
 								</configuration>
 							</execution>
@@ -168,7 +189,9 @@
 								<configuration>
 									<!-- copy files into build -->
 									<target>
-										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers.js" tofile="src/main/webapp/lib/OpenLayers.js" />
+										<copy
+											file="${project.build.directory}/OLcheckout/build/OpenLayers.js"
+											tofile="src/main/webapp/lib/OpenLayers.js" />
 									</target>
 								</configuration>
 							</execution>
@@ -180,9 +203,8 @@
 		<profile>
 			<id>jenkins</id>
 			<properties>
-				<github.password></github.password>
+				<github.password />
 				<github.site.dryRun>false</github.site.dryRun>
-				<github.site.skip>true</github.site.skip>
 			</properties>
 		</profile>
 	</profiles>
@@ -267,9 +289,7 @@
 							<addClasspath>true</addClasspath>
 						</manifest>
 						<manifestEntries>
-							<Implementation-Build>
-								branch: ${scmBranch} rev: ${buildNumber} timestamp: ${timestamp}
-							</Implementation-Build>
+							<Implementation-Build>branch: ${scmBranch} rev: ${buildNumber} timestamp: ${timestamp}</Implementation-Build>
 							<SCM-Revision>${buildNumber}</SCM-Revision>
 							<url>${project.url}</url>
 							<release>${project.version}</release>
@@ -291,6 +311,7 @@
 							<force>true</force>
 							<nosuffix>true</nosuffix>
 							<failOnWarning>false</failOnWarning>
+							<nocompress>${debug}</nocompress>
 							<excludes>
 								<exclude>**/lib/*.js</exclude>
 							</excludes>
@@ -298,6 +319,8 @@
 							<aggregations>
 								<aggregation>
 									<includes>
+										<include>**/KeyboardPoint.js</include>
+										<include>**/KeyboardClick.js</include>
 										<include>**/Viewer.js</include>
 									</includes>
 									<output>${project.build.directory}/${project.build.finalName}/js/cbsviewer.js</output>
@@ -441,16 +464,6 @@
 							<artifactId>taglist-maven-plugin</artifactId>
 							<version>2.4</version>
 						</plugin>
-						<!-- 
-						<plugin>
-							<groupId>org.codehaus.mojo.javascript</groupId>
-							<artifactId>javascript-report-maven-plugin</artifactId>
-							<version>1.0-alpha-1-SNAPSHOT</version>
-							<configuration>
-								<sourceDirectory>${basedir}/src/main/js</sourceDirectory>
-							</configuration>
-						</plugin>
-						 -->
 						<plugin>
 							<groupId>gr.abiss.mvn.plugins</groupId>
 							<artifactId>maven-jstools-plugin</artifactId>
