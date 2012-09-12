@@ -27,7 +27,7 @@
 		<links>
 			<item name="Wiki" href="https://github.com/MinELenI/CBSviewer/wiki" />
 			<item name="Jenkins dashboard" href="${project.ciManagement.url}" />
-			<item name="Travis CI dashboard" href="http://travis-ci.org/profile/MinELenI" />
+			<item name="Travis CI dashboard" href="http://travis-ci.org/MinELenI/CBSviewer" />
 			<item name="Issues dashboard" href="${project.issueManagement.url}" />
 		</links>
 		<menu name="Informatie">
@@ -47,6 +47,13 @@
 		</menu>
 		<menu name="WCAG testing">
 			<item name="Webrichtlijnen Quickscan" href="http://versie1.webrichtlijnen.nl/toetsen/report/171162/347929/" />
+		</menu>
+		<menu name="Links">
+			<item name="Wiki" href="https://github.com/MinELenI/CBSviewer/wiki" />
+			<item name="Jenkins dashboard" href="${project.ciManagement.url}" />
+			<item name="Travis CI dashboard" href="http://travis-ci.org/MinELenI/CBSviewer" />
+			<item name="Issues dashboard" href="${project.issueManagement.url}" />
+			<item name="Broncode" href="${project.scm.url}" />
 		</menu>
 		<menu ref="reports" />
 	</body>

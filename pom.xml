@@ -411,6 +411,11 @@
 							<version>2.8-SNAPSHOT</version>
 							<configuration>
 								<publishDateLocale>nl</publishDateLocale>
+								<includeOpenIssues>false</includeOpenIssues>
+								<onlyMilestoneIssues>false</onlyMilestoneIssues>
+								<onlyCurrentVersion>false</onlyCurrentVersion>
+								<!-- <columnNames></columnNames> -->
+								<sortColumnNames>Fix Version DESC,Key DESC</sortColumnNames>
 							</configuration>
 							<reportSets>
 								<reportSet>
