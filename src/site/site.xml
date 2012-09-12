@@ -27,6 +27,7 @@
 		<links>
 			<item name="Wiki" href="https://github.com/MinELenI/CBSviewer/wiki" />
 			<item name="Jenkins dashboard" href="${project.ciManagement.url}" />
+			<item name="Travis CI dashboard" href="http://travis-ci.org/profile/MinELenI" />
 			<item name="Issues dashboard" href="${project.issueManagement.url}" />
 		</links>
 		<menu name="Informatie">
