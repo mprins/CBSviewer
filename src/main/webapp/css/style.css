@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
 a.accesskey {
-	/* instellen op achtergrond kleur */
+	/* TODO: instellen op achtergrond kleur */
 	color: white;
 }
 
@@ -9,10 +9,30 @@ a.accesskey:focus {
 	color: #436976;
 }
 
+accessContainer{
+}
+a.cssError {
+	position: absolute;
+	top: -500px;
+	text-align: center;
+	display: block;
+	height: 21px;
+	overflow: hidden;
+}
+a.cssError:focus{
+	position: relative;
+	top: 0;
+	background-color: #fff;
+	width: 100%;
+	color: #000;
+	z-index: 900;
+}
 .kaart {
-	border: 1px solid #000000;
+	border: 1px solid #ccc;
+	background-color: #eff0f2;
 	width: 500px;
 	height: 500px;
+	position: relative;
 }
 
 .kaart:focus {
@@ -30,9 +50,9 @@ a.accesskey:focus {
 	border-right-color: #6B00B3;
 	border-top-color: #C266FF;
 	border-left-color: #C266FF;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
 	box-shadow: 2px 2px 2px #000;
 	-moz-box-shadow: 2px 2px 2px #000;
 	-webkit-box-shadow: 2px 2px 2px #000;
@@ -62,7 +82,7 @@ div.olControlZoom a {
 	width: 22px;
 	line-height: 19px;
 	background: #130085;
-	/* fallback for IE - IE6 requires background shorthand*/
+	/* fallback for IE - IE6 requires background shorthand */
 	background: rgba(0, 60, 136, 0.5);
 	filter: alpha(opacity = 80);
 }
