@@ -21,7 +21,20 @@
 		</developer>
 	</developers>
 	<contributors />
-	<licenses />
+	<licenses>
+		<license>
+			<name>BSD license</name>
+			<url>https://raw.github.com/openlayers/openlayers/master/license.txt</url>
+			<comments>For any parts of OpenLayers</comments>
+			<distribution>manual</distribution>
+		</license>
+		<license>
+			<name>MIT license</name>
+			<url>https://raw.github.com/jquery/jquery/master/MIT-LICENSE.txt</url>
+			<comments>For any parts of jQuery</comments>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/MinELenI/CBSviewer/issues/</url>
@@ -150,6 +163,23 @@
 									</arguments>
 								</configuration>
 							</execution>
+							<execution>
+								<id>buildOpenLayers-test</id>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<phase>test-compile</phase>
+								<configuration>
+									<!-- note: python executable needs to be in the path -->
+									<executable>python</executable>
+									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
+									<arguments>
+										<argument>buildUncompressed.py</argument>
+										<argument>full</argument>
+										<argument>OpenLayers-test.js</argument>
+									</arguments>
+								</configuration>
+							</execution>
 						</executions>
 					</plugin>
 					<plugin>
@@ -182,7 +212,7 @@
 							</execution>
 							<execution>
 								<id>copyOpenLayers</id>
-								<phase>prepare-package</phase>
+								<phase>process-classes</phase>
 								<goals>
 									<goal>run</goal>
 								</goals>
@@ -192,6 +222,20 @@
 										<copy
 											file="${project.build.directory}/OLcheckout/build/OpenLayers.js"
 											tofile="src/main/webapp/lib/OpenLayers.js" />
+									</target>
+								</configuration>
+							</execution>
+							<execution>
+								<id>copyOpenLayers-test</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<copy
+											file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js"
+											tofile="src/test/resources/OpenLayers-test.js" />										
 									</target>
 								</configuration>
 							</execution>
@@ -273,6 +317,29 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.searls</groupId>
+				<artifactId>jasmine-maven-plugin</artifactId>
+				<version>1.2.0.0</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<preloadSources>
+						<source>src/main/webapp/lib/jquery-1.8.1.min.js</source>
+						<source>src/test/resources/OpenLayers-test.js</source>
+						<source>src/test/resources/jasmin_util.js</source>
+						<source>src/main/webapp/js/config.js</source>
+					</preloadSources>
+					<jsSrcDir>src/main/js</jsSrcDir>
+					<jsTestSrcDir>src/test/js</jsTestSrcDir>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -534,32 +601,10 @@
 										<ignore />
 									</action>
 								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											com.github.jlgrock.javascript-framework
-										</groupId>
-										<artifactId>
-											closure-compiler-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.13.0,)
-										</versionRange>
-										<goals>
-											<goal>
-												js-closure-compile
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
-
 			</plugins>
 		</pluginManagement>
 	</build>
