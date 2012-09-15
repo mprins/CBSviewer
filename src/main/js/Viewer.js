@@ -16,7 +16,7 @@ Viewer =
 
 			return {
 				/**
-				 * Constructor.
+				 * Constructor, attach to the DOM
 				 * 
 				 * @param config
 				 *            Configratie object
@@ -36,20 +36,14 @@ Viewer =
 							function() {
 								Viewer.destroy();
 							});
-					OpenLayers.Lang.setCode('nl');
+					OpenLayers.ImgPath = config.imgPath;
+					OpenLayers.IMAGE_RELOAD_ATTEMPTS = 2;
 					OpenLayers.Number.decimalSeparator = ",";
 
-					this.createMap();
-					this.addBaseMap();
-					this.addControls();
-				},
-
-				/**
-				 * Initialiseer de kaart.
-				 */
-				createMap : function() {
 					_map = new OpenLayers.Map(
 							this.config.mapDiv, this.config.map);
+					this.addBaseMap();
+					this.addControls();
 				},
 
 				/**
@@ -76,12 +70,19 @@ Viewer =
 							{
 								zoomWheelEnabled : false
 							}));
+					_map.addControl(new OpenLayers.Control.KeyboardClick(
+							{
+								/* alleen actief als de kaart focus heeft */
+								observeElement : this.config.mapDiv
+							}));
 				},
 
 				/**
-				 * cleanup.
+				 * cleanup. Moet aangeroepen voor dat een eventueel DOM element
+				 * van de pagina wordt verwijderd.
 				 */
 				destroy : function() {
+					_map.destroy();
 					_map = null;
 				},
 
@@ -136,7 +137,7 @@ Viewer =
 										style : '_null'
 									});
 					_map.addLayer(lyr);
-					_map.zoomTo(6);
+					_map.zoomTo(4);
 				}
 			};
 		}();

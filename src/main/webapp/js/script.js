@@ -18,17 +18,23 @@ var setupPage =
 				OpenLayers.Lang.setCode('nl');
 
 				// a11y link toevoegen in de DOM
-				var aLink ='<div class="accessContainer"><a class="accesskey" href="" accesskey="1" onclick="jQuery(\'#'
-								+ config.mapDiv + '\').attr(\'tabindex\',-1).focus(); return false;" title="'
+				var aLink =
+						'<div class="accessContainer"><a class="accesskey" href="" accesskey="1" onclick="jQuery(\'#'
+								+ config.mapDiv
+								+ '\').attr(\'tabindex\',-1).focus(); return false;" title="'
 								+ OpenLayers.i18n('keyboardNavTtl') + '">'
-								+ OpenLayers.i18n('keyboardnav') + '</a></div>';
-				jQuery('#' + config.mapDiv).before(aLink);
-				
+								+ OpenLayers.i18n('keyboardNav') + '</a></div>';
+				jQuery(
+						'#' + config.mapDiv).before(
+						aLink);
+
 				// core/css fout link
-				var aCore = '<a class="cssError" href="?coreonly=true">'
-								+OpenLayers.i18n('cssError')
-								+'</a>';
-				jQuery('#' + config.mapDiv).prepend(aCore);
+				var aCore =
+						'<a class="cssError" href="?coreonly=true">' + OpenLayers.i18n('cssError')
+								+ '</a>';
+				jQuery(
+						'#' + config.mapDiv).prepend(
+						aCore);
 			}
 		};
 

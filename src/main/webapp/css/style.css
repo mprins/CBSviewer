@@ -1,7 +1,6 @@
 @CHARSET "UTF-8";
 
-a.accesskey {
-	/* TODO: instellen op achtergrond kleur */
+a.accesskey { /* TODO: instellen op achtergrond kleur */
 	color: white;
 }
 
@@ -9,8 +8,10 @@ a.accesskey:focus {
 	color: #436976;
 }
 
-accessContainer{
+accessContainer {
+	
 }
+
 a.cssError {
 	position: absolute;
 	top: -500px;
@@ -19,14 +20,15 @@ a.cssError {
 	height: 21px;
 	overflow: hidden;
 }
-a.cssError:focus{
-	position: relative;
+
+a.cssError:focus {
 	top: 0;
 	background-color: #fff;
 	width: 100%;
 	color: #000;
 	z-index: 900;
 }
+
 .kaart {
 	border: 1px solid #ccc;
 	background-color: #eff0f2;
@@ -45,7 +47,7 @@ a.cssError:focus{
 	background-color: #9900FF;
 	opacity: 0.50;
 	font-size: 1px;
-	filter: alpha(opacity =   50);
+	filter: alpha(opacity =     50);
 	border-bottom-color: #6B00B3;
 	border-right-color: #6B00B3;
 	border-top-color: #C266FF;
@@ -84,13 +86,13 @@ div.olControlZoom a {
 	background: #130085;
 	/* fallback for IE - IE6 requires background shorthand */
 	background: rgba(0, 60, 136, 0.5);
-	filter: alpha(opacity = 80);
+	filter: alpha(opacity =   80);
 }
 
 div.olControlZoom a:hover {
 	background: #130085; /* fallback for IE */
 	background: rgba(0, 60, 136, 0.7);
-	filter: alpha(opacity = 100);
+	filter: alpha(opacity =   100);
 }
 
 @media only screen and (max-width: 600px) {

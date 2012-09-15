@@ -1,23 +1,23 @@
 /**
- * globale configuratie object voor de applicatie. 
+ * globale configuratie object voor de applicatie.
  */
 var config = {};
 
 config.imgPath = "img/";
-OpenLayers.ImgPath = config.imgPath;
-OpenLayers.IMAGE_RELOAD_ATTEMPTS = 2;
+
 // OpenLayers.ProxyHost = 'proxy.jsp?';
 
 /**
  * uitbreiding en overrides van de language file.
  */
-OpenLayers.Lang.nl = OpenLayers.Util.extend(
-		{
-			// 'key' : 'tekst',
-			'keyboardNavTtl' : 'Activeer toetsenbord navigatie voor de kaart. Gebruik +,- en pijl toetsen.',
-			'keyboardnav' : 'Activeer toetsenbord navigatie voor de kaart',
-			'cssError' : 'Wordt deze kaart niet goed weergegeven? Klik dan hier.'
-		}, OpenLayers.Lang.nl);
+OpenLayers.Lang.nl =
+		OpenLayers.Util
+				.extend(
+						{
+							'keyboardNavTtl' : 'Gebruik +,- en pijl toetsen. Met de i en Enter toets kan informatie opgevraagd worden....',
+							'keyboardNav' : 'Activeer toetsenbord navigatie voor de kaart',
+							'cssError' : 'Wordt deze kaart niet goed weergegeven? Klik dan hier.'
+						}, OpenLayers.Lang.nl);
 
 /** id van de div met de kaart. */
 config.mapDiv = "cbsKaart";
