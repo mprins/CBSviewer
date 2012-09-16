@@ -331,14 +331,20 @@
 					</execution>
 				</executions>
 				<configuration>
+					<browserVersion>FIREFOX_3_6</browserVersion>
 					<preloadSources>
+						<!-- HtmlUnit 2.9 heeft problemen met 1.8.1
 						<source>src/main/webapp/lib/jquery-1.8.1.min.js</source>
+						<source>src/test/resources/jquery-1.7.2.js</source> 
+						 -->
+						<source>http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</source>
 						<source>src/test/resources/OpenLayers-test.js</source>
 						<source>src/test/resources/jasmin_util.js</source>
 						<source>src/main/webapp/js/config.js</source>
 					</preloadSources>
 					<jsSrcDir>src/main/js</jsSrcDir>
 					<jsTestSrcDir>src/test/js</jsTestSrcDir>
+					<haltOnFailure>false</haltOnFailure>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -441,6 +447,11 @@
 							<version>2.12.3</version>
 							<configuration>
 								<linkXRef>true</linkXRef>
+								<!--<reportsDirectory>${project.build.directory}/jasmine</reportsDirectory>-->
+								<reportsDirectories>
+									<reportsDirectory>${project.build.directory}/jasmine</reportsDirectory>
+									<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+								</reportsDirectories>
 							</configuration>
 						</plugin>
 						<plugin>
@@ -518,7 +529,7 @@
 						<plugin>
 							<groupId>org.codehaus.mojo</groupId>
 							<artifactId>cobertura-maven-plugin</artifactId>
-							<version>2.5.1</version>
+							<version>2.5.2</version>
 						</plugin>
 						<plugin>
 							<groupId>org.codehaus.mojo</groupId>

@@ -28,7 +28,7 @@ var setupPage =
 						'#' + config.mapDiv).before(
 						aLink);
 
-				// core/css fout link
+				// core/css fout link toevoegen
 				var aCore =
 						'<a class="cssError" href="?coreonly=true">' + OpenLayers.i18n('cssError')
 								+ '</a>';

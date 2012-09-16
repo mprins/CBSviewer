@@ -2,15 +2,15 @@
  * Viewer klasse.
  * 
  * @author mprins
- * @returns a Viewer object
+ * @returns Viewer object
  */
 Viewer =
 		function() {
 			/**
-			 * This objects Map object, initially null.
+			 * Map object, initially null.
 			 * 
 			 * @private
-			 * @type OpenLayers.Map
+			 * @type {OpenLayers.Map}
 			 */
 			var _map = null;
 
@@ -47,9 +47,10 @@ Viewer =
 				},
 
 				/**
+				 * Accessor voor de kaart.
 				 * 
-				 * @returns OpenLayers.Map object van deze Viewer of undefined
-				 *          als het object niet is geinitialiseerd
+				 * @returns {OpenLayers.Map} object van deze Viewer of null als
+				 *          het object niet is geinitialiseerd
 				 * @deprecated probeer deze niet te gebruiken
 				 */
 				getMap : function() {
@@ -57,7 +58,7 @@ Viewer =
 				},
 
 				/**
-				 * add the controls
+				 * Controls aan de kaart hangen.
 				 */
 				addControls : function() {
 					_map.addControl(new OpenLayers.Control.KeyboardDefaults(
@@ -87,13 +88,26 @@ Viewer =
 				},
 
 				/**
-				 * add the WMS to the map.
+				 * Voeg WMS toe aan de kaart. Uitgangspunt is dat de WMS
+				 * transparante PNG ondersteund.
+				 * 
+				 * @param wmsConfig
+				 *            {object} met WMS parameters. <code>
+				 * {
+				 * 'name' : 'cbs_inwoners_2010_per_hectare',
+				 * 'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows',
+				 * 'layers' : 'cbsvierkanten100m2010:cbs_inwoners_2000_per_hectare',
+				 * 'styles' : 'cbsvierkant100m_inwoners_2000'
+				 * }
+				 * </code>
+				 * @todo WMS versie naar 1.3.0 tillen
 				 */
 				addWMS : function(wmsConfig) {
 					var layer = new OpenLayers.Layer.WMS(
 							wmsConfig.name, wmsConfig.url, {
 								layers : wmsConfig.layers,
 								styles : wmsConfig.styles,
+								// TODO
 								version : '1.1.1',
 								format : 'image/png',
 								transparent : true
@@ -106,13 +120,30 @@ Viewer =
 				},
 
 				/**
-				 * removes the WMS from the map.
+				 * verwijder de WMS uit de kaart.
 				 * 
-				 * @param wmsID
-				 *            ID van de WMS
+				 * @param wmsLyrName
+				 *            naam van de WMS service
 				 */
-				removeWMS : function(wmsID) {
-					// TODO implementatie
+				removeWMS : function(wmsLyrName) {
+					var lyrs = _map.getLayersByName(wmsLyrName);
+					for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+						_map.removeLayer(lyrs[lyr]);
+						lyrs[lyr].destroy();
+					}
+				},
+
+				/**
+				 * verwijder alle overlays. Voorlopig alleen type
+				 * {OpenLayers.Layer.WMS}
+				 */
+				removeOverlays : function() {
+					var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
+					for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+						_map.removeLayer(lyrs[lyr]);
+						lyrs[lyr].destroy();
+					}
+
 				},
 
 				/**
@@ -125,8 +156,8 @@ Viewer =
 					for ( var i = 0; i < 13; ++i) {
 						matrixIds[i] = "EPSG:28992:" + i;
 					}
-					var lyr =
-							new OpenLayers.Layer.WMTS(
+					_map
+							.addLayer(new OpenLayers.Layer.WMTS(
 									{
 										name : "achtergrond",
 										url : "http://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaart/",
@@ -135,8 +166,7 @@ Viewer =
 										matrixIds : matrixIds,
 										format : 'image/png8',
 										style : '_null'
-									});
-					_map.addLayer(lyr);
+									}));
 					_map.zoomTo(4);
 				}
 			};
