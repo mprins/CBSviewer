@@ -1,1 +1,14 @@
-@CHARSET "UTF-8";
+@charset "UTF-8";
+
+.olHandlerBoxZoomBox{
+	filter: alpha(opacity = 50);
+}
+div.olControlZoom a{
+	background: #130085;
+	filter: alpha(opacity = 80);
+}
+
+div.olControlZoom a:hover{
+	background: #130085;
+	filter: alpha(opacity = 100);
+}

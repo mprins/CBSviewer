@@ -16,10 +16,11 @@ Viewer = function() {
 
 	/**
 	 * Publieke interface van deze klasse.
-	 * @returns publieke viewer methodes
+	 * 
+	 * @returns publieke {Viewer} methodes
 	 */
 	return {
-		
+
 		/**
 		 * Constructor, attach to the DOM.
 		 * 
@@ -163,4 +164,4 @@ Viewer = function() {
 			_map.zoomTo(4);
 		}
 	};
-};
+}();

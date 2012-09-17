@@ -48,6 +48,7 @@
 	<ciManagement>
 		<system>Jenkins</system>
 		<url>http://gisdemo.agro.nl/jenkins/job/CBS-viewer/</url>
+		<notifiers />
 	</ciManagement>
 	<prerequisites>
 		<maven>3.0.4</maven>
@@ -344,7 +345,7 @@
 					</preloadSources>
 					<jsSrcDir>src/main/js</jsSrcDir>
 					<jsTestSrcDir>src/test/js</jsTestSrcDir>
-					<haltOnFailure>false</haltOnFailure>
+					<haltOnFailure>true</haltOnFailure>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -1,4 +1,4 @@
-@CHARSET "UTF-8";
+@charset "UTF-8";
 
 a.accesskey { /* TODO: instellen op achtergrond kleur */
 	color: white;
@@ -47,17 +47,12 @@ a.cssError:focus {
 	background-color: #9900FF;
 	opacity: 0.50;
 	font-size: 1px;
-	filter: alpha(opacity =     50);
 	border-bottom-color: #6B00B3;
 	border-right-color: #6B00B3;
 	border-top-color: #C266FF;
 	border-left-color: #C266FF;
 	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
 	box-shadow: 2px 2px 2px #000;
-	-moz-box-shadow: 2px 2px 2px #000;
-	-webkit-box-shadow: 2px 2px 2px #000;
 }
 
 div.olControlZoom {
@@ -83,16 +78,12 @@ div.olControlZoom a {
 	height: 22px;
 	width: 22px;
 	line-height: 19px;
-	background: #130085;
-	/* fallback for IE - IE6 requires background shorthand */
 	background: rgba(0, 60, 136, 0.5);
-	filter: alpha(opacity =   80);
 }
 
 div.olControlZoom a:hover {
-	background: #130085; /* fallback for IE */
 	background: rgba(0, 60, 136, 0.7);
-	filter: alpha(opacity =   100);
+
 }
 
 @media only screen and (max-width: 600px) {
