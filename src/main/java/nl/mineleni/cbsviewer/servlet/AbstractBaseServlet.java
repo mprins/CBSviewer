@@ -1,7 +1,7 @@
 /**
  * 
  */
-package nl.cbsviewer.servlet;
+package nl.mineleni.cbsviewer.servlet;
 
 import javax.servlet.http.HttpServlet;
 
