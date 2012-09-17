@@ -5,27 +5,32 @@
  */
 
 /**
+ * A custom handler that displays a vector point that can be moved using the
+ * arrow keys of the keyboard. *
+ * 
+ * @class OpenLayers.Handler.KeyboardPoint
  * @requires OpenLayers/Handler.js
  * @requires OpenLayers/Layer/Vector.js
- */
-
-/**
- * Class: OpenLayers.Handler.KeyboardPoint
- * 
- * A custom handler that displays a vector point that can be moved using the
- * arrow keys of the keyboard.
  */
 OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 
 	KEY_EVENTS : [ "keydown" ],
 
+	/**
+	 * @constructor
+	 * @param control
+	 * @param callbacks
+	 * @param options
+	 */
 	initialize : function(control, callbacks, options) {
 		OpenLayers.Handler.prototype.initialize.apply(this, arguments);
 		// cache the bound event listener method so it can be unobserved
 		// later
 		this.eventListener = OpenLayers.Function.bindAsEventListener(this.handleKeyEvent, this);
 	},
-
+	/**
+	 * called on activate.
+	 */
 	activate : function() {
 		if (!OpenLayers.Handler.prototype.activate.apply(this, arguments)) {
 			return false;
@@ -42,6 +47,9 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 		return true;
 	},
 
+	/**
+	 * called on deactivate.
+	 */
 	deactivate : function() {
 		if (!OpenLayers.Handler.prototype.deactivate.apply(this, arguments)) {
 			return false;
@@ -54,6 +62,12 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 		return true;
 	},
 
+	/**
+	 * handles the key events. Moving the selection feature around on the map.
+	 * 
+	 * @param evt
+	 *            {OpenLayers.Event} key event
+	 */
 	handleKeyEvent : function(evt) {
 		switch (evt.keyCode) {
 		case OpenLayers.Event.KEY_LEFT:
@@ -77,6 +91,11 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 		}
 	},
 
+	/**
+	 * 
+	 * @param lon
+	 * @param lat
+	 */
 	modifyFeature : function(lon, lat) {
 		if (!this.point) {
 			this.createFeature();
@@ -89,6 +108,9 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 		this.drawFeature();
 	},
 
+	/**
+	 * 
+	 */
 	createFeature : function() {
 		var center = this.map.getCenter();
 		var geometry = new OpenLayers.Geometry.Point(center.lon, center.lat);
@@ -100,11 +122,17 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 		});
 	},
 
+	/**
+	 * 
+	 */
 	destroyFeature : function() {
 		this.layer.destroyFeatures([ this.point ]);
 		this.point = null;
 	},
 
+	/**
+	 * 
+	 */
 	drawFeature : function() {
 		this.layer.drawFeature(this.point, this.style);
 	}

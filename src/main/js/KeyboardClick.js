@@ -5,10 +5,6 @@
  */
 
 /**
- * @class OpenLayers.Control.KeyboardClick
- * @requires OpenLayers/Control.js
- * @requires KeyboardPoint.js
- * 
  * A custom control that (a) adds a vector point that can be moved using the
  * arrow keys of the keyboard, and (b) displays a browser alert window when the
  * RETURN key is pressed. The control can be activated/deactivated using the "i"
@@ -16,8 +12,13 @@
  * the map so that the map is not moved when the arrow keys are pressed.
  * 
  * This control relies on the OpenLayers.Handler.KeyboardPoint custom handler.
+ *
+ * @class OpenLayers.Control.KeyboardClick
+ * @requires OpenLayers/Control.js
+ * @requires KeyboardPoint.js
  */
 OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
+	/** @constructor */
 	initialize : function(options) {
 		OpenLayers.Control.prototype.initialize.apply(this, [ options ]);
 		var observeElement = this.observeElement || document;
