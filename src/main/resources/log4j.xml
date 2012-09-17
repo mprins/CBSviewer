@@ -26,8 +26,8 @@
 		<param name="port" value="4445" />
 		<param name="locationInfo" value="true" />
 	</appender>
-	<logger name="nl.mineleni">
-		<level value="info" />
+	<logger name="nl.mineleni.cbsviewer">
+		<level value="debug" />
 	</logger>
 	<logger name="org.geotools">
 		<level value="warn" />

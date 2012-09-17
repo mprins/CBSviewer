@@ -4,5 +4,5 @@
  * @author mprins
  * 
  */
-package nl.cbsviewer.util;
+package nl.mineleni.cbsviewer.util;
 

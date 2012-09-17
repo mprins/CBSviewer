@@ -4,5 +4,5 @@
  * @since 1.6
  * @author mprins
  */
-package nl.cbsviewer.servlet;
+package nl.mineleni.cbsviewer.servlet;
 
