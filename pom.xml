@@ -7,17 +7,25 @@
 	<version>0.1-SNAPSHOT</version>
 	<name>CBSviewer Webapp</name>
 	<description>Webrichtlijnen compliant webmap viewer</description>
-	<url>http://mineleni.github.com/CBSviewer</url>
+	<url>http://mineleni.github.com/CBSviewer/</url>
 	<inceptionYear>2012</inceptionYear>
 	<organization>
 		<name><![CDATA[Ministerie EL&amp;I]]></name>
+		<url>https://github.com/organizations/MinELenI</url>
 	</organization>
 	<developers>
 		<developer>
 			<id>mprins</id>
+			<name>Mark Prins</name>
 			<url>https://github.com/mprins</url>
-			<organization><![CDATA[Ministerie EL&amp;I]]></organization>
-			<organizationUrl>https://github.com/organizations/MinELenI</organizationUrl>
+			<organization>Dienst Landelijk Gebied, Ministerie EL en I</organization>
+			<organizationUrl>http://www.dienstlandelijkgebied.nl/</organizationUrl>
+		</developer>
+		<developer>
+			<id>pmanders</id>
+			<name>Paul Manders</name>
+			<organization>Centraal Bureau voor de Statistiek, Ministerie EL en I</organization>
+			<organizationUrl>http://www.cbs.nl/</organizationUrl>
 		</developer>
 	</developers>
 	<contributors />
@@ -60,6 +68,7 @@
 		<jdk.version>1.7</jdk.version>
 		<github.username />
 		<github.password />
+		<github.site.dryRun>false</github.site.dryRun>
 		<http.proxyHost />
 		<http.proxyPort>0</http.proxyPort>
 		<debug>false</debug>
@@ -71,7 +80,6 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<github.site.dryRun>false</github.site.dryRun>
 				<debug>true</debug>
 			</properties>
 			<build>
@@ -111,7 +119,6 @@
 				-Popenlayers -->
 			<id>openlayers</id>
 			<properties>
-				<github.site.dryRun>false</github.site.dryRun>
 				<openlayers.checkout.url>scm:git:https://github.com/openlayers/openlayers.git</openlayers.checkout.url>
 				<!-- tag, branch, ... -->
 				<openlayers.checkout.versiontype>branch</openlayers.checkout.versiontype>
@@ -120,6 +127,7 @@
 				<openlayers.compress.build>closure</openlayers.compress.build>
 			</properties>
 			<build>
+				<defaultGoal>test-compile</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>

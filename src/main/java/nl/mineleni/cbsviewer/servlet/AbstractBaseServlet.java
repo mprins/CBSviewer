@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServlet;
  */
 public abstract class AbstractBaseServlet extends HttpServlet {
 
-    /**
-     * serialVersionUID.
-     */
-    private static final long serialVersionUID = 1L;
+	/**
+	 * serialVersionUID.
+	 */
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * default constructor.
-     */
-    public AbstractBaseServlet() {
-        // Auto-generated constructor stub
-    }
+	/**
+	 * default constructor.
+	 */
+	public AbstractBaseServlet() {
+		// Auto-generated constructor stub
+	}
 
 }
