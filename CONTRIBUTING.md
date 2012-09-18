@@ -7,4 +7,4 @@
 * Zorg ervoor dat je de [ontwikkelhandleiding](http://mineleni.github.com/CBSviewer/ontwikkelhandleiding.html) leest
 * Lees wat over Jasmine, Openlayers, Geotools en jQuery
 
-En ohja, "We speak Dutch" ;-)
+En oh ja, "We speak Dutch" ;-)
