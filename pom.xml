@@ -205,6 +205,7 @@
 								<configuration>
 									<target>
 										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<mkdir dir="${basedir}/cache" />
 										<get
 											src="https://closure-compiler.googlecode.com/files/compiler-latest.zip"
 											dest="${basedir}/cache" usetimestamp="true" />
