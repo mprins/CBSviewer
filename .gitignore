@@ -3,6 +3,7 @@
 .project
 .classpath
 /src/main/webapp/lib/OpenLayers.js
+/cache/
 /src/test/resources/OpenLayers-test.js
 /mvn.log
-/cache/
+/notes.txt

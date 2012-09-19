@@ -12,4 +12,7 @@ Installatie handleiding
 
 %{toc|section=1|fromDepth=0|toDepth=2}
 
-*{Stap 1}
+*{Tomcat}
+
+  De applicatie wordt uitgeleverd als .war bestand dat rechtstreeks in een Tomcat servlet 
+  container kan woren gebruikt. 

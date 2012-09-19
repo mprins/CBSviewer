@@ -10,11 +10,112 @@
 
 Ontwikkel handleiding
 
+%{toc|section=1|fromDepth=0|toDepth=3}
+
+  Dit project gebruikt {{{Maven}http://maven.apache.org/run-maven/index.html}} als build tool 
+  en {{{Github}https://github.com/MinELenI/CBSviewer}} voor broncode beheer.
+
+	[PROXY] Een aantal van de maven commando's heeft internet toegang nodig, het kan zijn dat je 
+             hiervoor http of https proxy configuratie gegevens moet aangeven op de commando regel. 
+             
++----+
+-Dhttp.proxyHost=<host> -Dhttp.proxyPort=<poort> -Dhttps.proxyHost=<host> -Dhttps.proxyPort=<poort>
++----+
+            
+            bijvoorbeeld: 
+            <<<mvn -Popenlayers -Dhttp.proxyHost=145.12.1.11 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=145.12.1.11 -Dhttps.proxyPort=8080 site>>> 
+
+* {Broncode ophalen}
+
+  De broncode is opgeslagen in het Github systeem. De toegang is beschreven in het 
+  {{{./source-repository.html}Source Repository}} document.
+
++----+
+  git clone https://github.com/MinELenI/CBSviewer.git C:\workspace\CBSviewer
++----+
+  
+* {Beginnen met bouwen}
+
+  Het project gebruikt Maven 3 als build tool, als IDE raden we Eclipse 4.2 aan omdat deze de 
+  beste Maven integratie heeft.
+  Het project is opgezet als een {{{war}http://en.wikipedia.org/wiki/WAR_file_format_(Sun)}}} artifact. 
+  Voor het maken van een .war of release is alleen een juist geconfigureerde Maven installatie nodig.
+  
+  Om de ontwikkelomgeving op te zetten is het nodig om een build van OpenLayers te maken, dit gaat met 
+  onderstaand commando:
+  
 +-----+
-mvn -Popenlayers,developer install
+mvn -Popenlayers,developer
 +-----+
- 
+
+  Hiermee wordt een debug versie van OpenLayers in de broncode ondergebracht, een compacte versie voor de webapp en 
+  een volledige versie voor de unit tests.
+  De OpenLayers build configuratie is opgeslagen in het bestand <<</OL-build.cfg>>>.
+  
+** {code conventies en formatting}
+
+  Voor formatting van de Javascript code wordt het profiel gebruikt zoals dat te vinden is in de <<<ide/>>> directory.
+  
+  Voor formatting van de Java code wordt het profiel gebruikt zoals dat te vinden is in de <<<ide/>>> directory.
+   
+
+* {Unit testen}
+
+  Er wordt gebruik gemaakt van Jasmine. Vanwege wat problemen draaien een aantal van de tests niet <headless>.
+  Deze tests staan uit in de repository omdat we anders mislukte builds op de {{{build servers}./integration.html}} 
+  krijgen. 
+
++----+
+mvn jasmine:bdd
++----+
+  
+  Start de tests op: {{http://localhost:8234/}}
+  
+
+* {Applicatie testen} 
+
+  De applicatie kan lokaal gebouwd en gerund worden met behulp van Jetty
+  
 +-----+
-mvn -Popenlayers,developer jetty:run
+mvn jetty:run
 +-----+
+
+  Jetty start een webserver op op poort 8020 met de {{{applicatie in de root}http://localhost:8020/}}.
+
+* {Documentatie genereren}
+
+  Met Maven kan een site worden gemaakt met het commando:
+
++----+
+mvn site
++----+
+
+  Tijdens het maken van de site worden ook de unit en integratie tests gedraaid (er vindt dus ook een 
+  volledige build plaats!).  
+
+~~  Als je <<<dot>>> of <<<Graphviz>> hebt geinstalleerd kunj je javadoc met UML klasse diagrammen genereren; 
+~~  dit doe je door op de commandline de optie <<<-Dhavedot=true>>> mee te geven zoals in onderstaand voorbeeld 
+~~  om de documentatie te genereren
+~~  
+~~+----+
+~~mvn -Dhavedot=true site
+~~+----+
+
+** {Documentatie uploaden}
+
+  De documentatie moet "met de hand" naar de Github website worden overgedragen, hiervoor is authenticatie nodig.
+  
++----+
+mvn site-deploy -Dgithub.username=<login> -Dgithub.password=<passwd>  
++----+
+
+  De website staat dan op: http://mineleni.github.com/CBSviewer/
+
+* {Externe Informatie en links}
+
+  * {{{Algemene GitHub documentatie}http://help.github.com/}}
+  
+  * {{{GitHub pull request documentatie}http://help.github.com/send-pull-requests/}}
+  
+  * 
  
