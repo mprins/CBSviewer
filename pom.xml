@@ -199,8 +199,8 @@
 										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
 										<get
 											src="https://closure-compiler.googlecode.com/files/compiler-latest.zip"
-											dest="${basedir}" usetimestamp="true" />
-										<unzip src="${basedir}/compiler-latest.zip" dest="${basedir}/target">
+											dest="${basedir}/cache" usetimestamp="true" />
+										<unzip src="${basedir}/cache/compiler-latest.zip" dest="${basedir}/target">
 											<patternset>
 												<include name="**/compiler.jar" />
 											</patternset>
@@ -236,7 +236,7 @@
 									<target>
 										<copy
 											file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js"
-											tofile="src/test/resources/OpenLayers-test.js" />										
+											tofile="src/test/resources/OpenLayers-test.js" />
 									</target>
 								</configuration>
 							</execution>
