@@ -8,7 +8,19 @@ a.accesskey:focus {
 	color: #436976;
 }
 
-accessContainer {
+.accessContainer {
+	
+}
+
+.start {
+	
+}
+
+.kaartTitel {
+	
+}
+
+.hidden {
 	
 }
 
@@ -83,7 +95,6 @@ div.olControlZoom a {
 
 div.olControlZoom a:hover {
 	background: rgba(0, 60, 136, 0.7);
-
 }
 
 @media only screen and (max-width: 600px) {

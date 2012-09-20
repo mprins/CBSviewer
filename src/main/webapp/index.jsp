@@ -1,8 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" session="false"%>
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1">
+	<jsp:directive.page contentType="text/html; charset=UTF-8"
+		pageEncoding="UTF-8" session="false"
+		import="nl.mineleni.cbsviewer.util.LabelsBundle" />
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+		omit-xml-declaration="no" />
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 <head>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -46,19 +53,33 @@
 <title>Kaart</title>
 </head>
 <body>
-	<h1>Kaart</h1>
 
-	<div id="cbsKaart" class="kaart"></div>
+	<jsp:expression>RESOURCES.getString("KEY_KAART_TITEL")</jsp:expression>
 
-	<%-- scripts als laatste laden --%>
+	<div id="viewer" class="start">
 
-	<%-- TODO scripts alleen laden als de browser css ondersteund anders niet, 
-	dat kan door het sniffen voor de js klasse op het html element van het document --%>
+		<div id="coreContainer">
+			<!-- hier komt de statische kaart -->
+		</div>
 
-	<script type="text/javascript" src="lib/OpenLayers.js"></script>
-	<script type="text/javascript" src="lib/jquery-1.8.1.min.js"></script>
-	<script type="text/javascript" src="js/cbsviewer.js"></script>
-	<script type="text/javascript" src="js/config.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+		<div id="kaartContainer" class="hidden">
+			<div id="cbsKaart" class="kaart">
+				<!-- hier wordt de kaart ingehangen -->
+			</div>
+		</div>
+
+		<div id="zoekenContainer" class="zoeken">
+			<!-- adres zoeken -->
+		</div>
+
+		<div id="legendaContainer" class="legenda">
+			<!-- plaats voor de legenda -->
+		</div>
+
+	</div>
+
+	<!-- scripts als laatste laden -->
+	<jsp:include page="WEB-INF/jsp/javascript.jsp" />
 </body>
-</html>
+	</html>
+</jsp:root>
