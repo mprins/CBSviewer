@@ -36,21 +36,20 @@
 		<!-- debug toont al het verkeer -->
 		<level value="warn" />
 	</logger>
+	<logger name="org.apache.commons">
+		<level value="error" />
+	</logger>
 	<logger name="httpclient.wire">
 		<!-- debug toont al het verkeer -->
 		<level value="warn" />
 	</logger>
-	<logger name="org.apache.commons">
-		<level value="error" />
-	</logger>
 	<root>
 		<!-- kies: consoleAppender voor in de ide of rollingFileAppender voor op 
 			de server 
-			
 			<appender-ref ref="ganymedeAppender" /> 
 			<appender-ref ref="consoleAppender" /> 
-			
-		-->
-		<appender-ref ref="rollingFileAppender" />
+			<appender-ref ref="rollingFileAppender" /> 
+			-->
+		<appender-ref ref=rollingFileAppender />
 	</root>
 </log4j:configuration>
