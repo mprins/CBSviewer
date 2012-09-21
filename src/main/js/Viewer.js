@@ -2,8 +2,8 @@
  * Viewer.
  * 
  * @author mprins
- * @return {Viewer} Viewer object
- * @class {Viewer}
+ * @returns {Viewer} Viewer object
+ * @class
  */
 Viewer = function() {
 	/**
@@ -18,7 +18,7 @@ Viewer = function() {
 	 * update het informatie element met feature info.
 	 * 
 	 * @param {OpenLayers.Event}
-	 *            evt featureinfo event
+	 *            evt Het featureinfo event
 	 * @private
 	 */
 	function _showInfo(evt) {
@@ -35,10 +35,8 @@ Viewer = function() {
 		/**
 		 * Constructor, attach to the DOM.
 		 * 
-		 * @param config
-		 *            Configratie object
-		 * @constructor
-		 * 
+		 * @param {object}
+		 *            config Configratie object
 		 */
 		init : function(config) {
 			this.config = config;
@@ -76,6 +74,9 @@ Viewer = function() {
 		 * Controls aan de kaart hangen.
 		 */
 		addControls : function() {
+			_map.addControl(new UpdateLegendControl({
+				div : jQuery('#' + this.config.legendDiv)[0]
+			}));
 			_map.addControl(new OpenLayers.Control.KeyboardDefaults({
 				/* alleen actief als de kaart focus heeft */
 				observeElement : this.config.mapDiv

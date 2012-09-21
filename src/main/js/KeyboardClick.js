@@ -16,6 +16,7 @@
  * @class OpenLayers.Control.KeyboardClick
  * @requires OpenLayers/Control.js
  * @requires KeyboardPoint.js
+ * @extends OpenLayers.Control
  */
 OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 	/** @constructor */

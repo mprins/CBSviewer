@@ -29,6 +29,9 @@ OpenLayers.Lang.nl = OpenLayers.Util.extend({
 /** id van de div met de kaart. */
 config.mapDiv = "cbsKaart";
 
+/** id van de div voor de legenda. */
+config.legendDiv = "legendaContainer";
+
 /** instellingen voor de kaart. */
 config.map = {
 	projection : "EPSG:28992",

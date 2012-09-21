@@ -36,14 +36,19 @@
 	scheme="OVERHEID.DienstAgentschapInstellingOfProject" content="CBS" />
 <meta name="DCTERMS.description" content="CBS Kaart applicatie " />
 
+<link rel="stylesheet" href="css/layout.css" type="text/css"
+	media="screen, projection" />
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="css/print.css" type="text/css"
 	media="print" />
+<!--[if lte IE 6]>
+	<link rel="stylesheet" href="ie-layout.css" type="text/css" media="screen, projection" />
+<![endif]-->
 <!--[if lte IE 7]>
-		<link rel="stylesheet" href="static/css/ie.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="static/css/ie.css" type="text/css" media="all" />
 <![endif]-->
 <!--[if gte IE 8]>
-		<link rel="stylesheet" href="static/css/ie-8.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="static/css/ie-8.css" type="text/css" media="all" />
 <![endif]-->
 
 <script type="text/javascript">
@@ -52,32 +57,41 @@
 
 <title>Kaart</title>
 </head>
+
 <body>
-
-	<jsp:expression>RESOURCES.getString("KEY_KAART_TITEL")</jsp:expression>
-
-	<div id="viewer" class="start">
-
-		<div id="coreContainer">
-			<!-- hier komt de statische kaart -->
+	<div id="wrapper" class="wrapper">
+		<div id="kop" class="kop">
+			<jsp:expression>RESOURCES.getString("KEY_KAART_TITEL")</jsp:expression>
 		</div>
 
-		<div id="kaartContainer" class="hidden">
-			<div id="cbsKaart" class="kaart">
-				<!-- hier wordt de kaart ingehangen -->
+		<div id="viewer" class="viewer start">
+
+			<div id="kaarten" class="kaarten">
+				<div id="coreContainer" class="kaartContainer">
+					<!-- hier komt evt de statische kaart -->
+				</div>
+
+				<div id="kaartContainer" class="kaartContainer hidden">
+					<div id="cbsKaart" class="kaart">
+						<!-- hier wordt de dynamische kaart ingehangen -->
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<div id="zoekenContainer" class="zoeken">
-			<!-- adres zoeken -->
-		</div>
+			<div id="sidebar" class="sidebar">
+				<div id="zoekenContainer" class="zoeken">
+					<!-- adres zoeken -->
+				</div>
 
-		<div id="legendaContainer" class="legenda">
-			<!-- plaats voor de legenda -->
-		</div>
-		
-		<div id="infoContainer" class="featureinfo">
-			<!-- plaats voor de feature info -->
+				<div id="legendaContainer" class="legenda">
+					<!-- plaats voor de legenda -->
+				</div>
+
+				<div id="infoContainer" class="featureinfo">
+					<!-- plaats voor de feature info -->
+				</div>
+			</div>
+
 		</div>
 
 	</div>
