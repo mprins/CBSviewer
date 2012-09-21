@@ -20,7 +20,7 @@
 		<init-param>
 			<description>URLs die zijn toegestaan</description>
 			<param-name>allowedUrls</param-name>
-			<param-value>http://localhost:8020, http://geodata.nationaalgeoregister.nl/</param-value>
+			<param-value>http://geodata.nationaalgeoregister.nl/</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
