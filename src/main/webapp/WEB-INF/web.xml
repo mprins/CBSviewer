@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	id="cbsviewer" version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="cbsviewer" version="2.5">
 	<display-name>CBS viewer</display-name>
-
-	<description />
-	
+	<description></description>
 	<error-page>
 		<exception-type>java.lang.Throwable</exception-type>
 		<location>/error.jsp</location>
 	</error-page>
-	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
+	<servlet>
+		<description>reverse proxy servlet om XHR te laten werken</description>
+		<display-name>ReverseProxyServlet</display-name>
+		<servlet-name>ReverseProxyServlet</servlet-name>
+		<servlet-class>nl.mineleni.cbsviewer.servlet.ReverseProxyServlet</servlet-class>
+		<init-param>
+			<description>URLs die zijn toegestaan</description>
+			<param-name>allowedUrls</param-name>
+			<param-value>http://localhost:8020, http://geodata.nationaalgeoregister.nl/</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReverseProxyServlet</servlet-name>
+		<url-pattern>/xhr</url-pattern>
+	</servlet-mapping>
 </web-app>

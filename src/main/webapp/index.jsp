@@ -75,6 +75,10 @@
 		<div id="legendaContainer" class="legenda">
 			<!-- plaats voor de legenda -->
 		</div>
+		
+		<div id="infoContainer" class="featureinfo">
+			<!-- plaats voor de feature info -->
+		</div>
 
 	</div>
 

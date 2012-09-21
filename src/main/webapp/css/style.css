@@ -24,6 +24,10 @@ a.accesskey:focus {
 	
 }
 
+.featureinfo {
+	
+}
+
 a.cssError {
 	position: absolute;
 	top: -500px;
@@ -51,6 +55,16 @@ a.cssError:focus {
 
 .kaart:focus {
 	outline-style: solid;
+}
+
+.olCursorWait {
+    cursor: wait;
+}
+.olDragDown {
+    cursor: move;
+}
+.olDrawBox {
+    cursor: crosshair;
 }
 
 .olHandlerBoxZoomBox {

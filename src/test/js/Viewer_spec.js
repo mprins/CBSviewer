@@ -59,6 +59,9 @@ describe('Viewer', function() {
 		it('De projectie van de kaart is gelijk aan de configuratie.', function() {
 			expect(Viewer.getMap().projection).toEqual(config.map.projection);
 		});
+
+		// TODO test controls
+
 		it('De kaart moet 2 lagen hebben na toevoegen van 1 WMS', function() {
 			Viewer.addWMS(_wms);
 			expect(Viewer.getMap().layers.length).toBe(2);
@@ -68,14 +71,15 @@ describe('Viewer', function() {
 			Viewer.removeWMS(_wms.name);
 			expect(Viewer.getMap().layers.length).toBe(1);
 		});
-		it('De kaart moet 1 laag van type WMTS hebben na toevoegen en verwijderen van WMSsen', function() {
-			Viewer.addWMS(_wms);
-			Viewer.addWMS(_wms2);
-			Viewer.removeOverlays();
-			var lyrs = Viewer.getMap().layers;
-			expect(lyrs.length).toBe(1);
-			expect(lyrs[0]).toBeInstanceOf(OpenLayers.Layer.WMTS);
-		});
+		it('De kaart moet 1 laag en van type WMTS (de basemap) hebben na toevoegen en verwijderen van WMSsen',
+				function() {
+					Viewer.addWMS(_wms);
+					Viewer.addWMS(_wms2);
+					Viewer.removeOverlays();
+					var lyrs = Viewer.getMap().layers;
+					expect(lyrs.length).toBe(1);
+					expect(lyrs[0]).toBeInstanceOf(OpenLayers.Layer.WMTS);
+				});
 	});
 
 });
