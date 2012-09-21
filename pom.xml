@@ -245,7 +245,7 @@
 									<target>
 										<copy
 											file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js"
-											tofile="src/test/resources/OpenLayers-test.js" />
+											tofile="src/test/js/lib/OpenLayers-test.js" />
 									</target>
 								</configuration>
 							</execution>
@@ -348,8 +348,8 @@
 						<source>src/test/resources/jquery-1.7.2.js</source> 
 						 -->
 						<source>http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</source>
-						<source>src/test/resources/OpenLayers-test.js</source>
-						<source>src/test/resources/jasmin_util.js</source>
+						<source>src/test/js/lib/OpenLayers-test.js</source>
+						<source>src/test/js/lib/jasmin_util.js</source>
 						<source>src/main/webapp/js/config.js</source>
 					</preloadSources>
 					<jsSrcDir>src/main/js</jsSrcDir>
