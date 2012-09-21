@@ -353,7 +353,7 @@
 						<source>src/main/webapp/js/config.js</source>
 					</preloadSources>
 					<jsSrcDir>src/main/js</jsSrcDir>
-					<jsTestSrcDir>src/test/js</jsTestSrcDir>
+					<jsTestSrcDir>src/test/js/jasmine</jsTestSrcDir>
 					<haltOnFailure>true</haltOnFailure>
 				</configuration>
 			</plugin>
