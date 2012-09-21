@@ -41,9 +41,9 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        final String urls = config.getInitParameter("allowedUrls");
+        String urls = config.getInitParameter("allowedUrls");
         if (urls.length() > 0) {
-            urls.replaceAll("\\s", "");
+            urls = urls.replaceAll("\\s", "");
             this.allowedUrls = urls.split(",");
         }
     }
