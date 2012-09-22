@@ -18,7 +18,7 @@ UpdateLegendControl = OpenLayers.Class(OpenLayers.Control, {
 
 	/**
 	 * Dom element waar de legenda in wordt gevoegd. Moet een container element
-	 * zijn zoals P, DIV, SPAN,...
+	 * zijn zoals P, DIV, SPAN, MAP, LI, ...
 	 * 
 	 * @type {DOMElement}
 	 */

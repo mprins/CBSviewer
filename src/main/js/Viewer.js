@@ -107,11 +107,10 @@ Viewer = function() {
 		 * van de pagina.
 		 */
 		destroy : function() {
-			for ( var c = 0; _map.controls.length; c++){
-				_map.removeControl(_map.getControl(c));
+			if(_map != null) {
+				_map.destroy();
+				_map = null;
 			}
-			_map.destroy();
-			_map = null;
 		},
 
 		/**

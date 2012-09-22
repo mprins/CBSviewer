@@ -85,6 +85,10 @@ describe('Viewer', function() {
 					expect(lyrs.length).toBe(1);
 					expect(lyrs[0]).toBeInstanceOf(OpenLayers.Layer.WMTS);
 		});
+		it('Na destroy is de kaart null', function() {
+			Viewer.destroy();
+			expect(Viewer.getMap()).toBeNull();
+		});
 	});
 
 });

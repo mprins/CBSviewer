@@ -4,7 +4,7 @@
  * @author prinsmc
  */
 describe('OpenLayers.Control.KeyboardClick', function() {
-	it('Object type bestaat', function() {
+	it('Object type OpenLayers.Control.KeyboardClick bestaat', function() {
 		expect(OpenLayers.Control.KeyboardClick).toBeDefined();
 	});
 });
