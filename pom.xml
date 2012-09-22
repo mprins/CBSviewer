@@ -127,7 +127,7 @@
 				<openlayers.compress.build>closure</openlayers.compress.build>
 			</properties>
 			<build>
-				<defaultGoal>test-compile</defaultGoal>
+				<defaultGoal>process-test-classes</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>

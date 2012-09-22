@@ -40,6 +40,10 @@ Viewer = function() {
 		 */
 		init : function(config) {
 			this.config = config;
+			OpenLayers.ImgPath = config.imgPath;
+			OpenLayers.IMAGE_RELOAD_ATTEMPTS = 2;
+			OpenLayers.Number.decimalSeparator = ",";
+			
 			// merge any controls met default
 			jQuery.extend(true, this.config, {
 				map : {
@@ -49,10 +53,11 @@ Viewer = function() {
 			jQuery(window).unload(function() {
 				Viewer.destroy();
 			});
-			OpenLayers.ImgPath = config.imgPath;
-			OpenLayers.IMAGE_RELOAD_ATTEMPTS = 2;
-			OpenLayers.Number.decimalSeparator = ",";
+			
 
+
+			jQuery('#' + this.config.mapDiv).width(this.config.map.width).height(this.config.map.height);
+			
 			_map = new OpenLayers.Map(this.config.mapDiv, this.config.map);
 			this.addBaseMap();
 			this.addControls();
@@ -98,16 +103,20 @@ Viewer = function() {
 
 		/**
 		 * cleanup. Moet aangeroepen voor dat een eventueel DOM element van de
-		 * pagina wordt verwijderd.
+		 * pagina wordt verwijderd. Wordt automatische aangeroepen bij verlaten 
+		 * van de pagina.
 		 */
 		destroy : function() {
+			for ( var c = 0; _map.controls.length; c++){
+				_map.removeControl(_map.getControl(c));
+			}
 			_map.destroy();
 			_map = null;
 		},
 
 		/**
 		 * Voeg WMS toe aan de kaart. Uitgangspunt is dat de WMS transparante
-		 * PNG ondersteund.
+		 * PNG ondersteund. eerder geladen WMS lagen worden verwijderd
 		 * 
 		 * @param {object}
 		 *            wmsConfig Een object met WMS parameters. <code>
@@ -119,7 +128,8 @@ Viewer = function() {
 		 * }
 		 * </code>
 		 */
-		addWMS : function(wmsConfig) {
+		loadWMS : function(wmsConfig) {
+			this.removeOverlays();
 			var layer = new OpenLayers.Layer.WMS(wmsConfig.name, wmsConfig.url, {
 				layers : wmsConfig.layers,
 				styles : wmsConfig.styles,
