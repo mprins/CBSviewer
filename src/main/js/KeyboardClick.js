@@ -12,10 +12,11 @@
  * the map so that the map is not moved when the arrow keys are pressed.
  * 
  * This control relies on the OpenLayers.Handler.KeyboardPoint custom handler.
- *
+ * 
  * @class OpenLayers.Control.KeyboardClick
  * @requires OpenLayers/Control.js
  * @requires KeyboardPoint.js
+ * @extends OpenLayers.Control
  */
 OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 	/** @constructor */
@@ -42,12 +43,20 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 	/**
 	 * Event handler voor click event.
 	 * 
-	 * @param geometry
-	 *            {Openlayers.Geometry}
+	 * @param {Openlayers.Geometry}
+	 *            geometry met real life coordinaten
+	 * 
 	 */
 	onClick : function(geometry) {
-		// TODO
-		alert("You clicked near " + geometry.x + " N, " + geometry.y + " E");
+		var featureInfoCtl = this.map.getControlsByClass('WMSGetFeatureInfo')[0];
+		if (featureInfoCtl) {
+			var lonlat = new OpenLayers.LonLat([ geometry.x, geometry.y ]);
+			var pixel = this.map.getPixelFromLonLat(lonlat);
+			featureInfoCtl.getInfoForClick({
+				'xy' : pixel,
+				'lonlat' : lonlat
+			});
+		}
 	},
 
 	/**

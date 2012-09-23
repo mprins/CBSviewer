@@ -3,7 +3,7 @@
  * 
  * @author mprins
  * @returns {Viewer} Viewer object
- * @class {Viewer}
+ * @class
  */
 Viewer = function() {
 	/**
@@ -15,23 +15,36 @@ Viewer = function() {
 	var _map = null;
 
 	/**
+	 * update het informatie element met feature info.
+	 * 
+	 * @param {OpenLayers.Event}
+	 *            evt Het featureinfo event
+	 * @private
+	 */
+	function _showInfo(evt) {
+		jQuery('#infoContainer').html(evt.text);
+	}
+
+	/**
 	 * Publieke interface van deze klasse.
 	 * 
-	 * @returns publieke {Viewer} methodes
+	 * @returns {Viewer} publieke methodes
 	 */
 	return {
 
 		/**
 		 * Constructor, attach to the DOM.
 		 * 
-		 * @param config
-		 *            Configratie object
-		 * @constructor
-		 * 
+		 * @param {object}
+		 *            config Configratie object
 		 */
 		init : function(config) {
 			this.config = config;
-			// merge any controls
+			OpenLayers.ImgPath = config.imgPath;
+			OpenLayers.IMAGE_RELOAD_ATTEMPTS = 2;
+			OpenLayers.Number.decimalSeparator = ",";
+			
+			// merge any controls met default
 			jQuery.extend(true, this.config, {
 				map : {
 					controls : []
@@ -40,20 +53,22 @@ Viewer = function() {
 			jQuery(window).unload(function() {
 				Viewer.destroy();
 			});
-			OpenLayers.ImgPath = config.imgPath;
-			OpenLayers.IMAGE_RELOAD_ATTEMPTS = 2;
-			OpenLayers.Number.decimalSeparator = ",";
+			
 
+
+			jQuery('#' + this.config.mapDiv).width(this.config.map.width).height(this.config.map.height);
+			
 			_map = new OpenLayers.Map(this.config.mapDiv, this.config.map);
 			this.addBaseMap();
 			this.addControls();
+			_map.zoomTo(this.config.map.initialZoom);
 		},
 
 		/**
 		 * Accessor voor de kaart.
 		 * 
-		 * @returns {OpenLayers.Map} object van deze Viewer of null als het
-		 *          object niet is geinitialiseerd
+		 * @return {OpenLayers.Map} object van deze Viewer of null als het
+		 *         object niet is geinitialiseerd
 		 * @deprecated probeer deze niet te gebruiken
 		 */
 		getMap : function() {
@@ -64,6 +79,9 @@ Viewer = function() {
 		 * Controls aan de kaart hangen.
 		 */
 		addControls : function() {
+			_map.addControl(new UpdateLegendControl({
+				div : jQuery('#' + this.config.legendDiv)[0]
+			}));
 			_map.addControl(new OpenLayers.Control.KeyboardDefaults({
 				/* alleen actief als de kaart focus heeft */
 				observeElement : this.config.mapDiv
@@ -76,23 +94,31 @@ Viewer = function() {
 				/* alleen actief als de kaart focus heeft */
 				observeElement : this.config.mapDiv
 			}));
+			_map.addControl(new WMSGetFeatureInfo({
+				eventListeners : {
+					getfeatureinfo : _showInfo
+				}
+			}));
 		},
 
 		/**
 		 * cleanup. Moet aangeroepen voor dat een eventueel DOM element van de
-		 * pagina wordt verwijderd.
+		 * pagina wordt verwijderd. Wordt automatische aangeroepen bij verlaten 
+		 * van de pagina.
 		 */
 		destroy : function() {
-			_map.destroy();
-			_map = null;
+			if(_map != null) {
+				_map.destroy();
+				_map = null;
+			}
 		},
 
 		/**
 		 * Voeg WMS toe aan de kaart. Uitgangspunt is dat de WMS transparante
-		 * PNG ondersteund.
+		 * PNG ondersteund. eerder geladen WMS lagen worden verwijderd
 		 * 
-		 * @param wmsConfig
-		 *            {object} met WMS parameters. <code>
+		 * @param {object}
+		 *            wmsConfig Een object met WMS parameters. <code>
 		 * {
 		 * 'name' : 'cbs_inwoners_2010_per_hectare',
 		 * 'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows',
@@ -100,14 +126,13 @@ Viewer = function() {
 		 * 'styles' : 'cbsvierkant100m_inwoners_2000'
 		 * }
 		 * </code>
-		 * @todo WMS versie naar 1.3.0 tillen
 		 */
-		addWMS : function(wmsConfig) {
+		loadWMS : function(wmsConfig) {
+			this.removeOverlays();
 			var layer = new OpenLayers.Layer.WMS(wmsConfig.name, wmsConfig.url, {
 				layers : wmsConfig.layers,
 				styles : wmsConfig.styles,
-				// TODO
-				version : '1.1.1',
+				version : '1.3.0',
 				format : 'image/png',
 				transparent : true
 			}, {
@@ -121,8 +146,8 @@ Viewer = function() {
 		/**
 		 * verwijder de WMS uit de kaart.
 		 * 
-		 * @param wmsLyrName
-		 *            naam van de WMS service
+		 * @param {string}
+		 *            wmsLyrName naam van de WMS service
 		 */
 		removeWMS : function(wmsLyrName) {
 			var lyrs = _map.getLayersByName(wmsLyrName);
@@ -141,7 +166,6 @@ Viewer = function() {
 				_map.removeLayer(lyrs[lyr]);
 				lyrs[lyr].destroy();
 			}
-
 		},
 
 		/**
@@ -161,7 +185,6 @@ Viewer = function() {
 				format : 'image/png8',
 				style : '_null'
 			}));
-			_map.zoomTo(4);
 		}
 	};
 }();

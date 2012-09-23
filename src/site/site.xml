@@ -72,7 +72,9 @@
 			img="images/github.png" />
 		<logo name="Geotools" href="http://www.geotools.org/" img="images/geotools.png" />
 		<logo name="OpenLayers" href="http://openlayers.org/" img="images/openlayers.png" />
-		<logo name="build status" href="http://travis-ci.org/MinELenI/CBSviewer"
+		<logo name="Travis build status" href="http://travis-ci.org/MinELenI/CBSviewer/" 
 			img="https://secure.travis-ci.org/MinELenI/CBSviewer.png" />
+		<logo name="Jenkins build status" href="http://gisdemo.agro.nl/jenkins/job/CBS-viewer/" 
+			img="http://gisdemo.agro.nl/jenkins/job/CBS-viewer/badge/icon" />      
 	</poweredBy>
 </project>

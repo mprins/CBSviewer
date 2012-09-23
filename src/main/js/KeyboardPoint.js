@@ -11,6 +11,7 @@
  * @class OpenLayers.Handler.KeyboardPoint
  * @requires OpenLayers/Handler.js
  * @requires OpenLayers/Layer/Vector.js
+ * @extends OpenLayers.Handler
  */
 OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 
