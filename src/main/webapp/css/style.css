@@ -1,15 +1,20 @@
 @charset "UTF-8";
 
 a.accesskey { /* TODO: instellen op achtergrond kleur */
-	color: white;
+	position: absolute;
+	top: -500px;
+	text-align: center;
+	display: block;
+	height: 21px;
+	overflow: hidden;
 }
 
 a.accesskey:focus {
-	color: #436976;
-}
-
-.accessContainer {
-	
+	top: 0;
+	background-color: #fff;
+	width: 100%;
+	color: #000;
+	z-index: 900;
 }
 
 .start {
@@ -25,36 +30,27 @@ a.accesskey:focus {
 }
 
 .featureinfo {
-	
 }
 
-a.cssError {
-	position: absolute;
-	top: -500px;
-	text-align: center;
-	display: block;
-	height: 21px;
-	overflow: hidden;
-}
-
-a.cssError:focus {
-	top: 0;
-	background-color: #fff;
-	width: 100%;
-	color: #000;
-	z-index: 900;
-}
 
 .kaart {
 	border: 1px solid #ccc;
 	background-color: #eff0f2;
-	width: 500px;
-	height: 500px;
 	position: relative;
 }
 
 .kaart:focus {
 	outline-style: solid;
+}
+
+.olCursorWait {
+    cursor: wait;
+}
+.olDragDown {
+    cursor: move;
+}
+.olDrawBox {
+    cursor: crosshair;
 }
 
 .olHandlerBoxZoomBox {

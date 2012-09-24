@@ -127,7 +127,7 @@
 				<openlayers.compress.build>closure</openlayers.compress.build>
 			</properties>
 			<build>
-				<defaultGoal>test-compile</defaultGoal>
+				<defaultGoal>process-test-classes</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -245,7 +245,7 @@
 									<target>
 										<copy
 											file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js"
-											tofile="src/test/resources/OpenLayers-test.js" />
+											tofile="src/test/js/lib/OpenLayers-test.js" />
 									</target>
 								</configuration>
 							</execution>
@@ -348,12 +348,12 @@
 						<source>src/test/resources/jquery-1.7.2.js</source> 
 						 -->
 						<source>http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</source>
-						<source>src/test/resources/OpenLayers-test.js</source>
-						<source>src/test/resources/jasmin_util.js</source>
+						<source>src/test/js/lib/OpenLayers-test.js</source>
+						<source>src/test/js/lib/jasmin_util.js</source>
 						<source>src/main/webapp/js/config.js</source>
 					</preloadSources>
 					<jsSrcDir>src/main/js</jsSrcDir>
-					<jsTestSrcDir>src/test/js</jsTestSrcDir>
+					<jsTestSrcDir>src/test/js/jasmine</jsTestSrcDir>
 					<haltOnFailure>true</haltOnFailure>
 				</configuration>
 			</plugin>
@@ -405,6 +405,7 @@
 										<include>**/KeyboardPoint.js</include>
 										<include>**/KeyboardClick.js</include>
 										<include>**/WMSGetFeatureInfo.js</include>
+										<include>**/UpdateLegendControl.js</include>
 										<include>**/Viewer.js</include>
 									</includes>
 									<output>${project.build.directory}/${project.build.finalName}/js/cbsviewer.js</output>
