@@ -24,6 +24,10 @@ a.accesskey:focus {
 	
 }
 
+.featureinfo {
+	
+}
+
 a.cssError {
 	position: absolute;
 	top: -500px;

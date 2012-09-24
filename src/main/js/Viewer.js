@@ -47,6 +47,7 @@ Viewer = function() {
 			_map = new OpenLayers.Map(this.config.mapDiv, this.config.map);
 			this.addBaseMap();
 			this.addControls();
+			_map.zoomTo(this.config.map.initialZoom);
 		},
 
 		/**
@@ -58,6 +59,17 @@ Viewer = function() {
 		 */
 		getMap : function() {
 			return _map;
+		},
+
+		/**
+		 * update het informatie element met feature info.
+		 * 
+		 * @param evt
+		 *            {OpenLayers.Event} featureinfo event
+		 */
+		showInfo : function(evt) {
+			console.debug('WMSGetFeatureInfo::showInfo', evt);
+			jQuery('#infoContainer').html(evt.text);
 		},
 
 		/**
@@ -75,6 +87,11 @@ Viewer = function() {
 			_map.addControl(new OpenLayers.Control.KeyboardClick({
 				/* alleen actief als de kaart focus heeft */
 				observeElement : this.config.mapDiv
+			}));
+			_map.addControl(new WMSGetFeatureInfo({
+				eventListeners : {
+					getfeatureinfo : showInfo
+				}
 			}));
 		},
 
@@ -161,7 +178,6 @@ Viewer = function() {
 				format : 'image/png8',
 				style : '_null'
 			}));
-			_map.zoomTo(4);
 		}
 	};
 }();

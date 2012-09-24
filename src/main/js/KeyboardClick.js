@@ -46,6 +46,7 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 	 *            {Openlayers.Geometry}
 	 */
 	onClick : function(geometry) {
+		console.debug("click met toetsenbord", geometry);
 		// TODO
 		alert("You clicked near " + geometry.x + " N, " + geometry.y + " E");
 	},
