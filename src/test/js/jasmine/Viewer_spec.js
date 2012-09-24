@@ -21,7 +21,7 @@ describe('Viewer', function() {
 	 * ook probemen met nieuwere versies van JQuery...
 	 * 
 	 */
-	xdescribe(
+	describe(
 	// TODO
 	'Viewer initialized', function() {
 		var _wms = {

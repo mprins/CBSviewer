@@ -43,7 +43,7 @@ Viewer = function() {
 			OpenLayers.ImgPath = config.imgPath;
 			OpenLayers.IMAGE_RELOAD_ATTEMPTS = 2;
 			OpenLayers.Number.decimalSeparator = ",";
-			
+
 			// merge any controls met default
 			jQuery.extend(true, this.config, {
 				map : {
@@ -53,11 +53,9 @@ Viewer = function() {
 			jQuery(window).unload(function() {
 				Viewer.destroy();
 			});
-			
-
 
 			jQuery('#' + this.config.mapDiv).width(this.config.map.width).height(this.config.map.height);
-			
+
 			_map = new OpenLayers.Map(this.config.mapDiv, this.config.map);
 			this.addBaseMap();
 			this.addControls();
@@ -103,11 +101,11 @@ Viewer = function() {
 
 		/**
 		 * cleanup. Moet aangeroepen voor dat een eventueel DOM element van de
-		 * pagina wordt verwijderd. Wordt automatische aangeroepen bij verlaten 
+		 * pagina wordt verwijderd. Wordt automatische aangeroepen bij verlaten
 		 * van de pagina.
 		 */
 		destroy : function() {
-			if(_map != null) {
+			if (_map !== null) {
 				_map.destroy();
 				_map = null;
 			}

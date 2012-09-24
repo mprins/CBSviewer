@@ -109,7 +109,7 @@ UpdateLegendControl = OpenLayers.Class(OpenLayers.Control, {
 	 *            evt De addlayer event
 	 */
 	reset : function(evt) {
-		if (this.emptyString != null) {
+		if (this.emptyString !== null) {
 			this.element.innerHTML = this.emptyString;
 		}
 	}

@@ -36,11 +36,11 @@
 	 * test results to be used in java based CI. It appends some DOM
 	 * elements/containers, so that a PhantomJS script can pick that up.
 	 * 
-	 * @param {boolean}
-	 *            consolidate whether to save nested describes within the same
+	 * @param {Boolean}
+	 *            consolidate Whether to save nested describes within the same
 	 *            file as their parent; default: true
-	 * @param {boolean}
-	 *            useDotNotation whether to separate suite names with dots
+	 * @param {Boolean}
+	 *            useDotNotation Whether to separate suite names with dots
 	 *            rather than spaces (ie "Class.init" not "Class init");
 	 *            default: true
 	 * @constructor

@@ -93,12 +93,7 @@ if (phantom.args.length !== 2) {
 				// passed
 				phantom.exit(page.evaluate(function() {
 					return jasmine.phantomjsXMLReporterPassed ? 0 : 1; // <
-					// exit(0)
-					// is
-					// success,
-					// exit(1)
-					// is
-					// failure
+					// exit(0) is success, exit(1) is failure
 				}));
 			}, function() { // or, once it times out...
 				phantom.exit(1);

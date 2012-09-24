@@ -5,5 +5,6 @@
 /src/main/webapp/lib/OpenLayers.js
 /cache/
 /src/test/js/lib/OpenLayers-test.js
+/src/test/js/lib/jasmine-1.2.0
 /mvn.log
 /notes.txt
