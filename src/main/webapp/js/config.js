@@ -30,7 +30,10 @@ OpenLayers.Lang.nl = OpenLayers.Util.extend({
 config.mapDiv = "cbsKaart";
 
 /** id van de div voor de legenda. */
-config.legendDiv = "legendaContainer";
+config.legendDiv = "legenda";
+
+/** id van de div voor de featureinfo. */
+config.featureInfoDiv = "featureinfo";
 
 /** instellingen voor de kaart. */
 config.map = {

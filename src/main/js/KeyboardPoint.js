@@ -135,6 +135,18 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 	 * 
 	 */
 	drawFeature : function() {
-		this.layer.drawFeature(this.point, this.style);
+		// this.layer.drawFeature(this.point, this.style);
+		this.layer.drawFeature(this.point, {
+			externalGraphic : 'img/info.png',
+			graphicHeight : 37,
+			graphicWidth : 32,
+			graphicXOffset : -16,
+			graphicYOffset : -37
+		// ,
+		// labelXOffset : 0,
+		// labelYOffset : 0,
+		// labelAlign : "lb",
+		// label : "Informatie Opvragen"
+		});
 	}
 });

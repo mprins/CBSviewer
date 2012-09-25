@@ -25,13 +25,25 @@ a.accesskey:focus {
 	
 }
 
+.legendaTitel {
+	
+}
+
+.legendaTitel {
+	
+}
+
+.zoekenTitel {
+	
+}
+
 .hidden {
 	
 }
 
 .featureinfo {
+	
 }
-
 
 .kaart {
 	border: 1px solid #ccc;
@@ -44,13 +56,15 @@ a.accesskey:focus {
 }
 
 .olCursorWait {
-    cursor: wait;
+	cursor: wait;
 }
+
 .olDragDown {
-    cursor: move;
+	cursor: move;
 }
+
 .olDrawBox {
-    cursor: crosshair;
+	cursor: crosshair;
 }
 
 .olHandlerBoxZoomBox {
