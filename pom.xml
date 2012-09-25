@@ -130,6 +130,39 @@
 				<phantomjs.archive>phantomjs-1.7.0-windows.zip</phantomjs.archive>
 				<phantomjs.executable>phantomjs.exe</phantomjs.executable>
 			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<id>prepare PhantomJS</id>
+								<phase>process-test-sources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<mkdir dir="${basedir}/cache/" />
+										<mkdir dir="${basedir}/target/test-js/" />
+										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/"
+											usetimestamp="true" />
+										<unzip src="${basedir}/cache/${phantomjs.archive}" dest="${basedir}/target/test-js/">
+											<patternset>
+												<include name="**/${phantomjs.executable}" />
+											</patternset>
+											<mapper type="flatten" />
+										</unzip>
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 		<profile>
 			<id>unix</id>
@@ -141,9 +174,45 @@
 				</os>
 			</activation>
 			<properties>
-				<phantomjs.archive>phantomjs-1.6.1-linux-i686-dynamic.tar.bz2</phantomjs.archive>
+				<!-- <phantomjs.archive>phantomjs-1.7.0-linux-x86_64.tar.bz2</phantomjs.archive> -->
+				<phantomjs.archive>phantomjs-1.7.0-linux-i686.tar.bz2</phantomjs.archive>
 				<phantomjs.executable>phantomjs</phantomjs.executable>
 			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<id>prepare PhantomJS</id>
+								<phase>process-test-sources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<mkdir dir="${basedir}/cache/" />
+										<mkdir dir="${basedir}/target/test-js/" />
+										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/"
+											usetimestamp="true" />
+										<bunzip2 src="${basedir}/cache/${phantomjs.archive}"
+											dest="${basedir}/cache/phantomjs.tar" />
+										<untar src="${basedir}/cache/phantomjs.tar" dest="${basedir}/target/test-js/">
+											<patternset>
+												<include name="**/${phantomjs.executable}" />
+											</patternset>
+											<mapper type="flatten" />
+										</untar>
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 		<profile>
 			<id>mac</id>
@@ -156,6 +225,39 @@
 				<phantomjs.archive>phantomjs-1.7.0-macosx.zip</phantomjs.archive>
 				<phantomjs.executable>phantomjs</phantomjs.executable>
 			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<id>prepare PhantomJS</id>
+								<phase>process-test-sources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<mkdir dir="${basedir}/cache/" />
+										<mkdir dir="${basedir}/target/test-js/" />
+										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/"
+											usetimestamp="true" />
+										<unzip src="${basedir}/cache/${phantomjs.archive}" dest="${basedir}/target/test-js/">
+											<patternset>
+												<include name="**/${phantomjs.executable}" />
+											</patternset>
+											<mapper type="flatten" />
+										</unzip>
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 		<profile>
 			<!-- specify this profile to build openlayers as part of the build, ie. 
@@ -181,6 +283,7 @@
 								<id>getOpenLayers</id>
 								<phase>initialize</phase>
 								<goals>
+									<!-- evt. export gebruiken -->
 									<goal>checkout</goal>
 								</goals>
 								<configuration>
@@ -471,26 +574,19 @@
 				<version>1.7</version>
 				<executions>
 					<execution>
-						<id>prepare PhantomJS-Jasmine tests</id>
+						<id>prepare Jasmine tests</id>
 						<phase>process-test-sources</phase>
 						<goals>
 							<goal>run</goal>
 						</goals>
 						<configuration>
 							<target>
+								<!-- klaarzetten van Jasmine libs -->
 								<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
 								<mkdir dir="${basedir}/cache/" />
 								<mkdir dir="${basedir}/target/test-js/" />
-								<get dest="${basedir}/cache/" usetimestamp="true">
-									<url url="${phantomjs.baseurl}/${phantomjs.archive}" />
-									<url url="${jasmine.baseurl}/${jasmine.archive}" />
-								</get>
-								<unzip src="${basedir}/cache/${phantomjs.archive}" dest="${basedir}/target/test-js/">
-									<patternset>
-										<include name="**/${phantomjs.executable}" />
-									</patternset>
-									<mapper type="flatten" />
-								</unzip>
+								<get src="${jasmine.baseurl}/${jasmine.archive}" dest="${basedir}/cache/"
+									usetimestamp="true" />
 								<unzip src="${basedir}/cache/${jasmine.archive}" dest="${basedir}/target/test-js/">
 									<patternset>
 										<include name="**/lib/**" />
@@ -503,6 +599,7 @@
 									</patternset>
 									<cutdirsmapper dirs="1" />
 								</unzip>
+								<!-- klaarzetten van test code -->
 								<copy todir="${basedir}/target/test-js/">
 									<fileset dir="src/main/js">
 										<include name="**/*.js" />
