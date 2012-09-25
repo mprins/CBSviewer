@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jasmine Spec Runner</title>
+
+<link rel="stylesheet" type="text/css" href="jasmine-1.2.0/jasmine.css">
+<script type="text/javascript" src="jasmine-1.2.0/jasmine.js"></script>
+<script type="text/javascript" src="jasmine-1.2.0/jasmine-html.js"></script>
+
+<script type="text/javascript" src="jasmine.phantomjs-reporter.js"></script>
+
+<script type="text/javascript" src="../../../main/webapp/lib/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="OpenLayers-test.js"></script>
+<script type="text/javascript" src="jasmin_util.js"></script>
+
+<!-- config -->
+<script type="text/javascript" src="../../../main/webapp/js/config.js"></script>
+
+<!-- sources/code -->
+<script type="text/javascript" src="../../../main/js/KeyboardClick.js"></script>
+<script type="text/javascript" src="../../../main/js/KeyboardPoint.js"></script>
+<script type="text/javascript" src="../../../main/js/UpdateLegendControl.js"></script>
+<script type="text/javascript" src="../../../main/js/Viewer.js"></script>
+<script type="text/javascript" src="../../../main/js/WMSGetFeatureInfo.js"></script>
+
+<!-- tests/spec -->
+<script type="text/javascript" src="../jasmine/KeyboardClick_spec.js"></script>
+<script type="text/javascript" src="../jasmine/KeyboardPoint_spec.js"></script>
+<script type="text/javascript" src="../jasmine/UpdateLegendControl_spec.js"></script>
+<script type="text/javascript" src="../jasmine/Viewer_spec.js"></script>
+<script type="text/javascript" src="../jasmine/WMSGetFeatureInfo_spec.js"></script>
+
+</head>
+<body>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+			jasmine.getEnv().addReporter(new jasmine.PhantomJSReporter());
+			jasmine.getEnv().execute();
+		});
+	</script>
+</body>
+</html>

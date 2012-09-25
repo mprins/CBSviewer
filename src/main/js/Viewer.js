@@ -54,8 +54,6 @@ Viewer = function() {
 				Viewer.destroy();
 			});
 
-
-
 			jQuery('#' + this.config.mapDiv).width(this.config.map.width).height(this.config.map.height);
 			
 			_map = new OpenLayers.Map(this.config.mapDiv, this.config.map);
@@ -73,17 +71,6 @@ Viewer = function() {
 		 */
 		getMap : function() {
 			return _map;
-		},
-
-		/**
-		 * update het informatie element met feature info.
-		 * 
-		 * @param evt
-		 *            {OpenLayers.Event} featureinfo event
-		 */
-		showInfo : function(evt) {
-			console.debug('WMSGetFeatureInfo::showInfo', evt);
-			jQuery('#infoContainer').html(evt.text);
 		},
 
 		/**
@@ -118,7 +105,7 @@ Viewer = function() {
 		 * van de pagina.
 		 */
 		destroy : function() {
-			if(_map != null) {
+			if (_map !== null) {
 			_map.destroy();
 			_map = null;
 			}

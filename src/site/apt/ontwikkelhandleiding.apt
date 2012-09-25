@@ -61,23 +61,39 @@ mvn -Popenlayers,developer
 
 * {Unit testen}
 
-  Er wordt gebruik gemaakt van Jasmine. Vanwege wat problemen draaien een aantal van de tests niet <headless>.
-  Deze tests staan uit in de repository omdat we anders mislukte builds op de {{{build servers}./integration.html}} 
-  krijgen. 
+** Java
 
+  Er wordt gebruik gemaakt van JUnit 4 tests.
+
+** Javascript
+
+  Er wordt gebruik gemaakt van het {{{Jasmine}http://pivotal.github.com/jasmine/}} framework. De code voor unit test 
+  gaat in <<</src/test/js/jsamine/>>>, iedere test moet ook worden opgenomen in de testrunner pagina 
+  <<<PhantomSpecRunner.html>>>. Tests worden automatisch gedraaid in een PhantomJS/Webkit runtime tijdens de test 
+  fase van Maven.
+  Om unit tests met de hand te draaien zijn er onderstaande opties.
+  
+*** Jasmine plugin
+
+  Er is een specifiek profiel <<<jasmine>>> waarin een server gestart kan worden.
+  
 +----+
-mvn jasmine:bdd
+mvn -Pjasmine jasmine:bdd
 +----+
   
-  Start de tests op: {{http://localhost:8234/}}
+  Start de tests op: {{http://localhost:8234/}}, de pagina kan worden geladen in een broser naar keuze.
   
+*** Browser
 
+  Je kunt het bestand met de unit tests openen in een browser naar keuze, het kan zijn dat bepaalde zaken niet werken 
+  vanwege url beperkingen van de browser.
+  
 * {Applicatie testen} 
 
   De applicatie kan lokaal gebouwd en gerund worden met behulp van Jetty
   
 +-----+
-mvn jetty:run
+mvn -Pdeveloper jetty:run
 +-----+
 
   Jetty start een webserver op op poort 8020 met de {{{applicatie in de root}http://localhost:8020/}}.
@@ -90,8 +106,8 @@ mvn jetty:run
 mvn site
 +----+
 
-  Tijdens het maken van de site worden ook de unit en integratie tests gedraaid (er vindt dus ook een 
-  volledige build plaats!).  
+  Tijdens het maken van de site worden ook de unit en integratie tests gedraaid (er vindt dus een 
+  volledige build plaats!).
 
 ~~  Als je <<<dot>>> of <<<Graphviz>> hebt geinstalleerd kunj je javadoc met UML klasse diagrammen genereren; 
 ~~  dit doe je door op de commandline de optie <<<-Dhavedot=true>>> mee te geven zoals in onderstaand voorbeeld 

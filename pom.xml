@@ -72,6 +72,11 @@
 		<http.proxyHost />
 		<http.proxyPort>0</http.proxyPort>
 		<debug>false</debug>
+		<!-- @see https://code.google.com/p/phantomjs/downloads/list -->
+		<phantomjs.baseurl>https://phantomjs.googlecode.com/files</phantomjs.baseurl>
+		<!-- @see https://github.com/pivotal/jasmine/downloads -->
+		<jasmine.baseurl>http://cloud.github.com/downloads/pivotal/jasmine</jasmine.baseurl>
+		<jasmine.archive>jasmine-standalone-1.2.0.zip</jasmine.archive>
 	</properties>
 	<profiles>
 		<profile>
@@ -87,7 +92,7 @@
 					<plugin>
 						<groupId>org.mortbay.jetty</groupId>
 						<artifactId>jetty-maven-plugin</artifactId>
-						<version>8.1.5.v20120716</version>
+						<version>8.1.7.v20120910</version>
 						<configuration>
 							<connectors>
 								<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
@@ -115,6 +120,44 @@
 			</build>
 		</profile>
 		<profile>
+			<id>windows</id>
+			<activation>
+				<os>
+					<family>windows</family>
+				</os>
+			</activation>
+			<properties>
+				<phantomjs.archive>phantomjs-1.7.0-windows.zip</phantomjs.archive>
+				<phantomjs.executable>phantomjs.exe</phantomjs.executable>
+			</properties>
+		</profile>
+		<profile>
+			<id>unix</id>
+			<activation>
+				<os>
+					<family>unix</family>
+					<!-- get name by running "mvn help:system |grep os.name" -->
+					<name>Linux</name>
+				</os>
+			</activation>
+			<properties>
+				<phantomjs.archive>phantomjs-1.6.1-linux-i686-dynamic.tar.bz2</phantomjs.archive>
+				<phantomjs.executable>phantomjs</phantomjs.executable>
+			</properties>
+		</profile>
+		<profile>
+			<id>mac</id>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<phantomjs.archive>phantomjs-1.7.0-macosx.zip</phantomjs.archive>
+				<phantomjs.executable>phantomjs</phantomjs.executable>
+			</properties>
+		</profile>
+		<profile>
 			<!-- specify this profile to build openlayers as part of the build, ie. 
 				-Popenlayers -->
 			<id>openlayers</id>
@@ -132,11 +175,11 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-scm-plugin</artifactId>
-						<version>1.7</version>
+						<version>1.8</version>
 						<executions>
 							<execution>
 								<id>getOpenLayers</id>
-								<phase>generate-sources</phase>
+								<phase>initialize</phase>
 								<goals>
 									<goal>checkout</goal>
 								</goals>
@@ -159,7 +202,7 @@
 								<goals>
 									<goal>exec</goal>
 								</goals>
-								<phase>compile</phase>
+								<phase>process-sources</phase>
 								<configuration>
 									<!-- note: python executable needs to be in the path -->
 									<executable>python</executable>
@@ -177,7 +220,7 @@
 								<goals>
 									<goal>exec</goal>
 								</goals>
-								<phase>test-compile</phase>
+								<phase>generate-test-sources</phase>
 								<configuration>
 									<!-- note: python executable needs to be in the path -->
 									<executable>python</executable>
@@ -198,7 +241,7 @@
 						<executions>
 							<execution>
 								<id>prepareOpenLayers</id>
-								<phase>process-sources</phase>
+								<phase>generate-sources</phase>
 								<goals>
 									<goal>run</goal>
 								</goals>
@@ -237,7 +280,7 @@
 							</execution>
 							<execution>
 								<id>copyOpenLayers-test</id>
-								<phase>process-test-classes</phase>
+								<phase>process-test-sources</phase>
 								<goals>
 									<goal>run</goal>
 								</goals>
@@ -260,6 +303,41 @@
 				<github.password />
 				<github.site.dryRun>false</github.site.dryRun>
 			</properties>
+		</profile>
+		<profile>
+			<id>jasmineserver</id>
+			<build>
+				<defaultGoal>dbb</defaultGoal>
+				<plugins>
+					<plugin>
+						<groupId>com.github.searls</groupId>
+						<artifactId>jasmine-maven-plugin</artifactId>
+						<version>1.2.0.0</version>
+						<extensions>true</extensions>
+						<executions>
+							<execution>
+								<goals>
+									<goal>dbb</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<browserVersion>FIREFOX_3_6</browserVersion>
+							<preloadSources>
+								<!-- HtmlUnit 2.9 heeft problemen met 1.8.1 <source>src/main/webapp/lib/jquery-1.8.1.min.js</source> 
+									<source>src/test/js/lib/jquery-1.7.2.js</source> -->
+								<source>http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</source>
+								<source>src/test/js/lib/OpenLayers-test.js</source>
+								<source>src/test/js/lib/jasmin_util.js</source>
+								<source>src/main/webapp/js/config.js</source>
+							</preloadSources>
+							<jsSrcDir>src/main/js</jsSrcDir>
+							<jsTestSrcDir>src/test/js/jasmine</jsTestSrcDir>
+							<haltOnFailure>false</haltOnFailure>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 	<build>
@@ -329,35 +407,6 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>com.github.searls</groupId>
-				<artifactId>jasmine-maven-plugin</artifactId>
-				<version>1.2.0.0</version>
-				<extensions>true</extensions>
-				<executions>
-					<execution>
-						<goals>
-							<goal>test</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<browserVersion>FIREFOX_3_6</browserVersion>
-					<preloadSources>
-						<!-- HtmlUnit 2.9 heeft problemen met 1.8.1
-						<source>src/main/webapp/lib/jquery-1.8.1.min.js</source>
-						<source>src/test/resources/jquery-1.7.2.js</source> 
-						 -->
-						<source>http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</source>
-						<source>src/test/js/lib/OpenLayers-test.js</source>
-						<source>src/test/js/lib/jasmin_util.js</source>
-						<source>src/main/webapp/js/config.js</source>
-					</preloadSources>
-					<jsSrcDir>src/main/js</jsSrcDir>
-					<jsTestSrcDir>src/test/js/jasmine</jsTestSrcDir>
-					<haltOnFailure>true</haltOnFailure>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.2</version>
@@ -418,6 +467,95 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>prepare PhantomJS-Jasmine tests</id>
+						<phase>process-test-sources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+								<mkdir dir="${basedir}/cache/" />
+								<mkdir dir="${basedir}/target/test-js/" />
+								<get dest="${basedir}/cache/" usetimestamp="true">
+									<url url="${phantomjs.baseurl}/${phantomjs.archive}" />
+									<url url="${jasmine.baseurl}/${jasmine.archive}" />
+								</get>
+								<unzip src="${basedir}/cache/${phantomjs.archive}" dest="${basedir}/target/test-js/">
+									<patternset>
+										<include name="**/${phantomjs.executable}" />
+									</patternset>
+									<mapper type="flatten" />
+								</unzip>
+								<unzip src="${basedir}/cache/${jasmine.archive}" dest="${basedir}/target/test-js/">
+									<patternset>
+										<include name="**/lib/**" />
+									</patternset>
+									<cutdirsmapper dirs="1" />
+								</unzip>
+								<unzip src="${basedir}/cache/${jasmine.archive}" dest="${basedir}/src/test/js/lib/">
+									<patternset>
+										<include name="**/lib/**" />
+									</patternset>
+									<cutdirsmapper dirs="1" />
+								</unzip>
+								<copy todir="${basedir}/target/test-js/">
+									<fileset dir="src/main/js">
+										<include name="**/*.js" />
+									</fileset>
+									<fileset dir="src/test/js/jasmine" />
+									<fileset dir="src/test/js/lib" />
+									<fileset dir="src/main/webapp/js">
+										<include name="**/config.js" />
+									</fileset>
+									<fileset dir="src/main/webapp/lib">
+										<include name="**/jquery*.js" />
+									</fileset>
+								</copy>
+								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html"
+									token="../../../main/js/" value="" />
+								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html"
+									token="../../../main/webapp/js/" value="" />
+								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html"
+									token="../../../main/webapp/lib/" value="" />
+								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html"
+									token="../jasmine/" value="" />
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+					<execution>
+						<id>PhantomJS-Jasmine tests</id>
+						<phase>test</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<executable>${project.build.directory}/test-js/${phantomjs.executable}</executable>
+					<workingDirectory>${project.build.directory}/test-js/</workingDirectory>
+					<arguments>
+						<argument>--debug=yes</argument>
+						<argument>--web-security=no</argument>
+						<argument>run-jasmine-xml.js</argument>
+						<argument>PhantomSpecRunner.html</argument>
+						<argument>../jasmine-reports</argument>
+					</arguments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 				<version>3.1</version>
 				<dependencies>
@@ -444,6 +582,19 @@
 							</configuration>
 						</plugin>
 						<plugin>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>versions-maven-plugin</artifactId>
+							<version>1.3.1</version>
+							<reportSets>
+								<reportSet>
+									<reports>
+										<report>dependency-updates-report</report>
+										<report>plugin-updates-report</report>
+									</reports>
+								</reportSet>
+							</reportSets>
+						</plugin>
+						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-changelog-plugin</artifactId>
 							<version>2.2</version>
@@ -459,13 +610,25 @@
 							<version>2.12.3</version>
 							<configuration>
 								<linkXRef>true</linkXRef>
-								<!--<reportsDirectory>${project.build.directory}/jasmine</reportsDirectory>-->
 								<reportsDirectories>
-									<reportsDirectory>${project.build.directory}/jasmine</reportsDirectory>
 									<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
 								</reportsDirectories>
 							</configuration>
 						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-report-plugin</artifactId>
+							<version>2.12.3</version>
+							<configuration>
+								<outputName>jasmine-report</outputName>
+								<xrefLocation>${project.reporting.outputDirectory}/jsdoc</xrefLocation>
+								<linkXRef>true</linkXRef>
+								<reportsDirectories>
+									<reportsDirectory>${project.build.directory}/jasmine-reports</reportsDirectory>
+								</reportsDirectories>
+							</configuration>
+						</plugin>
+
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-project-info-reports-plugin</artifactId>
@@ -497,7 +660,6 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-changes-plugin</artifactId>
-							<!-- 2.8 heeft Github ondersteuning -->
 							<version>2.8</version>
 							<configuration>
 								<publishDateLocale>nl</publishDateLocale>
@@ -618,6 +780,19 @@
 										<versionRange>[1.3.0,)</versionRange>
 										<goals>
 											<goal>compress</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-antrun-plugin</artifactId>
+										<versionRange>[1.7,)</versionRange>
+										<goals>
+											<goal>run</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
