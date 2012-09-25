@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!-- voor de ConversionPattern parameters zie: 
+	http://logging.apache.org/log4j/docs/api/org/apache/log4j/PatternLayout.html 
+		LEVELS: debug, info, warn, error, fatal en off, all -->
+	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<param name="Threshold" value="debug" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="CBSVWR: %5p %d{HH:mm:ss} (%C#%M:%L) - %m%n" />
+		</layout>
+	</appender>
+	<appender name="ganymedeAppender" class="org.apache.log4j.net.SocketAppender">
+		<!-- zie: http://ganymede.sourceforge.net/ -->
+		<param name="remoteHost" value="localhost" />
+		<param name="port" value="4445" />
+		<param name="locationInfo" value="true" />
+	</appender>
+	<root>
+		<level value ="debug" />
+		<!-- kies: consoleAppender of ganymedeAppender voor in de ide
+			<appender-ref ref="ganymedeAppender" /> 
+			<appender-ref ref="consoleAppender" /> 
+		-->
+		<appender-ref ref="consoleAppender" />
+	</root>
+</log4j:configuration>
