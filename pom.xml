@@ -68,6 +68,7 @@
 		<jdk.version>1.7</jdk.version>
 		<github.username />
 		<github.password />
+		<skipTests>false</skipTests>
 		<github.site.dryRun>false</github.site.dryRun>
 		<http.proxyHost />
 		<http.proxyPort>0</http.proxyPort>
@@ -641,6 +642,7 @@
 					</execution>
 				</executions>
 				<configuration>
+					<skip>${skipTests}</skip>
 					<executable>${project.build.directory}/test-js/${phantomjs.executable}</executable>
 					<workingDirectory>${project.build.directory}/test-js/</workingDirectory>
 					<arguments>
