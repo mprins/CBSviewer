@@ -206,6 +206,7 @@
 											</patternset>
 											<mapper type="flatten" />
 										</untar>
+										<chmod file="${basedir}/target/test-js/${phantomjs.executable}" perm="ugo+rx" verbose="true" />
 									</target>
 								</configuration>
 							</execution>
