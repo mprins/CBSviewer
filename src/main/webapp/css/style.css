@@ -122,11 +122,11 @@ div.olControlZoom a {
 	height: 22px;
 	width: 22px;
 	line-height: 19px;
-	background: rgba(0, 60, 136, 0.5);
+	background: rgba(0, 60, 136, 0.8);
 }
 
 div.olControlZoom a:hover {
-	background: rgba(0, 60, 136, 0.7);
+	background: rgba(0, 60, 136, 1.0);
 }
 
 @media only screen and (max-width: 600px) {
