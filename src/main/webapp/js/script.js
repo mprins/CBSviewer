@@ -20,17 +20,23 @@ var setupPage = {
 	init : function() {
 		OpenLayers.Lang.setCode('nl');
 
+		// toggle voor vergroten van de kaart
+		var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('toggleSize')
+				+ '" onclick="Viewer.toggleFullSize();"></a>';
+		jQuery('#' + config.mapDiv).prepend(aToggle);		
+		
 		// a11y link toevoegen in de DOM boven de kaart
-		var aLink = '<a class="accesskey" href="" accesskey="1" onclick="jQuery(\'#'
-				+ config.mapDiv + '\').attr(\'tabindex\',-1).focus(); return false;" title="'
-				+ OpenLayers.i18n('keyboardNavTtl') + '">' + OpenLayers.i18n('keyboardNav') + '</a>';
+		var aLink = '<a class="accesskey" href="" accesskey="1" onclick="jQuery(\'#' + config.mapDiv
+				+ '\').attr(\'tabindex\',-1).focus(); return false;" title="' + OpenLayers.i18n('keyboardNavTtl')
+				+ '">' + OpenLayers.i18n('keyboardNav') + '</a>';
 		jQuery('#' + config.mapDiv).prepend(aLink);
 
 		// core/css fout link toevoegen aan de kaart
 		var aCore = '<a class="accesskey" href="?coreonly=true">' + OpenLayers.i18n('cssError') + '</a>';
 		jQuery('#' + config.mapDiv).prepend(aCore);
-		
-		// eventueel de font-size aanpassen zodat het altijd past: http://jsfiddle.net/ad5pf/1/ en 
+
+		// eventueel de font-size aanpassen zodat het altijd past:
+		// http://jsfiddle.net/ad5pf/1/ en
 		// http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
 	}
 };

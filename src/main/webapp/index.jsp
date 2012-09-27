@@ -59,46 +59,47 @@
 </head>
 
 <body>
+
 	<div id="wrapper" class="wrapper">
+
 		<div id="kop" class="kop">
 			<jsp:expression>RESOURCES.getString("KEY_KAART_TITEL")</jsp:expression>
 		</div>
 
-		<div id="viewer" class="viewer start">
 
-			<div id="kaarten" class="kaarten">
-				<div id="coreContainer" class="kaartContainer">
-					<!-- hier komt evt de statische kaart -->
+		<div id="kaarten" class="kaarten">
+			<div id="coreContainer" class="kaartContainer">
+				<!-- hier komt evt de statische kaart -->
+			</div>
+
+			<div id="kaartContainer" class="kaartContainer hidden">
+				<div id="cbsKaart" class="kaart">
+					<!-- hier wordt de dynamische kaart ingehangen -->
 				</div>
+			</div>
+		</div>
 
-				<div id="kaartContainer" class="kaartContainer hidden">
-					<div id="cbsKaart" class="kaart">
-						<!-- hier wordt de dynamische kaart ingehangen -->
-					</div>
+
+		<div id="sidebar" class="sidebar">
+
+			<div id="zoekenContainer" class="zoeken">
+				<jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression>
+				<!-- adres zoeken -->
+			</div>
+
+			<div id="legendaContainer" class="legenda">
+				<jsp:expression>RESOURCES.getString("KEY_LEGENDA_TITEL")</jsp:expression>
+				<div id="legenda">
+					<!-- plaats voor de legenda -->
 				</div>
 			</div>
 
-			<div id="sidebar" class="sidebar">
-				<div id="zoekenContainer" class="zoeken">
-					<jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression>
-					<!-- adres zoeken -->
-				</div>
-
-				<div id="legendaContainer" class="legenda">
-					<jsp:expression>RESOURCES.getString("KEY_LEGENDA_TITEL")</jsp:expression>
-					<div id="legenda">
-						<!-- plaats voor de legenda -->
-					</div>
-				</div>
-
-				<div id="infoContainer" class="featureinfo">
-					<jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression>
-					<div id="featureinfo">
-						<!-- plaats voor de feature info -->
-					</div>
+			<div id="infoContainer" class="featureinfo">
+				<jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression>
+				<div id="featureinfo">
+					<!-- plaats voor de feature info -->
 				</div>
 			</div>
-
 		</div>
 
 	</div>

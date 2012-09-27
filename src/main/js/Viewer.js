@@ -15,6 +15,13 @@ Viewer = function() {
 	var _map = null;
 
 	/**
+	 * Toggle vlag voor fuulsize functie.
+	 * 
+	 * @type {Boolean}
+	 */
+	var _fullSize = false;
+
+	/**
 	 * update het informatie element met feature info.
 	 * 
 	 * @param {OpenLayers.Event}
@@ -22,7 +29,6 @@ Viewer = function() {
 	 * @private
 	 */
 	function _showInfo(evt) {
-		// jQuery('#featureinfo').html(evt.text);
 		jQuery('#' + config.featureInfoDiv).html(evt.text);
 
 	}
@@ -166,6 +172,26 @@ Viewer = function() {
 				_map.removeLayer(lyrs[lyr]);
 				lyrs[lyr].destroy();
 			}
+		},
+
+		/**
+		 * Afmeting van de kaart aanpassen aan schermbreedte.
+		 */
+		toggleFullSize : function() {
+			if (_fullSize) {
+				// terugzetten
+				jQuery('#' + this.config.mapDiv).width(this.config.map.width).height(this.config.map.height);
+				jQuery('#toggleSize').toggleClass('restore max');
+				_fullSize = false;
+			} else {
+				// vergroten
+				var w = jQuery('#' + this.config.mapDiv).parent().width();
+				var h = jQuery('#' + this.config.mapDiv).parent().height();
+				jQuery('#' + this.config.mapDiv).width(w).height(h);
+				jQuery('#toggleSize').toggleClass('restore max');
+				_fullSize = true;
+			}
+			_map.updateSize();
 		},
 
 		/**

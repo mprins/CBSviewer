@@ -55,6 +55,24 @@ a.accesskey:focus {
 	outline-style: solid;
 }
 
+#toggleSize {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	width: 21px;
+	height: 21px;
+	z-index: 900;
+	display: block;
+}
+
+#toggleSize.max { /*max icon*/
+	background: url('../img/maxmin.png') no-repeat -21px 0;
+}
+
+#toggleSize.restore { /*min icon*/
+	background: url('../img/maxmin.png') no-repeat 0 0;
+}
+
 .olCursorWait {
 	cursor: wait;
 }
