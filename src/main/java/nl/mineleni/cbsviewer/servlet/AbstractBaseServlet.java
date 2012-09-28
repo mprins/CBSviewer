@@ -7,6 +7,8 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
+import nl.mineleni.cbsviewer.util.LabelsBundle;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,6 +50,9 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 	/** password voor bijv. authenticatie. @see #USER_PASSWORD */
 	protected String passID = null;
 
+	/** De gedeelde, read-only, resourcebundel voor de applicatie. */
+	protected LabelsBundle _RESOURCES = new LabelsBundle();
+
 	/**
 	 * Leest de config opties uit de web.xml in; het gaat om {@link #PROXY_HOST}
 	 * ,{@link #PROXY_PORT}, {@link #USER_ID} en {@link #USER_PASSWORD}.
@@ -78,6 +83,6 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 		LOGGER.debug("User ID is: " + this.userID
 				+ "; User password lengte is: "
 				+ (null != this.passID ? this.passID.length() : ""));
-	}
 
+	}
 }

@@ -64,7 +64,7 @@
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>8.1</geotools.version>
+		<geotools.version>9-SNAPSHOT</geotools.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
@@ -474,8 +474,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.5.1</version>
 				<configuration>
-					<debug>true</debug>
-					<optimize>false</optimize>
+					<debug>${debug}</debug>
+					<optimize>!${debug}</optimize>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
 					<showDeprecation>true</showDeprecation>
@@ -486,22 +486,27 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.12.3</version>
+				<version>2.12.4</version>
 				<configuration>
 					<excludes>
 						<exclude>**/*IntegrationTest.java</exclude>
 					</excludes>
+					<!-- work around voor java 7. see: 
+					http://stackoverflow.com/questions/10869127/maven-build-causes-verifyerror-with-java-1-7
+					-->
+					<argLine>-XX:-UseSplitVerifier</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>2.12.3</version>
+				<version>2.12.4</version>
 				<configuration>
 					<includes>
 						<include>**/*IntegrationTest.java</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore>
+					<argLine>-XX:-UseSplitVerifier</argLine>
 				</configuration>
 				<executions>
 					<execution>
@@ -708,9 +713,10 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-surefire-report-plugin</artifactId>
-							<version>2.12.3</version>
+							<version>2.12.4</version>
 							<configuration>
 								<linkXRef>true</linkXRef>
+								<outputName>surefire-report</outputName>
 								<reportsDirectories>
 									<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
 								</reportsDirectories>
@@ -719,7 +725,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-surefire-report-plugin</artifactId>
-							<version>2.12.3</version>
+							<version>2.12.4</version>
 							<configuration>
 								<outputName>jasmine-report</outputName>
 								<xrefLocation>${project.reporting.outputDirectory}/jsdoc</xrefLocation>
@@ -785,7 +791,7 @@
 							<configuration>
 								<configLocation>${basedir}/checkstyle-ruleset.xml</configLocation>
 								<suppressionsLocation>${basedir}/checkstyle-suppressions.xml</suppressionsLocation>
-								<enableRSS>false</enableRSS>
+								<enableRSS>true</enableRSS>
 							</configuration>
 						</plugin>
 						<plugin>
@@ -912,6 +918,16 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-wms</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-epsg-wkt</artifactId>
+			<version>${geotools.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
