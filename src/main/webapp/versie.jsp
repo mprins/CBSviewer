@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-	<jsp:directive.page
-		import="java.io.File,java.util.jar.Manifest,java.io.FileInputStream,java.util.jar.Attributes,java.util.Date" />
 	<jsp:directive.page language="java"
-		contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" />
-	<jsp:directive.page session="false" />
-	<jsp:text>
-		<![CDATA[ <?xml version="1.0" encoding="UTF-8" ?> ]]>
-	</jsp:text>
-	<jsp:text>
-		<![CDATA[ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> ]]>
-	</jsp:text>
-	<html xmlns="http://www.w3.org/1999/xhtml">
+		contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+		import="java.io.File,java.util.jar.Manifest,java.io.FileInputStream,java.util.jar.Attributes,java.util.Date,nl.mineleni.cbsviewer.util.LabelsBundle"
+		session="false" />
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+		omit-xml-declaration="no" />
+	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
+
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+
 <jsp:scriptlet>/* info uitlezen/ophalen uit de manifest */
 			String appServerHome = getServletContext().getRealPath("/");
 			File manifestFile = new File(appServerHome, "META-INF/MANIFEST.MF");
@@ -19,18 +19,7 @@
 			mf.read(new FileInputStream(manifestFile));
 			Attributes atts = mf.getMainAttributes();</jsp:scriptlet>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-
-<!--[if lte IE 7]>
-		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all" />
-	<![endif]-->
-<!--[if gte IE 8]>
-		<link rel="stylesheet" href="css/ie-8.css" type="text/css" media="all" />
-	<![endif]-->
-
-<link rel="stylesheet" href="css/print.css" type="text/css"
-	media="print" />
+<jsp:include page="WEB-INF/jsp/head_include.jsp" />
 
 <title>Versie informatie voor <jsp:expression>atts.getValue("Implementation-Title")</jsp:expression>
 	<jsp:expression>atts.getValue("Implementation-Version")</jsp:expression>.<jsp:expression>atts.getValue("Implementation-Build")</jsp:expression>
