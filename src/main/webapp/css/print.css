@@ -1,1 +1,5 @@
 @charset "UTF-8";
+
+#toggleSize,div.olControlZoom,#zoekenContainer {
+	display: none;
+}

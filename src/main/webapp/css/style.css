@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.hidden {
+	
+}
+
 a.accesskey { /* TODO: instellen op achtergrond kleur */
 	position: absolute;
 	top: -500px;
@@ -21,27 +25,22 @@ a.accesskey:focus {
 	
 }
 
-.kaartTitel {
-	
-}
-
+/* legenda elementen */
 .legendaTitel {
 	
 }
-
-.legendaTitel {
-	
-}
-
+/* (adres) zoeken elementen */
 .zoekenTitel {
 	
 }
 
-.hidden {
+/* feature informatie */
+.featureinfo {
 	
 }
 
-.featureinfo {
+/* kaart elementen */
+.kaartTitel {
 	
 }
 
@@ -73,10 +72,11 @@ a.accesskey:focus {
 	background: url('../img/maxmin.png') no-repeat 0 0;
 }
 
-.copy{
+.copy {
 	font-style: italic;
 }
 
+/*openlayers elementen*/
 .olCursorWait {
 	cursor: wait;
 }
@@ -107,7 +107,7 @@ div.olControlZoom {
 	position: absolute;
 	top: 8px;
 	left: 8px;
-	background: rgba(255, 255, 255, 0.4);
+	background: rgba(255, 255, 255, 0.2);
 	border-radius: 4px;
 	padding: 2px;
 }
