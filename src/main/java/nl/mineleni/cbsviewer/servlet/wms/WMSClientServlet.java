@@ -29,7 +29,9 @@ import nl.mineleni.cbsviewer.util.SpatialUtil;
 import org.geotools.data.ows.Layer;
 import org.geotools.data.wms.WMSUtils;
 import org.geotools.data.wms.WebMapServer;
+import org.geotools.data.wms.request.GetLegendGraphicRequest;
 import org.geotools.data.wms.request.GetMapRequest;
+import org.geotools.data.wms.response.GetLegendGraphicResponse;
 import org.geotools.data.wms.response.GetMapResponse;
 import org.geotools.ows.ServiceException;
 import org.opengis.geometry.BoundingBox;
@@ -171,7 +173,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		try {
 			final File img = this.getMap(bbox, new String[] { layername },
 					new String[] { style });
-			this.renderHTMLResults(request, response, img);
+			final File[] legends = this.getLegends(new String[] { layername },
+					new String[] { style });
+			this.renderHTMLResults(request, response, img, legends);
 		} catch (final ServiceException e) {
 			LOGGER.error(
 					"Er is een fout opgetreden bij het benaderen van (één van) de service(s).",
@@ -182,13 +186,18 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * kaart ophalen.
-	 *
-	 * @param bbox the bbox
-	 * @param layerNames the layer names
-	 * @param styleNames the style names
+	 * 
+	 * @param bbox
+	 *            the bbox
+	 * @param layerNames
+	 *            the layer names
+	 * @param styleNames
+	 *            the style names
 	 * @return the map
-	 * @throws ServiceException the service exception
-	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ServiceException
+	 *             the service exception
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
 	 */
 	private File getMap(BoundingBox bbox, String[] layerNames,
 			String[] styleNames) throws ServiceException, IOException {
@@ -222,7 +231,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			ImageIO.write(image, "png", temp);
 		}
 
-		final BufferedImage image2 = this.getBackGround(bbox);
+		final BufferedImage image2 = this.getBackGroundMap(bbox);
 		final BufferedImage composite = new BufferedImage(MAP_DIMENSION,
 				MAP_DIMENSION, BufferedImage.TYPE_INT_ARGB);
 		final Graphics g = composite.getGraphics();
@@ -267,6 +276,46 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	}
 
 	/**
+	 * haalt de legenda op voor de thema laag.
+	 * 
+	 * 
+	 * @param layerNames
+	 *            the layer names
+	 * @param styleNames
+	 *            the style names
+	 * @return the legend
+	 * @throws ServiceException
+	 *             the service exception
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 */
+	private File[] getLegends(String[] layerNames, String[] styleNames)
+			throws ServiceException, IOException {
+
+		final File[] legends = new File[layerNames.length];
+		GetLegendGraphicRequest legend = this.fgWMS
+				.createGetLegendGraphicRequest();
+		BufferedImage image = new BufferedImage(MAP_DIMENSION, MAP_DIMENSION,
+				BufferedImage.TYPE_INT_ARGB);
+		for (int l = 0; l < layerNames.length; l++) {
+			legend.setLayer(layerNames[l]);
+			legend.setStyle(styleNames[l]);
+			legend.setFormat("image/png");
+			legend.setExceptions("application/vnd.ogc.se_inimage");
+
+			LOGGER.debug("Voorgrond WMS legenda url is: "
+					+ legend.getFinalURL());
+			GetLegendGraphicResponse response = this.fgWMS.issueRequest(legend);
+			image = ImageIO.read(response.getInputStream());
+			legends[l] = File.createTempFile("legenda", ".png", new File(this
+					.getServletContext().getRealPath(MAP_CACHE_DIR)));
+			legends[l].deleteOnExit();
+			ImageIO.write(image, "png", legends[l]);
+		}
+		return legends;
+	}
+
+	/**
 	 * Achtergrondkaart ophalen.
 	 * 
 	 * @param bbox
@@ -277,7 +326,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	private BufferedImage getBackGround(BoundingBox bbox)
+	private BufferedImage getBackGroundMap(BoundingBox bbox)
 			throws ServiceException, IOException {
 
 		if (this.bgWMSCache.containsKey(bbox)) {
@@ -298,7 +347,6 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				map.addLayer(layer);
 			}
 		}
-
 		map.setFormat("image/png");
 		map.setDimensions(MAP_DIMENSION, MAP_DIMENSION);
 		map.setTransparent(true);
@@ -324,14 +372,16 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 *            the response
 	 * @param image
 	 *            the image
+	 * @param legendImages
+	 *            the legend images
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 * @throws ServletException
 	 *             the servlet exception
 	 */
 	private void renderHTMLResults(HttpServletRequest request,
-			HttpServletResponse response, File image) throws IOException,
-			ServletException {
+			HttpServletResponse response, File image, File[] legendImages)
+			throws IOException, ServletException {
 		// response headers instellen en flush gebeurt al in de aanroepende
 		// servlet!
 		// response.setContentType("text/html; charset=UTF-8");
@@ -340,13 +390,23 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			// bijvoorbeeld bij expliciet leeg filter
 			return;
 		}
-		final String imagepath = MAP_CACHE_DIR + "/" + image.getName();
 		final PrintWriter out = response.getWriter();
-		out.println("<div id=\"kaart\"><img id=\"resultsMap\" class=\"resultsMap\" alt=\"Kaart\" src=\""
+
+		// kaart
+		final String imagepath = MAP_CACHE_DIR + "/" + image.getName();
+		out.println("<div id=\"coreContainer\"><img id=\"resultsMap\" class=\"resultsMap\" alt=\"Kaart\" src=\""
 				+ imagepath + "\" />");
+		// legenda
+		out.println("<div id=\"legenda\">");
+		for (File f : legendImages) {
+			final String lPath = MAP_CACHE_DIR + "/" + f.getName();
+			out.println("<img class=\"legendaItem\" alt=\"legenda item\" src=\""
+					+ lPath + "\" />");
+		}
+		out.println("</div>");
+		// copyright
 		out.println("<div id=\"copy\">"
-				+ this._RESOURCES.getString("KEY_COPYRIGHT")
-				+ "</div></div>");
+				+ this._RESOURCES.getString("KEY_COPYRIGHT") + "</div></div>");
 		// out.flush();
 	}
 
