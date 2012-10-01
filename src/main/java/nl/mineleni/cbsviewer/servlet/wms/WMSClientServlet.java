@@ -387,26 +387,33 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		// response.setContentType("text/html; charset=UTF-8");
 		// response.setBufferSize(8192);
 		if (image == null) {
-			// bijvoorbeeld bij expliciet leeg filter
 			return;
 		}
+
 		final PrintWriter out = response.getWriter();
 
 		// kaart
 		final String imagepath = MAP_CACHE_DIR + "/" + image.getName();
 		out.println("<div id=\"coreContainer\"><img id=\"resultsMap\" class=\"resultsMap\" alt=\"Kaart\" src=\""
 				+ imagepath + "\" />");
-		// legenda
-		out.println("<div id=\"legenda\">");
-		for (File f : legendImages) {
-			final String lPath = MAP_CACHE_DIR + "/" + f.getName();
-			out.println("<img class=\"legendaItem\" alt=\"legenda item\" src=\""
-					+ lPath + "\" />");
-		}
-		out.println("</div>");
+
 		// copyright
 		out.println("<div id=\"copy\">"
-				+ this._RESOURCES.getString("KEY_COPYRIGHT") + "</div></div>");
+				+ this._RESOURCES.getString("KEY_COPYRIGHT") + "</div>");
+		// TODO invoegen sidebar
+
+		// legenda
+		out.println("<div id=\"legendaContainer\" class=\"legenda\">");
+		out.println("<h2 class=\"legendaTitel\">Legenda</h2><div id=\"legenda\">");
+		for (File f : legendImages) {
+			final String lPath = MAP_CACHE_DIR + "/" + f.getName();
+			out.println("<img class=\"legenda\" alt=\"legenda item\" src=\""
+					+ lPath + "\" />");
+		}
+
+		out.println("</div>");
+		out.println("</div>");
+
 		// out.flush();
 	}
 
