@@ -11,6 +11,7 @@
  * @class OpenLayers.Handler.KeyboardPoint
  * @requires OpenLayers/Handler.js
  * @requires OpenLayers/Layer/Vector.js
+ * @requires OpenLayers/StyleMap.js
  * @extends OpenLayers.Handler
  */
 OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
@@ -36,7 +37,15 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 		if (!OpenLayers.Handler.prototype.activate.apply(this, arguments)) {
 			return false;
 		}
-		this.layer = new OpenLayers.Layer.Vector(this.CLASS_NAME);
+		this.layer = new OpenLayers.Layer.Vector(this.CLASS_NAME, {
+			styleMap : new OpenLayers.StyleMap({
+				externalGraphic : 'img/info.png',
+				graphicHeight : 37,
+				graphicWidth : 32,
+				graphicXOffset : -16,
+				graphicYOffset : -37
+			})
+		});
 		this.map.addLayer(this.layer);
 		this.observeElement = this.observeElement || document;
 		for ( var i = 0, len = this.KEY_EVENTS.length; i < len; i++) {
@@ -135,18 +144,6 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 	 * 
 	 */
 	drawFeature : function() {
-		// this.layer.drawFeature(this.point, this.style);
-		this.layer.drawFeature(this.point, {
-			externalGraphic : 'img/info.png',
-			graphicHeight : 37,
-			graphicWidth : 32,
-			graphicXOffset : -16,
-			graphicYOffset : -37
-		// ,
-		// labelXOffset : 0,
-		// labelYOffset : 0,
-		// labelAlign : "lb",
-		// label : "Informatie Opvragen"
-		});
+		this.layer.drawFeature(this.point);
 	}
 });
