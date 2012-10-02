@@ -1,10 +1,14 @@
 @charset "UTF-8";
 
 .hidden {
-	
+	display: none;
 }
 
-a.accesskey { /* TODO: instellen op achtergrond kleur */
+html.js  #kaartContainer.nothidden {
+	display: block !important;
+}
+
+a.accesskey {
 	position: absolute;
 	top: -500px;
 	text-align: center;
