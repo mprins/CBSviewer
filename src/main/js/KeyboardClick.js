@@ -12,7 +12,7 @@
  * the map so that the map is not moved when the arrow keys are pressed.
  * 
  * This control relies on the OpenLayers.Handler.KeyboardPoint custom handler.
- *
+ * 
  * @class OpenLayers.Control.KeyboardClick
  * @requires OpenLayers/Control.js
  * @requires KeyboardPoint.js
@@ -41,10 +41,11 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 	},
 
 	/**
-	 * Event handler voor click event.
+	 * Event handler voor click event. Deze handler stuurt de WMSGetFeatureInfo
+	 * control aan om een GetFeatureInfo request uit te voeren.
 	 * 
 	 * @param {Openlayers.Geometry}
-	 *            geometry met real life coordinaten
+	 *            geometry met real life coördinaten
 	 * 
 	 */
 	onClick : function(geometry) {
@@ -60,7 +61,7 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 	},
 
 	/**
-	 * Activeert deze control en zet de default keybord handler uit (mits
+	 * Activeert deze control en zet de default keyboard handler uit (mits
 	 * aanwezig).
 	 * 
 	 * @returns {Boolean}
@@ -69,7 +70,6 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 		if (!OpenLayers.Control.prototype.activate.apply(this, arguments)) {
 			return false;
 		}
-		// deactivate any KeyboardDefaults control
 		var keyboardDefaults = this.map.getControlsByClass('OpenLayers.Control.KeyboardDefaults')[0];
 		if (keyboardDefaults) {
 			keyboardDefaults.deactivate();
@@ -78,7 +78,7 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 	},
 
 	/**
-	 * Deactiveert deze control en zet de default keybord handler aan (mits
+	 * Deactiveert deze control en zet de default keyboard handler aan (mits
 	 * aanwezig).
 	 * 
 	 * @returns {Boolean}
@@ -87,7 +87,6 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 		if (!OpenLayers.Control.prototype.deactivate.apply(this, arguments)) {
 			return false;
 		}
-		// reactivate any KeyboardDefaults control
 		var keyboardDefaults = this.map.getControlsByClass('OpenLayers.Control.KeyboardDefaults')[0];
 		if (keyboardDefaults) {
 			keyboardDefaults.activate();
