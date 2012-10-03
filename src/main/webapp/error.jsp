@@ -1,12 +1,13 @@
 <%@ page isErrorPage="true" language="java"
-	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+	session="false"%>
 <%
     //bepaal de exception: ik weet niet meer precies waarom dit meestal werkt.
     Throwable t = (exception != null) ? exception : (Throwable) request
             .getAttribute("javax.servlet.error.exception");
 
     //log de exception en de timestamp
-    org.apache.log4j.Logger logger = org.apache.log4j.Logger
+    org.slf4j.Logger logger = org.slf4j.LoggerFactory
             .getLogger("ERROR.JSP");
     if (t != null) {
         logger.error(t.getMessage(), t);

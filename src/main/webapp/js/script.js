@@ -20,11 +20,13 @@ var setupPage = {
 	init : function() {
 		OpenLayers.Lang.setCode('nl');
 
+		jQuery('.kaartContainer').toggleClass('hidden');
+
 		// toggle voor vergroten van de kaart
 		var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('toggleSize')
 				+ '" onclick="Viewer.toggleFullSize();"></a>';
-		jQuery('#' + config.mapDiv).prepend(aToggle);		
-		
+		jQuery('#' + config.mapDiv).prepend(aToggle);
+
 		// a11y link toevoegen in de DOM boven de kaart
 		var aLink = '<a class="accesskey" href="" accesskey="1" onclick="jQuery(\'#' + config.mapDiv
 				+ '\').attr(\'tabindex\',-1).focus(); return false;" title="' + OpenLayers.i18n('keyboardNavTtl')

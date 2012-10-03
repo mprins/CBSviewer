@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* basis layout stylesheet, te gebruiken voor plaatsen en afmetingen. */
+/* basis layout stylesheet, te gebruiken voor plaatsen en afmetingen van containers. */
 .kop {
 	
 }
@@ -13,12 +13,12 @@
 }
 
 .kaarten {
-   float: left;
-   width: 100%;
+	float: left;
+	width: 100%;
 }
 
-.kaartContainer {
-	/* margin is de breedte van de sidebar */
+/* margin is de breedte van de sidebar */
+.kaartContainer,.copy {
 	margin-left: 230px;
 }
 
