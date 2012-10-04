@@ -41,7 +41,7 @@
 					</jsp:include>
 					<c:if test="${not empty kaart}">
 						<!-- StringConstants.MAP_CACHE_DIR -->
-						<img src="${dir}/${kaart.getName()}"
+						<img src="${dir}/${kaart.name}"
 							alt="kaart voor ${request.layername}" />
 						<p class="todo">TODO: zoom/pan en vergroot knoppen</p>
 					</c:if>
@@ -76,7 +76,7 @@
 					<c:if test="${param.coreonly==true}">
 						<c:if test="${not empty kaart}">
 							<c:forEach items="${legendas}" varStatus="legenda">
-								<img src="${dir}/${legendas[legenda.index].getName()}"
+								<img src="${dir}/${legendas[legenda.index].name}"
 									alt="legenda item" />
 							</c:forEach>
 						</c:if>
@@ -90,8 +90,9 @@
 					<!-- plaats voor de feature info, dynamisch en statisch-->
 					<c:if test="${param.coreonly==true}">
 						<c:if test="${not empty kaart}">
-							<!--<c:out value="${featureinfo}" />-->
 							<p class="todo">TODO: html parsen/opschonen</p>
+							<!-- hiermee worden de html tags als entities edncoded, niet wat we willen
+							 <c:out value="${featureinfo}" /> -->
 							<jsp:expression>request.getAttribute("featureinfo")</jsp:expression>
 						</c:if>
 					</c:if>

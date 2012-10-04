@@ -15,7 +15,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
@@ -201,7 +200,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
             final String fInfo = this.getFeatureInfo(
                     new String[] { layername }, MAP_DIMENSION_MIDDLE,
                     MAP_DIMENSION_MIDDLE);
-            request.setAttribute("dir", MAP_CACHE_DIR);
+            request.setAttribute("dir", MAP_CACHE_DIR.code);
             request.setAttribute("kaart", kaart);
             request.setAttribute("legendas", legendas);
             request.setAttribute("featureinfo", fInfo);
@@ -212,7 +211,6 @@ public class WMSClientServlet extends AbstractWxSServlet {
                 request.getRequestDispatcher("/index.jsp").forward(request,
                         response);
             }
-            // this.renderHTMLResults(request, response, kaart, legendas);
         } catch (final ServiceException e) {
             LOGGER.error(
                     "Er is een fout opgetreden bij het benaderen van (één van) de service(s).",
@@ -460,57 +458,6 @@ public class WMSClientServlet extends AbstractWxSServlet {
         final BufferedImage image = ImageIO.read(response.getInputStream());
         this.bgWMSCache.put(bbox, image);
         return image;
-    }
-
-    /**
-     * Render html results.
-     * 
-     * @param request
-     *            the request
-     * @param response
-     *            the response
-     * @param image
-     *            the image
-     * @param legendImages
-     *            the legend images
-     * @throws IOException
-     *             Signals that an I/O exception has occurred.
-     * @throws ServletException
-     *             the servlet exception
-     * @deprecated gebruik response forwarding naar een jsp om de response te
-     *             renderen
-     */
-    @Deprecated
-    private void renderHTMLResults(HttpServletRequest request,
-            HttpServletResponse response, File image, File[] legendImages)
-            throws IOException, ServletException {
-        // response headers instellen en flush gebeurt al in de aanroepende
-        // servlet!
-        response.setContentType("text/html; charset=UTF-8");
-        response.setBufferSize(8192);
-        if (image == null) { return; }
-
-        final PrintWriter out = response.getWriter();
-
-        // kaart
-        final String imagepath = MAP_CACHE_DIR + "/" + image.getName();
-        out.println("<div id=\"coreContainer\">");
-        out.println("<img id=\"resultsMap\" class=\"resultsMap\" alt=\"Kaart\" src=\""
-                + imagepath + "\" />");
-
-        // legenda
-        out.println("<div id=\"legendaContainer\" class=\"legenda\">");
-        out.println("<h2 class=\"legendaTitel\">Legenda</h2><div id=\"legenda\">");
-        for (final File f : legendImages) {
-            final String lPath = MAP_CACHE_DIR + "/" + f.getName();
-            out.println("<img class=\"legenda\" alt=\"legenda item\" src=\""
-                    + lPath + "\" />");
-        }
-
-        out.println("</div>");
-        out.println("</div>");
-
-        out.flush();
     }
 
     /*
