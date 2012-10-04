@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* basis layout stylesheet, te gebruiken voor plaatsen en afmetingen van containers. */
-.kop {
+.header {
 	
 }
 
@@ -12,7 +12,7 @@
 	min-height: 480px;
 }
 
-.kaarten {
+.article {
 	float: left;
 	width: 100%;
 }
@@ -23,7 +23,7 @@
 }
 
 /* zweeft links*/
-.sidebar {
+.aside {
 	float: left;
 	width: 230px;
 	margin-left: -100%;

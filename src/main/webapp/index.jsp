@@ -28,11 +28,11 @@
 
 	<div id="wrapper" class="wrapper">
 
-		<div id="kop" class="kop">
+		<div id="header" class="header">
 			<jsp:expression>RESOURCES.getString("KEY_KAART_TITEL")</jsp:expression>
 		</div>
 
-		<div id="kaarten" class="kaarten">
+		<div id="article" class="article">
 			<div id="coreContainer" class="kaartContainer">
 				<!-- hier komt de statische kaart -->
 				<c:if test="${param.coreonly==true}">
@@ -60,7 +60,7 @@
 		</div>
 
 
-		<div id="sidebar" class="sidebar">
+		<div id="aside" class="aside">
 
 			<div id="zoekenContainer" class="zoeken">
 				<jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression>
