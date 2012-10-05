@@ -11,8 +11,8 @@
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
 		omit-xml-declaration="no" />
 
-
 	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
+
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 <head>
 <jsp:include page="WEB-INF/jsp/head_include.jsp" />
