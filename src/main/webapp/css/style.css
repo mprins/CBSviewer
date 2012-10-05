@@ -20,6 +20,10 @@ html.js  #kaartContainer.nothidden {
 	display: block !important;
 }
 
+html.js  #coreContainer p {
+	display: none;
+}
+
 a.accesskey {
 	position: absolute;
 	top: -500px;
@@ -44,6 +48,34 @@ a.accesskey:focus {
 /* (adres) zoeken elementen */
 .zoekenTitel {
 	
+}
+
+#zoekFormulier {
+	background-color: #eaecef;
+	padding: 8px 12px 12px 8px;
+	margin: 0 0 20px 0;
+}
+
+#zoekFormulier p.button {
+	margin-bottom: 0;
+}
+
+#zoekFormulier button {
+	background: url('../img/button.png') top right no-repeat;
+	height: 21px;
+	line-height: 21px;
+	padding: 0 25px 0 0;
+	text-align: right;
+	
+}
+
+#zoekFormulier button:hover,#zoekFormulier button:focus {
+	background-position: right bottom;
+}
+
+#zoekFormulier p input,#zoekFormulier p button {
+	border: 1px solid #aaa;
+	width: 100%;
 }
 
 /* feature informatie */

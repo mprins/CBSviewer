@@ -11,7 +11,6 @@
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
 		omit-xml-declaration="no" />
 
-
 	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 <head>
@@ -34,6 +33,18 @@
 
 		<div id="article" class="article">
 			<div id="coreContainer" class="kaartContainer">
+				<c:if test="${param.coreonly!=true}">
+					<!-- deze alinea wordt verborgen tijdens laden van de pagina, 
+				tenzij er geen css / javascript ondersteuning is -->
+					<p>
+						De browser ondersteund geen Javascript of Cascading Style Sheets
+						(CSS), voor deze gevallen is er een <a href="?coreonly=true"
+							title="Open de aangepaste versie">aangepaste versie van de
+							applicatie beschikbaar</a>. U kunt <a href="#zoekFormulier"
+							title="spring naar zoekformulier">hiernaast</a> een adres
+						invullen om meteen naar een lokatie te gaan in de kaart.
+					</p>
+				</c:if>
 				<!-- hier komt de statische kaart -->
 				<c:if test="${param.coreonly==true}">
 					<jsp:include page="kaart">
@@ -48,15 +59,19 @@
 				</c:if>
 			</div>
 
+			<!-- deze container wordt zichtbaar gemaakt tijdens laden van de pagina, 
+				tenzij er geen css / javascript ondersteuning is -->
 			<div id="kaartContainer" class="kaartContainer hidden">
 				<div id="cbsKaart" class="kaart">
 					<!-- hier wordt de dynamische kaart ingehangen -->
 				</div>
 			</div>
 
-			<div id="copyright" class="copy">
-				<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
-			</div>
+			<c:if test="${not empty kaart}">
+				<div id="copyright" class="copy">
+					<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
+				</div>
+			</c:if>
 		</div>
 
 
@@ -67,6 +82,7 @@
 				<!-- adres zoeken -->
 
 				<p class="todo">TODO: implementatie</p>
+				<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
 			</div>
 
 			<div id="legendaContainer" class="legenda">
@@ -88,9 +104,9 @@
 				<jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression>
 				<div id="featureinfo">
 					<!-- plaats voor de feature info, dynamisch en statisch-->
+					<p class="todo">TODO: strip html</p>
 					<c:if test="${param.coreonly==true}">
 						<c:if test="${not empty kaart}">
-							<p class="todo">TODO: html parsen/opschonen</p>
 							<!-- hiermee worden de html tags als entities edncoded, niet wat we willen
 							 <c:out value="${featureinfo}" /> -->
 							<jsp:expression>request.getAttribute("featureinfo")</jsp:expression>
