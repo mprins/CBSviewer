@@ -3,8 +3,10 @@
  */
 package nl.mineleni.cbsviewer.util;
 
+import java.util.Enumeration;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,5 +62,28 @@ public class LabelsBundle {
 					+ ") is geen String.", e);
 		}
 		return s;
+	}
+
+	/**
+	 * Geeft sleutel/waarde paren als javascript OpenLayers object.
+	 */
+	public String getOpenLayersLangBundle() {
+		StringBuilder sb = new StringBuilder(
+				"OpenLayers.Lang.nl = OpenLayers.Util.extend({");
+
+		for (Enumeration<String> keys = this.resBundle.getKeys(); keys
+				.hasMoreElements();) {
+			String key = keys.nextElement();
+			sb.append("'");
+			sb.append(key);
+			sb.append("'");
+			sb.append(":'");
+			sb.append(this.getString(key));
+			sb.append("',");
+		}
+
+		sb.deleteCharAt(sb.length() - 1);
+		sb.append("}, OpenLayers.Lang.nl);");
+		return sb.toString();
 	}
 }

@@ -14,21 +14,6 @@ config.imgPath = "img/";
  */
 OpenLayers.ProxyHost = 'xhr?';
 
-/**
- * uitbreiding en overrides van de language file.
- * 
- * @todo deze dingen overbrengen naar een properties file die een jsp wrapper
- *       heeft zodat we maar 1 resource file met taal hebben.
- */
-OpenLayers.Lang.nl = OpenLayers.Util
-		.extend(
-				{
-					'keyboardNavTtl' : 'Gebruik +/- en pijl toetsen voor zoomen/verschuiven. Met de i en Enter toets kan informatie opgevraagd worden....',
-					'keyboardNav' : 'Activeer toetsenbord functies voor de kaart',
-					'cssError' : 'Klik hier als deze kaart niet goed word weergegeven.',
-					'toggleSize' : 'Vergroot of verklein de kaart'
-				}, OpenLayers.Lang.nl);
-
 /** id van de div met de kaart. */
 config.mapDiv = "cbsKaart";
 
