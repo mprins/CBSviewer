@@ -78,10 +78,7 @@
 		<div id="aside" class="aside">
 
 			<div id="zoekenContainer" class="zoeken">
-				<jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression>
-				<!-- adres zoeken -->
-
-				<p class="todo">TODO: implementatie</p>
+				
 				<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
 			</div>
 

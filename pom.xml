@@ -43,6 +43,12 @@
 			<comments>For any parts of jQuery</comments>
 			<distribution>manual</distribution>
 		</license>
+		<license>
+			<name>MIT license</name>
+			<url>http://malsup.github.com/mit-license.txt</url>
+			<comments>For jQuery Form Plugin</comments>
+			<distribution>manual</distribution>
+		</license>
 	</licenses>
 	<issueManagement>
 		<system>GitHub</system>
@@ -556,7 +562,8 @@
 							<failOnWarning>false</failOnWarning>
 							<nocompress>${debug}</nocompress>
 							<excludes>
-								<exclude>**/lib/*.js</exclude>
+								<exclude>**/lib/*.min.js</exclude>
+								<exclude>**/lib/OpenLayers.js</exclude>
 							</excludes>
 							<outputDirectory>${project.build.directory}/${project.build.finalName}/js</outputDirectory>
 							<aggregations>

@@ -11,6 +11,14 @@ jQuery(document).ready(function() {
 		'layers' : 'cbsvierkanten100m2010:cbs_inwoners_2000_per_hectare',
 		'styles' : 'cbsvierkant100m_inwoners_2000'
 	});
+
+	// aanhaken van handler aan submit event van formulier
+	jQuery('#zoekFormulier').on('submit', function(e) {
+		// om normale browser submit en navigatie te voorkomen
+		e.preventDefault();
+
+		console.info('ajaxSubmit van zoek formulier.');
+	});
 });
 
 /**

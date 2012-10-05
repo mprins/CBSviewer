@@ -12,7 +12,8 @@
 	<!-- zoek formulier voor de versie zonder javascript en/of css -->
 	<form id="zoekFormulier" action="#" method="get" title="Zoekformulier"
 		name="zoekFormulier">
-
+		<jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression>
+		<p class="todo">TODO: implementatie</p>
 		<p>
 			<!-- <jsp:expression>StringConstants.REQ_PARAM_ADRES</jsp:expression> -->
 			<label for="adres">Postcode of plaatsnaam</label> <input type="text"
