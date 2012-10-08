@@ -50,6 +50,6 @@
 			<appender-ref ref="consoleAppender" /> 
 			<appender-ref ref="rollingFileAppender" /> 
 			-->
-		<appender-ref ref="rollingFileAppender" />
+		<appender-ref ref="consoleAppender" />
 	</root>
 </log4j:configuration>
