@@ -16,7 +16,7 @@
 	dat kan door het sniffen voor de js klasse op het html element van het document -->
 	<jsp:text>
 		<![CDATA[<script type="text/javascript" src="lib/OpenLayers.js"></script>
-<script type="text/javascript" src="lib/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="js/cbsviewer.js"></script>
 <script type="text/javascript" id="language" charset="utf-8">]]>
 	</jsp:text>
