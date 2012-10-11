@@ -145,5 +145,7 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 	 */
 	drawFeature : function() {
 		this.layer.drawFeature(this.point);
-	}
+	},
+
+	CLASS_NAME : 'OpenLayers.Handler.KeyboardPoint'
 });

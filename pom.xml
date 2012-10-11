@@ -569,9 +569,9 @@
 									<includes>
 										<include>**/KeyboardPoint.js</include>
 										<include>**/KeyboardClick.js</include>
-										<include>**/Click.js</include>
 										<include>**/WMSGetFeatureInfo.js</include>
 										<include>**/UpdateLegendControl.js</include>
+										<include>**/ClickDrawControl.js</include>
 										<include>**/Viewer.js</include>
 									</includes>
 									<output>${project.build.directory}/${project.build.finalName}/js/cbsviewer.js</output>
