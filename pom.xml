@@ -41,7 +41,13 @@
 			<name>MIT license</name>
 			<url>https://raw.github.com/jquery/jquery/master/MIT-LICENSE.txt</url>
 			<comments>For any parts of jQuery</comments>
-			<distribution>manual</distribution>
+			<distribution>repo</distribution>
+		</license>
+		<license>
+			<name>BSD license</name>
+			<url>https://raw.github.com/MinELenI/CBSviewer/master/LICENSE.md</url>
+			<comments></comments>
+			<distribution>repo</distribution>
 		</license>
 	</licenses>
 	<issueManagement>
@@ -430,8 +436,7 @@
 						<configuration>
 							<browserVersion>FIREFOX_3_6</browserVersion>
 							<preloadSources>
-								<!-- HtmlUnit 2.9 heeft problemen met 1.8.1 <source>src/main/webapp/lib/jquery-1.8.1.min.js</source> 
-									<source>src/test/js/lib/jquery-1.7.2.js</source> -->
+								<!-- HtmlUnit 2.9 heeft problemen met 1.8.1 -->
 								<source>http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</source>
 								<source>src/test/js/lib/OpenLayers-test.js</source>
 								<source>src/test/js/lib/jasmin_util.js</source>
@@ -583,6 +588,7 @@
 										<include>**/KeyboardClick.js</include>
 										<include>**/WMSGetFeatureInfo.js</include>
 										<include>**/UpdateLegendControl.js</include>
+										<include>**/ClickDrawControl.js</include>
 										<include>**/Viewer.js</include>
 									</includes>
 									<output>${project.build.directory}/${project.build.finalName}/js/cbsviewer.js</output>

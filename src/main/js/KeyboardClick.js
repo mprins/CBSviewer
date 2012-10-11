@@ -74,6 +74,10 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 		if (keyboardDefaults) {
 			keyboardDefaults.deactivate();
 		}
+		var clickDraw = this.map.getControlsByClass('ClickDrawControl')[0];
+		if (clickDraw) {
+			clickDraw.deactivate();
+		}
 		return true;
 	},
 
@@ -91,6 +95,12 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
 		if (keyboardDefaults) {
 			keyboardDefaults.activate();
 		}
+		var clickDraw = this.map.getControlsByClass('ClickDrawControl')[0];
+		if (clickDraw) {
+			clickDraw.activate();
+		}
 		return true;
-	}
+	},
+	
+	CLASS_NAME: 'OpenLayers.Control.KeyboardClick'
 });

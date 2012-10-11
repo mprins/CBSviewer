@@ -10,20 +10,8 @@ describe('Viewer', function() {
 	it('map object van Viewer is null', function() {
 		expect(Viewer.getMap()).toBeNull();
 	});
-	/**
-	 * Deze test falen in de maven runner, maar werken wel in de browser <code>
-	 * mvn jasmine:bdd
-	 * </code>
-	 * 
-	 * Voorlopig uitzetten met x (xdescribe ipv describe...) Dit is een probleem
-	 * dat uit de onderliggende HtmlUnit van de maven plugin naar boven komt,
-	 * mogelijk op te lossen door PhantomJs te gaan gebruiken. HtmlUnit heeft
-	 * ook probemen met nieuwere versies van JQuery...
-	 * 
-	 */
-	describe(
-	// TODO
-	'Viewer initialized', function() {
+
+	describe('Viewer initialized', function() {
 		var _wms = {
 			'name' : 'wms-layer',
 			'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows',
@@ -84,7 +72,7 @@ describe('Viewer', function() {
 					var lyrs = Viewer.getMap().layers;
 					expect(lyrs.length).toBe(1);
 					expect(lyrs[0]).toBeInstanceOf(OpenLayers.Layer.WMTS);
-		});
+				});
 		it('Na destroy is de kaart null', function() {
 			Viewer.destroy();
 			expect(Viewer.getMap()).toBeNull();
