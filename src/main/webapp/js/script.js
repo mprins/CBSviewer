@@ -30,19 +30,19 @@ var setupPage = {
 
 		jQuery('.kaartContainer').toggleClass('hidden');
 
-		// toggle voor vergroten van de kaart
-		var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('toggleSize')
+		// toggle knop voor vergroten van de kaart
+		var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('KEY_TOGGLE_SIZE')
 				+ '" onclick="Viewer.toggleFullSize();"></a>';
 		jQuery('#' + config.mapDiv).prepend(aToggle);
 
 		// a11y link toevoegen in de DOM boven de kaart
 		var aLink = '<a class="accesskey" href="" accesskey="1" onclick="jQuery(\'#' + config.mapDiv
-				+ '\').attr(\'tabindex\',-1).focus(); return false;" title="' + OpenLayers.i18n('keyboardNavTtl')
-				+ '">' + OpenLayers.i18n('keyboardNav') + '</a>';
+				+ '\').attr(\'tabindex\',-1).focus(); return false;" title="' + OpenLayers.i18n('KEY_KEYBOARDNAV_TTL')
+				+ '">' + OpenLayers.i18n('KEY_KEYBOARDNAV') + '</a>';
 		jQuery('#' + config.mapDiv).prepend(aLink);
 
-		// core/css fout link toevoegen aan de kaart
-		var aCore = '<a class="accesskey" href="?coreonly=true">' + OpenLayers.i18n('cssError') + '</a>';
+		// core link toevoegen aan de kaart
+		var aCore = '<a class="accesskey" href="?coreonly=true">' + OpenLayers.i18n('KEY_CSSERROR') + '</a>';
 		jQuery('#' + config.mapDiv).prepend(aCore);
 
 		// eventueel de font-size aanpassen zodat het altijd past:

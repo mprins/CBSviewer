@@ -22,7 +22,7 @@
 			<param-name>allowed_hosts</param-name>
 			<param-value>geodata.nationaalgeoregister.nl; localhost</param-value>
 		</init-param>
-		<!-- 
+
 		<init-param>
 			<description>hostnaam of ip adres van de proxy die deze servlet gebruikt om het internet op te gaan</description>
 			<param-name>proxy_host</param-name>
@@ -33,7 +33,7 @@
 			<param-name>proxy_port</param-name>
 			<param-value>8080</param-value>
 		</init-param>
-		 -->
+
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ReverseProxyServlet</servlet-name>

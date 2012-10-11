@@ -30,7 +30,6 @@ Viewer = function() {
 	 */
 	function _showInfo(evt) {
 		jQuery('#' + config.featureInfoDiv).html(evt.text);
-
 	}
 
 	/**
@@ -105,6 +104,7 @@ Viewer = function() {
 					getfeatureinfo : _showInfo
 				}
 			}));
+			_map.addControl(new ClickDrawControl());
 		},
 
 		/**
