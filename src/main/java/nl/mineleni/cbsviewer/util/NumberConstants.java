@@ -22,9 +22,9 @@ public enum NumberConstants {
     /** straal voor een default zoekresultaat, waarde in meter. */
     OPENLS_ZOOMSCALE_STANDAARD(15000),
 
-    /** default x coordinaat */
+    /** default x coordinaat. */
     DEFAULT_XCOORD(150000),
-    /** default y coordinaat, {@value} */
+    /** default y coordinaat. */
     DEFAULT_YCOORD(450000),
 
     /** default font size, 12. */

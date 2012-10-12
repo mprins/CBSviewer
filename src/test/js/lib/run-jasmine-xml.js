@@ -63,6 +63,12 @@ if (phantom.args.length !== 2) {
 		console.log(msg);
 	};
 
+	// set viewport
+	page.viewportSize = {
+		width : 1024,
+		height : 787
+	};
+
 	page.open(htmlrunner, function(status) {
 		if (status === "success") {
 			utils.core.waitfor(function() { // wait for this to be true

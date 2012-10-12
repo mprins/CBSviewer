@@ -3,7 +3,9 @@ package nl.mineleni.cbsviewer.servlet;
 import static javax.servlet.http.HttpServletResponse.SC_FORBIDDEN;
 import static javax.servlet.http.HttpServletResponse.SC_OK;
 
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.HashSet;
 import java.util.Set;
@@ -63,235 +65,235 @@ import org.slf4j.LoggerFactory;
  */
 public class ReverseProxyServlet extends AbstractBaseServlet {
 
-	/** generated serialVersionUID. */
-	private static final long serialVersionUID = 1512103319305509379L;
+    /** Forceer xml output optie sleutel. {@value} */
+    public static final String FORCE_XML_MIME = "force_xml_mime";
 
-	/** log4j logger. */
-	private static final Logger LOGGER = LoggerFactory
-			.getLogger(ReverseProxyServlet.class);
+    /** Allowed hosts config optie. {@value} */
+    public static final String ALLOWED_HOSTS = "allowed_hosts";
 
-	/**
-	 * Set van toegestane hosts voor proxy-ing.
-	 * 
-	 * @see #ALLOWED_HOSTS
-	 */
-	private final Set<String> allowedHosts = new HashSet<String>();
+    /** Foutmelding in geval van missende 'allowed_hosts' optie. {@value} */
+    public static final String ERR_MSG_MISSING_CONFIG = "De \'allowed_hosts\' parameter ontbreekt in servletconfig.";
 
-	/** Forceer xml output optie sleutel. {@value} */
-	public static final String FORCE_XML_MIME = "force_xml_mime";
+    /** Melding als proxy wordt geweigerd. {@value} */
+    private static final String ERR_MSG_FORBIDDEN = " is niet in de lijst met toegestane servers.";
 
-	/** Allowed hosts config optie. {@value} */
-	public static final String ALLOWED_HOSTS = "allowed_hosts";
+    /** generated serialVersionUID. */
+    private static final long serialVersionUID = 1512103319305509379L;
 
-	/** Foutmelding in geval van missende 'allowed_hosts' optie. {@value} */
-	public static final String ERR_MSG_MISSING_CONFIG = "De \'allowed_hosts\' parameter ontbreekt in servletconfig.";
+    /** log4j logger. */
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(ReverseProxyServlet.class);
 
-	/** Melding als proxy wordt geweigerd. {@value} */
-	private static final String ERR_MSG_FORBIDDEN = " is niet in de lijst met toegestane servers.";
+    /**
+     * Set van toegestane hosts voor proxy-ing.
+     * 
+     * @see #ALLOWED_HOSTS
+     */
+    private final Set<String> allowedHosts = new HashSet<String>();
 
-	/**
-	 * optie om text/xml mime type voor response te forceren. default waarde is
-	 * <code>false</code>
-	 * 
-	 * @see #FORCE_XML_MIME
-	 */
-	private boolean forceXmlResponse = false;
+    /**
+     * optie om text/xml mime type voor response te forceren. default waarde is
+     * <code>false</code>
+     * 
+     * @see #FORCE_XML_MIME
+     */
+    private boolean forceXmlResponse = false;
 
-	/**
-	 * Initialize variables called when context is initialized. Leest de waarden
-	 * van {@link #ALLOWED_HOSTS} (verplichte optie) en {@link #FORCE_XML_MIME}
-	 * uit de configuratie.
-	 * 
-	 * @param config
-	 *            the <code>ServletConfig</code> object that contains
-	 *            configutation information for this servlet
-	 * @throws ServletException
-	 *             if an exception occurs that interrupts the servlet's normal
-	 *             operation
-	 */
-	@Override
-	public void init(ServletConfig config) throws ServletException {
-		super.init(config);
-		final String forceXML = config.getInitParameter(FORCE_XML_MIME);
-		this.forceXmlResponse = (null != forceXML ? Boolean
-				.parseBoolean(forceXML) : false);
+    /**
+     * Initialize variables called when context is initialized. Leest de waarden
+     * van {@link #ALLOWED_HOSTS} (verplichte optie) en {@link #FORCE_XML_MIME}
+     * uit de configuratie.
+     * 
+     * @param config
+     *            the <code>ServletConfig</code> object that contains
+     *            configutation information for this servlet
+     * @throws ServletException
+     *             if an exception occurs that interrupts the servlet's normal
+     *             operation
+     */
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        final String forceXML = config.getInitParameter(FORCE_XML_MIME);
+        this.forceXmlResponse = (null != forceXML ? Boolean
+                .parseBoolean(forceXML) : false);
 
-		String csvHostnames = config.getInitParameter(ALLOWED_HOSTS);
-		if (csvHostnames == null) {
-			LOGGER.error(ERR_MSG_MISSING_CONFIG);
-			throw new ServletException(ERR_MSG_MISSING_CONFIG);
-		}
-		// clean-up whitespace and case the names
-		csvHostnames = csvHostnames.replaceAll("\\s", "").toLowerCase();
-		final String[] names = csvHostnames.split(";");
-		for (final String name : names) {
-			this.allowedHosts.add(name);
-			LOGGER.debug("toevoegen aan allowed host namen: " + name);
-		}
-	}
+        String csvHostnames = config.getInitParameter(ALLOWED_HOSTS);
+        if (csvHostnames == null) {
+            LOGGER.error(ERR_MSG_MISSING_CONFIG);
+            throw new ServletException(ERR_MSG_MISSING_CONFIG);
+        }
+        // clean-up whitespace and case the names
+        csvHostnames = csvHostnames.replaceAll("\\s", "").toLowerCase();
+        final String[] names = csvHostnames.split(";");
+        for (final String name : names) {
+            this.allowedHosts.add(name);
+            LOGGER.debug("toevoegen aan allowed host namen: " + name);
+        }
+    }
 
-	/**
-	 * Process the HTTP Get request. Voor een Openlayers proxy wordt de url dan
-	 * iets van: <br/>
-	 * <code>WMSproxy/proxy?</code> <br/>
-	 * waarin WMSproxy de naam van de webapp is en proxy de servlet mapping.
-	 * 
-	 * @param request
-	 *            the request
-	 * @param response
-	 *            the response
-	 * @throws ServletException
-	 *             the servlet exception
-	 */
-	@Override
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException {
-		try {
-			String serverUrl = request.getQueryString();
-			serverUrl = URLDecoder.decode(serverUrl, "UTF-8");
-			if (serverUrl.startsWith("http://")
-					|| serverUrl.startsWith("https://")) {
-				// check if allowed
-				if (!this.checkUrlAllowed(serverUrl)) {
-					LOGGER.warn(serverUrl + ERR_MSG_FORBIDDEN);
-					response.sendError(SC_FORBIDDEN, serverUrl
-							+ ERR_MSG_FORBIDDEN);
-					response.flushBuffer();
-				} else {
-					LOGGER.debug("GET param:" + serverUrl);
-					final HttpClient client = new DefaultHttpClient();
-					if (null != this.proxyHost) {
-						client.getParams().setParameter(
-								ConnRoutePNames.DEFAULT_PROXY,
-								new HttpHost(this.proxyHost, this.proxyPort,
-										"http"));
-					}
-					// override referer
-					client.getParams().setParameter("Referer", "/");
+    /**
+     * Process the HTTP Get request. Voor een Openlayers proxy wordt de url dan
+     * iets van: <br/>
+     * <code>WMSproxy/proxy?</code> <br/>
+     * waarin WMSproxy de naam van de webapp is en proxy de servlet mapping.
+     * 
+     * @param request
+     *            the request
+     * @param response
+     *            the response
+     * @throws ServletException
+     *             the servlet exception
+     */
+    @Override
+    protected void doGet(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException {
+        try {
+            String serverUrl = request.getQueryString();
+            serverUrl = URLDecoder.decode(serverUrl, "UTF-8");
+            if (serverUrl.startsWith("http://")
+                    || serverUrl.startsWith("https://")) {
+                // check if allowed
+                if (!this.checkUrlAllowed(serverUrl)) {
+                    LOGGER.warn(serverUrl + ERR_MSG_FORBIDDEN);
+                    response.sendError(SC_FORBIDDEN, serverUrl
+                            + ERR_MSG_FORBIDDEN);
+                    response.flushBuffer();
+                } else {
+                    LOGGER.debug("GET param:" + serverUrl);
+                    final HttpClient client = new DefaultHttpClient();
+                    if (null != this.proxyHost) {
+                        client.getParams().setParameter(
+                                ConnRoutePNames.DEFAULT_PROXY,
+                                new HttpHost(this.proxyHost, this.proxyPort,
+                                        "http"));
+                    }
+                    // override referer
+                    client.getParams().setParameter("Referer", "/");
 
-					final HttpResponse getResp = client.execute(new HttpGet(
-							serverUrl));
+                    final HttpResponse getResp = client.execute(new HttpGet(
+                            serverUrl));
 
-					// dump response to out
-					if (getResp.getStatusLine().getStatusCode() == SC_OK) {
-						// force the response to have XML content type (WMS
-						// servers generally don't)
-						if (this.forceXmlResponse) {
-							response.setContentType("text/xml");
-						}
-						final String responseBody = EntityUtils.toString(
-								getResp.getEntity()).trim();
-						response.setContentLength(responseBody.length());
+                    // dump response to out
+                    if (getResp.getStatusLine().getStatusCode() == SC_OK) {
+                        // force the response to have XML content type (WMS
+                        // servers generally don't)
+                        if (this.forceXmlResponse) {
+                            response.setContentType("text/xml");
+                        }
+                        final String responseBody = EntityUtils.toString(
+                                getResp.getEntity()).trim();
+                        response.setContentLength(responseBody.length());
 
-						LOGGER.debug("responseBody:" + responseBody);
-						final PrintWriter out = response.getWriter();
-						out.print(responseBody);
-						response.flushBuffer();
-					} else {
-						LOGGER.warn("Onverwachte fout(server url=" + serverUrl
-								+ "): " + getResp.getStatusLine().toString());
-						response.sendError(getResp.getStatusLine()
-								.getStatusCode(), getResp.getStatusLine()
-								.toString());
-					}
-					client.getConnectionManager().shutdown();
-				}
-			} else {
-				throw new ServletException("Only HTTP(S) protocol supported");
-			}
-		} catch (final Throwable e) {
-			LOGGER.warn("Proxy fout.", e);
-			throw new ServletException(e);
-		}
-	}
+                        LOGGER.debug("responseBody:" + responseBody);
+                        final PrintWriter out = response.getWriter();
+                        out.print(responseBody);
+                        response.flushBuffer();
+                    } else {
+                        LOGGER.warn("Onverwachte fout(server url=" + serverUrl
+                                + "): " + getResp.getStatusLine().toString());
+                        response.sendError(getResp.getStatusLine()
+                                .getStatusCode(), getResp.getStatusLine()
+                                .toString());
+                    }
+                    client.getConnectionManager().shutdown();
+                }
+            } else {
+                throw new ServletException("Only HTTP(S) protocol supported");
+            }
+        } catch (final UnsupportedEncodingException e) {
+            LOGGER.error("Proxy fout.", e);
+            throw new ServletException(e);
+        } catch (final IOException e) {
+            LOGGER.error("Proxy IO fout.", e);
+            throw new ServletException(e);
+        }
+    }
 
-	// TODO implementatie van POST
-	// /**
-	// * Process the HTTP Post request. niet duidelijk of dit 100% werkt..
-	// *
-	// * @param serverUrl
-	// * the server url
-	// * @return true, if successful
-	// * @todo testen of dit echt werkt; voor WMS niet zo belangrijk, wel voor
-	// * WFS/WFS-T
-	// */
-	// @Override
-	// public void doPost(HttpServletRequest request, HttpServletResponse
-	// response)
-	// throws ServletException {
-	// try {
-	// String serverUrl = request.getQueryString();
-	// serverUrl = URLDecoder.decode(serverUrl, "UTF-8");
-	// if (serverUrl.startsWith("http://")
-	// || serverUrl.startsWith("https://")) {
-	// // check if allowed
-	// if (!this.checkUrlAllowed(serverUrl)) {
-	// LOGGER.warn(serverUrl + ERR_MSG_FORBIDDEN);
-	// response.sendError(SC_FORBIDDEN, serverUrl
-	// + ERR_MSG_FORBIDDEN);
-	// response.flushBuffer();
-	// }
-	// final HttpPost httppost = new HttpPost(serverUrl);
-	// // Transfer bytes from in to out
-	// LOGGER.info("HTTP POST transfering..." + serverUrl);
-	// final PrintWriter out = response.getWriter();
-	// final HttpClient client = new DefaultHttpClient();
-	//
-	// httppost.setEntity(new InputStreamEntity(request
-	// .getInputStream(), request.getContentLength(),
-	// ContentType.create(request.getContentType())));
-	// if (0 == httppost.getParams().length) {
-	// LOGGER.debug("No Name/Value pairs found ... pushing as raw_post_data");
-	// httppost.setParameter("raw_post_data", body);
-	// }
-	//
-	// client.execute(httppost);
-	// if (LOGGER.isDebugEnabled()) {
-	// final Header[] respHeaders = httppost.getAllHeaders();
-	// for (int i = 0; i < respHeaders.length; ++i) {
-	// final String headerName = respHeaders[i].getName();
-	// final String headerValue = respHeaders[i].getValue();
-	// LOGGER.debug("responseHeaders:" + headerName + "="
-	// + headerValue);
-	// }
-	// }
-	// if (httppost.getStatusCode() == SC_OK) {
-	// response.setContentType("text/xml");
-	// final String responseBody = httppost
-	// .getResponseBodyAsString();
-	//
-	// response.setContentLength(responseBody.length());
-	// LOGGER.info("responseBody:" + responseBody);
-	// out.print(responseBody);
-	// } else {
-	// LOGGER.error("Unexpected failure: "
-	// + httppost.getStatusLine().toString());
-	// }
-	// client.getConnectionManager().shutdown();
-	// } else {
-	// throw new ServletException("only HTTP(S) protocol supported");
-	// }
-	// } catch (final Throwable e) {
-	// throw new ServletException(e);
-	// }
-	// }
+    // TODO implementatie van POST
+    // /**
+    // * Process the HTTP Post request. niet duidelijk of dit 100% werkt..
+    // *
+    // * @param serverUrl
+    // * the server url
+    // * @return true, if successful
+    // */
+    // @Override
+    // public void doPost(HttpServletRequest request, HttpServletResponse
+    // response)
+    // throws ServletException {
+    // try {
+    // String serverUrl = request.getQueryString();
+    // serverUrl = URLDecoder.decode(serverUrl, "UTF-8");
+    // if (serverUrl.startsWith("http://")
+    // || serverUrl.startsWith("https://")) {
+    // // check if allowed
+    // if (!this.checkUrlAllowed(serverUrl)) {
+    // LOGGER.warn(serverUrl + ERR_MSG_FORBIDDEN);
+    // response.sendError(SC_FORBIDDEN, serverUrl
+    // + ERR_MSG_FORBIDDEN);
+    // response.flushBuffer();
+    // }
+    // final HttpPost httppost = new HttpPost(serverUrl);
+    // // Transfer bytes from in to out
+    // LOGGER.info("HTTP POST transfering..." + serverUrl);
+    // final PrintWriter out = response.getWriter();
+    // final HttpClient client = new DefaultHttpClient();
+    //
+    // httppost.setEntity(new InputStreamEntity(request
+    // .getInputStream(), request.getContentLength(),
+    // ContentType.create(request.getContentType())));
+    // if (0 == httppost.getParams().length) {
+    // LOGGER.debug("No Name/Value pairs found ... pushing as raw_post_data");
+    // httppost.setParameter("raw_post_data", body);
+    // }
+    //
+    // client.execute(httppost);
+    // if (LOGGER.isDebugEnabled()) {
+    // final Header[] respHeaders = httppost.getAllHeaders();
+    // for (int i = 0; i < respHeaders.length; ++i) {
+    // final String headerName = respHeaders[i].getName();
+    // final String headerValue = respHeaders[i].getValue();
+    // LOGGER.debug("responseHeaders:" + headerName + "="
+    // + headerValue);
+    // }
+    // }
+    // if (httppost.getStatusCode() == SC_OK) {
+    // response.setContentType("text/xml");
+    // final String responseBody = httppost
+    // .getResponseBodyAsString();
+    //
+    // response.setContentLength(responseBody.length());
+    // LOGGER.info("responseBody:" + responseBody);
+    // out.print(responseBody);
+    // } else {
+    // LOGGER.error("Unexpected failure: "
+    // + httppost.getStatusLine().toString());
+    // }
+    // client.getConnectionManager().shutdown();
+    // } else {
+    // throw new ServletException("only HTTP(S) protocol supported");
+    // }
+    // } catch (final Throwable e) {
+    // throw new ServletException(e);
+    // }
+    // }
 
-	/**
-	 * Parse out the server name and check if the specified server name is in
-	 * the list of allowed servernames.
-	 * 
-	 * @param serverUrl
-	 *            the url to check
-	 * 
-	 * @return <code>true</code> if the name of the server is found in the list
-	 */
-	private boolean checkUrlAllowed(String serverUrl) {
-		serverUrl = serverUrl.toLowerCase();
-		serverUrl = serverUrl.substring(serverUrl.indexOf("//") + 2);
-		if (serverUrl.contains("/")) {
-			serverUrl = serverUrl.substring(0, serverUrl.indexOf("/"));
-		}
-		LOGGER.debug("test server = " + serverUrl);
-		return (this.allowedHosts.contains(serverUrl));
-	}
+    /**
+     * Parse out the server name and check if the specified server name is in
+     * the list of allowed servernames.
+     * 
+     * @param serverUrl
+     *            the url to check
+     * @return <code>true</code> if the name of the server is found in the list
+     */
+    private boolean checkUrlAllowed(String serverUrl) {
+        serverUrl = serverUrl.toLowerCase();
+        serverUrl = serverUrl.substring(serverUrl.indexOf("//") + 2);
+        if (serverUrl.contains("/")) {
+            serverUrl = serverUrl.substring(0, serverUrl.indexOf("/"));
+        }
+        LOGGER.debug("test server = " + serverUrl);
+        return (this.allowedHosts.contains(serverUrl));
+    }
 }

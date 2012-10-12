@@ -67,7 +67,6 @@ ClickDrawControl = OpenLayers.Class(OpenLayers.Control, {
 	 */
 	drawOrMove : function(e) {
 		var lonlat = this.map.getLonLatFromPixel(e.xy);
-		console.debug("clicked: " + lonlat.lat + " N, " + +lonlat.lon + " E");
 		if (!this.point) {
 			var geometry = new OpenLayers.Geometry.Point(lonlat.lon, lonlat.lat);
 			this.point = new OpenLayers.Feature.Vector(geometry);
