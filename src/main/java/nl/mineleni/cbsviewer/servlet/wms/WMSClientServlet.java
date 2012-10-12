@@ -96,7 +96,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
     private String[] bgWMSlayers = null;
 
     /** cache voor achtergrond kaartjes. */
-    private ImageCaching<BoundingBox, BufferedImage> bgWMSCache = null;
+    private transient ImageCaching<BoundingBox, BufferedImage> bgWMSCache = null;
 
     /*
      * (non-Javadoc)
@@ -206,7 +206,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
             request.setAttribute("legendas", legendas);
             request.setAttribute("featureinfo", fInfo);
 
-            if (!forwardResponse) {
+            if (forwardResponse) {
                 return;
             } else {
                 request.getRequestDispatcher("/index.jsp").forward(request,

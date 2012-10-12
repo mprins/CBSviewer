@@ -33,6 +33,12 @@
 	<licenses>
 		<license>
 			<name>BSD license</name>
+			<url>https://raw.github.com/MinELenI/CBSviewer/master/LICENSE.md</url>
+			<comments></comments>
+			<distribution>repo</distribution>
+		</license>	
+		<license>
+			<name>BSD license</name>
 			<url>https://raw.github.com/openlayers/openlayers/master/license.txt</url>
 			<comments>For any parts of OpenLayers</comments>
 			<distribution>manual</distribution>
@@ -41,12 +47,6 @@
 			<name>MIT license</name>
 			<url>https://raw.github.com/jquery/jquery/master/MIT-LICENSE.txt</url>
 			<comments>For any parts of jQuery</comments>
-			<distribution>repo</distribution>
-		</license>
-		<license>
-			<name>BSD license</name>
-			<url>https://raw.github.com/MinELenI/CBSviewer/master/LICENSE.md</url>
-			<comments></comments>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
