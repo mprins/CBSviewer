@@ -66,6 +66,9 @@
 			<item name="Broncode" href="${project.scm.url}" />
 		</menu>
 		<menu ref="reports" />
+		<menu name="Manual Tests">
+			<item name="Saga testdekking" href="/total-report.html" />
+		</menu>
 	</body>
 	<poweredBy>
 		<logo name="Github" href="https://github.com/MinELenI/CBSviewer"

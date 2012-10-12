@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-// TODO: Auto-generated Javadoc
 /**
  * Algemene initialisatie code en gedeelde functies voor de WxS servlets.
  * 
@@ -29,7 +28,8 @@ import org.slf4j.LoggerFactory;
 public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 
     /** The logger. */
-    final Logger LOGGER = LoggerFactory.getLogger(AbstractWxSServlet.class);
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(AbstractWxSServlet.class);
     /** serialization id. */
     private static final long serialVersionUID = -5563479037661945586L;
 
@@ -60,18 +60,18 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
                             .toString() : request
                             .getParameter(REQ_PARAM_STRAAL.code)));
 
-            this.LOGGER.debug("request params:" + xcoord + ":" + ycoord
-                    + " straal:" + straal);
+            LOGGER.debug("request params:" + xcoord + ":" + ycoord + " straal:"
+                    + straal);
             return new double[] { xcoord, ycoord, straal };
         } catch (final NullPointerException e) {
-            this.LOGGER
-                    .error("Een van de vereiste parameters werd niet in het request gevonden.",
-                            e);
+            LOGGER.error(
+                    "Een van de vereiste parameters werd niet in het request gevonden.",
+                    e);
             throw new ServletException(e);
         } catch (final NumberFormatException e) {
-            this.LOGGER
-                    .error("Een van de vereiste parameters kon niet geparsed worden als Double.",
-                            e);
+            LOGGER.error(
+                    "Een van de vereiste parameters kon niet geparsed worden als Double.",
+                    e);
             throw new ServletException(e);
         }
     }
@@ -80,13 +80,12 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
      * Parse de forward parameter van een request.
      * 
      * @see REQ_PARAM_FORWARD
-     * @return true, if successful
+     * @return true, als successful
      * @param request
      *            Het servlet request
      */
     protected boolean parseForward(HttpServletRequest request) {
         return (null == request.getParameter(REQ_PARAM_FORWARD.code) ? true
                 : Boolean.valueOf(request.getParameter(REQ_PARAM_FORWARD.code)));
-
     }
 }

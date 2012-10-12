@@ -7,11 +7,10 @@
 	<property name="severity" value="warning" />
 	<module name="TreeWalker">
 		<module name="FileContentsHolder" />
-		<module name="JavadocMethod" />
-		<module name="JavadocType" />
+		<module name="JavadocType">
+			<property name="allowUnknownTags" value="true" />
+		</module>
 		<module name="JavadocVariable" />
-		<module name="JavadocStyle" />
-		<module name="ConstantName" />
 		<module name="LocalFinalVariableName" />
 		<module name="LocalVariableName" />
 		<module name="MemberName" />
@@ -98,6 +97,7 @@
 		<module name="ArrayTypeStyle" />
 		<module name="TodoComment">
 			<property name="format" value="TODO" />
+			<property name="format" value="todo" />
 		</module>
 		<module name="UpperEll" />
 		<module name="NoWhitespaceAfter">
@@ -117,8 +117,6 @@
 			<property name="tokens"
 				value="CLASS_DEF,CTOR_DEF,INTERFACE_DEF,METHOD_DEF,VARIABLE_DEF" />
 		</module>
-		<module name="JavadocType" />
-		<module name="JavadocVariable" />
 		<module name="ConstantName" />
 		<module name="IllegalImport" />
 		<module name="FallThrough">
@@ -142,16 +140,14 @@
 		<module name="FinalClass">
 			<property name="severity" value="info" />
 		</module>
-		<module name="TodoComment">
-			<property name="format" value="todo" />
-		</module>
 	</module>
 	<module name="FileLength">
 		<property name="max" value="500" />
 	</module>
-	<!-- <module name="FileTabCharacter" /> -->
 	<module name="SuppressionCommentFilter" />
-	<module name="NewlineAtEndOfFile" />
+	<module name="NewlineAtEndOfFile">
+		<property name="lineSeparator" value="lf" />
+	</module>
 	<module name="Translation" />
 	<module name="JavadocPackage">
 		<property name="severity" value="info" />

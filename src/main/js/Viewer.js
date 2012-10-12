@@ -77,7 +77,7 @@ Viewer = function() {
 		 * @deprecated probeer deze niet te gebruiken
 		 */
 		getMap : function() {
-			window.console && console.warn('Deprecated function called: Viewer::getMap().');
+			(window.console && console.warn('Deprecated function called: Viewer::getMap().'));
 			return _map;
 		},
 

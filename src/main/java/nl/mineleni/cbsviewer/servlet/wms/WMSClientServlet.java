@@ -53,16 +53,29 @@ import org.slf4j.LoggerFactory;
  * WMS client voor de applicatie.
  * 
  * @author prinsmc
- * @todo implmentatie afmaken
+ * @todo implementatie afmaken
  */
 public class WMSClientServlet extends AbstractWxSServlet {
 
     /** serialVersionUID. */
     private static final long serialVersionUID = 4958212343847516071L;
+
     /** logger. */
     private static final Logger LOGGER = LoggerFactory
             .getLogger(WMSClientServlet.class);
+    /**
+     * vaste afmeting van de kaart (hoogte en breedte). {@value}
+     * 
+     * @see #MAP_DIMENSION_MIDDLE
+     */
+    private static final int MAP_DIMENSION = 440;
 
+    /**
+     * helft van de afmeting van de kaart (hoogte en breedte). {@value}
+     * 
+     * @see #MAP_DIMENSION
+     */
+    private static final int MAP_DIMENSION_MIDDLE = MAP_DIMENSION / 2;
     /**
      * voorgrond wms.
      * 
@@ -79,23 +92,11 @@ public class WMSClientServlet extends AbstractWxSServlet {
     /** achtergrond wms. */
     private transient WebMapServer bgWMS = null;
 
-    /**
-     * vaste afmeting van de kaart (hoogte en breedte). {@value}
-     */
-    private static final int MAP_DIMENSION = 440;
-
-    /**
-     * helft van de afmeting van de kaart (hoogte en breedte). {@value}
-     * 
-     * @see #MAP_DIMENSION
-     */
-    private static final int MAP_DIMENSION_MIDDLE = MAP_DIMENSION / 2;
-
     /** verzameling lagen voor de achtergrondkaart. */
     private String[] bgWMSlayers = null;
 
     /** cache voor achtergrond kaartjes. */
-    private volatile ImageCaching<BoundingBox, BufferedImage> bgWMSCache = null;
+    private ImageCaching<BoundingBox, BufferedImage> bgWMSCache = null;
 
     /*
      * (non-Javadoc)
@@ -238,8 +239,6 @@ public class WMSClientServlet extends AbstractWxSServlet {
             String[] styleNames) throws ServiceException, IOException {
 
         final Color drawCol = Color.MAGENTA;
-        BufferedImage image = new BufferedImage(MAP_DIMENSION, MAP_DIMENSION,
-                BufferedImage.TYPE_INT_ARGB);
 
         // wms request doen
         this.getMapRequest = this.fgWMS.createGetMapRequest();
@@ -259,7 +258,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
         // thema/voorgrond ophalen
         final GetMapResponse response = this.fgWMS
                 .issueRequest(this.getMapRequest);
-        image = ImageIO.read(response.getInputStream());
+        final BufferedImage image = ImageIO.read(response.getInputStream());
         if (LOGGER.isDebugEnabled()) {
             // voorgrond plaatje bewaren in debug modus
             final File temp = File.createTempFile("fgwms", ".png", new File(
@@ -331,8 +330,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
         final File[] legends = new File[layerNames.length];
         final GetLegendGraphicRequest legend = this.fgWMS
                 .createGetLegendGraphicRequest();
-        BufferedImage image = new BufferedImage(MAP_DIMENSION, MAP_DIMENSION,
-                BufferedImage.TYPE_INT_ARGB);
+        BufferedImage image;
         for (int l = 0; l < layerNames.length; l++) {
             legend.setLayer(layerNames[l]);
             legend.setStyle(styleNames[l]);
@@ -352,6 +350,21 @@ public class WMSClientServlet extends AbstractWxSServlet {
         return legends;
     }
 
+    /**
+     * Haalt de feature info op.
+     * 
+     * @param layerNames
+     *            the layer names
+     * @param x
+     *            the x
+     * @param y
+     *            the y
+     * @return the feature info
+     * @throws ServiceException
+     *             the service exception
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
     private String getFeatureInfo(String[] layerNames, int x, int y)
             throws ServiceException, IOException {
 
@@ -389,8 +402,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
      * converteert een stream naar een string.
      * 
      * @param is
-     * @return
+     *            the is
+     * @return the string
      * @throws IOException
+     *             Signals that an I/O exception has occurred.
      */
     private String convertStreamToString(InputStream is) throws IOException {
         if (is != null) {
