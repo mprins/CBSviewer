@@ -33,6 +33,12 @@
 	<licenses>
 		<license>
 			<name>BSD license</name>
+			<url>https://raw.github.com/MinELenI/CBSviewer/master/LICENSE.md</url>
+			<comments></comments>
+			<distribution>repo</distribution>
+		</license>	
+		<license>
+			<name>BSD license</name>
 			<url>https://raw.github.com/openlayers/openlayers/master/license.txt</url>
 			<comments>For any parts of OpenLayers</comments>
 			<distribution>manual</distribution>
@@ -41,12 +47,6 @@
 			<name>MIT license</name>
 			<url>https://raw.github.com/jquery/jquery/master/MIT-LICENSE.txt</url>
 			<comments>For any parts of jQuery</comments>
-			<distribution>repo</distribution>
-		</license>
-		<license>
-			<name>BSD license</name>
-			<url>https://raw.github.com/MinELenI/CBSviewer/master/LICENSE.md</url>
-			<comments></comments>
 			<distribution>repo</distribution>
 		</license>
 		<license>
@@ -674,6 +674,28 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>com.github.timurstrekalov</groupId>
+				<artifactId>saga-maven-plugin</artifactId>
+				<version>1.3.0</version>
+				<executions>
+					<execution>
+						<phase>site</phase>
+						<goals>
+							<goal>coverage</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<baseDir>src/test/js/lib</baseDir>
+					<includes>PhantomSpecRunner.html</includes>
+					<outputDir>${project.build.directory}/site</outputDir>
+					<noInstrumentPatterns>
+						<pattern>\b.+/test/.+\.js\b</pattern>
+					</noInstrumentPatterns>
+					<outputStrategy>TOTAL</outputStrategy>
+				</configuration>
+			</plugin>
+ 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 				<version>3.1</version>
@@ -729,7 +751,6 @@
 							<version>2.12.4</version>
 							<configuration>
 								<linkXRef>true</linkXRef>
-								<outputName>surefire-report</outputName>
 								<reportsDirectories>
 									<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
 								</reportsDirectories>
@@ -748,7 +769,6 @@
 								</reportsDirectories>
 							</configuration>
 						</plugin>
-
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-project-info-reports-plugin</artifactId>
@@ -806,6 +826,13 @@
 								<suppressionsLocation>${basedir}/checkstyle-suppressions.xml</suppressionsLocation>
 								<enableRSS>true</enableRSS>
 							</configuration>
+							<reportSets>
+								<reportSet>
+									<reports>
+										<report>checkstyle</report>
+									</reports>
+								</reportSet>
+							</reportSets>
 						</plugin>
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
@@ -957,7 +984,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.1</version>
+			<version>1.7.2</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
