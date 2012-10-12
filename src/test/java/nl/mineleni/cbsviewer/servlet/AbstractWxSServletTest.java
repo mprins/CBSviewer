@@ -60,7 +60,7 @@ public class AbstractWxSServletTest {
      * @throws ServletException
      */
     @Test
-    public void parseLocationTest() throws ServletException {
+    public void testParseLocation() throws ServletException {
         this.mockery.checking(new Expectations() {
             {
                 this.atMost(2).of(AbstractWxSServletTest.this.request)
@@ -86,7 +86,7 @@ public class AbstractWxSServletTest {
      * @throws ServletException
      */
     @Test
-    public void parseLocationNullTest() throws ServletException {
+    public void testParseLocationNull() throws ServletException {
         this.mockery.checking(new Expectations() {
             {
                 this.atMost(1).of(AbstractWxSServletTest.this.request)
@@ -113,7 +113,7 @@ public class AbstractWxSServletTest {
      * .
      */
     @Test
-    public void parseForwardTrueTest() {
+    public void testParseForwardTrue() {
         // als param == true
         this.mockery.checking(new Expectations() {
             {
@@ -131,7 +131,7 @@ public class AbstractWxSServletTest {
      * .
      */
     @Test
-    public void parseForwardNullTest() {
+    public void testParseForwardNull() {
         // als param afwezig
         this.mockery.checking(new Expectations() {
             {
@@ -149,7 +149,7 @@ public class AbstractWxSServletTest {
      * .
      */
     @Test
-    public void parseForwardFalseTest() {
+    public void testParseForwardFalse() {
         // als param == false
         this.mockery.checking(new Expectations() {
             {
