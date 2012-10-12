@@ -77,11 +77,14 @@ Viewer = function() {
 		 * @deprecated probeer deze niet te gebruiken
 		 */
 		getMap : function() {
+			window.console && console.warn('Deprecated function called: Viewer::getMap().');
 			return _map;
 		},
 
 		/**
 		 * Controls aan de kaart hangen.
+		 * 
+		 * @private
 		 */
 		addControls : function() {
 			_map.addControl(new UpdateLegendControl({
@@ -176,6 +179,9 @@ Viewer = function() {
 
 		/**
 		 * Afmeting van de kaart aanpassen aan schermbreedte.
+		 * 
+		 * @todo hoogte instellen werkt niet omdat de parent hoogte de afmeting
+		 *       van de child heeft.
 		 */
 		toggleFullSize : function() {
 			if (_fullSize) {
@@ -196,6 +202,8 @@ Viewer = function() {
 
 		/**
 		 * set up basemap.
+		 * 
+		 * @private
 		 */
 		addBaseMap : function() {
 			var matrixIds = [ 13 ];
