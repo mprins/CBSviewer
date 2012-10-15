@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://xml.util.cbsviewer.mineleni.nl" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	jxb:version="2.0" attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:l="http://xml.util.cbsviewer.mineleni.nl">
+
+	<xs:element name="Layers" type="l:layersList" />
+
+	<xs:complexType name="layersList">
+		<xs:sequence>
+			<xs:element name="Layerdescriptor" type="l:layerDescriptor"
+				maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="layerDescriptor">
+		<xs:sequence>
+			<xs:element type="xs:string" name="id" nillable="false"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:string" name="name" nillable="false"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:string" name="layers" nillable="false"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:anyURI" name="url" nillable="false"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:string" name="styles" nillable="false"
+				minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

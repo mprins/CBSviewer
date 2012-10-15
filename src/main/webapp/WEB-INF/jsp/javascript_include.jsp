@@ -2,10 +2,11 @@
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
-		import="nl.mineleni.cbsviewer.util.LabelsBundle"
+		import="nl.mineleni.cbsviewer.util.LabelsBundle, nl.mineleni.cbsviewer.util.AvailableLayersBean"
 		trimDirectiveWhitespaces="true" language="java" />
 
-	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
+	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();
+			AvailableLayersBean layers = new AvailableLayersBean();</jsp:scriptlet>
 
 	<!-- 
 	include bestand met de javascript tags, 
@@ -21,6 +22,8 @@
 	</jsp:text>
 	<!-- hiermee maken we de resourcebundle beschikbaar in het javascript deel van de applicatie -->
 	<jsp:expression>RESOURCES.getOpenLayersLangBundle()</jsp:expression>
+	<!-- en alle kaartlagen -->
+	<jsp:expression>layers.asJSON()</jsp:expression>
 	<jsp:text>
 		<![CDATA[</script>
 <script type="text/javascript" src="js/config.js"></script>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd ">
+	<Layerdescriptor>
+		<id>cbs_inwoners_2000_per_hectare</id>
+		<name>inwoners 2000 per hectare</name>
+		<layers>cbsvierkanten100m2010:cbs_inwoners_2000_per_hectare</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows</url>
+		<styles>cbsvierkant100m_inwoners_2000</styles>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>cbs_verandering_inwoners_2000_2010</id>
+		<layers>cbsvierkanten100m2010:cbs_verandering_inwoners_2000_2010</layers>
+		<name>verandering inwoners 2000-2010</name>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows</url>
+		<styles>cbs_verandering_inwoners_2000_2010</styles>
+	</Layerdescriptor>
+</Layers>

@@ -49,7 +49,11 @@
 				<!-- hier komt de statische kaart -->
 				<c:if test="${param.coreonly==true}">
 					<jsp:include page="kaart">
+						<!-- StringConstants.REQ_PARAM_FORWARD -->
 						<jsp:param name="forward" value="false" />
+						<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
+						<!-- StringConstants.REQ_PARAM_MAPNAME -->
+						<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
 					</jsp:include>
 					<c:if test="${not empty kaart}">
 						<!-- StringConstants.MAP_CACHE_DIR -->

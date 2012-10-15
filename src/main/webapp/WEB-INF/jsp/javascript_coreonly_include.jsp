@@ -13,11 +13,8 @@
 	 -->
 
 	<jsp:text>
-		<![CDATA[<script type="text/javascript" id="language" charset="utf-8">var RIA_LINK_TEXT=']]>
-	</jsp:text>
-	<jsp:expression>RESOURCES.getString("RIA_LINK_TEXT")</jsp:expression>
-	<jsp:text>
-		<![CDATA[';</script>
+		<![CDATA[<script type="text/javascript" id="language" charset="utf-8">var RIA_LINK_TEXT=']]></jsp:text>
+		<jsp:expression>RESOURCES.getString("RIA_LINK_TEXT")</jsp:expression><jsp:text><![CDATA[';</script>
 		<script type="text/javascript" src="js/coreonly_script.js"></script>]]>
 	</jsp:text>
 </jsp:root>
