@@ -5,12 +5,13 @@ jQuery(document).ready(function() {
 	// create map
 	Viewer.init(config);
 
-	Viewer.loadWMS({
-		'name' : 'cbs_inwoners_2010_per_hectare',
-		'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows',
-		'layers' : 'cbsvierkanten100m2010:cbs_inwoners_2000_per_hectare',
-		'styles' : 'cbsvierkant100m_inwoners_2000'
+	// opzoeken van de gevraagde kaart in de _layers, id's zitten in AvailableLayers.xml
+	var _id = 'cbs_inwoners_2000_per_hectare';
+
+	var maps = jQuery.grep(_layers, function(n, i) {
+		return n.id == _id;
 	});
+	Viewer.loadWMS(maps[0]);
 });
 
 /**

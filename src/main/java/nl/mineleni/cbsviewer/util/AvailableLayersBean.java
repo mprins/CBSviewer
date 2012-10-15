@@ -26,11 +26,6 @@ public class AvailableLayersBean {
 	 */
 	List<LayerDescriptor> layers = null;
 
-	public static void main(String[] args) {
-		AvailableLayersBean b = new AvailableLayersBean();
-		LOGGER.debug(b.getJSON());
-	}
-
 	/**
 	 * default constructor.
 	 */
@@ -68,8 +63,24 @@ public class AvailableLayersBean {
 		return null;
 	}
 
-	public String getJSON() {
+	/**
+	 * geeft de eerste layerdescriptor met de gevraagde naam.
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public LayerDescriptor getLayerByID(String name) {
+		for (LayerDescriptor desc : layers) {
+			if (desc.getId().equalsIgnoreCase(name))
+				return desc;
+		}
+		return null;
+	}
+
+	public String asJSON() {
 		JSONSerializer serializer = new JSONSerializer();
-		return serializer.exclude("class").serialize(this.layers);
+		String json = serializer.exclude("class")
+				.prettyPrint(LOGGER.isDebugEnabled()).serialize(this.layers);
+		return "var _layers=" + json + ";";
 	}
 }

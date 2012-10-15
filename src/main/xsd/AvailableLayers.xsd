@@ -15,11 +15,15 @@
 
 	<xs:complexType name="layerDescriptor">
 		<xs:sequence>
+			<xs:element type="xs:string" name="id" nillable="false"
+				minOccurs="1" maxOccurs="1" />
 			<xs:element type="xs:string" name="name" nillable="false"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:string" name="layers" nillable="false"
 				minOccurs="1" maxOccurs="1" />
 			<xs:element type="xs:anyURI" name="url" nillable="false"
 				minOccurs="1" maxOccurs="1" />
-			<xs:element type="xs:string" name="style" nillable="false"
+			<xs:element type="xs:string" name="styles" nillable="false"
 				minOccurs="1" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
