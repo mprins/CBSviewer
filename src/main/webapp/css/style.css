@@ -89,6 +89,10 @@ a.accesskey:focus {
 	background: url('../img/maxmin.png') no-repeat 0 0;
 }
 
+.kaartnavi{
+	
+}
+
 /*openlayers elementen*/
 .olCursorWait {
 	cursor: wait;

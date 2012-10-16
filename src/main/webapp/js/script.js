@@ -5,12 +5,14 @@ jQuery(document).ready(function() {
 	// create map
 	Viewer.init(config);
 
-	// opzoeken van de gevraagde kaart in de _layers, id's zitten in AvailableLayers.xml
+	// opzoeken van de gevraagde kaart in de _layers, id's zitten in
+	// AvailableLayers.xml
 	var _id = 'cbs_inwoners_2000_per_hectare';
 
 	var maps = jQuery.grep(_layers, function(n, i) {
 		return n.id == _id;
 	});
+	// console.debug('opzoeken van ' + _id + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
 });
 

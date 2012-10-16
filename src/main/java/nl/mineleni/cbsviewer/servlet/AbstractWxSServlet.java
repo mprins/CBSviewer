@@ -27,64 +27,66 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 
-    /** logger. */
-    private static final Logger LOGGER = LoggerFactory
-            .getLogger(AbstractWxSServlet.class);
-    /** serialization id. */
-    private static final long serialVersionUID = -5563479037661945586L;
+	/** logger. */
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(AbstractWxSServlet.class);
+	/** serialization id. */
+	private static final long serialVersionUID = -5563479037661945586L;
 
-    /**
-     * Parse locatie uit een request. Indien waarden niet geldig zijn of
-     * ontbreken worden de defaults {@link DEFAULT_XCOORD} ,
-     * {@link DEFAULT_YCOORD} en {@link OPENLS_ZOOMSCALE_STANDAARD} gebruikt.
-     * 
-     * @param request
-     *            Het servlet request
-     * @return een {@code double[xcoord,ycoord,straal]}
-     * @throws ServletException
-     *             Als parsen is mislukt
-     */
-    protected double[] parseLocation(HttpServletRequest request)
-            throws ServletException {
-        try {
-            // request params uitlezen voor het zoeken
-            final double xcoord = Double.valueOf((null == request
-                    .getParameter(REQ_PARAM_XCOORD.code) ? DEFAULT_XCOORD
-                    .toString() : request.getParameter(REQ_PARAM_XCOORD.code)));
-            final double ycoord = Double.valueOf((null == request
-                    .getParameter(REQ_PARAM_YCOORD.code) ? DEFAULT_YCOORD
-                    .toString() : request.getParameter(REQ_PARAM_YCOORD.code)));
-            final double straal = Double
-                    .valueOf((null == request
-                            .getParameter(REQ_PARAM_STRAAL.code) ? OPENLS_ZOOMSCALE_STANDAARD
-                            .toString() : request
-                            .getParameter(REQ_PARAM_STRAAL.code)));
+	/**
+	 * Parse locatie uit een request. Indien waarden niet geldig zijn of
+	 * ontbreken worden de defaults {@link DEFAULT_XCOORD} ,
+	 * {@link DEFAULT_YCOORD} en {@link OPENLS_ZOOMSCALE_STANDAARD} gebruikt.
+	 * 
+	 * @param request
+	 *            Het servlet request
+	 * @return een {@code double[xcoord,ycoord,straal]}
+	 * @throws ServletException
+	 *             Als parsen is mislukt
+	 */
+	protected int[] parseLocation(HttpServletRequest request)
+			throws ServletException {
+		try {
+			// request params uitlezen voor het zoeken
+			final int xcoord = Integer.valueOf((null == request
+					.getParameter(REQ_PARAM_XCOORD.code) ? DEFAULT_XCOORD
+					.toString() : request.getParameter(REQ_PARAM_XCOORD.code)));
+			final int ycoord = Integer.valueOf((null == request
+					.getParameter(REQ_PARAM_YCOORD.code) ? DEFAULT_YCOORD
+					.toString() : request.getParameter(REQ_PARAM_YCOORD.code)));
+			final int straal = Integer
+					.valueOf((null == request
+							.getParameter(REQ_PARAM_STRAAL.code) ? OPENLS_ZOOMSCALE_STANDAARD
+							.toString() : request
+							.getParameter(REQ_PARAM_STRAAL.code)));
 
-            LOGGER.debug("request params:" + xcoord + ":" + ycoord + " straal:"
-                    + straal);
-            return new double[] { xcoord, ycoord, straal };
-        } catch (final NumberFormatException e) {
-            LOGGER.error(
-                    "Een van de vereiste parameters kon niet geparsed worden als Double.",
-                    e);
-            throw new ServletException(e);
-        }
-    }
+			request.setAttribute(REQ_PARAM_XCOORD.code, xcoord);
+			request.setAttribute(REQ_PARAM_YCOORD.code, ycoord);
+			request.setAttribute(REQ_PARAM_STRAAL.code, straal);
 
-    /**
-     * Parse de forward parameter van een request.
-     * 
-     * @see REQ_PARAM_FORWARD
-     * @return {@code true), als parameter aanwezig en waarde "true" heeft,
-     *         anders {@code false}
-     * @param request
-     *            Het servlet request
-     */
-    protected boolean parseForward(HttpServletRequest request) {
-        final boolean b = (null == request.getParameter(REQ_PARAM_FORWARD.code) ? false
-                : Boolean.valueOf(request.getParameter(REQ_PARAM_FORWARD.code)));
-        LOGGER.debug("b heeft waarde:" + b + " voor request waarde "
-                + request.getParameter(REQ_PARAM_FORWARD.code));
-        return b;
-    }
+			LOGGER.debug("request params:(" + xcoord + ";" + ycoord
+					+ ") straal:" + straal);
+
+			return new int[] { xcoord, ycoord, straal };
+		} catch (final NumberFormatException e) {
+			LOGGER.error(
+					"Een van de vereiste parameters kon niet geparsed worden als Integer.",
+					e);
+			throw new ServletException(e);
+		}
+	}
+
+	/**
+	 * Parse de forward parameter van een request.
+	 * 
+	 * @see REQ_PARAM_FORWARD
+	 * @return {@code true), als parameter aanwezig en waarde "true" heeft,
+	 *         anders {@code false}
+	 * @param request
+	 *            Het servlet request
+	 */
+	protected boolean parseForward(HttpServletRequest request) {
+		return (null == request.getParameter(REQ_PARAM_FORWARD.code) ? false
+				: Boolean.valueOf(request.getParameter(REQ_PARAM_FORWARD.code)));
+	}
 }

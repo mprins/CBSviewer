@@ -161,10 +161,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	@Override
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		final double[] dXcoordYCoordStraal = this.parseLocation(request);
-		final double xcoord = dXcoordYCoordStraal[0];
-		final double ycoord = dXcoordYCoordStraal[1];
-		final double straal = dXcoordYCoordStraal[2];
+		final int[] dXcoordYCoordStraal = this.parseLocation(request);
+		final int xcoord = dXcoordYCoordStraal[0];
+		final int ycoord = dXcoordYCoordStraal[1];
+		final int straal = dXcoordYCoordStraal[2];
 
 		String mapName = request.getParameter(REQ_PARAM_MAPNAME.code);
 		LOGGER.debug("WMS layer id: " + mapName);

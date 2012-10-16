@@ -47,7 +47,7 @@
 						<!-- StringConstants.MAP_CACHE_DIR -->
 						<img src="${dir}/${kaart.name}"
 							alt="kaart voor ${request.layername}" />
-						<p class="todo">TODO: zoom/pan en vergroot knoppen</p>
+						<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
 					</c:if>
 				</c:if>
 			</div>
