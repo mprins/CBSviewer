@@ -16,33 +16,41 @@ import org.slf4j.LoggerFactory;
 
 import flexjson.JSONSerializer;
 
+/**
+ * AvailableLayersBean maakt de beschikbare kaarten bekend in de applicatie op
+ * basis van het xml configuratie bestand {@code AvailableLayers.xml}.
+ * 
+ * @author mprins
+ * @since 1.6
+ */
 public class AvailableLayersBean {
+
+	/** The Constant LOGGER. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(AvailableLayersBean.class);
 
 	/**
 	 * lijst met beschikbare layers.
-	 * 
 	 */
-	List<LayerDescriptor> layers = null;
+	private List<LayerDescriptor> layers = null;
 
 	/**
 	 * default constructor.
 	 */
 	public AvailableLayersBean() {
 		try {
-			JAXBContext jc = JAXBContext
+			final JAXBContext jc = JAXBContext
 					.newInstance("nl.mineleni.cbsviewer.util.xml");
 
-			Unmarshaller u = jc.createUnmarshaller();
-			File f = new File(this.getClass().getClassLoader()
+			final Unmarshaller u = jc.createUnmarshaller();
+			final File f = new File(this.getClass().getClassLoader()
 					.getResource("AvailableLayers.xml").getFile());
 			@SuppressWarnings("unchecked")
-			JAXBElement<LayersList> element = (JAXBElement<LayersList>) u
+			final JAXBElement<LayersList> element = (JAXBElement<LayersList>) u
 					.unmarshal(f);
-			LayersList layerslist = element.getValue();
+			final LayersList layerslist = element.getValue();
 			layers = layerslist.getLayerdescriptor();
-		} catch (JAXBException e) {
+		} catch (final JAXBException e) {
 			LOGGER.error(
 					"Er is een fout opgetreden bij het inlezen van de layers.",
 					e);
@@ -50,15 +58,48 @@ public class AvailableLayersBean {
 	}
 
 	/**
-	 * geeft de eerste layerdescriptor met de gevraagde naam.
+	 * Geeft de kaarten als javascript variabele.
+	 * 
+	 * @return layers als json object
+	 * @see #asJSON(boolean)
+	 */
+	public String asJSON() {
+		return this.asJSON(true);
+	}
+
+	/**
+	 * Geeft de kaarten als json object ({@code asVar == false}) of javascript
+	 * variabele.
+	 * 
+	 * @param asVar
+	 *            {@code true} als er een javascript variabele moet worden
+	 *            gegeven.
+	 * @return layers als json object
+	 * 
+	 * @see #asJSON()
+	 */
+	public String asJSON(final boolean asVar) {
+		final JSONSerializer serializer = new JSONSerializer();
+		final String json = serializer.exclude("class")
+				.prettyPrint(LOGGER.isDebugEnabled()).serialize(this.layers);
+		if (asVar) {
+			return "var _layers=" + json + ";";
+		}
+		return json;
+	}
+
+	/**
+	 * geeft de eerste layerdescriptor met de gevraagde id.
 	 * 
 	 * @param name
-	 * @return
+	 *            de ID van de laag
+	 * @return the layer by id
 	 */
-	public LayerDescriptor getLayerByName(String name) {
-		for (LayerDescriptor desc : layers) {
-			if (desc.getName().equalsIgnoreCase(name))
+	public LayerDescriptor getLayerByID(final String name) {
+		for (final LayerDescriptor desc : layers) {
+			if (desc.getId().equalsIgnoreCase(name)) {
 				return desc;
+			}
 		}
 		return null;
 	}
@@ -67,20 +108,15 @@ public class AvailableLayersBean {
 	 * geeft de eerste layerdescriptor met de gevraagde naam.
 	 * 
 	 * @param name
-	 * @return
+	 *            de naam van de laag
+	 * @return the layer by name
 	 */
-	public LayerDescriptor getLayerByID(String name) {
-		for (LayerDescriptor desc : layers) {
-			if (desc.getId().equalsIgnoreCase(name))
+	public LayerDescriptor getLayerByName(final String name) {
+		for (final LayerDescriptor desc : layers) {
+			if (desc.getName().equalsIgnoreCase(name)) {
 				return desc;
+			}
 		}
 		return null;
-	}
-
-	public String asJSON() {
-		JSONSerializer serializer = new JSONSerializer();
-		String json = serializer.exclude("class")
-				.prettyPrint(LOGGER.isDebugEnabled()).serialize(this.layers);
-		return "var _layers=" + json + ";";
 	}
 }
