@@ -23,7 +23,7 @@
 	<c:set var="naarLinks" value="${xcoord-zoomin}" />
 	<c:set var="naarRechts" value="${xcoord+zoomin}" />
 	<c:set var="naarBoven" value="${ycoord+zoomin}" />
-	<c:set var="naarBeneden" value="${xcoord-zoomin}" />
+	<c:set var="naarBeneden" value="${ycoord-zoomin}" />
 
 	<!-- 
 	include bestand met navigatie knoppen voor de core versie, 

@@ -43,6 +43,15 @@ public enum StringConstants {
 	/** request param naam voor response format. */
 	REQ_PARAM_RESPONSE_FORMAT("format"),
 
+	/** parameter featureinfo. */
+	REQ_PARAM_FEATUREINFO("featureinfo"),
+	/** parameter legendas. */
+	REQ_PARAM_LEGENDAS("legendas"),
+	/** parameter kaart. */
+	REQ_PARAM_KAART("kaart"),
+	/** parameter cache dir. */
+	REQ_PARAM_CACHEDIR("dir"),
+
 	/** openls request param naam voor request. */
 	OPENLS_REQ_PARAM_REQUEST("Request"),
 	/** openls request param naam voor request value. */

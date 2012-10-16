@@ -3,12 +3,13 @@
  */
 package nl.mineleni.cbsviewer.servlet.wms;
 
-import static nl.mineleni.cbsviewer.util.NumberConstants.DEFAULT_FONT_SIZE;
 import static nl.mineleni.cbsviewer.util.StringConstants.MAP_CACHE_DIR;
+import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_CACHEDIR;
+import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_FEATUREINFO;
+import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_KAART;
+import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_LEGENDAS;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_MAPNAME;
 
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
@@ -57,6 +58,7 @@ import org.slf4j.LoggerFactory;
  * 
  * @author prinsmc
  * @todo implementatie afmaken
+ * @todo cache voor voorgrond WMS implementeren
  */
 public class WMSClientServlet extends AbstractWxSServlet {
 
@@ -196,8 +198,6 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 		final boolean forwardResponse = this.parseForward(request);
 
-		LOGGER.debug("forwardResponse=" + forwardResponse);
-
 		final BoundingBox bbox = SpatialUtil.calcRDBBOX(xcoord, ycoord, straal);
 		try {
 			final File kaart = this.getMap(bbox,
@@ -209,10 +209,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			final String fInfo = this.getFeatureInfo(
 					new String[] { layer.getLayers() }, MAP_DIMENSION_MIDDLE,
 					MAP_DIMENSION_MIDDLE);
-			request.setAttribute("dir", MAP_CACHE_DIR.code);
-			request.setAttribute("kaart", kaart);
-			request.setAttribute("legendas", legendas);
-			request.setAttribute("featureinfo", fInfo);
+			request.setAttribute(REQ_PARAM_CACHEDIR.code, MAP_CACHE_DIR.code);
+			request.setAttribute(REQ_PARAM_KAART.code, kaart);
+			request.setAttribute(REQ_PARAM_LEGENDAS.code, legendas);
+			request.setAttribute(REQ_PARAM_FEATUREINFO.code, fInfo);
 
 			if (forwardResponse) {
 				request.getRequestDispatcher("/index.jsp").forward(request,
@@ -243,8 +243,6 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 */
 	private File getMap(BoundingBox bbox, String[] layerNames,
 			String[] styleNames) throws ServiceException, IOException {
-
-		final Color drawCol = Color.MAGENTA;
 
 		// wms request doen
 		this.getMapRequest = this.fgWMS.createGetMapRequest();
@@ -280,33 +278,32 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		g.drawImage(image2, 0, 0, null);
 		g.drawImage(image, 0, 0, null);
 
-		// zoeklocatie intekenen met halo
-		final int width = 4;
-		final int[] px = { MAP_DIMENSION_MIDDLE - width,
-				MAP_DIMENSION_MIDDLE + width, MAP_DIMENSION_MIDDLE };
-		final int[] py = { MAP_DIMENSION_MIDDLE + width,
-				MAP_DIMENSION_MIDDLE + width, MAP_DIMENSION_MIDDLE - width };
-		final int offset = 2;
-		final int[] pxh = { px[0] - offset, px[1] + offset, px[2] };
-		final int[] pyh = { py[0] + offset, py[1] + offset, py[2] - offset };
-		g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, DEFAULT_FONT_SIZE
-				.intValue()));
-		// witte halo voor text/icoon
-		g.setColor(Color.WHITE);
-		g.drawString("zoeklocatie", MAP_DIMENSION_MIDDLE + 5,
-				MAP_DIMENSION_MIDDLE + 5);
-		g.drawString("zoeklocatie", MAP_DIMENSION_MIDDLE + 5,
-				MAP_DIMENSION_MIDDLE + 7);
-		g.drawString("zoeklocatie", MAP_DIMENSION_MIDDLE + 7,
-				MAP_DIMENSION_MIDDLE + 7);
-		g.drawString("zoeklocatie", MAP_DIMENSION_MIDDLE + 7,
-				MAP_DIMENSION_MIDDLE + 5);
-		g.fillPolygon(pxh, pyh, pxh.length);
-		// text/ikoon
-		g.setColor(drawCol);
-		g.fillPolygon(px, py, px.length);
-		g.drawString("zoeklocatie", MAP_DIMENSION_MIDDLE + 6,
-				MAP_DIMENSION_MIDDLE + 6);
+		// zoeklocatie intekenen met plaatje
+		final BufferedImage infoImage = ImageIO.read(new File(this.getClass()
+				.getClassLoader().getResource("info.png").getFile()));
+		g.drawImage(infoImage, MAP_DIMENSION_MIDDLE - 16,
+				MAP_DIMENSION_MIDDLE - 37, null);
+		/*
+		 * // zoeklocatie intekenen met halo final Color drawCol =
+		 * Color.MAGENTA; final int width = 4; final int[] px = {
+		 * MAP_DIMENSION_MIDDLE - width, MAP_DIMENSION_MIDDLE + width,
+		 * MAP_DIMENSION_MIDDLE }; final int[] py = { MAP_DIMENSION_MIDDLE +
+		 * width, MAP_DIMENSION_MIDDLE + width, MAP_DIMENSION_MIDDLE - width };
+		 * final int offset = 2; final int[] pxh = { px[0] - offset, px[1] +
+		 * offset, px[2] }; final int[] pyh = { py[0] + offset, py[1] + offset,
+		 * py[2] - offset }; g.setFont(new Font(Font.SANS_SERIF, Font.BOLD,
+		 * DEFAULT_FONT_SIZE .intValue())); // witte halo voor text/icoon
+		 * g.setColor(Color.WHITE); g.drawString("zoeklocatie",
+		 * MAP_DIMENSION_MIDDLE + 5, MAP_DIMENSION_MIDDLE + 5);
+		 * g.drawString("zoeklocatie", MAP_DIMENSION_MIDDLE + 5,
+		 * MAP_DIMENSION_MIDDLE + 7); g.drawString("zoeklocatie",
+		 * MAP_DIMENSION_MIDDLE + 7, MAP_DIMENSION_MIDDLE + 7);
+		 * g.drawString("zoeklocatie", MAP_DIMENSION_MIDDLE + 7,
+		 * MAP_DIMENSION_MIDDLE + 5); g.fillPolygon(pxh, pyh, pxh.length); //
+		 * text/ikoon g.setColor(drawCol); g.fillPolygon(px, py, px.length);
+		 * g.drawString("zoeklocatie", MAP_DIMENSION_MIDDLE + 6,
+		 * MAP_DIMENSION_MIDDLE + 6);
+		 */
 
 		// opslaan van plaatje zodat de browser het op kan halen
 		final File temp3 = File.createTempFile("wmscombined", ".png", new File(
