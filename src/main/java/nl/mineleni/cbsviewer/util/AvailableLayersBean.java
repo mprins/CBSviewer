@@ -83,7 +83,7 @@ public class AvailableLayersBean {
 		final String json = serializer.exclude("class")
 				.prettyPrint(LOGGER.isDebugEnabled()).serialize(this.layers);
 		if (asVar) {
-			return "var _layers=" + json + ";";
+			return "//<![CDATA[\nvar _layers=" + json + ";\n//]]>";
 		}
 		return json;
 	}
