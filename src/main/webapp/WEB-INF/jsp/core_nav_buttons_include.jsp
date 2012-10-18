@@ -34,11 +34,10 @@
 		<jsp:expression>RESOURCES.getString("KEY_NAVIGATIE_TITEL")</jsp:expression>
 
 		<form id="zoomFormulier" action="#" method="get"
-			title="in- en uitzoomen van de kaart en verschuiven van de zoeklocatie"
-			name="zoomFormulier">
+			title="in- en uitzoomen van de kaart en verschuiven van de zoeklocatie">
 
 			<!-- knoppen -->
-			<fieldset>
+			<fieldset title="in- en uitzoomen">
 				<legend><jsp:expression>RESOURCES.getString("KEY_NAVIGATIE_ZOOM_LEGEND")</jsp:expression></legend>
 				<label for="zoomUitBtn">zoom uit</label>
 				<button id="zoomUitBtn" type="submit" name="straal"
@@ -48,7 +47,7 @@
 				<button id="zoomInBtn" type="submit" name="straal" value="${zoomin}"
 					title="zoom in">+</button>
 			</fieldset>
-			<fieldset>
+			<fieldset title="verschuiven">
 				<legend><jsp:expression>RESOURCES.getString("KEY_NAVIGATIE_SCHUIF_LEGEND")</jsp:expression></legend>
 				<label for="schuifLinksBtn">schuif naar links</label>
 				<button id="schuifLinksBtn" type="submit" name="xcoord"
@@ -66,13 +65,14 @@
 				<button id="schuifOmlaagBtn" type="submit" name="ycoord"
 					value="${naarBeneden}" title="omlaag">↓</button>
 			</fieldset>
-			<input type="hidden" name="coreonly" value="true" />
+			<p>
+				<input type="hidden" name="coreonly" value="true" />
 
-			<!-- defaults -->
-			<input type="hidden" name="straal" value="${straal}" /> <input
-				type="hidden" name="xcoord" value="${xcoord}" /> <input
-				type="hidden" name="ycoord" value="${ycoord}" />
-
+				<!-- defaults -->
+				<input type="hidden" name="straal" value="${straal}" /> <input
+					type="hidden" name="xcoord" value="${xcoord}" /> <input
+					type="hidden" name="ycoord" value="${ycoord}" />
+			</p>
 		</form>
 
 	</div>
