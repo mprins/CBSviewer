@@ -90,6 +90,9 @@ public class LabelsBundle {
 			sb.append(":'");
 			sb.append(this.getString(key));
 			sb.append("',");
+			if (LOGGER.isDebugEnabled()) {
+				sb.append("\n");
+			}
 		}
 
 		sb.deleteCharAt(sb.length() - 1);
