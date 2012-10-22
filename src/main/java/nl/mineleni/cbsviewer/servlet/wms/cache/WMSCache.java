@@ -15,12 +15,14 @@ import org.opengis.geometry.BoundingBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+// TODO: Auto-generated Javadoc
 /**
  * Cache voor wms requests.
  * 
  * @author prinsmc
  * @todo implementatie, thans is het een naïve wrapper om een
  *       {@link java.util.concurrent.ConcurrentHashMap} zonder expiry/cleanup
+ *       zie bijvoorbeeld {@link https://code.google.com/p/kitty-cache/}
  * @see java.util.concurrent.ConcurrentHashMap
  */
 public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
@@ -178,6 +180,19 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 		} catch (final IOException e) {
 			LOGGER.error("cache image opslaan is niet gelukt.", e);
 		}
+	}
+
+	/**
+	 * Verwijder het gevraagde object uit de cache.
+	 * 
+	 * @param bbox
+	 *            de sleutel
+	 * @throws NullPointerException
+	 *             als de sleutel of de waarde {@code null} is
+	 */
+	@Override
+	public void remove(final BoundingBox bbox) throws NullPointerException {
+		this.cache.remove(bbox);
 	}
 
 	/*

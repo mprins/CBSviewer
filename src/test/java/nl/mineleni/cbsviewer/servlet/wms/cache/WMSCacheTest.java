@@ -147,4 +147,14 @@ public class WMSCacheTest {
 		assertEquals(1, this.filledCache.size());
 		assertEquals(0, this.emptyCache.size());
 	}
+
+	/**
+	 * Test methode voor {@link WMSCache#size()} .
+	 */
+	@Test
+	public final void testRemove() {
+		// testKey zit al in deze cache!
+		this.filledCache.remove(testKey);
+		assertFalse(this.filledCache.containsKey(this.testKey));
+	}
 }
