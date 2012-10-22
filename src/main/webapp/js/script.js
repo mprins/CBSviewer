@@ -23,7 +23,8 @@ var setupPage = {
 	init : function() {
 		OpenLayers.Lang.setCode('nl');
 
-		jQuery('.kaartContainer').toggleClass('hidden');
+		// verwijder core container, die hebben we niet nodig als er javascript ondersteuning is.
+		jQuery('#coreContainer').remove();
 
 		// toggle knop voor vergroten van de kaart
 		var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('KEY_TOGGLE_SIZE')
@@ -36,7 +37,7 @@ var setupPage = {
 				+ '">' + OpenLayers.i18n('KEY_KEYBOARDNAV') + '</a>';
 		jQuery('#' + config.mapDiv).prepend(aLink);
 
-		// core link toevoegen aan de kaart
+		// core link toevoegen aan de kaart voor het geval de javascript kaart niet "goed" is
 		var aCore = '<a class="accesskey" href="?coreonly=true">' + OpenLayers.i18n('KEY_CSSERROR') + '</a>';
 		jQuery('#' + config.mapDiv).prepend(aCore);
 

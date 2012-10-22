@@ -30,7 +30,9 @@ Viewer = function() {
 	 * @todo opschonen van feauture info response html
 	 */
 	function _showInfo(evt) {
-		jQuery('#' + config.featureInfoDiv).html('<p class="todo">TODO: html parsen/opschonen</p>' + evt.text);
+		if (evt.text != undefined) {
+			jQuery('#' + config.featureInfoDiv).html('<p class="todo">TODO: html parsen/opschonen</p>' + evt.text);
+		}
 	}
 
 	/**

@@ -4,7 +4,7 @@
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
 		import="nl.mineleni.cbsviewer.util.LabelsBundle, nl.mineleni.cbsviewer.util.StringConstants"
-		trimDirectiveWhitespaces="true" language="java" isThreadSafe="false"
+		trimDirectiveWhitespaces="false" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 	<jsp:output doctype-root-element="html"
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -17,7 +17,7 @@
 <head>
 <jsp:include page="WEB-INF/jsp/head_include.jsp" />
 
-<script type="text/javascript">
+<script type="text/javascript" charset="utf-8">
 	document.documentElement.className += ' js';
 </script>
 
@@ -33,26 +33,25 @@
 		</div>
 
 		<div id="article" class="article">
+
 			<div id="coreContainer" class="kaartContainer">
 				<!-- hier komt de statische kaart -->
-				<c:if test="${param.coreonly==true}">
-					<jsp:include page="kaart">
-						<!-- StringConstants.REQ_PARAM_FORWARD -->
-						<jsp:param name="forward" value="false" />
-						<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
-						<!-- StringConstants.REQ_PARAM_MAPNAME -->
-						<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
-					</jsp:include>
-					<c:if test="${not empty kaart}">
-						<!-- StringConstants.MAP_CACHE_DIR -->
-						<img src="${dir}/${kaart.name}"
-							alt="kaart voor ${request.layername}" />
-						<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
-					</c:if>
+				<jsp:include page="kaart">
+					<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
+					<!-- StringConstants.REQ_PARAM_MAPNAME -->
+					<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
+				</jsp:include>
+
+				<c:if test="${not empty kaart}">
+					<!-- StringConstants.MAP_CACHE_DIR -->
+					<img id="coreMapImage" src="${dir}/${kaart.name}"
+						alt="kaart voor ${request.mapname}" width="px" height="px"/>
+					<!-- navigatie knoppen zonder javascript -->
+					<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
 				</c:if>
 			</div>
 
-			<div id="kaartContainer" class="kaartContainer hidden">
+			<div id="kaartContainer" class="kaartContainer">
 				<div id="cbsKaart" class="kaart">
 					<!-- hier wordt de dynamische kaart ingehangen -->
 				</div>
@@ -78,7 +77,7 @@
 				<div id="legenda">
 					<!-- plaats voor de legenda, dynamisch en statisch -->
 					<c:if test="${param.coreonly==true}">
-						<c:if test="${not empty kaart}">
+						<c:if test="${not empty legendas}">
 							<c:forEach items="${legendas}" varStatus="legenda">
 								<img src="${dir}/${legendas[legenda.index].name}"
 									alt="legenda item" />
@@ -93,11 +92,12 @@
 				<div id="featureinfo">
 					<!-- plaats voor de feature info, dynamisch en statisch-->
 					<c:if test="${param.coreonly==true}">
-						<c:if test="${not empty kaart}">
+						<c:if test="${not empty featureinfo}">
 							<p class="todo">TODO: html parsen/opschonen</p>
 							<!-- hiermee worden de html tags als entities edncoded, niet wat we willen
 							 <c:out value="${featureinfo}" /> -->
-							<jsp:expression>request.getAttribute("featureinfo")</jsp:expression>
+							<!--<jsp:expression>request.getAttribute("featureinfo")</jsp:expression>-->
+							<c:out value="${featureinfo}" escapeXml="false" />
 						</c:if>
 					</c:if>
 				</div>

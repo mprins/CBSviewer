@@ -167,63 +167,55 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		final int xcoord = dXcoordYCoordStraal[0];
 		final int ycoord = dXcoordYCoordStraal[1];
 		final int straal = dXcoordYCoordStraal[2];
+		final BoundingBox bbox = SpatialUtil.calcRDBBOX(xcoord, ycoord, straal);
 
+		final boolean forwardResponse = this.parseForward(request);
+		BufferedImage fg = null;
 		String mapName = request.getParameter(REQ_PARAM_MAPNAME.code);
 		LOGGER.debug("WMS layer id: " + mapName);
 
-		LayerDescriptor layer = layers.getLayerByID(mapName);
-		LOGGER.debug("LayerDescriptor: " + layer);
+		if (mapName != null) {
+			LayerDescriptor layer = layers.getLayerByID(mapName);
+			LOGGER.debug("LayerDescriptor: " + layer);
 
-		final String fgCapabilitiesURL = layer.getUrl();
-		LOGGER.debug("WMS capabilities url van voorgrond kaart: "
-				+ fgCapabilitiesURL);
-		try {
-			this.fgWMS = new WebMapServer(new URL(fgCapabilitiesURL));
-		} catch (final ServiceException e) {
-			LOGGER.error(
-					"Er is een service exception opgetreden bij benaderen van de voorgrond WMS",
-					e);
-			throw new ServletException(e);
-		} catch (final MalformedURLException e) {
-			LOGGER.error(
-					"Een url die gebruikt wordt voor de WMS capabilities is misvormd",
-					e);
-			throw new ServletException(e);
-		} catch (final IOException e) {
-			LOGGER.error(
-					"Er is een I/O fout opgetreden bij benaderen van de WMS services",
-					e);
-			throw new ServletException(e);
-		}
-
-		final boolean forwardResponse = this.parseForward(request);
-
-		final BoundingBox bbox = SpatialUtil.calcRDBBOX(xcoord, ycoord, straal);
-		try {
-			final File kaart = this.getMap(bbox,
-					new String[] { layer.getLayers() },
-					new String[] { layer.getStyles() });
-			final File[] legendas = this.getLegends(
-					new String[] { layer.getLayers() },
-					new String[] { layer.getStyles() });
-			final String fInfo = this.getFeatureInfo(
-					new String[] { layer.getLayers() }, MAP_DIMENSION_MIDDLE,
-					MAP_DIMENSION_MIDDLE);
-			request.setAttribute(REQ_PARAM_CACHEDIR.code, MAP_CACHE_DIR.code);
-			request.setAttribute(REQ_PARAM_KAART.code, kaart);
-			request.setAttribute(REQ_PARAM_LEGENDAS.code, legendas);
-			request.setAttribute(REQ_PARAM_FEATUREINFO.code, fInfo);
-
-			if (forwardResponse) {
-				request.getRequestDispatcher("/index.jsp").forward(request,
-						response);
+			final String fgCapabilitiesURL = layer.getUrl();
+			LOGGER.debug("WMS capabilities url van voorgrond kaart: "
+					+ fgCapabilitiesURL);
+			try {
+				this.fgWMS = new WebMapServer(new URL(fgCapabilitiesURL));
+				fg = getForeGroundMap(bbox, new String[] { layer.getLayers() },
+						new String[] { layer.getStyles() });
+				final File[] legendas = this.getLegends(
+						new String[] { layer.getLayers() },
+						new String[] { layer.getStyles() });
+				final String fInfo = this.getFeatureInfo(
+						new String[] { layer.getLayers() },
+						MAP_DIMENSION_MIDDLE, MAP_DIMENSION_MIDDLE);
+				request.setAttribute(REQ_PARAM_LEGENDAS.code, legendas);
+				request.setAttribute(REQ_PARAM_FEATUREINFO.code, fInfo);
+			} catch (final ServiceException e) {
+				LOGGER.error(
+						"Er is een service exception opgetreden bij benaderen van de voorgrond WMS",
+						e);
+				throw new ServletException(e);
+			} catch (final MalformedURLException e) {
+				LOGGER.error(
+						"De url die gebruikt wordt voor de WMS capabilities is misvormd.",
+						e);
+				throw new ServletException(e);
 			}
-		} catch (final ServiceException e) {
-			LOGGER.error(
-					"Er is een fout opgetreden bij het benaderen van (één van) de service(s).",
-					e);
-			throw new ServletException(e);
 		}
+		final BufferedImage bg = this.getBackGroundMap(bbox);
+		final File kaart = this.getMap(fg, bg);
+
+		request.setAttribute(REQ_PARAM_CACHEDIR.code, MAP_CACHE_DIR.code);
+		request.setAttribute(REQ_PARAM_KAART.code, kaart);
+
+		if (forwardResponse) {
+			request.getRequestDispatcher("/index.jsp").forward(request,
+					response);
+		}
+
 	}
 
 	/**
@@ -241,42 +233,16 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	private File getMap(BoundingBox bbox, String[] layerNames,
-			String[] styleNames) throws ServiceException, IOException {
+	private File getMap(BufferedImage image, BufferedImage image2)
+			throws IOException {
 
-		// wms request doen
-		this.getMapRequest = this.fgWMS.createGetMapRequest();
-		for (int l = 0; l < layerNames.length; l++) {
-			this.getMapRequest.addLayer(layerNames[l], styleNames[l]);
-		}
-		this.getMapRequest.setFormat("image/png");
-		this.getMapRequest.setDimensions(MAP_DIMENSION, MAP_DIMENSION);
-		this.getMapRequest.setTransparent(true);
-		this.getMapRequest.setSRS("EPSG:28992");
-		this.getMapRequest.setBBox(bbox);
-		this.getMapRequest.setExceptions("application/vnd.ogc.se_inimage");
-		this.getMapRequest.setBGColour("0xffffff");
-		LOGGER.debug("Voorgrond WMS url is: "
-				+ this.getMapRequest.getFinalURL());
-
-		// thema/voorgrond ophalen
-		final GetMapResponse response = this.fgWMS
-				.issueRequest(this.getMapRequest);
-		final BufferedImage image = ImageIO.read(response.getInputStream());
-		if (LOGGER.isDebugEnabled()) {
-			// voorgrond plaatje bewaren in debug modus
-			final File temp = File.createTempFile("fgwms", ".png", new File(
-					this.getServletContext().getRealPath(MAP_CACHE_DIR.code)));
-			temp.deleteOnExit();
-			ImageIO.write(image, "png", temp);
-		}
-
-		final BufferedImage image2 = this.getBackGroundMap(bbox);
 		final BufferedImage composite = new BufferedImage(MAP_DIMENSION,
 				MAP_DIMENSION, BufferedImage.TYPE_INT_ARGB);
 		final Graphics g = composite.getGraphics();
 		g.drawImage(image2, 0, 0, null);
-		g.drawImage(image, 0, 0, null);
+		if (image != null) {
+			g.drawImage(image, 0, 0, null);
+		}
 
 		// zoeklocatie intekenen met plaatje
 		final BufferedImage infoImage = ImageIO.read(new File(this.getClass()
@@ -284,9 +250,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		g.drawImage(infoImage, MAP_DIMENSION_MIDDLE - 16,
 				MAP_DIMENSION_MIDDLE - 37, null);
 		/*
-		 * // zoeklocatie intekenen met halo final Color drawCol =
-		 * Color.MAGENTA; final int width = 4; final int[] px = {
-		 * MAP_DIMENSION_MIDDLE - width, MAP_DIMENSION_MIDDLE + width,
+		 * // zoeklocatie intekenen met halo final
+		 * 
+		 * Color drawCol = Color.MAGENTA; final int width = 4; final int[] px =
+		 * { MAP_DIMENSION_MIDDLE - width, MAP_DIMENSION_MIDDLE + width,
 		 * MAP_DIMENSION_MIDDLE }; final int[] py = { MAP_DIMENSION_MIDDLE +
 		 * width, MAP_DIMENSION_MIDDLE + width, MAP_DIMENSION_MIDDLE - width };
 		 * final int offset = 2; final int[] pxh = { px[0] - offset, px[1] +
@@ -431,18 +398,72 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	}
 
 	/**
+	 * voorgrondkaart ophalen.
+	 * 
+	 * @param bbox
+	 *            the bbox
+	 * @return background/basemap image
+	 * @throws ServletException
+	 *             Geeft aan dat er een fout is opgetreden bij het benaderen van
+	 *             de voorgrond WMS service
+	 * 
+	 */
+	private BufferedImage getForeGroundMap(BoundingBox bbox,
+			String[] layerNames, String[] styleNames) throws ServletException {
+
+		// wms request doen
+		this.getMapRequest = this.fgWMS.createGetMapRequest();
+		for (int l = 0; l < layerNames.length; l++) {
+			this.getMapRequest.addLayer(layerNames[l], styleNames[l]);
+		}
+		this.getMapRequest.setFormat("image/png");
+		this.getMapRequest.setDimensions(MAP_DIMENSION, MAP_DIMENSION);
+		this.getMapRequest.setTransparent(true);
+		this.getMapRequest.setSRS("EPSG:28992");
+		this.getMapRequest.setBBox(bbox);
+		this.getMapRequest.setExceptions("application/vnd.ogc.se_inimage");
+		this.getMapRequest.setBGColour("0xffffff");
+		LOGGER.debug("Voorgrond WMS url is: "
+				+ this.getMapRequest.getFinalURL());
+
+		try {
+			// thema/voorgrond ophalen
+			final GetMapResponse response = this.fgWMS
+					.issueRequest(this.getMapRequest);
+			final BufferedImage image = ImageIO.read(response.getInputStream());
+
+			if (LOGGER.isDebugEnabled()) {
+				// voorgrond plaatje bewaren in debug modus
+				final File temp = File.createTempFile(
+						"fgwms",
+						".png",
+						new File(this.getServletContext().getRealPath(
+								MAP_CACHE_DIR.code)));
+				temp.deleteOnExit();
+				ImageIO.write(image, "png", temp);
+			}
+			return image;
+		} catch (ServiceException | IOException e) {
+			LOGGER.error(
+					"Er is een fout opgetreden bij het benaderen van de achtergrond WMS service.",
+					e);
+			throw new ServletException(e);
+		}
+	}
+
+	/**
 	 * Achtergrondkaart ophalen.
 	 * 
 	 * @param bbox
 	 *            the bbox
 	 * @return background/basemap image
-	 * @throws ServiceException
-	 *             the service exception
-	 * @throws IOException
-	 *             Signals that an I/O exception has occurred.
+	 * @throws ServletException
+	 *             Geeft aan dat er een fout is opgetreden bij het benaderen van
+	 *             de achtergrondgrond WMS service
+	 * 
 	 */
 	private BufferedImage getBackGroundMap(BoundingBox bbox)
-			throws ServiceException, IOException {
+			throws ServletException {
 
 		if (this.bgWMSCache.containsKey(bbox)) {
 			// check cache
@@ -472,10 +493,18 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 		LOGGER.debug("Achtergrond WMS url is: " + map.getFinalURL());
 
-		final GetMapResponse response = this.bgWMS.issueRequest(map);
-		final BufferedImage image = ImageIO.read(response.getInputStream());
-		this.bgWMSCache.put(bbox, image);
-		return image;
+		try {
+			GetMapResponse response = this.bgWMS.issueRequest(map);
+			final BufferedImage image = ImageIO.read(response.getInputStream());
+			this.bgWMSCache.put(bbox, image);
+			return image;
+		} catch (ServiceException | IOException e) {
+			LOGGER.error(
+					"Er is een fout opgetreden bij het benaderen van de achtergrond WMS service.",
+					e);
+			throw new ServletException(e);
+		}
+
 	}
 
 	/*

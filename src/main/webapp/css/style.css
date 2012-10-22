@@ -16,8 +16,13 @@
 	display: none;
 }
 
-html.js  #kaartContainer.nothidden {
+html.js #kaartContainer.nothidden {
 	display: block !important;
+}
+
+/* verbergen als er javascript is, hier zit de core kaart + formulier in.*/
+html.js #coreContainer,html.js #coreMapImage {
+	display: none;
 }
 
 a.accesskey {
@@ -89,7 +94,7 @@ a.accesskey:focus {
 	background: url('../img/maxmin.png') no-repeat 0 0;
 }
 
-.kaartnavi{
+.kaartnavi {
 	
 }
 
