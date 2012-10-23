@@ -45,7 +45,7 @@
 				<c:if test="${not empty kaart}">
 					<!-- StringConstants.MAP_CACHE_DIR -->
 					<img id="coreMapImage" src="${dir}/${kaart.name}"
-						alt="kaart voor ${request.mapname}" width="px" height="px"/>
+						alt="kaart voor ${request.mapname}" width="440px" height="440px"/>
 					<!-- navigatie knoppen zonder javascript -->
 					<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
 				</c:if>
