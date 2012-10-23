@@ -219,17 +219,13 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	}
 
 	/**
-	 * kaart ophalen.
+	 * kaart maken op babis van de opgehaalde afbeeldingen.
 	 * 
-	 * @param bbox
-	 *            the bbox
-	 * @param layerNames
-	 *            the layer names
-	 * @param styleNames
-	 *            the style names
-	 * @return the map
-	 * @throws ServiceException
-	 *             the service exception
+	 * @param image
+	 *            de voorgrondkaart
+	 * @param image2
+	 *            de achtergrondgrondkaart
+	 * @return de file met de afbeelding
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
@@ -250,10 +246,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		g.drawImage(infoImage, MAP_DIMENSION_MIDDLE - 16,
 				MAP_DIMENSION_MIDDLE - 37, null);
 		/*
-		 * // zoeklocatie intekenen met halo final
+		 * // zoeklocatie intekenen met halo
 		 * 
-		 * Color drawCol = Color.MAGENTA; final int width = 4; final int[] px =
-		 * { MAP_DIMENSION_MIDDLE - width, MAP_DIMENSION_MIDDLE + width,
+		 * final Color drawCol = Color.MAGENTA; final int width = 4; final int[]
+		 * px = { MAP_DIMENSION_MIDDLE - width, MAP_DIMENSION_MIDDLE + width,
 		 * MAP_DIMENSION_MIDDLE }; final int[] py = { MAP_DIMENSION_MIDDLE +
 		 * width, MAP_DIMENSION_MIDDLE + width, MAP_DIMENSION_MIDDLE - width };
 		 * final int offset = 2; final int[] pxh = { px[0] - offset, px[1] +
@@ -273,24 +269,27 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		 */
 
 		// opslaan van plaatje zodat de browser het op kan halen
-		final File temp3 = File.createTempFile("wmscombined", ".png", new File(
-				this.getServletContext().getRealPath(MAP_CACHE_DIR.code)));
-		temp3.deleteOnExit();
-		ImageIO.write(composite, "png", temp3);
-
-		return temp3;
+		final File kaartAfbeelding = File.createTempFile(
+				"wmscombined",
+				".png",
+				new File(this.getServletContext().getRealPath(
+						MAP_CACHE_DIR.code)));
+		kaartAfbeelding.deleteOnExit();
+		ImageIO.write(composite, "png", kaartAfbeelding);
+		return kaartAfbeelding;
 	}
 
 	/**
 	 * haalt de legenda op voor de thema laag.
 	 * 
 	 * @param layerNames
-	 *            the layer names
+	 *            WMS laag namen
 	 * @param styleNames
-	 *            the style names
-	 * @return the legend
+	 *            WMS style namen
+	 * @return een array met legenda afbeeldings bestanden
 	 * @throws ServiceException
-	 *             the service exception
+	 *             Geeft aan dat er een fout is opgetreden tijden het benaderen
+	 *             van de WMS
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
@@ -324,14 +323,15 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * Haalt de feature info op.
 	 * 
 	 * @param layerNames
-	 *            the layer names
+	 *            WMS laag namen
 	 * @param x
-	 *            the x
+	 *            de x scherm coordinaat
 	 * @param y
-	 *            the y
-	 * @return the feature info
+	 *            de y scherm coordinaat
+	 * @return Een string met feature info
 	 * @throws ServiceException
-	 *             the service exception
+	 *             Geeft aan dat er een fout is opgetreden tijden het benaderen
+	 *             van de WMS
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
@@ -402,11 +402,14 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * 
 	 * @param bbox
 	 *            the bbox
-	 * @return background/basemap image
+	 * @param layerNames
+	 *            WMS laag namen
+	 * @param styleNames
+	 *            WMS style namen
+	 * @return voorgrond afbeelding
 	 * @throws ServletException
 	 *             Geeft aan dat er een fout is opgetreden bij het benaderen van
 	 *             de voorgrond WMS service
-	 * 
 	 */
 	private BufferedImage getForeGroundMap(BoundingBox bbox,
 			String[] layerNames, String[] styleNames) throws ServletException {
@@ -452,7 +455,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	}
 
 	/**
-	 * Achtergrondkaart ophalen.
+	 * Achtergrondkaart ophalen en opslaan in de cache.
 	 * 
 	 * @param bbox
 	 *            the bbox
@@ -497,6 +500,18 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			GetMapResponse response = this.bgWMS.issueRequest(map);
 			final BufferedImage image = ImageIO.read(response.getInputStream());
 			this.bgWMSCache.put(bbox, image);
+
+			if (LOGGER.isDebugEnabled()) {
+				// achtergrond plaatje bewaren in debug modus
+				final File temp = File.createTempFile(
+						"bgwms",
+						".png",
+						new File(this.getServletContext().getRealPath(
+								MAP_CACHE_DIR.code)));
+				temp.deleteOnExit();
+				ImageIO.write(image, "png", temp);
+			}
+
 			return image;
 		} catch (ServiceException | IOException e) {
 			LOGGER.error(
@@ -514,6 +529,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 */
 	@Override
 	public void destroy() {
+		this.bgWMSCache.clear();
 		this.bgWMS = null;
 		this.fgWMS = null;
 		super.destroy();

@@ -23,6 +23,7 @@ import org.slf4j.LoggerFactory;
  * @todo implementatie, thans is het een naïve wrapper om een
  *       {@link java.util.concurrent.ConcurrentHashMap} zonder expiry/cleanup
  *       zie bijvoorbeeld {@link https://code.google.com/p/kitty-cache/}
+ * 
  * @see java.util.concurrent.ConcurrentHashMap
  */
 public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
@@ -80,7 +81,7 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see nl.eleni.gcc.vpziek.servlet.ImageCache#clear()
+	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching#clear()
 	 */
 	@Override
 	public void clear() {
@@ -95,9 +96,7 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 * @return true, if successful
 	 * @throws NullPointerException
 	 *             als de sleutel {@code null} is
-	 * @see nl.eleni.gcc.vpziek.servlet.ImageCache#containsKey(org.opengis.geometry
-	 *      .BoundingBox)
-	 * @see java.util.concurrent.ConcurrentHashMap#containsKey(Object)
+	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCache#containsKey(org.opengis.geometry.BoundingBox)
 	 */
 	@Override
 	public boolean containsKey(final BoundingBox bbox)
@@ -108,9 +107,7 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see nl.eleni.gcc.vpziek.servlet.ImageCache#entrySet()
-	 * 
-	 * @see java.util.concurrent.ConcurrentHashMap#entrySet()
+	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCache#entrySet()
 	 */
 	@Override
 	public Set<Entry<BoundingBox, BufferedImage>> entrySet() {
@@ -129,9 +126,7 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 *            de sleutel
 	 * @return het object dat wordt opgehaalt uit de cache (mogelijk
 	 *         {@code null})
-	 * @see nl.eleni.gcc.vpziek.servlet.ImageCache#get(org.opengis.geometry.BoundingBox
-	 *      )
-	 * @see java.util.concurrent.ConcurrentHashMap#get(Object)
+	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCache#get(org.opengis.geometry.BoundingBox)
 	 */
 	@Override
 	public BufferedImage get(final BoundingBox bbox) {
@@ -160,9 +155,9 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 *            het object dat wordt opgeslagen in de cache
 	 * @throws NullPointerException
 	 *             als de sleutel of de waarde {@code null} is
-	 * @see nl.eleni.gcc.vpziek.servlet.ImageCache#put(org.opengis.geometry.BoundingBox
+	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching#put(org.opengis.geometry.BoundingBox
 	 *      , java.lang.String)
-	 * @see java.util.concurrent.ConcurrentHashMap#put(Object, Object)
+	 * 
 	 */
 	@Override
 	public void put(final BoundingBox bbox, final BufferedImage cacheValue)
@@ -198,9 +193,7 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see nl.eleni.gcc.vpziek.servlet.ImageCache#size()
-	 * 
-	 * @see java.util.concurrent.ConcurrentHashMap#size()
+	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching#size()
 	 */
 	@Override
 	public int size() {

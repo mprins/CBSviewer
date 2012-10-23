@@ -35,8 +35,11 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 
 	/**
 	 * Parse locatie uit een request. Indien waarden niet geldig zijn of
-	 * ontbreken worden de defaults {@link DEFAULT_XCOORD} ,
-	 * {@link DEFAULT_YCOORD} en {@link OPENLS_ZOOMSCALE_STANDAARD} gebruikt.
+	 * ontbreken worden de defaults
+	 * {@link nl.mineleni.cbsviewer.util.NumberConstants#DEFAULT_XCOORD} ,
+	 * {@link nl.mineleni.cbsviewer.util.NumberConstants#DEFAULT_YCOORD} en
+	 * {@link nl.mineleni.cbsviewer.util.NumberConstants#OPENLS_ZOOMSCALE_STANDAARD}
+	 * gebruikt.
 	 * 
 	 * @param request
 	 *            Het servlet request
@@ -79,9 +82,9 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 	/**
 	 * Parse de forward parameter van een request.
 	 * 
-	 * @see REQ_PARAM_FORWARD
-	 * @return {@code true), als parameter aanwezig en waarde "true" heeft,
-	 *         anders {@code false}
+	 * @see nl.mineleni.cbsviewer.util.NumberConstants#REQ_PARAM_FORWARD
+	 * @return {@code true}, als parameter aanwezig is en waarde "true" heeft,
+	 *         anders / default {@code false}
 	 * @param request
 	 *            Het servlet request
 	 */

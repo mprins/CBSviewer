@@ -44,9 +44,9 @@ Ontwikkel handleiding
   Om de ontwikkelomgeving op te zetten is het nodig om een build van OpenLayers te maken, dit gaat met 
   onderstaand commando:
   
-+-----+
++----+
 mvn -Popenlayers,developer
-+-----+
++----+
 
   Hiermee wordt een debug versie van OpenLayers in de broncode ondergebracht, een compacte versie voor de webapp en 
   een volledige versie voor de unit tests.
@@ -92,9 +92,9 @@ mvn -Pjasmine jasmine:bdd
 
   De applicatie kan lokaal gebouwd en gerund worden met behulp van Jetty
   
-+-----+
++----+
 mvn -Pdeveloper jetty:run
-+-----+
++----+
 
   Jetty start een webserver op op poort 8020 met de {{{applicatie in de root}http://localhost:8020/}}.
 
@@ -109,13 +109,13 @@ mvn site
   Tijdens het maken van de site worden ook de unit en integratie tests gedraaid (er vindt dus een 
   volledige build plaats!).
 
-~~  Als je <<<dot>>> of <<<Graphviz>> hebt geinstalleerd kunj je javadoc met UML klasse diagrammen genereren; 
+~~  Als je <<<dot>>> of <<<Graphviz>> hebt geinstalleerd kun je javadoc met UML klasse diagrammen genereren; 
 ~~  dit doe je door op de commandline de optie <<<-Dhavedot=true>>> mee te geven zoals in onderstaand voorbeeld 
 ~~  om de documentatie te genereren
 ~~  
-~~+----+
+~~+- ---+
 ~~mvn -Dhavedot=true site
-~~+----+
+~~+- ---+
 
 ** {Documentatie uploaden}
 
