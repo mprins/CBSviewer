@@ -39,20 +39,18 @@ public enum NumberConstants {
 	 * @param number
 	 *            the number
 	 */
-	NumberConstants(Number number) {
+	NumberConstants(final Number number) {
 		this.number = number;
 	}
 
 	/**
-	 * String value van dit object.
+	 * Double value van dit object.
 	 * 
-	 * @return de waarde van dit object als string
-	 * @see java.lang.Enum#toString()
-	 * @see java.lang.Number#toString()
+	 * @return de waarde van dit object als double
+	 * @see java.lang.Number#doubleValue()
 	 */
-	@Override
-	public String toString() {
-		return this.number.toString();
+	public double doubleValue() {
+		return this.number.doubleValue();
 	}
 
 	/**
@@ -66,12 +64,14 @@ public enum NumberConstants {
 	}
 
 	/**
-	 * Double value van dit object.
+	 * String value van dit object.
 	 * 
-	 * @return de waarde van dit object als double
-	 * @see java.lang.Number#doubleValue()
+	 * @return de waarde van dit object als string
+	 * @see java.lang.Enum#toString()
+	 * @see java.lang.Number#toString()
 	 */
-	public double doubleValue() {
-		return this.number.doubleValue();
+	@Override
+	public String toString() {
+		return this.number.toString();
 	}
 }

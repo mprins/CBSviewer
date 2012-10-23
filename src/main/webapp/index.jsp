@@ -4,7 +4,7 @@
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
 		import="nl.mineleni.cbsviewer.util.LabelsBundle, nl.mineleni.cbsviewer.util.StringConstants"
-		trimDirectiveWhitespaces="false" language="java" isThreadSafe="false"
+		trimDirectiveWhitespaces="true" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 	<jsp:output doctype-root-element="html"
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -17,11 +17,15 @@
 <head>
 <jsp:include page="WEB-INF/jsp/head_include.jsp" />
 
-<script type="text/javascript" charset="utf-8">
-	document.documentElement.className += ' js';
-</script>
+<c:if test="${param.coreonly!=true}">
+	<script type="text/javascript" charset="utf-8">
+	<!--//--><![CDATA[//><!--
+		document.documentElement.className += ' js';
+		//--><!]]>
+	</script>
+</c:if>
 
-<title>Kaart</title>
+<title>Kaart <c:out value="${param.mapname}" /></title>
 </head>
 
 <body>
@@ -45,7 +49,8 @@
 				<c:if test="${not empty kaart}">
 					<!-- StringConstants.MAP_CACHE_DIR -->
 					<img id="coreMapImage" src="${dir}/${kaart.name}"
-						alt="kaart voor ${request.mapname}" width="440px" height="440px"/>
+						alt="kaart voor thema: ${param.mapname}" width="440px"
+						height="440px" />
 					<!-- navigatie knoppen zonder javascript -->
 					<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
 				</c:if>
