@@ -41,7 +41,7 @@
 #numbers li {
 	position: relative;
 	width: 18px; height: 13px;
-	background-image: url(../images/dot_sprite.png);
+	background-image: url(../img/dot_sprite.png);
 	background-repeat: no-repeat;
 	float: left;
 	margin: 0 0px 5px 0;

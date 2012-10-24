@@ -16,7 +16,7 @@ a.tooltip:hover span{display:inline; position:absolute; border:1px solid #cccccc
   background-position: center 5px;
   color: #000000;
   background-color: #eeeeee;
-  background-image: url('../images/info.png');
+  background-image: url('../img/info.png');
 }
 
 /* Lets reset all margins, paddings and list styles, shall we? */
@@ -292,7 +292,7 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 		width: 6px;
 		height: 9px;
 		display: inline-block;
-		background:url(../images/arrows_sprite_8.png) no-repeat -30px 0;
+		background:url(../img/arrows_sprite_8.png) no-repeat -30px 0;
 }
 .navCategories>li:hover>a:after {/*  IE7 fix */
 	background-position: -16px 0;
@@ -408,7 +408,7 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 }
 
 .sectionPromoContent{ display:block; width:177px; margin:10px 0 0px; }
-.megaMenu .blackArrow  { background-color: transparent; background-image: url("../images/bulletArrowBlack.gif"); background-repeat: no-repeat; background-attachment: scroll; background-position: 1px 3px; background-clip: border-box; background-origin: padding-box; background-size: auto auto; padding-left: 10px;}
+.megaMenu .blackArrow  { background-color: transparent; background-image: url("../img/bulletArrowBlack.gif"); background-repeat: no-repeat; background-attachment: scroll; background-position: 1px 3px; background-clip: border-box; background-origin: padding-box; background-size: auto auto; padding-left: 10px;}
 .sectionPromoContent p{ margin-top:10px; }
 
 .siteNavigation .sectionPromo .forwardButtonWhite {
