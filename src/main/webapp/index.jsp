@@ -17,11 +17,15 @@
 <head>
 <jsp:include page="WEB-INF/jsp/head_include.jsp" />
 
-<script type="text/javascript">
-	document.documentElement.className += ' js';
-</script>
+<c:if test="${param.coreonly!=true}">
+	<script type="text/javascript" charset="utf-8">
+	<!--//--><![CDATA[//><!--
+		document.documentElement.className += ' js';
+		//--><!]]>
+	</script>
+</c:if>
 
-<title>Kaart</title>
+<title>Kaart <c:out value="${param.mapname}" /></title>
 </head>
 
 <body>
@@ -33,6 +37,7 @@
 		</div>
 
 		<div id="article" class="article">
+
 			<div id="coreContainer" class="kaartContainer">
 				<c:if test="${param.coreonly!=true}">
 					<!-- deze alinea wordt verborgen tijdens laden van de pagina, 
@@ -47,36 +52,32 @@
 					</p>
 				</c:if>
 				<!-- hier komt de statische kaart -->
-				<c:if test="${param.coreonly==true}">
-					<jsp:include page="kaart">
-						<!-- StringConstants.REQ_PARAM_FORWARD -->
-						<jsp:param name="forward" value="false" />
-						<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
-						<!-- StringConstants.REQ_PARAM_MAPNAME -->
-						<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
-					</jsp:include>
-					<c:if test="${not empty kaart}">
-						<!-- StringConstants.MAP_CACHE_DIR -->
-						<img src="${dir}/${kaart.name}"
-							alt="kaart voor ${request.layername}" />
-						<p class="todo">TODO: zoom/pan en vergroot knoppen</p>
-					</c:if>
+				<jsp:include page="kaart">
+					<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
+					<!-- StringConstants.REQ_PARAM_MAPNAME -->
+					<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
+				</jsp:include>
+
+				<c:if test="${not empty kaart}">
+					<!-- StringConstants.MAP_CACHE_DIR -->
+					<img id="coreMapImage" src="${dir}/${kaart.name}"
+						alt="kaart voor thema: ${param.mapname}" width="440px"
+						height="440px" />
+					<!-- navigatie knoppen zonder javascript -->
+					<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
 				</c:if>
 			</div>
 
-			<!-- deze container wordt zichtbaar gemaakt tijdens laden van de pagina, 
-				tenzij er geen css / javascript ondersteuning is -->
-			<div id="kaartContainer" class="kaartContainer hidden">
+			<div id="kaartContainer" class="kaartContainer">
 				<div id="cbsKaart" class="kaart">
 					<!-- hier wordt de dynamische kaart ingehangen -->
 				</div>
 			</div>
 
-			<c:if test="${not empty kaart}">
-				<div id="copyright" class="copy">
-					<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
-				</div>
-			</c:if>
+			<div id="copyright" class="copy">
+				<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
+			</div>
+
 		</div>
 
 
@@ -92,7 +93,7 @@
 				<div id="legenda">
 					<!-- plaats voor de legenda, dynamisch en statisch -->
 					<c:if test="${param.coreonly==true}">
-						<c:if test="${not empty kaart}">
+						<c:if test="${not empty legendas}">
 							<c:forEach items="${legendas}" varStatus="legenda">
 								<img src="${dir}/${legendas[legenda.index].name}"
 									alt="legenda item" />
@@ -106,12 +107,13 @@
 				<jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression>
 				<div id="featureinfo">
 					<!-- plaats voor de feature info, dynamisch en statisch-->
-					<p class="todo">TODO: strip html</p>
 					<c:if test="${param.coreonly==true}">
-						<c:if test="${not empty kaart}">
+						<c:if test="${not empty featureinfo}">
+							<p class="todo">TODO: html parsen/opschonen</p>
 							<!-- hiermee worden de html tags als entities edncoded, niet wat we willen
 							 <c:out value="${featureinfo}" /> -->
-							<jsp:expression>request.getAttribute("featureinfo")</jsp:expression>
+							<!--<jsp:expression>request.getAttribute("featureinfo")</jsp:expression>-->
+							<c:out value="${featureinfo}" escapeXml="false" />
 						</c:if>
 					</c:if>
 				</div>

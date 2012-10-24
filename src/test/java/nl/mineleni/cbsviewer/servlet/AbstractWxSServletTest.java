@@ -30,134 +30,154 @@ import org.junit.runner.RunWith;
  */
 @RunWith(JMock.class)
 public class AbstractWxSServletTest {
-    /** servlet die we testen. */
-    private AbstractWxSServlet servlet;
-    /** junit mockery. */
-    private final Mockery mockery = new JUnit4Mockery();
+	/** servlet die we testen. */
+	private AbstractWxSServlet servlet;
+	/** junit mockery. */
+	private final Mockery mockery = new JUnit4Mockery();
+	/** mocked servlet request. */
+	private HttpServletRequest request;
 
-    private HttpServletRequest request;
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@SuppressWarnings("serial")
+	@Before
+	public void setUp() throws Exception {
+		this.request = this.mockery.mock(HttpServletRequest.class);
 
-    /**
-     * @throws java.lang.Exception
-     */
-    @SuppressWarnings("serial")
-    @Before
-    public void setUp() throws Exception {
+		this.servlet = new AbstractWxSServlet() {
 
-        this.request = this.mockery.mock(HttpServletRequest.class);
+		};
 
-        this.servlet = new AbstractWxSServlet() {
+		this.mockery.checking(new Expectations() {
+			{
+				this.allowing(AbstractWxSServletTest.this.request)
+						.setAttribute(REQ_PARAM_XCOORD.code, 100);
+				this.allowing(AbstractWxSServletTest.this.request)
+						.setAttribute(REQ_PARAM_YCOORD.code, 100);
+				this.allowing(AbstractWxSServletTest.this.request)
+						.setAttribute(REQ_PARAM_STRAAL.code, 100);
+			}
+		});
 
-        };
+	}
 
-    }
+	/**
+	 * test methode voor
+	 * {@link AbstractWxSServlet#parseForward(javax.servlet.http.HttpServletRequest)}
+	 * .
+	 */
+	@Test
+	public void testParseForwardFalse() {
+		// als param == false
+		this.mockery.checking(new Expectations() {
+			{
+				this.atMost(3).of(AbstractWxSServletTest.this.request)
+						.getParameter(REQ_PARAM_FORWARD.code);
+				this.will(returnValue("false"));
+			}
+		});
+		assertFalse(this.servlet.parseForward(this.request));
+	}
 
-    /**
-     * test methode voor
-     * {@link AbstractWxSServlet#parseLocation(javax.servlet.http.HttpServletRequest)}
-     * .
-     * 
-     * @throws ServletException
-     */
-    @Test
-    public void testParseLocation() throws ServletException {
-        this.mockery.checking(new Expectations() {
-            {
-                this.atMost(2).of(AbstractWxSServletTest.this.request)
-                        .getParameter(REQ_PARAM_XCOORD.code);
-                this.will(returnValue("100"));
-                this.atMost(2).of(AbstractWxSServletTest.this.request)
-                        .getParameter(REQ_PARAM_YCOORD.code);
-                this.will(returnValue("100"));
-                this.atMost(2).of(AbstractWxSServletTest.this.request)
-                        .getParameter(REQ_PARAM_STRAAL.code);
-                this.will(returnValue("100"));
-            }
-        });
-        final double[] d = this.servlet.parseLocation(this.request);
-        assertArrayEquals(new double[] { 100, 100, 100 }, d, 1d);
-    }
+	/**
+	 * test methode voor
+	 * {@link AbstractWxSServlet#parseForward(javax.servlet.http.HttpServletRequest)}
+	 * .
+	 */
+	@Test
+	public void testParseForwardNull() {
+		// als param afwezig
+		this.mockery.checking(new Expectations() {
+			{
+				this.atMost(2).of(AbstractWxSServletTest.this.request)
+						.getParameter(REQ_PARAM_FORWARD.code);
+				this.will(returnValue(null));
+			}
+		});
+		assertFalse(this.servlet.parseForward(this.request));
+	}
 
-    /**
-     * test methode voor
-     * {@link AbstractWxSServlet#parseLocation(javax.servlet.http.HttpServletRequest)}
-     * .
-     * 
-     * @throws ServletException
-     */
-    @Test
-    public void testParseLocationNull() throws ServletException {
-        this.mockery.checking(new Expectations() {
-            {
-                this.atMost(1).of(AbstractWxSServletTest.this.request)
-                        .getParameter(REQ_PARAM_XCOORD.code);
-                this.will(returnValue(null));
-                this.atMost(1).of(AbstractWxSServletTest.this.request)
-                        .getParameter(REQ_PARAM_YCOORD.code);
-                this.will(returnValue(null));
-                this.atMost(1).of(AbstractWxSServletTest.this.request)
-                        .getParameter(REQ_PARAM_STRAAL.code);
-                this.will(returnValue(null));
-            }
-        });
-        final double[] d = this.servlet.parseLocation(this.request);
-        assertArrayEquals(
-                new double[] { DEFAULT_XCOORD.doubleValue(),
-                        DEFAULT_YCOORD.doubleValue(),
-                        OPENLS_ZOOMSCALE_STANDAARD.doubleValue() }, d, 1d);
-    }
+	/**
+	 * test methode voor
+	 * {@link AbstractWxSServlet#parseForward(javax.servlet.http.HttpServletRequest)}
+	 * .
+	 */
+	@Test
+	public void testParseForwardTrue() {
+		// als param == true
+		this.mockery.checking(new Expectations() {
+			{
+				this.atMost(3).of(AbstractWxSServletTest.this.request)
+						.getParameter(REQ_PARAM_FORWARD.code);
+				this.will(returnValue("true"));
 
-    /**
-     * test methode voor
-     * {@link AbstractWxSServlet#parseForward(javax.servlet.http.HttpServletRequest)}
-     * .
-     */
-    @Test
-    public void testParseForwardTrue() {
-        // als param == true
-        this.mockery.checking(new Expectations() {
-            {
-                this.atMost(3).of(AbstractWxSServletTest.this.request)
-                        .getParameter(REQ_PARAM_FORWARD.code);
-                this.will(returnValue("true"));
-            }
-        });
-        assertTrue(this.servlet.parseForward(this.request));
-    }
+			}
+		});
+		assertTrue(this.servlet.parseForward(this.request));
+	}
 
-    /**
-     * test methode voor
-     * {@link AbstractWxSServlet#parseForward(javax.servlet.http.HttpServletRequest)}
-     * .
-     */
-    @Test
-    public void testParseForwardNull() {
-        // als param afwezig
-        this.mockery.checking(new Expectations() {
-            {
-                this.atMost(2).of(AbstractWxSServletTest.this.request)
-                        .getParameter(REQ_PARAM_FORWARD.code);
-                this.will(returnValue(null));
-            }
-        });
-        assertFalse(this.servlet.parseForward(this.request));
-    }
+	/**
+	 * test methode voor
+	 * {@link AbstractWxSServlet#parseLocation(javax.servlet.http.HttpServletRequest)}
+	 * .
+	 * 
+	 * @throws ServletException
+	 */
+	@Test
+	public void testParseLocation() throws ServletException {
+		this.mockery.checking(new Expectations() {
+			{
+				this.atMost(2).of(AbstractWxSServletTest.this.request)
+						.getParameter(REQ_PARAM_XCOORD.code);
+				this.will(returnValue("100"));
+				this.atMost(2).of(AbstractWxSServletTest.this.request)
+						.getParameter(REQ_PARAM_YCOORD.code);
+				this.will(returnValue("100"));
+				this.atMost(2).of(AbstractWxSServletTest.this.request)
+						.getParameter(REQ_PARAM_STRAAL.code);
+				this.will(returnValue("100"));
 
-    /**
-     * test methode voor
-     * {@link AbstractWxSServlet#parseForward(javax.servlet.http.HttpServletRequest)}
-     * .
-     */
-    @Test
-    public void testParseForwardFalse() {
-        // als param == false
-        this.mockery.checking(new Expectations() {
-            {
-                this.atMost(3).of(AbstractWxSServletTest.this.request)
-                        .getParameter(REQ_PARAM_FORWARD.code);
-                this.will(returnValue("false"));
-            }
-        });
-        assertFalse(this.servlet.parseForward(this.request));
-    }
+			}
+		});
+		final int[] d = this.servlet.parseLocation(this.request);
+		assertArrayEquals(new int[] { 100, 100, 100 }, d);
+	}
+
+	/**
+	 * test methode voor
+	 * {@link AbstractWxSServlet#parseLocation(javax.servlet.http.HttpServletRequest)}
+	 * .
+	 * 
+	 * @throws ServletException
+	 */
+	@Test
+	public void testParseLocationNull() throws ServletException {
+		this.mockery.checking(new Expectations() {
+			{
+				this.atMost(1).of(AbstractWxSServletTest.this.request)
+						.getParameter(REQ_PARAM_XCOORD.code);
+				this.will(returnValue(null));
+				this.atMost(1).of(AbstractWxSServletTest.this.request)
+						.getParameter(REQ_PARAM_YCOORD.code);
+				this.will(returnValue(null));
+				this.atMost(1).of(AbstractWxSServletTest.this.request)
+						.getParameter(REQ_PARAM_STRAAL.code);
+				this.will(returnValue(null));
+
+				this.one(AbstractWxSServletTest.this.request).setAttribute(
+						REQ_PARAM_XCOORD.code, DEFAULT_XCOORD.intValue());
+				this.one(AbstractWxSServletTest.this.request).setAttribute(
+						REQ_PARAM_YCOORD.code, DEFAULT_YCOORD.intValue());
+				this.one(AbstractWxSServletTest.this.request).setAttribute(
+						REQ_PARAM_STRAAL.code,
+						OPENLS_ZOOMSCALE_STANDAARD.intValue());
+			}
+		});
+		final int[] d = this.servlet.parseLocation(this.request);
+		assertArrayEquals(
+				new int[] { DEFAULT_XCOORD.intValue(),
+						DEFAULT_YCOORD.intValue(),
+						OPENLS_ZOOMSCALE_STANDAARD.intValue() }, d);
+	}
 }

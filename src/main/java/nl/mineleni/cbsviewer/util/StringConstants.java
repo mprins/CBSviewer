@@ -43,6 +43,15 @@ public enum StringConstants {
 	/** request param naam voor response format. */
 	REQ_PARAM_RESPONSE_FORMAT("format"),
 
+	/** parameter featureinfo. */
+	REQ_PARAM_FEATUREINFO("featureinfo"),
+	/** parameter legendas. */
+	REQ_PARAM_LEGENDAS("legendas"),
+	/** parameter kaart. */
+	REQ_PARAM_KAART("kaart"),
+	/** parameter cache dir. */
+	REQ_PARAM_CACHEDIR("dir"),
+
 	/** openls request param naam voor request. */
 	OPENLS_REQ_PARAM_REQUEST("Request"),
 	/** openls request param naam voor request value. */
@@ -52,20 +61,6 @@ public enum StringConstants {
 
 	/** directory in de webapp waar de wms resultaten worden gecached. */
 	MAP_CACHE_DIR("maps");
-
-	/** De code (waarde) van dit object. */
-	public final String code;
-
-	/**
-	 * Maakt een nieuw object aan met de gegeven code waarde.
-	 * 
-	 * @param code
-	 *            de code voor dit object
-	 * @see #code
-	 */
-	StringConstants(String code) {
-		this.code = code;
-	}
 
 	/**
 	 * Lijst met alle code namen (immutable).
@@ -78,6 +73,20 @@ public enum StringConstants {
 			codeNames.add(strConst.code);
 		}
 		return Collections.unmodifiableList(codeNames);
+	}
+
+	/** De code (waarde) van dit object. */
+	public final String code;
+
+	/**
+	 * Maakt een nieuw object aan met de gegeven code waarde.
+	 * 
+	 * @param code
+	 *            de code voor dit object
+	 * @see #code
+	 */
+	StringConstants(final String code) {
+		this.code = code;
 	}
 
 	/**

@@ -20,7 +20,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * Test klasse voor {@link nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
+ * Test klasse voor {@link nl.mineleni.cbsviewer.servlet.AbstractBaseServlet}
  * 
  * @author prinsmc
  */
@@ -36,9 +36,7 @@ public class AbstractBaseServletTest {
 	private ServletConfig servletConfig;
 
 	/**
-	 * {@inheritDoc}. also init()'s the servlet to test.
-	 * 
-	 * @see junit.framework.TestCase#setUp()
+	 * Set up for the tests, init()'s the servlet to test.
 	 */
 	@SuppressWarnings("serial")
 	@Before
@@ -79,7 +77,7 @@ public class AbstractBaseServletTest {
 		});
 		try {
 			pxyServlet.init(servletConfig);
-		} catch (ServletException e) {
+		} catch (final ServletException e) {
 			fail("Servlet Exception voor init() in test setup.(testInitServletConfig) "
 					+ e.getLocalizedMessage());
 		}
@@ -112,7 +110,7 @@ public class AbstractBaseServletTest {
 		});
 		try {
 			pxyServlet.init(servletConfig);
-		} catch (ServletException e) {
+		} catch (final ServletException e) {
 			fail("Servlet Exception voor init() in test setup. (testInitServletConfigNull)"
 					+ e.getLocalizedMessage());
 		}
