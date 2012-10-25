@@ -58,16 +58,4 @@ class CacheImage implements CachableImage<BufferedImage> {
 	public boolean isValid() {
 		return ((this.image != null) && (this.fName != null));
 	}
-
-	/**
-	 * Store this object (not implemented, does nothing).
-	 */
-	public void store() {
-		// TODO implementatie
-		// final File f = new File(this.fName);
-		// if (f.exists()) {
-		// ImageIO.write(this.image, formatName, output)
-		// ImageIO.read(f);
-		// }
-	}
 }

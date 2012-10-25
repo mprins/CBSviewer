@@ -62,19 +62,6 @@ public enum StringConstants {
 	/** directory in de webapp waar de wms resultaten worden gecached. */
 	MAP_CACHE_DIR("maps");
 
-	/**
-	 * Lijst met alle code namen (immutable).
-	 * 
-	 * @return De lijst met alle code namen.
-	 */
-	public static List<String> codeNamen() {
-		final List<String> codeNames = new ArrayList<String>();
-		for (final StringConstants strConst : StringConstants.values()) {
-			codeNames.add(strConst.code);
-		}
-		return Collections.unmodifiableList(codeNames);
-	}
-
 	/** De code (waarde) van dit object. */
 	public final String code;
 
@@ -87,6 +74,19 @@ public enum StringConstants {
 	 */
 	StringConstants(final String code) {
 		this.code = code;
+	}
+
+	/**
+	 * Lijst met alle code namen (immutable).
+	 * 
+	 * @return De lijst met alle code namen.
+	 */
+	public static List<String> codeNamen() {
+		final List<String> codeNames = new ArrayList<String>();
+		for (final StringConstants strConst : StringConstants.values()) {
+			codeNames.add(strConst.code);
+		}
+		return Collections.unmodifiableList(codeNames);
 	}
 
 	/**
