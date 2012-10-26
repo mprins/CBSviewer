@@ -15,7 +15,6 @@ import org.opengis.geometry.BoundingBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-// TODO: Auto-generated Javadoc
 /**
  * Cache voor wms requests.
  * 
@@ -66,7 +65,11 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 */
 	public WMSCache(final String cacheDir) throws IOException {
 		final File f = new File(cacheDir);
-		f.mkdirs();
+		boolean createdDirs = f.mkdirs();
+		if (createdDirs && LOGGER.isDebugEnabled()) {
+			LOGGER.debug("Directory tree aangemaakt voor "
+					+ f.getCanonicalPath());
+		}
 		if (f.isDirectory() && f.canWrite()) {
 			LOGGER.debug("Cache directory is: " + f.getCanonicalPath());
 			this.cacheDir = cacheDir;
@@ -94,13 +97,10 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 * @param bbox
 	 *            de sleutel
 	 * @return true, if successful
-	 * @throws NullPointerException
-	 *             als de sleutel {@code null} is
 	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCache#containsKey(org.opengis.geometry.BoundingBox)
 	 */
 	@Override
-	public boolean containsKey(final BoundingBox bbox)
-			throws NullPointerException {
+	public boolean containsKey(final BoundingBox bbox) {
 		return this.cache.containsKey(bbox);
 	}
 
@@ -153,15 +153,13 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 *            de sleutel
 	 * @param cacheValue
 	 *            het object dat wordt opgeslagen in de cache
-	 * @throws NullPointerException
-	 *             als de sleutel of de waarde {@code null} is
+	 * 
 	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching#put(org.opengis.geometry.BoundingBox
 	 *      , java.lang.String)
 	 * 
 	 */
 	@Override
-	public void put(final BoundingBox bbox, final BufferedImage cacheValue)
-			throws NullPointerException {
+	public void put(final BoundingBox bbox, final BufferedImage cacheValue) {
 		final CacheImage c = new CacheImage(cacheValue, this.cacheDir);
 		this.cache.put(bbox, c);
 		// bestand opslaan
@@ -182,11 +180,9 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 * 
 	 * @param bbox
 	 *            de sleutel
-	 * @throws NullPointerException
-	 *             als de sleutel of de waarde {@code null} is
 	 */
 	@Override
-	public void remove(final BoundingBox bbox) throws NullPointerException {
+	public void remove(final BoundingBox bbox) {
 		this.cache.remove(bbox);
 	}
 
