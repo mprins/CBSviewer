@@ -111,12 +111,9 @@ public class AdresZoekServlet extends AbstractWxSServlet {
             request.setAttribute(REQ_PARAM_GEVONDEN.code,
                     "Geen adres ingevuld.");
         } else {
-
             final Map<String, String> openLSParams = new TreeMap<String, String>();
-
             openLSParams.put(OPENLS_REQ_PARAM_REQUEST.code,
                     OPENLS_REQ_VALUE_GEOCODE.code);
-
             openLSParams.put(OPENLS_REQ_PARAM_SEARCH.code, zoekTerm);
             final GeocodeResponse gcr = this.openLSClient.doGetOpenLSRequest(
                     this.openLSServerUrl, openLSParams);
@@ -149,9 +146,9 @@ public class AdresZoekServlet extends AbstractWxSServlet {
                 request.setAttribute("adreslijst", addrl);
                 request.setAttribute(REQ_PARAM_GEVONDEN.code,
                         "Er is meer dan 1 adres gevonden");
-
             }
         }
+
         if (forwardResponse) {
             request.getRequestDispatcher("/index.jsp").forward(request,
                     response);

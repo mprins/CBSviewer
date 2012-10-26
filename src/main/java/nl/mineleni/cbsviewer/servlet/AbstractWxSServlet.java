@@ -13,6 +13,9 @@ import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_YCOORD;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.util.Arrays;
+import java.util.Enumeration;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -53,6 +56,21 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
     protected int[] parseLocation(HttpServletRequest request)
             throws ServletException {
         try {
+
+            final Enumeration<String> attr = request.getAttributeNames();
+            while (attr.hasMoreElements()) {
+                final String name = attr.nextElement();
+                LOGGER.debug("attribute: " + name + " value: "
+                        + request.getAttribute(name));
+            }
+
+            final Map<String, String[]> p = request.getParameterMap();
+
+            for (final Map.Entry<String, String[]> e : p.entrySet()) {
+                LOGGER.debug("parameter key: " + e.getKey() + " value: "
+                        + Arrays.toString(e.getValue()));
+            }
+
             // request params uitlezen voor het zoeken
             final NumberFormat nf = NumberFormat.getInstance();
             final int xcoord = nf
@@ -99,6 +117,7 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
      *         has at least one character that is not considered white space.
      */
     private boolean isNotNullNotEmptyNotWhiteSpaceOnly(String toTest) {
+        LOGGER.debug("Null of leeg test: " + toTest);
         return ((toTest != null) && !toTest.isEmpty() && !toTest.trim()
                 .isEmpty());
     }

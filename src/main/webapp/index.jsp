@@ -51,20 +51,37 @@
 						invullen om meteen naar een lokatie te gaan in de kaart.
 					</p>
 				</c:if>
+
+				<!-- 1 adres -->
+				<c:if test="${not empty xcoord}">
+					<c:set value="${xcoord}" var="xcoord" />
+				</c:if>
+
+				<c:if test="${not empty ycoord}">
+					<c:set value="${ycoord}" var="ycoord" />
+				</c:if>
+				<c:if test="!${not empty straal}">
+					<c:set value="${straal-1}" var="straal" />
+				</c:if>
+				<!-- meer adressen -->
+				<c:if test="${not empty param.xcoord  }">
+					<c:set value="${param.xcoord}" var="xcoord" />
+				</c:if>
+				<c:if test="${not empty param.ycoord  }">
+					<c:set value="${param.ycoord}" var="ycoord" />
+				</c:if>
+				<c:if test="${not empty param.straal  }">
+					<c:set value="${param.straal+1}" var="straal" />
+				</c:if>
+
 				<!-- hier komt de statische kaart -->
 				<jsp:include page="kaart">
 					<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
 					<!-- StringConstants.REQ_PARAM_MAPNAME -->
 					<!--<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />-->
-					<c:if test="${xcoord!=null}"></c:if>
 					<jsp:param value="${xcoord}" name="xcoord" />
-
-					<c:if test="${xcoord!=null}"></c:if>
 					<jsp:param value="${ycoord}" name="ycoord" />
-					
-					<c:if test="${straal!=null}"></c:if>
 					<jsp:param value="${straal}" name="straal" />
-
 				</jsp:include>
 
 				<c:if test="${not empty kaart}">
