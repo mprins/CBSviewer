@@ -10,32 +10,39 @@
 	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
 
 	<!-- zoek formulier voor de versie zonder javascript en/of css -->
-	<form id="zoekFormulier" action="#" method="get" title="Zoekformulier"
-		name="zoekFormulier">
+	<form id="zoekFormulier" action="adres" method="get"
+		title="Zoekformulier" name="zoekFormulier">
 		<jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression>
-		<p class="todo">TODO: implementatie</p>
 		<p>
-			<!-- <jsp:expression>StringConstants.REQ_PARAM_ADRES</jsp:expression> -->
+			<c:out value="${gevonden}" />
+		</p>
+		<c:if test="${adreslijst!=null }">
+			<!-- for item in lijst maak url -->
+			<ul>
+				<c:forEach var="adres" items="${adreslijst}">
+					<li><a
+						href="index.jsp?gevonden=${adres}&amp;xcoord=${adres.getxCoord()}&amp;ycoord=${adres.getyCoord()}&amp;straal=${adres.getRadius()}&amp;coreonly=${param.coreonly}"
+						title="zoom in op ${adres}">${adres}</a></li>
+				</c:forEach>
+			</ul>
+		</c:if>
+		<p>
 			<label for="adres">Postcode of plaatsnaam</label> <input type="text"
-				id="adres" name="adres" value="${param.ingevuld}" />
+				id="adres" name="adres" value="${param.adres}" />
 		</p>
 
 		<p class="button">
-			<!-- <jsp:expression>StringConstants.REQ_PARAM_STRAAL</jsp:expression> -->
 			<c:if test="${request.straal != null}">
-				<input type="hidden" name="straal" value="${request.straal}" />
+				<input type="hidden" name="straal" value="${straal}" />
 			</c:if>
 
-			<!-- <jsp:expression>StringConstants.REQ_PARAM_COREONLY</jsp:expression> 
-			${param.coreonly} -->
-			<input type="hidden" name="coreonly" value="true" />
-
+			<input type="hidden" name="coreonly" value="true" /> <input
+				type="hidden" name="forward" value="true" />
 
 			<button type="submit">
 				<span><jsp:expression>RESOURCES.getString("KEY_ZOEKEN_SUBMIT")</jsp:expression></span>
 			</button>
 		</p>
-
 	</form>
 
 </jsp:root>

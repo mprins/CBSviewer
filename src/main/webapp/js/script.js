@@ -14,13 +14,6 @@ jQuery(document).ready(function() {
 	});
 	// console.debug('opzoeken van ' + _id + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
-	// aanhaken van handler aan submit event van formulier
-	jQuery('#zoekFormulier').on('submit', function(e) {
-		// om normale browser submit en navigatie te voorkomen
-		e.preventDefault();
-
-		console.info('ajaxSubmit van zoek formulier.');
-	});
 });
 
 /**
@@ -30,7 +23,8 @@ var setupPage = {
 	init : function() {
 		OpenLayers.Lang.setCode('nl');
 
-		// verwijder core container, die hebben we niet nodig als er javascript ondersteuning is.
+		// verwijder core container, die hebben we niet nodig als er javascript
+		// ondersteuning is.
 		jQuery('#coreContainer').remove();
 
 		// toggle knop voor vergroten van de kaart
@@ -44,13 +38,23 @@ var setupPage = {
 				+ '">' + OpenLayers.i18n('KEY_KEYBOARDNAV') + '</a>';
 		jQuery('#' + config.mapDiv).prepend(aLink);
 
-		// core link toevoegen aan de kaart voor het geval de javascript kaart niet "goed" is
+		// core link toevoegen aan de kaart voor het geval de javascript kaart
+		// niet "goed" is
 		var aCore = '<a class="accesskey" href="?coreonly=true">' + OpenLayers.i18n('KEY_CSSERROR') + '</a>';
 		jQuery('#' + config.mapDiv).prepend(aCore);
 
 		// eventueel de font-size aanpassen zodat het altijd past:
 		// http://jsfiddle.net/ad5pf/1/ en
 		// http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
+
+		// aanhaken van handler aan submit event van formulier
+		jQuery('#zoekFormulier').on('submit', function(e) {
+			// om normale browser submit en navigatie te voorkomen
+			e.preventDefault();
+
+			var zoekTerm = $('#adres').fieldValue()[0];
+			console.info('Zoeken naar: ', zoekTerm);
+		});
 	}
 };
 

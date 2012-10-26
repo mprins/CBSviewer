@@ -55,7 +55,16 @@
 				<jsp:include page="kaart">
 					<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
 					<!-- StringConstants.REQ_PARAM_MAPNAME -->
-					<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
+					<!--<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />-->
+					<c:if test="${xcoord!=null}"></c:if>
+					<jsp:param value="${xcoord}" name="xcoord" />
+
+					<c:if test="${xcoord!=null}"></c:if>
+					<jsp:param value="${ycoord}" name="ycoord" />
+					
+					<c:if test="${straal!=null}"></c:if>
+					<jsp:param value="${straal}" name="straal" />
+
 				</jsp:include>
 
 				<c:if test="${not empty kaart}">
@@ -84,7 +93,7 @@
 		<div id="aside" class="aside">
 
 			<div id="zoekenContainer" class="zoeken">
-				
+
 				<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
 			</div>
 

@@ -767,6 +767,7 @@
 							<artifactId>maven-surefire-report-plugin</artifactId>
 							<version>2.12.4</version>
 							<configuration>
+								<outputName>surefire-report</outputName>
 								<linkXRef>true</linkXRef>
 								<reportsDirectories>
 									<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
@@ -783,6 +784,18 @@
 								<linkXRef>true</linkXRef>
 								<reportsDirectories>
 									<reportsDirectory>${project.build.directory}/jasmine-reports</reportsDirectory>
+								</reportsDirectories>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-report-plugin</artifactId>
+							<version>2.12.4</version>
+							<configuration>
+								<outputName>failsafe-report</outputName>
+								<linkXRef>true</linkXRef>
+								<reportsDirectories>
+									<reportsDirectory>${project.build.directory}/failsafe-reports</reportsDirectory>
 								</reportsDirectories>
 							</configuration>
 						</plugin>
@@ -974,7 +987,7 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.2.1</version>
+			<version>4.2.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.geotools</groupId>
