@@ -48,12 +48,35 @@ var setupPage = {
 		// http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
 
 		// aanhaken van handler aan submit event van formulier
-		jQuery('#zoekFormulier').on('submit', function(e) {
-			// om normale browser submit en navigatie te voorkomen
-			e.preventDefault();
-
-			var zoekTerm = $('#adres').fieldValue()[0];
-			console.info('Zoeken naar: ', zoekTerm);
+		jQuery('#zoekFormulier').ajaxForm({
+			beforeSerialize : function($form, options) {
+				// bijwerken van verborgen velden
+				$form.find('input[name="coreonly"]').val('false');
+				$form.find('input[name="forward"]').val('false');
+				return true;
+			},
+			success : function(data, statusText, xhr, $form) {
+				console.info('adres zoeken', data, statusText, xhr, $form);
+				// TODO gevonden adres/zoekresultaat in een div-je boven zoek formulier persen
+				switch (data.length) {
+				case 0:
+					// geen
+					console.info('geen adres gevonden');
+					break;
+				case 1:
+					console.info('een adres gevonden');
+					Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
+					break;
+				default:
+					// meer dan 1
+					//TODO
+					console.info('meer dan een adres gevonden');
+				}
+			},
+			dataType : 'json',
+			data : {
+				format : 'json'
+			}
 		});
 	}
 };
