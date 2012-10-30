@@ -13,12 +13,12 @@
 	<form id="zoekFormulier" action="adres" method="get"
 		title="Zoekformulier" name="zoekFormulier">
 		<jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression>
-		<p>
+		<p id="zoekresultaten">
 			<c:out value="${gevonden}" />
 		</p>
 		<c:if test="${adreslijst!=null }">
 			<!-- for item in lijst maak url -->
-			<ul>
+			<ul class="adreslijst">
 				<c:forEach var="adres" items="${adreslijst}">
 					<li><a
 						href="index.jsp?gevonden=${adres}&amp;xcoord=${adres.getxCoord()}&amp;ycoord=${adres.getyCoord()}&amp;straal=${adres.getRadius()}&amp;coreonly=${param.coreonly}"

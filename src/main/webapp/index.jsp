@@ -39,19 +39,6 @@
 		<div id="article" class="article">
 
 			<div id="coreContainer" class="kaartContainer">
-				<c:if test="${param.coreonly!=true}">
-					<!-- deze alinea wordt verborgen tijdens laden van de pagina, 
-				tenzij er geen css / javascript ondersteuning is -->
-					<p>
-						De browser ondersteund geen Javascript of Cascading Style Sheets
-						(CSS), voor deze gevallen is er een <a href="?coreonly=true"
-							title="Open de aangepaste versie">aangepaste versie van de
-							applicatie beschikbaar</a>. U kunt <a href="#zoekFormulier"
-							title="spring naar zoekformulier">hiernaast</a> een adres
-						invullen om meteen naar een lokatie te gaan in de kaart.
-					</p>
-				</c:if>
-
 				<!-- 1 adres -->
 				<c:if test="${not empty xcoord}">
 					<c:set value="${xcoord}" var="xcoord" />
@@ -78,7 +65,8 @@
 				<jsp:include page="kaart">
 					<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
 					<!-- StringConstants.REQ_PARAM_MAPNAME -->
-					<!--<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />-->
+					<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
+
 					<jsp:param value="${xcoord}" name="xcoord" />
 					<jsp:param value="${ycoord}" name="ycoord" />
 					<jsp:param value="${straal}" name="straal" />
