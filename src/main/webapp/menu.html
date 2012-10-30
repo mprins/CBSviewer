@@ -1,45 +1,24 @@
-<!DOCTYPE HTML>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie ie6 ieFail"> <![endif]-->
-<!--[if IE 7 ]> <html lang="en" class="no-js ie ie7 ieFail"> <![endif]-->
-<!--[if IE 8 ]> <html lang="en" class="no-js ie ie8"> <![endif]-->
-<!--[if IE 9 ]> <html lang="en" class="no-js ie ie9"> <![endif]-->
-<!--[if !(IE)]><!--> <html lang="en" class="no-ie no-js"> <!--<![endif]-->
-<head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>CBS in uw buurt</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=7,IE=9"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/nav.css" media="all"/>
+		<link type="text/css" href="css/hashslider.css" rel="stylesheet" />
+		<link href="css/nav.css" rel="stylesheet" type="text/css" />
 
-<title>CBS menu test</title>
+		<script type="text/javascript">
+			function wijzig(inhoud) {document.getElementById('infobox').innerHTML = inhoud; } 
+			function wijzigTerug() {document.getElementById('infobox').innerHTML = 'Beweeg met de muis over een item voor meer informatie. </br></br>Klik op de hoofdgroep om de standaardlaag te laden. Deze is aangegeven met een sterretje (<font color=red>*</font>)'; } 
+		</script>
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width">
-
-<script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="js/hashslider.js"></script>
-<script type="text/javascript">
-	function wijzig(inhoud) {document.getElementById('infobox').innerHTML = inhoud; } 
-	function wijzigTerug() {document.getElementById('infobox').innerHTML = 'Beweeg met de muis over een item voor meer informatie. </br></br>Klik op de hoofdgroep om de standaardlaag te laden. Deze is aangegeven met een sterretje (<font color=red>*</font>)'; } 
-</script>
-
-<link type="text/css" href="css/hashslider.css" rel="stylesheet" />
-<link href="css/styles.css.x.min.css" type="text/css" rel="stylesheet" />
-<link href="css/nav.css" rel="stylesheet" type="text/css" />
-
-<div id="slider">
-	<ul>
-		<li>De eerste lijst met lagen</li>
-		<li>De meer specialistische lagen</li>
-	</ul>
-</div>
-<div id="left">Ga naar de vorige</div>
-<div id="right">Ga naar de volgende</div>
-
-<ul id="numbers">
-	<li></li>
-</ul>
-
-
-<div id="pageHeader" class="clearfix">
-	<div class="pageWrapper">
-		<div class="dropDownMenu clearfix">
+	</head>
+    <body> 
+		<div class="dropDownMenu clearfix" style="position:absolute;left:5px;top:18px;">
 			<a id="skipNavigation"></a>
 			<ul class="siteNavigation">
 				<li class="sectionDepartment">
@@ -605,20 +584,20 @@
 								<div class="contentasset">
 									<div class="megaMenu megaFourColumns">
 										<ul>	
-											<img src="img/bodemgebruik.png">
+											<img src="img/template/bodemgebruik.png">
 											<li class="menuTitle">Bodemgebruik</li>
 											<li><a href="#">2006</a></li>
 											<li><a href="#">2008</a></li>
 										</ul>
 										<ul>	
-											<img src="img/bevolkingskernen.png">
+											<img src="img/template/bevolkingskernen.png">
 											<li class="menuTitle">Bevolkingskernen</li>
 											<li><a href="#">2001</a></li>
 											<li><a href="#">2008</a></li>
 											
 										</ul>
 										<ul>
-											<img src="img/vierkanten.png">
+											<img src="img/template/vierkanten.png">
 											<li class="menuTitle">Vierkanten 100m</li>
 											<li><a href="#">2000</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">2007</a></li>
 											<li><a href="#">2001</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">2008</a></li>
@@ -639,7 +618,7 @@
 											
 										</ul>
 										<ul>
-											<img src="img/wijkenbuurten.png">
+											<img src="img/template/wijkenbuurten.png">
 											<li class="menuTitle">Buurten</li>
 											<li><a href="#">2009</a></li>
 											<li><a href="#">2010</a></li>
@@ -709,7 +688,72 @@
 					</div>
 				</li>
 			</ul>
-		</div>
-	</div>
-</div>
+		</div>		
+		<div id="page">
+			<div class="pageContent">
+				<div class="pageheader">
+                    <div id="_headerPanel">
+						<div class="logo">
+							<a href="#">
+								<img src="./img/template/hdr_logo.gif" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/>
+							</a>
+						</div>
+						<div class="utilBlock">
+							<a href="#" class="active">Home</a>
+							<a href="#">Over CBS in uw buurt</a>
+							<a href="#">Hoe werkt dit?</a>
+							<a href="#">Veel gestelde vragen</a>
+							<a href="#">Contact</a>
+						</div>
+					</div>
+                </div>
+				<noscript>
+					<p style="line-height:30px;width:100%;text-align:center;color:white;font-size:12px">Deze kaart vereist JavaScript. Ga naar <a href="http://www.activatejavascript.org/" target="_blank">activatejavascript.org</a> voor meer informatie hoe u JavaScript kunt inschakelen. De data van het CBS is ook beschikbaar in <a href="http://statline.cbs.nl/">StatLine</a> en op de <a href="http://www.cbs.nl">CBS website</a>.</p>
+ 						<style type="text/css">
+							.mainContent { display:none; }
+						</style>
+				</noscript>
+                <div class="mainContent">
+					<div class="areaSelector">
+						<div class="step1 smartStep">
+							<label><span>1. Meer weten over uw omgeving?</span></label>
+                            <div id="_gemeenteSelectionPanel">
+								<div id="footerPane">
+									<form action="javascript:locate()">								
+										<input type="text" id="address" size="60" value="" style="font-size:15px"/>
+										<input type='submit' onclick="locate()" value="Zoek" style="overflow:hidden;display:none" />
+									</form>
+								</div>
+							</div> 
+                        </div>
+                    </div>
+
+					<div id="mainWindow" style="width:100%; height:100%;padding:2px">
+						<div id="map" style="position:relative;width:100%; height:100%; min-height:700px; border:1px solid #000;background-color:white;">
+							
+						</div> 
+                    </div>
+                    <div class="teaserPanel">
+						<div class="teaserContent">
+							<a id="_teasersControl__linkOpMaatHyperLink" class="opMaat" title="Uw Gemeente Op Maat" style="cursor: pointer; ">Uw Gemeente Op Maat<span>Publicaties &amp; Documenten</span></a>
+							<a href="#" title="CBS In uw buurt nieuws" class="rss">CBS In uw buurt nieuws<span>De laatste ontwikkelingen</span></a>
+							<a href="#" title="CBS Databank - Statline" class="databank">CBS Databank - Statline<span>Professionele data nodig?</span></a>
+							<a href="#" title="Gebruikersreacties gezocht" class="gezocht"><strong>Gezocht:</strong> Gebruikersreacties<span>Heeft u tips of suggesties?</span></a>
+						</div>
+                    </div>
+                 </div>
+                <div class="footer">
+                    <div id="_footerPanel">
+						Copyright &copy; 2012 <a href="#">Centraal Bureau voor de Statistiek, Den Haag / Heerlen.</a>
+						<a href="#">Doorsturen</a>
+						<a href="#">Disclaimer</a>
+						<a href="#">Privacyverklaring</a>
+						<a href="#">Sitemap</a>
+						<a href="#" class="last">RSS</a> 
+					</div>
+                </div>
+            </div>
+        </div>
+		
+	</body>
 </html>

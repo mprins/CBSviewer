@@ -1,3 +1,315 @@
+/** CBS stylesheet **/
+/** reset elements first **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body 
+{
+	color: black;
+	background: white;
+	
+}
+ #rightPane 
+ {
+	margin: 5px;
+	padding:2px;
+	background-color:white;
+	color:#3f3f3f;
+	border: solid 2px #224a54;
+	width:20%;
+}
+	  
+fieldset 
+{ 
+	border: 1px solid #353129;
+	color:#353129;
+}
+      
+#map
+{
+	padding:0px;
+	border:solid 2px #687D77;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#resultsdiv 
+{
+	background-color:white;
+	border:none;
+	overflow:none;
+	margin:5px 5px;
+	height:300px;
+}
+
+ol, ul 
+{
+	list-style: none;
+}
+
+table 
+{
+	border-collapse: separate;
+	bor
+	der-spacing: 0;
+}
+caption, th, td 
+{
+	text-align: left;
+	font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+{
+	content: "";
+}
+
+blockquote, q 
+{
+	quotes: "" "";
+}
+
+body
+{
+	background-image: url(../img/template/bg_body.gif);
+	background-repeat: repeat-x;
+	background-color: #2d598c;
+	font-size: 11px;
+	font-family: Arial, Helvetica, verdana, sans-serif;
+}
+
+input 
+{
+	font-family: Arial, Helvetica, verdana, sans-serif;
+	font-size: 16px;
+}
+
+body #page
+{
+	width: 100%;
+	height:100%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pageContent .pageheader
+{
+	height: 76px;
+	margin-left: 5px;
+}
+
+.pageContent .pageheader .logo
+{
+	float: left;
+	padding-top: 9px;
+}
+.pageContent .pageheader .utilBlock
+{
+	margin-top: 14px;
+	float: right;
+}
+
+.pageContent .pageheader .utilBlock a
+{
+	color: #7e7e7e;
+	border-right: 1px Solid #c7c7c7;
+	padding-right: 9px;
+	line-height: 10px;
+	margin-right: 9px;
+	text-decoration: none;
+}
+
+.pageContent .pageheader .utilBlock a.active
+{
+	font-weight: bold;
+	color: #6ba1d4;
+}
+
+.pageContent .pageheader .utilBlock a:hover
+{
+	color: #d46882;
+	text-decoration: underline;
+}
+
+.pageContent .mainContent .areaSelector
+{
+	margin-top: 11px;
+	height: 43px;
+	margin-left: 220px;
+}
+
+.pageContent .mainContent .areaSelector .smartStep
+{
+	float: left;
+	width: 700px;
+	height:36px;
+	position: relative;
+	z-index: 1;
+}
+
+.pageContent .mainContent .areaSelector .smartStep input
+{
+	margin-left: 1px;
+	width: 300px !important;
+	background-color: #FFFFFF;
+	font-size: 14px;
+	padding-bottom: 3px;
+	padding-bottom: 1px;
+	color: #000000;
+	margin-right: 0px;
+	padding-left: 10px;
+	line-height: 12px;
+	display: block;
+	height: 15px;
+	position: relative;
+	overflow: hidden;
+	border: 0px;
+	border-top: 1px Solid #294e77;
+	border-bottom: 1px Solid #294e77;
+}
+
+.pageContent .mainContent .areaSelector label
+{
+	background-repeat: no-repeat;
+	display: block;
+	margin-bottom: 3px;
+}
+ 
+.pageContent .mainContent .areaSelector label span
+{
+	visibility: hidden;
+}
+
+.pageContent .mainContent .areaSelector .step1 label
+{
+	margin-left: 1px;
+	background-image: url(../img/template/hdr_areaSelector_step1_labe.gif);
+}
+
+.mainContent .teaserPanel
+{
+	clear: both;
+	width:100%;
+	height: 72px;
+	padding-left: 15px;
+	background-position: left top;
+	background-color: white;
+}
+
+.mainContent .teaserContent
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:960px;
+	height: 72px;
+	padding-left: 15px;
+	background-position: left top;
+	background-color: white;
+}
+
+.mainContent .teaserPanel a
+{
+	display: block;
+	float: left;
+	padding-left: 55px;
+	padding-top: 13px;
+	margin-right: 5px;
+	margin-top: 8px;
+	
+	background-repeat: no-repeat;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	width: 179px;
+	height: 40px;
+	text-decoration: none;
+}
+
+.mainContent .teaserPanel a span
+{
+	display: block;
+	margin-top: 2px;
+	font-size: 11px;
+	color: #a5a5a5;
+}
+
+.mainContent .teaserPanel a strong
+{
+	color: #3d81a1;
+}
+.mainContent .teaserPanel a.opMaat
+{
+	background-image: url(../img/template/btn_teaserPanel_opMaat.gif);
+}
+
+.mainContent .teaserPanel a.rss
+{
+	background-image: url(../img/template/btn_teaserPanel_rss.gif);
+}
+
+.mainContent .teaserPanel a.databank
+{
+	background-image: url(../img/template/btn_teaserPanel_databank.gif);
+}
+
+.mainContent .teaserPanel a.gezocht
+{
+	background-image: url(../img/template/btn_teaserPanel_gezocht.gif);
+}
+
+.footer 
+{
+	background-color: #426A98;
+	background-repeat: no-repeat;
+	height: 29px;
+	line-height: 28px;
+	color: #b3c3d6;
+	text-align: center;
+	margin-top: 3px;
+}
+
+.footer a
+{
+	color: #b3c3d6;
+	text-decoration: none;
+	line-height: 12px;
+	background-image: url(../img/template/bg_footer_a.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 15px;
+	padding-left: 13px;
+}
+
+.footer a:hover
+{
+	text-decoration: underline;
+}
+
+.footer a.last
+{
+	background-image: none;
+	padding-right: 0px;
+}
+
 
 
 * {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; }
@@ -16,7 +328,7 @@ a.tooltip:hover span{display:inline; position:absolute; border:1px solid #cccccc
   background-position: center 5px;
   color: #000000;
   background-color: #eeeeee;
-  background-image: url('../img/info.png');
+  background-image: url('../img/template/info.png');
 }
 
 /* Lets reset all margins, paddings and list styles, shall we? */
@@ -165,6 +477,7 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 	text-decoration: none;
 	color: #333333;
 
+	font-size:12px;
 	font-weight: bold;
 	white-space: nowrap;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.33);
@@ -292,7 +605,7 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 		width: 6px;
 		height: 9px;
 		display: inline-block;
-		background:url(../img/arrows_sprite_8.png) no-repeat -30px 0;
+		background:url(../img/template/arrows_sprite_8.png) no-repeat -30px 0;
 }
 .navCategories>li:hover>a:after {/*  IE7 fix */
 	background-position: -16px 0;
@@ -408,7 +721,7 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 }
 
 .sectionPromoContent{ display:block; width:177px; margin:10px 0 0px; }
-.megaMenu .blackArrow  { background-color: transparent; background-image: url("../img/bulletArrowBlack.gif"); background-repeat: no-repeat; background-attachment: scroll; background-position: 1px 3px; background-clip: border-box; background-origin: padding-box; background-size: auto auto; padding-left: 10px;}
+.megaMenu .blackArrow  { background-color: transparent; background-image: url("../img/template/bulletArrowBlack.gif"); background-repeat: no-repeat; background-attachment: scroll; background-position: 1px 3px; background-clip: border-box; background-origin: padding-box; background-size: auto auto; padding-left: 10px;}
 .sectionPromoContent p{ margin-top:10px; }
 
 .siteNavigation .sectionPromo .forwardButtonWhite {
