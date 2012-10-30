@@ -418,8 +418,7 @@
 		<profile>
 			<id>jenkins</id>
 			<properties>
-				<github.password />
-				<github.site.dryRun>false</github.site.dryRun>
+				<github.global.server>github</github.global.server>
 			</properties>
 		</profile>
 		<profile>

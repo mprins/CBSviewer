@@ -19,11 +19,21 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class AbstractBaseServlet extends HttpServlet {
 
-    /** sleutel voor proxy server. {@value} */
-    public static final String PROXY_HOST = "proxy_host";
+    /**
+	 * sleutel voor proxy server. {@value}
+	 * 
+	 * @deprecated refactor naar omgevings var {@code http.proxyHost}
+	 */
+	@Deprecated
+	public static final String PROXY_HOST = "proxy_host";
 
-    /** sleutel voor proxy server poort. {@value} */
-    public static final String PROXY_PORT = "proxy_port";
+	/**
+	 * sleutel voor proxy server poort. {@value}
+	 * 
+	 * @deprecated refactor naar omgevings var {@code http.proxyPort}
+	 */
+	@Deprecated
+	public static final String PROXY_PORT = "proxy_port";
 
     /** sleutel voor user id. {@value} */
     public static final String USER_ID = "user_id";
