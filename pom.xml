@@ -412,6 +412,7 @@
 		<profile>
 			<id>jenkins</id>
 			<properties>
+				<github.global.server>github</github.global.server>
 			</properties>
 		</profile>
 		<profile>
