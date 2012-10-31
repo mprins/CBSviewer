@@ -1,12 +1,11 @@
 package nl.mineleni.cbsviewer.servlet;
 
-import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.PROXY_HOST;
-import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.PROXY_PORT;
 import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.USER_ID;
 import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.USER_PASSWORD;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.fail;
+import static org.junit.Assume.assumeNoException;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -65,26 +64,27 @@ public class AbstractBaseServletTest {
 		// set up mock config
 		mockery.checking(new Expectations() {
 			{
-				one(servletConfig).getInitParameter(PROXY_HOST);
-				will(returnValue("wpad.agro.nl"));
-				one(servletConfig).getInitParameter(PROXY_PORT);
-				will(returnValue("8080"));
 				one(servletConfig).getInitParameter(USER_ID);
 				will(returnValue("userID"));
 				one(servletConfig).getInitParameter(USER_PASSWORD);
 				will(returnValue("passID"));
 			}
 		});
+		System.setProperty("http.proxyPort", "8080");
+		System.setProperty("http.proxyHost", "wpad.agro.nl");
 		try {
 			pxyServlet.init(servletConfig);
+			assertEquals("wpad.agro.nl", pxyServlet.proxyHost);
+			assertEquals(8080, pxyServlet.proxyPort);
+			assertEquals("userID", pxyServlet.userID);
+			assertEquals("passID", pxyServlet.passID);
 		} catch (final ServletException e) {
 			fail("Servlet Exception voor init() in test setup.(testInitServletConfig) "
 					+ e.getLocalizedMessage());
+		} catch (SecurityException s) {
+			assumeNoException(s);
 		}
-		assertEquals("wpad.agro.nl", pxyServlet.proxyHost);
-		assertEquals(8080, pxyServlet.proxyPort);
-		assertEquals("userID", pxyServlet.userID);
-		assertEquals("passID", pxyServlet.passID);
+
 	}
 
 	/**
@@ -98,25 +98,26 @@ public class AbstractBaseServletTest {
 	public void testInitServletConfigNull() {
 		mockery.checking(new Expectations() {
 			{
-				one(servletConfig).getInitParameter(PROXY_HOST);
-				will(returnValue(null));
-				one(servletConfig).getInitParameter(PROXY_PORT);
-				will(returnValue(null));
 				one(servletConfig).getInitParameter(USER_ID);
 				will(returnValue(null));
 				one(servletConfig).getInitParameter(USER_PASSWORD);
 				will(returnValue(null));
 			}
 		});
+		System.clearProperty("http.proxyPort");
+		System.clearProperty("http.proxyHost");
 		try {
 			pxyServlet.init(servletConfig);
+			assertNull(pxyServlet.proxyHost);
+			assertEquals(-1, pxyServlet.proxyPort);
+			assertNull(pxyServlet.userID);
+			assertNull(pxyServlet.passID);
 		} catch (final ServletException e) {
 			fail("Servlet Exception voor init() in test setup. (testInitServletConfigNull)"
 					+ e.getLocalizedMessage());
+		} catch (SecurityException s) {
+			assumeNoException(s);
 		}
-		assertNull(pxyServlet.proxyHost);
-		assertEquals(-1, pxyServlet.proxyPort);
-		assertNull(pxyServlet.userID);
-		assertNull(pxyServlet.passID);
+
 	}
 }

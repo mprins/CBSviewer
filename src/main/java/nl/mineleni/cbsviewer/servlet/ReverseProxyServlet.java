@@ -47,16 +47,6 @@ import org.slf4j.LoggerFactory;
  *    &lt;param-value&gt;false&lt;/param-value&gt;
  *  &lt;description&gt;optie om text/xml mime type voor response te forceren, optionele param&lt;/description&gt;
  *  &lt;/init-param&gt;
- *  &lt;init-param&gt;
- *    &lt;param-name&gt;proxy_host&lt;/param-name&gt;
- *    &lt;param-value&gt;cacheflow.nic.agro.nl&lt;/param-value&gt;
- *    &lt;description&gt;hostnaam of ip adres van de proxy die deze servlet gebruikt om het internet op te gaan, optionele param&lt;/description&gt;
- *  &lt;/init-param&gt;
- *  &lt;init-param&gt;
- *    &lt;param-name&gt;proxy_port&lt;/param-name&gt;
- *    &lt;param-value&gt;8080&lt;/param-value&gt;
- *    &lt;description&gt;poortnummer van de proxy die deze servlet gebruikt om het internet op te gaan, optionele param&lt;/description&gt;
- *  &lt;/init-param&gt;
  *    &lt;load-on-startup&gt;2&lt;/load-on-startup&gt;
  *  &lt;/servlet&gt;
  * </pre>
@@ -163,7 +153,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 				} else {
 					LOGGER.debug("GET param:" + serverUrl);
 					final HttpClient client = new DefaultHttpClient();
-					if (null != this.proxyHost) {
+					if ((null != this.proxyHost) && (this.proxyPort > 0)) {
 						client.getParams().setParameter(
 								ConnRoutePNames.DEFAULT_PROXY,
 								new HttpHost(this.proxyHost, this.proxyPort,

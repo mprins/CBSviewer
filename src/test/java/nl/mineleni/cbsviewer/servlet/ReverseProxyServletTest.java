@@ -2,8 +2,6 @@ package nl.mineleni.cbsviewer.servlet;
 
 import static javax.servlet.http.HttpServletResponse.SC_BAD_GATEWAY;
 import static javax.servlet.http.HttpServletResponse.SC_FORBIDDEN;
-import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.PROXY_HOST;
-import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.PROXY_PORT;
 import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.USER_ID;
 import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.USER_PASSWORD;
 import static nl.mineleni.cbsviewer.servlet.ReverseProxyServlet.ALLOWED_HOSTS;
@@ -103,12 +101,6 @@ public class ReverseProxyServletTest {
 		this.mockery.checking(new Expectations() {
 			{
 				// zitten in de superklasse
-				this.allowing(ReverseProxyServletTest.this.servletConfig)
-						.getInitParameter(PROXY_HOST);
-				this.will(returnValue("wpad.agro.nl"));
-				this.allowing(ReverseProxyServletTest.this.servletConfig)
-						.getInitParameter(PROXY_PORT);
-				this.will(returnValue("8080"));
 				this.allowing(ReverseProxyServletTest.this.servletConfig)
 						.getInitParameter(USER_ID);
 				this.will(returnValue("userID"));
