@@ -21,7 +21,7 @@
 			<ul class="adreslijst">
 				<c:forEach var="adres" items="${adreslijst}">
 					<li><a
-						href="index.jsp?gevonden=${adres}&amp;xcoord=${adres.getxCoord()}&amp;ycoord=${adres.getyCoord()}&amp;straal=${adres.getRadius()}&amp;coreonly=${param.coreonly}"
+						href="index.jsp?gevonden=${adres}&amp;xcoord=${adres.xCoord}&amp;ycoord=${adres.yCoord}&amp;straal=${adres.radius}&amp;coreonly=${param.coreonly}"
 						title="zoom in op ${adres}">${adres}</a></li>
 				</c:forEach>
 			</ul>
