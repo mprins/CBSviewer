@@ -11,7 +11,7 @@
 
 	<!-- zoek formulier voor de versie zonder javascript en/of css -->
 	<form id="zoekFormulier" action="adres" method="get"
-		title="Zoekformulier" name="zoekFormulier">
+		title="Zoekformulier">
 		<jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression>
 		<p id="zoekresultaten">
 			<c:out value="${gevonden}" />

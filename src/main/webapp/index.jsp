@@ -19,9 +19,7 @@
 
 <c:if test="${param.coreonly!=true}">
 	<script type="text/javascript" charset="utf-8">
-	<!--//--><![CDATA[//><!--
 		document.documentElement.className += ' js';
-		//--><!]]>
 	</script>
 </c:if>
 
