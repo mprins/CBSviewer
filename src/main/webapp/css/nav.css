@@ -4,7 +4,7 @@
 	border: 0px solid #BBB; 
 	padding: 0px; 
 			
-	overflow: auto;
+	
 	} 
 
 .ui-layout-resizer { /* all 'resizer-bars' */ 
@@ -102,7 +102,7 @@ body
 	padding: 0px;
 }
 
-.areaSelector .smartStep
+ .smartStep
 {
 	padding-top:60px;
 	margin: 5px;
@@ -113,14 +113,14 @@ body
 	z-index: 1;
 }
 
-.areaSelector .secondstep
+ .secondstep
 {
 	padding-top:200px;
 	margin: 5px;
 }
 
 
-.areaSelector .smartStep input
+ .smartStep input
 {
 	margin-left: 1px;
 	width: 100% !important;
@@ -141,19 +141,19 @@ body
 	border-bottom: 1px Solid #294e77;
 }
 
-.areaSelector .meerweten
+.meerweten
 {
 	background-repeat: no-repeat;
 	display: block;
 	margin-bottom: 3px;
 }
  
-.areaSelector .meerweten span
+.meerweten span
 {
 	visibility: hidden;
 }
 
-.areaSelector .step1 .meerweten
+ .meerweten
 {
 	background-image: url(../img/template/hdr_areaSelector_step1_labe.gif);
 }
@@ -245,9 +245,6 @@ body
 	color: #b3c3d6;
 	text-decoration: none;
 	line-height: 12px;
-	background-image: url(../img/template/bg_footer_a.gif);
-	background-repeat: no-repeat;
-	background-position: right center;
 	padding-right: 15px;
 	padding-left: 13px;
 }
@@ -275,7 +272,7 @@ body
   background-position: center 5px;
   color: #000000;
   background-color: #eeeeee;
-  background-image: url('../img/template/info.png');
+  background-image: url('../img/template/explanation.png');
 }
 
 .dropDownMenu
