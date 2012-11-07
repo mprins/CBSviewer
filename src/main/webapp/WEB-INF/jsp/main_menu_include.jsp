@@ -11,7 +11,7 @@
 	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
 
 	<!-- menu dat alleen css gebruikt, de onderdelen die via javascript werken nog een coreonly voor plaatsen, tevels Excel module afronden en localiseren -->
-	<div class="dropDownMenu clearfix" style="position:absolute;left:5px;top:18px;">
+	<div class="dropDownMenu clearfix">
 	<a id="skipNavigation"></a>
 	<ul class="siteNavigation">
 		<li class="sectionDepartment">
