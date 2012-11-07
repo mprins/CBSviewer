@@ -2,10 +2,14 @@
 .ui-layout-pane { /* all 'panes' */ 
 	background: #FFF; 
 	border: 0px solid #BBB; 
-	padding: 0px; 
-			
-	
+	padding: 0px; 	
 	} 
+	
+.ui-layout-west
+{
+	padding:5px;
+	background-color: #2d598c;
+}
 
 .ui-layout-resizer { /* all 'resizer-bars' */ 
 	background: #DDD; 
