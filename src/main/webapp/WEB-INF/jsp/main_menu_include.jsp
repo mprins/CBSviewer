@@ -12,7 +12,7 @@
 
 	<!-- menu dat alleen css gebruikt, de onderdelen die via javascript werken nog een coreonly voor plaatsen, tevels Excel module afronden en localiseren -->
 	<div class="dropDownMenu clearfix">
-	<a id="skipNavigation"></a>
+	<!--a id="skipNavigation"></a-->
 	<ul class="siteNavigation">
 		<li class="sectionDepartment">
 			<a class="hasMenu" href="#">Selecteer een CBS kaartlaag</a>
