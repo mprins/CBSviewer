@@ -13,9 +13,14 @@
 	let op dat dit bestand vanuit de root van de webapplicatie wordt ingevoegd  
 	 -->
 
+	 <!-- jquery-simple can be removed later, use latest jquery. The jquery layout also has to work without javascript enabled. -->
+	 
 	<jsp:text>
 		<![CDATA[<script type="text/javascript" src="lib/OpenLayers.js"></script>
 <script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="lib/jquery-simple.js"></script>
+<script type="text/javascript" src="lib/jquery.ui.all.js"></script>
+<script type="text/javascript" src="lib/jquery.layout.js"></script>		
 <script type="text/javascript" src="js/cbsviewer.js"></script>
 <script type="text/javascript" id="language" charset="utf-8">]]>
 	</jsp:text>
