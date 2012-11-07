@@ -1,6 +1,8 @@
 /**
  * @fileoverview event handlers en elementen voor de pagina.
  */
+var outerLayout; 
+ 
 jQuery(document).ready(function() {
 	// create map
 	Viewer.init(config);
@@ -14,8 +16,6 @@ jQuery(document).ready(function() {
 	});
 	// console.debug('opzoeken van ' + _id + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
-	
-	var outerLayout;
 
 	outerLayout = $('body').layout({
 		west__showOverflowOnHover: true,

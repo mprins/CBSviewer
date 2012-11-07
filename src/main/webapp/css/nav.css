@@ -115,7 +115,7 @@ body
 
 .areaSelector .secondstep
 {
-	padding-top:110px;
+	padding-top:200px;
 	margin: 5px;
 }
 
@@ -141,19 +141,19 @@ body
 	border-bottom: 1px Solid #294e77;
 }
 
-.areaSelector label
+.areaSelector .meerweten
 {
 	background-repeat: no-repeat;
 	display: block;
 	margin-bottom: 3px;
 }
  
-.areaSelector label span
+.areaSelector .meerweten span
 {
 	visibility: hidden;
 }
 
-.areaSelector .step1 label
+.areaSelector .step1 .meerweten
 {
 	background-image: url(../img/template/hdr_areaSelector_step1_labe.gif);
 }

@@ -48,7 +48,7 @@
 		<div class="ui-layout-west">
 			<div class="areaSelector">
 				<div class="step1 smartStep">
-					<label><span>1. Meer weten over uw omgeving?</span></label>
+					<label class="meerweten"><span>1. Meer weten over uw omgeving?</span></label>
 					<div id="zoekenContainer" class="zoeken">
 						<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
 					</div>
