@@ -33,6 +33,12 @@ config.map = {
 };
 
 /**
+* Tooltip inside menu
+*/
+function wijzig(inhoud) {document.getElementById('infobox').innerHTML = inhoud; } 
+function wijzigTerug() {document.getElementById('infobox').innerHTML = 'Beweeg met de muis over een item voor meer informatie. </br></br>Klik op de hoofdgroep om de standaardlaag te laden. Deze is aangegeven met een sterretje (<font color=red>*</font>)'; }  
+
+/**
  * OpenLayers proxy url override.
  * 
  * @override
@@ -48,6 +54,3 @@ jQuery.extend(true, OpenLayers.Projection.defaults, {
 		maxExtent : [ -285401.92, 22598.08, 595401.9199999999, 903401.9199999999 ]
 	}
 });
-/*function wijzig(inhoud) {document.getElementById('infobox').innerHTML = inhoud; } 
-function wijzigTerug() {document.getElementById('infobox').innerHTML = 'Beweeg met de muis over een item voor meer informatie. </br></br>Klik op de hoofdgroep om de standaardlaag te laden. Deze is aangegeven met een sterretje (<font color=red>*</font>)'; }  
-*/
