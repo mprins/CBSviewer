@@ -40,7 +40,6 @@
 		media="print" />
 	
 	<!-- needed for the menu and cbsinuwbuurt template -->
-	<link rel="stylesheet" href="css/hashslider.css" type="text/css"/>
 	<link rel="stylesheet" href="css/nav.css" type="text/css" />	
 		
 	<!--[if lte IE 6]>
