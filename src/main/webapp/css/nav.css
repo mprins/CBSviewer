@@ -1,3 +1,20 @@
+
+.ui-layout-pane { /* all 'panes' */ 
+	background: #FFF; 
+	border: 0px solid #BBB; 
+	padding: 0px; 
+			
+	overflow: auto;
+	} 
+
+.ui-layout-resizer { /* all 'resizer-bars' */ 
+	background: #DDD; 
+} 
+
+.ui-layout-toggler { /* all 'toggler-buttons' */ 
+	background: #AAA; 
+} 
+
 /** CBS stylesheet **/
 /** reset elements first **/
 html, body, div, span, applet, object, iframe,
@@ -20,73 +37,6 @@ table, caption, tbody, tfoot, thead, tr, th, td
 	vertical-align: baseline;
 }
 
-body 
-{
-	color: black;
-	background: white;
-	
-}
- #rightPane 
- {
-	margin: 5px;
-	padding:2px;
-	background-color:white;
-	color:#3f3f3f;
-	border: solid 2px #224a54;
-	width:20%;
-}
-	  
-fieldset 
-{ 
-	border: 1px solid #353129;
-	color:#353129;
-}
-      
-#map
-{
-	padding:0px;
-	border:solid 2px #687D77;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-}
-
-#resultsdiv 
-{
-	background-color:white;
-	border:none;
-	overflow:none;
-	margin:5px 5px;
-	height:300px;
-}
-
-ol, ul 
-{
-	list-style: none;
-}
-
-table 
-{
-	border-collapse: separate;
-	bor
-	der-spacing: 0;
-}
-caption, th, td 
-{
-	text-align: left;
-	font-weight: normal;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after 
-{
-	content: "";
-}
-
-blockquote, q 
-{
-	quotes: "" "";
-}
-
 body
 {
 	background-image: url(../img/template/bg_body.gif);
@@ -94,41 +44,34 @@ body
 	background-color: #2d598c;
 	font-size: 11px;
 	font-family: Arial, Helvetica, verdana, sans-serif;
-}
-
-input 
-{
-	font-family: Arial, Helvetica, verdana, sans-serif;
-	font-size: 16px;
-}
-
-body #page
-{
+	
 	width: 100%;
 	height:100%;
 	text-align: left;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto;	
 }
 
-.pageContent .pageheader
+.pageheader
 {
 	height: 76px;
 	margin-left: 5px;
 }
 
-.pageContent .pageheader .logo
+.pageheader .logo
 {
 	float: left;
 	padding-top: 9px;
+	padding-left: 3px;
 }
-.pageContent .pageheader .utilBlock
+
+.utilBlock
 {
 	margin-top: 14px;
 	float: right;
 }
 
-.pageContent .pageheader .utilBlock a
+.utilBlock a
 {
 	color: #7e7e7e;
 	border-right: 1px Solid #c7c7c7;
@@ -138,38 +81,49 @@ body #page
 	text-decoration: none;
 }
 
-.pageContent .pageheader .utilBlock a.active
+.utilBlock a.active
 {
 	font-weight: bold;
 	color: #6ba1d4;
 }
 
-.pageContent .pageheader .utilBlock a:hover
+.utilBlock a:hover
 {
 	color: #d46882;
 	text-decoration: underline;
 }
 
-.pageContent .mainContent .areaSelector
+.areaSelector
 {
-	margin-top: 11px;
-	height: 43px;
-	margin-left: 220px;
+	background-color: #2d598c;
+	width:100%;
+	height:100%;
+	margin: 3px;
+	padding: 0px;
 }
 
-.pageContent .mainContent .areaSelector .smartStep
+.areaSelector .smartStep
 {
+	padding-top:60px;
+	margin: 5px;
 	float: left;
-	width: 700px;
+	width: 80%;
 	height:36px;
 	position: relative;
 	z-index: 1;
 }
 
-.pageContent .mainContent .areaSelector .smartStep input
+.areaSelector .secondstep
+{
+	padding-top:110px;
+	margin: 5px;
+}
+
+
+.areaSelector .smartStep input
 {
 	margin-left: 1px;
-	width: 300px !important;
+	width: 100% !important;
 	background-color: #FFFFFF;
 	font-size: 14px;
 	padding-bottom: 3px;
@@ -187,25 +141,24 @@ body #page
 	border-bottom: 1px Solid #294e77;
 }
 
-.pageContent .mainContent .areaSelector label
+.areaSelector label
 {
 	background-repeat: no-repeat;
 	display: block;
 	margin-bottom: 3px;
 }
  
-.pageContent .mainContent .areaSelector label span
+.areaSelector label span
 {
 	visibility: hidden;
 }
 
-.pageContent .mainContent .areaSelector .step1 label
+.areaSelector .step1 label
 {
-	margin-left: 1px;
 	background-image: url(../img/template/hdr_areaSelector_step1_labe.gif);
 }
 
-.mainContent .teaserPanel
+.teaserPanel
 {
 	clear: both;
 	width:100%;
@@ -215,7 +168,7 @@ body #page
 	background-color: white;
 }
 
-.mainContent .teaserContent
+.teaserContent
 {
 	margin-left:auto;
 	margin-right:auto;
@@ -226,7 +179,7 @@ body #page
 	background-color: white;
 }
 
-.mainContent .teaserPanel a
+.teaserPanel a
 {
 	display: block;
 	float: left;
@@ -244,7 +197,7 @@ body #page
 	text-decoration: none;
 }
 
-.mainContent .teaserPanel a span
+.teaserPanel a span
 {
 	display: block;
 	margin-top: 2px;
@@ -252,26 +205,26 @@ body #page
 	color: #a5a5a5;
 }
 
-.mainContent .teaserPanel a strong
+.teaserPanel a strong
 {
 	color: #3d81a1;
 }
-.mainContent .teaserPanel a.opMaat
+.teaserPanel a.opMaat
 {
 	background-image: url(../img/template/btn_teaserPanel_opMaat.gif);
 }
 
-.mainContent .teaserPanel a.rss
+.teaserPanel a.rss
 {
 	background-image: url(../img/template/btn_teaserPanel_rss.gif);
 }
 
-.mainContent .teaserPanel a.databank
+.teaserPanel a.databank
 {
 	background-image: url(../img/template/btn_teaserPanel_databank.gif);
 }
 
-.mainContent .teaserPanel a.gezocht
+.teaserPanel a.gezocht
 {
 	background-image: url(../img/template/btn_teaserPanel_gezocht.gif);
 }
@@ -311,12 +264,6 @@ body #page
 }
 
 
-
-* {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; }
-a:hover {background:#ffffff; text-decoration:none;} /*BG color is a must for IE6*/
-a.tooltip span {display:none; padding:2px 3px; margin-left:8px; width:auto;}
-a.tooltip:hover span{display:inline; position:absolute; border:1px solid #cccccc; background:#ffffff; color:#6c6c6c;}
-
 .info {
   border: 0px solid;
   margin: 10px 0px;
@@ -329,6 +276,11 @@ a.tooltip:hover span{display:inline; position:absolute; border:1px solid #cccccc
   color: #000000;
   background-color: #eeeeee;
   background-image: url('../img/template/info.png');
+}
+
+.dropDownMenu
+{
+	position:absolute;left:5px;top:18px;
 }
 
 /* Lets reset all margins, paddings and list styles, shall we? */
