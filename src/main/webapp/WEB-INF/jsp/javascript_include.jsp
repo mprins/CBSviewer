@@ -18,6 +18,7 @@
 	<jsp:text>
 		<![CDATA[<script type="text/javascript" src="lib/OpenLayers.js"></script>
 <script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="lib/jquery.form.js"></script>
 <script type="text/javascript" src="lib/jquery-simple.js"></script>
 <script type="text/javascript" src="lib/jquery.ui.all.js"></script>
 <script type="text/javascript" src="lib/jquery.layout.js"></script>		
@@ -32,5 +33,6 @@
 		<![CDATA[</script>
 <script type="text/javascript" src="js/config.js"></script>
 <script type="text/javascript" src="js/script.js"></script>]]>
-	</jsp:text>
+	</jsp:text>	 
+	
 </jsp:root>

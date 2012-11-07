@@ -49,17 +49,15 @@
 			<div class="areaSelector">
 				<div class="step1 smartStep">
 					<label><span>1. Meer weten over uw omgeving?</span></label>
-					<form action="javascript:locate()">								
-						<input type="text" id="address" size="20" value="" style="font-size:15px"/>
-						<input type='submit' onclick="locate()" value="Zoek" style="overflow:hidden;display:none" />
-					</form>
-					<!--expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression-->
+					<div id="zoekenContainer" class="zoeken">
+						<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
+					</div>
 				</div>
 
 				<div class="secondstep">
-					<div id="legendaContainer">
-						<p><jsp:expression>RESOURCES.getString("KEY_LEGENDA_TITEL")</jsp:expression></p>
-						<div id="legenda" class="legenda">
+					<div id="legendaContainer" class="legenda">
+						<jsp:expression>RESOURCES.getString("KEY_LEGENDA_TITEL")</jsp:expression>
+						<div id="legenda">
 							<!-- plaats voor de legenda, dynamisch en statisch -->
 							<c:if test="${param.coreonly==true}">
 								<c:if test="${not empty legendas}">
@@ -71,48 +69,80 @@
 							</c:if>
 						</div>
 					</div>
+
 					<div id="infoContainer" class="featureinfo">
-						<p><jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression></p>
+						<jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression>
 						<div id="featureinfo">
 							<!-- plaats voor de feature info, dynamisch en statisch-->
 							<c:if test="${param.coreonly==true}">
 								<c:if test="${not empty featureinfo}">
+									<p class="todo">TODO: html parsen/opschonen</p>
 									<!-- hiermee worden de html tags als entities edncoded, niet wat we willen
 									 <c:out value="${featureinfo}" /> -->
 									<!--<jsp:expression>request.getAttribute("featureinfo")</jsp:expression>-->
 									<c:out value="${featureinfo}" escapeXml="false" />
 								</c:if>
 							</c:if>
-						</div>			
+						</div>
 					</div>
 				</div>				
 			</div>
 		</div>
 		<div class="ui-layout-center" style="background-color:#EEEEEE">
 			<!--div class="article"-->
-				<div id="coreContainer" class="kaartContainer">
-					<!-- hier komt de statische kaart -->
-					<jsp:include page="kaart">
-						<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
-						<!-- StringConstants.REQ_PARAM_MAPNAME -->
-						<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
-					</jsp:include>
+			<div id="coreContainer" class="kaartContainer">
+				<!-- 1 adres -->
+				<c:if test="${not empty xcoord}">
+					<c:set value="${xcoord}" var="xcoord" />
+				</c:if>
 
-					<c:if test="${not empty kaart}">
-						<!-- StringConstants.MAP_CACHE_DIR -->
-						<img id="coreMapImage" src="${dir}/${kaart.name}"
-							alt="kaart voor thema: ${param.mapname}" width="440px"
-							height="440px" />
-						<!-- navigatie knoppen zonder javascript -->
-						<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
-					</c:if>
+				<c:if test="${not empty ycoord}">
+					<c:set value="${ycoord}" var="ycoord" />
+				</c:if>
+				<c:if test="!${not empty straal}">
+					<c:set value="${straal-1}" var="straal" />
+				</c:if>
+				<!-- meer adressen -->
+				<c:if test="${not empty param.xcoord  }">
+					<c:set value="${param.xcoord}" var="xcoord" />
+				</c:if>
+				<c:if test="${not empty param.ycoord  }">
+					<c:set value="${param.ycoord}" var="ycoord" />
+				</c:if>
+				<c:if test="${not empty param.straal  }">
+					<c:set value="${param.straal+1}" var="straal" />
+				</c:if>
+
+				<!-- hier komt de statische kaart -->
+				<jsp:include page="kaart">
+					<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
+					<!-- StringConstants.REQ_PARAM_MAPNAME -->
+					<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
+
+					<jsp:param value="${xcoord}" name="xcoord" />
+					<jsp:param value="${ycoord}" name="ycoord" />
+					<jsp:param value="${straal}" name="straal" />
+				</jsp:include>
+
+				<c:if test="${not empty kaart}">
+					<!-- StringConstants.MAP_CACHE_DIR -->
+					<img id="coreMapImage" src="${dir}/${kaart.name}"
+						alt="kaart voor thema: ${param.mapname}" width="440px"
+						height="440px" />
+					<!-- navigatie knoppen zonder javascript -->
+					<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
+				</c:if>
+			</div>
+
+			<div id="kaartContainer" class="kaartContainer">
+				<div id="cbsKaart" class="kaart">
+					<!-- hier wordt de dynamische kaart ingehangen -->
 				</div>
-				
-				<div id="kaartContainer" class="kaartContainer">
-					<div id="cbsKaart" class="kaart">
-						<!-- hier wordt de dynamische kaart ingehangen -->
-					</div>
-				</div>	
+			</div>
+
+			<div id="copyright" class="copy">
+				<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
+			</div>
 			<!--/div-->
 		</div>
 		<div class="ui-layout-south">
