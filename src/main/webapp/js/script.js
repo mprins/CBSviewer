@@ -14,6 +14,15 @@ jQuery(document).ready(function() {
 	});
 	// console.debug('opzoeken van ' + _id + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
+	
+	var outerLayout;
+
+	outerLayout = $('body').layout({
+		west__showOverflowOnHover: true,
+		north__spacing_open: 0,
+		south__spacing_open: 0,
+		west__minSize: 300
+		});							
 });
 
 /**

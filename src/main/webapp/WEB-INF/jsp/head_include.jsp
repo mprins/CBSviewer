@@ -37,6 +37,10 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/print.css" type="text/css"
 		media="print" />
+	
+	<!-- needed for the menu and cbsinuwbuurt template -->
+	<link rel="stylesheet" href="css/nav.css" type="text/css" />	
+		
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" href="ie-layout.css" type="text/css" media="screen, projection" />
 <![endif]-->

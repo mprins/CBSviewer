@@ -1,0 +1,922 @@
+
+.ui-layout-pane { /* all 'panes' */ 
+	background: #FFF; 
+	border: 0px solid #BBB; 
+	padding: 0px; 
+			
+	overflow: auto;
+	} 
+
+.ui-layout-resizer { /* all 'resizer-bars' */ 
+	background: #DDD; 
+} 
+
+.ui-layout-toggler { /* all 'toggler-buttons' */ 
+	background: #AAA; 
+} 
+
+/** CBS stylesheet **/
+/** reset elements first **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body
+{
+	background-image: url(../img/template/bg_body.gif);
+	background-repeat: repeat-x;
+	background-color: #2d598c;
+	font-size: 11px;
+	font-family: Arial, Helvetica, verdana, sans-serif;
+	
+	width: 100%;
+	height:100%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.pageheader
+{
+	height: 76px;
+	margin-left: 5px;
+}
+
+.pageheader .logo
+{
+	float: left;
+	padding-top: 9px;
+	padding-left: 3px;
+}
+
+.utilBlock
+{
+	margin-top: 14px;
+	float: right;
+}
+
+.utilBlock a
+{
+	color: #7e7e7e;
+	border-right: 1px Solid #c7c7c7;
+	padding-right: 9px;
+	line-height: 10px;
+	margin-right: 9px;
+	text-decoration: none;
+}
+
+.utilBlock a.active
+{
+	font-weight: bold;
+	color: #6ba1d4;
+}
+
+.utilBlock a:hover
+{
+	color: #d46882;
+	text-decoration: underline;
+}
+
+.areaSelector
+{
+	background-color: #2d598c;
+	width:100%;
+	height:100%;
+	margin: 3px;
+	padding: 0px;
+}
+
+.areaSelector .smartStep
+{
+	padding-top:60px;
+	margin: 5px;
+	float: left;
+	width: 80%;
+	height:36px;
+	position: relative;
+	z-index: 1;
+}
+
+.areaSelector .secondstep
+{
+	padding-top:110px;
+	margin: 5px;
+}
+
+
+.areaSelector .smartStep input
+{
+	margin-left: 1px;
+	width: 100% !important;
+	background-color: #FFFFFF;
+	font-size: 14px;
+	padding-bottom: 3px;
+	padding-bottom: 1px;
+	color: #000000;
+	margin-right: 0px;
+	padding-left: 10px;
+	line-height: 12px;
+	display: block;
+	height: 15px;
+	position: relative;
+	overflow: hidden;
+	border: 0px;
+	border-top: 1px Solid #294e77;
+	border-bottom: 1px Solid #294e77;
+}
+
+.areaSelector label
+{
+	background-repeat: no-repeat;
+	display: block;
+	margin-bottom: 3px;
+}
+ 
+.areaSelector label span
+{
+	visibility: hidden;
+}
+
+.areaSelector .step1 label
+{
+	background-image: url(../img/template/hdr_areaSelector_step1_labe.gif);
+}
+
+.teaserPanel
+{
+	clear: both;
+	width:100%;
+	height: 72px;
+	padding-left: 15px;
+	background-position: left top;
+	background-color: white;
+}
+
+.teaserContent
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:960px;
+	height: 72px;
+	padding-left: 15px;
+	background-position: left top;
+	background-color: white;
+}
+
+.teaserPanel a
+{
+	display: block;
+	float: left;
+	padding-left: 55px;
+	padding-top: 13px;
+	margin-right: 5px;
+	margin-top: 8px;
+	
+	background-repeat: no-repeat;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	width: 179px;
+	height: 40px;
+	text-decoration: none;
+}
+
+.teaserPanel a span
+{
+	display: block;
+	margin-top: 2px;
+	font-size: 11px;
+	color: #a5a5a5;
+}
+
+.teaserPanel a strong
+{
+	color: #3d81a1;
+}
+.teaserPanel a.opMaat
+{
+	background-image: url(../img/template/btn_teaserPanel_opMaat.gif);
+}
+
+.teaserPanel a.rss
+{
+	background-image: url(../img/template/btn_teaserPanel_rss.gif);
+}
+
+.teaserPanel a.databank
+{
+	background-image: url(../img/template/btn_teaserPanel_databank.gif);
+}
+
+.teaserPanel a.gezocht
+{
+	background-image: url(../img/template/btn_teaserPanel_gezocht.gif);
+}
+
+.footer 
+{
+	background-color: #426A98;
+	background-repeat: no-repeat;
+	height: 29px;
+	line-height: 28px;
+	color: #b3c3d6;
+	text-align: center;
+	margin-top: 3px;
+}
+
+.footer a
+{
+	color: #b3c3d6;
+	text-decoration: none;
+	line-height: 12px;
+	background-image: url(../img/template/bg_footer_a.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 15px;
+	padding-left: 13px;
+}
+
+.footer a:hover
+{
+	text-decoration: underline;
+}
+
+.footer a.last
+{
+	background-image: none;
+	padding-right: 0px;
+}
+
+
+.info {
+  border: 0px solid;
+  margin: 10px 0px;
+  width:183px;
+  height:380px;
+  padding:50px 0px 0px 10px;
+  font-size:11px;
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  color: #000000;
+  background-color: #eeeeee;
+  background-image: url('../img/template/info.png');
+}
+
+.dropDownMenu
+{
+	position:absolute;left:5px;top:18px;
+}
+
+/* Lets reset all margins, paddings and list styles, shall we? */
+	.siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li { margin: 0; padding: 0; list-style: none;}
+
+/* Menu Functionality - Edit if you know what you are doing!! */
+/* Adjust the height of the drop down menu */
+
+	#drop-down-menu>ul>li{
+		display:block;
+		position:relative;
+		float:left}
+	#drop-down-menu>li>ul{display:none}
+	#drop-down-menu>li:hover>ul{ 
+		display:block; 
+		position:absolute}
+	#drop-down-menu>li:hover>li{ 
+		font-size:70%;
+		clear:left; 
+		width:12em}
+
+
+
+
+.megaMenu, .megaMenu ul, .navCategories, .megaMenu .col  {	min-height: 525px;}
+
+.sectionBrands .navDropDown,
+.sectionOffers .navDropDown,
+.sectionStyle .navDropDown {
+	background:#fff;
+	width:172px;
+	padding:10px 5px 10px;
+	
+	-moz-box-shadow:0 1px 10px 3px rgba(0, 0, 0, .3);
+	-webkit-box-shadow:0 1px 10px 3px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 10px 3px rgba(0, 0, 0, .3);
+	
+	-moz-border-radius:0 0 3px 3px;
+	-webkit-border-radius:0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
+.sectionStyle .navDropDown {
+	width:150px;
+}
+.siteNavigation .sectionDepartment:hover .navDropDown,
+.siteNavigation .sectionBrands:hover .navDropDown,
+.siteNavigation .sectionOffers:hover .navDropDown,
+.siteNavigation .sectionStyle:hover .navDropDown {
+	left:auto;
+}
+
+.ie7 .sectionDepartment:hover .navDropDown {
+	left:0px;
+}
+
+.ie7 .sectionBrands:hover .navDropDown {
+	left:164px;
+}
+.ie7 .sectionOffers:hover .navDropDown {
+	left:345px;
+}
+.ie7 .sectionStyle:hover .navDropDown {
+	left:451px;
+}
+
+.sectionBrands .navDropDown .menuTitle,
+.sectionOffers .navDropDown .menuTitle,
+.sectionStyle .navDropDown .menuTitle  {
+	margin-left:0;
+}
+
+.megaMenu.show { left: 20%;}
+
+/*  .megaMenu is the content inside the dropdown menu */
+.megaMenu {	width: 80%;}
+/* .navCategories>li is the left hand menu in the drop down menu */
+.navCategories>li {width: 20%;}
+/* .megaMenu width + .navCategories>li width = 100%
+However, IE7 is lame, and you need to tweak the width if you change the above values */
+.ie7 .navCategories>li>a {width: 19%;}
+
+/*  Functionality to show and hide the megaMenu content. The left position should be the same as the .navCategories>li width */
+.navCategories li:hover>.contentasset>.megaMenu, 
+/* Landing Page for drop down menus - this is so that the first megamenu is always show */
+.navCategories>li:first-child .megaMenu { left: 20%;}
+
+/* Close button for iPad */
+.closeMega {
+	position: absolute;
+	z-index: 998;
+	top: 5px;
+	right: 7px;
+	width: 24px;
+	height: 24px;
+	
+	line-height: 24px;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	border: solid 2px white;
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .2); 		
+	border-radius: 24px; 
+	cursor: pointer;
+	
+	
+	background: rgb(234,74,175); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(234,74,175,1) 0%, rgba(229,29,155,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,74,175,1)), color-stop(100%,rgba(229,29,155,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(234,74,175,1) 0%,rgba(229,29,155,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(234,74,175,1) 0%,rgba(229,29,155,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(234,74,175,1) 0%,rgba(229,29,155,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(234,74,175,1) 0%,rgba(229,29,155,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea4aaf', endColorstr='#e51d9b',GradientType=0 ); /* IE6-8 */
+}
+
+/*---------- TOP TABS ---------- */
+
+/* Position the whole menu */
+.siteNavigation {
+	margin-top:70px;
+	position:relative;
+	width: 100%;
+	float: left;
+}
+/* Top level styling */
+.siteNavigation > li {
+	z-index:998;
+	display:block;
+	float:left;
+	list-style:none;
+}
+.siteNavigation>li>a	 {
+	position: relative;
+	z-index: 1000;
+	display: block;
+	float: left; 
+	padding: 0 15px;
+	
+	border-style: solid;
+	border-width: 0px;
+	border-color: #b7b7b7 #d4cfca;						
+	height: 35px; 				
+	line-height: 33px;
+
+	text-decoration: none;
+	color: #333333;
+
+	font-size:12px;
+	font-weight: bold;
+	white-space: nowrap;
+	text-shadow: -1px -1px 1px rgba(0,0,0,0.33);
+
+
+
+
+
+
+
+
+
+
+
+
+
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(212,212,212,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(212,212,212,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(212,212,212,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(212,212,212,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(212,212,212,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(212,212,212,1) 100%); /* W3C */
+}
+
+.siteNavigation>li:first-child>a { border-left-width: 0px}
+.siteNavigation>li:last-child>a { border-right-width: 0px}
+
+.siteNavigation>li:hover>a {
+	color: black;
+	text-shadow: none;
+	border-color: #404040;	
+	background: rgb(238,238,238); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+}
+
+/*  Top level tabs drop down icon */
+.hasMenu:after, 
+/* IE7 fix */
+.ie7 .hasMenu span {
+	content:"?";
+	display: inline-block;
+	padding: 0 0 0 10px;
+	color: #666666;
+	text-shadow: none;
+}	
+.siteNavigation>li>a.hasMenu {
+	padding-right: 10px
+}
+
+
+/*---------- LEFT MENU ----------*/					
+
+/* Second level - the drop down container */			
+.navDropDown {
+	position:absolute;
+	top: 35px;
+	left: -9999px;
+	width: 980px;
+	z-index:998;
+}
+
+.navCategories {		
+	position: relative;
+	
+	border-top: 0; /*  A fix for the javascript to add a current class to the first menu item in the dropdown menu. */
+	background:#f2f2f2;
+	
+	-moz-box-shadow:0 1px 10px 3px rgba(0, 0, 0, .3);
+	-webkit-box-shadow:0 1px 10px 3px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 10px 3px rgba(0, 0, 0, .3);
+	
+	-moz-border-radius:0 0 3px 3px;
+	-webkit-border-radius:0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
+	
+.no-boxshadow .navCategories,
+.no-boxshadow .sectionBrands .navDropDown,
+.no-boxshadow .sectionOffers .navDropDown,
+.no-boxshadow .sectionStyle .navDropDown  {
+	border: solid #D4CFCB;
+	border-width: 0 1px 1px 1px;
+}
+
+	/* The left hand menu in the drop down menu */
+.navCategories>li {display: block;}
+/*  Fix for IE7 - doesnt like LI's with block level styling. */
+.ie7 .navCategories>li { display: inline;}		
+.navCategories>li>a {
+	display: block;
+	font-weight: bold;
+	padding: 10px 0 10px 10px;
+	color: #353535;
+	text-shadow: 2px 2px 2px #ffffff;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: white;
+}
+
+.navCategories>li>a:hover {	color:#E51D9B; }
+.navCategories>li>a.current,
+.navCategories>li>a:hover,
+.navCategories>li:hover>a {
+	background: white;			
+	text-shadow: none;
+	border-color: #e4e4e4;
+	text-decoration: underline;				
+}
+
+
+.navCategories>li>a:after,
+.navCategories>li:hover>a:after,
+.ie7 .navCategories li a span {/*  IE7 fix */
+		content: '';
+		float: right;
+		position: relative;
+		right: 10px;
+		top: 2px;
+		width: 6px;
+		height: 9px;
+		display: inline-block;
+		background:url(../img/template/arrows_sprite_8.png) no-repeat -30px 0;
+}
+.navCategories>li:hover>a:after {/*  IE7 fix */
+	background-position: -16px 0;
+}
+/*  IE7 fix */
+.ie7 .navCategories li a span { 
+		position: absolute;
+		top: auto;
+		left: 170px;
+}
+.navCategories>li>a:hover:after,
+.navCategories>li:hover>a:after	{color: #353535; }
+		
+
+/*---------- PANELS ----------*/	
+		
+/* The menus inside the megamenu */
+.megaMenu {
+	position: absolute;
+	left: -2000em;
+	top: 0;
+	z-index: 998;
+	background:#fff;
+	
+	-moz-border-radius:0 0 3px 0;
+	-webkit-border-radius:0 0 3px 0;
+	border-radius: 0 0 3px 0;
+}
+
+/* Customise the columns in the megamenu. We can either use an list for links, or a DIV.col for content */
+	.megaMenu ul, .megaMenu .col {
+		width: 33%;
+		float: left;
+	}
+		.megaMenu ul:last-child,
+		.megaMenu .col:last-child { border: none; width: 33.6666666%}
+
+		/* By default we cater for 3 columns, but we can customise the widths of the columns by adding an appropriate class onto .megaMenu */
+		/* 1 columns */
+		.megaOneColumn ul, 
+		.megaOneColumn .col { width: 100%;} 
+		/* Style is duplicate below to cater for IE users without JS  */
+		.megaOneColumn ul:last-child,
+		.megaOneColumn .col:last-child { width: 100%; }
+
+		/* 2 columns */
+		.megaTwoColumns ul, 
+		.megaTwoColumns .col { width: 49.75%;}
+		.megaTwoColumns ul:last-child,
+		.megaTwoColumns .col:last-child { width: 50%; }
+		
+		/* 4 columns */
+		.megaFourColumns ul, 
+		.megaFourColumns .col { width: 24.75%;}
+		.megaFourColumns ul:last-child,
+		.megaFourColumns .col:last-child { width: 25.25%; }
+
+		/* 2/3rds column - a wide column with two thin ones */
+		.megaTwoThirdsColumns .col { width: 50%;}
+		.megaTwoThirdsColumns .col:last-child { width: 50%;}
+		.megaTwoThirdsColumns ul { width: 24.5%; }
+		.megaTwoThirdsColumns ul:last-child { width: 25%; }	
+		
+		/*  Padding around each list or content column */
+		.megaMenu ul li, 
+		.megaMenu .col .padding,
+		.sectionBrands .navDropDown li,
+		.sectionOffers .navDropDown li,
+		.sectionStyle .navDropDown li {
+			padding: 2px 10px 2px 10px; 
+			display: block; 
+		}
+		/* Add some space to the top of each list or content column */
+		.megaMenu .col .padding,
+		.siteNavigation .menuTitle:first-child { margin-top: 10px;} 
+		
+		.siteNavigation .menuTitle:before { background: none; content: ''}
+		.siteNavigation .menuSpacer {margin-bottom: 10px;}
+
+		
+/*  Content styling */		
+.megaMenu .thumb {
+		width: 100%;
+		height: auto;
+}
+.siteNavigation .sectionTitle,
+.siteNavigation .menuTitle,
+.megaMenu h2 {
+	margin: 0 10px;
+	padding:0;
+	text-transform: none;
+	text-align:left;
+	font-size: 1.3em;
+	font-family: sans-serif;
+	font-weight:bold;
+}
+.siteNavigation .menuTitle {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.siteNavigation .sectionTitle {
+	margin:5px 0 0 0;
+	padding:0;
+	font-size:2em;
+}
+.megaMenu h2 { padding-bottom: 5px;}
+.megaMenu p {padding: 0 0 5px 0;}
+.megaMenu .article {border-bottom: dotted 1px silver; margin-bottom: 10px;}
+.megaMenu .article:last-child {border-bottom: none; margin-bottom: 0;}	
+
+.sectionPromo {
+
+}
+
+.sectionPromoContent{ display:block; width:177px; margin:10px 0 0px; }
+.megaMenu .blackArrow  { background-color: transparent; background-image: url("../img/template/bulletArrowBlack.gif"); background-repeat: no-repeat; background-attachment: scroll; background-position: 1px 3px; background-clip: border-box; background-origin: padding-box; background-size: auto auto; padding-left: 10px;}
+.sectionPromoContent p{ margin-top:10px; }
+
+.siteNavigation .sectionPromo .forwardButtonWhite {
+	padding:5px 8px 5px 8px;
+	color:#fff !important;
+	position:relative;
+	bottom:12px;
+	font-weight:bold;
+}
+.bolded{font-weight:bold;}
+p.marginNone{ margin:0;}
+
+
+
+/*---------- BLACK COLOUR THEME ----------*/	
+
+.siteNavigation>li>a	 {			
+	border-style: solid;
+	border-color: rgb(51,51,51);
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	white-space: nowrap;
+	margin-right: 1px;	
+	
+	text-shadow: -1px -1px 1px rgba(0,0,0,0.33);
+
+	background: rgb(84,84,84);
+	background: -moz-linear-gradient(top, rgba(84,84,84,1) 0%, rgba(30,30,30,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(84,84,84,1)), color-stop(100%,rgba(30,30,30,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(84,84,84,1) 0%,rgba(30,30,30,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(84,84,84,1) 0%,rgba(30,30,30,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(84,84,84,1) 0%,rgba(30,30,30,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(84,84,84,1) 0%,rgba(30,30,30,1) 100%); /* W3C */		
+}
+
+.siteNavigation>li:first-child>a {	border-radius: 3px 0 0 0; }
+.siteNavigation>li:last-child>a {	border-radius: 0 3px 0 0; }
+
+/* IE */
+
+.navCategories {
+	border-color:#D4CFCB;
+	border-width: 0 2px 2px 2px;
+}
+.ie7 .siteNavigation{
+	font-size:90%;
+}
+.ie7 .siteNavigation .sectionPromo .forwardButtonWhite {
+	padding:5px 8px 6px 8px;
+}
+.i7 .siteNavigation>li:first-child>a,
+.i8 .siteNavigation>li:first-child>a {
+	border-left-width: 2px
+}
+.ie7 #searchSite #searchSubmit,
+.ie8 #searchSite #searchSubmit {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#545454', endColorstr='#323232',GradientType=0 ); /* IE6-9 */		
+}
+.ie7 #searchSite #searchSubmit:hover,
+.ie8 #searchSite #searchSubmit:hover {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#545454', endColorstr='#545454',GradientType=0 );
+}
+
+.ie7 .siteNavigation>li>a,
+.ie8 .siteNavigation>li>a  {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d4d4d4',GradientType=0 ); /* IE6-7 */
+	border-left:solid 1px #555;
+}
+.ie7 .siteNavigation>li:hover>a,
+.ie8 .siteNavigation>li:hover>a {	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 ); /* IE6-7 */	
+}
+.ie7 .siteNavigation>li>a,
+.ie8 .siteNavigation>li>a {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#545454', endColorstr='#1e1e1e',GradientType=0 ); /* IE6-8 */	
+}
+.ie9 .siteNavigation>li>a	 {
+	line-height: 37px;
+}
+
+.navCategories .megaMenu li a,
+.sectionBrands li a,
+.sectionOffers li a,
+.sectionStyle li a {
+	color: #333366;
+	text-decoration: none;
+}
+
+.navCategories .megaMenu li a:hover,
+.sectionBrands li a:hover,
+.sectionOffers li a:hover,
+.sectionStyle li a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+#personalMenu .contentasset a {color:#FFF;}
+#personalMenu .cookiesPolicy{ text-decoration:underline;}
+
+.megaMenu a.blackArrow.sale{ color:#F00;}
+.megaMenu a.blackArrow.bbe{ color:#00A2B1;}
+.blueCross {
+color: #015696;
+}
+
+.slide {
+width: 300px;
+height: 300px;
+
+}
+#slider{
+width: 300px;
+height: 300px;
+}
+
+#navleft li, #navright li {
+	margin: 0 3px;
+	padding: 0 0 0px;
+	float: left;
+	position: relative;
+	list-style: none;
+	padding-left:10px;	
+}
+
+/* main level link */
+#navleft a, #navright a {
+	color: #333366;
+	text-decoration: none;
+	display: block;
+	padding:  3px 2px;
+	margin: 0;
+}
+
+#navright a
+{
+width: 180px;
+}
+
+#navleft a
+{
+width:390px;
+}
+
+#navleft a:hover, #navright a:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+#navleft .menuTitle, #navright .menuTitle
+{
+	padding: 10px;
+}
+
+/* main level link hover */
+#navleft li:hover > a, #navright li:hover > a {
+	background-color: #eeeeee;
+	color: #000000;
+}
+
+#navleft ul li a, #navright ul li a {
+display: inline;
+}
+
+/* sub levels link hover */
+#navleft ul li:hover a, #navleft li:hover li a, #navright ul li:hover a, #navright li:hover li a {
+	background-color: #ffffff;
+	border: none;
+	color: #333366;
+}
+#navleft ul a:hover, #navright ul a:hover {
+	text-decoration: underline;
+
+	background-color: #eeeeee;
+	color: #000 !important;
+}
+
+/* dropdown */
+#navleft li:hover > ul, #navright li:hover > ul {
+	display: inline;
+}
+
+/* level 2 list */
+#navleft ul {
+	min-height: 0px;
+	display: none;
+	margin: 0;
+	padding: 3px 3px 3px 3px;
+	width: 185px;
+	position: absolute;
+	top: 0px;
+	left: 190px;
+	background-color: #ffffff;
+	z-index:1000;
+	border: solid 1px #b4b4b4;
+}
+
+/* level 2 list */
+#navright ul {
+	min-height: 0px;
+	display: none;
+	margin: 0;
+	padding: 3px 3px 3px 3px;
+	width: 200px;
+	position: absolute;
+	top: 0px;
+	left: -200px;
+	background-color: #ffffff;
+	border: solid 1px #b4b4b4;
+}
+
+#navleft ul li, #navright ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navleft ul a, #navright ul a {
+	font-weight: normal;
+	text-shadow: 0 1px 0 #fff;
+}
+
+/* rounded corners of first and last link */
+#navleft ul li:first-child > a, #navright ul li:first-child > a {
+
+}
+#navleft ul li:last-child > a, #navright  ul li:last-child > a {
+
+}
+
+/* clearfix */
+#navleft:after, #navright:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+#navleft,#navright {
+	display: inline-block;
+} 
+ 
+* html #navleft, html #navright {
+	height: 1%;
+}
