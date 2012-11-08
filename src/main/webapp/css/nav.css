@@ -264,6 +264,10 @@ body
 	padding-right: 0px;
 }
 
+.redcolor
+{
+font-color:red;
+}
 
 .info {
   border: 0px solid;
@@ -791,7 +795,7 @@ width: 300px;
 height: 300px;
 }
 
-#navleft li, #navright li {
+.navleft li, .navright li {
 	margin: 0 3px;
 	padding: 0 0 0px;
 	float: left;
@@ -801,7 +805,7 @@ height: 300px;
 }
 
 /* main level link */
-#navleft a, #navright a {
+.navleft a, .navright a {
 	color: #333366;
 	text-decoration: none;
 	display: block;
@@ -809,43 +813,43 @@ height: 300px;
 	margin: 0;
 }
 
-#navright a
+.navright a
 {
 width: 180px;
 }
 
-#navleft a
+.navleft a
 {
 width:390px;
 }
 
-#navleft a:hover, #navright a:hover {
+.navleft a:hover, .navright a:hover {
 	background-color: #000;
 	color: #fff;
 }
 
-#navleft .menuTitle, #navright .menuTitle
+.navleft .menuTitle, .navright .menuTitle
 {
 	padding: 10px;
 }
 
 /* main level link hover */
-#navleft li:hover > a, #navright li:hover > a {
+.navleft li:hover > a, .navright li:hover > a {
 	background-color: #eeeeee;
 	color: #000000;
 }
 
-#navleft ul li a, #navright ul li a {
+.navleft ul li a, .navright ul li a {
 display: inline;
 }
 
 /* sub levels link hover */
-#navleft ul li:hover a, #navleft li:hover li a, #navright ul li:hover a, #navright li:hover li a {
+.navleft ul li:hover a, .navleft li:hover li a, .navright ul li:hover a, .navright li:hover li a {
 	background-color: #ffffff;
 	border: none;
 	color: #333366;
 }
-#navleft ul a:hover, #navright ul a:hover {
+.navleft ul a:hover, .navright ul a:hover {
 	text-decoration: underline;
 
 	background-color: #eeeeee;
@@ -853,12 +857,12 @@ display: inline;
 }
 
 /* dropdown */
-#navleft li:hover > ul, #navright li:hover > ul {
+.navleft li:hover > ul, .navright li:hover > ul {
 	display: inline;
 }
 
 /* level 2 list */
-#navleft ul {
+.navleft ul {
 	min-height: 0px;
 	display: none;
 	margin: 0;
@@ -873,7 +877,7 @@ display: inline;
 }
 
 /* level 2 list */
-#navright ul {
+.navright ul {
 	min-height: 0px;
 	display: none;
 	margin: 0;
@@ -886,27 +890,27 @@ display: inline;
 	border: solid 1px #b4b4b4;
 }
 
-#navleft ul li, #navright ul li {
+.navleft ul li, .navright ul li {
 	float: none;
 	margin: 0;
 	padding: 0;
 }
 
-#navleft ul a, #navright ul a {
+.navleft ul a, .navright ul a {
 	font-weight: normal;
 	text-shadow: 0 1px 0 #fff;
 }
 
 /* rounded corners of first and last link */
-#navleft ul li:first-child > a, #navright ul li:first-child > a {
+.navleft ul li:first-child > a, .navright ul li:first-child > a {
 
 }
-#navleft ul li:last-child > a, #navright  ul li:last-child > a {
+.navleft ul li:last-child > a, .navright  ul li:last-child > a {
 
 }
 
 /* clearfix */
-#navleft:after, #navright:after {
+.navleft:after, .navright:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -914,10 +918,10 @@ display: inline;
 	line-height: 0;
 	height: 0;
 }
-#navleft,#navright {
+.navleft,.navright {
 	display: inline-block;
 } 
  
-* html #navleft, html #navright {
+* html .navleft, html .navright {
 	height: 1%;
 }
