@@ -22,8 +22,8 @@
 						<a href="#">Op thema</a>
 							<div class="contentasset">
 								<div class="megaMenu megaFourColumns">
-									<ul>
-										<ul class="navleft">
+									<ul class="navleft">
+										<!--ul class="navleft"-->
 											<li class="menuTitle">Bevolking</li>	
 											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('De bevolking van Nederland op 1 januari.')">Aantal inwoners</a>
 												<ul>
@@ -153,10 +153,10 @@
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>		
-										</ul>
+										<!--/ul-->
 									</ul>
-									<ul id="toplevel">
-										<ul class="navleft">
+									<ul id="toplevel" class="navleft">
+										<!--ul class="navleft"-->
 											<li class="menuTitle">Wonen</li>	
 											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Woningen uitleg.')">Woningen</a>
 												<ul>
@@ -277,10 +277,10 @@
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>		
-										</ul>
+										<!--/ul-->
 									</ul>
-									<ul>
-										<ul class="navright">
+									<ul class="navright">
+										<!--ul class="navright"-->
 											<li class="menuTitle">Bedrijven</li>
 											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Agrarische bedrijven uitleg.')">Agrarische bedrijven</a>
 												<ul>
@@ -378,10 +378,10 @@
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>			
-										</ul>
+										<!--/ul-->
 									</ul>
-									<ul>
-										<ul class="navright">
+									<ul class="navright">
+										<!--ul class="navright"-->
 											<li class="menuTitle"></li>
 											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('VMBO onderwijs uitleg.')">VMBO onderwijs</a>
 												<ul>
@@ -492,7 +492,7 @@
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-										</ul>
+										<!--/ul-->
 									</ul>
 								</div>
 							</div>
@@ -576,22 +576,18 @@
 						<a href="#">Op kaartlaag</a>
 						<div class="contentasset">
 							<div class="megaMenu megaFourColumns">
-								<ul>	
-									<img src="img/template/bodemgebruik.png" alt="Bodemgebruik"/>
-									<li class="menuTitle">Bodemgebruik</li>
+								<ul>										
+									<li class="menuTitle"><p><img src="img/template/bodemgebruik.png" alt="Bodemgebruik"/></p>Bodemgebruik</li>
 									<li><a href="#">2006</a></li>
 									<li><a href="#">2008</a></li>
 								</ul>
-								<ul>	
-									<img src="img/template/bevolkingskernen.png" alt="Bevolkingskernen"/>
-									<li class="menuTitle">Bevolkingskernen</li>
+								<ul>										
+									<li class="menuTitle"><p><img src="img/template/bevolkingskernen.png" alt="Bevolkingskernen"/></p>Bevolkingskernen</li>
 									<li><a href="#">2001</a></li>
-									<li><a href="#">2008</a></li>
-									
+									<li><a href="#">2008</a></li>									
 								</ul>
-								<ul>
-									<img src="img/template/vierkanten.png" alt="Vierkanten"/>
-									<li class="menuTitle">Vierkanten 100m</li>
+								<ul>									
+									<li class="menuTitle"><p><img src="img/template/vierkanten.png" alt="Vierkanten"/></p>Vierkanten 100m</li>
 									<li><a href="#">2000</a> | <a href="#">2007</a></li>
 									<li><a href="#">2001</a> | <a href="#">2008</a></li>
 									<li><a href="#">2002</a> | <a href="#">2009</a></li>
@@ -610,73 +606,26 @@
 									<li><a href="#">2006</a></li>
 									
 								</ul>
-								<ul>
-									<img src="img/template/wijkenbuurten.png" alt="Wijken en buurten"/>
-									<li class="menuTitle">Buurten</li>
+								<ul>									
+									<li class="menuTitle"><p><img src="img/template/wijkenbuurten.png" alt="Wijken en buurten"/></p>Buurten</li>
 									<li><a href="#">2009</a></li>
 									<li><a href="#">2010</a></li>
-									
-									<ul class="navright">
-										<li class="menuTitle">Buurten</li>
-										<li><a href="#">2009</a></li>
-										<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('2010 uitleg.')">2010</a>
-											<ul>
-												<li><a href="#">Omgevingsadressendichtheid</a></li>
-												<li><a href="#">Personen 0 tot 15 jaar (%)</a></li>
-												<li><a href="#">Personen 15 tot 25 jaar (%)</a></li>
-												<li><a href="#">Personen 25 tot 45 jaar (%)</a></li>
-												<li><a href="#">Personen 45 tot 65 jaar (%)</a></li>
-												<li><a href="#">Personen 65 jaar en ouder (%)</a></li>
-												<li><a href="#">Bevolkingsdichtheid inwoners per km2</a></li>
-												<li><a href="#">Aantal huishoudens</a></li>
-												<li><a href="#">Eenpersoonshuishoudens (%)</a></li>
-												<li><a href="#">Huishoudens zonder kinderen (%)</a></li>
-												<li><a href="#">Huishoudens met kinderen (%)</a></li>
-												<li><a href="#">Westerse allochtonen (%)</a></li>
-												<li><a href="#">Niet westerse allochtonen (%)</a></li>
-												<li><a href="#">Woningvoorraad</a></li>
-												<li><a href="#">Gemiddelde woningwaarde</a></li>
-												<li><a href="#">Koopwoningen (%)</a></li>
-												<li><a href="#">Huurwoningen (%)</a></li>
-												<li><a href="#">Aantal agrarische bedrijven</a></li>
-												<li><a href="#">Gewassenbedrijven (%)</a></li>
-												<li><a href="#">Veeteeltbedrijven (%)</a></li>
-												<li><a href="#">Combinatiebedrijven (%)</a></li>
-												<li><a href="#">Huisartsenpraktijk gemiddelde afstand in km</a></li>
-												<li><a href="#">Huisartsenpraktijk aantal binnen 3 km</a></li>
-												<li><a href="#">Ziekenhuis excl buitenpolikliniek gem afst in km</a></li>
-												<li><a href="#">Kinderdagverblijf gemiddelde afstand in km</a></li>
-												<li><a href="#">Kinderdagverblijf aantal binnen 3 km</a></li>
-												<li><a href="#">Havo vwo gemiddelde afstand in km</a></li>
-												<li><a href="#">Havo vwo aantal binnen 5 km</a></li>
-												<li><a href="#">Vmbo gemiddelde afstand in km</a></li>
-												<li><a href="#">Vmbo aantal binnen 5 km</a></li>
-												<li><a href="#">Grote supermarkt gemiddelde afstand in km</a></li>
-												<li><a href="#">Grote supermarkt aantal binnen 3 km</a></li>
-												<li><a href="#">Restaurant gemiddelde afstand in km</a></li>
-												<li><a href="#">Restaurant aantal binnen 3 km</a></li>
-												<li><a href="#">Zwembad gemiddelde afstand in km</a></li>
-												<li><a href="#">Bioscoop gemiddelde afstand in km</a></li>
-												<li><a href="#">Treinstation gemiddelde afstand in km</a></li>
-											</ul>
-										</li>
-										<li><a href="#">2011</a></li>
+									<li><a href="#">2011</a></li>
 
-										<li class="menuTitle">Wijken</li>
-										<li><a href="#">2009</a></li>
-										<li><a href="#">2010</a></li>
-										<li><a href="#">2011</a></li>
+									<li class="menuTitle">Wijken</li>
+									<li><a href="#">2009</a></li>
+									<li><a href="#">2010</a></li>
+									<li><a href="#">2011</a></li>
 
-										<li class="menuTitle">Gemeenten</li>
-										<li><a href="#">2009</a></li>
-										<li><a href="#">2010</a></li>
-										<li><a href="#">2011</a></li>										
-									</ul>
+									<li class="menuTitle">Gemeenten</li>
+									<li><a href="#">2009</a></li>
+									<li><a href="#">2010</a></li>
+									<li><a href="#">2011</a></li>									
 								</ul>
 							</div>
 						</div>
 					</li>
-					<div id="infobox" class="info">Beweeg met de muis over een item voor meer informatie. <br/><br/>Klik op de hoofdgroep om de standaardlaag te laden. Deze is aangegeven met een sterretje (<span class="redcolor">*</span>)</div>  
+					<li id="infobox">Beweeg met de muis over een item voor meer informatie. <br/><br/>Klik op de hoofdgroep om de standaardlaag te laden. Deze is aangegeven met een sterretje (<span class="redcolor">*</span>)</li>  
 				</ol>
 			</div>
 		</li>

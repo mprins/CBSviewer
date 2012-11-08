@@ -269,7 +269,7 @@ body
 font-color:red;
 }
 
-.info {
+#infobox {
   border: 0px solid;
   margin: 10px 0px;
   width:183px;
