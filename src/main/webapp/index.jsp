@@ -6,7 +6,7 @@
 		import="nl.mineleni.cbsviewer.util.LabelsBundle, nl.mineleni.cbsviewer.util.StringConstants"
 		trimDirectiveWhitespaces="true" language="java" isThreadSafe="false"
 		isErrorPage="false" />
-	<jsp:output doctype-root-element="html"
+<jsp:output doctype-root-element="html"
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
 		omit-xml-declaration="no" />
