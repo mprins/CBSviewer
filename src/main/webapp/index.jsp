@@ -123,7 +123,6 @@
 		</div>
 		<div class="ui-layout-center" style="background-color:#EEEEEE">
 		
-			<!--div class="article"-->
 			<div id="coreContainer" class="kaartContainer">
 				<!-- hier komt de statische kaart -->
 				<c:if test="${not empty kaart}">
@@ -145,7 +144,6 @@
 			<div id="copyright" class="copy">
 				<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
 			</div>
-			<!--/div-->
 			
 		</div>
 		

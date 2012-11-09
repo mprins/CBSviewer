@@ -32,23 +32,18 @@
 		scheme="OVERHEID.DienstAgentschapInstellingOfProject" content="CBS" />
 	<meta name="DCTERMS.description" content="CBS Kaart applicatie " />
 
-	<link rel="stylesheet" href="css/layout.css" type="text/css"
-		media="screen, projection" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/print.css" type="text/css"
 		media="print" />
-	
+
 	<!-- needed for the menu and cbsinuwbuurt template -->
-	<link rel="stylesheet" href="css/nav.css" type="text/css" />	
-		
-	<!--[if lte IE 6]>
-	<link rel="stylesheet" href="ie-layout.css" type="text/css" media="screen, projection" />
-<![endif]-->
+	<link rel="stylesheet" href="css/nav.css" type="text/css" />
+
 	<!--[if lte IE 7]>
-	<link rel="stylesheet" href="static/css/ie.css" type="text/css" media="all" />
-<![endif]-->
+		<link rel="stylesheet" href="static/css/ie.css" type="text/css" media="all" />
+	<![endif]-->
 	<!--[if gte IE 8]>
-	<link rel="stylesheet" href="static/css/ie-8.css" type="text/css" media="all" />
-<![endif]-->
+		<link rel="stylesheet" href="static/css/ie-8.css" type="text/css" media="all" />
+	<![endif]-->
 
 </jsp:root>
