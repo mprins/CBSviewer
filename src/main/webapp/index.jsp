@@ -23,7 +23,7 @@
 	</script>
 </c:if>
 
-<title>Kaart <c:out value="${param.mapname}" /></title>
+<title>Kaart <c:out value="${param.mapid}" /></title>
 </head>
 
 <body>
@@ -55,6 +55,42 @@
 				</div>
 
 				<div class="secondstep">
+					
+					<!-- invullen van parameters voor de kaart.
+					TODO: mogelijk moet dit stuk code gewoon boven de head sectie van de pagina. -->
+					<!-- 1 adres -->
+					<c:if test="${not empty xcoord}">
+						<c:set value="${xcoord}" var="xcoord" />
+					</c:if>
+	
+					<c:if test="${not empty ycoord}">
+						<c:set value="${ycoord}" var="ycoord" />
+					</c:if>
+					<c:if test="!${not empty straal}">
+						<c:set value="${straal}" var="straal" />
+					</c:if>
+					<!-- meer adressen -->
+					<c:if test="${not empty param.xcoord}">
+						<c:set value="${param.xcoord}" var="xcoord" />
+					</c:if>
+					<c:if test="${not empty param.ycoord}">
+						<c:set value="${param.ycoord}" var="ycoord" />
+					</c:if>
+					<c:if test="${not empty param.straal}">
+						<c:set value="${param.straal}" var="straal" />
+					</c:if>
+	
+					<jsp:include page="kaart">
+						<!-- TODO: mapid waarde moet uit de request komen bijv. ?mapid=cbs_inwoners_2000_per_hectare -->
+						<!-- StringConstants.REQ_PARAM_MAPID -->
+						<jsp:param name="mapid" value="cbs_inwoners_2000_per_hectare" />
+	
+						<jsp:param value="${xcoord}" name="xcoord" />
+						<jsp:param value="${ycoord}" name="ycoord" />
+						<jsp:param value="${straal}" name="straal" />
+					</jsp:include>
+
+				
 					<div id="legendaContainer" class="legenda">
 						<jsp:expression>RESOURCES.getString("KEY_LEGENDA_TITEL")</jsp:expression>
 						<div id="legenda">
@@ -76,59 +112,25 @@
 							<!-- plaats voor de feature info, dynamisch en statisch-->
 							<c:if test="${param.coreonly==true}">
 								<c:if test="${not empty featureinfo}">
-									<p class="todo">TODO: html parsen/opschonen</p>
-									<!-- hiermee worden de html tags als entities edncoded, niet wat we willen
-									 <c:out value="${featureinfo}" /> -->
-									<!--<jsp:expression>request.getAttribute("featureinfo")</jsp:expression>-->
 									<c:out value="${featureinfo}" escapeXml="false" />
 								</c:if>
 							</c:if>
 						</div>
 					</div>
+					
 				</div>				
 
 		</div>
 		<div class="ui-layout-center" style="background-color:#EEEEEE">
+		
 			<!--div class="article"-->
 			<div id="coreContainer" class="kaartContainer">
-				<!-- 1 adres -->
-				<c:if test="${not empty xcoord}">
-					<c:set value="${xcoord}" var="xcoord" />
-				</c:if>
-
-				<c:if test="${not empty ycoord}">
-					<c:set value="${ycoord}" var="ycoord" />
-				</c:if>
-				<c:if test="!${not empty straal}">
-					<c:set value="${straal-1}" var="straal" />
-				</c:if>
-				<!-- meer adressen -->
-				<c:if test="${not empty param.xcoord  }">
-					<c:set value="${param.xcoord}" var="xcoord" />
-				</c:if>
-				<c:if test="${not empty param.ycoord  }">
-					<c:set value="${param.ycoord}" var="ycoord" />
-				</c:if>
-				<c:if test="${not empty param.straal  }">
-					<c:set value="${param.straal+1}" var="straal" />
-				</c:if>
-
 				<!-- hier komt de statische kaart -->
-				<jsp:include page="kaart">
-					<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
-					<!-- StringConstants.REQ_PARAM_MAPNAME -->
-					<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
-
-					<jsp:param value="${xcoord}" name="xcoord" />
-					<jsp:param value="${ycoord}" name="ycoord" />
-					<jsp:param value="${straal}" name="straal" />
-				</jsp:include>
-
 				<c:if test="${not empty kaart}">
 					<!-- StringConstants.MAP_CACHE_DIR -->
 					<img id="coreMapImage" src="${dir}/${kaart.name}"
-						alt="kaart voor thema: ${param.mapname}" width="440px"
-						height="440px" />
+						alt="kaart voor thema: ${mapname}" width="440px"
+						height="440px" longdesc="#featureinfo"/>
 					<!-- navigatie knoppen zonder javascript -->
 					<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
 				</c:if>
@@ -144,8 +146,11 @@
 				<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
 			</div>
 			<!--/div-->
+			
 		</div>
+		
 		<div class="ui-layout-south">
+		
 			<div class="teaserPanel">
 				<div class="teaserContent">
 					<a id="_teasersControl__linkOpMaatHyperLink" class="opMaat" title="Uw Gemeente Op Maat" style="cursor: pointer; ">Uw Gemeente Op Maat<span>Publicaties en Documenten</span></a>
@@ -163,8 +168,9 @@
 					<a href="#">Sitemap</a>
 					<a href="#" class="last">RSS</a> 
 				</div>
-            </div>			
-		</div>	
+            </div>
+            
+		</div>
 
 		<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
 

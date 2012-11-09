@@ -8,7 +8,7 @@ import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_CACHEDIR;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_FEATUREINFO;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_KAART;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_LEGENDAS;
-import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_MAPNAME;
+import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_MAPID;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -353,6 +353,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
             legends[l] = File.createTempFile("legenda", ".png", new File(this
                     .getServletContext().getRealPath(MAP_CACHE_DIR.code)));
             legends[l].deleteOnExit();
+            LOGGER.debug("Legenda bestand: " + legends[l].getAbsolutePath());
             ImageIO.write(image, "png", legends[l]);
         }
         return legends;
@@ -466,12 +467,12 @@ public class WMSClientServlet extends AbstractWxSServlet {
         final BoundingBox bbox = SpatialUtil.calcRDBBOX(xcoord, ycoord, straal);
 
         BufferedImage fg = null;
-        final String mapName = request.getParameter(REQ_PARAM_MAPNAME.code);
-        LOGGER.debug("WMS layer id: " + mapName);
+        final String mapId = request.getParameter(REQ_PARAM_MAPID.code);
 
-        if (mapName != null) {
-            final LayerDescriptor layer = this.layers.getLayerByID(mapName);
-            LOGGER.debug("LayerDescriptor: " + layer);
+        if (mapId != null) {
+            final LayerDescriptor layer = this.layers.getLayerByID(mapId);
+            request.setAttribute("mapname", layer.getName());
+            LOGGER.debug("LayerDescriptor::Name is: " + layer.getName());
 
             final String fgCapabilitiesURL = layer.getUrl();
             LOGGER.debug("WMS capabilities url van voorgrond kaart: "
