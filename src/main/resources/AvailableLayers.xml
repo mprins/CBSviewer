@@ -7,12 +7,12 @@
 		<layers>cbsvierkanten100m2010:cbs_inwoners_2000_per_hectare</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows</url>
 		<styles>cbsvierkant100m_inwoners_2000</styles>
-		<attributes>gid,inw2000</attributes>
+		<attributes>inw2000</attributes>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>cbs_verandering_inwoners_2000_2010</id>
-		<layers>cbsvierkanten100m2010:cbs_verandering_inwoners_2000_2010</layers>
 		<name>verandering inwoners 2000-2010</name>
+		<layers>cbsvierkanten100m2010:cbs_verandering_inwoners_2000_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows</url>
 		<styles>cbs_verandering_inwoners_2000_2010</styles>
 		<attributes>gid,tinw_00_10</attributes>
