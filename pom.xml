@@ -4,7 +4,7 @@
 	<groupId>nl.cbs.cbsviewer</groupId>
 	<artifactId>cbsviewer</artifactId>
 	<packaging>war</packaging>
-	<version>0.2</version>
+	<version>0.3-SNAPSHOT</version>
 	<name>CBSviewer Webapp</name>
 	<description>Webrichtlijnen compliant webmap viewer.</description>
 	<url>http://mineleni.github.com/CBSviewer/</url>
