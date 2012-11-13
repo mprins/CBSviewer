@@ -614,6 +614,12 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 		.megaTwoColumns ul:last-child,
 		.megaTwoColumns .col:last-child { width: 50%; }
 		
+		/* 3 columns */
+		.megaThreeColumns ul, 
+		.megaThreeColumns .col { width: 33%;}
+		.megaThreeColumns ul:last-child,
+		.megaThreeColumns .col:last-child { width: 34%; }
+		
 		/* 4 columns */
 		.megaFourColumns ul, 
 		.megaFourColumns .col { width: 24.75%;}
@@ -830,7 +836,7 @@ width:390px;
 
 .navleft .menuTitle, .navright .menuTitle
 {
-	padding: 10px;
+	padding: 0px;
 }
 
 /* main level link hover */

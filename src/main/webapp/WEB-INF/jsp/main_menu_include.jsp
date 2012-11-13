@@ -21,11 +21,11 @@
 					<li>
 						<a href="#">Op thema</a>
 							<div class="contentasset">
-								<div class="megaMenu megaFourColumns">
+								<div class="megaMenu megaThreeColumns">
 									<ul class="navleft">
 										<!--ul class="navleft"-->
 											<li class="menuTitle">Bevolking</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('De bevolking van Nederland op 1 januari.')">Aantal inwoners</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('De bevolking van Nederland op 1 januari.')">Inwoners totaal</a>
 												<ul>
 													<li></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -35,35 +35,35 @@
 													<li>Bevolkingskern<br/><a href="#">2008</a> | <a href="#">2006</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 0 tot 15 jaar.')">Personen van 0 tot 15 jaar</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 0 tot 15 jaar.')">Inwoners 0 tot 15 jaar</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 0 tot 20 jaar.')">Personen van 0 tot 20 jaar</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 0 tot 20 jaar.')">Inwoners 0 tot 20 jaar</a>
 												<ul>
 													<li>100m vierkant<br/><a href="#">2011</a><span class="redcolor">*</span></li>
 													<li>500m vierkant<br/><a href="#">2011</a></li>
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 15 tot 25 jaar.')">Personen van 15 tot 25 jaar</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 15 tot 25 jaar.')">Inwoners 15 tot 25 jaar</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 20 tot 45 jaar.')">Personen van 20 tot 45 jaar</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 20 tot 45 jaar.')">Inwoners 25 tot 45 jaar</a>
 												<ul>
 													<li>100m vierkant<br/><a href="#">2011</a><span class="redcolor">*</span></li>
 													<li>500m vierkant<br/><a href="#">2011</a></li>
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 25 tot 45 jaar.')">Personen van 25 tot 45 jaar</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 25 tot 45 jaar.')">Inwoners 45 tot 65 jaar</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -73,7 +73,7 @@
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 45 tot 65 jaar.')">Personen van 45 tot 65 jaar</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 45 tot 65 jaar.')">Inwoners 65 jaar en ouder</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -83,7 +83,7 @@
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 65 jaar en ouder.')">Personen van 65 jaar en ouder</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 65 jaar en ouder.')">Bevolkingsdichtheid</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -93,7 +93,7 @@
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Bevolkingsdichtheid uitleg')">Bevolkingsdichtheid</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Bevolkingsdichtheid uitleg')">Verandering inwonertal 2000-2010</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -101,85 +101,25 @@
 													<li>100m vierkant<br/><a href="#">2011</a></li>
 													<li>500m vierkant<br/><a href="#">2011</a></li>
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
-												</ul>
-											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Verandering inwonertal uitleg.')">Verandering inwonertal 2000-2010</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>100m vierkant<br/><a href="#">2011</a></li>
-													<li>500m vierkant<br/><a href="#">2011</a></li>
-													<li>Bevolkingskern<br/><a href="#">2008</a></li>
-												</ul>
-											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Geboorte.')">Geboorte</a>
-												<ul>
-													<li>?<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Sterfte.')">Sterfte</a>
-												<ul>
-													<li>?<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
 
 											<li class="menuTitle">Huishoudens</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Aantal particuliere huishoudens uitleg.')">Aantal particuliere huishoudens</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Aantal particuliere huishoudens uitleg.')">Eenpersoonshuishoudens</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Eenpersoonshuishoudens uitleg.')">Eenpersoonshuishoudens</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Eenpersoonshuishoudens uitleg.')">Huishoudens zonder kinderen</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huishoudens zonder kinderen uitleg.')">Huishoudens zonder kinderen</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huishoudens met kinderen uitleg.')">Huishoudens met kinderen</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>		
-										<!--/ul-->
-									</ul>
-									<ul id="toplevel" class="navleft">
-										<!--ul class="navleft"-->
-											<li class="menuTitle">Wonen</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Woningen uitleg.')">Woningen</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Woning WOZ-waarde uitleg.')">Woning WOZ-waarde</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huurwoning uitleg.')">Huurwoning</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Koopwoning uitleg.')">Koopwoning</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huishoudens zonder kinderen uitleg.')">Huishoudens met kinderen</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -187,137 +127,191 @@
 												</ul>
 											</li>
 											
-											<li class="menuTitle">Inkomens</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Aantal inkomensontvangers uitleg.')">Aantal inkomensontvangers</a>
+											<li class="menuTitle">Herkomst</li>	
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Aantal particuliere huishoudens uitleg.')">Autochtonen (%)</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Eenpersoonshuishoudens uitleg.')">Niet-westerse allochtonen (%)</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huishoudens zonder kinderen uitleg.')">Westerse allochtonen (%)</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+
+										<!--/ul-->
+									</ul>
+									<ul id="toplevel" class="navleft">
+										<!--ul class="navleft"-->
+											<li class="menuTitle">Inkomen</li>	
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Woningen uitleg.')">Aantal inkomensontvangers</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Woning WOZ-waarde uitleg.')">Inkomen per ontvanger</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huurwoning uitleg.')">Inwoners met laag inkomen (%)</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Koopwoning uitleg.')">Inwoners met hoog inkomen (%)</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Koopwoning uitleg.')">Huishoudens met laag inkomen (%)</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>											
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Koopwoning uitleg.')">Huishoudens met hoog inkomen (%)</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>											
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Koopwoning uitleg.')">Huishoudens rond of onder sociaal minimum (%)</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											
+											<li class="menuTitle">Wonen</li>	
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Aantal inkomensontvangers uitleg.')">Woningen</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Inkomen per ontvanger uitleg.')">Inkomen per ontvanger</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Inkomen per ontvanger uitleg.')">Woning WOZ-waarde</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Inkomen per inwoners uitleg.')">Inkomen per inwoners</a>
+
+											<li class="menuTitle">Bedrijven</li>	
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">Agrarische bedrijven</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Personen met laag inkomen uitleg.')">Personen met laag inkomen</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">Industrie (%)</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
-											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Personen met hoog inkomen uitleg.')">Personen met hoog inkomen</a>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">Commerciele dienstverlening (%)</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
-											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet actieven uitleg.')">Niet actieven</a>
+											</li>												
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">Niet-commerciele dienstverlening (%)</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huishoudens met laag inkomen uitleg.')">Huishoudens met laag inkomen</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huishoudens met hoog inkomen uitleg.')">Huishoudens met hoog inkomen</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huishoudens rond of onder sociaal minimum uitleg.')">Huishoudens rond of onder sociaal minimum</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('AOW uitleg.')">AOW</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('WW uitleg.')">WW</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>	
-
-											<li class="menuTitle">Arbeid</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">??</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">??</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>		
+											
 										<!--/ul-->
 									</ul>
 									<ul class="navright">
 										<!--ul class="navright"-->
-											<li class="menuTitle">Bedrijven</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Agrarische bedrijven uitleg.')">Agrarische bedrijven</a>
+											<li class="menuTitle"><i>Voorzieningen</i><br/>Kortste afstand</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Agrarische bedrijven uitleg.')">Huisartsenpraktijk</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Gewassenbedrijven uitleg.')">Gewassenbedrijven</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Gewassenbedrijven uitleg.')">Huisartsenpost</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Veeteeltbedrijven uitleg.')">Veeteeltbedrijven</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Veeteeltbedrijven uitleg.')">Ziekenhuis, excl. buitenpolikliniek</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Industrie uitleg.')">Industrie</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Industrie uitleg.')">Kinderdagverblijf</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Commerciele dienstverlening uitleg.')">Commerciele dienstverlening</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Commerciele dienstverlening uitleg.')">Buitenschoolse opvang</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">Niet-commerciele dienstverlening</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">Basisonderwijs</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">VMBO onderwijs</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">HAVO/VWO onderwijs</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">Grote supermarkt</a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+												<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">Ov. dagelijkse levensmiddelen</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -326,166 +320,7 @@
 											</li>
 											
 											<li class="menuTitle">Stedelijkheid</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Omgevingsadressendichtheid uitleg.')">Omgevingsadressendichtheid bedrijven</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>	
-
-											<li class="menuTitle"><i>Nabijheid</i></li>
-											<li class="menuTitle">Kortste afstand</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huisartsenpraktijk uitleg.')">Huisartsenpraktijk bedrijven</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>			
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huisartsenpost uitleg.')">Huisartsenpost bedrijven</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>			
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Ziekenhuis, excl. buitenpolikliniek uitleg.')">Ziekenhuis, excl. buitenpolikliniek bedrijven</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>			
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Kinderdagverblijf uitleg.')">Kinderdagverblijf bedrijven</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>			
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Buitenschoolse opvang uitleg.')">Buitenschoolse opvang bedrijven</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>			
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Basisonderwijs uitleg.')">Basisonderwijs bedrijven</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>			
-										<!--/ul-->
-									</ul>
-									<ul class="navright">
-										<!--ul class="navright"-->
-											<li class="menuTitle"></li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('VMBO onderwijs uitleg.')">VMBO onderwijs</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('HAVO/VWO onderwijs uitleg.')">HAVO/VWO onderwijs</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Grote supermarkt uitleg.')">Grote supermarkt</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Ov. dagelijkse levensmiddelen uitleg.')">Ov. dagelijkse levensmiddelen</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Restaurant uitleg.')">Restaurant</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Bibliotheek uitleg.')">Bibliotheek</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Zwembad uitleg.')">Zwembad</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Bioscoop uitleg.')">Bioscoop</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Treinstation uitleg.')">Treinstation</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-
-											<li class="menuTitle">Aantal binnen 3 kilometer</li>			
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huisartsenpraktijk uitleg.')">Huisartsenpraktijk</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Kinderdagverblijf uitleg.')">Kinderdagverblijf</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Basisonderwijs uitleg.')">Basisonderwijs</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Grote supermarkt uitleg.')">Grote supermarkt</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											
-											<li class="menuTitle">Aantal binnen 5 kilometer</li>			
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('VMBO onderwijs uitleg.')">VMBO onderwijs</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('HAVO/VWO onderwijs uitleg.')">HAVO/VWO onderwijs</a>
+											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Omgevingsadressendichtheid uitleg.')">Omgevingsadressendichtheid</a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -499,33 +334,29 @@
 					</li>			
 					<li><a href="#">Op jaar</a>
 						 <div class="contentasset">
-							<div class="megaMenu megaFourColumns">
+							<div class="megaMenu megaThreeColumns">
 								<ul>
 									<li class="menuTitle">2012</li>
 									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('- Aantal inwoners: Ja')">100m vierkant</a></li>
 									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('- Aantal inwoners: Ja')">500m vierkant</a></li>
 									
 									<li class="menuTitle">2011</li>
-									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('Even kijken hoe dit op te lossen')">Gemeente</a></li>
-									<li><a href="#">Wijk</a></li>
-									<li><a href="#">Buurt</a></li>
+									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('Even kijken hoe dit op te lossen')">Gemeente / Wijk / Buurt</a></li>
 									<li><a href="#">100m vierkant</a></li>
 									<li><a href="#">500m vierkant</a></li>
 									
 									<li class="menuTitle">2010</li>
-									<li><a href="#">Gemeente</a></li>
-									<li><a href="#">Wijk</a></li>
-									<li><a href="#">Buurt</a></li>
+									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('Even kijken hoe dit op te lossen')">Gemeente / Wijk / Buurt</a></li>
+									<li><a href="#">100m vierkant</a></li>
+									<li><a href="#">500m vierkant</a></li>
+									
+									<li class="menuTitle">2009</li>
+									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('Even kijken hoe dit op te lossen')">Gemeente / Wijk / Buurt</a></li>
 									<li><a href="#">100m vierkant</a></li>
 									<li><a href="#">500m vierkant</a></li>
 								</ul>
 								<ul>
-									<li class="menuTitle">2009</li>
-									<li><a href="#">Gemeente</a></li>
-									<li><a href="#">Wijk</a></li>
-									<li><a href="#">Buurt</a></li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
+									
 									
 									<li class="menuTitle">2008</li>
 									<li><a href="#">100m vierkant</a></li>
@@ -536,12 +367,11 @@
 									<li class="menuTitle">2007</li>
 									<li><a href="#">100m vierkant</a></li>
 									<li><a href="#">500m vierkant</a></li>
-								</ul>
-								<ul>
+									
 									<li class="menuTitle">2006</li>
 									<li><a href="#">100m vierkant</a></li>
 									<li><a href="#">500m vierkant</a></li>
-									<li><a href="#">bodemgebruik</a></li>
+									<li><a href="#">Bodemgebruik</a></li>
 									
 									<li class="menuTitle">2005</li>
 									<li><a href="#">100m vierkant</a></li>
@@ -550,12 +380,12 @@
 									<li class="menuTitle">2004</li>
 									<li><a href="#">100m vierkant</a></li>
 									<li><a href="#">500m vierkant</a></li>
-
+								</ul>
+								<ul>
 									<li class="menuTitle">2003</li>
 									<li><a href="#">100m vierkant</a></li>
 									<li><a href="#">500m vierkant</a></li>
-								</ul>
-								<ul>
+
 									<li class="menuTitle">2002</li>
 									<li><a href="#">100m vierkant</a></li>
 									<li><a href="#">500m vierkant</a></li>
