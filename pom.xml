@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.cbs.cbsviewer</groupId>
 	<artifactId>cbsviewer</artifactId>
 	<packaging>war</packaging>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.2</version>
 	<name>CBSviewer Webapp</name>
 	<description>Webrichtlijnen compliant webmap viewer.</description>
 	<url>http://mineleni.github.com/CBSviewer/</url>
@@ -34,7 +33,7 @@
 		<license>
 			<name>BSD license</name>
 			<url>https://raw.github.com/MinELenI/CBSviewer/master/LICENSE.md</url>
-			<comments></comments>
+			<comments />
 			<distribution>repo</distribution>
 		</license>	
 		<license>
@@ -115,14 +114,11 @@
 								</connector>
 							</connectors>
 							<webAppConfig>
-								<baseResource
-									implementation="org.eclipse.jetty.util.resource.ResourceCollection">
+								<baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
 									<resourcesAsCSV>src/main/webapp,target/cbsviewer</resourcesAsCSV>
 								</baseResource>
-								<sessionHandler
-									implementation="org.eclipse.jetty.server.session.SessionHandler">
-									<sessionManager
-										implementation="org.eclipse.jetty.server.session.HashSessionManager">
+								<sessionHandler implementation="org.eclipse.jetty.server.session.SessionHandler">
+									<sessionManager implementation="org.eclipse.jetty.server.session.HashSessionManager">
 										<usingCookies>false</usingCookies>
 									</sessionManager>
 								</sessionHandler>
@@ -162,8 +158,7 @@
 										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
 										<mkdir dir="${basedir}/cache/" />
 										<mkdir dir="${basedir}/target/test-js/" />
-										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/"
-											usetimestamp="true" />
+										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/" usetimestamp="true" />
 										<unzip src="${basedir}/cache/${phantomjs.archive}" dest="${basedir}/target/test-js/">
 											<patternset>
 												<include name="**/${phantomjs.executable}" />
@@ -210,10 +205,8 @@
 										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
 										<mkdir dir="${basedir}/cache/" />
 										<mkdir dir="${basedir}/target/test-js/" />
-										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/"
-											usetimestamp="true" />
-										<bunzip2 src="${basedir}/cache/${phantomjs.archive}"
-											dest="${basedir}/cache/phantomjs.tar" />
+										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/" usetimestamp="true" />
+										<bunzip2 src="${basedir}/cache/${phantomjs.archive}" dest="${basedir}/cache/phantomjs.tar" />
 										<untar src="${basedir}/cache/phantomjs.tar" dest="${basedir}/target/test-js/">
 											<patternset>
 												<include name="**/${phantomjs.executable}" />
@@ -258,8 +251,7 @@
 										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
 										<mkdir dir="${basedir}/cache/" />
 										<mkdir dir="${basedir}/target/test-js/" />
-										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/"
-											usetimestamp="true" />
+										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/" usetimestamp="true" />
 										<unzip src="${basedir}/cache/${phantomjs.archive}" dest="${basedir}/target/test-js/">
 											<patternset>
 												<include name="**/${phantomjs.executable}" />
@@ -367,17 +359,13 @@
 									<target>
 										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
 										<mkdir dir="${basedir}/cache" />
-										<get
-											src="https://closure-compiler.googlecode.com/files/compiler-latest.zip"
-											dest="${basedir}/cache/" usetimestamp="true" />
+										<get src="https://closure-compiler.googlecode.com/files/compiler-latest.zip" dest="${basedir}/cache/" usetimestamp="true" />
 										<unzip src="${basedir}/cache/compiler-latest.zip" dest="${basedir}/target">
 											<patternset>
 												<include name="**/compiler.jar" />
 											</patternset>
 										</unzip>
-										<copy file="${basedir}/target/compiler.jar"
-											tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar"
-											overwrite="true" />
+										<copy file="${basedir}/target/compiler.jar" tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar" overwrite="true" />
 									</target>
 								</configuration>
 							</execution>
@@ -390,9 +378,7 @@
 								<configuration>
 									<!-- copy files into build -->
 									<target>
-										<copy
-											file="${project.build.directory}/OLcheckout/build/OpenLayers.js"
-											tofile="src/main/webapp/lib/OpenLayers.js" />
+										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers.js" tofile="src/main/webapp/lib/OpenLayers.js" />
 									</target>
 								</configuration>
 							</execution>
@@ -404,9 +390,7 @@
 								</goals>
 								<configuration>
 									<target>
-										<copy
-											file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js"
-											tofile="src/test/js/lib/OpenLayers-test.js" />
+										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js" tofile="src/test/js/lib/OpenLayers-test.js" />
 									</target>
 								</configuration>
 							</execution>
@@ -623,8 +607,7 @@
 								<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
 								<mkdir dir="${basedir}/cache/" />
 								<mkdir dir="${basedir}/target/test-js/" />
-								<get src="${jasmine.baseurl}/${jasmine.archive}" dest="${basedir}/cache/"
-									usetimestamp="true" />
+								<get src="${jasmine.baseurl}/${jasmine.archive}" dest="${basedir}/cache/" usetimestamp="true" />
 								<unzip src="${basedir}/cache/${jasmine.archive}" dest="${basedir}/target/test-js/">
 									<patternset>
 										<include name="**/lib/**" />
@@ -651,14 +634,10 @@
 										<include name="**/jquery*.js" />
 									</fileset>
 								</copy>
-								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html"
-									token="../../../main/js/" value="" />
-								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html"
-									token="../../../main/webapp/js/" value="" />
-								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html"
-									token="../../../main/webapp/lib/" value="" />
-								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html"
-									token="../jasmine/" value="" />
+								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html" token="../../../main/js/" value="" />
+								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html" token="../../../main/webapp/js/" value="" />
+								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html" token="../../../main/webapp/lib/" value="" />
+								<replace file="${basedir}/target/test-js/PhantomSpecRunner.html" token="../jasmine/" value="" />
 							</target>
 						</configuration>
 					</execution>
