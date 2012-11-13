@@ -903,11 +903,11 @@
 				<artifactId>site-maven-plugin</artifactId>
 				<version>0.7</version>
 				<configuration>
-					<message>site update voor versie ${project.version} (rev. ${buildNumber})</message>
+					<message>site update voor versie ${project.version} ( rev. ${buildNumber} )</message>
 					<password>${github.password}</password>
 					<userName>${github.username}</userName>
 					<host>api.github.com</host>
-					<force>true</force>
+					<force>false</force>
 				</configuration>
 				<executions>
 					<execution>
