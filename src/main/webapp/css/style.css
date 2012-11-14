@@ -149,6 +149,31 @@ a.accesskey:focus {
 	background: url('../img/maxmin.png') no-repeat 0 0;
 }
 
+#toggleBaseMap {
+	position: absolute;
+	top: -1px;
+	/* afstand vanaf de rand van de kaart */
+	right: 50px;
+	/* iets meer dan de breedte van de achtergrond sprite */
+	padding-right: 42px;
+	padding-left: 2px;
+	height: 21px;
+	text-align: right;
+	z-index: 900;
+	display: block;
+	background-color: #eff0f2;
+	background-repeat: no-repeat;
+	background-image: url('../img/lufotopo.png');
+}
+
+#toggleBaseMap.lufo { /*lufo icon*/
+	background-position: top right;
+}
+
+#toggleBaseMap.topo { /*kaart icon*/
+	background-position: right bottom;
+}
+
 .kaartnavi {
 	
 }

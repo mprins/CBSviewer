@@ -83,7 +83,7 @@
 					<jsp:include page="kaart">
 						<!-- TODO: mapid waarde moet uit de request komen bijv. ?mapid=cbs_inwoners_2000_per_hectare -->
 						<!-- StringConstants.REQ_PARAM_MAPID -->
-						<jsp:param name="mapid" value="cbs_inwoners_2000_per_hectare" />
+						<!-- <jsp:param name="mapid" value="cbs_inwoners_2000_per_hectare" /> -->
 	
 						<jsp:param value="${xcoord}" name="xcoord" />
 						<jsp:param value="${ycoord}" name="ycoord" />
