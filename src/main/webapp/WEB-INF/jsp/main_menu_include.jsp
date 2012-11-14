@@ -25,7 +25,7 @@
 									<ul class="navleft">
 										<!--ul class="navleft"-->
 											<li class="menuTitle">Bevolking</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('De bevolking van Nederland op 1 januari.')">Inwoners totaal</a>
+											<li><a href="#">Inwoners totaal<span>Dit is de tooltip</span></a>
 												<ul>
 													<li></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -35,37 +35,37 @@
 													<li>Bevolkingskern<br/><a href="#">2008</a> | <a href="#">2006</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 0 tot 15 jaar.')">Inwoners 0 tot 15 jaar</a>
+											<li><a href="#">Inwoners 0 tot 15 jaar<span>Dit is de langere tooltip</span></a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 0 tot 20 jaar.')">Inwoners 0 tot 20 jaar</a>
+											<li><a href="#">Inwoners 0 tot 20 jaar<span>Dit is de langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste tooltip</span></a>
 												<ul>
 													<li>100m vierkant<br/><a href="#">2011</a><span class="redcolor">*</span></li>
 													<li>500m vierkant<br/><a href="#">2011</a></li>
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 15 tot 25 jaar.')">Inwoners 15 tot 25 jaar</a>
+											<li><a href="#">Inwoners 15 tot 25 jaar<span>Dit is de tooltip</span></a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 20 tot 45 jaar.')">Inwoners 25 tot 45 jaar</a>
+											<li><a href="#">Inwoners 25 tot 45 jaar<span>Dit is de tooltip</span></a>
 												<ul>
 													<li>100m vierkant<br/><a href="#">2011</a><span class="redcolor">*</span></li>
 													<li>500m vierkant<br/><a href="#">2011</a></li>
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 25 tot 45 jaar.')">Inwoners 45 tot 65 jaar</a>
+											<li><a href="#">Inwoners 45 tot 65 jaar<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>100m vierkant<br/><a href="#">2011</a></li>
@@ -73,9 +73,9 @@
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 45 tot 65 jaar.')">Inwoners 65 jaar en ouder</a>
+											<li><a href="#">Inwoners 65 jaar en ouder<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>100m vierkant<br/><a href="#">2011</a></li>
@@ -83,9 +83,9 @@
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 65 jaar en ouder.')">Bevolkingsdichtheid</a>
+											<li><a href="#">Bevolkingsdichtheid<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>100m vierkant<br/><a href="#">2011</a><span class="redcolor">*</span></li>
@@ -93,9 +93,9 @@
 													<li>Bevolkingskern<br/><a href="#">2008</a></li>
 												</ul>
 											</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Bevolkingsdichtheid uitleg')">Verandering inwonertal 2000-2010</a>
+											<li><a href="#">Verandering inwonertal 2000-2010<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>100m vierkant<br/><a href="#">2011</a></li>
@@ -105,46 +105,46 @@
 											</li>
 
 											<li class="menuTitle">Huishoudens</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Aantal particuliere huishoudens uitleg.')">Eenpersoonshuishoudens</a>
+											<li><a href="#">Eenpersoonshuishoudens<span>Dit is de tooltip</span></a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Eenpersoonshuishoudens uitleg.')">Huishoudens zonder kinderen</a>
+											<li><a href="#">Huishoudens zonder kinderen<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huishoudens zonder kinderen uitleg.')">Huishoudens met kinderen</a>
+											<li><a href="#">Huishoudens met kinderen<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
 											
 											<li class="menuTitle">Herkomst</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Aantal particuliere huishoudens uitleg.')">Autochtonen (%)</a>
+											<li><a href="#">Autochtonen (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Eenpersoonshuishoudens uitleg.')">Niet-westerse allochtonen (%)</a>
+											<li><a href="#">Niet-westerse allochtonen (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huishoudens zonder kinderen uitleg.')">Westerse allochtonen (%)</a>
+											<li><a href="#">Westerse allochtonen (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
@@ -155,91 +155,91 @@
 									<ul id="toplevel" class="navleft">
 										<!--ul class="navleft"-->
 											<li class="menuTitle">Inkomen</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Woningen uitleg.')">Aantal inkomensontvangers</a>
+											<li><a href="#">Aantal inkomensontvangers<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Woning WOZ-waarde uitleg.')">Inkomen per ontvanger</a>
+											<li><a href="#">Inkomen per ontvanger<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Huurwoning uitleg.')">Inwoners met laag inkomen (%)</a>
+											<li><a href="#">Inwoners met laag inkomen (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Koopwoning uitleg.')">Inwoners met hoog inkomen (%)</a>
+											<li><a href="#">Inwoners met hoog inkomen (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Koopwoning uitleg.')">Huishoudens met laag inkomen (%)</a>
+											<li><a href="#">Huishoudens met laag inkomen (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>											
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Koopwoning uitleg.')">Huishoudens met hoog inkomen (%)</a>
+											<li><a href="#">Huishoudens met hoog inkomen (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>											
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Koopwoning uitleg.')">Huishoudens rond of onder sociaal minimum (%)</a>
+											<li><a href="#">Huishoudens rond of onder sociaal minimum (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
 											
 											<li class="menuTitle">Wonen</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Aantal inkomensontvangers uitleg.')">Woningen</a>
+											<li><a href="#">Woningen<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Inkomen per ontvanger uitleg.')">Woning WOZ-waarde</a>
+											<li><a href="#">Woning WOZ-waarde<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>		
 
 											<li class="menuTitle">Bedrijven</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">Agrarische bedrijven</a>
+											<li><a href="#">Agrarische bedrijven<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>		
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">Industrie (%)</a>
+											<li><a href="#">Industrie (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">Commerciele dienstverlening (%)</a>
+											<li><a href="#">Commerciele dienstverlening (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>												
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('?? uitleg.')">Niet-commerciele dienstverlening (%)</a>
+											<li><a href="#">Niet-commerciele dienstverlening (%)<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>	
 											
@@ -248,81 +248,81 @@
 									<ul class="navright">
 										<!--ul class="navright"-->
 											<li class="menuTitle"><i>Voorzieningen</i><br/>Kortste afstand</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Agrarische bedrijven uitleg.')">Huisartsenpraktijk</a>
+											<li><a href="#">Huisartsenpraktijk<span>Dit is de tooltip</span></a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Huisartsenpost<span>Dit is de tooltip</span></a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Ziekenhuis, excl. buitenpolikliniek<span>Dit is de tooltip</span></a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Kinderdagverblijf<span>Dit is de tooltip</span></a>
+												<ul>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Buitenschoolse opvang<span>Dit is de tooltip</span></a>
 												<ul>
 													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Gewassenbedrijven uitleg.')">Huisartsenpost</a>
+											<li><a href="#">Basisonderwijs<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Veeteeltbedrijven uitleg.')">Ziekenhuis, excl. buitenpolikliniek</a>
+											<li><a href="#">VMBO onderwijs<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Industrie uitleg.')">Kinderdagverblijf</a>
+											<li><a href="#">HAVO/VWO onderwijs<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Commerciele dienstverlening uitleg.')">Buitenschoolse opvang</a>
+											<li><a href="#">Grote supermarkt<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">Basisonderwijs</a>
+												<li><a href="#">Ov. dagelijkse levensmiddelen<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">VMBO onderwijs</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">HAVO/VWO onderwijs</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">Grote supermarkt</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-												</ul>
-											</li>
-												<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Niet-commerciele dienstverlening uitleg.')">Ov. dagelijkse levensmiddelen</a>
-												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
 											</li>
 											
 											<li class="menuTitle">Stedelijkheid</li>
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Omgevingsadressendichtheid uitleg.')">Omgevingsadressendichtheid</a>
+											<li><a href="#">Omgevingsadressendichtheid<span>Dit is de tooltip</span></a>
 												<ul>
-													<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
+													<li>Gemeente<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 												</ul>
@@ -337,67 +337,67 @@
 							<div class="megaMenu megaThreeColumns">
 								<ul>
 									<li class="menuTitle">2012</li>
-									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('- Aantal inwoners: Ja')">100m vierkant</a></li>
-									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('- Aantal inwoners: Ja')">500m vierkant</a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
 									
 									<li class="menuTitle">2011</li>
-									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('Even kijken hoe dit op te lossen')">Gemeente / Wijk / Buurt</a></li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
+									<li><a href="#">Gemeente / Wijk / Buurt<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
 									
 									<li class="menuTitle">2010</li>
-									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('Even kijken hoe dit op te lossen')">Gemeente / Wijk / Buurt</a></li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
+									<li><a href="#">Gemeente / Wijk / Buurt<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
 									
 									<li class="menuTitle">2009</li>
-									<li><a href="#" class="tooltip" onmouseout="wijzigTerug()" onmouseover="wijzig('Even kijken hoe dit op te lossen')">Gemeente / Wijk / Buurt</a></li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
+									<li><a href="#">Gemeente / Wijk / Buurt<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
 								</ul>
 								<ul>
 									
 									
 									<li class="menuTitle">2008</li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
-									<li><a href="#">Bevolkingskern</a></li>
-									<li><a href="#">Bodemgebruik</a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">Bevolkingskern<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">Bodemgebruik<span>Dit is de tooltip</span></a></li>
 
 									<li class="menuTitle">2007</li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
 									
 									<li class="menuTitle">2006</li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
-									<li><a href="#">Bodemgebruik</a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">Bodemgebruik<span>Dit is de tooltip</span></a></li>
 									
 									<li class="menuTitle">2005</li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
 
 									<li class="menuTitle">2004</li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
 								</ul>
 								<ul>
 									<li class="menuTitle">2003</li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
 
 									<li class="menuTitle">2002</li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
 
 									<li class="menuTitle">2001</li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>
-									<li><a href="#">Bevolkingskern</a></li>
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">Bevolkingskern<span>Dit is de tooltip</span></a></li>
 									
 									<li class="menuTitle">2000</li>
-									<li><a href="#">100m vierkant</a></li>
-									<li><a href="#">500m vierkant</a></li>	
+									<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>	
 								</ul>
 							</div>
 						</div>
@@ -408,54 +408,54 @@
 							<div class="megaMenu megaFourColumns">
 								<ul>										
 									<li class="menuTitle"><p><img src="img/template/bodemgebruik.png" alt="Bodemgebruik"/></p>Bodemgebruik</li>
-									<li><a href="#">2006</a></li>
-									<li><a href="#">2008</a></li>
+									<li><a href="#">2006<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2008<span>Dit is de tooltip</span></a></li>
 								</ul>
 								<ul>										
 									<li class="menuTitle"><p><img src="img/template/bevolkingskernen.png" alt="Bevolkingskernen"/></p>Bevolkingskernen</li>
-									<li><a href="#">2001</a></li>
-									<li><a href="#">2008</a></li>									
+									<li><a href="#">2001<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2008<span>Dit is de tooltip</span></a></li>									
 								</ul>
 								<ul>									
 									<li class="menuTitle"><p><img src="img/template/vierkanten.png" alt="Vierkanten"/></p>Vierkanten 100m</li>
-									<li><a href="#">2000</a> | <a href="#">2007</a></li>
-									<li><a href="#">2001</a> | <a href="#">2008</a></li>
-									<li><a href="#">2002</a> | <a href="#">2009</a></li>
-									<li><a href="#">2003</a> | <a href="#">2010</a></li>
-									<li><a href="#">2004</a> | <a href="#">2011</a></li>
-									<li><a href="#">2005</a> | <a href="#">2012</a></li>
-									<li><a href="#">2006</a></li>
+									<li><a href="#">2000<span>Dit is de tooltip</span></a> | <a href="#">2007<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2001<span>Dit is de tooltip</span></a> | <a href="#">2008<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2002<span>Dit is de tooltip</span></a> | <a href="#">2009<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2003<span>Dit is de tooltip</span></a> | <a href="#">2010<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2004<span>Dit is de tooltip</span></a> | <a href="#">2011<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2005<span>Dit is de tooltip</span></a> | <a href="#">2012<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2006<span>Dit is de tooltip</span></a></li>
 									
 									<li class="menuTitle">Vierkanten 500m</li>
-									<li><a href="#">2000</a> | <a href="#">2007</a></li>
-									<li><a href="#">2001</a> |  <a href="#">2008</a></li>
-									<li><a href="#">2002</a> | <a href="#">2009</a></li>
-									<li><a href="#">2003</a> | <a href="#">2010</a></li>
-									<li><a href="#">2004</a> | <a href="#">2011</a></li>
-									<li><a href="#">2005</a> | <a href="#">2012</a></li>
-									<li><a href="#">2006</a></li>
+									<li><a href="#">2000<span>Dit is de tooltip</span></a> | <a href="#">2007<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2001<span>Dit is de tooltip</span></a> |  <a href="#">2008<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2002<span>Dit is de tooltip</span></a> | <a href="#">2009<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2003<span>Dit is de tooltip</span></a> | <a href="#">2010<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2004<span>Dit is de tooltip</span></a> | <a href="#">2011<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2005<span>Dit is de tooltip</span></a> | <a href="#">2012<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2006<span>Dit is de tooltip</span></a></li>
 									
 								</ul>
 								<ul>									
 									<li class="menuTitle"><p><img src="img/template/wijkenbuurten.png" alt="Wijken en buurten"/></p>Buurten</li>
-									<li><a href="#">2009</a></li>
-									<li><a href="#">2010</a></li>
-									<li><a href="#">2011</a></li>
+									<li><a href="#">2009<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2010<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2011<span>Dit is de tooltip</span></a></li>
 
 									<li class="menuTitle">Wijken</li>
-									<li><a href="#">2009</a></li>
-									<li><a href="#">2010</a></li>
-									<li><a href="#">2011</a></li>
+									<li><a href="#">2009<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2010<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2011<span>Dit is de tooltip</span></a></li>
 
 									<li class="menuTitle">Gemeenten</li>
-									<li><a href="#">2009</a></li>
-									<li><a href="#">2010</a></li>
-									<li><a href="#">2011</a></li>									
+									<li><a href="#">2009<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2010<span>Dit is de tooltip</span></a></li>
+									<li><a href="#">2011<span>Dit is de tooltip</span></a></li>									
 								</ul>
 							</div>
 						</div>
 					</li>
-					<li id="infobox">Beweeg met de muis over een item voor meer informatie. <br/><br/>Klik op de hoofdgroep om de standaardlaag te laden. Deze is aangegeven met een sterretje (<span class="redcolor">*</span>)</li>  
+					<li id="infobox"></li>  
 				</ol>
 			</div>
 		</li>

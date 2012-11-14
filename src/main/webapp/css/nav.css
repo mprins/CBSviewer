@@ -274,7 +274,7 @@ body
   width:183px;
   height:380px;
   padding:50px 0px 0px 10px;
-  font-size:11px;
+
   background-repeat: no-repeat;
   background-position: center 5px;
   color: #000000;
@@ -929,4 +929,14 @@ display: inline;
  
 * html .navleft, html .navright {
 	height: 1%;
+}
+
+.dropDownMenu a span {display: none;}
+
+.dropDownMenu a:hover span {
+  font-size:11px;
+	display: block;
+   position: fixed; top: 270px; left: 5px; width: 183px;
+   padding: 5px; margin: 0px; z-index: 100;
+   color: #000000;
 }
