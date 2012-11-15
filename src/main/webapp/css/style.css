@@ -1,5 +1,26 @@
 @charset "UTF-8";
 
+body
+{
+	background-image: url(../img/template/bg_body.gif);
+	background-repeat: repeat-x;
+	background-color: #2d598c;
+	font-size: 11px;
+	font-family: Arial, Helvetica, verdana, sans-serif;
+	
+	width: 100%;
+	height:100%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+html,body{
+    height:100%;    
+    margin:0;
+    padding:0;
+}
+
 /* opmaak van de elementen */
 .error,.todo {
 	background: url("../img/error.png") no-repeat scroll -12px 1px
@@ -8,8 +29,6 @@
 	text-align: center;
 	color: #f00;
 	border: 1px solid;
-	font-size: 90%;
-	font-weight: bold;
 	font-style: italic;
 	font-variant: small-caps;
 }
@@ -59,39 +78,41 @@ a.accesskey:focus {
 }
 
 #zoekFormulier {
-	display: inline;
-	clear:both;
 }
 
 #zoekContent
 {
-	white-space:nowrap; 
-	padding: 1px;
+	white-space:nowrap;
 	height:76px;
-	vertical-align:middle;
 }
 
 #searchbutton {
-	background: url('../img/search.gif') top left no-repeat;
-	width: 31px;
+	background-image: url('../img/search.gif');
+    background-position: 0px 93px;	
+	width:31px;
 	height:31px;
-	border: 0px solid #aaa;
+	cursor: pointer; 
+	border: none;
 }
 
 #searchbutton:hover,#searchbutton:focus {
-	background-position: right 31;
+    background-position: 0px 62px;
+	cursor: hand; cursor: pointer; 
+	height:31px;
 }
 
 #searchbutton:active 
 {
-	background-position: right bottom;
+    background-position: 0px 31px;
+	height:31px;
 	cursor:wait; /* Shows the wait cursor on click */ 
 }
 
 #adres {
 	border: 1px solid #aaa;
-	width:350px;
-	height:35px;
+	width:60%;
+	min-width:185px;
+	height:31px;
 	font-size:19px;
 }
 
@@ -282,4 +303,210 @@ a.olControlZoomOut {
 
 .olImageLoadError {
 	display: none;
+}
+
+.utilBlock
+{
+	margin-top: 14px;
+	float: right;
+}
+
+.utilBlock a
+{
+	color: #7e7e7e;
+	border-right: 1px Solid #c7c7c7;
+	padding-right: 9px;
+	line-height: 10px;
+	margin-right: 9px;
+	text-decoration: none;
+}
+
+.utilBlock a.active
+{
+	font-weight: bold;
+	color: #6ba1d4;
+}
+
+.utilBlock a:hover
+{
+	color: #d46882;
+	text-decoration: underline;
+}
+
+.teaserPanel
+{
+	clear: both;
+	width:100%;
+	height: 72px;
+	padding-left: 15px;
+	background-position: left top;
+	background-color: white;
+}
+
+.teaserContent
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:960px;
+	height: 72px;
+	padding-left: 15px;
+	background-position: left top;
+	background-color: white;
+}
+
+.teaserPanel a
+{
+	display: block;
+	float: left;
+	padding-left: 55px;
+	padding-top: 13px;
+	margin-right: 5px;
+	margin-top: 8px;
+	
+	background-repeat: no-repeat;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	width: 179px;
+	height: 40px;
+	text-decoration: none;
+}
+
+.teaserPanel a span
+{
+	display: block;
+	margin-top: 2px;
+	font-size: 11px;
+	color: #a5a5a5;
+}
+
+.teaserPanel a strong
+{
+	color: #3d81a1;
+}
+.teaserPanel a.opMaat
+{
+	background-image: url(../img/template/btn_teaserPanel_opMaat.gif);
+}
+
+.teaserPanel a.rss
+{
+	background-image: url(../img/template/btn_teaserPanel_rss.gif);
+}
+
+.teaserPanel a.databank
+{
+	background-image: url(../img/template/btn_teaserPanel_databank.gif);
+}
+
+.teaserPanel a.gezocht
+{
+	background-image: url(../img/template/btn_teaserPanel_gezocht.gif);
+}
+
+.footer 
+{
+	background-color: #426A98;
+	background-repeat: no-repeat;
+	height: 29px;
+	line-height: 28px;
+	color: #b3c3d6;
+	text-align: center;
+	margin-top: 3px;
+}
+
+.footer a
+{
+	color: #b3c3d6;
+	text-decoration: none;
+	line-height: 12px;
+	padding-right: 15px;
+	padding-left: 13px;
+}
+
+.footer a:hover
+{
+	text-decoration: underline;
+}
+
+.footer a.last
+{
+	background-image: none;
+	padding-right: 0px;
+}
+
+.redcolor
+{
+ color:red;
+}
+
+.header
+{
+    display:table;
+    width:100%;
+	height: 76px;
+	max-height:76px;
+    position:relative;
+	margin-left: 5px;
+}
+
+.headerColumn
+{
+    display:table-cell;
+	vertical-align:top;
+    width:30%;
+	padding-right:5px;
+}
+
+#inhoud {
+    height:100%;
+    padding:76px 0;
+    margin:-76px 0;
+    z-index:1;
+}
+
+#footer{
+    position:relative;
+    z-index:1;
+	height:100px;
+}
+
+.logo
+{
+	float: left;
+	clear:both;
+	padding-top: 9px;
+	padding-left: 3px;
+}
+
+#legendaContainer
+{
+	border: 1px Solid #c7c7c7;
+	padding: 3px;
+	background: rgb(255, 255, 255) transparent;  /* oude browsers */
+	background: rgba(255, 255, 255, 0.6); 
+	min-width:150px;
+	position:absolute;
+	left:5px;
+	top:185px;
+	z-index:996;
+}
+
+#infoContainer
+{
+	background: rgb(255, 255, 255) transparent;  /* oude browsers */
+	background: rgba(255, 255, 255, 0.6); 
+	padding: 3px;
+	min-width:150px;
+	border: 1px Solid #c7c7c7;
+	position:absolute;
+	left:5px;
+	top:390px;
+	z-index:996;
+}
+
+#zoekresultaten
+{
+padding:0px;
+margin:5px;
 }

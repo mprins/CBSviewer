@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
 	xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
@@ -60,17 +60,17 @@
 <body>
 
 <div class="header">
-    <div id="headerleft" class="Col">
+    <div id="headerleft" class="headerColumn">
 		<div class="logo">
 			<a href="#">
 				<img src="./img/template/hdr_logo.gif" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/>
 			</a>
 		</div>
 	</div>
-    <div id="headercenter" class="Col">
+    <div id="headercenter" class="headerColumn">
 		<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
 	</div>
-    <div id="headerright" class="Col">
+    <div id="headerright" class="headerColumn">
 		<div class="utilBlock">	
 			<a href="#" class="active">Home</a>
 			<a href="#">Over CBS in uw buurt</a>

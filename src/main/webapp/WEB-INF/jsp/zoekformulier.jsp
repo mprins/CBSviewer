@@ -14,7 +14,7 @@
 		title="Zoekformulier">
 		<div id="zoekContent">
 			<!--jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression-->
-				<input type="text" id="adres" name="adres" value="${param.adres}" text="Postcode of plaatsnaam" />
+				<input type="text" id="adres" name="adres" value="${param.adres}"/>
 
 				<c:if test="${request.straal != null}">
 					<input type="hidden" name="straal" value="${straal}" />

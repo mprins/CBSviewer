@@ -76,7 +76,7 @@ var ZoekFormulier = {
 			break;
 		default:
 			html += '<div class="adreslijst">';
-			html += 'Bedoelt u? ';
+			/*html += 'Bedoelt u? ';*/
 			for ( var i = 0; i < data.length; i++) {
 				html += '' + '<a class="button" href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ',' + data[i].yCoord + ','
 						+ data[i].radius + ');return false;" title="Zoom naar adres"><span>' + data[i].addressString
