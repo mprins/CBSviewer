@@ -59,34 +59,80 @@ a.accesskey:focus {
 }
 
 #zoekFormulier {
-	background-color: #eaecef;
-	padding: 8px 12px 12px 8px;
-	margin: 0 0 20px 0;
+	display: inline;
+	clear:both;
 }
 
-#zoekFormulier p.button {
-	margin-bottom: 0;
+#zoekContent
+{
+	white-space:nowrap; 
+	padding: 1px;
+	height:76px;
+	vertical-align:middle;
 }
 
-#zoekFormulier button {
-	background: url('../img/button.png') top right no-repeat;
-	height: 21px;
-	line-height: 21px;
-	padding: 0 25px 0 0;
-	text-align: right;
+#searchbutton {
+	background: url('../img/search.gif') top left no-repeat;
+	width: 31px;
+	height:31px;
+	border: 0px solid #aaa;
 }
 
-#zoekFormulier button:hover,#zoekFormulier button:focus {
+#searchbutton:hover,#searchbutton:focus {
+	background-position: right 31;
+}
+
+#searchbutton:active 
+{
 	background-position: right bottom;
+	cursor:wait; /* Shows the wait cursor on click */ 
 }
 
-#zoekFormulier p input,#zoekFormulier p button {
+#adres {
 	border: 1px solid #aaa;
-	width: 100%;
+	width:350px;
+	height:35px;
+	font-size:19px;
+}
+
+#adres:hover, #adres:focus
+{
+	border: 1px solid #2D598C;	
+}
+
+#zoekFormulier .adreslijst  .button {
+    background: transparent url('../img/template/multipleresults.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; 
+    text-decoration: none;
 }
 
 #zoekFormulier .adreslijst {
-	
+    display: block;
+    float: left;
+}
+
+#zoekFormulier .adreslijst  .button span {
+    background: transparent url('../img/template/multipleresults_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+}
+
+#zoekFormulier .adreslijst  .button:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none;
+}
+
+#zoekFormulier .adreslijst  .button:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; 
 }
 
 #zoekFormulier ul {
@@ -182,7 +228,7 @@ a.accesskey:focus {
 
 div.olControlZoom {
 	position: absolute;
-	top: 8px;
+	top: 55px;
 	left: 8px;
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: 4px;

@@ -19,7 +19,7 @@
 			<div class="navDropDown"> 
 				<ol class="navCategories">
 					<li>
-						<a href="#">Op thema</a>
+						<a href="#">Op thema<span>Selecteer een kaartlaag op thema</span></a>
 							<div class="contentasset">
 								<div class="megaMenu megaThreeColumns">
 									<ul class="navleft">
@@ -332,7 +332,7 @@
 								</div>
 							</div>
 					</li>			
-					<li><a href="#">Op jaar</a>
+					<li><a href="#">Op jaar<span>Selecteer een kaartlaag op jaar</span></a>
 						 <div class="contentasset">
 							<div class="megaMenu megaThreeColumns">
 								<ul>
@@ -403,7 +403,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="#">Op kaartlaag</a>
+						<a href="#">Op kaartlaag<span>Selecteer een kaartlaag</span></a>
 						<div class="contentasset">
 							<div class="megaMenu megaFourColumns">
 								<ul>										
