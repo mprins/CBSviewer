@@ -40,7 +40,7 @@
 		<c:otherwise>
 			<c:set var="wisselachtergrond" value="luchtfoto" />
 			<!--<fmt:message key="nl.mineleni.cbsviewer.util.LabelsBundle.KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />-->
-			<c:set value="Toon topografie" var="wisselachtergrondBtn" />
+			<c:set value="Toon luchtfoto" var="wisselachtergrondBtn" />
 		</c:otherwise>
 	</c:choose>
 
