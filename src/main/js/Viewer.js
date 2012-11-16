@@ -233,7 +233,6 @@ Viewer = function() {
 				var w = jQuery('#' + this.config.mapDiv).parent().width();
 				// var h = jQuery('#' + this.config.mapDiv).parent().height();
 				var h = jQuery('#' + this.config.mapDiv).parent().parent().height();
-				console.debug('instellen WxH:', w, h);
 				jQuery('#' + this.config.mapDiv).width(w).height(h);
 				jQuery('#toggleSize').toggleClass('restore max');
 				_fullSize = true;
