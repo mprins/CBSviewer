@@ -15,7 +15,7 @@ Viewer = function() {
 	var _map = null;
 
 	/**
-	 * Toggle vlag voor fuulsize functie.
+	 * Toggle vlag voor fullsize functie.
 	 * 
 	 * @type {Boolean}
 	 */
@@ -77,6 +77,14 @@ Viewer = function() {
 					+ OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO') + '</a>';
 			jQuery('#' + config.mapDiv).prepend(aToggle);
 
+			// toggle knop voor vergroten/verkleinen van de kaart
+			var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('KEY_TOGGLE_SIZE')
+					+ '" onclick="Viewer.toggleFullSize();"></a>';
+			jQuery('#' + config.mapDiv).prepend(aToggle);
+
+			if (this.config.fullSize) {
+				this.toggleFullSize();
+			}
 		},
 
 		/**
@@ -173,7 +181,7 @@ Viewer = function() {
 			}, {
 				isBaseLayer : false,
 				visibility : true,
-				singleTile : true,
+				singleTile : false,
 				opacity : 0.8
 			});
 			_map.addLayer(layer);
@@ -223,7 +231,9 @@ Viewer = function() {
 			} else {
 				// vergroten
 				var w = jQuery('#' + this.config.mapDiv).parent().width();
-				var h = jQuery('#' + this.config.mapDiv).parent().height();
+				// var h = jQuery('#' + this.config.mapDiv).parent().height();
+				var h = jQuery('#' + this.config.mapDiv).parent().parent().height();
+				console.debug('instellen WxH:', w, h);
 				jQuery('#' + this.config.mapDiv).width(w).height(h);
 				jQuery('#toggleSize').toggleClass('restore max');
 				_fullSize = true;

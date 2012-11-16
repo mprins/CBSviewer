@@ -36,11 +36,6 @@ var setupPage = {
 		// ondersteuning is.
 		jQuery('#coreContainer').remove();
 
-		// toggle knop voor vergroten van de kaart
-		var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('KEY_TOGGLE_SIZE')
-				+ '" onclick="Viewer.toggleFullSize();"></a>';
-		jQuery('#' + config.mapDiv).prepend(aToggle);
-
 		// a11y link toevoegen in de DOM boven de kaart
 		var aLink = '<a class="accesskey" href="" accesskey="1" onclick="jQuery(\'#' + config.mapDiv
 				+ '\').attr(\'tabindex\',-1).focus(); return false;" title="' + OpenLayers.i18n('KEY_KEYBOARDNAV_TTL')

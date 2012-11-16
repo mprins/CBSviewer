@@ -33,6 +33,13 @@ config.map = {
 };
 
 /**
+ * schakel de kaart naar pagina vullend tijdens opstarten.
+ * 
+ * @type {Boolean}
+ */
+config.fullSize = true;
+
+/**
 * Tooltip inside menu
 */
 function wijzig(inhoud) {document.getElementById('infobox').innerHTML = inhoud; } 
