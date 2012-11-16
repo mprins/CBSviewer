@@ -70,8 +70,18 @@ public final class OpenLSClientUtil {
                 continue;
             }
 
-            addr.setxCoord((gca.getPoint().getPosAt(0).getX()).toString());
-            addr.setyCoord((gca.getPoint().getPosAt(0).getY()).toString());
+            if (gca.getPoint().getSrsName().equalsIgnoreCase("EPSG:28992")) {
+                // afronden naar meters in het geval van Rijksdriekhoek
+                // WORKAROUND voor bug in PDOK gazetteer service die belachelijk
+                // hoge nauwkeurigheid hanteerd voor centroiden
+                addr.setxCoord((gca.getPoint().getPosAt(0).getX()).intValue()
+                        + "");
+                addr.setyCoord((gca.getPoint().getPosAt(0).getY()).intValue()
+                        + "");
+            } else {
+                addr.setxCoord((gca.getPoint().getPosAt(0).getX()).toString());
+                addr.setyCoord((gca.getPoint().getPosAt(0).getY()).toString());
+            }
 
             if (gca.getAddress() != null) {
                 final Address adr = gca.getAddress();
