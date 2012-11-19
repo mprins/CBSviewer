@@ -19,16 +19,33 @@ public enum BasemapType {
 	/** het type "topografie". */
 	topografie("topografie");
 
+	/** het type. */
 	private final String type;
 
-	BasemapType(String type) {
+	/**
+	 * Instantiates a new basemap type.
+	 * 
+	 * @param type
+	 *            het type
+	 */
+	BasemapType(final String type) {
 		this.type = type;
 	}
 
+	/**
+	 * Gets het type.
+	 * 
+	 * @return het type
+	 */
 	public String getType() {
 		return this.type;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Enum#toString()
+	 */
 	@Override
 	public String toString() {
 		return this.type;

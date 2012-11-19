@@ -31,15 +31,15 @@ import org.xml.sax.SAXException;
  * @author mprins
  * @since 1.6
  */
-public class FeatureInfoResponseConverter {
+public final class FeatureInfoResponseConverter {
 
 	/**
-	 * het inputstream type.
+	 * het inputstream Type.
 	 * 
-	 * @see FeatureInfoResponseConverter#convertToHTMLTable(InputStream, type,
+	 * @see FeatureInfoResponseConverter#convertToHTMLTable(InputStream, Type,
 	 *      String[])
 	 */
-	public enum type {
+	public enum Type {
 		/** het gmltype. */
 		GMLTYPE,
 		/** het htmltype. */
@@ -151,8 +151,8 @@ public class FeatureInfoResponseConverter {
 	 * 
 	 * @param input
 	 *            inputstream met de featureinfo response.
-	 * @param type
-	 *            het type conversie
+	 * @param Type
+	 *            het Type conversie
 	 * @param attributes
 	 *            namen van de feature attributen
 	 * @return een html tabel
@@ -160,7 +160,7 @@ public class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public static String convertToHTMLTable(final InputStream input,
-			final FeatureInfoResponseConverter.type type,
+			final FeatureInfoResponseConverter.Type type,
 			final String[] attributes) throws IOException {
 		switch (type) {
 		case GMLTYPE:

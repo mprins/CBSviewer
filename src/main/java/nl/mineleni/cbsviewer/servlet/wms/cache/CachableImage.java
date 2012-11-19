@@ -16,34 +16,14 @@ import java.awt.Image;
  *            the generic type of the object to cache.
  * @author prinsmc
  */
-public interface CachableImage<T extends Image> {
+interface CachableImage<T extends Image> extends Cachable<T> {
 
-    /**
-     * Gets de expire by timestamp.
-     * 
-     * @return the expire by
-     */
-    long getExpireBy();
+	/**
+	 * Accessor voor de naam van de gecachede afbeelding, bijvoorbeeld de
+	 * bestandnaam.
+	 * 
+	 * @return de naam
+	 */
+	String getName();
 
-    /**
-     * Haalt de opgeslagen afbeelding {@code <T>} op.
-     * 
-     * @return the image
-     */
-    T getImage();
-
-    /**
-     * Accessor voor de naam van de gecachede afbeelding, bijvoorbeeld de
-     * bestandnaam.
-     * 
-     * @return de naam
-     */
-    String getName();
-
-    /**
-     * Checks of dit object geldig is.
-     * 
-     * @return {@code true}, indien geldig
-     */
-    boolean isValid();
 }

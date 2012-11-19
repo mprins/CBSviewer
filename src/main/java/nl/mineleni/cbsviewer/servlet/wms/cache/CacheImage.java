@@ -14,13 +14,13 @@ import java.awt.image.BufferedImage;
  * @author prinsmc
  * @since 1.6
  */
-class CacheImage implements CachableImage<BufferedImage> {
+public class CacheImage implements CachableImage<BufferedImage> {
 
 	/** de expire-by timestamp in seconds (UNIX time). */
 	private final long expireBy;
 
 	/** bestandsnaam. */
-	private final String fName;
+	private String fName;
 
 	/** image. */
 	private BufferedImage image = null;
@@ -42,6 +42,21 @@ class CacheImage implements CachableImage<BufferedImage> {
 		this.expireBy = expireBy;
 	}
 
+	/**
+	 * Maak een nieuwe cache afbeelding aan.
+	 * 
+	 * @param image
+	 *            de afbeelding
+	 * @param secondsToLive
+	 *            seconds to live in de cache
+	 */
+	public CacheImage(final BufferedImage image, final long secondsToLive) {
+		final long expireBy = secondsToLive != -1 ? System.currentTimeMillis()
+				+ (secondsToLive * 1000) : secondsToLive;
+		this.image = image;
+		this.expireBy = expireBy;
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -58,7 +73,7 @@ class CacheImage implements CachableImage<BufferedImage> {
 	 * @see nl.eleni.gcc.vpziek.cache.CachableImage#getImage()
 	 */
 	@Override
-	public BufferedImage getImage() {
+	public BufferedImage getItem() {
 		return this.image;
 	}
 
@@ -81,5 +96,13 @@ class CacheImage implements CachableImage<BufferedImage> {
 	public boolean isValid() {
 		return ((this.image != null) && (this.fName != null) && (this.expireBy > System
 				.currentTimeMillis()));
+	}
+
+	public BufferedImage getImage() {
+		return getItem();
+	}
+
+	public void setFileName(String name) {
+		this.fName = name;
 	}
 }
