@@ -19,62 +19,66 @@ import org.junit.Test;
  * Test case voor {@link CacheImage }.
  */
 public class CacheImageTest {
-    /** test subject. */
-    private CacheImage cImage;
+	/** test subject. */
+	private CacheImage cImage;
 
-    /** expire by. */
-    private final long expireBy = 1000l;
+	/** expire by. */
+	private final long expireBy = System.currentTimeMillis() * 1000 + 1000l;
 
-    /** naam. */
-    private final String name = "NAAM";
+	/** naam. */
+	private final String name = "NAAM";
 
-    /** to cache object. */
-    private final BufferedImage rgbImage = new BufferedImage(100, 100,
-            BufferedImage.TYPE_INT_RGB);
+	/** to cache object. */
+	private final BufferedImage rgbImage = new BufferedImage(100, 100,
+			BufferedImage.TYPE_INT_RGB);
 
-    /**
-     * Sets the up.
-     * 
-     * @throws Exception
-     *             the exception
-     */
-    @Before
-    public void setUp() throws Exception {
-        this.cImage = new CacheImage(this.rgbImage, this.name, this.expireBy);
-    }
+	/**
+	 * Sets the up.
+	 * 
+	 * @throws Exception
+	 *             the exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+		this.cImage = new CacheImage(this.rgbImage, this.name, this.expireBy);
+	}
 
-    /**
-     * Test methode voor {@link CacheImage#getImage() }.
-     */
-    @Test
-    public final void testGetImage() {
-        assertEquals(this.rgbImage, this.cImage.getImage());
-    }
+	/**
+	 * Test methode voor {@link CacheImage#getImage() }.
+	 */
+	@Test
+	public final void testGetImage() {
+		assertEquals(this.rgbImage, this.cImage.getImage());
+	}
 
-    /**
-     * Test methode voor {@link CacheImage#getName() }.
-     */
-    @Test
-    public final void testGetName() {
-        assertEquals(this.name, this.cImage.getName());
-    }
+	/**
+	 * Test methode voor {@link CacheImage#getName() }.
+	 */
+	@Test
+	public final void testGetName() {
+		assertEquals(this.name, this.cImage.getName());
+	}
 
-    /**
-     * Test methode voor {@link CacheImage#isValid() }.
-     */
-    @Test
-    public final void testIsValid() {
-        assertTrue(this.cImage.isValid());
+	/**
+	 * Test methode voor {@link CacheImage#isValid() }.
+	 */
+	@Test
+	public final void testIsValid() {
+		assertTrue(this.cImage.isValid());
 
-        final CacheImage invalid = new CacheImage(this.rgbImage, null,
-                this.expireBy);
-        assertFalse(invalid.isValid());
+		final CacheImage invalid = new CacheImage(this.rgbImage, null,
+				this.expireBy);
+		assertFalse(invalid.isValid());
 
-        final CacheImage invalid2 = new CacheImage(null, null, this.expireBy);
-        assertFalse(invalid2.isValid());
+		final CacheImage invalid2 = new CacheImage(null, null, this.expireBy);
+		assertFalse(invalid2.isValid());
 
-        final CacheImage invalid3 = new CacheImage(null, this.name,
-                this.expireBy);
-        assertFalse(invalid3.isValid());
-    }
+		final CacheImage invalid3 = new CacheImage(null, this.name,
+				this.expireBy);
+		assertFalse(invalid3.isValid());
+
+		final CacheImage invalid4 = new CacheImage(null, this.name,
+				this.expireBy - 1000l);
+		assertFalse(invalid4.isValid());
+	}
 }
