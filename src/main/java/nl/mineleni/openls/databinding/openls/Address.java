@@ -10,28 +10,29 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
- * <complexType name="AddressType">
- *   <annotation>
- *     <documentation>Defines an address</documentation>
- *   </annotation>
- *   <complexContent>
- *     <extension base="xls:AbstractAddressType">
- *       <choice>
- *         <element name="freeFormAddress" type="string">
- *           <annotation>
- *             <documentation>An unstructured free form address.</documentation>
- *           </annotation>
- *         </element>
- *         <sequence>
- *           <element ref="xls:StreetAddress" />
- *           <element ref="xls:Place" minOccurs="0"
- *           maxOccurs="unbounded" />
- *           <element ref="xls:PostalCode" minOccurs="0" />
- *         </sequence>
- *       </choice>
- *     </extension>
- *   </complexContent>
- * </complexType>
+ * 
+ * &lt;complexType name="AddressType">
+ *   &lt;annotation>
+ *     &lt;documentation>Defines an address&lt;/documentation>
+ *   &lt;/annotation>
+ *   &lt;complexContent>
+ *     &lt;extension base="xls:AbstractAddressType">
+ *       &lt;choice>
+ *         &lt;element name="freeFormAddress" type="string">
+ *           &lt;annotation>
+ *             &lt;documentation>An unstructured free form address.&lt;/documentation>
+ *           &lt;/annotation>
+ *         &lt;/element>
+ *         &lt;sequence>
+ *           &lt;element ref="xls:StreetAddress" />
+ *           &lt;element ref="xls:Place" minOccurs="0" maxOccurs="unbounded" />
+ *           &lt;element ref="xls:PostalCode" minOccurs="0" />
+ *         &lt;/sequence>
+ *       &lt;/choice>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * 
  * </pre>
  * 
  * @author mprins

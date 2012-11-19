@@ -8,18 +8,21 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>
- *  <complexType name="GeocodeResponseType">
- *   <annotation>
- *     <documentation>GeocodeResponse. The addresses returned will be normalized Address ADTs as a result of any parsing by the geocoder, etc.</documentation>
- *   </annotation>
- *   <complexContent>
- *     <extension base="xls:AbstractResponseParametersType">
- *       <sequence>
- *         <element ref="xls:GeocodeResponseList" maxOccurs="unbounded" />
- *       </sequence>
- *     </extension>
- *   </complexContent>
- * </complexType>
+ * 
+ *  &lt;complexType name="GeocodeResponseType">
+ *   &lt;annotation>
+ *     &lt;documentation>GeocodeResponse. The addresses returned will be normalized 
+ *     Address ADTs as a result of any parsing by the geocoder, etc.&lt;/documentation>
+ *   &lt;/annotation>
+ *   &lt;complexContent>
+ *     &lt;extension base="xls:AbstractResponseParametersType">
+ *       &lt;sequence>
+ *         &lt;element ref="xls:GeocodeResponseList" maxOccurs="unbounded" />
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * 
  * </pre>
  * 
  * @author Mark

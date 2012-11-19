@@ -6,27 +6,27 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
- *  <element name="Place" type="xls:NamedPlaceType">
- *   <annotation>
- *     <documentation>Place represents a hierarchical set of
+ * 
+ *  &lt;element name="Place" type="xls:NamedPlaceType">
+ *   &lt;annotation>
+ *     &lt;documentation>Place represents a hierarchical set of
  *     geographic regions/placenames: country subdivision, country
  *     secondary subdivision, municipality, and municipality
- *     subdivision.</documentation>
- *   </annotation>
- * </element>
- * <complexType name="NamedPlaceType">
- *   <annotation>
- *     <documentation>The NamedPlaceType defines a named place within
+ *     subdivision.&lt;/documentation>
+ *   &lt;/annotation>
+ * &lt;/element>
+ * &lt;complexType name="NamedPlaceType">
+ *   &lt;annotation>
+ *     &lt;documentation>The NamedPlaceType defines a named place within
  *     an AddressType. A named place has a classification (such as
- *     country, country subdivision, or municipality).</documentation>
- *   </annotation>
- *   <simpleContent>
- *     <extension base="string">
- *       <attribute name="type" type="xls:NamedPlaceClassification"
- *       use="required" />
- *     </extension>
- *   </simpleContent>
- * </complexType>
+ *     country, country subdivision, or municipality).&lt;/documentation>
+ *   &lt;/annotation>
+ *   &lt;simpleContent>
+ *     &lt;extension base="string">
+ *       &lt;attribute name="type" type="xls:NamedPlaceClassification" use="required" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * 
  * </pre>
  * 

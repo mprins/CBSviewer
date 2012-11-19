@@ -8,30 +8,31 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>
- * <!-- ====================================================== --> 
- * <element name="GeocodeRequest" type="xls:GeocodeRequestType" substitutionGroup="xls:_RequestParameters"> 
- *  <annotation>
- *      <documentation>Geocode Service Request</documentation> 
- *  </annotation>
- * </element> 
- * <!-- ====================================================== --> 
- * <complexType name="GeocodeRequestType"> 
- * <annotation>
- *      <documentation>Geocode Request.</documentation> 
- * </annotation>
- * <complexContent> 
- *  <extension base="xls:AbstractRequestParametersType">
- *  <sequence> 
- *      <element ref="xls:Address" maxOccurs="unbounded"/> 
- *  </sequence>
- *  <attribute name="returnFreeForm" type="boolean" use="optional" default="false"> 
- *      <annotation> 
- *          <documentation>Used to request freeform addresses in the response, as opposed to structured adddresses</documentation> 
- *      </annotation> 
- *  </attribute> 
- * </extension>
- * </complexContent>
- * </complexType>
+ * 
+ * &lt;element name="GeocodeRequest" type="xls:GeocodeRequestType" substitutionGroup="xls:_RequestParameters"> 
+ *  &lt;annotation>
+ *      &lt;documentation>Geocode Service Request&lt;/documentation> 
+ *  &lt;/annotation>
+ * &lt;/element> 
+ * 
+ * &lt;complexType name="GeocodeRequestType"> 
+ * &lt;annotation>
+ *      &lt;documentation>Geocode Request.&lt;/documentation> 
+ * &lt;/annotation>
+ * &lt;complexContent> 
+ *  &lt;extension base="xls:AbstractRequestParametersType">
+ *  &lt;sequence> 
+ *      &lt;element ref="xls:Address" maxOccurs="unbounded"/> 
+ *  &lt;/sequence>
+ *  &lt;attribute name="returnFreeForm" type="boolean" use="optional" default="false"> 
+ *      &lt;annotation> 
+ *          &lt;documentation>Used to request freeform addresses in the response, as 
+ *          opposed to structured adddresses&lt;/documentation> 
+ *      &lt;/annotation> 
+ *  &lt;/attribute> 
+ * &lt;/extension>
+ * &lt;/complexContent>
+ * &lt;/complexType>
  * 
  * </pre>
  * 

@@ -6,23 +6,26 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
- * <element name="Building" type="xls:BuildingLocatorType" substitutionGroup="xls:_StreetLocation">
- *   <annotation>
- *     <documentation>An addressable place; normally a location on a street: number, subdivision name and/or building name.</documentation>
- *   </annotation>
- * </element>
- * <complexType name="BuildingLocatorType">
- *   <annotation>
- *     <documentation>A type of AbstractStreetLocatorType</documentation>
- *   </annotation>
- *   <complexContent>
- *     <extension base="xls:AbstractStreetLocatorType">
- *       <attribute name="number" type="string" use="optional" />
- *       <attribute name="subdivision" type="string" use="optional" />
- *       <attribute name="buildingName" type="string" use="optional" />
- *     </extension>
- *   </complexContent>
- * </complexType>
+ * 
+ * &lt;element name="Building" type="xls:BuildingLocatorType" substitutionGroup="xls:_StreetLocation">
+ *   &lt;annotation>
+ *     &lt;documentation>An addressable place; normally a location on a street: number, 
+ *     subdivision name and/or building name.&lt;/documentation>
+ *   &lt;/annotation>
+ * &lt;/element>
+ * &lt;complexType name="BuildingLocatorType">
+ *   &lt;annotation>
+ *     &lt;documentation>A type of AbstractStreetLocatorType&lt;/documentation>
+ *   &lt;/annotation>
+ *   &lt;complexContent>
+ *     &lt;extension base="xls:AbstractStreetLocatorType">
+ *       &lt;attribute name="number" type="string" use="optional" />
+ *       &lt;attribute name="subdivision" type="string" use="optional" />
+ *       &lt;attribute name="buildingName" type="string" use="optional" />
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * 
  * </pre>
  * 
  * @author mprins
