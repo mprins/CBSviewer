@@ -6,19 +6,20 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
- * <complexType name="StreetAddressType">
- *   <annotation>
- *     <documentation>A set of precise and complete data elements that
+ * 
+ * &lt;complexType name="StreetAddressType">
+ *   &lt;annotation>
+ *     &lt;documentation>A set of precise and complete data elements that
  *     cannot be subdivided and that describe the physical location of
- *     a place.</documentation>
- *   </annotation>
- *   <sequence>
- *     <element ref="xls:_StreetLocation" minOccurs="0" />
- *     <element ref="xls:Street" maxOccurs="unbounded" />
- *   </sequence>
- *   <attribute name="locator">
- *     <annotation>
- *       <documentation>typically used for the street number (e.g. 23)
+ *     a place.&lt;/documentation>
+ *   &lt;/annotation>
+ *   &lt;sequence>
+ *     &lt;element ref="xls:_StreetLocation" minOccurs="0" />
+ *     &lt;element ref="xls:Street" maxOccurs="unbounded" />
+ *   &lt;/sequence>
+ *   &lt;attribute name="locator">
+ *     &lt;annotation>
+ *       &lt;documentation>typically used for the street number (e.g. 23)
  *       a. Can accommodate a number, or any other building locator b.
  *       "windmill house", "24E" and "323" are acceptable uses of the
  *       locator c. We will adopt the following conventions for
@@ -27,15 +28,16 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  *       discontinous ranges: "1-9,2-10" implies 1,3,5,7,9 on one side
  *       of block and 2,4,6,8,10 on other side of block iii.
  *       Continuous range: "1...10" means
- *       1,2,3,4,5,6,7,8,9,10</documentation>
- *     </annotation>
- *   </attribute>
- * </complexType>
- * <element name="StreetAddress" type="xls:StreetAddressType">
- *   <annotation>
- *     <documentation>Structured street address.</documentation>
- *   </annotation>
- * </element>
+ *       1,2,3,4,5,6,7,8,9,10&lt;/documentation>
+ *     &lt;/annotation>
+ *   &lt;/attribute>
+ * &lt;/complexType>
+ * &lt;element name="StreetAddress" type="xls:StreetAddressType">
+ *   &lt;annotation>
+ *     &lt;documentation>Structured street address.&lt;/documentation>
+ *   &lt;/annotation>
+ * &lt;/element>
+ * 
  * </pre>
  * 
  * @author Mark

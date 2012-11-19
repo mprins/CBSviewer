@@ -8,13 +8,13 @@ import nl.mineleni.openls.databinding.gml.Point;
  * 
  * <pre>
  * 
- *  <complexType name="GeocodedAddressType">
- *   <sequence>
- *     <element ref="gml:Point" />
- *     <element ref="xls:Address" />
- *     <element ref="xls:GeocodeMatchCode" minOccurs="0" />
- *   </sequence>
- * </complexType>
+ * &lt;complexType name="GeocodedAddressType">
+ *   &lt;sequence>
+ *     &lt;element ref="gml:Point" />
+ *     &lt;element ref="xls:Address" />
+ *     &lt;element ref="xls:GeocodeMatchCode" minOccurs="0" />
+ *   &lt;/sequence>
+ * &lt;/complexType>
  * 
  * </pre>
  * 

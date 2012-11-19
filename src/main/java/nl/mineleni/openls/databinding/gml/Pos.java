@@ -10,9 +10,9 @@ import org.slf4j.LoggerFactory;
  * 
  * <pre>
  * 
- * <complexType name="DirectPositionType">
- *   <annotation>
- *     <documentation>Direct position instances hold the coordinates
+ * &lt;complexType name="DirectPositionType">
+ *   &lt;annotation>
+ *     &lt;documentation>Direct position instances hold the coordinates
  *     for a position within some coordinate reference system (CRS).
  *     Since direct positions, as data types, will often be included
  *     in larger objects (such as geometry elements) that have
@@ -23,15 +23,15 @@ import org.slf4j.LoggerFactory;
  *     containing object's CRS. if no srsName attribute is given, the
  *     CRS shall be specified as part of the larger context this
  *     geometry element is part of, typically a geometric object like
- *     a point, curve, etc.</documentation>
- *   </annotation>
- *   <simpleContent>
- *     <extension base="gml:doubleList">
- *       <attributeGroup ref="gml:SRSReferenceGroup" />
- *     </extension>
- *   </simpleContent>
- * </complexType>
- * <element name="pos" type="gml:DirectPositionType" />
+ *     a point, curve, etc.&lt;/documentation>
+ *   &lt;/annotation>
+ *   &lt;simpleContent>
+ *     &lt;extension base="gml:doubleList">
+ *       &lt;attributeGroup ref="gml:SRSReferenceGroup" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
+ * &lt;element name="pos" type="gml:DirectPositionType" />
  * 
  * </pre>
  * 
