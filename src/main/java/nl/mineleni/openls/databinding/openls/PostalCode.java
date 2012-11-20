@@ -6,23 +6,25 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
- * <element name="PostalCode" type="xls:PostalCodeType">
- *   <annotation>
- *     <documentation>A zipcode or international postal code as
- *     defined by the governing postal authority.</documentation>
- *   </annotation>
- * </element>
- * <simpleType name="PostalCodeType">
- *   <annotation>
- *     <documentation>The AbstractPostalCodeType is an abstract type
+ * 
+ * &lt;element name="PostalCode" type="xls:PostalCodeType">
+ *   &lt;annotation>
+ *     &lt;documentation>A zipcode or international postal code as
+ *     defined by the governing postal authority.&lt;/documentation>
+ *   &lt;/annotation>
+ * &lt;/element>
+ * &lt;simpleType name="PostalCodeType">
+ *   &lt;annotation>
+ *     &lt;documentation>The AbstractPostalCodeType is an abstract type
  *     for postal code within an AddressType. We do this because the
  *     components of a postal code vary greatly throughout the world.
  *     So that the schema can accommodate this variation we create
  *     derived types such as the USZipCodeType which has the
- *     components for a US zipcode</documentation>
- *   </annotation>
- *   <restriction base="string" />
- * </simpleType>
+ *     components for a US zipcode&lt;/documentation>
+ *   &lt;/annotation>
+ *   &lt;restriction base="string" />
+ * &lt;/simpleType>
+ * 
  * </pre>
  * 
  * @author mprins
