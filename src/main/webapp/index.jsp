@@ -63,7 +63,7 @@
     <div id="headerleft" class="headerColumn">
 		<div class="logo">
 			<a href="#">
-				<img src="./img/template/hdr_logo.gif" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/>
+				<img src="./img/template/hdr_logo.gif" width="100%" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/>
 			</a>
 		</div>
 	</div>

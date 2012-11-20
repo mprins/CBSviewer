@@ -77,59 +77,15 @@ a.accesskey:focus {
 	
 }
 
-#zoekFormulier {
-}
-
-#zoekContent
+#zoekContainer
 {
-	white-space:nowrap;
-	height:76px;
+	min-width:280px;
+	padding-top:3px;
+	padding-bottom: 3px;
 }
-
-#searchbutton {
-	background-image: url('../img/search.gif');
-    background-position: 0px 93px;	
-	width:31px;
-	height:31px;
-	cursor: pointer; 
-	border: none;
-}
-
-#searchbutton:hover,#searchbutton:focus {
-    background-position: 0px 62px;
-	cursor: hand; cursor: pointer; 
-	height:31px;
-}
-
-#searchbutton:active 
-{
-    background-position: 0px 31px;
-	height:31px;
-	cursor:wait; /* Shows the wait cursor on click */ 
-}
-
-#adres {
-	border: 1px solid #aaa;
-	width:60%;
-	min-width:185px;
-	height:31px;
-	font-size:19px;
-}
-
-#adres:hover, #adres:focus
-{
-	border: 1px solid #2D598C;	
-}
-
-/*
-#zoekresultaten
-{
-padding:0px;
-margin:5px;
-}*/
 
 /* Make sure it works in all browsers */
-#zoekFormulier .adreslijst li .button {
+#zoekContainer .adreslijst li .button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -139,6 +95,7 @@ margin:5px;
 	background-color:#ededed;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
+	line-height:30px;
 	border-radius:6px;
 	border:1px solid #dcdcdc;
 	/*display:inline-block;*/
@@ -149,28 +106,92 @@ margin:5px;
 	text-shadow:1px 1px 0px #ffffff;
 }
 
-#zoekFormulier .adreslijst li .button:hover {
+#zoekContainer .adreslijst li .button:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
 	background-color:#dfdfdf;
 }
 
-#zoekFormulier .adreslijst li .button:active {
+#zoekContainer .adreslijst li .button:active {
 	position:relative;
 	top:1px;
 }
 
-#zoekFormulier .adreslijst li {
+#zoekContainer .adreslijst li {
     display: block;
 	padding-right:3px;
     float: left;
 }
 
-#zoekFormulier .adreslijst {
+#zoekContainer .adreslijst {
 	list-style-image: none;
+	white-space:nowrap;
 	margin: 0;
 	margin-left: -40px;
+}
+
+#zoekFormulier #adres {
+    float:left;
+    width:70%;
+	min-width:50px;
+    height:27px;
+    line-height:27px;
+    text-indent:10px;
+    font-size:18px;
+    color:#333;
+    background: #fff;
+    border:solid 1px #d9d9d9;
+    border-top:solid 1px #c0c0c0;
+    border-right:none;
+}
+
+#zoekFormulier #delete {
+    float:left; 
+    width:16px;
+    height:29px; 
+    line-height:27px; 
+    margin-right:15px; 
+    padding:0 10px 0 10px;
+    font-family: "Lucida Sans", "Lucida Sans Unicode",sans-serif;
+    font-size:22px; 
+    background: #fff;  
+    border:solid 1px #d9d9d9; 
+    border-top:solid 1px #c0c0c0; 
+    border-left:none;
+}
+
+#zoekFormulier #delete #x 
+{
+    color:#A1B9ED; 
+    cursor:pointer;
+    display:none;
+}
+
+#zoekFormulier #delete #x:hover {
+    color:#36c;
+}
+
+#zoekFormulier #searchbutton:active
+{
+    background-position: 0px 31px;
+	height:31px;
+	cursor:wait;  
+}
+
+#zoekFormulier #searchbutton {
+	background-image: url('../img/search.gif');
+    background-position: 0px 93px;	
+	width:31px;
+	height:31px;
+	cursor: pointer; 
+	border: none;
+}
+
+#zoekFormulier #searchbutton:hover, #zoekFormulier #searchbutton:focus {
+    background-position: 0px 62px;
+	cursor: hand; cursor: pointer; 
+	height:31px;
 }
 
 /* feature informatie */
@@ -319,7 +340,8 @@ a.olControlZoomOut {
 
 .utilBlock
 {
-	margin-top: 14px;
+	min-width:130px;
+	margin-top: 8px;
 	float: right;
 }
 
@@ -485,8 +507,8 @@ a.olControlZoomOut {
 
 .logo
 {
+	min-width:200px;
 	float: left;
-	clear:both;
 	padding-top: 9px;
 	padding-left: 3px;
 }

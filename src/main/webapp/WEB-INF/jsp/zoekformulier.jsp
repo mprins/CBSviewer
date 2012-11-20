@@ -10,37 +10,32 @@
 	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
 
 	<!-- zoek formulier voor de versie zonder javascript en/of css -->
-	<form id="zoekFormulier" action="adres" method="get"
-		title="Zoekformulier">
-		<div id="zoekContent">
-			<!--jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression-->
-				<input type="text" id="adres" name="adres" value="${param.adres}"/>
-
-				<c:if test="${request.straal != null}">
-					<input type="hidden" name="straal" value="${straal}" />
-				</c:if>
-
-				<input type="hidden" name="coreonly" value="true" />
-				<input type="hidden" name="forward" value="true" />
-
-				<button id="searchbutton" type="submit">
-					<span><!--jsp:expression>RESOURCES.getString("KEY_ZOEKEN_SUBMIT")</jsp:expression--></span>
-				</button>
-				
-			<p id="zoekresultaten">
-				<c:out value="${gevonden}" />
-			</p>
-			<c:if test="${adreslijst!=null }">
-				<!-- for item in lijst maak url -->
-				<ul class="adreslijst">
-					<c:forEach var="adres" items="${adreslijst}">
-						<li><a class="button"
-							href="index.jsp?gevonden=${adres}&amp;xcoord=${adres.xCoord}&amp;ycoord=${adres.yCoord}&amp;straal=${adres.radius}&amp;coreonly=${param.coreonly}"
-							title="zoom in op ${adres}">${adres}</a></li>
-					</c:forEach>
-				</ul>
-			</c:if>				
-			</div>
-	</form>
-
+	<div id="zoekContainer">
+		<form title="Zoekformulier" method="get" action="adres" id="zoekFormulier">
+			<input type="text" id="adres" name="adres" value="${param.adres}"/>
+			
+			<c:if test="${request.straal != null}">
+				<input type="hidden" name="straal" value="${straal}" />
+			</c:if>
+			
+			<input type="hidden" name="coreonly" value="true" />
+			<input type="hidden" name="forward" value="true" />
+			
+			<div id="delete"><span id="x">x</span></div>
+			<input value="" type="submit" id="searchbutton"></input>
+		</form>
+		<p id="zoekresultaten">
+			<c:out value="${gevonden}" />
+		</p>
+		<c:if test="${adreslijst!=null }">
+			<!-- for item in lijst maak url -->
+			<ul class="adreslijst">
+				<c:forEach var="adres" items="${adreslijst}">
+					<li><a class="button"
+						href="index.jsp?gevonden=${adres}&amp;xcoord=${adres.xCoord}&amp;ycoord=${adres.yCoord}&amp;straal=${adres.radius}&amp;coreonly=${param.coreonly}"
+						title="zoom in op ${adres}">${adres}</a></li>
+				</c:forEach>
+			</ul>
+		</c:if>		
+	</div>
 </jsp:root>
