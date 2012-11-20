@@ -20,7 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The Class Cache.
+ * De Class Cache.
  * 
  * @param <K>
  *            het key type
