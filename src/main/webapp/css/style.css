@@ -102,7 +102,7 @@ a.accesskey:focus {
 	color:#000000;
 	font-size:12px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:6px 14px;
 	text-shadow:1px 1px 0px #ffffff;
 }
 
@@ -141,8 +141,8 @@ a.accesskey:focus {
     font-size:18px;
     color:#333;
     background: #fff;
-    border:solid 1px #d9d9d9;
-    border-top:solid 1px #c0c0c0;
+    border:solid 1px #2d598c;
+    border-top:solid 1px #2d598c;
     border-right:none;
 }
 
@@ -151,13 +151,13 @@ a.accesskey:focus {
     width:16px;
     height:29px; 
     line-height:27px; 
-    margin-right:15px; 
+    margin-right:5px; 
     padding:0 10px 0 10px;
     font-family: "Lucida Sans", "Lucida Sans Unicode",sans-serif;
     font-size:22px; 
     background: #fff;  
-    border:solid 1px #d9d9d9; 
-    border-top:solid 1px #c0c0c0; 
+    border:solid 1px #2d598c; 
+    border-top:solid 1px #2d598c; 
     border-left:none;
 }
 
