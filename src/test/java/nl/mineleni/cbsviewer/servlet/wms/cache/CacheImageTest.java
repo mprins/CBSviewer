@@ -15,7 +15,6 @@ import java.awt.image.BufferedImage;
 import org.junit.Before;
 import org.junit.Test;
 
-// TODO: Auto-generated Javadoc
 /**
  * Test case voor {@link CacheImage }.
  */
@@ -34,7 +33,7 @@ public class CacheImageTest {
 			BufferedImage.TYPE_INT_RGB);
 
 	/**
-	 * Sets the up.
+	 * Sets up.
 	 * 
 	 * @throws Exception
 	 *             the exception
