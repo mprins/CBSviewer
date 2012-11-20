@@ -32,13 +32,13 @@
 			</p>
 			<c:if test="${adreslijst!=null }">
 				<!-- for item in lijst maak url -->
-				<!--ul class="adreslijst"-->
+				<ul class="adreslijst">
 					<c:forEach var="adres" items="${adreslijst}">
-						<li><a
+						<li><a class="button"
 							href="index.jsp?gevonden=${adres}&amp;xcoord=${adres.xCoord}&amp;ycoord=${adres.yCoord}&amp;straal=${adres.radius}&amp;coreonly=${param.coreonly}"
 							title="zoom in op ${adres}">${adres}</a></li>
 					</c:forEach>
-				<!--/ul-->
+				</ul>
 			</c:if>				
 			</div>
 	</form>

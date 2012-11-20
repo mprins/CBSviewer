@@ -71,18 +71,19 @@ var ZoekFormulier = {
 			break;
 		case 1:
 			html += 'Er is een adres gevonden.';
-			html += '<span class="adreslijst">' + data[0].addressString + '</span>';
+			html += '<ul class="adreslijst"><li>' + data[0].addressString + '</li></ul>';
 			Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
 			break;
 		default:
-			html += '<div class="adreslijst">';
+			html += '<ul class="adreslijst">';
 			/*html += 'Bedoelt u? ';*/
 			for ( var i = 0; i < data.length; i++) {
-				html += '' + '<a class="button" href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ',' + data[i].yCoord + ','
-						+ data[i].radius + ');return false;" title="Zoom naar adres"><span>' + data[i].addressString
-						+ '</span></a>';
+			
+						html += '<li><a class="button" href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ',' + data[i].yCoord + ','
+						+ data[i].radius + ');return false;" title="Zoom naar adres">' + data[i].addressString
+						+ '</a></li>';
 			}
-			html += '</div>';
+			html += '</ul>';
 			Viewer.zoomTo(data[data.length-1].xCoord, data[data.length-1].yCoord, data[data.length-1].radius);
 		}
 		paragraaf.empty().html(html);
