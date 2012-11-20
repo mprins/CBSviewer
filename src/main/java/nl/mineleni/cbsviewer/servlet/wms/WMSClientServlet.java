@@ -272,37 +272,45 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 */
 	private String getFeatureInfo(final LayerDescriptor lyrDesc)
 			throws ServiceException, IOException {
+		try {
+			final GetFeatureInfoRequest getFeatureInfoRequest = this
+					.getCachedWMS(lyrDesc).createGetFeatureInfoRequest(
+							this.getMapRequest);
 
-		final GetFeatureInfoRequest getFeatureInfoRequest = this.getCachedWMS(
-				lyrDesc).createGetFeatureInfoRequest(this.getMapRequest);
+			final String[] layerNames = lyrDesc.getLayers().split(",\\s*");
+			final Set<Layer> queryLayers = new HashSet<Layer>();
+			final WMSCapabilities caps = this.getCachedWMS(lyrDesc)
+					.getCapabilities();
 
-		final String[] layerNames = lyrDesc.getLayers().split(",\\s*");
-		final Set<Layer> queryLayers = new HashSet<Layer>();
-		final WMSCapabilities caps = this.getCachedWMS(lyrDesc)
-				.getCapabilities();
-
-		for (final Layer wmsLyr : caps.getLayerList()) {
-			if ((wmsLyr.getName() != null) && (wmsLyr.getName().length() != 0)) {
-				for (final String layerName : layerNames) {
-					if (wmsLyr.getName().equalsIgnoreCase(layerName)) {
-						queryLayers.add(wmsLyr);
+			for (final Layer wmsLyr : caps.getLayerList()) {
+				if ((wmsLyr.getName() != null)
+						&& (wmsLyr.getName().length() != 0)) {
+					for (final String layerName : layerNames) {
+						if (wmsLyr.getName().equalsIgnoreCase(layerName)) {
+							queryLayers.add(wmsLyr);
+						}
 					}
 				}
 			}
-		}
-		getFeatureInfoRequest.setQueryLayers(queryLayers);
-		getFeatureInfoRequest.setInfoFormat("application/vnd.ogc.gml");
-		getFeatureInfoRequest.setFeatureCount(10);
-		getFeatureInfoRequest.setQueryPoint(MAP_DIMENSION_MIDDLE,
-				MAP_DIMENSION_MIDDLE);
-		LOGGER.debug("WMS feature info request url is: "
-				+ getFeatureInfoRequest.getFinalURL());
-		final GetFeatureInfoResponse response = this.getCachedWMS(lyrDesc)
-				.issueRequest(getFeatureInfoRequest);
+			getFeatureInfoRequest.setQueryLayers(queryLayers);
+			getFeatureInfoRequest.setInfoFormat("application/vnd.ogc.gml");
+			getFeatureInfoRequest.setFeatureCount(10);
+			getFeatureInfoRequest.setQueryPoint(MAP_DIMENSION_MIDDLE,
+					MAP_DIMENSION_MIDDLE);
+			LOGGER.debug("WMS feature info request url is: "
+					+ getFeatureInfoRequest.getFinalURL());
+			final GetFeatureInfoResponse response = this.getCachedWMS(lyrDesc)
+					.issueRequest(getFeatureInfoRequest);
 
-		return FeatureInfoResponseConverter.convertToHTMLTable(response
-				.getInputStream(), FeatureInfoResponseConverter.type.GMLTYPE,
-				lyrDesc.getAttributes().split(",\\s*"));
+			return FeatureInfoResponseConverter.convertToHTMLTable(response
+					.getInputStream(),
+					FeatureInfoResponseConverter.type.GMLTYPE, lyrDesc
+							.getAttributes().split(",\\s*"));
+		} catch (UnsupportedOperationException u) {
+			LOGGER.error(
+					"De WMS server ondersteund geen GetFeatureInfoRequest.", u);
+			return "";
+		}
 	}
 
 	/**
@@ -383,25 +391,33 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		final String[] styleNames = lyrDesc.getStyles().split(",\\s*");
 
 		final File[] legends = new File[layerNames.length];
-		final GetLegendGraphicRequest legend = this.getCachedWMS(lyrDesc)
-				.createGetLegendGraphicRequest();
-		BufferedImage image;
-		for (int l = 0; l < layerNames.length; l++) {
-			legend.setLayer(layerNames[l]);
-			legend.setStyle(styleNames[l]);
-			legend.setFormat("image/png");
-			legend.setExceptions("application/vnd.ogc.se_inimage");
+		try {
+			final GetLegendGraphicRequest legend = this.getCachedWMS(lyrDesc)
+					.createGetLegendGraphicRequest();
+			BufferedImage image;
+			for (int l = 0; l < layerNames.length; l++) {
+				legend.setLayer(layerNames[l]);
+				legend.setStyle(styleNames[l]);
+				legend.setFormat("image/png");
+				legend.setExceptions("application/vnd.ogc.se_inimage");
 
-			LOGGER.debug("Voorgrond WMS legenda url is: "
-					+ legend.getFinalURL());
-			final GetLegendGraphicResponse response = this
-					.getCachedWMS(lyrDesc).issueRequest(legend);
-			image = ImageIO.read(response.getInputStream());
-			legends[l] = File.createTempFile("legenda", ".png", new File(this
-					.getServletContext().getRealPath(MAP_CACHE_DIR.code)));
-			legends[l].deleteOnExit();
-			LOGGER.debug("Legenda bestand: " + legends[l].getAbsolutePath());
-			ImageIO.write(image, "png", legends[l]);
+				LOGGER.debug("Voorgrond WMS legenda url is: "
+						+ legend.getFinalURL());
+				final GetLegendGraphicResponse response = this.getCachedWMS(
+						lyrDesc).issueRequest(legend);
+				image = ImageIO.read(response.getInputStream());
+				legends[l] = File.createTempFile("legenda", ".png", new File(
+						this.getServletContext()
+								.getRealPath(MAP_CACHE_DIR.code)));
+				legends[l].deleteOnExit();
+				LOGGER.debug("Legenda bestand: " + legends[l].getAbsolutePath());
+				ImageIO.write(image, "png", legends[l]);
+			}
+		} catch (UnsupportedOperationException u) {
+			LOGGER.error(
+					"De WMS server ondersteund geen GetLegendGraphicRequest.",
+					u);
+			return null;
 		}
 		return legends;
 	}
@@ -567,6 +583,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				LOGGER.debug("Ongeldige waarde gebruikt voor basemap type, de default wordt gebruikt.");
 			}
 		}
+		final BufferedImage bg = this.getBackGroundMap(bbox, basemaptype);
 
 		BufferedImage fg = null;
 		final String mapId = request.getParameter(REQ_PARAM_MAPID.code);
@@ -597,7 +614,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				throw new ServletException(e);
 			}
 		}
-		final BufferedImage bg = this.getBackGroundMap(bbox, basemaptype);
+
 		final File kaart = this.getMap(fg, bg);
 
 		request.setAttribute(REQ_PARAM_CACHEDIR.code, MAP_CACHE_DIR.code);
