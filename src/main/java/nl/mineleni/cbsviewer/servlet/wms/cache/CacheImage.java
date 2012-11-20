@@ -33,7 +33,7 @@ public class CacheImage implements CachableImage<BufferedImage> {
 	 * @param filename
 	 *            de bestandsnaam
 	 * @param expireBy
-	 *            the expire by
+	 *            de expire-by timestamp in seconds (UNIX time)
 	 */
 	public CacheImage(final BufferedImage image, final String filename,
 			final long expireBy) {

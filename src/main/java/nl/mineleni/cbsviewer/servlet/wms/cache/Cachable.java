@@ -7,7 +7,7 @@
 package nl.mineleni.cbsviewer.servlet.wms.cache;
 
 /**
- * Beschrijft cacheable objecten.
+ * Beschrijft de interface voor cachable objecten.
  * 
  * @author prinsmc
  * 
@@ -16,7 +16,7 @@ package nl.mineleni.cbsviewer.servlet.wms.cache;
  */
 interface Cachable<T> {
 	/**
-	 * Gets de expire-by timestamp voor dit object.
+	 * Gets de expire-by (UNIX, seconden) timestamp voor dit object.
 	 * 
 	 * @return the expire by
 	 */

@@ -25,5 +25,4 @@ interface CachableImage<T extends Image> extends Cachable<T> {
 	 * @return de naam
 	 */
 	String getName();
-
 }

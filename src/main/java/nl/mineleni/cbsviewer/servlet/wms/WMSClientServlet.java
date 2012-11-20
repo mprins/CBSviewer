@@ -33,6 +33,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import nl.mineleni.cbsviewer.servlet.AbstractWxSServlet;
+import nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey;
+import nl.mineleni.cbsviewer.servlet.wms.cache.CachableString;
 import nl.mineleni.cbsviewer.servlet.wms.cache.Cache;
 import nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage;
 import nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache;
@@ -98,7 +100,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	private String[] bgWMSlayers = null;
 
 	private static transient Cache<String, CacheImage, BufferedImage> legendCache = null;
+	private static transient Cache<BboxLayerCacheKey, CacheImage, BufferedImage> fgWMSCache = null;
 
+	private static transient Cache<BboxLayerCacheKey, CachableString, String> featInfoCache = null;
 	/**
 	 * voorgrond wms request.
 	 * 
@@ -161,7 +165,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		switch (type) {
 		case luchtfoto:
 			if (this.bgWMSLuFoCache.containsKey(bbox)) {
-				// check cache
+				// ophalen uit cache
+				LOGGER.debug("Achtergrond " + type
+						+ " afbeelding uit de cache serveren.");
 				return this.bgWMSLuFoCache.getImage(bbox);
 			}
 			map = this.lufoWMS.createGetMapRequest();
@@ -182,7 +188,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			// implicit fall thru naar default
 		default:
 			if (this.bgWMSCache.containsKey(bbox)) {
-				// check cache
+				// ophalen uit cache
+				LOGGER.debug("Achtergrond " + type
+						+ " afbeelding uit de cache serveren.");
 				return this.bgWMSCache.getImage(bbox);
 			}
 			map = this.bgWMS.createGetMapRequest();
@@ -282,8 +290,15 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	private String getFeatureInfo(final LayerDescriptor lyrDesc)
-			throws ServiceException, IOException {
+	private String getFeatureInfo(final BoundingBox bbox,
+			final LayerDescriptor lyrDesc) throws ServiceException, IOException {
+		final BboxLayerCacheKey key = new BboxLayerCacheKey(bbox, lyrDesc);
+		if (featInfoCache.containsKey(key)) {
+			LOGGER.debug("FeatureInfo uit de cache serveren.");
+			// ophalen uit cache
+			return featInfoCache.get(key).getItem();
+		}
+
 		try {
 			final GetFeatureInfoRequest getFeatureInfoRequest = this
 					.getCachedWMS(lyrDesc).createGetFeatureInfoRequest(
@@ -314,13 +329,19 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			final GetFeatureInfoResponse response = this.getCachedWMS(lyrDesc)
 					.issueRequest(getFeatureInfoRequest);
 
-			return FeatureInfoResponseConverter.convertToHTMLTable(response
-					.getInputStream(),
+			String html = FeatureInfoResponseConverter.convertToHTMLTable(
+					response.getInputStream(),
 					FeatureInfoResponseConverter.Type.GMLTYPE, lyrDesc
 							.getAttributes().split(",\\s*"));
+			featInfoCache.put(key,
+					new CachableString(html, System.currentTimeMillis() * 1000
+							+ SECONDS_TO_CACHE_ELEMENTS));
+			return html;
+
 		} catch (final UnsupportedOperationException u) {
-			LOGGER.error(
-					"De WMS server ondersteund geen GetFeatureInfoRequest.", u);
+			LOGGER.warn("De WMS server ("
+					+ this.getCachedWMS(lyrDesc).getInfo().getTitle()
+					+ ") ondersteund geen GetFeatureInfoRequest.", u);
 			return "";
 		}
 	}
@@ -339,6 +360,13 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 */
 	private BufferedImage getForeGroundMap(final BoundingBox bbox,
 			final LayerDescriptor lyrDesc) throws ServletException {
+
+		final BboxLayerCacheKey key = new BboxLayerCacheKey(bbox, lyrDesc);
+		if (fgWMSCache.containsKey(key)) {
+			// ophalen uit cache
+			LOGGER.debug("Voorgrond afbeelding uit de cache serveren.");
+			return fgWMSCache.get(key).getImage();
+		}
 
 		// wms request doen
 		try {
@@ -364,6 +392,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			final GetMapResponse response = this.getCachedWMS(lyrDesc)
 					.issueRequest(this.getMapRequest);
 			final BufferedImage image = ImageIO.read(response.getInputStream());
+
+			fgWMSCache.put(key,
+					new CacheImage(image, SECONDS_TO_CACHE_ELEMENTS));
 
 			if (LOGGER.isDebugEnabled()) {
 				// voorgrond plaatje bewaren in debug modus
@@ -440,16 +471,17 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					legends[l].deleteOnExit();
 					legendCache.put(key,
 							new CacheImage(image, legends[l].getAbsolutePath(),
-									SECONDS_TO_CACHE_ELEMENTS * 24));
+									System.currentTimeMillis() * 1000
+											+ SECONDS_TO_CACHE_ELEMENTS * 24));
 					LOGGER.debug("Legenda bestand: "
 							+ legends[l].getAbsolutePath());
 					ImageIO.write(image, "png", legends[l]);
 				}
 			}
 		} catch (final UnsupportedOperationException u) {
-			LOGGER.error(
-					"De WMS server ondersteund geen GetLegendGraphicRequest.",
-					u);
+			LOGGER.warn("De WMS server ("
+					+ this.getCachedWMS(lyrDesc).getInfo().getTitle()
+					+ ") ondersteund geen GetLegendGraphicRequest.", u);
 			return null;
 		}
 		return legends;
@@ -529,6 +561,12 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		}
 
 		legendCache = new Cache<String, CacheImage, BufferedImage>(
+				NUMBER_CACHE_ELEMENTS);
+
+		featInfoCache = new Cache<BboxLayerCacheKey, CachableString, String>(
+				NUMBER_CACHE_ELEMENTS);
+
+		fgWMSCache = new Cache<BboxLayerCacheKey, CacheImage, BufferedImage>(
 				NUMBER_CACHE_ELEMENTS);
 
 		// achtergrond kaart
@@ -634,7 +672,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			try {
 				fg = this.getForeGroundMap(bbox, layer);
 				final File[] legendas = this.getLegends(layer);
-				final String fInfo = this.getFeatureInfo(layer);
+				final String fInfo = this.getFeatureInfo(bbox, layer);
 				request.setAttribute(REQ_PARAM_MAPID.code, mapId);
 				request.setAttribute(REQ_PARAM_LEGENDAS.code, legendas);
 				request.setAttribute(REQ_PARAM_FEATUREINFO.code, fInfo);
