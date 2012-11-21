@@ -152,6 +152,12 @@ a.accesskey:focus {
     border-right:none;
 }
 
+/* IE shows a border */
+#cbslogo
+{
+ border: 0px;
+ }
+
 #zoekFormulier #delete {
     float:left; 
     width:34px;
