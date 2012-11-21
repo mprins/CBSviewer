@@ -25,12 +25,12 @@ jQuery(document).ready(function() {
 	});
 
 	/* Werkt dit alleen in Chrome??? */
-	$("#x").click(function() {
+	$("#delete").click(function() {
 		$("#adres").val("");
 		$(".adreslijst").empty();
 		$("#zoekresultaten").empty();
 
-		$(this).hide();
+		$("#x").hide();
 	});					
 });
 

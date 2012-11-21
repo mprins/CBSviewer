@@ -361,6 +361,12 @@ a.olControlZoomOut {
 	float: right;
 }
 
+.utilBlock a span
+{
+	color:#000;
+	font-size:12px;
+}
+
 .utilBlock a
 {
 	color: #7e7e7e;
@@ -568,3 +574,33 @@ a.olControlZoomOut {
 	top:390px;
 	z-index:1003;
 }
+
+/* feature info css tests */
+.featureinfo {
+	cursor: help;
+	position: relative;
+}
+.featureinfo span {
+	margin-left: -999em;
+	position: absolute;
+}
+.featureinfo:hover span {
+	border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+	position: absolute; left: 1em; top: 2em; z-index: 99;
+	margin-left: 0; width: 250px;
+}
+.featureinfo:hover img {
+	border: 0; margin: -10px 0 0 -55px;
+	float: left; position: absolute;
+}
+.featureinfo:hover em {
+	font-family: Candara, Tahoma, Geneva, sans-serif; font-size: 1.2em; font-weight: bold;
+	display: block; padding: 0.2em 0 0.6em 0;
+}
+
+.custom { padding: 0.5em 0.8em 0.8em 2em; }
+.info { background: #9FDAEE; border: 1px solid #2BB0D7;	}
+.menuinfo { background: #ffffff; border: 1px solid #2BB0D7;	}
+
+/* end feature info css tests */

@@ -72,8 +72,13 @@
 	</div>
     <div id="headerright" class="headerColumn headertop">
 		<div class="utilBlock">	
-			<a href="#" class="active">Home</a>
-			<a href="#">Over CBS in uw buurt</a>
+			<a class="featureinfo" href="#">Over CBS in uw buurt
+				<span class="custom menuinfo"><img src="../img/info.png" alt="Information" height="48" width="48" />
+					<em>Over CBS in uw buurt</em>Het CBS heeft veel gegevens op regionaal niveau. Die zijn al lange tijd beschikbaar via de statistische database StatLine. Cartografische systemen geven de mogelijkheid de regionale gegevens ook op een meer aantrekkelijke manier te presenteren. Daarvoor heeft het CBS deze site opgezet. 
+Drie maal per jaar vernieuwt het CBS de gegevens op deze site. Zo mogelijk wordt de site dan ook uitgebreid met nieuwe onderwerpen. 
+Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien over buurten, maar ook over wijken? Wilt u er zeker van zijn dat u de meest recente cijfers ziet? Ga dan naar  de tabel "Kerncijfers wijken en buurten" in StatLine. U kunt daar selecteren welke gegevens u op uw scherm wilt zien.
+				</span>
+			</a>
 			<a href="#">Hoe werkt dit?</a>
 			<a href="#">Veel gestelde vragen</a>
 			<a href="#">Contact</a>
