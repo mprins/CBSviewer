@@ -79,7 +79,7 @@ a.accesskey:focus {
 
 #zoekContainer
 {
-	min-width:280px;
+	min-width:270px;
 	padding-top:3px;
 	padding-bottom: 3px;
 }
@@ -125,12 +125,13 @@ a.accesskey:focus {
 }
 
 #zoekContainer .adreslijst li {
-    display: block;
+    display:inline;
 	padding-right:3px;
     float: left;
 }
 
 #zoekContainer .adreslijst {
+	z-index:1010;
 	list-style-image: none;
 	white-space:nowrap;
 	margin: 0;
@@ -139,8 +140,8 @@ a.accesskey:focus {
 
 #zoekFormulier #adres {
     float:left;
-    width:70%;
-	min-width:50px;
+    width:75%;
+	min-width:120px;
     height:27px;
     line-height:27px;
     text-indent:10px;
@@ -152,10 +153,13 @@ a.accesskey:focus {
     border-right:none;
 }
 
-/* IE shows a border */
-#cbslogo
-{
- border: 0px;
+#cbslogo {
+	max-width:321px;
+	height:100%;
+	background-image: url(../img/template/hdr_logo.gif);
+	background-repeat: no-repeat;
+	background-color: #fff;
+	background-size: auto 51px;
  }
 
 #zoekFormulier #delete {
@@ -494,14 +498,26 @@ a.olControlZoomOut {
 	max-height:76px;
     position:relative;
 	margin-left: 5px;
+	z-index:1011;
 }
 
 .headerColumn
 {
     display:table-cell;
-	vertical-align:top;
-    width:30%;
 	padding-right:5px;
+}
+
+.headertop
+{
+    width:33%;
+	vertical-align:top;	
+}
+
+.headermiddle
+{
+	width:34%;
+	vertical-align:middle;
+	background-color:white;
 }
 
 #inhoud {
@@ -519,7 +535,9 @@ a.olControlZoomOut {
 
 .logo
 {
-	min-width:200px;
+	height:51px;
+	width:100%;
+	min-width:34px;
 	float: left;
 	padding-top: 9px;
 	padding-left: 3px;
@@ -531,7 +549,7 @@ a.olControlZoomOut {
 	padding: 3px;
 	background: rgb(255, 255, 255) transparent;  /* oude browsers */
 	background: rgba(255, 255, 255, 0.6); 
-	min-width:150px;
+	min-width:120px;
 	position:absolute;
 	left:5px;
 	top:185px;
@@ -543,7 +561,7 @@ a.olControlZoomOut {
 	background: rgb(255, 255, 255) transparent;  /* oude browsers */
 	background: rgba(255, 255, 255, 0.6); 
 	padding: 3px;
-	min-width:150px;
+	min-width:120px;
 	border: 1px Solid #c7c7c7;
 	position:absolute;
 	left:5px;

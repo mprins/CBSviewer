@@ -60,17 +60,17 @@
 <body>
 
 <div class="header">
-    <div id="headerleft" class="headerColumn">
-		<div class="logo">
-			<a href="#">
-				<img src="./img/template/hdr_logo.gif" id="cbslogo" width="100%" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/>
-			</a>
+    <div id="headerleft" class="headerColumn headertop">
+		<div class="logo">			
+			<div id="cbslogo">
+				<!--img src="" id="cbslogo" width="100%" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/-->
+			</div>
 		</div>
 	</div>
-    <div id="headercenter" class="headerColumn">
+    <div id="headercenter" class="headerColumn headermiddle">
 		<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
 	</div>
-    <div id="headerright" class="headerColumn">
+    <div id="headerright" class="headerColumn headertop">
 		<div class="utilBlock">	
 			<a href="#" class="active">Home</a>
 			<a href="#">Over CBS in uw buurt</a>

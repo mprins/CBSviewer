@@ -75,8 +75,9 @@ var ZoekFormulier = {
 			Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
 			break;
 		default:
+			html += '<p style="clear:both">Bedoelt u? </p>';
 			html += '<ul class="adreslijst">';
-			html += '<li>Bedoelt u? </li>';
+			
 			for ( var i = 0; i < data.length; i++) {
 			
 						html += '<li><a class="button" href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ',' + data[i].yCoord + ','
