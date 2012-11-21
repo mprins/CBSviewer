@@ -8,6 +8,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.util.Set;
 
@@ -148,6 +149,23 @@ public class CacheTest {
 
 		assertEquals(this.filledCache.get(this.testKey).getItem(),
 				this.emptyCache.get(this.testKey).getItem());
+
+		try {
+			this.emptyCache.put(
+					null,
+					new CachableString(this.testValue, System
+							.currentTimeMillis()
+							+ MILLI_SECONDS_TO_CACHE_ELEMENTS));
+			fail("Verwachte fout is niet opgetreden");
+		} catch (final IllegalArgumentException e) {
+			assertTrue(true);
+		}
+		try {
+			this.emptyCache.put(this.testKey, null);
+			fail("Verwachte fout is niet opgetreden");
+		} catch (final IllegalArgumentException e) {
+			assertTrue(true);
+		}
 	}
 
 	/**
