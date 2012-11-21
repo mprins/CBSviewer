@@ -130,33 +130,54 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
             </div>		
 </div>
 
-		<div id="legendaContainer" class="legenda">
-			<jsp:expression>RESOURCES.getString("KEY_LEGENDA_TITEL")</jsp:expression>
-			<div id="legenda">
-				<!-- plaats voor de legenda, dynamisch en statisch -->
-				<c:if test="${param.coreonly==true}">
-					<c:if test="${not empty legendas}">
-						<c:forEach items="${legendas}" varStatus="legenda">
-							<img src="${dir}/${legendas[legenda.index].name}"
-								alt="legenda item" />
-						</c:forEach>
-					</c:if>
-				</c:if>
+		<div class="ac-container">
+			<div>
+				<input id="ac-1" name="accordion-1" type="checkbox" checked="checked"/>
+				<label for="ac-1">Legenda</label>
+				<div class="ac-small">
+					<p>
+						<!-- plaats voor de legenda, dynamisch en statisch -->
+						<c:if test="${param.coreonly==true}">
+							<c:if test="${not empty legendas}">
+								<c:forEach items="${legendas}" varStatus="legenda">
+									<img src="${dir}/${legendas[legenda.index].name}"
+										alt="legenda item" />
+								</c:forEach>
+							</c:if>
+						</c:if>
+					</p>
+				</div>
 			</div>
-		</div>		
-
-		<div id="infoContainer" class="featureinfo">
-			<jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression>
-			<div id="featureinfo">
-				<!-- plaats voor de feature info, dynamisch en statisch-->
-				<c:if test="${param.coreonly==true}">
-					<c:if test="${not empty featureinfo}">
-						<c:out value="${featureinfo}" escapeXml="false" />
-					</c:if>
-				</c:if>
+			<div>
+				<input id="ac-2" name="accordion-1" type="checkbox"/>
+				<label for="ac-2">Informatie</label>
+				<div class="ac-small">
+					<p>
+						<!--jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression-->
+						<c:if test="${param.coreonly==true}">
+							<c:if test="${not empty featureinfo}">
+								<c:out value="${featureinfo}" escapeXml="false" />
+							</c:if>
+						</c:if>
+					</p>
+				</div>
 			</div>
+			<!--div>
+				<input id="ac-3" name="accordion-1" type="checkbox" />
+				<label for="ac-3">Onderdeel 3</label>
+				<div class="ac-large">
+					<p>Inhoud 3</p>
+				</div>
+			</div>
+			<div>
+				<input id="ac-4" name="accordion-1" type="checkbox" />
+				<label for="ac-4">Onderdeel 4</label>
+				<div class="ac-large">
+					<p>Inhoud 4</p>
+				</div>
+			</div-->
 		</div>
-
+	
 		<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
 
 		<c:if test="${param.coreonly!=true}">
