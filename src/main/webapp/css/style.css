@@ -159,7 +159,8 @@ a.accesskey:focus {
     line-height:20px; 
     padding:0 10px 0 10px;
     font-family: "Lucida Sans", "Lucida Sans Unicode",sans-serif;
-    font-size:22px; 
+    font-size:18px;
+	font-weight:bold;	
     background: #fff;  
     border:solid 1px #2d598c; 
     border-top:solid 1px #2d598c; 

@@ -19,9 +19,12 @@ jQuery(document).ready(function() {
 	$("#x").fadeIn();
 	if ($.trim($("#adres").val()) == "") {
 		$("#x").fadeOut();
+		$(".adreslijst").empty();
+		$("#zoekresultaten").empty();
 		}
 	});
-		
+
+	/* Werkt dit alleen in Chrome??? */
 	$("#x").click(function() {
 		$("#adres").val("");
 		$(".adreslijst").empty();

@@ -23,7 +23,8 @@
 				<input type="hidden" name="coreonly" value="true"/>
 				<input type="hidden" name="forward" value="true"/>
 				
-				<button id="delete"><span id="x">x</span></button>
+				<button id="delete"><span id="x">X</span></button>
+
 				<input value="" type="submit" accesskey="s" id="searchbutton"/>		
 			</p>
 		</form>
