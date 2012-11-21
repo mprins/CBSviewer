@@ -25,6 +25,8 @@ jQuery(document).ready(function() {
 	$("#x").click(function() {
 		$("#adres").val("");
 		$(".adreslijst").empty();
+		$("#zoekresultaten").empty();
+
 		$(this).hide();
 	});					
 });

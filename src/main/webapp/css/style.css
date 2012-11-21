@@ -84,6 +84,12 @@ a.accesskey:focus {
 	padding-bottom: 3px;
 }
 
+.zoekinput
+{
+	margin: 0;
+	padding: 0;
+}
+
 /* Make sure it works in all browsers */
 #zoekContainer .adreslijst li .button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -148,10 +154,9 @@ a.accesskey:focus {
 
 #zoekFormulier #delete {
     float:left; 
-    width:16px;
-    height:29px; 
-    line-height:27px; 
-    margin-right:5px; 
+    width:34px;
+    height:31px; 
+    line-height:20px; 
     padding:0 10px 0 10px;
     font-family: "Lucida Sans", "Lucida Sans Unicode",sans-serif;
     font-size:22px; 

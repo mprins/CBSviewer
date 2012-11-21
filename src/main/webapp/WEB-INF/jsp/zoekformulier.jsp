@@ -8,21 +8,24 @@
 		isErrorPage="false" />
 
 	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
-
+	
 	<!-- zoek formulier voor de versie zonder javascript en/of css -->
+	<!-- todo, geeft nog 4 fouten bij w3c check, nog oplossen later -->
 	<div id="zoekContainer">
 		<form title="Zoekformulier" method="get" action="adres" id="zoekFormulier">
-			<input type="text" id="adres" name="adres" value="${param.adres}"/>
-			
-			<c:if test="${request.straal != null}">
-				<input type="hidden" name="straal" value="${straal}" />
-			</c:if>
-			
-			<input type="hidden" name="coreonly" value="true" />
-			<input type="hidden" name="forward" value="true" />
-			
-			<div id="delete"><span id="x">x</span></div>
-			<input value="" type="submit" id="searchbutton"></input>
+			<p class="zoekinput">
+				<input type="text" id="adres" accesskey="i" name="adres" value="${param.adres}"/>
+				
+				<c:if test="${request.straal != null}">
+					<input type="hidden" name="straal" value="${straal}"/>
+				</c:if>
+				
+				<input type="hidden" name="coreonly" value="true"/>
+				<input type="hidden" name="forward" value="true"/>
+				
+				<button id="delete"><span id="x">x</span></button>
+				<input value="" type="submit" accesskey="s" id="searchbutton"/>		
+			</p>
 		</form>
 		<p id="zoekresultaten">
 			<c:out value="${gevonden}" />
