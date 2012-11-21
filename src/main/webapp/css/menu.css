@@ -100,7 +100,7 @@
 /* Close button for iPad */
 .closeMega {
 	position: absolute;
-	z-index: 998;
+	z-index: 1005;
 	top: 5px;
 	right: 7px;
 	width: 24px;
@@ -135,14 +135,14 @@
 }
 
 .siteNavigation > li {
-	z-index:99998;
+	z-index:1006;
 	display:block;
 	float:left;
 	list-style:none;
 }
 .siteNavigation>li>a	 {
 	position: relative;
-	z-index: 1000;
+	z-index: 1007;
 	display: block;
 	float: left; 
 	padding: 0 15px;
@@ -205,7 +205,7 @@
 	top: 35px;
 	left: -9999px;
 	width: 980px;
-	z-index:998;
+	z-index:1005;
 }
 
 .navCategories 
@@ -286,7 +286,7 @@
 	position: absolute;
 	left: -2000em;
 	top: 0;
-	z-index: 998;
+	z-index: 1005;
 	background:#fff;
 	
 	-moz-border-radius:0 0 3px 0;
@@ -564,7 +564,7 @@ display: inline;
 	top: 0px;
 	left: 190px;
 	background-color: #ffffff;
-	z-index:1000;
+	z-index:1007;
 	border: solid 1px #b4b4b4;
 }
 

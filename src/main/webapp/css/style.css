@@ -535,7 +535,7 @@ a.olControlZoomOut {
 	position:absolute;
 	left:5px;
 	top:185px;
-	z-index:996;
+	z-index:1003;
 }
 
 #infoContainer
@@ -548,5 +548,5 @@ a.olControlZoomOut {
 	position:absolute;
 	left:5px;
 	top:390px;
-	z-index:996;
+	z-index:1003;
 }
