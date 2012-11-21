@@ -1,13 +1,14 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms.cache;
 
 import java.awt.image.BufferedImage;
 
+// TODO: Auto-generated Javadoc
 /**
  * Cachable image implementatie.
  * 
@@ -16,7 +17,7 @@ import java.awt.image.BufferedImage;
  */
 public class CacheImage implements CachableImage<BufferedImage> {
 
-	/** de expire-by timestamp in seconds (UNIX time). */
+	/** de expire-by timestamp in milliseconden (UNIX time). */
 	private final long expireBy;
 
 	/** bestandsnaam. */
@@ -33,7 +34,7 @@ public class CacheImage implements CachableImage<BufferedImage> {
 	 * @param filename
 	 *            de bestandsnaam
 	 * @param expireBy
-	 *            de expire-by timestamp in seconds (UNIX time)
+	 *            de expire-by timestamp in milliseconden (UNIX time)
 	 */
 	public CacheImage(final BufferedImage image, final String filename,
 			final long expireBy) {
@@ -51,10 +52,10 @@ public class CacheImage implements CachableImage<BufferedImage> {
 	 *            seconds to live in de cache
 	 */
 	public CacheImage(final BufferedImage image, final long secondsToLive) {
-		final long expireBy = secondsToLive != -1 ? System.currentTimeMillis()
+		final long expires = secondsToLive != -1 ? System.currentTimeMillis()
 				+ (secondsToLive * 1000) : secondsToLive;
 		this.image = image;
-		this.expireBy = expireBy;
+		this.expireBy = expires;
 	}
 
 	/*
@@ -98,10 +99,21 @@ public class CacheImage implements CachableImage<BufferedImage> {
 				.currentTimeMillis()));
 	}
 
+	/**
+	 * Gets the image.
+	 * 
+	 * @return the image
+	 */
 	public BufferedImage getImage() {
 		return getItem();
 	}
 
+	/**
+	 * Sets the file name.
+	 * 
+	 * @param name
+	 *            the new file name
+	 */
 	public void setFileName(String name) {
 		this.fName = name;
 	}

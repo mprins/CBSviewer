@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms;
 
@@ -87,8 +87,11 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 */
 	private static final int MAP_DIMENSION_MIDDLE = MAP_DIMENSION / 2;
 
-	/** time-to-live voor cache elementen.{@value} */
+	/** time-to-live voor cache elementen. {@value} */
 	private static final long SECONDS_TO_CACHE_ELEMENTS = 60 * 60/* 1 uur */;
+
+	/** time-to-live voor cache elementen. {@value} */
+	private static final long MILLISECONDS_TO_CACHE_ELEMENTS = SECONDS_TO_CACHE_ELEMENTS * 1000;
 
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 4958212343847516071L;
@@ -96,13 +99,18 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	/** De achtergrond kaart WMS. */
 	private transient WebMapServer bgWMS = null;
 
+	/** cache voor legenda afbeeldingen. */
+	private static transient Cache<String, CacheImage, BufferedImage> legendCache = null;
+
+	/** cache voor voorgrond WMS afbeeldingen. */
+	private static transient Cache<BboxLayerCacheKey, CacheImage, BufferedImage> fgWMSCache = null;
+
+	/** cache voor feature info. */
+	private static transient Cache<BboxLayerCacheKey, CachableString, String> featInfoCache = null;
+
 	/** verzameling lagen voor de achtergrondkaart. */
 	private String[] bgWMSlayers = null;
 
-	private static transient Cache<String, CacheImage, BufferedImage> legendCache = null;
-	private static transient Cache<BboxLayerCacheKey, CacheImage, BufferedImage> fgWMSCache = null;
-
-	private static transient Cache<BboxLayerCacheKey, CachableString, String> featInfoCache = null;
 	/**
 	 * voorgrond wms request.
 	 * 
@@ -281,6 +289,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	/**
 	 * Haalt de feature info op.
 	 * 
+	 * @param bbox
+	 *            the bbox
 	 * @param lyrDesc
 	 *            de layerdescriptor met de WMS informatie
 	 * @return Een string met feature info
@@ -329,13 +339,13 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			final GetFeatureInfoResponse response = this.getCachedWMS(lyrDesc)
 					.issueRequest(getFeatureInfoRequest);
 
-			String html = FeatureInfoResponseConverter.convertToHTMLTable(
-					response.getInputStream(),
-					FeatureInfoResponseConverter.Type.GMLTYPE, lyrDesc
-							.getAttributes().split(",\\s*"));
+			final String html = FeatureInfoResponseConverter
+					.convertToHTMLTable(response.getInputStream(),
+							FeatureInfoResponseConverter.Type.GMLTYPE, lyrDesc
+									.getAttributes().split(",\\s*"));
 			featInfoCache.put(key,
-					new CachableString(html, System.currentTimeMillis() * 1000
-							+ SECONDS_TO_CACHE_ELEMENTS));
+					new CachableString(html, System.currentTimeMillis()
+							+ MILLISECONDS_TO_CACHE_ELEMENTS));
 			return html;
 
 		} catch (final UnsupportedOperationException u) {
@@ -471,8 +481,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					legends[l].deleteOnExit();
 					legendCache.put(key,
 							new CacheImage(image, legends[l].getAbsolutePath(),
-									System.currentTimeMillis() * 1000
-											+ SECONDS_TO_CACHE_ELEMENTS * 24));
+									System.currentTimeMillis()
+											+ MILLISECONDS_TO_CACHE_ELEMENTS
+											* 24));
 					LOGGER.debug("Legenda bestand: "
 							+ legends[l].getAbsolutePath());
 					ImageIO.write(image, "png", legends[l]);

@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms.cache;
 
@@ -16,9 +16,9 @@ package nl.mineleni.cbsviewer.servlet.wms.cache;
  */
 interface Cachable<T> {
 	/**
-	 * Gets de expire-by (UNIX, seconden) timestamp voor dit object.
+	 * Gets de expire-by (UNIX, milliseconden) timestamp voor dit object.
 	 * 
-	 * @return the expire by
+	 * @return de expire-by timstamp in milliseconden UNIX time.
 	 */
 	long getExpireBy();
 

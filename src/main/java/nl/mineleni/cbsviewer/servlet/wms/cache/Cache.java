@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms.cache;
 
@@ -68,15 +68,13 @@ public class Cache<K, V extends Cachable<T>, T> implements Caching<K, V, T> {
 		this.cache.clear();
 	}
 
-	/**
-	 * Kijkt of de gevraagde sleutel in de cache voorkomt.
+	/*
+	 * (non-Javadoc)
 	 * 
-	 * @param key
-	 *            the key
-	 * @return true, if successful
-	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCache#containsKey(org.opengis.geometry.BoundingBox)
+	 * @see
+	 * nl.mineleni.cbsviewer.servlet.wms.cache.Caching#containsKey(java.lang
+	 * .Object)
 	 */
-
 	@Override
 	public boolean containsKey(final K key) {
 		return this.cache.containsKey(key);
@@ -87,7 +85,6 @@ public class Cache<K, V extends Cachable<T>, T> implements Caching<K, V, T> {
 	 * 
 	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCache#entrySet()
 	 */
-
 	@Override
 	public Set<Entry<K, V>> entrySet() {
 		final HashMap<K, V> s = new HashMap<K, V>();
@@ -171,7 +168,6 @@ public class Cache<K, V extends Cachable<T>, T> implements Caching<K, V, T> {
 		}
 		this.cache.put(key, cacheValue);
 		this.queue.add(key);
-
 	}
 
 	/**

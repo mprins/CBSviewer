@@ -23,7 +23,7 @@ public class CacheImageTest {
 	private CacheImage cImage;
 
 	/** expire by. */
-	private final long expireBy = System.currentTimeMillis() * 1000 + 1000l;
+	private final long expireBy = System.currentTimeMillis() + 1000 * 1000l;
 
 	/** naam. */
 	private final String name = "NAAM";

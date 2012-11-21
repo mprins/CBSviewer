@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms.cache;
 
@@ -17,7 +17,7 @@ public class CachableString implements Cachable<String> {
 	/** de String die wordt opgeslagen in de cache. */
 	private final String toCache;
 
-	/** de expire-by timestamp in seconds (UNIX time). */
+	/** de expire-by timestamp in milliseconden (UNIX time). */
 	private final long expireBy;
 
 	/**
@@ -26,7 +26,7 @@ public class CachableString implements Cachable<String> {
 	 * @param toCache
 	 *            de String om te bewaren
 	 * @param expireBy
-	 *            de expire-by timestamp in seconds (UNIX time)
+	 *            de expire-by timestamp in milliseconden (UNIX time)
 	 */
 	public CachableString(final String toCache, final long expireBy) {
 		this.toCache = toCache;

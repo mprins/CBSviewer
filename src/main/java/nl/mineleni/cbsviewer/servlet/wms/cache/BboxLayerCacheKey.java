@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms.cache;
 
@@ -43,23 +43,30 @@ public class BboxLayerCacheKey {
 	 */
 	@Override
 	public boolean equals(final Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		final BboxLayerCacheKey other = (BboxLayerCacheKey) obj;
 		if (bbox == null) {
-			if (other.bbox != null)
+			if (other.bbox != null) {
 				return false;
-		} else if (!bbox.equals(other.bbox))
+			}
+		} else if (!bbox.equals(other.bbox)) {
 			return false;
+		}
 		if (ld == null) {
-			if (other.ld != null)
+			if (other.ld != null) {
 				return false;
-		} else if (!ld.equals(other.ld))
+			}
+		} else if (!ld.equals(other.ld)) {
 			return false;
+		}
 		return true;
 	}
 

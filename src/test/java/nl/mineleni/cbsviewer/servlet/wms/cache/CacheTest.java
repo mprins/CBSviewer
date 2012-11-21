@@ -32,7 +32,7 @@ public class CacheTest {
 	private Cache<String, CachableString, String> filledCache;
 
 	/** seconds to cache elements. */
-	private final int SECONDS_TO_CACHE_ELEMENTS = 120;
+	private final int MILLI_SECONDS_TO_CACHE_ELEMENTS = 120 * 1000;
 
 	/** test key. */
 	String testKey = "key";
@@ -55,7 +55,7 @@ public class CacheTest {
 
 		filledCache.put(this.testKey,
 				new CachableString(this.testValue, System.currentTimeMillis()
-						* 1000 + SECONDS_TO_CACHE_ELEMENTS));
+						+ MILLI_SECONDS_TO_CACHE_ELEMENTS));
 	}
 
 	/**
@@ -117,8 +117,8 @@ public class CacheTest {
 	public void testOverSize() {
 		for (int i = 0; i < this.CACHE_ELEMENTS + 10; i++) {
 			this.emptyCache.put(this.testKey + i, new CachableString(
-					this.testValue + i, System.currentTimeMillis() * 1000
-							+ SECONDS_TO_CACHE_ELEMENTS));
+					this.testValue + i, System.currentTimeMillis()
+							+ MILLI_SECONDS_TO_CACHE_ELEMENTS));
 		}
 		assertEquals(CACHE_ELEMENTS, this.emptyCache.size());
 		assertEquals(CACHE_ELEMENTS, this.emptyCache.mapSize());
@@ -134,12 +134,12 @@ public class CacheTest {
 	@Test
 	public final void testPut() {
 		this.emptyCache.put(this.testKey, new CachableString(this.testValue,
-				System.currentTimeMillis() * 1000 + SECONDS_TO_CACHE_ELEMENTS));
+				System.currentTimeMillis() + MILLI_SECONDS_TO_CACHE_ELEMENTS));
 		assertEquals(1, this.emptyCache.size());
 
 		// testKey zit al in deze cache!
 		this.filledCache.put(this.testKey, new CachableString(this.testValue,
-				System.currentTimeMillis() * 1000 + SECONDS_TO_CACHE_ELEMENTS));
+				System.currentTimeMillis() + MILLI_SECONDS_TO_CACHE_ELEMENTS));
 		assertEquals(1, this.filledCache.size());
 
 		assertEquals(this.filledCache.size(), this.emptyCache.size());
