@@ -36,7 +36,7 @@
 	clear:left; 
 	width:12em}
 
-.megaMenu, .megaMenu ul, .navCategories, .megaMenu .col  {	min-height: 525px;}
+.megaMenu, .megaMenu ul, .navCategories, .megaMenu .col  {	min-height: 540px; }
 .sectionBrands .navDropDown,
 .sectionOffers .navDropDown,
 .sectionStyle .navDropDown 
@@ -501,7 +501,7 @@ height: 300px;
 	color: #333366;
 	text-decoration: none;
 	display: block;
-	padding:  3px 2px;
+	padding:  2px 2px;
 	margin: 0;
 }
 
@@ -626,4 +626,11 @@ display: inline;
    position: fixed; top: 276px; left: 5px; width: 183px;
    padding: 5px; margin: 0px; z-index: 100;
    color: #000000;
+}
+
+#highlightmore
+{
+	font-size:16px;
+	font-weight:bold;
+	color:#2D598C;
 }
