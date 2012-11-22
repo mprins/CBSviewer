@@ -443,6 +443,7 @@ a.olControlZoomOut {
 .teaserPanel a.opMaat
 {
 	background-image: url(../img/template/btn_teaserPanel_opMaat.gif);
+	cursor: pointer; 
 }
 
 .teaserPanel a.rss
