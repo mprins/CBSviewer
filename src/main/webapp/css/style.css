@@ -667,7 +667,7 @@ a.olControlZoomOut {
 }
 
 /* requested by Niek, remove header when active */
-.ac-container input:checked + label{
+.ac-menu input:checked + label{
 	display:none;
 }
 .ac-container input:checked + label,
