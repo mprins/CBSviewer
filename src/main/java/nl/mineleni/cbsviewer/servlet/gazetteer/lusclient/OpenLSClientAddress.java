@@ -97,37 +97,36 @@ public class OpenLSClientAddress {
      * 
      * @return de address string
      * @see #toString()
-     * @todo StringBuilder gebruiken
      */
     public String getAddressString() {
         if (this.addressString != null) { return this.addressString; }
 
-        String result = "";
-        result += this.streetName;
-        String spacer = result.equals("") ? "" : " - ";
+        final StringBuilder sb = new StringBuilder();
+        sb.append(this.streetName);
+        String spacer = sb.length() < 1 ? "" : " - ";
 
-        result += result.equals("") ? ""
+        sb.append(sb.length() < 1 ? ""
                 : (!this.streetNumber.equals("") ? spacer + this.streetNumber
-                        : "");
+                        : ""));
 
-        result += !this.postalCode.equals("") ? spacer + this.postalCode : "";
+        sb.append(!this.postalCode.equals("") ? spacer + this.postalCode : "");
 
-        spacer = result.equals("") ? "" : " - ";
-        result += !this.municipalitySubdivision.equals("") ? spacer
-                + this.municipalitySubdivision + APPEND_PLAATS : "";
+        spacer = sb.length() < 1 ? "" : " - ";
+        sb.append(!this.municipalitySubdivision.equals("") ? spacer
+                + this.municipalitySubdivision + APPEND_PLAATS : "");
 
-        spacer = result.equals("") ? "" : " - ";
+        spacer = sb.toString().equals("") ? "" : " - ";
         if (this.municipalitySubdivision.equals("")) {
-            result += !this.municipality.equals("") ? spacer
-                    + this.municipality + APPEND_GEMEENTE : "";
+            sb.append(!this.municipality.equals("") ? spacer
+                    + this.municipality + APPEND_GEMEENTE : "");
         }
 
-        spacer = result.equals("") ? "" : " - ";
+        spacer = sb.length() < 1 ? "" : " - ";
         if (this.municipality.equals("")) {
-            result += !this.countrySubdivision.equals("") ? spacer
-                    + this.countrySubdivision + APPEND_PROVINCIE : "";
+            sb.append(!this.countrySubdivision.equals("") ? spacer
+                    + this.countrySubdivision + APPEND_PROVINCIE : "");
         }
-        this.addressString = result;
+        this.addressString = sb.toString();
         LOGGER.debug("Adres is: " + this.addressString);
         return this.addressString;
     }
