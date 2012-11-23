@@ -8,7 +8,6 @@ package nl.mineleni.cbsviewer.servlet.wms.cache;
 
 import java.awt.image.BufferedImage;
 
-// TODO: Auto-generated Javadoc
 /**
  * Cachable image implementatie.
  * 

@@ -16,7 +16,7 @@ import java.awt.Image;
  *            the generic type of the object to cache.
  * @author prinsmc
  */
-interface CachableImage<T extends Image> extends Cachable<T> {
+public interface CachableImage<T extends Image> extends Cachable<T> {
 
 	/**
 	 * Accessor voor de naam van de gecachede afbeelding, bijvoorbeeld de

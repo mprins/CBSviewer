@@ -21,7 +21,7 @@ import java.util.Set;
  * @param <T>
  *            the generic type
  */
-interface Caching<K, V extends Cachable<T>, T> {
+public interface Caching<K, V extends Cachable<T>, T> {
 
 	/** Wist de complete cache. */
 	void clear();

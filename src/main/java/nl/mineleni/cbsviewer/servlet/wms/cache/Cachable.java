@@ -14,7 +14,7 @@ package nl.mineleni.cbsviewer.servlet.wms.cache;
  * @param <T>
  *            type cacheble object
  */
-interface Cachable<T> {
+public interface Cachable<T> {
 	/**
 	 * Gets de expire-by (UNIX, milliseconden) timestamp voor dit object.
 	 * 
