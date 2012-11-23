@@ -9,7 +9,8 @@ jQuery(document).ready(function() {
 
 	// opzoeken van de gevraagde kaart in de _layers, id's zitten in
 	// AvailableLayers.xml
-	var _id = 'cbs_inwoners_2000_per_hectare';
+	//var _id = 'cbs_inwoners_2000_per_hectare';
+	var _id = 'wijkbuurt2010auto';
 
 	var maps = jQuery.grep(_layers, function(n, i) {
 		return n.id == _id;
