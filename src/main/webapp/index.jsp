@@ -135,7 +135,7 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 			<div>
 				<input id="ac-1" name="accordion-1" type="checkbox" checked="checked"/>
 				<label for="ac-1">Legenda</label>
-				<div class="ac-small">
+				<div class="ac-small" id="legenda">
 					<p>
 						<!-- plaats voor de legenda, dynamisch en statisch -->
 						<c:if test="${param.coreonly==true}">
@@ -152,7 +152,7 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 			<div>
 				<input id="ac-2" name="accordion-1" type="checkbox"/>
 				<label for="ac-2">Informatie</label>
-				<div class="ac-small">
+				<div class="ac-small" id="featureinfo">
 					<p>
 						<!--jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression-->
 						<c:if test="${param.coreonly==true}">
