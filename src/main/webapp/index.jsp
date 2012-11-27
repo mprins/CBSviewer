@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
 	xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
@@ -17,6 +17,38 @@
 <head>
 <jsp:include page="WEB-INF/jsp/head_include.jsp" />
 
+		<c:if test="${not empty xcoord}">
+			<c:set value="${xcoord}" var="xcoord" />
+		</c:if>
+
+		<c:if test="${not empty ycoord}">
+			<c:set value="${ycoord}" var="ycoord" />
+		</c:if>
+		<c:if test="!${not empty straal}">
+			<c:set value="${straal}" var="straal" />
+		</c:if>
+		<!-- meer adressen -->
+		<c:if test="${not empty param.xcoord}">
+			<c:set value="${param.xcoord}" var="xcoord" />
+		</c:if>
+		<c:if test="${not empty param.ycoord}">
+			<c:set value="${param.ycoord}" var="ycoord" />
+		</c:if>
+		<c:if test="${not empty param.straal}">
+			<c:set value="${param.straal}" var="straal" />
+		</c:if>
+
+		<jsp:include page="kaart">
+			<!-- TODO: mapid waarde moet uit de request komen bijv. ?mapid=cbs_inwoners_2000_per_hectare -->
+			<!-- StringConstants.REQ_PARAM_MAPID -->
+			<!--<jsp:param name="mapid" value="cbs_inwoners_2000_per_hectare" />-->
+			<jsp:param name="mapid" value="wijkbuurt2010auto" />
+
+			<jsp:param value="${xcoord}" name="xcoord" />
+			<jsp:param value="${ycoord}" name="ycoord" />
+			<jsp:param value="${straal}" name="straal" />
+		</jsp:include>
+
 <c:if test="${param.coreonly!=true}">
 	<script type="text/javascript" charset="utf-8">
 		document.documentElement.className += ' js';
@@ -28,131 +60,60 @@
 
 <body>
 
-		<div class="ui-layout-north">
-				<div class="pageheader">
-					<div class="logo">
-						<a href="#">
-							<!--jsp:expression>RESOURCES.getString("KEY_KAART_TITEL")</jsp:expression-->
-							<img src="./img/template/hdr_logo.gif" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/>
-						</a>
-					</div>
-					<div class="utilBlock">
-						<a href="#" class="active">Home</a>
-						<a href="#">Over CBS in uw buurt</a>
-						<a href="#">Hoe werkt dit?</a>
-						<a href="#">Veel gestelde vragen</a>
-						<a href="#">Contact</a>
-					</div>
-				</div>
-         </div>		
-		<div class="ui-layout-west">
-			
-				<div class="smartStep">
-					<label class="meerweten"><span>1. Meer weten over uw omgeving?</span></label>
-					<div id="zoekenContainer" class="zoeken">
-						<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
-					</div>
-				</div>
-
-				<div class="secondstep">
-					
-					<!-- invullen van parameters voor de kaart.
-					TODO: mogelijk moet dit stuk code gewoon boven de head sectie van de pagina. -->
-					<!-- 1 adres -->
-					<c:if test="${not empty xcoord}">
-						<c:set value="${xcoord}" var="xcoord" />
-					</c:if>
-	
-					<c:if test="${not empty ycoord}">
-						<c:set value="${ycoord}" var="ycoord" />
-					</c:if>
-					<c:if test="!${not empty straal}">
-						<c:set value="${straal}" var="straal" />
-					</c:if>
-					<!-- meer adressen -->
-					<c:if test="${not empty param.xcoord}">
-						<c:set value="${param.xcoord}" var="xcoord" />
-					</c:if>
-					<c:if test="${not empty param.ycoord}">
-						<c:set value="${param.ycoord}" var="ycoord" />
-					</c:if>
-					<c:if test="${not empty param.straal}">
-						<c:set value="${param.straal}" var="straal" />
-					</c:if>
-	
-					<jsp:include page="kaart">
-						<!-- TODO: mapid waarde moet uit de request komen bijv. ?mapid=cbs_inwoners_2000_per_hectare -->
-						<!-- StringConstants.REQ_PARAM_MAPID -->
-						<!--<jsp:param name="mapid" value="cbs_inwoners_2000_per_hectare" />-->
-						<jsp:param name="mapid" value="wijkbuurt2010auto" />
-	
-						<jsp:param value="${xcoord}" name="xcoord" />
-						<jsp:param value="${ycoord}" name="ycoord" />
-						<jsp:param value="${straal}" name="straal" />
-					</jsp:include>
-
-				
-					<div id="legendaContainer" class="legenda">
-						<jsp:expression>RESOURCES.getString("KEY_LEGENDA_TITEL")</jsp:expression>
-						<div id="legenda">
-							<!-- plaats voor de legenda, dynamisch en statisch -->
-							<c:if test="${param.coreonly==true}">
-								<c:if test="${not empty legendas}">
-									<c:forEach items="${legendas}" varStatus="legenda">
-										<img src="${dir}/${legendas[legenda.index].name}"
-											alt="legenda item" />
-									</c:forEach>
-								</c:if>
-							</c:if>
-						</div>
-					</div>
-
-					<div id="infoContainer" class="featureinfo">
-						<jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression>
-						<div id="featureinfo">
-							<!-- plaats voor de feature info, dynamisch en statisch-->
-							<c:if test="${param.coreonly==true}">
-								<c:if test="${not empty featureinfo}">
-									<c:out value="${featureinfo}" escapeXml="false" />
-								</c:if>
-							</c:if>
-						</div>
-					</div>
-					
-				</div>				
-
+<div class="header">
+    <div id="headerleft" class="headerColumn headertop">
+		<div class="logo">			
+			<div id="cbslogo">
+				<!--img src="" id="cbslogo" width="100%" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/-->
+			</div>
 		</div>
-		<div class="ui-layout-center" style="background-color:#EEEEEE">
-		
-			<div id="coreContainer" class="kaartContainer">
-				<!-- hier komt de statische kaart -->
-				<c:if test="${not empty kaart}">
-					<!-- StringConstants.MAP_CACHE_DIR -->
-					<img id="coreMapImage" src="${dir}/${kaart.name}"
-						alt="kaart voor thema: ${mapname}" width="440px"
-						height="440px" longdesc="#featureinfo"/>
-					<!-- navigatie knoppen zonder javascript -->
-					<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
-				</c:if>
-			</div>
-
-			<div id="kaartContainer" class="kaartContainer">
-				<div id="cbsKaart" class="kaart">
-					<!-- hier wordt de dynamische kaart ingehangen -->
-				</div>
-			</div>
-
-			<div id="copyright" class="copy">
-				<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
-			</div>
-			
+	</div>
+    <div id="headercenter" class="headerColumn headermiddle">
+		<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
+	</div>
+    <div id="headerright" class="headerColumn headertop">
+		<div class="utilBlock">	
+			<a class="featureinfo" href="#">Over CBS in uw buurt
+				<span class="custom menuinfo"><img src="../img/info.png" alt="Information" height="48" width="48" />
+					<em>Over CBS in uw buurt</em>Het CBS heeft veel gegevens op regionaal niveau. Die zijn al lange tijd beschikbaar via de statistische database StatLine. Cartografische systemen geven de mogelijkheid de regionale gegevens ook op een meer aantrekkelijke manier te presenteren. Daarvoor heeft het CBS deze site opgezet. 
+Drie maal per jaar vernieuwt het CBS de gegevens op deze site. Zo mogelijk wordt de site dan ook uitgebreid met nieuwe onderwerpen. 
+Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien over buurten, maar ook over wijken? Wilt u er zeker van zijn dat u de meest recente cijfers ziet? Ga dan naar  de tabel "Kerncijfers wijken en buurten" in StatLine. U kunt daar selecteren welke gegevens u op uw scherm wilt zien.
+				</span>
+			</a>
+			<a href="#">Hoe werkt dit?</a>
+			<a href="#">Veel gestelde vragen</a>
+			<a href="#">Contact</a>
 		</div>
-		
-		<div class="ui-layout-south">
-		
-			<div class="teaserPanel">
+	</div>
+</div>
+<div id="inhoud">
+	<div id="coreContainer" class="kaartContainer">
+		<!-- hier komt de statische kaart -->
+		<c:if test="${not empty kaart}">
+			<!-- StringConstants.MAP_CACHE_DIR -->
+			<img id="coreMapImage" src="${dir}/${kaart.name}"
+				alt="kaart voor thema: ${mapname}" width="440px"
+				height="440px" longdesc="#featureinfo"/>
+			<!-- navigatie knoppen zonder javascript -->
+			<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
+		</c:if>
+	</div>
+
+	<div id="kaartContainer" class="kaartContainer">
+		<div id="cbsKaart" class="kaart">
+			<!-- hier wordt de dynamische kaart ingehangen -->
+		</div>
+	</div>
+
+	<div id="copyright" class="copy">
+		<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
+	</div>
+</div>
+
+<div id="footer">
+	<div class="teaserPanel">
 				<div class="teaserContent">
-					<a id="_teasersControl__linkOpMaatHyperLink" class="opMaat" title="Uw Gemeente Op Maat" style="cursor: pointer; ">Uw Gemeente Op Maat<span>Publicaties en Documenten</span></a>
+					<a id="_teasersControl__linkOpMaatHyperLink" class="opMaat" title="Uw Gemeente Op Maat">Uw Gemeente Op Maat<span>Publicaties en Documenten</span></a>
 					<a href="#" title="CBS In uw buurt nieuws" class="rss">CBS In uw buurt nieuws<span>De laatste ontwikkelingen</span></a>
 					<a href="#" title="CBS Databank - Statline" class="databank">CBS Databank - Statline<span>Professionele data nodig?</span></a>
 					<a href="#" title="Gebruikersreacties gezocht" class="gezocht"><strong>Gezocht:</strong> Gebruikersreacties<span>Heeft u tips of suggesties?</span></a>
@@ -167,10 +128,57 @@
 					<a href="#">Sitemap</a>
 					<a href="#" class="last">RSS</a> 
 				</div>
-            </div>
-            
-		</div>
+            </div>		
+</div>
 
+		<div class="ac-container">
+			<div>
+				<input id="ac-1" name="accordion-1" type="checkbox" checked="checked"/>
+				<label for="ac-1">Legenda</label>
+				<div class="ac-small">
+					<p>
+						<!-- plaats voor de legenda, dynamisch en statisch -->
+						<c:if test="${param.coreonly==true}">
+							<c:if test="${not empty legendas}">
+								<c:forEach items="${legendas}" varStatus="legenda">
+									<img src="${dir}/${legendas[legenda.index].name}"
+										alt="legenda item" />
+								</c:forEach>
+							</c:if>
+						</c:if>
+					</p>
+				</div>
+			</div>
+			<div>
+				<input id="ac-2" name="accordion-1" type="checkbox"/>
+				<label for="ac-2">Informatie</label>
+				<div class="ac-small">
+					<p>
+						<!--jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression-->
+						<c:if test="${param.coreonly==true}">
+							<c:if test="${not empty featureinfo}">
+								<c:out value="${featureinfo}" escapeXml="false" />
+							</c:if>
+						</c:if>
+					</p>
+				</div>
+			</div>
+			<!--div>
+				<input id="ac-3" name="accordion-1" type="checkbox" />
+				<label for="ac-3">Onderdeel 3</label>
+				<div class="ac-large">
+					<p>Inhoud 3</p>
+				</div>
+			</div>
+			<div>
+				<input id="ac-4" name="accordion-1" type="checkbox" />
+				<label for="ac-4">Onderdeel 4</label>
+				<div class="ac-large">
+					<p>Inhoud 4</p>
+				</div>
+			</div-->
+		</div>
+	
 		<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
 
 		<c:if test="${param.coreonly!=true}">
@@ -180,7 +188,7 @@
 		<c:if test="${param.coreonly==true}">
 			<!-- scripts als laatste laden -->
 			<jsp:include page="WEB-INF/jsp/javascript_coreonly_include.jsp" />
-		</c:if>		
+		</c:if>	
 		
 		</body>
 	</html>

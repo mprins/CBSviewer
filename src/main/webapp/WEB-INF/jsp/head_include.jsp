@@ -36,8 +36,8 @@
 	<link rel="stylesheet" href="css/print.css" type="text/css"
 		media="print" />
 
-	<!-- needed for the menu and cbsinuwbuurt template -->
-	<link rel="stylesheet" href="css/nav.css" type="text/css" />
+	<!-- needed for the menu -->
+	<link rel="stylesheet" href="css/menu.css" type="text/css" />
 
 	<!--[if lte IE 7]>
 		<link rel="stylesheet" href="static/css/ie.css" type="text/css" media="all" />

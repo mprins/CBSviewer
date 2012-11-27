@@ -1,280 +1,10 @@
-.ui-layout-pane { /* all 'panes' */ 
-	background: #FFF; 
-	border: 0px solid #BBB; 
-	padding: 0px; 	
-	} 
-	
-.ui-layout-west
+#infobox 
 {
-	padding:5px;
-	background-color: #2d598c;
-}
-
-.ui-layout-resizer { /* all 'resizer-bars' */ 
-	background: #DDD; 
-} 
-
-.ui-layout-toggler { /* all 'toggler-buttons' */ 
-	background: #AAA; 
-} 
-
-/** CBS stylesheet **/
-/** reset elements first **/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td 
-{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	/* outline: 0; */
-	font-weight: inherit;
-	font-style: inherit;
-	font-size: 100%;
-	font-family: inherit;
-	vertical-align: baseline;
-}
-
-body
-{
-	background-image: url(../img/template/bg_body.gif);
-	background-repeat: repeat-x;
-	background-color: #2d598c;
-	font-size: 11px;
-	font-family: Arial, Helvetica, verdana, sans-serif;
-	
-	width: 100%;
-	height:100%;
-	text-align: left;
-	margin-left: auto;
-	margin-right: auto;	
-}
-
-.pageheader
-{
-	height: 76px;
-	margin-left: 5px;
-}
-
-.pageheader .logo
-{
-	float: left;
-	padding-top: 9px;
-	padding-left: 3px;
-}
-
-.utilBlock
-{
-	margin-top: 14px;
-	float: right;
-}
-
-.utilBlock a
-{
-	color: #7e7e7e;
-	border-right: 1px Solid #c7c7c7;
-	padding-right: 9px;
-	line-height: 10px;
-	margin-right: 9px;
-	text-decoration: none;
-}
-
-.utilBlock a.active
-{
-	font-weight: bold;
-	color: #6ba1d4;
-}
-
-.utilBlock a:hover
-{
-	color: #d46882;
-	text-decoration: underline;
-}
-
-.areaSelector
-{
-	background-color: #2d598c;
-	width:100%;
-	height:100%;
-	margin: 3px;
-	padding: 0px;
-}
-
- .smartStep
-{
-	padding-top:60px;
-	margin: 5px;
-	float: left;
-	width: 90%;
-	height:36px;
-	position: relative;
-	z-index: 1;
-}
-
- .secondstep
-{
-	padding-top:230px;
-	margin: 5px;
-}
-
-
- .smartStep input
-{
-	margin-left: 1px;
-	width: 100% !important;
-	background-color: #FFFFFF;
-	font-size: 14px;
-	padding-bottom: 3px;
-	padding-bottom: 1px;
-	color: #000000;
-	margin-right: 0px;
-	padding-left: 10px;
-	line-height: 12px;
-	display: block;
-	height: 15px;
-	position: relative;
-	overflow: hidden;
-	border: 0px;
-	border-top: 1px Solid #294e77;
-	border-bottom: 1px Solid #294e77;
-}
-
-.meerweten
-{
-	background-repeat: no-repeat;
-	display: block;
-	margin-bottom: 3px;
-}
- 
-.meerweten span
-{
-	visibility: hidden;
-}
-
- .meerweten
-{
-	background-image: url(../img/template/hdr_areaSelector_step1_labe.gif);
-}
-
-.teaserPanel
-{
-	clear: both;
-	width:100%;
-	height: 72px;
-	padding-left: 15px;
-	background-position: left top;
-	background-color: white;
-}
-
-.teaserContent
-{
-	margin-left:auto;
-	margin-right:auto;
-	width:960px;
-	height: 72px;
-	padding-left: 15px;
-	background-position: left top;
-	background-color: white;
-}
-
-.teaserPanel a
-{
-	display: block;
-	float: left;
-	padding-left: 55px;
-	padding-top: 13px;
-	margin-right: 5px;
-	margin-top: 8px;
-	
-	background-repeat: no-repeat;
-	font-size: 12px;
-	font-weight: bold;
-	color: #000000;
-	width: 179px;
-	height: 40px;
-	text-decoration: none;
-}
-
-.teaserPanel a span
-{
-	display: block;
-	margin-top: 2px;
-	font-size: 11px;
-	color: #a5a5a5;
-}
-
-.teaserPanel a strong
-{
-	color: #3d81a1;
-}
-.teaserPanel a.opMaat
-{
-	background-image: url(../img/template/btn_teaserPanel_opMaat.gif);
-}
-
-.teaserPanel a.rss
-{
-	background-image: url(../img/template/btn_teaserPanel_rss.gif);
-}
-
-.teaserPanel a.databank
-{
-	background-image: url(../img/template/btn_teaserPanel_databank.gif);
-}
-
-.teaserPanel a.gezocht
-{
-	background-image: url(../img/template/btn_teaserPanel_gezocht.gif);
-}
-
-.footer 
-{
-	background-color: #426A98;
-	background-repeat: no-repeat;
-	height: 29px;
-	line-height: 28px;
-	color: #b3c3d6;
-	text-align: center;
-	margin-top: 3px;
-}
-
-.footer a
-{
-	color: #b3c3d6;
-	text-decoration: none;
-	line-height: 12px;
-	padding-right: 15px;
-	padding-left: 13px;
-}
-
-.footer a:hover
-{
-	text-decoration: underline;
-}
-
-.footer a.last
-{
-	background-image: none;
-	padding-right: 0px;
-}
-
-.redcolor
-{
- color:red;
-}
-
-#infobox {
   border: 0px solid;
   margin: 10px 0px;
   width:183px;
-  height:380px;
   padding:50px 0px 0px 10px;
-  font-size:11px;
+
   background-repeat: no-repeat;
   background-position: center 5px;
   color: #000000;
@@ -287,33 +17,29 @@ body
 	position:absolute;left:5px;top:18px;
 }
 
-/* Lets reset all margins, paddings and list styles, shall we? */
-	.siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li { margin: 0; padding: 0; list-style: none;}
+.siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li { margin: 0; padding: 0; list-style: none;}
 
-/* Menu Functionality - Edit if you know what you are doing!! */
-/* Adjust the height of the drop down menu */
-
-	#drop-down-menu>ul>li{
-		display:block;
-		position:relative;
-		float:left}
-	#drop-down-menu>li>ul{display:none}
-	#drop-down-menu>li:hover>ul{ 
-		display:block; 
-		position:absolute}
-	#drop-down-menu>li:hover>li{ 
-		font-size:70%;
-		clear:left; 
-		width:12em}
-
-
-
+#drop-down-menu>ul>li
+{
+	display:block;
+	position:relative;
+	float:left}
+#drop-down-menu>li>ul{display:none}
+#drop-down-menu>li:hover>ul
+{ 
+	display:block; 
+	position:absolute}
+#drop-down-menu>li:hover>li
+{ 
+	font-size:70%;
+	clear:left; 
+	width:12em}
 
 .megaMenu, .megaMenu ul, .navCategories, .megaMenu .col  {	min-height: 525px;}
-
 .sectionBrands .navDropDown,
 .sectionOffers .navDropDown,
-.sectionStyle .navDropDown {
+.sectionStyle .navDropDown 
+{
 	background:#fff;
 	width:172px;
 	padding:10px 5px 10px;
@@ -326,55 +52,54 @@ body
 	-webkit-border-radius:0 0 3px 3px;
 	border-radius: 0 0 3px 3px;
 }
-.sectionStyle .navDropDown {
+.sectionStyle .navDropDown 
+{
 	width:150px;
 }
 .siteNavigation .sectionDepartment:hover .navDropDown,
 .siteNavigation .sectionBrands:hover .navDropDown,
 .siteNavigation .sectionOffers:hover .navDropDown,
-.siteNavigation .sectionStyle:hover .navDropDown {
+.siteNavigation .sectionStyle:hover .navDropDown 
+{
 	left:auto;
 }
 
-.ie7 .sectionDepartment:hover .navDropDown {
+.ie7 .sectionDepartment:hover .navDropDown 
+{
 	left:0px;
 }
 
-.ie7 .sectionBrands:hover .navDropDown {
+.ie7 .sectionBrands:hover .navDropDown 
+{
 	left:164px;
 }
-.ie7 .sectionOffers:hover .navDropDown {
+.ie7 .sectionOffers:hover .navDropDown 
+{
 	left:345px;
 }
-.ie7 .sectionStyle:hover .navDropDown {
+.ie7 .sectionStyle:hover .navDropDown 
+{
 	left:451px;
 }
 
 .sectionBrands .navDropDown .menuTitle,
 .sectionOffers .navDropDown .menuTitle,
-.sectionStyle .navDropDown .menuTitle  {
+.sectionStyle .navDropDown .menuTitle  
+{
 	margin-left:0;
 }
 
 .megaMenu.show { left: 20%;}
-
-/*  .megaMenu is the content inside the dropdown menu */
 .megaMenu {	width: 80%;}
-/* .navCategories>li is the left hand menu in the drop down menu */
 .navCategories>li {width: 20%;}
-/* .megaMenu width + .navCategories>li width = 100%
-However, IE7 is lame, and you need to tweak the width if you change the above values */
 .ie7 .navCategories>li>a {width: 19%;}
-
-/*  Functionality to show and hide the megaMenu content. The left position should be the same as the .navCategories>li width */
 .navCategories li:hover>.contentasset>.megaMenu, 
-/* Landing Page for drop down menus - this is so that the first megamenu is always show */
 .navCategories>li:first-child .megaMenu { left: 20%;}
 
 /* Close button for iPad */
 .closeMega {
 	position: absolute;
-	z-index: 998;
+	z-index: 1005;
 	top: 5px;
 	right: 7px;
 	width: 24px;
@@ -401,25 +126,22 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea4aaf', endColorstr='#e51d9b',GradientType=0 ); /* IE6-8 */
 }
 
-/*---------- TOP TABS ---------- */
-
-/* Position the whole menu */
 .siteNavigation {
 	margin-top:70px;
 	position:relative;
 	width: 100%;
 	float: left;
 }
-/* Top level styling */
+
 .siteNavigation > li {
-	z-index:998;
+	z-index:1006;
 	display:block;
 	float:left;
 	list-style:none;
 }
 .siteNavigation>li>a	 {
 	position: relative;
-	z-index: 1000;
+	z-index: 1007;
 	display: block;
 	float: left; 
 	padding: 0 15px;
@@ -438,18 +160,6 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 	white-space: nowrap;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.33);
 
-
-
-
-
-
-
-
-
-
-
-
-
 	background: rgb(255,255,255); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(212,212,212,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(212,212,212,1))); /* Chrome,Safari4+ */
@@ -462,7 +172,8 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 .siteNavigation>li:first-child>a { border-left-width: 0px}
 .siteNavigation>li:last-child>a { border-right-width: 0px}
 
-.siteNavigation>li:hover>a {
+.siteNavigation>li:hover>a 
+{
 	color: black;
 	text-shadow: none;
 	border-color: #404040;	
@@ -475,7 +186,6 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 	background: linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
 }
 
-/*  Top level tabs drop down icon */
 .hasMenu:after, 
 /* IE7 fix */
 .ie7 .hasMenu span {
@@ -489,19 +199,16 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 	padding-right: 10px
 }
 
-
-/*---------- LEFT MENU ----------*/					
-
-/* Second level - the drop down container */			
 .navDropDown {
 	position:absolute;
 	top: 35px;
 	left: -9999px;
 	width: 980px;
-	z-index:998;
+	z-index:1005;
 }
 
-.navCategories {		
+.navCategories 
+{		
 	position: relative;
 	
 	border-top: 0; /*  A fix for the javascript to add a current class to the first menu item in the dropdown menu. */
@@ -524,9 +231,7 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 	border-width: 0 1px 1px 1px;
 }
 
-	/* The left hand menu in the drop down menu */
 .navCategories>li {display: block;}
-/*  Fix for IE7 - doesnt like LI's with block level styling. */
 .ie7 .navCategories>li { display: inline;}		
 .navCategories>li>a {
 	display: block;
@@ -542,17 +247,17 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 .navCategories>li>a:hover {	color:#E51D9B; }
 .navCategories>li>a.current,
 .navCategories>li>a:hover,
-.navCategories>li:hover>a {
+.navCategories>li:hover>a 
+{
 	background: white;			
 	text-shadow: none;
 	border-color: #e4e4e4;
 	text-decoration: underline;				
 }
 
-
 .navCategories>li>a:after,
 .navCategories>li:hover>a:after,
-.ie7 .navCategories li a span {/*  IE7 fix */
+.ie7 .navCategories li a span { /*  IE7 fix */
 		content: '';
 		float: right;
 		position: relative;
@@ -575,15 +280,12 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 .navCategories>li>a:hover:after,
 .navCategories>li:hover>a:after	{color: #353535; }
 		
-
-/*---------- PANELS ----------*/	
-		
-/* The menus inside the megamenu */
-.megaMenu {
+.megaMenu
+{
 	position: absolute;
 	left: -2000em;
 	top: 0;
-	z-index: 998;
+	z-index: 1005;
 	background:#fff;
 	
 	-moz-border-radius:0 0 3px 0;
@@ -591,71 +293,61 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 	border-radius: 0 0 3px 0;
 }
 
-/* Customise the columns in the megamenu. We can either use an list for links, or a DIV.col for content */
-	.megaMenu ul, .megaMenu .col {
-		width: 33%;
-		float: left;
-	}
-		.megaMenu ul:last-child,
-		.megaMenu .col:last-child { border: none; width: 33.6666666%}
+.megaMenu ul, .megaMenu .col {
+	width: 33%;
+	float: left;
+}
+.megaMenu ul:last-child,
+.megaMenu .col:last-child { border: none; width: 33.6666666%}
 
-		/* By default we cater for 3 columns, but we can customise the widths of the columns by adding an appropriate class onto .megaMenu */
-		/* 1 columns */
-		.megaOneColumn ul, 
-		.megaOneColumn .col { width: 100%;} 
-		/* Style is duplicate below to cater for IE users without JS  */
-		.megaOneColumn ul:last-child,
-		.megaOneColumn .col:last-child { width: 100%; }
+.megaOneColumn ul, 
+.megaOneColumn .col { width: 100%;} 
+.megaOneColumn ul:last-child,
+.megaOneColumn .col:last-child { width: 100%; }
 
-		/* 2 columns */
-		.megaTwoColumns ul, 
-		.megaTwoColumns .col { width: 49.75%;}
-		.megaTwoColumns ul:last-child,
-		.megaTwoColumns .col:last-child { width: 50%; }
+.megaTwoColumns ul, 
+.megaTwoColumns .col { width: 49.75%;}
+.megaTwoColumns ul:last-child,
+.megaTwoColumns .col:last-child { width: 50%; }
 		
-		/* 3 columns */
-		.megaThreeColumns ul, 
-		.megaThreeColumns .col { width: 33%;}
-		.megaThreeColumns ul:last-child,
-		.megaThreeColumns .col:last-child { width: 34%; }
+.megaThreeColumns ul, 
+.megaThreeColumns .col { width: 33%;}
+.megaThreeColumns ul:last-child,
+.megaThreeColumns .col:last-child { width: 34%; }
 		
-		/* 4 columns */
-		.megaFourColumns ul, 
-		.megaFourColumns .col { width: 24.75%;}
-		.megaFourColumns ul:last-child,
-		.megaFourColumns .col:last-child { width: 25.25%; }
+.megaFourColumns ul, 
+.megaFourColumns .col { width: 24.75%;}
+.megaFourColumns ul:last-child,
+.megaFourColumns .col:last-child { width: 25.25%; }
 
-		/* 2/3rds column - a wide column with two thin ones */
-		.megaTwoThirdsColumns .col { width: 50%;}
-		.megaTwoThirdsColumns .col:last-child { width: 50%;}
-		.megaTwoThirdsColumns ul { width: 24.5%; }
-		.megaTwoThirdsColumns ul:last-child { width: 25%; }	
+.megaTwoThirdsColumns .col { width: 50%;}
+.megaTwoThirdsColumns .col:last-child { width: 50%;}
+.megaTwoThirdsColumns ul { width: 24.5%; }
+.megaTwoThirdsColumns ul:last-child { width: 25%; }	
 		
-		/*  Padding around each list or content column */
-		.megaMenu ul li, 
-		.megaMenu .col .padding,
-		.sectionBrands .navDropDown li,
-		.sectionOffers .navDropDown li,
-		.sectionStyle .navDropDown li {
-			padding: 2px 10px 2px 10px; 
-			display: block; 
-		}
-		/* Add some space to the top of each list or content column */
-		.megaMenu .col .padding,
-		.siteNavigation .menuTitle:first-child { margin-top: 10px;} 
-		
-		.siteNavigation .menuTitle:before { background: none; content: ''}
-		.siteNavigation .menuSpacer {margin-bottom: 10px;}
+.megaMenu ul li, 
+.megaMenu .col .padding,
+.sectionBrands .navDropDown li,
+.sectionOffers .navDropDown li,
+.sectionStyle .navDropDown li {
+	padding: 2px 10px 2px 10px; 
+	display: block; 
+}
 
+.megaMenu .col .padding,
+.siteNavigation .menuTitle:first-child { margin-top: 10px;} 
+.siteNavigation .menuTitle:before { background: none; content: ''}
+.siteNavigation .menuSpacer {margin-bottom: 10px;}
 		
-/*  Content styling */		
-.megaMenu .thumb {
+.megaMenu .thumb 
+{
 		width: 100%;
 		height: auto;
 }
 .siteNavigation .sectionTitle,
 .siteNavigation .menuTitle,
-.megaMenu h2 {
+.megaMenu h2 
+{
 	margin: 0 10px;
 	padding:0;
 	text-transform: none;
@@ -664,11 +356,13 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 	font-family: sans-serif;
 	font-weight:bold;
 }
-.siteNavigation .menuTitle {
+.siteNavigation .menuTitle 
+{
 	margin-top:10px;
 	margin-bottom:10px;
 }
-.siteNavigation .sectionTitle {
+.siteNavigation .sectionTitle 
+{
 	margin:5px 0 0 0;
 	padding:0;
 	font-size:2em;
@@ -677,17 +371,13 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 .megaMenu p {padding: 0 0 5px 0;}
 .megaMenu .article {border-bottom: dotted 1px silver; margin-bottom: 10px;}
 .megaMenu .article:last-child {border-bottom: none; margin-bottom: 0;}	
-
-.sectionPromo {
-
-}
-
 .sectionPromoContent{ display:block; width:177px; margin:10px 0 0px; }
 .megaMenu .blackArrow  { background-color: transparent; background-image: url("../img/template/bulletArrowBlack.gif"); background-repeat: no-repeat; background-attachment: scroll; background-position: 1px 3px; background-clip: border-box; background-origin: padding-box; background-size: auto auto; padding-left: 10px;}
 .sectionPromoContent p{ margin-top:10px; }
 
 .siteNavigation .sectionPromo .forwardButtonWhite {
 	padding:5px 8px 5px 8px;
+	
 	color:#fff !important;
 	position:relative;
 	bottom:12px;
@@ -695,10 +385,6 @@ However, IE7 is lame, and you need to tweak the width if you change the above va
 }
 .bolded{font-weight:bold;}
 p.marginNone{ margin:0;}
-
-
-
-/*---------- BLACK COLOUR THEME ----------*/	
 
 .siteNavigation>li>a	 {			
 	border-style: solid;
@@ -795,7 +481,7 @@ width: 300px;
 height: 300px;
 
 }
-#slider{
+#slider {
 width: 300px;
 height: 300px;
 }
@@ -814,7 +500,7 @@ height: 300px;
 	color: #333366;
 	text-decoration: none;
 	display: block;
-	padding:  3px 2px;
+	padding:  2px 2px;
 	margin: 0;
 }
 
@@ -877,7 +563,7 @@ display: inline;
 	top: 0px;
 	left: 190px;
 	background-color: #ffffff;
-	z-index:1000;
+	z-index:1007;
 	border: solid 1px #b4b4b4;
 }
 
@@ -929,4 +615,21 @@ display: inline;
  
 * html .navleft, html .navright {
 	height: 1%;
+}
+
+.dropDownMenu a span {display: none;}
+
+.dropDownMenu a:hover span {
+  font-size:11px;
+	display: block;
+   position: fixed; top: 276px; left: 5px; width: 183px;
+   padding: 5px; margin: 0px; z-index: 100;
+   color: #000000;
+}
+
+#highlightmore
+{
+	font-size:16px;
+	font-weight:bold;
+	color:#2D598C;
 }

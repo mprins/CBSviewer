@@ -75,14 +75,17 @@ var ZoekFormulier = {
 			Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
 			break;
 		default:
-			html += 'Er zijn ' + data.length + ' adressen gevonden.';
+			html += '<p style="clear:both">Bedoelt u? </p>';
 			html += '<ul class="adreslijst">';
+			
 			for ( var i = 0; i < data.length; i++) {
-				html += '<li>' + '<a href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ',' + data[i].yCoord + ','
+			
+						html += '<li><a class="button" href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ',' + data[i].yCoord + ','
 						+ data[i].radius + ');return false;" title="Zoom naar adres">' + data[i].addressString
 						+ '</a></li>';
 			}
 			html += '</ul>';
+			Viewer.zoomTo(data[data.length-1].xCoord, data[data.length-1].yCoord, data[data.length-1].radius);
 		}
 		paragraaf.empty().html(html);
 	},
