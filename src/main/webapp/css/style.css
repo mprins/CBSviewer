@@ -614,17 +614,17 @@ a.olControlZoomOut {
 	margin-left: -999em;
 	position: absolute;
 }
-.featureinfo:hover span {
+.featureinfo:hover span, .featureinfo:focus span {
 	border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
 	position: absolute; left: 1em; top: 2em; z-index: 99;
 	margin-left: 0; width: 250px;
 }
-.featureinfo:hover img {
+.featureinfo:hover img, .featureinfo:focus img {
 	border: 0; margin: -10px 0 0 -55px;
 	float: left; position: absolute;
 }
-.featureinfo:hover em {
+.featureinfo:hover em, .featureinfo:focus em {
 	font-family: Candara, Tahoma, Geneva, sans-serif; font-size: 1.2em; font-weight: bold;
 	display: block; padding: 0.2em 0 0.6em 0;
 }
