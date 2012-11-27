@@ -91,7 +91,7 @@ UpdateLegendControl = OpenLayers.Class(OpenLayers.Control, {
 			if (evt.layer instanceof OpenLayers.Layer.WMS) {
 				var lyr = evt.layer;
 				var legendUrl = lyr.url + '?SERVICE=WMS&REQUEST=GetLegendGraphic' + '&FORMAT=image%2Fpng'
-						+ '&WIDTH=20&HEIGHT=20' + '&LAYER=' + lyr.params.LAYERS + '&STYLES=' + lyr.params.STYLES
+						+ '&WIDTH=25&HEIGHT=25' + '&LAYER=' + lyr.params.LAYERS + '&STYLE=' + lyr.params.STYLES
 						+ '&VERSION=' + lyr.params.VERSION + '&EXCEPTIONS=' + lyr.params.EXCEPTIONS;
 				var newHtml = '<img src="' + legendUrl + '" alt="Legenda voor kaartlaag ' + lyr.name + '"/>';
 
