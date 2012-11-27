@@ -153,11 +153,8 @@
 																		<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 																	</ul>
 																</li>
-
-															<!--/ul-->
 														</ul>
-														<ul id="toplevel" class="navleft">
-															<!--ul class="navleft"-->
+														<ul class="navleft">
 																<li class="menuTitle">Inkomen</li>	
 																<li><a href="#">Aantal inkomensontvangers<span>Dit is de tooltip</span></a>
 																	<ul>
@@ -428,11 +425,8 @@
 																		<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 																	</ul>
 																</li>
-
-															<!--/ul-->
 														</ul>
-														<ul id="toplevel" class="navleft">
-															<!--ul class="navleft"-->
+														<ul class="navleft">
 																<li class="menuTitle">Wonen</li>	
 																<li><a href="#">Huurwoning (%)<span>Dit is de tooltip</span></a>
 																	<ul>
