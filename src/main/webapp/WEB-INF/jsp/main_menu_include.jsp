@@ -24,9 +24,8 @@
 										<div class="ac-container ac-menu">			
 											<div>
 												<input id="ac-3" name="accordion-1" type="radio" checked="checked" />
-												<label for="ac-3">&lt; terug naar de basis thema's</label>
+												<label for="ac-3">.. terug naar de basis thema's</label>
 												<div class="ac-menuheight">
-													<p>
 														<ul class="navleft">
 																<li class="menuTitle">Bevolking</li>	
 																<li><a href="#">Inwoners totaal<span>Dit is de tooltip</span></a>
@@ -329,14 +328,12 @@
 																	</ul>
 																</li>
 														</ul>													
-													</p>
 												</div>
 											</div>
 											<div>
 												<input id="ac-4" name="accordion-1" type="radio" />
-												<label id="highlightmore" for="ac-4">Klik voor meer thema's &gt;</label>
+												<label id="highlightmore" for="ac-4">Klik voor meer thema's ...</label>
 												<div class="ac-menuheight">
-													<p>
 														<ul class="navleft">
 																<li class="menuTitle">Bevolking</li>	
 																<li><a href="#">Inwoners 0 tot 20 jaar<span>Dit is de tooltip</span></a></li>
@@ -638,7 +635,6 @@
 																	</ul>
 																</li>
 														</ul>
-													</p>
 												</div>
 											</div>
 										</div>
