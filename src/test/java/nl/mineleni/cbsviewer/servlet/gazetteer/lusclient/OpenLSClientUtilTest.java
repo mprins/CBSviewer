@@ -87,6 +87,10 @@ public class OpenLSClientUtilTest {
 		assertEquals(2,
 				OpenLSClientUtil.getOpenLSClientAddressList(smallResp, 2)
 						.size());
+		assertEquals(3,
+				OpenLSClientUtil.getOpenLSClientAddressList(smallResp, 10)
+						.size());
+
 		assertEquals(142,
 				OpenLSClientUtil.getOpenLSClientAddressList(bigResp, null)
 						.size());

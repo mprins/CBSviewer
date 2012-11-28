@@ -67,7 +67,7 @@ public final class OpenLSClientUtil {
 
 		int listSize = gcal.size();
 		if (max != null && max.length > 0) {
-			listSize = max[0];
+			listSize = (max[0] > listSize) ? listSize : max[0];
 		}
 
 		for (int i = 0; i < listSize; i++) {
