@@ -67,10 +67,10 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 			// formatting als int
 			return "" + (fmt.parse(coord).intValue());
 		} catch (final ParseException e) {
-			LOGGER.warn("Fout tijden parsen van cooridnaat: " + coord, e);
+			LOGGER.warn("Fout tijden parsen van coordinaat: " + coord, e);
 			return coord;
 		} catch (final NullPointerException e) {
-			LOGGER.warn("Fout tijden parsen van cooridnaat: " + coord, e);
+			LOGGER.warn("Fout tijden parsen van coordinaat: " + coord, e);
 			return coord;
 		}
 	}
@@ -138,7 +138,7 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 		LOGGER.debug("Zoeken naar: " + zoekTerm);
 		if (zoekTerm.length() < 1) {
 			request.setAttribute(REQ_PARAM_GEVONDEN.code,
-					"Geen adres ingevuld.");
+					_RESOURCES.getString("KEY_ZOEKEN_NIETS_INGEVULD"));
 			if (forwardResponse) {
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);
@@ -156,9 +156,10 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 			if (forwardResponse) {
 				if (addrl.isEmpty()) {
 					// niets gevonden
-					LOGGER.debug("Er is niets gevonden voor: " + zoekTerm);
+					LOGGER.debug(_RESOURCES.getString("KEY_ZOEKEN_GEEN_ADRES")
+							+ zoekTerm);
 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-							"Er is niets gevonden voor: " + zoekTerm);
+							_RESOURCES.getString("KEY_ZOEKEN_GEEN_ADRES"));
 				} else if (addrl.size() == 1) {
 					// 1 adres gevonden
 					LOGGER.debug("Er is 1 match gevonden voor: " + zoekTerm);
@@ -170,15 +171,17 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 							this.formatCoord(addr.getyCoord()));
 					request.setAttribute(REQ_PARAM_STRAAL.code,
 							addr.getRadius());
-					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-							"Gevonden adres: " + addr.getAddressString());
+					request.setAttribute(
+							REQ_PARAM_GEVONDEN.code,
+							_RESOURCES.getString("KEY_ZOEKEN_EEN_ADRES")
+									+ addr.getAddressString());
 				} else {
 					// meer dan 1 adressen gevonden
 					LOGGER.debug("Er is meer dan 1 match gevonden voor: "
 							+ zoekTerm);
 					request.setAttribute("adreslijst", addrl);
 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-							"Er is meer dan 1 adres gevonden");
+							_RESOURCES.getString("KEY_ZOEKEN_MEER_ADRES"));
 				}
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);

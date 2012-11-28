@@ -4,11 +4,10 @@
 	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
-		import="nl.mineleni.cbsviewer.util.LabelsBundle, nl.mineleni.cbsviewer.util.StringConstants"
 		trimDirectiveWhitespaces="true" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 
-	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
+	<fmt:setBundle basename="LabelsBundle" />
 
 	<div class="dropDownMenu clearfix">
 	<!--a id="skipNavigation"></a-->

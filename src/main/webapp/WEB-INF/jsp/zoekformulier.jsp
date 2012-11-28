@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.1">
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
-		import="nl.mineleni.cbsviewer.util.LabelsBundle, nl.mineleni.cbsviewer.util.StringConstants"
 		trimDirectiveWhitespaces="true" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 
-	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
+	<fmt:setBundle basename="LabelsBundle" />
 	
 	<!-- zoek formulier voor de versie zonder javascript en/of css -->
 	<!-- todo, geeft nog 4 fouten bij w3c check, nog oplossen later -->
@@ -35,9 +35,10 @@
 			<!-- for item in lijst maak url -->
 			<ul class="adreslijst">
 				<c:forEach var="adres" items="${adreslijst}">
+					<fmt:message var="ttl" key="KEY_ZOEKEN_LINK_TTL"><fmt:param value="${adres}" /></fmt:message>
 					<li><a class="button"
 						href="index.jsp?gevonden=${adres}&amp;xcoord=${adres.xCoord}&amp;ycoord=${adres.yCoord}&amp;straal=${adres.radius}&amp;coreonly=${param.coreonly}"
-						title="zoom in op ${adres}">${adres}</a></li>
+						title="${ttl}">${adres}</a></li>
 				</c:forEach>
 			</ul>
 		</c:if>		

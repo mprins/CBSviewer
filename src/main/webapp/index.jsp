@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.1">
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
-		import="nl.mineleni.cbsviewer.util.LabelsBundle, nl.mineleni.cbsviewer.util.StringConstants"
+		import="nl.mineleni.cbsviewer.util.StringConstants"
 		trimDirectiveWhitespaces="true" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 <jsp:output doctype-root-element="html"
@@ -11,7 +12,7 @@
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
 		omit-xml-declaration="no" />
 
-	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
+	<fmt:setBundle basename="LabelsBundle" />
 
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 <head>
@@ -55,7 +56,7 @@
 	</script>
 </c:if>
 
-<title>Kaart <c:out value="${param.mapid}" /></title>
+<title>Kaart <c:out value="${param.mapname}" /></title>
 </head>
 
 <body>
@@ -74,7 +75,7 @@
     <div id="headerright" class="headerColumn headertop">
 		<div class="utilBlock">	
 			<a class="featureinfo" href="#">Over CBS in uw buurt
-				<span class="custom menuinfo"><img src="../img/info.png" alt="Information" height="48" width="48" />
+				<span class="custom menuinfo"><img src="img/info.png" alt="Information" height="48" width="48" />
 					<em>Over CBS in uw buurt</em>Het CBS heeft veel gegevens op regionaal niveau. Die zijn al lange tijd beschikbaar via de statistische database StatLine. Cartografische systemen geven de mogelijkheid de regionale gegevens ook op een meer aantrekkelijke manier te presenteren. Daarvoor heeft het CBS deze site opgezet. 
 Drie maal per jaar vernieuwt het CBS de gegevens op deze site. Zo mogelijk wordt de site dan ook uitgebreid met nieuwe onderwerpen. 
 Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien over buurten, maar ook over wijken? Wilt u er zeker van zijn dat u de meest recente cijfers ziet? Ga dan naar  de tabel "Kerncijfers wijken en buurten" in StatLine. U kunt daar selecteren welke gegevens u op uw scherm wilt zien.
@@ -106,7 +107,7 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 	</div>
 
 	<div id="copyright" class="copy">
-		<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
+		<fmt:message key="KEY_COPYRIGHT" />
 	</div>
 </div>
 
@@ -121,7 +122,7 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 			</div>		
 			<div class="footer">
 				<div id="_footerPanel">
-					<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
+					<fmt:message key="KEY_COPYRIGHT" />
 					<a href="#">Doorsturen</a>
 					<a href="#">Disclaimer</a>
 					<a href="#">Privacyverklaring</a>
@@ -154,7 +155,7 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 				<label for="ac-2">Informatie</label>
 				<div class="ac-small" id="featureinfo">
 					<p>
-						<!--jsp:expression>RESOURCES.getString("KEY_INFO_TITEL")</jsp:expression-->
+						<!--fmt:message key="KEY_INFO_TITEL" /-->
 						<c:if test="${param.coreonly==true}">
 							<c:if test="${not empty featureinfo}">
 								<c:out value="${featureinfo}" escapeXml="false" />

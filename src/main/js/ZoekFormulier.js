@@ -53,8 +53,6 @@ var ZoekFormulier = {
 	 * @param {String}
 	 *            $form html snippet
 	 * 
-	 * @todo Strings van de meldingen overbrengen naar resource bundle
-	 * 
 	 * @private
 	 */
 	handleSuccess : function(data, statusText, xhr, $form) {
@@ -67,25 +65,26 @@ var ZoekFormulier = {
 		switch (data.length) {
 		case 0:
 			paragraaf.addClass('error');
-			html += 'Er is geen adres gevonden.';
+			html += OpenLayers.i18n("KEY_ZOEKEN_GEEN_ADRES");
 			break;
 		case 1:
-			html += 'Er is een adres gevonden.';
+			html += OpenLayers.i18n("KEY_ZOEKEN_EEN_ADRES");
 			html += '<ul class="adreslijst"><li>' + data[0].addressString + '</li></ul>';
 			Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
 			break;
 		default:
-			html += '<p style="clear:both">Bedoelt u? </p>';
+			html += '<p style="clear:both">' + OpenLayers.i18n("KEY_ZOEKEN_MEER_ADRES") + '</p>';
 			html += '<ul class="adreslijst">';
-			
+
 			for ( var i = 0; i < data.length; i++) {
-			
-						html += '<li><a class="button" href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ',' + data[i].yCoord + ','
-						+ data[i].radius + ');return false;" title="Zoom naar adres">' + data[i].addressString
-						+ '</a></li>';
+				html += '<li><a class="button" href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ','
+						+ data[i].yCoord + ',' + data[i].radius + ');return false;" title="'
+						+ OpenLayers.i18n("KEY_ZOEKEN_LINK_TTL", {
+							'0' : '' + data[i].addressString
+						}) + '">' + data[i].addressString + '</a></li>';
 			}
 			html += '</ul>';
-			Viewer.zoomTo(data[data.length-1].xCoord, data[data.length-1].yCoord, data[data.length-1].radius);
+			Viewer.zoomTo(data[data.length - 1].xCoord, data[data.length - 1].yCoord, data[data.length - 1].radius);
 		}
 		paragraaf.empty().html(html);
 	},

@@ -4,11 +4,10 @@
 	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
-		import="nl.mineleni.cbsviewer.util.LabelsBundle"
 		trimDirectiveWhitespaces="true" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 
-	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
+	<fmt:setBundle basename="LabelsBundle" />
 
 	<fmt:parseNumber var="straal" value="${param.straal}" type="number"
 		integerOnly="true" parseLocale="en-US" />
@@ -51,13 +50,13 @@
 	 -->
 
 	<div id="kaartnavi" class="kaartnavi">
-		<jsp:expression>RESOURCES.getString("KEY_NAVIGATIE_TITEL")</jsp:expression>
+		<fmt:message key="KEY_NAVIGATIE_TITEL" />
 		<form id="zoomFormulier" action="index.jsp" method="get"
 			title="in- en uitzoomen van de kaart en verschuiven van de zoeklocatie">
 
 			<!-- knoppen -->
 			<fieldset id="in-en-uit-zoomen" title="in- en uitzoomen">
-				<legend><jsp:expression>RESOURCES.getString("KEY_NAVIGATIE_ZOOM_LEGEND")</jsp:expression></legend>
+				<legend><fmt:message key="KEY_NAVIGATIE_ZOOM_LEGEND" /></legend>
 				<label for="zoomUitBtn">zoom uit</label>
 				<button id="zoomUitBtn" type="submit" name="straal"
 					value="${straal*2}" title="zoom uit">−</button>
@@ -67,7 +66,7 @@
 					title="zoom in">+</button>
 			</fieldset>
 			<fieldset id="verschuiven" title="verschuiven">
-				<legend><jsp:expression>RESOURCES.getString("KEY_NAVIGATIE_SCHUIF_LEGEND")</jsp:expression></legend>
+				<legend><fmt:message key="KEY_NAVIGATIE_SCHUIF_LEGEND" /></legend>
 				<label for="schuifLinksBtn">schuif naar links</label>
 				<button id="schuifLinksBtn" type="submit" name="xcoord"
 					value="${naarLinks}" title="naar links">←</button>
@@ -85,7 +84,7 @@
 					value="${naarBeneden}" title="omlaag">↓</button>
 			</fieldset>
 			<fieldset id="wisselachtergrond" title="wissel achtergrondkaart">
-				<legend><jsp:expression>RESOURCES.getString("KEY_NAVIGATIE_BASEMAP_LEGEND")</jsp:expression></legend>
+				<legend><fmt:message key="KEY_NAVIGATIE_BASEMAP_LEGEND" /></legend>
 				<label for="wisselBtn">Wissel achtergrondkaart</label>
 				<button id="wisselBtn" type="submit" name="achtergrond"
 					value="${wisselachtergrond}" title="wissel">${wisselachtergrondBtn}</button>
