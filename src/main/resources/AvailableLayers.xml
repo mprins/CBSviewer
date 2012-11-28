@@ -2,6 +2,206 @@
 <Layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd ">
 	<Layerdescriptor>
+		<id>vierkanten500m_oad2000</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2000</name>
+		<layers>omgevings_adres_dichtheid_2000</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2000</styles>
+		<attributes>oad2000</attributes>
+	</Layerdescriptor>		
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2001</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2001</name>
+		<layers>omgevings_adres_dichtheid_2001</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2001</styles>
+		<attributes>oad2001</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2002</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2002</name>
+		<layers>omgevings_adres_dichtheid_2002</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2002</styles>
+		<attributes>oad2002</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2003</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2003</name>
+		<layers>omgevings_adres_dichtheid_2003</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2003</styles>
+		<attributes>oad2003</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2004</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2004</name>
+		<layers>omgevings_adres_dichtheid_2004</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2004</styles>
+		<attributes>oad2004</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2005</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2005</name>
+		<layers>omgevings_adres_dichtheid_2005</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2005</styles>
+		<attributes>oad2005</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2006</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2006</name>
+		<layers>omgevings_adres_dichtheid_2006</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2006</styles>
+		<attributes>oad2006</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2007</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2007</name>
+		<layers>omgevings_adres_dichtheid_2007</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2007</styles>
+		<attributes>oad2007</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2008</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2008</name>
+		<layers>omgevings_adres_dichtheid_2008</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2008</styles>
+		<attributes>oad2008</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2009</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2009</name>
+		<layers>omgevings_adres_dichtheid_2009</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2009</styles>
+		<attributes>oad2009</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2010</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2010</name>
+		<layers>omgevings_adres_dichtheid_2010</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2010</styles>
+		<attributes>oad2010</attributes>
+	</Layerdescriptor>		
+	<Layerdescriptor>
+		<id>vierkanten500m_oad2011</id>
+		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2011</name>
+		<layers>omgevings_adres_dichtheid_2011</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.oad2011</styles>
+		<attributes>oad2011</attributes>
+	</Layerdescriptor>		
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2000</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2000</name>
+		<layers>stedelijkheid_2000</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2000</styles>
+		<attributes>sted2000</attributes>
+	</Layerdescriptor>		
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2001</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2001</name>
+		<layers>stedelijkheid_2001</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2001</styles>
+		<attributes>sted2001</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2002</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2002</name>
+		<layers>stedelijkheid_2002</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2002</styles>
+		<attributes>sted2002</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2003</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2003</name>
+		<layers>stedelijkheid_2003</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2003</styles>
+		<attributes>sted2003</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2004</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2004</name>
+		<layers>stedelijkheid_2004</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2004</styles>
+		<attributes>sted2004</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2005</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2005</name>
+		<layers>stedelijkheid_2005</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2005</styles>
+		<attributes>sted2005</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2006</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2006</name>
+		<layers>stedelijkheid_2006</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2006</styles>
+		<attributes>sted2006</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2007</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2007</name>
+		<layers>stedelijkheid_2007</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2007</styles>
+		<attributes>sted2007</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2008</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2008</name>
+		<layers>stedelijkheid_2008</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2008</styles>
+		<attributes>sted2008</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2009</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2009</name>
+		<layers>stedelijkheid_2009</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2009</styles>
+		<attributes>sted2009</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2010</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2010</name>
+		<layers>stedelijkheid_2010</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2010</styles>
+		<attributes>sted2010</attributes>
+	</Layerdescriptor>			
+	<Layerdescriptor>
+		<id>vierkanten500m_stedelijkheid2011</id>
+		<name>Vierkanten 500 x 500m - Stedelijkheid adressen per km2 2011</name>
+		<layers>stedelijkheid_2011</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+		<styles>cbsvierkanten500m.sted2011</styles>
+		<attributes>sted2011</attributes>
+	</Layerdescriptor>		
+	<Layerdescriptor>
+		<id>cbs_inwoners_2000_per_hectare</id>
+		<name>Het aantal inwoners op 1 januari. Dit gegeven is ontleend aan de Structuurtelling Gemeentelijke Basisadministratie (GBA).</name>
+		<layers>inwoners_2000</layers>
+		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+		<styles>cbsvierkanten100m_inw2000</styles>
+		<attributes>inw2000</attributes>
+	</Layerdescriptor>	
+	<Layerdescriptor>
 		<id>cbs_inwoners_2010_per_hectare</id>
 		<name>Het aantal inwoners op 1 januari 2010 per hectare</name>
 		<layers>inwoners_2010</layers>
@@ -24,5 +224,5 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_personenautos_per_huishouden</styles>
 		<attributes>buurtcode,buurtnaam,wijkcode,gemeentecode,gemeentenaam,meest_voorkomende_postcode,dekkingspercentage,omgevingsadressendichtheid,stedelijke_dichtheid_per_km2,aantal_inwoners,mannen,vrouwen,percentage_personen_0_tot_15_jaar,percentage_personen_15_tot_25_jaar,percentage_personen_25_tot_45_jaar,percentage_personen_45_tot_65_jaar,percentage_personen_65_jaar_en_ouder,percentage_ongehuwd,percentage_gehuwd,percentage_gescheid,percentage_verweduwd,bevolkingsdichtheid_inwoners_per_km2,aantal_huishoudens,percentage_eenpersoonshuishoudens,percentage_huishoudens_zonder_kinderen,percentage_huishoudens_met_kinderen,gemiddelde_huishoudsgrootte,percentage_westerse_allochtonen,percentage_niet_westerse_allochtonen,percentage_uit_marokko,percentage_uit_nederlandse_antillen_en_aruba,percentage_uit_suriname,percentage_uit_turkije,percentage_overige_niet_westerse_alloctonen,woningvoorraad,percentage_bouwjaarklasse_tot_2000,percentage_bouwjaarklasse_vanaf_2000,gemiddelde_woningwaarde,percentage_koopwoningen,percentage_huurwoningen,percentage_huurwoningen_in_bezit_woningcorporaties,percentage_huurwoningen_in_bezit_overige_verhuurders,percentage_woningen_met_eigendom_onbekend,gemiddeld_gasverbruik_totaal,gemiddeld_gasverbruik_appartement,gemiddeld_gasverbruik_tussenwoning,gemiddeld_gasverbruik_hoekwoning,gemiddeld_gasverbruik_2_onder_1_kap_woning,gemiddeld_gasverbruik_vrijstaande_woning,gemiddeld_gasverbruik_woningtype_onbekend,aandeel_stadsverwarming,gemiddeld_electriciteitsverbruik_totaal,gemiddeld_electriciteitsverbruik_appartement,gemiddeld_electriciteitsverbruik_tussenwoning,gemiddeld_electriciteitsverbruik_hoekwoning,gemiddeld_electriciteitsverbruik_2_onder_1_kap_woning,gemiddeld_electriciteitsverbruik_vrijstaande_woning,gemiddeld_electriciteitsverbruik_woningtype_onbekend,algemene_bijstandsuitkeringen_totaal,percentage_algemene_bijstandsuitkeringen_relatief,algemene_bijstandsuitkeringen_jaarmutatie,aantal_agrarische_bedrijven,agrarische_bedrijven_jaarmutatie,percentage_gewassenbedrijven,percentage_veeteeltbedrijven,percentage_combinatiebedrijven,personenautos_totaal,personenautos_per_huishouden,personenautos_per_km2,bedrijfsmotorvoertuigen_totaal,motortweewielers_totaal,huisartsenpraktijk_gemiddelde_afstand_in_km,huisartsenpraktijk_aantal_binnen_3_km,ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km,ziekenhuis_excl_buitenpoli_aantal_binnen_20_km,oprit_hoofdverkeersweg_gemiddelde_afstand_in_km,kinderdagverblijf_gemiddelde_afstand_in_km,kinderdagverblijf_aantal_binnen_3_km,vmbo_gemiddelde_afstand_in_km,vmbo_aantal_binnen_5_km,havo_vwo_gemiddelde_afstand_in_km,havo_vwo_aantal_binnen_5_km,grote_supermarkt_gemiddelde_afstand_in_km,grote_supermarkt_aantal_binnen_3_km,restaurant_gemiddelde_afstand_in_km,restaurant_aantal_binnen_3_km,zwembad_gemiddelde_afstand_in_km,bioscoop_gemiddelde_afstand_in_km,bioscoop_aantal_binnen_10_km,treinstation_gemiddelde_afstand_in_km,oppervlakte_totaal_in_ha,oppervlakte_land_in_ha,oppervlakte_water_in_ha</attributes>
-	</Layerdescriptor>
+	</Layerdescriptor>	
 </Layers>

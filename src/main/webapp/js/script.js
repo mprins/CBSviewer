@@ -35,6 +35,18 @@ jQuery(document).ready(function() {
 	});					
 });
 
+function loadLayerFromMenu(id)
+{
+	// opzoeken van de gevraagde kaart in de _layers, id's zitten in
+	// AvailableLayers.xml
+	var _id = id;
+
+	var maps = jQuery.grep(_layers, function(n, i) {
+		return n.id == _id;
+	});
+	Viewer.loadWMS(maps[0]);	
+}
+
 /**
  * dynamische elementen aan de pagina toevoegen.
  */
