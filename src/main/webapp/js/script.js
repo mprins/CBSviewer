@@ -1,19 +1,18 @@
+// opzoeken van de gevraagde kaart in de _layers, id's zitten in
+// AvailableLayers.xml
+var _defaultId = "wijkbuurt2010auto";
+
 /**
  * @fileoverview event handlers en elementen voor de pagina.
- */
+ */ 
 jQuery(document).ready(function() {
 	// create map
 	Viewer.init(config);
 
-	// opzoeken van de gevraagde kaart in de _layers, id's zitten in
-	// AvailableLayers.xml
-	//var _id = 'cbs_inwoners_2000_per_hectare';
-	var _id = 'wijkbuurt2010auto';
-
 	var maps = jQuery.grep(_layers, function(n, i) {
-		return n.id == _id;
+		return n.id == _defaultId;
 	});
-	// console.debug('opzoeken van ' + _id + ' in ', _layers, maps);
+	// console.debug('opzoeken van ' + _defaultId + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
 
 	$("#adres").keyup(function() {
@@ -35,12 +34,13 @@ jQuery(document).ready(function() {
 	});					
 });
 
-var _previousId = "wijkbuurt2010auto";
-$('.navleft a').click(function() {
-	
-	if ($(this).attr('name') != _previousId)
+/**
+  * Change theme from menu
+  */
+$('.megaMenu a').click(function() {
+	// only load new themes
+	if ($(this).attr('name') != _defaultId)
 	{
-		$(".dropDownMenu a span").html("<span></span");
 		var _id = $(this).attr('name');
 
 		var maps = jQuery.grep(_layers, function(n, i) {
@@ -48,11 +48,7 @@ $('.navleft a').click(function() {
 		});
 		Viewer.loadWMS(maps[0]);
 
-		_previousId = $(this).attr('name');
-	}
-	else
-	{
-		$(".dropDownMenu a span").html("<span><font class='redcolor'>U heeft dit thema al geselecteerd. Kies een andere thema.</font></span>");
+		_defaultId = _id;
 	}
 });
 
