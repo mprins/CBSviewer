@@ -35,17 +35,26 @@ jQuery(document).ready(function() {
 	});					
 });
 
-function loadLayerFromMenu(id)
-{
-	// opzoeken van de gevraagde kaart in de _layers, id's zitten in
-	// AvailableLayers.xml
-	var _id = id;
+var _previousId = "wijkbuurt2010auto";
+$('.navleft a').click(function() {
+	
+	if ($(this).attr('name') != _previousId)
+	{
+		$(".dropDownMenu a span").html("<span></span");
+		var _id = $(this).attr('name');
 
-	var maps = jQuery.grep(_layers, function(n, i) {
-		return n.id == _id;
-	});
-	Viewer.loadWMS(maps[0]);	
-}
+		var maps = jQuery.grep(_layers, function(n, i) {
+			return n.id == _id;
+		});
+		Viewer.loadWMS(maps[0]);
+
+		_previousId = $(this).attr('name');
+	}
+	else
+	{
+		$(".dropDownMenu a span").html("<span><font class='redcolor'>U heeft dit thema al geselecteerd. Kies een andere thema.</font></span>");
+	}
+});
 
 /**
  * dynamische elementen aan de pagina toevoegen.

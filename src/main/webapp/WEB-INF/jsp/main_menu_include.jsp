@@ -28,7 +28,7 @@
 												<div class="ac-menuheight">
 														<ul class="navleft">
 																<li class="menuTitle">Bevolking</li>	
-																<li><a href="#" onClick="loadLayerFromMenu('vierkanten500m_oad2008')">Inwoners totaal<span>Dit is de tooltip</span></a>
+																<li><a href="#" name="vierkanten500m_oad2008">Inwoners totaal<span>Dit is de tooltip</span></a>
 																	<ul>
 																		<li></li>
 																		<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
@@ -38,14 +38,14 @@
 																		<li>Bevolkingskern<br/><a href="#">2008</a> | <a href="#">2006</a></li>
 																	</ul>
 																</li>
-																<li><a href="#" onClick="loadLayerFromMenu('vierkanten500m_stedelijkheid2000')">Inwoners 0 tot 15 jaar<span>Dit is de langere tooltip</span></a>
+																<li><a href="#" name="vierkanten500m_stedelijkheid2000">Inwoners 0 tot 15 jaar<span>Dit is de langere tooltip</span></a>
 																	<ul>
 																		<li>Gemeente<br/><a href="#">2011</a><span class="redcolor">*</span> | <a href="#">2010</a> | <a href="#">2009</a></li>
 																		<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 																		<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
 																	</ul>
 																</li>	
-																<li><a href="#" onClick="loadLayerFromMenu('vierkanten500m_stedelijkheid2008')">Inwoners 0 tot 20 jaar<span>Dit is de langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste tooltip</span></a>
+																<li><a href="#" name="vierkanten500m_stedelijkheid2008">Inwoners 0 tot 20 jaar<span>Dit is de langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste langste tooltip</span></a>
 																	<ul>
 																		<li>100m vierkant<br/><a href="#">2011</a><span class="redcolor">*</span></li>
 																		<li>500m vierkant<br/><a href="#">2011</a></li>

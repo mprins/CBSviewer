@@ -500,7 +500,7 @@ height: 300px;
 	color: #333366;
 	text-decoration: none;
 	display: block;
-	padding:  2px 2px;
+	padding:  2px 0px;
 	margin: 0;
 }
 
@@ -511,7 +511,7 @@ width: 180px;
 
 .navleft a
 {
-width:390px;
+width:245px;
 }
 
 .navleft a:hover, .navright a:hover {
@@ -558,7 +558,6 @@ display: inline;
 	display: none;
 	margin: 0;
 	padding: 3px 3px 3px 3px;
-	width: 185px;
 	position: absolute;
 	top: 0px;
 	left: 190px;
@@ -576,7 +575,7 @@ display: inline;
 	width: 200px;
 	position: absolute;
 	top: 0px;
-	left: -200px;
+	left: -70px;
 	background-color: #ffffff;
 	border: solid 1px #b4b4b4;
 }
