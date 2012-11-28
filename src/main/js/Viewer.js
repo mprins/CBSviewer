@@ -77,11 +77,12 @@ Viewer = function() {
 					+ OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO') + '</a>';
 			jQuery('#' + config.mapDiv).prepend(aToggle);
 
-			// toggle knop voor vergroten/verkleinen van de kaart
-			var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('KEY_TOGGLE_SIZE')
-					+ '" onclick="Viewer.toggleFullSize();"></a>';
-			jQuery('#' + config.mapDiv).prepend(aToggle);
-
+			if (this.config.toggleSize) {
+				// toggle knop voor vergroten/verkleinen van de kaart
+				var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('KEY_TOGGLE_SIZE')
+						+ '" onclick="Viewer.toggleFullSize();"></a>';
+				jQuery('#' + config.mapDiv).prepend(aToggle);
+			}
 			if (this.config.fullSize) {
 				this.toggleFullSize();
 			}

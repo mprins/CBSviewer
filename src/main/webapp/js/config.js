@@ -40,6 +40,13 @@ config.map = {
 config.fullSize = true;
 
 /**
+ * Of de resize knop op de kaart moet worden gezet.
+ * 
+ * @type {Boolean}
+ */
+config.toggleSize = false;
+
+/**
  * OpenLayers proxy url override.
  * 
  * @override
