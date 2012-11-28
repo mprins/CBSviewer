@@ -135,7 +135,7 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 		<div class="ac-container">
 			<div>
 				<input id="ac-1" name="accordion-1" type="checkbox" checked="checked"/>
-				<label for="ac-1">Legenda</label>
+				<label for="ac-1"><fmt:message key="Legenda" /></label>
 				<div class="ac-small" id="legenda">
 					<p>
 						<!-- plaats voor de legenda, dynamisch en statisch -->
@@ -152,10 +152,9 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 			</div>
 			<div>
 				<input id="ac-2" name="accordion-1" type="checkbox"/>
-				<label for="ac-2">Informatie</label>
+				<label for="ac-2"><fmt:message key="KEY_INFO_TITEL" /></label>
 				<div class="ac-small" id="featureinfo">
 					<p>
-						<!--fmt:message key="KEY_INFO_TITEL" /-->
 						<c:if test="${param.coreonly==true}">
 							<c:if test="${not empty featureinfo}">
 								<c:out value="${featureinfo}" escapeXml="false" />
