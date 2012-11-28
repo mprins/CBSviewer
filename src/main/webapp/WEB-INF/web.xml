@@ -113,6 +113,11 @@
 			<param-name>openlsserverurl</param-name>
 			<param-value>http://geodata.nationaalgeoregister.nl/geocoder/Geocoder</param-value>
 		</init-param>
+		<init-param>
+			<description>max. aantal terug te geven resultaten config parameter</description>
+			<param-name>openlsmaxresults</param-name>
+			<param-value>5</param-value>
+		</init-param>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
 	<servlet-mapping>

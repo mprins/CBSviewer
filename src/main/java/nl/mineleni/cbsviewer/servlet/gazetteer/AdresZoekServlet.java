@@ -49,8 +49,17 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 	/** de Open LS server url. */
 	private String openLSServerUrl;
 
-	/** gazetteer service url. {@value} . */
+	/** maximum aantal terug te geven adressen. */
+	private int openLSmaxResults;
+
+	/** gazetteer service url config parameter. {@value} . */
 	public static final String SERVLETCONFIG_OPENLS_SERVER_URL = "openlsserverurl";
+
+	/**
+	 * gazetteer service max. aantal terug te geven resultaten config parameter.
+	 * * {@value} .
+	 */
+	public static final String SERVLETCONFIG_OPENLS_MAX_RESULTS = "openlsmaxresults";
 
 	/**
 	 * zorgt ervoor dat eventuele doubles als integer worden gerenderd. Als het
@@ -91,6 +100,10 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 			throw new ServletException("config param "
 					+ SERVLETCONFIG_OPENLS_SERVER_URL + " is null.");
 		}
+		this.openLSmaxResults = config
+				.getInitParameter(SERVLETCONFIG_OPENLS_MAX_RESULTS) == null ? null
+				: Integer.parseInt(config
+						.getInitParameter(SERVLETCONFIG_OPENLS_MAX_RESULTS));
 	}
 
 	/**
@@ -151,7 +164,7 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 			final GeocodeResponse gcr = this.openLSClient.doGetOpenLSRequest(
 					this.openLSServerUrl, openLSParams);
 			final List<OpenLSClientAddress> addrl = OpenLSClientUtil
-					.getOpenLSClientAddressList(gcr);
+					.getOpenLSClientAddressList(gcr, openLSmaxResults);
 
 			if (forwardResponse) {
 				if (addrl.isEmpty()) {

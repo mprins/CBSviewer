@@ -1,0 +1,2136 @@
+<xls:GeocodeResponse xmlns:xls="http://www.opengis.net/xls"
+	xmlns:gml="http://www.opengis.net/gml">
+	<xls:GeocodeResponseList
+		numberOfGeocodedAddresses="142">
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134329.825 456554.567</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Thomas à Kempisweg</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3532CG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136953.238 455861.456</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Achter St.-Pieter</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3512HT</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135553.507 453127.68</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Aziëlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3526SG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">131420.331 456692.508</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Kees van Dongensingel</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544KG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136859.08 458099.276</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Tannhäuserdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3561HM</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135916.455 454629.422</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Rolderdiephof</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3521DD</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136989.81 453464.905</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Oranje-Nassaulaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3523VR</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137881.793 457823.966</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Lamérislaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3571LH</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134411.781 458715.184</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Huis te Zuylenlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3554JE</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137881.592 456553.889</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Veeartsenijstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3572DG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136986.777 459000.954</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Pahud de Mortangesdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3562AG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137173.587 453637.297</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Looplantsoen</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3523GZ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135865.629 459583.093</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Hanoidreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3564HS</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136489.765 459210.583</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Schooneggendreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3562GL</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137847.877 453258.147</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Vlieland</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524AD</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134862.523 454977.16</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Vivaldiplantsoen</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3533JE</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135142.386 452975.822</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Alexander de Grotelaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3526RP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">132206.448 456972.508</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Sonny Rollinsstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3543GR</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138241.583 453413.165</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Houtensepad</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524SB</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137976.78 453283.077</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Terschelling</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524AZ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137804.44 457962.547</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Winklerlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3571KN</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135373.425 459663.353</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Tigrisdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3564GP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135224.83088992583 455652.384931609</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Leidsekade</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3531HE</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">130862.643 456854.216</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Kandinskystraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544NW</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134088.328 454992.034</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Hendrika van Tussenbroeklaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3533SZ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137518.831 452472.557</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Simplonbaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524GR</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134789.231 454699.071</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Van Weerden Poelmanlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527KT</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135314.541 459419.682</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>St.-Eustatiusdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3564GE</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135086.02 457840.409</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Marnixlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3552HJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135008.53 454413.049</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Van Vollenhovenlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527JW</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">140354.282 455279.681</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Leuvenplein</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3584LK</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134828.345 457981.58</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Van Hoornekade</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3554AZ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134835.572 454814.751</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Moeder Teresalaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527WB</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136969.809 453781.216</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Aquamarijnlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3523EP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137013.849 456224.159</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Keizerstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3512EB</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134983.32 455080.715</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Franz-Lisztplantsoen</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3533JG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">131533.899 455876.897</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Tweede Westerparklaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544VR</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136417.46 456761.872</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Hopakker</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3514BZ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136263.708 456392.102</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>St.-Jacobsstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3511BT</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136594.722 453077.099</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Julianaweg</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3525VL</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138453.878 457935.984</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Steve Bikostraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3573BE</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">132461.21 455828.978</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Melissekade</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544CW</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134142.782 458961.353</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Vechtplantsoen</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3555XD</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135413.927 459685.027</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Haifadreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3564VH</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136775.396 454621.2</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Vaartsestraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3511TG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">140418.499 455066.239</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Cambridgelaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3584CE</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134384.473 454311.294</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Adenauerlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527RM</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">132657.559 456119.558</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Monarchvlinderlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544DC</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135933.45 459449.707</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Ibisdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3564RK</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137290.635 453181.468</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Wageningseberg</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524LV</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137833.495 456543.314</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Gildstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3572EW</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">139424.245 455469.786</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Daltonlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3584BJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136412.11 455174.205</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Nicolaas Beetsstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3511HG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136442.826 458557.703</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Rhodosdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3562TM</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">132621.114 455598.545</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Tweede Oosterparklaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544AV</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136584.028 455020.713</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Hartingstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3511HV</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135044.472 455876.543</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200" subdivision="A"></xls:Building>
+					<xls:Street>Kanaalstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3531CR</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">132397.832 455298.487</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Klifrakplantsoen</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544RC</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">133934.793 458791.24</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Burgemeester Norbruislaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3555EK</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138014.418 457319.766</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Hijmans van den Berghlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3571PG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">132080.884 456970.629</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Louis Armstronglaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3543EB</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134495.47 458812.311</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Prinses Irenelaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3554HH</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134853.333 454549.967</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Beneluxlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527HZ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135880.713 454765.907</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Voorsterbeeklaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3521DG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137131.0353334191 456498.12736356794</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Wittevrouwensingel</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3572CE</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138627.989 458142.256</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Augusto Sandinostraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3573ZH</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">132067.852 455188.419</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Houtrakgracht</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544SL</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136310.526 458717.398</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Theemsdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3562EK</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135962.014 458798.088</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Tafelbergdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3564AG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137744.037 452276.767</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Himalaya</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524XK</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136253.725 454665.344</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Croeselaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3521CK</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138201.593 456729.814</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Karel Doormanlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3572NW</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135194.236 456448.506</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Cremerstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3532BL</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">130721.729 456946.57</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Pablo Picassostraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544NX</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134694.261 454107.038</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>De Gasperilaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527GK</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136105.385 453786.472</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200" subdivision="BS"></xls:Building>
+					<xls:Street>Merwedekade</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3522JJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136105.166 453787.885</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Merwedekade</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3522JJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135288.54 459736.65</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Ankaradreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3564VS</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">132522.308 456437.525</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Prof. Jan Bronnerlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3541AL</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136184.393 454069.293</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Waalstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3522SW</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134301.332 454726.18</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Kennedylaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3533KM</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136588.539 457536.114</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Adriaen Beyerkade</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3515XV</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">131264.264 457881.884</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Walter Kollolaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3543HS</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138564.025 454933.613</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Kriekenpitplein</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3584EJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134610.687 454103.066</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Marshalllaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527TR</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134308.852 457249.506</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Tractieweg</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3534AP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138117.783 453071.366</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Hondsrug</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524BV</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135128.216 453498.157</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Marco Pololaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3526GN</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135042.61 454453.748</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Van Eysingalaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527VR</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138100.945 454659.806</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Rubenslaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3582JJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134556.642 458593.592</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Daelwijcklaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3554HL</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137509.546 457691.369</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Rauwenhofflaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3571HP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135213.485 453752.615</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Livingstonelaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3526HT</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137212.456 456554.884</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>St.-Janshovenstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3572RC</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134535.913 454022.85</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Nansenlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527EN</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137801.526 455146.269</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Abstederdijk</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3582BW</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137025.186 458627.677</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Peetersdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3562CJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137858.988 456580.343</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Bollenhofsestraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3572VW</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135921.552 452873.274</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Europalaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3526KS</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">133383.52 458846.263</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Van Heesstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3555GD</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134658.184 454998.02</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Ravellaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3533JP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138047.492 457114.725</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Zeemanlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3572ZJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135184.202 459581.065</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>St.-Maartendreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3564TG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">132909.196 455447.324</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Koldijksterraklaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544PP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">131884.07 456047.552</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Vlindersingel</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544VM</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134708.754 458648.989</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Zwanenvechtlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3554GP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134285.908 454296.456</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Rooseveltlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527AJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138090.34170253965 457601.2885618639</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Kapteynlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3571XJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137072.26 453793.743</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Smaragdplein</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3523EG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138069.405 453298.322</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Texel</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524AP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">131025.108 456384.135</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Parkzichtlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544MN</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136235.626 453483.756</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Rijnlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3522BX</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136380.858 454443.846</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Vondellaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3521GZ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135165.873 454511.816</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Van Bijnkershoeklaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527XL</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135853.661 453307.352</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Europaplein</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3526WD</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">131928.964 456816.061</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Willem Frederik Hermansstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544KP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134575.795 454353.217</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Spaaklaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3527SP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135218.469 453527.702</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Stanleylaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3526TS</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136321.075 453173.781</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Jutfaseweg</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3522HR</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135804.399 456406.312</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>1e Daalsedijk</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3513TH</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">138103.134 456419.528</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Biltstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3572BS</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135848.271 451960.956</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Winthontlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3526KV</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136792.243 455666.844</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Oudegracht</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3511NR</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136122.976 459239.889</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Zambesidreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3564CH</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135047.839 460427.144</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Gageldijk</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3566MJ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">133092.395 455374.711</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Woudsenderraklaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3544PZ</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137883.212 453026.639</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Zevenwouden</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524CX</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136281.453 458320.053</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Roelantdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3562KG</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135656.2 457854.624</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200" subdivision="BS"></xls:Building>
+					<xls:Street>Ondiep</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3552EN</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135657.37 457855.442</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Ondiep</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3552EN</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135669.415 456476.536</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Spijkerstraat</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3513SL</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136094.573 458765.914</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Kalymnosdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3562XP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136752.691 458297.435</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Rubicondreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3561JH</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137437.646 458770.91</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Centaurusdreef</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3561AV</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">136136.356 455624.268</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Stationsplein</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3511ED</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134584.398 454961.358</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Leidseweg</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3533HD</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135124.025 455948.254</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Jan Pieterszoon Coenhof</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3531HX</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135478.135 455616.143</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Graadt van Roggenweg</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3531AH</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137828.247 452979.806</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Boven Zevenwouden</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524CK</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">134909.304 453386.519</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Magelhaenlaan</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3526CM</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">135168.236 456128.243</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Vleutenseweg</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3532HP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+		<xls:GeocodedAddress>
+			<gml:Point srsName="EPSG:28992">
+				<gml:pos dimension="2">137608.225 452165.577</gml:pos>
+			</gml:Point>
+			<xls:Address countryCode="NL">
+				<xls:StreetAddress>
+					<xls:Building number="200"></xls:Building>
+					<xls:Street>Filipijnen</xls:Street>
+				</xls:StreetAddress>
+				<xls:Place type="MunicipalitySubdivision">Utrecht</xls:Place>
+				<xls:Place type="Municipality">Utrecht</xls:Place>
+				<xls:Place type="CountrySubdivision">Utrecht</xls:Place>
+				<xls:PostalCode>3524JP</xls:PostalCode>
+			</xls:Address>
+		</xls:GeocodedAddress>
+	</xls:GeocodeResponseList>
+</xls:GeocodeResponse>
