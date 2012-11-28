@@ -40,10 +40,10 @@
 	<link rel="stylesheet" href="css/menu.css" type="text/css" />
 
 	<!--[if lte IE 7]>
-		<link rel="stylesheet" href="static/css/ie.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all" />
 	<![endif]-->
-	<!--[if gte IE 8]>
-		<link rel="stylesheet" href="static/css/ie-8.css" type="text/css" media="all" />
+	<!--[if IE 8]>
+		<link rel="stylesheet" href="css/ie-8.css" type="text/css" media="all" />
 	<![endif]-->
 
 </jsp:root>
