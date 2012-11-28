@@ -14,7 +14,7 @@
 	<div id="zoekContainer">
 		<form title="Zoekformulier" method="get" action="adres" id="zoekFormulier">
 			<p class="zoekinput">
-				<input type="text" id="adres" accesskey="i" name="adres" value="${param.adres}"/>
+				<input type="text" id="adres" accesskey="8" name="adres" value="${param.adres}"/>
 				
 				<c:if test="${request.straal != null}">
 					<input type="hidden" name="straal" value="${straal}"/>
