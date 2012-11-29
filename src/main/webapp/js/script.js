@@ -34,6 +34,10 @@ jQuery(document).ready(function() {
 	});					
 });
 
+//$('.megaMenu a').mouseover(function() {
+//	jQuery('span',this).html('Get name from AvailableLayers.xml?');	
+//});
+
 /**
   * Change theme from menu
   */
