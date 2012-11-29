@@ -3,7 +3,7 @@
 	<jsp:directive.page language="java"
 		contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 		import="java.io.File,java.util.jar.Manifest,java.io.FileInputStream,java.util.jar.Attributes,java.util.Date,nl.mineleni.cbsviewer.util.LabelsBundle"
-		session="false" />
+		session="false" trimDirectiveWhitespaces="true" isErrorPage="false"/>
 	<jsp:output doctype-root-element="html"
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"

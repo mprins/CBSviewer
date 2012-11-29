@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* style sheet met opmaak voor IE8. Dit betreft met name workrounds voor ontbrekende transparantie en andere bugs.*/
 
 .olHandlerBoxZoomBox {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity = 50)";

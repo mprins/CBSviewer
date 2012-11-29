@@ -5,7 +5,7 @@
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
 		import="nl.mineleni.cbsviewer.util.StringConstants"
-		trimDirectiveWhitespaces="true" language="java" isThreadSafe="false"
+		trimDirectiveWhitespaces="false" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 <jsp:output doctype-root-element="html"
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"

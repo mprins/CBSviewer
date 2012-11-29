@@ -3,7 +3,7 @@
 	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false" language="java"
-		trimDirectiveWhitespaces="true" />
+		trimDirectiveWhitespaces="false" />
 
 	<!-- 
 	include bestand met de javascript tags, 
