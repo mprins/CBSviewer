@@ -135,7 +135,7 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 		<div class="ac-container">
 			<div>
 				<input id="ac-1" name="accordion-1" type="checkbox" checked="checked"/>
-				<label for="ac-1"><fmt:message key="Legenda" /></label>
+				<label for="ac-1"><fmt:message key="KEY_LEGENDA_TITEL" /></label>
 				<div class="ac-small" id="legenda">
 					<p>
 						<!-- plaats voor de legenda, dynamisch en statisch -->
