@@ -54,26 +54,26 @@ public class LabelsBundle extends ResourceBundle {
 	}
 
 	/**
-	 * Geeft sleutel/waarde paren als javascript OpenLayers object.
+	 * Geeft sleutel/waarde paren als een javascript OpenLayers object.
+	 * Vooralsnog wordt alleen de nl taal ondersteund.
 	 * 
 	 * @return the open layers lang bundle
 	 */
 	public String getOpenLayersLangBundle() {
 		final StringBuilder sb = new StringBuilder(
 				"//<![CDATA[\nOpenLayers.Lang.nl = OpenLayers.Util.extend({");
-
 		for (final Enumeration<String> keys = this.getKeys(); keys
 				.hasMoreElements();) {
 			final String key = keys.nextElement();
+			if (LOGGER.isDebugEnabled()) {
+				sb.append("\n");
+			}
 			sb.append("'");
 			sb.append(key);
 			sb.append("'");
 			sb.append(":'");
-			sb.append(this.getString(key));
+			sb.append(this.getString(key).replaceAll("\\{[0-9]\\}*", "\\$$0"));
 			sb.append("',");
-			if (LOGGER.isDebugEnabled()) {
-				sb.append("\n");
-			}
 		}
 		sb.deleteCharAt(sb.length() - 1);
 		sb.append("}, OpenLayers.Lang.nl);\n//]]>\n");
