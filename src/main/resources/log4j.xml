@@ -32,13 +32,9 @@
 	<logger name="org.geotools">
 		<level value="warn" />
 	</logger>
-	<logger name="org.apache.commons.httpclient.Wire">
-		<!-- debug toont al het verkeer -->
-		<level value="debug" />
-	</logger>
 	<logger name="org.apache.http.impl.conn.Wire">
-		<!-- debug toont al het verkeer -->
-		<level value="debug" />
+		<!-- debug toont al het verkeer van oa. de adres zoeker en reverse proxy-->
+		<level value="info" />
 	</logger>
 	<logger name="org.apache.commons">
 		<level value="error" />
