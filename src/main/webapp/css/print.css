@@ -1,32 +1,35 @@
 @charset "UTF-8";
 
 /* niet af te drukken elementen en klassen. in essentie alle eyecandy, navigatie, hyperlinks */
-#toggleSize,#toggleBaseMap,.olControlZoom,#zoekContainer,#coreexitlink,#kaartnavi,.dropDownMenu,.utilBlock,.ac-container,#footer
+#toggleSize,#toggleBaseMap,.olControlZoom,#zoekContainer,#coreexitlink,#kaartnavi,.dropDownMenu,.utilBlock,#footer
 	{
 	display: none;
 }
 
-#footer {
-	height: 0;
+@page { 
+	margin: 1cm;
+	orphans:4; 
+	widows:2;
 }
 
+#inhoud  {
+	page-break-after : avoid;
+	border: 2px solid #000;
+}
+
+/* reset accordion container. */
 .ac-container {
-	position: relative;
+	height: auto;
+	position: static;
+	width: auto;
 }
 
-#legenda {
-	position: static;
-	display: block !important;
-	height: auto;
-	margin: 0;
-}
+#.attribuutTabel {
 
-#featureinfo {
-	position: static;
-	display: block !important;
-	height: auto;
 }
 
 #cbsKaart {
 	width: 100%;
 }
+/* @media print and (max-device-ratio: 1/1) /* portrait of vierkant */
+/* @media print and (min-device-ratio: 1/1) /* landscape of vierkant */
