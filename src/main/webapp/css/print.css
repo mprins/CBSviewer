@@ -1,14 +1,32 @@
 @charset "UTF-8";
 
-#toggleSize,#toggleBaseMap,div.olControlZoom,#zoekenContainer,#coreexitlink,#kaartnavi,.dropDownMenu
+/* niet af te drukken elementen en klassen. in essentie alle eyecandy, navigatie, hyperlinks */
+#toggleSize,#toggleBaseMap,.olControlZoom,#zoekContainer,#coreexitlink,#kaartnavi,.dropDownMenu,.utilBlock,.ac-container,#footer
 	{
 	display: none;
 }
 
+#footer {
+	height: 0;
+}
+
+.ac-container {
+	position: relative;
+}
+
 #legenda {
-	
+	position: static;
+	display: block !important;
+	height: auto;
+	margin: 0;
 }
 
 #featureinfo {
-	
+	position: static;
+	display: block !important;
+	height: auto;
+}
+
+#cbsKaart {
+	width: 100%;
 }

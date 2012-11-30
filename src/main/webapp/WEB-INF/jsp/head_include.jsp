@@ -26,15 +26,15 @@
 		<meta name="DCTERMS.description" content="CBS Kaart applicatie " />
 
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-		<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-		<link rel="stylesheet" href="css/menu.css" type="text/css" />
+		<link rel="stylesheet" href="css/menu.css" type="text/css" media="all" />
 		<![CDATA[
 		<!--[if lte IE 7]>
-		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
 		<![endif]-->
 		<!--[if IE 8]>
-		<link rel="stylesheet" href="css/ie-8.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />
 		<![endif]-->
 		]]>
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
 	</jsp:text>
 </jsp:root>

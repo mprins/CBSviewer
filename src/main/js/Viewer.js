@@ -37,6 +37,29 @@ Viewer = function() {
 	}
 
 	/**
+	 * zorgt voor correct afhandelen van viewport resize.
+	 * 
+	 * @private
+	 */
+	function _resize() {
+		if (_fullSize) {
+			console.debug("resize Viewer");
+			var w = jQuery('#' + this.config.mapDiv).parent().width();
+			// var h = jQuery('#' + this.config.mapDiv).parent().height();
+			var h = jQuery('#' + this.config.mapDiv).parent().parent().height();
+			jQuery('#' + this.config.mapDiv).width(w).height(h);
+			_map.updateSize();
+			var vectors = _map.getLayersByClass("OpenLayers.Layer.Vector");
+			console.debug("vectors", vectors);
+			if (vectors.length > 0) {
+				// in dit geval is er een kaartlaag met een featureinfo lokatie
+				// verschuif naar die lokatie
+				var bounds = vectors[0].getDataExtent();
+				_map.panTo(bounds.getCenterLonLat());
+			}
+		}
+	}
+	/**
 	 * Publieke interface van deze klasse.
 	 * 
 	 * @returns {Viewer} publieke methodes
@@ -87,6 +110,10 @@ Viewer = function() {
 			if (this.config.fullSize) {
 				this.toggleFullSize();
 			}
+			jQuery(window).resize(function() {
+				// aanhaken bij window resize
+				_resize();
+			});
 		},
 
 		/**
