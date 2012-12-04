@@ -111,7 +111,7 @@ public class ReverseProxyServletTest {
 				this.allowing(ReverseProxyServletTest.this.servletConfig)
 						.getInitParameter(FORCE_XML_MIME);
 				this.will(returnValue("true"));
-				this.one(ReverseProxyServletTest.this.servletConfig)
+				this.oneOf(ReverseProxyServletTest.this.servletConfig)
 						.getInitParameter(ALLOWED_HOSTS);
 				this.will(returnValue(SERVERNAME_DOESNOTEXIST + ";"
 						+ SERVERNAME));
@@ -154,15 +154,16 @@ public class ReverseProxyServletTest {
 		// (#1)
 		this.mockery.checking(new Expectations() {
 			{
-				this.one(ReverseProxyServletTest.this.request).getQueryString();
+				this.oneOf(ReverseProxyServletTest.this.request)
+						.getQueryString();
 				this.will(returnValue(SERVERNAME_URL));
 				this.allowing(ReverseProxyServletTest.this.response)
 						.setContentType("text/xml");
-				this.one(ReverseProxyServletTest.this.response)
+				this.oneOf(ReverseProxyServletTest.this.response)
 						.setContentLength((this.with(greaterThan(1))));
-				this.one(ReverseProxyServletTest.this.response).getWriter();
+				this.oneOf(ReverseProxyServletTest.this.response).getWriter();
 				this.will(returnValue((new PrintWriter(System.out))));
-				this.one(ReverseProxyServletTest.this.response).flushBuffer();
+				this.oneOf(ReverseProxyServletTest.this.response).flushBuffer();
 			}
 		});
 		try {
@@ -186,7 +187,8 @@ public class ReverseProxyServletTest {
 		// (#2) this should fail; INVALID_URL is not a valid url
 		this.mockery.checking(new Expectations() {
 			{
-				this.one(ReverseProxyServletTest.this.request).getQueryString();
+				this.oneOf(ReverseProxyServletTest.this.request)
+						.getQueryString();
 				this.will(returnValue(INVALID_URL));
 			}
 		});
@@ -216,12 +218,13 @@ public class ReverseProxyServletTest {
 		// (#3) this should fail w/ ConnectException
 		this.mockery.checking(new Expectations() {
 			{
-				this.one(ReverseProxyServletTest.this.request).getQueryString();
+				this.oneOf(ReverseProxyServletTest.this.request)
+						.getQueryString();
 				this.will(returnValue(SERVERNAME_DOESNOTEXIST_URL));
 				// omdat we een proxy hebben geconfigurrerd krijgen we een 404
 				// this.one(ReverseProxyServletTest.this.response).sendError(
 				// SC_NOT_FOUND, "HTTP/1.1 404 Not Found");
-				this.one(ReverseProxyServletTest.this.response).sendError(
+				this.oneOf(ReverseProxyServletTest.this.response).sendError(
 						SC_BAD_GATEWAY, "HTTP/1.1 502 Bad Gateway");
 			}
 		});
@@ -245,13 +248,14 @@ public class ReverseProxyServletTest {
 		// (#4)
 		this.mockery.checking(new Expectations() {
 			{
-				this.one(ReverseProxyServletTest.this.request).getQueryString();
+				this.oneOf(ReverseProxyServletTest.this.request)
+						.getQueryString();
 				this.will(returnValue(UNALLOWEDSERVERNAME_URL));
-				this.one(ReverseProxyServletTest.this.response).sendError(
+				this.oneOf(ReverseProxyServletTest.this.response).sendError(
 						SC_FORBIDDEN,
 						UNALLOWEDSERVERNAME_URL
 								+ " is not in the list of allowed servers");
-				this.one(ReverseProxyServletTest.this.response).flushBuffer();
+				this.oneOf(ReverseProxyServletTest.this.response).flushBuffer();
 			}
 		});
 		try {
@@ -271,7 +275,7 @@ public class ReverseProxyServletTest {
 		// init is called in setUp()
 		this.mockery.checking(new Expectations() {
 			{
-				this.one(ReverseProxyServletTest.this.servletConfig)
+				this.oneOf(ReverseProxyServletTest.this.servletConfig)
 						.getInitParameter(ALLOWED_HOSTS);
 				this.will(returnValue(null));
 			}

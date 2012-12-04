@@ -64,9 +64,9 @@ public class AbstractBaseServletTest {
 		// set up mock config
 		mockery.checking(new Expectations() {
 			{
-				one(servletConfig).getInitParameter(USER_ID);
+				oneOf(servletConfig).getInitParameter(USER_ID);
 				will(returnValue("userID"));
-				one(servletConfig).getInitParameter(USER_PASSWORD);
+				oneOf(servletConfig).getInitParameter(USER_PASSWORD);
 				will(returnValue("passID"));
 			}
 		});
@@ -98,9 +98,9 @@ public class AbstractBaseServletTest {
 	public void testInitServletConfigNull() {
 		mockery.checking(new Expectations() {
 			{
-				one(servletConfig).getInitParameter(USER_ID);
+				oneOf(servletConfig).getInitParameter(USER_ID);
 				will(returnValue(null));
-				one(servletConfig).getInitParameter(USER_PASSWORD);
+				oneOf(servletConfig).getInitParameter(USER_PASSWORD);
 				will(returnValue(null));
 			}
 		});

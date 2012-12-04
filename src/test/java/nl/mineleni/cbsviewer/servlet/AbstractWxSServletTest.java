@@ -169,11 +169,11 @@ public class AbstractWxSServletTest {
 						.getParameter(REQ_PARAM_STRAAL.code);
 				this.will(returnValue(null));
 
-				this.one(AbstractWxSServletTest.this.request).setAttribute(
+				this.oneOf(AbstractWxSServletTest.this.request).setAttribute(
 						REQ_PARAM_XCOORD.code, DEFAULT_XCOORD.intValue());
-				this.one(AbstractWxSServletTest.this.request).setAttribute(
+				this.oneOf(AbstractWxSServletTest.this.request).setAttribute(
 						REQ_PARAM_YCOORD.code, DEFAULT_YCOORD.intValue());
-				this.one(AbstractWxSServletTest.this.request).setAttribute(
+				this.oneOf(AbstractWxSServletTest.this.request).setAttribute(
 						REQ_PARAM_STRAAL.code,
 						OPENLS_ZOOMSCALE_STANDAARD.intValue());
 			}
