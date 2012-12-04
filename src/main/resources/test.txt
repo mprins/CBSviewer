@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd ">
 	<Layerdescriptor>
 		<id>vierkanten500m_oad2000</id>
 		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2000</name>
@@ -2167,8 +2164,16 @@
 		<styles>wijkenbuurten2009_thema_buurten2009_restaurant_gemiddelde_afstand_in_km</styles>
 		<attributes>GM_NAAM,WK_NAAM,BU_NAAM,restaurant_gemiddelde_afstand_in_km</attributes>
 	</Layerdescriptor>	
-	
+
+	<!-- Bevolkingskernen 2008 -->
 	<Layerdescriptor>
+		<id>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</id>
+		<name>>CBS Gemeenten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
+		<layers>cbsbevolkingskernen2008</layers>
+		<url>http://geodata.nationaalgeoregister.nl/bevolkingskernen2008/wms</url>
+		<styles>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</styles>
+		<attributes>GM_NAAM,restaurant_gemiddelde_afstand_in_km</attributes>
+	</Layerdescriptor>		<Layerdescriptor>
 		<id>vierkanten500m_oad2001</id>
 		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2001</name>
 		<layers>omgevings_adres_dichtheid_2001</layers>
@@ -2779,7 +2784,7 @@
 		<attributes>gid,p_auto2011</attributes>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_allochtonen_2011</id>
+		<id>vierkanten100m_autochtonen_2011</id>
 		<name>Percentage westerse allochtonen 2011</name>
 		<layers>westers_allochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
@@ -4336,4 +4341,3 @@
 		<styles>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</styles>
 		<attributes>GM_NAAM,restaurant_gemiddelde_afstand_in_km</attributes>
 	</Layerdescriptor>	
-</Layers>

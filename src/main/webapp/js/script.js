@@ -1,6 +1,6 @@
 // opzoeken van de gevraagde kaart in de _layers, id's zitten in
 // AvailableLayers.xml
-var _defaultId = "wijkbuurt2010auto";
+var _defaultId = "wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners";
 
 /**
  * @fileoverview event handlers en elementen voor de pagina.
@@ -23,7 +23,7 @@ jQuery(document).ready(function() {
 		$("#zoekresultaten").empty();
 		}
 	});
-
+ 
 	/* Werkt dit alleen in Chrome??? */
 	$("#delete").click(function() {
 		$("#adres").val("");
