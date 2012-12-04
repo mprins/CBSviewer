@@ -43,7 +43,7 @@
 			<!-- TODO: mapid waarde moet uit de request komen bijv. ?mapid=cbs_inwoners_2000_per_hectare -->
 			<!-- StringConstants.REQ_PARAM_MAPID -->
 			<!--<jsp:param name="mapid" value="cbs_inwoners_2000_per_hectare" />-->
-			<jsp:param name="mapid" value="wijkbuurt2010auto" />
+			<jsp:param name="mapid" value="wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners" />
 
 			<jsp:param value="${xcoord}" name="xcoord" />
 			<jsp:param value="${ycoord}" name="ycoord" />
