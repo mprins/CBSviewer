@@ -28,8 +28,8 @@ config.map = {
 			1.680, 0.840, 0.420 ],
 	initialZoom : 6,
 	// initiele afmeting van de kaart
-	height : 430,
-	width : 410
+	height : 500,
+	width : 610
 };
 
 /**
@@ -44,7 +44,7 @@ config.fullSize = true;
  * 
  * @type {Boolean}
  */
-config.toggleSize = false;
+config.toggleSize = true;
 
 /**
  * OpenLayers proxy url override.
