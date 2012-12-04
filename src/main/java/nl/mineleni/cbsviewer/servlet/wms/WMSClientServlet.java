@@ -464,14 +464,17 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				if (this.legendCache.containsKey(key)) {
 					// in de cache kijken of we deze legenda afbeelding al
 					// hebben
-					legends[l] = new File(this.legendCache.get(key).getName());
-					if (!legends[l].exists()) {
-						// (mogelijk) is het bestand gewist..
-						ImageIO.write(this.legendCache.get(key).getImage(),
-								"png", legends[l]);
+					String fname = this.legendCache.get(key).getName();
+					if (null != fname) {
+						legends[l] = new File(fname);
+						if (!legends[l].exists()) {
+							// (mogelijk) is het bestand gewist..
+							ImageIO.write(this.legendCache.get(key).getImage(),
+									"png", legends[l]);
+						}
+						LOGGER.debug("Legenda bestand uit cache: "
+								+ legends[l].getAbsolutePath());
 					}
-					LOGGER.debug("Legenda bestand uit cache: "
-							+ legends[l].getAbsolutePath());
 				} else {
 					// legenda opvragen
 					legend.setLayer(layerNames[l]);
