@@ -743,15 +743,15 @@
 	<!-- GEMEENTE/WIJK/BUURT 2011 -->
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</id>
-		<name>>CBS Gemeenten 2011 - Aantal inwoners</name>
+		<name>CBS Gemeenten 2011 - Aantal inwoners</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</styles>
-		<attributes>GM_NAAM,aantal_inwoners</attributes>
+		<attributes>aantal_inwoners</attributes>
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_aantal_inwoners</id>
-		<name>>CBS Wijken 2011 - Aantal inwoners</name>
+		<name>CBS Wijken 2011 - Aantal inwoners</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_aantal_inwoners</styles>
@@ -759,7 +759,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_aantal_inwoners</id>
-		<name>>CBS Buurten 2011 - Aantal inwoners</name>
+		<name>CBS Buurten 2011 - Aantal inwoners</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_aantal_inwoners</styles>
@@ -768,7 +768,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_ongehuwd</id>
-		<name>>CBS Gemeenten 2011 - Percentage ongehuwd</name>
+		<name>CBS Gemeenten 2011 - Percentage ongehuwd</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_ongehuwd</styles>
@@ -776,7 +776,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_ongehuwd</id>
-		<name>>CBS Wijken 2011 - Percentage ongehuwd</name>
+		<name>CBS Wijken 2011 - Percentage ongehuwd</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_ongehuwd</styles>
@@ -784,7 +784,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_ongehuwd</id>
-		<name>>CBS Buurten 2011 - Percentage ongehuwd</name>
+		<name>CBS Buurten 2011 - Percentage ongehuwd</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_ongehuwd</styles>
@@ -793,7 +793,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_gehuwd</id>
-		<name>>CBS Gemeenten 2011 - Percentage gehuwd</name>
+		<name>CBS Gemeenten 2011 - Percentage gehuwd</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_gehuwd</styles>
@@ -801,7 +801,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_gehuwd</id>
-		<name>>CBS Wijken 2011 - Percentage gehuwd</name>
+		<name>CBS Wijken 2011 - Percentage gehuwd</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_gehuwd</styles>
@@ -809,7 +809,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_gehuwd</id>
-		<name>>CBS Buurten 2011 - Percentage gehuwd</name>
+		<name>CBS Buurten 2011 - Percentage gehuwd</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_gehuwd</styles>
@@ -818,7 +818,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_gescheid</id>
-		<name>>CBS Gemeenten 2011 - Percentage gescheiden</name>
+		<name>CBS Gemeenten 2011 - Percentage gescheiden</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_gescheid</styles>
@@ -826,7 +826,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_gescheid</id>
-		<name>>CBS Wijken 2011 - Percentage gescheiden</name>
+		<name>CBS Wijken 2011 - Percentage gescheiden</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_gescheid</styles>
@@ -834,7 +834,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_gescheid</id>
-		<name>>CBS Buurten 2011 - Percentage gescheiden</name>
+		<name>CBS Buurten 2011 - Percentage gescheiden</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_gescheid</styles>
@@ -843,7 +843,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_verweduwd</id>
-		<name>>CBS Gemeenten 2011 - Percentage verweduwd</name>
+		<name>CBS Gemeenten 2011 - Percentage verweduwd</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_verweduwd</styles>
@@ -851,7 +851,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_verweduwd</id>
-		<name>>CBS Wijken 2011 - Percentage verweduwd</name>
+		<name>CBS Wijken 2011 - Percentage verweduwd</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_verweduwd</styles>
@@ -859,7 +859,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_verweduwd</id>
-		<name>>CBS Buurten 2011 - Percentage verweduwd</name>
+		<name>CBS Buurten 2011 - Percentage verweduwd</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_verweduwd</styles>
@@ -868,7 +868,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Gemeenten 2011 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Gemeenten 2011 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -876,7 +876,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Wijken 2011 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Wijken 2011 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -884,7 +884,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Buurten 2011 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Buurten 2011 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -893,7 +893,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_aantal_huishoudens</id>
-		<name>>CBS Gemeenten 2011 - Aantal huishoudens</name>
+		<name>CBS Gemeenten 2011 - Aantal huishoudens</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_aantal_huishoudens</styles>
@@ -901,7 +901,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_aantal_huishoudens</id>
-		<name>>CBS Wijken 2011 - Aantal huishoudens</name>
+		<name>CBS Wijken 2011 - Aantal huishoudens</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_aantal_huishoudens</styles>
@@ -909,7 +909,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_aantal_huishoudens</id>
-		<name>>CBS Buurten 2011 - Aantal huishoudens</name>
+		<name>CBS Buurten 2011 - Aantal huishoudens</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_aantal_huishoudens</styles>
@@ -918,7 +918,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Gemeenten 2011 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Gemeenten 2011 - Percentage eenpersoonshuishoudens</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_eenpersoonshuishoudens</styles>
@@ -926,7 +926,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Wijken 2011 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Wijken 2011 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_eenpersoonshuishoudens</styles>
@@ -934,7 +934,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Buurten 2011 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Buurten 2011 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_eenpersoonshuishoudens</styles>
@@ -943,7 +943,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Gemeenten 2011 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Gemeenten 2011 - Percentage huishoudens zonder kinderen</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_zonder_kinderen</styles>
@@ -951,7 +951,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Wijken 2011 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Wijken 2011 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_zonder_kinderen</styles>
@@ -959,7 +959,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Buurten 2011 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Buurten 2011 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_zonder_kinderen</styles>
@@ -968,7 +968,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Gemeenten 2011 - Percentage huishoudens met kinderen</name>
+		<name>CBS Gemeenten 2011 - Percentage huishoudens met kinderen</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_met_kinderen</styles>
@@ -976,7 +976,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Wijken 2011 - Percentage huishoudens met kinderen</name>
+		<name>CBS Wijken 2011 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_met_kinderen</styles>
@@ -984,7 +984,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Buurten 2011 - Percentage huishoudens met kinderen</name>
+		<name>CBS Buurten 2011 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_met_kinderen</styles>
@@ -993,7 +993,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Gemeenten 2011 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Gemeenten 2011 - Gemiddelde huishoudsgrootte</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_gemiddelde_huishoudsgrootte</styles>
@@ -1001,7 +1001,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Wijken 2011 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Wijken 2011 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_gemiddelde_huishoudsgrootte</styles>
@@ -1009,7 +1009,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Buurten 2011 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Buurten 2011 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_gemiddelde_huishoudsgrootte</styles>
@@ -1018,7 +1018,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2011 - Percentage westerse allochtonen</name>
+		<name>CBS Gemeenten 2011 - Percentage westerse allochtonen</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_westerse_allochtonen</styles>
@@ -1026,7 +1026,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_westerse_allochtonen</id>
-		<name>>CBS Wijken 2011 - Percentage westerse allochtonen</name>
+		<name>CBS Wijken 2011 - Percentage westerse allochtonen</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_westerse_allochtonen</styles>
@@ -1034,7 +1034,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_westerse_allochtonen</id>
-		<name>>CBS Buurten 2011 - Percentage westerse allochtonen</name>
+		<name>CBS Buurten 2011 - Percentage westerse allochtonen</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_westerse_allochtonen</styles>
@@ -1043,7 +1043,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2011 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Gemeenten 2011 - Percentage niet-westerse allochtonen</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_niet_westerse_allochtonen</styles>
@@ -1051,7 +1051,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Wijken 2011 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Wijken 2011 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_niet_westerse_allochtonen</styles>
@@ -1059,7 +1059,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Buurten 2011 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Buurten 2011 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen</styles>
@@ -1069,7 +1069,7 @@
 	<!-- GEMEENTEN/WIJKEN/BUURTEN 2010 -->	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_omgevingsadressendichtheid</id>
-		<name>>CBS Gemeenten 2010 - Omgevingsadressendichtheid</name>
+		<name>CBS Gemeenten 2010 - Omgevingsadressendichtheid</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_omgevingsadressendichtheid</styles>
@@ -1077,7 +1077,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_omgevingsadressendichtheid</id>
-		<name>>CBS Wijken 2010 - Omgevingsadressendichtheid</name>
+		<name>CBS Wijken 2010 - Omgevingsadressendichtheid</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_omgevingsadressendichtheid</styles>
@@ -1085,7 +1085,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_omgevingsadressendichtheid</id>
-		<name>>CBS Buurten 2010 - Omgevingsadressendichtheid</name>
+		<name>CBS Buurten 2010 - Omgevingsadressendichtheid</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_omgevingsadressendichtheid</styles>
@@ -1094,7 +1094,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_aantal_inwoners</id>
-		<name>>CBS Gemeenten 2010 - Aantal inwoners</name>
+		<name>CBS Gemeenten 2010 - Aantal inwoners</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_aantal_inwoners</styles>
@@ -1102,7 +1102,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_aantal_inwoners</id>
-		<name>>CBS Wijken 2010 - Aantal inwoners</name>
+		<name>CBS Wijken 2010 - Aantal inwoners</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_aantal_inwoners</styles>
@@ -1110,7 +1110,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_aantal_inwoners</id>
-		<name>>CBS Buurten 2010 - Aantal inwoners</name>
+		<name>CBS Buurten 2010 - Aantal inwoners</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_aantal_inwoners</styles>
@@ -1119,7 +1119,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_ongehuwd</id>
-		<name>>CBS Gemeenten 2010 - Percentage ongehuwd</name>
+		<name>CBS Gemeenten 2010 - Percentage ongehuwd</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_ongehuwd</styles>
@@ -1127,7 +1127,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_ongehuwd</id>
-		<name>>CBS Wijken 2010 - Percentage ongehuwd</name>
+		<name>CBS Wijken 2010 - Percentage ongehuwd</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_ongehuwd</styles>
@@ -1135,7 +1135,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_ongehuwd</id>
-		<name>>CBS Buurten 2010 - Percentage ongehuwd</name>
+		<name>CBS Buurten 2010 - Percentage ongehuwd</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_ongehuwd</styles>
@@ -1144,7 +1144,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_gehuwd</id>
-		<name>>CBS Gemeenten 2010 - Percentage gehuwd</name>
+		<name>CBS Gemeenten 2010 - Percentage gehuwd</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_gehuwd</styles>
@@ -1152,7 +1152,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_gehuwd</id>
-		<name>>CBS Wijken 2010 - Percentage gehuwd</name>
+		<name>CBS Wijken 2010 - Percentage gehuwd</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_gehuwd</styles>
@@ -1160,7 +1160,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_gehuwd</id>
-		<name>>CBS Buurten 2010 - Percentage gehuwd</name>
+		<name>CBS Buurten 2010 - Percentage gehuwd</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_gehuwd</styles>
@@ -1169,7 +1169,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_gescheid</id>
-		<name>>CBS Gemeenten 2010 - Percentage gescheiden</name>
+		<name>CBS Gemeenten 2010 - Percentage gescheiden</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_gescheid</styles>
@@ -1177,7 +1177,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_gescheid</id>
-		<name>>CBS Wijken 2010 - Percentage gescheiden</name>
+		<name>CBS Wijken 2010 - Percentage gescheiden</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_gescheid</styles>
@@ -1185,7 +1185,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_gescheid</id>
-		<name>>CBS Buurten 2010 - Percentage gescheiden</name>
+		<name>CBS Buurten 2010 - Percentage gescheiden</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_gescheid</styles>
@@ -1194,7 +1194,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_verweduwd</id>
-		<name>>CBS Gemeenten 2010 - Percentage verweduwd</name>
+		<name>CBS Gemeenten 2010 - Percentage verweduwd</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_verweduwd</styles>
@@ -1202,7 +1202,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_verweduwd</id>
-		<name>>CBS Wijken 2010 - Percentage verweduwd</name>
+		<name>CBS Wijken 2010 - Percentage verweduwd</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_verweduwd</styles>
@@ -1210,7 +1210,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_verweduwd</id>
-		<name>>CBS Buurten 2010 - Percentage verweduwd</name>
+		<name>CBS Buurten 2010 - Percentage verweduwd</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_verweduwd</styles>
@@ -1219,7 +1219,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Gemeenten 2010 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Gemeenten 2010 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -1227,7 +1227,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Wijken 2010 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Wijken 2010 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -1235,7 +1235,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Buurten 2010 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Buurten 2010 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -1244,7 +1244,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_aantal_huishoudens</id>
-		<name>>CBS Gemeenten 2010 - Aantal huishoudens</name>
+		<name>CBS Gemeenten 2010 - Aantal huishoudens</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_aantal_huishoudens</styles>
@@ -1252,7 +1252,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_aantal_huishoudens</id>
-		<name>>CBS Wijken 2010 - Aantal huishoudens</name>
+		<name>CBS Wijken 2010 - Aantal huishoudens</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_aantal_huishoudens</styles>
@@ -1260,7 +1260,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_aantal_huishoudens</id>
-		<name>>CBS Buurten 2010 - Aantal huishoudens</name>
+		<name>CBS Buurten 2010 - Aantal huishoudens</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_aantal_huishoudens</styles>
@@ -1269,7 +1269,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Gemeenten 2010 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Gemeenten 2010 - Percentage eenpersoonshuishoudens</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_eenpersoonshuishoudens</styles>
@@ -1277,7 +1277,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Wijken 2010 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Wijken 2010 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_eenpersoonshuishoudens</styles>
@@ -1285,7 +1285,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Buurten 2010 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Buurten 2010 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_eenpersoonshuishoudens</styles>
@@ -1294,7 +1294,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Gemeenten 2010 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Gemeenten 2010 - Percentage huishoudens zonder kinderen</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_zonder_kinderen</styles>
@@ -1302,7 +1302,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Wijken 2010 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Wijken 2010 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_zonder_kinderen</styles>
@@ -1310,7 +1310,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Buurten 2010 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Buurten 2010 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_zonder_kinderen</styles>
@@ -1319,7 +1319,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Gemeenten 2010 - Percentage huishoudens met kinderen</name>
+		<name>CBS Gemeenten 2010 - Percentage huishoudens met kinderen</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_met_kinderen</styles>
@@ -1327,7 +1327,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Wijken 2010 - Percentage huishoudens met kinderen</name>
+		<name>CBS Wijken 2010 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_met_kinderen</styles>
@@ -1335,7 +1335,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Buurten 2010 - Percentage huishoudens met kinderen</name>
+		<name>CBS Buurten 2010 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_met_kinderen</styles>
@@ -1344,7 +1344,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Gemeenten 2010 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Gemeenten 2010 - Gemiddelde huishoudsgrootte</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_gemiddelde_huishoudsgrootte</styles>
@@ -1352,7 +1352,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Wijken 2010 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Wijken 2010 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_gemiddelde_huishoudsgrootte</styles>
@@ -1360,7 +1360,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Buurten 2010 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Buurten 2010 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_gemiddelde_huishoudsgrootte</styles>
@@ -1369,7 +1369,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2010 - Percentage westerse allochtonen</name>
+		<name>CBS Gemeenten 2010 - Percentage westerse allochtonen</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_westerse_allochtonen</styles>
@@ -1377,7 +1377,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_westerse_allochtonen</id>
-		<name>>CBS Wijken 2010 - Percentage westerse allochtonen</name>
+		<name>CBS Wijken 2010 - Percentage westerse allochtonen</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_westerse_allochtonen</styles>
@@ -1385,7 +1385,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_westerse_allochtonen</id>
-		<name>>CBS Buurten 2010 - Percentage westerse allochtonen</name>
+		<name>CBS Buurten 2010 - Percentage westerse allochtonen</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_westerse_allochtonen</styles>
@@ -1394,7 +1394,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2010 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Gemeenten 2010 - Percentage niet-westerse allochtonen</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_niet_westerse_allochtonen</styles>
@@ -1402,7 +1402,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Wijken 2010 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Wijken 2010 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_niet_westerse_allochtonen</styles>
@@ -1410,7 +1410,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Buurten 2010 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Buurten 2010 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_niet_westerse_allochtonen</styles>
@@ -1419,7 +1419,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_gemiddelde_woningwaarde</id>
-		<name>>CBS Gemeenten 2010 - Gemiddelde woningwaarde</name>
+		<name>CBS Gemeenten 2010 - Gemiddelde woningwaarde</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_gemiddelde_woningwaarde</styles>
@@ -1427,7 +1427,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_gemiddelde_woningwaarde</id>
-		<name>>CBS Wijken 2010 - Gemiddelde woningwaarde</name>
+		<name>CBS Wijken 2010 - Gemiddelde woningwaarde</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_gemiddelde_woningwaarde</styles>
@@ -1435,7 +1435,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_gemiddelde_woningwaarde</id>
-		<name>>CBS Buurten 2010 - Gemiddelde woningwaarde</name>
+		<name>CBS Buurten 2010 - Gemiddelde woningwaarde</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_gemiddelde_woningwaarde</styles>
@@ -1444,7 +1444,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Gemeenten 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Gemeenten 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -1452,7 +1452,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Wijken 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Wijken 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -1460,7 +1460,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Buurten 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Buurten 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -1469,7 +1469,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_personenautos_per_huishouden</id>
-		<name>>CBS Gemeenten 2010 - Personenautos per huishouden</name>
+		<name>CBS Gemeenten 2010 - Personenautos per huishouden</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_personenautos_per_huishouden</styles>
@@ -1477,7 +1477,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_personenautos_per_huishouden</id>
-		<name>>CBS Wijken 2010 - Personenautos per huishouden</name>
+		<name>CBS Wijken 2010 - Personenautos per huishouden</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_personenautos_per_huishouden</styles>
@@ -1485,7 +1485,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_personenautos_per_huishouden</id>
-		<name>>CBS Buurten 2010 - Personenautos per huishouden</name>
+		<name>CBS Buurten 2010 - Personenautos per huishouden</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_personenautos_per_huishouden</styles>
@@ -1494,7 +1494,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_personenautos_per_km2</id>
-		<name>>CBS Gemeenten 2010 - Personenautos per km2</name>
+		<name>CBS Gemeenten 2010 - Personenautos per km2</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_personenautos_per_km2</styles>
@@ -1502,7 +1502,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_personenautos_per_km2</id>
-		<name>>CBS Wijken 2010 - Personenautos per km2</name>
+		<name>CBS Wijken 2010 - Personenautos per km2</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_personenautos_per_km2</styles>
@@ -1510,7 +1510,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_personenautos_per_km2</id>
-		<name>>CBS Buurten 2010 - Personenautos per km2</name>
+		<name>CBS Buurten 2010 - Personenautos per km2</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_personenautos_per_km2</styles>
@@ -1519,7 +1519,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_huisartsenpraktijk_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
+		<name>CBS Gemeenten 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_huisartsenpraktijk_gemiddelde_afstand_in_km</styles>
@@ -1527,7 +1527,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_huisartsenpraktijk_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
+		<name>CBS Wijken 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_huisartsenpraktijk_gemiddelde_afstand_in_km</styles>
@@ -1535,7 +1535,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_huisartsenpraktijk_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
+		<name>CBS Buurten 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_huisartsenpraktijk_gemiddelde_afstand_in_km</styles>
@@ -1544,7 +1544,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Gemeenten 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Gemeenten 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -1552,7 +1552,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Wijken 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Wijken 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -1560,7 +1560,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Buurten 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Buurten 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -1569,7 +1569,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2010 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Gemeenten 2010 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -1577,7 +1577,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2010 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Wijken 2010 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -1585,7 +1585,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2010 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Buurten 2010 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -1594,7 +1594,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2010 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Gemeenten 2010 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_restaurant_gemiddelde_afstand_in_km</styles>
@@ -1602,7 +1602,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2010 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Wijken 2010 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_restaurant_gemiddelde_afstand_in_km</styles>
@@ -1610,7 +1610,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2010 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Buurten 2010 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_restaurant_gemiddelde_afstand_in_km</styles>
@@ -1620,7 +1620,7 @@
 	<!-- GEMEENTEN/WIJKEN/BUURTEN 2009 -->
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_omgevingsadressendichtheid</id>
-		<name>>CBS Gemeenten 2009 - Omgevingsadressendichtheid</name>
+		<name>CBS Gemeenten 2009 - Omgevingsadressendichtheid</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_omgevingsadressendichtheid</styles>
@@ -1628,7 +1628,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_omgevingsadressendichtheid</id>
-		<name>>CBS Wijken 2009 - Omgevingsadressendichtheid</name>
+		<name>CBS Wijken 2009 - Omgevingsadressendichtheid</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_omgevingsadressendichtheid</styles>
@@ -1636,7 +1636,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_omgevingsadressendichtheid</id>
-		<name>>CBS Buurten 2009 - Omgevingsadressendichtheid</name>
+		<name>CBS Buurten 2009 - Omgevingsadressendichtheid</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_omgevingsadressendichtheid</styles>
@@ -1645,7 +1645,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_aantal_inwoners</id>
-		<name>>CBS Gemeenten 2009 - Aantal inwoners</name>
+		<name>CBS Gemeenten 2009 - Aantal inwoners</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_aantal_inwoners</styles>
@@ -1653,7 +1653,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_aantal_inwoners</id>
-		<name>>CBS Wijken 2009 - Aantal inwoners</name>
+		<name>CBS Wijken 2009 - Aantal inwoners</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_aantal_inwoners</styles>
@@ -1661,7 +1661,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_aantal_inwoners</id>
-		<name>>CBS Buurten 2009 - Aantal inwoners</name>
+		<name>CBS Buurten 2009 - Aantal inwoners</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_aantal_inwoners</styles>
@@ -1670,7 +1670,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_ongehuwd</id>
-		<name>>CBS Gemeenten 2009 - Percentage ongehuwd</name>
+		<name>CBS Gemeenten 2009 - Percentage ongehuwd</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_ongehuwd</styles>
@@ -1678,7 +1678,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_ongehuwd</id>
-		<name>>CBS Wijken 2009 - Percentage ongehuwd</name>
+		<name>CBS Wijken 2009 - Percentage ongehuwd</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_ongehuwd</styles>
@@ -1686,7 +1686,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_ongehuwd</id>
-		<name>>CBS Buurten 2009 - Percentage ongehuwd</name>
+		<name>CBS Buurten 2009 - Percentage ongehuwd</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_ongehuwd</styles>
@@ -1695,7 +1695,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_gehuwd</id>
-		<name>>CBS Gemeenten 2009 - Percentage gehuwd</name>
+		<name>CBS Gemeenten 2009 - Percentage gehuwd</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_gehuwd</styles>
@@ -1703,7 +1703,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_gehuwd</id>
-		<name>>CBS Wijken 2009 - Percentage gehuwd</name>
+		<name>CBS Wijken 2009 - Percentage gehuwd</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_gehuwd</styles>
@@ -1711,7 +1711,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_gehuwd</id>
-		<name>>CBS Buurten 2009 - Percentage gehuwd</name>
+		<name>CBS Buurten 2009 - Percentage gehuwd</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_gehuwd</styles>
@@ -1720,7 +1720,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_gescheid</id>
-		<name>>CBS Gemeenten 2009 - Percentage gescheiden</name>
+		<name>CBS Gemeenten 2009 - Percentage gescheiden</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_gescheid</styles>
@@ -1728,7 +1728,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_gescheid</id>
-		<name>>CBS Wijken 2009 - Percentage gescheiden</name>
+		<name>CBS Wijken 2009 - Percentage gescheiden</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_gescheid</styles>
@@ -1736,7 +1736,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_gescheid</id>
-		<name>>CBS Buurten 2009 - Percentage gescheiden</name>
+		<name>CBS Buurten 2009 - Percentage gescheiden</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_gescheid</styles>
@@ -1745,7 +1745,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_verweduwd</id>
-		<name>>CBS Gemeenten 2009 - Percentage verweduwd</name>
+		<name>CBS Gemeenten 2009 - Percentage verweduwd</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_verweduwd</styles>
@@ -1753,7 +1753,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_verweduwd</id>
-		<name>>CBS Wijken 2009 - Percentage verweduwd</name>
+		<name>CBS Wijken 2009 - Percentage verweduwd</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_verweduwd</styles>
@@ -1761,7 +1761,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_verweduwd</id>
-		<name>>CBS Buurten 2009 - Percentage verweduwd</name>
+		<name>CBS Buurten 2009 - Percentage verweduwd</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_verweduwd</styles>
@@ -1770,7 +1770,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Gemeenten 2009 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Gemeenten 2009 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -1778,7 +1778,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Wijken 2009 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Wijken 2009 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -1786,7 +1786,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Buurten 2009 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Buurten 2009 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -1795,7 +1795,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_aantal_huishoudens</id>
-		<name>>CBS Gemeenten 2009 - Aantal huishoudens</name>
+		<name>CBS Gemeenten 2009 - Aantal huishoudens</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_aantal_huishoudens</styles>
@@ -1803,7 +1803,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_aantal_huishoudens</id>
-		<name>>CBS Wijken 2009 - Aantal huishoudens</name>
+		<name>CBS Wijken 2009 - Aantal huishoudens</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_aantal_huishoudens</styles>
@@ -1811,7 +1811,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_aantal_huishoudens</id>
-		<name>>CBS Buurten 2009 - Aantal huishoudens</name>
+		<name>CBS Buurten 2009 - Aantal huishoudens</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_aantal_huishoudens</styles>
@@ -1820,7 +1820,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Gemeenten 2009 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Gemeenten 2009 - Percentage eenpersoonshuishoudens</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_eenpersoonshuishoudens</styles>
@@ -1828,7 +1828,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Wijken 2009 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Wijken 2009 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_eenpersoonshuishoudens</styles>
@@ -1836,7 +1836,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Buurten 2009 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Buurten 2009 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_eenpersoonshuishoudens</styles>
@@ -1845,7 +1845,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Gemeenten 2009 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Gemeenten 2009 - Percentage huishoudens zonder kinderen</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_zonder_kinderen</styles>
@@ -1853,7 +1853,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Wijken 2009 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Wijken 2009 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_zonder_kinderen</styles>
@@ -1861,7 +1861,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Buurten 2009 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Buurten 2009 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_zonder_kinderen</styles>
@@ -1870,7 +1870,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Gemeenten 2009 - Percentage huishoudens met kinderen</name>
+		<name>CBS Gemeenten 2009 - Percentage huishoudens met kinderen</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_met_kinderen</styles>
@@ -1878,7 +1878,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Wijken 2009 - Percentage huishoudens met kinderen</name>
+		<name>CBS Wijken 2009 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_met_kinderen</styles>
@@ -1886,7 +1886,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Buurten 2009 - Percentage huishoudens met kinderen</name>
+		<name>CBS Buurten 2009 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_met_kinderen</styles>
@@ -1895,7 +1895,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Gemeenten 2009 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Gemeenten 2009 - Gemiddelde huishoudsgrootte</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_gemiddelde_huishoudsgrootte</styles>
@@ -1903,7 +1903,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Wijken 2009 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Wijken 2009 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_gemiddelde_huishoudsgrootte</styles>
@@ -1911,7 +1911,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Buurten 2009 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Buurten 2009 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_gemiddelde_huishoudsgrootte</styles>
@@ -1920,7 +1920,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2009 - Percentage westerse allochtonen</name>
+		<name>CBS Gemeenten 2009 - Percentage westerse allochtonen</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_westerse_allochtonen</styles>
@@ -1928,7 +1928,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_westerse_allochtonen</id>
-		<name>>CBS Wijken 2009 - Percentage westerse allochtonen</name>
+		<name>CBS Wijken 2009 - Percentage westerse allochtonen</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_westerse_allochtonen</styles>
@@ -1936,7 +1936,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_westerse_allochtonen</id>
-		<name>>CBS Buurten 2009 - Percentage westerse allochtonen</name>
+		<name>CBS Buurten 2009 - Percentage westerse allochtonen</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_westerse_allochtonen</styles>
@@ -1945,7 +1945,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2009 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Gemeenten 2009 - Percentage niet-westerse allochtonen</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_niet_westerse_allochtonen</styles>
@@ -1953,7 +1953,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Wijken 2009 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Wijken 2009 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_niet_westerse_allochtonen</styles>
@@ -1961,7 +1961,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Buurten 2009 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Buurten 2009 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_niet_westerse_allochtonen</styles>
@@ -1970,7 +1970,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_gemiddelde_woningwaarde</id>
-		<name>>CBS Gemeenten 2009 - Gemiddelde woningwaarde</name>
+		<name>CBS Gemeenten 2009 - Gemiddelde woningwaarde</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_gemiddelde_woningwaarde</styles>
@@ -1978,7 +1978,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_gemiddelde_woningwaarde</id>
-		<name>>CBS Wijken 2009 - Gemiddelde woningwaarde</name>
+		<name>CBS Wijken 2009 - Gemiddelde woningwaarde</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_gemiddelde_woningwaarde</styles>
@@ -1986,7 +1986,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_gemiddelde_woningwaarde</id>
-		<name>>CBS Buurten 2009 - Gemiddelde woningwaarde</name>
+		<name>CBS Buurten 2009 - Gemiddelde woningwaarde</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_gemiddelde_woningwaarde</styles>
@@ -1995,7 +1995,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Gemeenten 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Gemeenten 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -2003,7 +2003,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Wijken 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Wijken 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -2011,7 +2011,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Buurten 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Buurten 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -2020,7 +2020,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_personenautos_per_huishouden</id>
-		<name>>CBS Gemeenten 2009 - Personenautos per huishouden</name>
+		<name>CBS Gemeenten 2009 - Personenautos per huishouden</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_personenautos_per_huishouden</styles>
@@ -2028,7 +2028,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_personenautos_per_huishouden</id>
-		<name>>CBS Wijken 2009 - Personenautos per huishouden</name>
+		<name>CBS Wijken 2009 - Personenautos per huishouden</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_personenautos_per_huishouden</styles>
@@ -2036,7 +2036,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_personenautos_per_huishouden</id>
-		<name>>CBS Buurten 2009 - Personenautos per huishouden</name>
+		<name>CBS Buurten 2009 - Personenautos per huishouden</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_personenautos_per_huishouden</styles>
@@ -2045,7 +2045,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_personenautos_per_km2</id>
-		<name>>CBS Gemeenten 2009 - Personenautos per km2</name>
+		<name>CBS Gemeenten 2009 - Personenautos per km2</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_personenautos_per_km2</styles>
@@ -2053,7 +2053,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_personenautos_per_km2</id>
-		<name>>CBS Wijken 2009 - Personenautos per km2</name>
+		<name>CBS Wijken 2009 - Personenautos per km2</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_personenautos_per_km2</styles>
@@ -2061,7 +2061,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_personenautos_per_km2</id>
-		<name>>CBS Buurten 2009 - Personenautos per km2</name>
+		<name>CBS Buurten 2009 - Personenautos per km2</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_personenautos_per_km2</styles>
@@ -2070,7 +2070,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Gemeenten 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Gemeenten 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -2078,7 +2078,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Wijken 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Wijken 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -2086,7 +2086,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Buurten 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Buurten 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -2095,7 +2095,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_basisonderwijs_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2009 - Basisonderwijs gemiddelde afstand in km</name>
+		<name>CBS Gemeenten 2009 - Basisonderwijs gemiddelde afstand in km</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_basisonderwijs_gemiddelde_afstand_in_km</styles>
@@ -2103,7 +2103,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_basisonderwijs_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2009 - Basisonderwijs gemiddelde afstand in km</name>
+		<name>CBS Wijken 2009 - Basisonderwijs gemiddelde afstand in km</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_basisonderwijs_gemiddelde_afstand_in_km</styles>
@@ -2111,7 +2111,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_basisonderwijs_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2009 - Basisonderwijs gemiddelde afstand in km</name>
+		<name>CBS Buurten 2009 - Basisonderwijs gemiddelde afstand in km</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_basisonderwijs_gemiddelde_afstand_in_km</styles>
@@ -2120,7 +2120,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2009 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Gemeenten 2009 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -2128,7 +2128,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2009 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Wijken 2009 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -2136,7 +2136,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2009 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Buurten 2009 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -2145,7 +2145,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Gemeenten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</styles>
@@ -2153,7 +2153,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2009 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Wijken 2009 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_restaurant_gemiddelde_afstand_in_km</styles>
@@ -2161,7 +2161,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Buurten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_restaurant_gemiddelde_afstand_in_km</styles>
@@ -2902,7 +2902,7 @@
 	<!-- GEMEENTE/WIJK/BUURT 2011 -->
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</id>
-		<name>>CBS Gemeenten 2011 - Aantal inwoners</name>
+		<name>CBS Gemeenten 2011 - Aantal inwoners</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</styles>
@@ -2910,7 +2910,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_aantal_inwoners</id>
-		<name>>CBS Wijken 2011 - Aantal inwoners</name>
+		<name>CBS Wijken 2011 - Aantal inwoners</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_aantal_inwoners</styles>
@@ -2918,7 +2918,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_aantal_inwoners</id>
-		<name>>CBS Buurten 2011 - Aantal inwoners</name>
+		<name>CBS Buurten 2011 - Aantal inwoners</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_aantal_inwoners</styles>
@@ -2927,7 +2927,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_ongehuwd</id>
-		<name>>CBS Gemeenten 2011 - Percentage ongehuwd</name>
+		<name>CBS Gemeenten 2011 - Percentage ongehuwd</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_ongehuwd</styles>
@@ -2935,7 +2935,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_ongehuwd</id>
-		<name>>CBS Wijken 2011 - Percentage ongehuwd</name>
+		<name>CBS Wijken 2011 - Percentage ongehuwd</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_ongehuwd</styles>
@@ -2943,7 +2943,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_ongehuwd</id>
-		<name>>CBS Buurten 2011 - Percentage ongehuwd</name>
+		<name>CBS Buurten 2011 - Percentage ongehuwd</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_ongehuwd</styles>
@@ -2952,7 +2952,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_gehuwd</id>
-		<name>>CBS Gemeenten 2011 - Percentage gehuwd</name>
+		<name>CBS Gemeenten 2011 - Percentage gehuwd</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_gehuwd</styles>
@@ -2960,7 +2960,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_gehuwd</id>
-		<name>>CBS Wijken 2011 - Percentage gehuwd</name>
+		<name>CBS Wijken 2011 - Percentage gehuwd</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_gehuwd</styles>
@@ -2968,7 +2968,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_gehuwd</id>
-		<name>>CBS Buurten 2011 - Percentage gehuwd</name>
+		<name>CBS Buurten 2011 - Percentage gehuwd</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_gehuwd</styles>
@@ -2977,7 +2977,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_gescheid</id>
-		<name>>CBS Gemeenten 2011 - Percentage gescheiden</name>
+		<name>CBS Gemeenten 2011 - Percentage gescheiden</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_gescheid</styles>
@@ -2985,7 +2985,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_gescheid</id>
-		<name>>CBS Wijken 2011 - Percentage gescheiden</name>
+		<name>CBS Wijken 2011 - Percentage gescheiden</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_gescheid</styles>
@@ -2993,7 +2993,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_gescheid</id>
-		<name>>CBS Buurten 2011 - Percentage gescheiden</name>
+		<name>CBS Buurten 2011 - Percentage gescheiden</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_gescheid</styles>
@@ -3002,7 +3002,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_verweduwd</id>
-		<name>>CBS Gemeenten 2011 - Percentage verweduwd</name>
+		<name>CBS Gemeenten 2011 - Percentage verweduwd</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_verweduwd</styles>
@@ -3010,7 +3010,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_verweduwd</id>
-		<name>>CBS Wijken 2011 - Percentage verweduwd</name>
+		<name>CBS Wijken 2011 - Percentage verweduwd</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_verweduwd</styles>
@@ -3018,7 +3018,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_verweduwd</id>
-		<name>>CBS Buurten 2011 - Percentage verweduwd</name>
+		<name>CBS Buurten 2011 - Percentage verweduwd</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_verweduwd</styles>
@@ -3027,7 +3027,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Gemeenten 2011 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Gemeenten 2011 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -3035,7 +3035,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Wijken 2011 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Wijken 2011 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -3043,7 +3043,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Buurten 2011 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Buurten 2011 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -3052,7 +3052,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_aantal_huishoudens</id>
-		<name>>CBS Gemeenten 2011 - Aantal huishoudens</name>
+		<name>CBS Gemeenten 2011 - Aantal huishoudens</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_aantal_huishoudens</styles>
@@ -3060,7 +3060,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_aantal_huishoudens</id>
-		<name>>CBS Wijken 2011 - Aantal huishoudens</name>
+		<name>CBS Wijken 2011 - Aantal huishoudens</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_aantal_huishoudens</styles>
@@ -3068,7 +3068,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_aantal_huishoudens</id>
-		<name>>CBS Buurten 2011 - Aantal huishoudens</name>
+		<name>CBS Buurten 2011 - Aantal huishoudens</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_aantal_huishoudens</styles>
@@ -3077,7 +3077,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Gemeenten 2011 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Gemeenten 2011 - Percentage eenpersoonshuishoudens</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_eenpersoonshuishoudens</styles>
@@ -3085,7 +3085,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Wijken 2011 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Wijken 2011 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_eenpersoonshuishoudens</styles>
@@ -3093,7 +3093,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Buurten 2011 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Buurten 2011 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_eenpersoonshuishoudens</styles>
@@ -3102,7 +3102,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Gemeenten 2011 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Gemeenten 2011 - Percentage huishoudens zonder kinderen</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_zonder_kinderen</styles>
@@ -3110,7 +3110,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Wijken 2011 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Wijken 2011 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_zonder_kinderen</styles>
@@ -3118,7 +3118,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Buurten 2011 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Buurten 2011 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_zonder_kinderen</styles>
@@ -3127,7 +3127,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Gemeenten 2011 - Percentage huishoudens met kinderen</name>
+		<name>CBS Gemeenten 2011 - Percentage huishoudens met kinderen</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_met_kinderen</styles>
@@ -3135,7 +3135,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Wijken 2011 - Percentage huishoudens met kinderen</name>
+		<name>CBS Wijken 2011 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_met_kinderen</styles>
@@ -3143,7 +3143,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Buurten 2011 - Percentage huishoudens met kinderen</name>
+		<name>CBS Buurten 2011 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_met_kinderen</styles>
@@ -3152,7 +3152,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Gemeenten 2011 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Gemeenten 2011 - Gemiddelde huishoudsgrootte</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_gemiddelde_huishoudsgrootte</styles>
@@ -3160,7 +3160,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Wijken 2011 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Wijken 2011 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_gemiddelde_huishoudsgrootte</styles>
@@ -3168,7 +3168,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Buurten 2011 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Buurten 2011 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_gemiddelde_huishoudsgrootte</styles>
@@ -3177,7 +3177,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2011 - Percentage westerse allochtonen</name>
+		<name>CBS Gemeenten 2011 - Percentage westerse allochtonen</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_westerse_allochtonen</styles>
@@ -3185,7 +3185,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_westerse_allochtonen</id>
-		<name>>CBS Wijken 2011 - Percentage westerse allochtonen</name>
+		<name>CBS Wijken 2011 - Percentage westerse allochtonen</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_westerse_allochtonen</styles>
@@ -3193,7 +3193,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_westerse_allochtonen</id>
-		<name>>CBS Buurten 2011 - Percentage westerse allochtonen</name>
+		<name>CBS Buurten 2011 - Percentage westerse allochtonen</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_westerse_allochtonen</styles>
@@ -3202,7 +3202,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2011 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Gemeenten 2011 - Percentage niet-westerse allochtonen</name>
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_percentage_niet_westerse_allochtonen</styles>
@@ -3210,7 +3210,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Wijken 2011 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Wijken 2011 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_wijken_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_wijken2011_percentage_niet_westerse_allochtonen</styles>
@@ -3218,7 +3218,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Buurten 2011 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Buurten 2011 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_buurten_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen</styles>
@@ -3228,7 +3228,7 @@
 	<!-- GEMEENTEN/WIJKEN/BUURTEN 2010 -->	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_omgevingsadressendichtheid</id>
-		<name>>CBS Gemeenten 2010 - Omgevingsadressendichtheid</name>
+		<name>CBS Gemeenten 2010 - Omgevingsadressendichtheid</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_omgevingsadressendichtheid</styles>
@@ -3236,7 +3236,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_omgevingsadressendichtheid</id>
-		<name>>CBS Wijken 2010 - Omgevingsadressendichtheid</name>
+		<name>CBS Wijken 2010 - Omgevingsadressendichtheid</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_omgevingsadressendichtheid</styles>
@@ -3244,7 +3244,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_omgevingsadressendichtheid</id>
-		<name>>CBS Buurten 2010 - Omgevingsadressendichtheid</name>
+		<name>CBS Buurten 2010 - Omgevingsadressendichtheid</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_omgevingsadressendichtheid</styles>
@@ -3253,7 +3253,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_aantal_inwoners</id>
-		<name>>CBS Gemeenten 2010 - Aantal inwoners</name>
+		<name>CBS Gemeenten 2010 - Aantal inwoners</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_aantal_inwoners</styles>
@@ -3261,7 +3261,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_aantal_inwoners</id>
-		<name>>CBS Wijken 2010 - Aantal inwoners</name>
+		<name>CBS Wijken 2010 - Aantal inwoners</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_aantal_inwoners</styles>
@@ -3269,7 +3269,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_aantal_inwoners</id>
-		<name>>CBS Buurten 2010 - Aantal inwoners</name>
+		<name>CBS Buurten 2010 - Aantal inwoners</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_aantal_inwoners</styles>
@@ -3278,7 +3278,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_ongehuwd</id>
-		<name>>CBS Gemeenten 2010 - Percentage ongehuwd</name>
+		<name>CBS Gemeenten 2010 - Percentage ongehuwd</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_ongehuwd</styles>
@@ -3286,7 +3286,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_ongehuwd</id>
-		<name>>CBS Wijken 2010 - Percentage ongehuwd</name>
+		<name>CBS Wijken 2010 - Percentage ongehuwd</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_ongehuwd</styles>
@@ -3294,7 +3294,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_ongehuwd</id>
-		<name>>CBS Buurten 2010 - Percentage ongehuwd</name>
+		<name>CBS Buurten 2010 - Percentage ongehuwd</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_ongehuwd</styles>
@@ -3303,7 +3303,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_gehuwd</id>
-		<name>>CBS Gemeenten 2010 - Percentage gehuwd</name>
+		<name>CBS Gemeenten 2010 - Percentage gehuwd</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_gehuwd</styles>
@@ -3311,7 +3311,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_gehuwd</id>
-		<name>>CBS Wijken 2010 - Percentage gehuwd</name>
+		<name>CBS Wijken 2010 - Percentage gehuwd</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_gehuwd</styles>
@@ -3319,7 +3319,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_gehuwd</id>
-		<name>>CBS Buurten 2010 - Percentage gehuwd</name>
+		<name>CBS Buurten 2010 - Percentage gehuwd</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_gehuwd</styles>
@@ -3328,7 +3328,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_gescheid</id>
-		<name>>CBS Gemeenten 2010 - Percentage gescheiden</name>
+		<name>CBS Gemeenten 2010 - Percentage gescheiden</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_gescheid</styles>
@@ -3336,7 +3336,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_gescheid</id>
-		<name>>CBS Wijken 2010 - Percentage gescheiden</name>
+		<name>CBS Wijken 2010 - Percentage gescheiden</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_gescheid</styles>
@@ -3344,7 +3344,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_gescheid</id>
-		<name>>CBS Buurten 2010 - Percentage gescheiden</name>
+		<name>CBS Buurten 2010 - Percentage gescheiden</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_gescheid</styles>
@@ -3353,7 +3353,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_verweduwd</id>
-		<name>>CBS Gemeenten 2010 - Percentage verweduwd</name>
+		<name>CBS Gemeenten 2010 - Percentage verweduwd</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_verweduwd</styles>
@@ -3361,7 +3361,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_verweduwd</id>
-		<name>>CBS Wijken 2010 - Percentage verweduwd</name>
+		<name>CBS Wijken 2010 - Percentage verweduwd</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_verweduwd</styles>
@@ -3369,7 +3369,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_verweduwd</id>
-		<name>>CBS Buurten 2010 - Percentage verweduwd</name>
+		<name>CBS Buurten 2010 - Percentage verweduwd</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_verweduwd</styles>
@@ -3378,7 +3378,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Gemeenten 2010 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Gemeenten 2010 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -3386,7 +3386,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Wijken 2010 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Wijken 2010 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -3394,7 +3394,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Buurten 2010 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Buurten 2010 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -3403,7 +3403,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_aantal_huishoudens</id>
-		<name>>CBS Gemeenten 2010 - Aantal huishoudens</name>
+		<name>CBS Gemeenten 2010 - Aantal huishoudens</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_aantal_huishoudens</styles>
@@ -3411,7 +3411,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_aantal_huishoudens</id>
-		<name>>CBS Wijken 2010 - Aantal huishoudens</name>
+		<name>CBS Wijken 2010 - Aantal huishoudens</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_aantal_huishoudens</styles>
@@ -3419,7 +3419,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_aantal_huishoudens</id>
-		<name>>CBS Buurten 2010 - Aantal huishoudens</name>
+		<name>CBS Buurten 2010 - Aantal huishoudens</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_aantal_huishoudens</styles>
@@ -3428,7 +3428,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Gemeenten 2010 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Gemeenten 2010 - Percentage eenpersoonshuishoudens</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_eenpersoonshuishoudens</styles>
@@ -3436,7 +3436,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Wijken 2010 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Wijken 2010 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_eenpersoonshuishoudens</styles>
@@ -3444,7 +3444,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Buurten 2010 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Buurten 2010 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_eenpersoonshuishoudens</styles>
@@ -3453,7 +3453,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Gemeenten 2010 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Gemeenten 2010 - Percentage huishoudens zonder kinderen</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_zonder_kinderen</styles>
@@ -3461,7 +3461,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Wijken 2010 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Wijken 2010 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_zonder_kinderen</styles>
@@ -3469,7 +3469,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Buurten 2010 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Buurten 2010 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_zonder_kinderen</styles>
@@ -3478,7 +3478,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Gemeenten 2010 - Percentage huishoudens met kinderen</name>
+		<name>CBS Gemeenten 2010 - Percentage huishoudens met kinderen</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_met_kinderen</styles>
@@ -3486,7 +3486,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Wijken 2010 - Percentage huishoudens met kinderen</name>
+		<name>CBS Wijken 2010 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_met_kinderen</styles>
@@ -3494,7 +3494,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Buurten 2010 - Percentage huishoudens met kinderen</name>
+		<name>CBS Buurten 2010 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_met_kinderen</styles>
@@ -3503,7 +3503,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Gemeenten 2010 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Gemeenten 2010 - Gemiddelde huishoudsgrootte</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_gemiddelde_huishoudsgrootte</styles>
@@ -3511,7 +3511,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Wijken 2010 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Wijken 2010 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_gemiddelde_huishoudsgrootte</styles>
@@ -3519,7 +3519,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Buurten 2010 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Buurten 2010 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_gemiddelde_huishoudsgrootte</styles>
@@ -3528,7 +3528,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2010 - Percentage westerse allochtonen</name>
+		<name>CBS Gemeenten 2010 - Percentage westerse allochtonen</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_westerse_allochtonen</styles>
@@ -3536,7 +3536,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_westerse_allochtonen</id>
-		<name>>CBS Wijken 2010 - Percentage westerse allochtonen</name>
+		<name>CBS Wijken 2010 - Percentage westerse allochtonen</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_westerse_allochtonen</styles>
@@ -3544,7 +3544,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_westerse_allochtonen</id>
-		<name>>CBS Buurten 2010 - Percentage westerse allochtonen</name>
+		<name>CBS Buurten 2010 - Percentage westerse allochtonen</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_westerse_allochtonen</styles>
@@ -3553,7 +3553,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2010 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Gemeenten 2010 - Percentage niet-westerse allochtonen</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_niet_westerse_allochtonen</styles>
@@ -3561,7 +3561,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Wijken 2010 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Wijken 2010 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_niet_westerse_allochtonen</styles>
@@ -3569,7 +3569,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Buurten 2010 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Buurten 2010 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_niet_westerse_allochtonen</styles>
@@ -3578,7 +3578,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_gemiddelde_woningwaarde</id>
-		<name>>CBS Gemeenten 2010 - Gemiddelde woningwaarde</name>
+		<name>CBS Gemeenten 2010 - Gemiddelde woningwaarde</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_gemiddelde_woningwaarde</styles>
@@ -3586,7 +3586,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_gemiddelde_woningwaarde</id>
-		<name>>CBS Wijken 2010 - Gemiddelde woningwaarde</name>
+		<name>CBS Wijken 2010 - Gemiddelde woningwaarde</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_gemiddelde_woningwaarde</styles>
@@ -3594,7 +3594,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_gemiddelde_woningwaarde</id>
-		<name>>CBS Buurten 2010 - Gemiddelde woningwaarde</name>
+		<name>CBS Buurten 2010 - Gemiddelde woningwaarde</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_gemiddelde_woningwaarde</styles>
@@ -3603,7 +3603,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Gemeenten 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Gemeenten 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -3611,7 +3611,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Wijken 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Wijken 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -3619,7 +3619,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Buurten 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Buurten 2010 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -3628,7 +3628,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_personenautos_per_huishouden</id>
-		<name>>CBS Gemeenten 2010 - Personenautos per huishouden</name>
+		<name>CBS Gemeenten 2010 - Personenautos per huishouden</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_personenautos_per_huishouden</styles>
@@ -3636,7 +3636,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_personenautos_per_huishouden</id>
-		<name>>CBS Wijken 2010 - Personenautos per huishouden</name>
+		<name>CBS Wijken 2010 - Personenautos per huishouden</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_personenautos_per_huishouden</styles>
@@ -3644,7 +3644,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_personenautos_per_huishouden</id>
-		<name>>CBS Buurten 2010 - Personenautos per huishouden</name>
+		<name>CBS Buurten 2010 - Personenautos per huishouden</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_personenautos_per_huishouden</styles>
@@ -3653,7 +3653,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_personenautos_per_km2</id>
-		<name>>CBS Gemeenten 2010 - Personenautos per km2</name>
+		<name>CBS Gemeenten 2010 - Personenautos per km2</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_personenautos_per_km2</styles>
@@ -3661,7 +3661,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_personenautos_per_km2</id>
-		<name>>CBS Wijken 2010 - Personenautos per km2</name>
+		<name>CBS Wijken 2010 - Personenautos per km2</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_personenautos_per_km2</styles>
@@ -3669,7 +3669,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_personenautos_per_km2</id>
-		<name>>CBS Buurten 2010 - Personenautos per km2</name>
+		<name>CBS Buurten 2010 - Personenautos per km2</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_personenautos_per_km2</styles>
@@ -3678,7 +3678,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_huisartsenpraktijk_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
+		<name>CBS Gemeenten 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_huisartsenpraktijk_gemiddelde_afstand_in_km</styles>
@@ -3686,7 +3686,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_huisartsenpraktijk_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
+		<name>CBS Wijken 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_huisartsenpraktijk_gemiddelde_afstand_in_km</styles>
@@ -3694,7 +3694,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_huisartsenpraktijk_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
+		<name>CBS Buurten 2010 - Huisartsenpraktijk gemiddelde afstand in km</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_huisartsenpraktijk_gemiddelde_afstand_in_km</styles>
@@ -3703,7 +3703,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Gemeenten 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Gemeenten 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -3711,7 +3711,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Wijken 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Wijken 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -3719,7 +3719,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Buurten 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Buurten 2010 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -3728,7 +3728,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2010 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Gemeenten 2010 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -3736,7 +3736,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2010 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Wijken 2010 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -3744,7 +3744,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2010 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Buurten 2010 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -3753,7 +3753,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2010 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Gemeenten 2010 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>gemeenten2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_gemeenten2010_restaurant_gemiddelde_afstand_in_km</styles>
@@ -3761,7 +3761,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_wijken2010_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2010 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Wijken 2010 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>cbs_wijken_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_wijken2010_restaurant_gemiddelde_afstand_in_km</styles>
@@ -3769,7 +3769,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_buurten2010_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2010 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Buurten 2010 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>cbs_buurten_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten2010_thema_buurten2010_restaurant_gemiddelde_afstand_in_km</styles>
@@ -3779,7 +3779,7 @@
 	<!-- GEMEENTEN/WIJKEN/BUURTEN 2009 -->
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_omgevingsadressendichtheid</id>
-		<name>>CBS Gemeenten 2009 - Omgevingsadressendichtheid</name>
+		<name>CBS Gemeenten 2009 - Omgevingsadressendichtheid</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_omgevingsadressendichtheid</styles>
@@ -3787,7 +3787,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_omgevingsadressendichtheid</id>
-		<name>>CBS Wijken 2009 - Omgevingsadressendichtheid</name>
+		<name>CBS Wijken 2009 - Omgevingsadressendichtheid</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_omgevingsadressendichtheid</styles>
@@ -3795,7 +3795,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_omgevingsadressendichtheid</id>
-		<name>>CBS Buurten 2009 - Omgevingsadressendichtheid</name>
+		<name>CBS Buurten 2009 - Omgevingsadressendichtheid</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_omgevingsadressendichtheid</styles>
@@ -3804,7 +3804,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_aantal_inwoners</id>
-		<name>>CBS Gemeenten 2009 - Aantal inwoners</name>
+		<name>CBS Gemeenten 2009 - Aantal inwoners</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_aantal_inwoners</styles>
@@ -3812,7 +3812,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_aantal_inwoners</id>
-		<name>>CBS Wijken 2009 - Aantal inwoners</name>
+		<name>CBS Wijken 2009 - Aantal inwoners</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_aantal_inwoners</styles>
@@ -3820,7 +3820,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_aantal_inwoners</id>
-		<name>>CBS Buurten 2009 - Aantal inwoners</name>
+		<name>CBS Buurten 2009 - Aantal inwoners</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_aantal_inwoners</styles>
@@ -3829,7 +3829,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_ongehuwd</id>
-		<name>>CBS Gemeenten 2009 - Percentage ongehuwd</name>
+		<name>CBS Gemeenten 2009 - Percentage ongehuwd</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_ongehuwd</styles>
@@ -3837,7 +3837,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_ongehuwd</id>
-		<name>>CBS Wijken 2009 - Percentage ongehuwd</name>
+		<name>CBS Wijken 2009 - Percentage ongehuwd</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_ongehuwd</styles>
@@ -3845,7 +3845,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_ongehuwd</id>
-		<name>>CBS Buurten 2009 - Percentage ongehuwd</name>
+		<name>CBS Buurten 2009 - Percentage ongehuwd</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_ongehuwd</styles>
@@ -3854,7 +3854,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_gehuwd</id>
-		<name>>CBS Gemeenten 2009 - Percentage gehuwd</name>
+		<name>CBS Gemeenten 2009 - Percentage gehuwd</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_gehuwd</styles>
@@ -3862,7 +3862,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_gehuwd</id>
-		<name>>CBS Wijken 2009 - Percentage gehuwd</name>
+		<name>CBS Wijken 2009 - Percentage gehuwd</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_gehuwd</styles>
@@ -3870,7 +3870,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_gehuwd</id>
-		<name>>CBS Buurten 2009 - Percentage gehuwd</name>
+		<name>CBS Buurten 2009 - Percentage gehuwd</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_gehuwd</styles>
@@ -3879,7 +3879,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_gescheid</id>
-		<name>>CBS Gemeenten 2009 - Percentage gescheiden</name>
+		<name>CBS Gemeenten 2009 - Percentage gescheiden</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_gescheid</styles>
@@ -3887,7 +3887,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_gescheid</id>
-		<name>>CBS Wijken 2009 - Percentage gescheiden</name>
+		<name>CBS Wijken 2009 - Percentage gescheiden</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_gescheid</styles>
@@ -3895,7 +3895,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_gescheid</id>
-		<name>>CBS Buurten 2009 - Percentage gescheiden</name>
+		<name>CBS Buurten 2009 - Percentage gescheiden</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_gescheid</styles>
@@ -3904,7 +3904,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_verweduwd</id>
-		<name>>CBS Gemeenten 2009 - Percentage verweduwd</name>
+		<name>CBS Gemeenten 2009 - Percentage verweduwd</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_verweduwd</styles>
@@ -3912,7 +3912,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_verweduwd</id>
-		<name>>CBS Wijken 2009 - Percentage verweduwd</name>
+		<name>CBS Wijken 2009 - Percentage verweduwd</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_verweduwd</styles>
@@ -3920,7 +3920,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_verweduwd</id>
-		<name>>CBS Buurten 2009 - Percentage verweduwd</name>
+		<name>CBS Buurten 2009 - Percentage verweduwd</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_verweduwd</styles>
@@ -3929,7 +3929,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Gemeenten 2009 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Gemeenten 2009 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -3937,7 +3937,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Wijken 2009 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Wijken 2009 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -3945,7 +3945,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_bevolkingsdichtheid_inwoners_per_km2</id>
-		<name>>CBS Buurten 2009 - Bevolkingsdichtheid inwoners per km2</name>
+		<name>CBS Buurten 2009 - Bevolkingsdichtheid inwoners per km2</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_bevolkingsdichtheid_inwoners_per_km2</styles>
@@ -3954,7 +3954,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_aantal_huishoudens</id>
-		<name>>CBS Gemeenten 2009 - Aantal huishoudens</name>
+		<name>CBS Gemeenten 2009 - Aantal huishoudens</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_aantal_huishoudens</styles>
@@ -3962,7 +3962,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_aantal_huishoudens</id>
-		<name>>CBS Wijken 2009 - Aantal huishoudens</name>
+		<name>CBS Wijken 2009 - Aantal huishoudens</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_aantal_huishoudens</styles>
@@ -3970,7 +3970,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_aantal_huishoudens</id>
-		<name>>CBS Buurten 2009 - Aantal huishoudens</name>
+		<name>CBS Buurten 2009 - Aantal huishoudens</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_aantal_huishoudens</styles>
@@ -3979,7 +3979,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Gemeenten 2009 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Gemeenten 2009 - Percentage eenpersoonshuishoudens</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_eenpersoonshuishoudens</styles>
@@ -3987,7 +3987,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Wijken 2009 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Wijken 2009 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_eenpersoonshuishoudens</styles>
@@ -3995,7 +3995,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_eenpersoonshuishoudens</id>
-		<name>>CBS Buurten 2009 - Percentage eenpersoonshuishoudens</name>
+		<name>CBS Buurten 2009 - Percentage eenpersoonshuishoudens</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_eenpersoonshuishoudens</styles>
@@ -4004,7 +4004,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Gemeenten 2009 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Gemeenten 2009 - Percentage huishoudens zonder kinderen</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_zonder_kinderen</styles>
@@ -4012,7 +4012,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Wijken 2009 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Wijken 2009 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_zonder_kinderen</styles>
@@ -4020,7 +4020,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_zonder_kinderen</id>
-		<name>>CBS Buurten 2009 - Percentage huishoudens zonder kinderen</name>
+		<name>CBS Buurten 2009 - Percentage huishoudens zonder kinderen</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_zonder_kinderen</styles>
@@ -4029,7 +4029,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Gemeenten 2009 - Percentage huishoudens met kinderen</name>
+		<name>CBS Gemeenten 2009 - Percentage huishoudens met kinderen</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_met_kinderen</styles>
@@ -4037,7 +4037,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Wijken 2009 - Percentage huishoudens met kinderen</name>
+		<name>CBS Wijken 2009 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_met_kinderen</styles>
@@ -4045,7 +4045,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_met_kinderen</id>
-		<name>>CBS Buurten 2009 - Percentage huishoudens met kinderen</name>
+		<name>CBS Buurten 2009 - Percentage huishoudens met kinderen</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_met_kinderen</styles>
@@ -4054,7 +4054,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Gemeenten 2009 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Gemeenten 2009 - Gemiddelde huishoudsgrootte</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_gemiddelde_huishoudsgrootte</styles>
@@ -4062,7 +4062,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Wijken 2009 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Wijken 2009 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_gemiddelde_huishoudsgrootte</styles>
@@ -4070,7 +4070,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_gemiddelde_huishoudsgrootte</id>
-		<name>>CBS Buurten 2009 - Gemiddelde huishoudsgrootte</name>
+		<name>CBS Buurten 2009 - Gemiddelde huishoudsgrootte</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_gemiddelde_huishoudsgrootte</styles>
@@ -4079,7 +4079,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2009 - Percentage westerse allochtonen</name>
+		<name>CBS Gemeenten 2009 - Percentage westerse allochtonen</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_westerse_allochtonen</styles>
@@ -4087,7 +4087,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_westerse_allochtonen</id>
-		<name>>CBS Wijken 2009 - Percentage westerse allochtonen</name>
+		<name>CBS Wijken 2009 - Percentage westerse allochtonen</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_westerse_allochtonen</styles>
@@ -4095,7 +4095,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_westerse_allochtonen</id>
-		<name>>CBS Buurten 2009 - Percentage westerse allochtonen</name>
+		<name>CBS Buurten 2009 - Percentage westerse allochtonen</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_westerse_allochtonen</styles>
@@ -4104,7 +4104,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Gemeenten 2009 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Gemeenten 2009 - Percentage niet-westerse allochtonen</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_niet_westerse_allochtonen</styles>
@@ -4112,7 +4112,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Wijken 2009 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Wijken 2009 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_niet_westerse_allochtonen</styles>
@@ -4120,7 +4120,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_niet_westerse_allochtonen</id>
-		<name>>CBS Buurten 2009 - Percentage niet-westerse allochtonen</name>
+		<name>CBS Buurten 2009 - Percentage niet-westerse allochtonen</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_niet_westerse_allochtonen</styles>
@@ -4129,7 +4129,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_gemiddelde_woningwaarde</id>
-		<name>>CBS Gemeenten 2009 - Gemiddelde woningwaarde</name>
+		<name>CBS Gemeenten 2009 - Gemiddelde woningwaarde</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_gemiddelde_woningwaarde</styles>
@@ -4137,7 +4137,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_gemiddelde_woningwaarde</id>
-		<name>>CBS Wijken 2009 - Gemiddelde woningwaarde</name>
+		<name>CBS Wijken 2009 - Gemiddelde woningwaarde</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_gemiddelde_woningwaarde</styles>
@@ -4145,7 +4145,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_gemiddelde_woningwaarde</id>
-		<name>>CBS Buurten 2009 - Gemiddelde woningwaarde</name>
+		<name>CBS Buurten 2009 - Gemiddelde woningwaarde</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_gemiddelde_woningwaarde</styles>
@@ -4154,7 +4154,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Gemeenten 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Gemeenten 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -4162,7 +4162,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Wijken 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Wijken 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -4170,7 +4170,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_percentage_algemene_bijstandsuitkeringen_relatief</id>
-		<name>>CBS Buurten 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
+		<name>CBS Buurten 2009 - Percentage algemene bijstandsuitkeringen relatief</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_percentage_algemene_bijstandsuitkeringen_relatief</styles>
@@ -4179,7 +4179,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_personenautos_per_huishouden</id>
-		<name>>CBS Gemeenten 2009 - Personenautos per huishouden</name>
+		<name>CBS Gemeenten 2009 - Personenautos per huishouden</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_personenautos_per_huishouden</styles>
@@ -4187,7 +4187,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_personenautos_per_huishouden</id>
-		<name>>CBS Wijken 2009 - Personenautos per huishouden</name>
+		<name>CBS Wijken 2009 - Personenautos per huishouden</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_personenautos_per_huishouden</styles>
@@ -4195,7 +4195,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_personenautos_per_huishouden</id>
-		<name>>CBS Buurten 2009 - Personenautos per huishouden</name>
+		<name>CBS Buurten 2009 - Personenautos per huishouden</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_personenautos_per_huishouden</styles>
@@ -4204,7 +4204,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_personenautos_per_km2</id>
-		<name>>CBS Gemeenten 2009 - Personenautos per km2</name>
+		<name>CBS Gemeenten 2009 - Personenautos per km2</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_personenautos_per_km2</styles>
@@ -4212,7 +4212,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_personenautos_per_km2</id>
-		<name>>CBS Wijken 2009 - Personenautos per km2</name>
+		<name>CBS Wijken 2009 - Personenautos per km2</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_personenautos_per_km2</styles>
@@ -4220,7 +4220,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_personenautos_per_km2</id>
-		<name>>CBS Buurten 2009 - Personenautos per km2</name>
+		<name>CBS Buurten 2009 - Personenautos per km2</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_personenautos_per_km2</styles>
@@ -4229,7 +4229,7 @@
 
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Gemeenten 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Gemeenten 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -4237,7 +4237,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Wijken 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Wijken 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -4245,7 +4245,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</id>
-		<name>>CBS Buurten 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
+		<name>CBS Buurten 2009 - Ziekenhuis excl buitenpolikliniek gem afst in km</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</styles>
@@ -4254,7 +4254,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_basisonderwijs_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2009 - Basisonderwijs gemiddelde afstand in km</name>
+		<name>CBS Gemeenten 2009 - Basisonderwijs gemiddelde afstand in km</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_basisonderwijs_gemiddelde_afstand_in_km</styles>
@@ -4262,7 +4262,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_basisonderwijs_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2009 - Basisonderwijs gemiddelde afstand in km</name>
+		<name>CBS Wijken 2009 - Basisonderwijs gemiddelde afstand in km</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_basisonderwijs_gemiddelde_afstand_in_km</styles>
@@ -4270,7 +4270,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_basisonderwijs_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2009 - Basisonderwijs gemiddelde afstand in km</name>
+		<name>CBS Buurten 2009 - Basisonderwijs gemiddelde afstand in km</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_basisonderwijs_gemiddelde_afstand_in_km</styles>
@@ -4279,7 +4279,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2009 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Gemeenten 2009 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -4287,7 +4287,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2009 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Wijken 2009 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -4295,7 +4295,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_grote_supermarkt_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2009 - Grote supermarkt gemiddelde afstand in km</name>
+		<name>CBS Buurten 2009 - Grote supermarkt gemiddelde afstand in km</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_grote_supermarkt_gemiddelde_afstand_in_km</styles>
@@ -4304,7 +4304,7 @@
 	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Gemeenten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>gemeenten2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</styles>
@@ -4312,7 +4312,7 @@
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_wijken2009_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Wijken 2009 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Wijken 2009 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>cbs_wijken_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_wijken2009_restaurant_gemiddelde_afstand_in_km</styles>
@@ -4320,7 +4320,7 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_buurten2009_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Buurten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Buurten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>cbs_buurten_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten2009_thema_buurten2009_restaurant_gemiddelde_afstand_in_km</styles>
@@ -4330,7 +4330,7 @@
 	<!-- Bevolkingskernen 2008 -->
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</id>
-		<name>>CBS Gemeenten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
+		<name>CBS Gemeenten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
 		<layers>cbsbevolkingskernen2008</layers>
 		<url>http://geodata.nationaalgeoregister.nl/bevolkingskernen2008/wms</url>
 		<styles>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</styles>
