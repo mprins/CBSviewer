@@ -1,19 +1,18 @@
+// opzoeken van de gevraagde kaart in de _layers, id's zitten in
+// AvailableLayers.xml
+var _defaultId = "wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners";
+
 /**
  * @fileoverview event handlers en elementen voor de pagina.
- */
+ */ 
 jQuery(document).ready(function() {
 	// create map
 	Viewer.init(config);
 
-	// opzoeken van de gevraagde kaart in de _layers, id's zitten in
-	// AvailableLayers.xml
-	//var _id = 'cbs_inwoners_2000_per_hectare';
-	var _id = 'wijkbuurt2010auto';
-
 	var maps = jQuery.grep(_layers, function(n, i) {
-		return n.id == _id;
+		return n.id == _defaultId;
 	});
-	// console.debug('opzoeken van ' + _id + ' in ', _layers, maps);
+	// console.debug('opzoeken van ' + _defaultId + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
 
 	$("#adres").keyup(function() {
@@ -24,7 +23,7 @@ jQuery(document).ready(function() {
 		$("#zoekresultaten").empty();
 		}
 	});
-
+ 
 	/* Werkt dit alleen in Chrome??? */
 	$("#delete").click(function() {
 		$("#adres").val("");
@@ -32,7 +31,58 @@ jQuery(document).ready(function() {
 		$("#zoekresultaten").empty();
 
 		$("#x").hide();
-	});					
+	});		
+	
+   $('#content a')
+      .click(function()
+      {
+         // Destroy currrent tooltip if present
+         if($(this).data("qtip")) $(this).qtip("destroy");
+         
+         $(this).html('topRight') 
+            .qtip({
+               content: 'Dit is de inhoud',			   
+			   position: { adjust: { screen: true, scroll:true, resize:true } },
+               show: {
+				  solo: true,			   
+                  when: false, 
+                  ready: true 
+               },
+               hide: false, 
+               style: {
+                  border: {
+                     width: 1,
+                     radius: 3
+                  },
+                  padding: 5, 
+                  textAlign: 'center',
+                  tip: true, 
+                  name: 'light' 
+               }
+            });
+      });
+});
+
+//$('.megaMenu a').mouseover(function() {
+//	jQuery('span',this).html('Get name from AvailableLayers.xml?');	
+//});
+
+/**
+  * Change theme from menu
+  */
+$('.megaMenu a').click(function() {
+	// only load new themes
+	if ($(this).attr('name') != _defaultId)
+	{
+		var _id = $(this).attr('name');
+
+		var maps = jQuery.grep(_layers, function(n, i) {
+			return n.id == _id;
+		});
+		Viewer.loadWMS(maps[0]);
+
+		_defaultId = _id;
+	}
 });
 
 /**

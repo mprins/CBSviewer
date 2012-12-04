@@ -178,7 +178,7 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 				</div>
 			</div-->
 		</div>
-	
+
 		<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
 
 		<c:if test="${param.coreonly!=true}">
@@ -189,7 +189,7 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 			<!-- scripts als laatste laden -->
 			<jsp:include page="WEB-INF/jsp/javascript_coreonly_include.jsp" />
 		</c:if>	
-		
+			
 		</body>
 	</html>
 </jsp:root>
