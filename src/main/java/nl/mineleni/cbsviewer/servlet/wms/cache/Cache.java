@@ -20,14 +20,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * De Class Cache.
+ * De klasse Cache. Een generieke implementatie van {@linkplain Caching} met
+ * {@linkplain Cachable} elementen.
  * 
  * @param <K>
  *            het key type
  * @param <V>
- *            het value type
+ *            het decorating type, {@link Cachable}
  * @param <T>
- *            het generic type
+ *            het cacheble object
  * @author prinsmc
  */
 public class Cache<K, V extends Cachable<T>, T> implements Caching<K, V, T> {
@@ -112,6 +113,8 @@ public class Cache<K, V extends Cachable<T>, T> implements Caching<K, V, T> {
 
 		final long timestamp = entry.getExpireBy();
 		if ((timestamp != -1) && (System.currentTimeMillis() > timestamp)) {
+			LOGGER.debug("Verwijderen element met sleutel " + key
+					+ " uit de cache, deze is verlopen.");
 			this.remove(key);
 			return null;
 		}
@@ -166,6 +169,7 @@ public class Cache<K, V extends Cachable<T>, T> implements Caching<K, V, T> {
 				this.remove(this.queue.poll());
 			}
 		}
+		LOGGER.debug("Opslaan van element met sleutel " + key + " in de cache.");
 		this.cache.put(key, cacheValue);
 		this.queue.add(key);
 	}
@@ -189,6 +193,8 @@ public class Cache<K, V extends Cachable<T>, T> implements Caching<K, V, T> {
 	public void remove(final K key) {
 		final V entry = this.cache.get(key);
 		if (entry != null) {
+			LOGGER.debug("Verwijderen element met sleutel " + key
+					+ " uit de cache.");
 			this.cacheSize.decrementAndGet();
 			this.cache.remove(key);
 		}

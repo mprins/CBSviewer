@@ -49,7 +49,10 @@ public interface Caching<K, V extends Cachable<T>, T> {
 	 * 
 	 * @param bbox
 	 *            de sleutel
-	 * @return de waarde, of {@code null}
+	 * @return de waarde, of {@code null} als het object niet aanwezig is in de
+	 *         cache. Indien het object verlopen, maar aanwezig is wordt dat ook
+	 *         beschouwd als niet aanwezig en wordt er {@code null}
+	 *         teruggegeven.
 	 */
 	V get(K bbox);
 
