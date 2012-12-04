@@ -18,8 +18,16 @@ Viewer = function() {
 	 * Toggle vlag voor fullsize functie.
 	 * 
 	 * @type {Boolean}
+	 * @private
 	 */
 	var _fullSize = false;
+	/**
+	 * Window resize timout flag.
+	 * 
+	 * @type {Boolean}
+	 * @private
+	 */
+	var _resizeTimeOut = false;
 
 	/**
 	 * update het informatie element met feature info.
@@ -43,14 +51,17 @@ Viewer = function() {
 	 */
 	function _resize() {
 		if (_fullSize) {
-			console.debug("resize Viewer");
-			var w = jQuery('#' + this.config.mapDiv).parent().width();
+			var borderW = parseInt(jQuery('#' + this.config.mapDiv).css('borderLeftWidth'), 10)
+					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
+			var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
+					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
+			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
 			// var h = jQuery('#' + this.config.mapDiv).parent().height();
-			var h = jQuery('#' + this.config.mapDiv).parent().parent().height();
+			var h = jQuery('#' + this.config.mapDiv).parent().parent().height() - borderH;
+
 			jQuery('#' + this.config.mapDiv).width(w).height(h);
 			_map.updateSize();
 			var vectors = _map.getLayersByClass("OpenLayers.Layer.Vector");
-			console.debug("vectors", vectors);
 			if (vectors.length > 0) {
 				// in dit geval is er een kaartlaag met een featureinfo lokatie
 				// verschuif naar die lokatie
@@ -112,7 +123,11 @@ Viewer = function() {
 			}
 			jQuery(window).resize(function() {
 				// aanhaken bij window resize
-				_resize();
+				if (_resizeTimeOut) {
+					clearTimeout(_resizeTimeOut);
+				}
+				_resizeTimeOut = setTimeout(_resize, 200); // 200 is time in
+															// miliseconds
 			});
 		},
 
@@ -257,16 +272,43 @@ Viewer = function() {
 				jQuery('#' + this.config.mapDiv).width(this.config.map.width).height(this.config.map.height);
 				jQuery('#toggleSize').toggleClass('restore max');
 				_fullSize = false;
+				_map.updateSize();
+
+				var vectors = _map.getLayersByClass("OpenLayers.Layer.Vector");
+				if (vectors.length > 0) {
+					// in dit geval is er een kaartlaag met een featureinfo
+					// lokatie verschuif naar die lokatie
+					var bounds = vectors[0].getDataExtent();
+					_map.panTo(bounds.getCenterLonLat());
+				}
+
 			} else {
 				// vergroten
-				var w = jQuery('#' + this.config.mapDiv).parent().width();
+				var borderW = parseInt(jQuery('#' + this.config.mapDiv).css('borderLeftWidth'), 10)
+						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
+				var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
+						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
+				var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
 				// var h = jQuery('#' + this.config.mapDiv).parent().height();
-				var h = jQuery('#' + this.config.mapDiv).parent().parent().height();
+				var h = jQuery('#' + this.config.mapDiv).parent().parent().height() - borderH;
+
 				jQuery('#' + this.config.mapDiv).width(w).height(h);
 				jQuery('#toggleSize').toggleClass('restore max');
 				_fullSize = true;
+				_map.updateSize();
 			}
-			_map.updateSize();
+
+		},
+
+		/**
+		 * Stel de kaart in voor afdrukken.
+		 * 
+		 * @returns
+		 */
+		printPrepare : function() {
+			if (_fullSize) {
+				this.toggleFullSize();
+			}
 		},
 
 		/**
