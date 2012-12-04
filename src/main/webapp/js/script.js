@@ -31,7 +31,36 @@ jQuery(document).ready(function() {
 		$("#zoekresultaten").empty();
 
 		$("#x").hide();
-	});					
+	});		
+	
+   $('#content a')
+      .click(function()
+      {
+         // Destroy currrent tooltip if present
+         if($(this).data("qtip")) $(this).qtip("destroy");
+         
+         $(this).html('topRight') 
+            .qtip({
+               content: 'Dit is de inhoud',			   
+			   position: { adjust: { screen: true, scroll:true, resize:true } },
+               show: {
+				  solo: true,			   
+                  when: false, 
+                  ready: true 
+               },
+               hide: false, 
+               style: {
+                  border: {
+                     width: 1,
+                     radius: 3
+                  },
+                  padding: 5, 
+                  textAlign: 'center',
+                  tip: true, 
+                  name: 'light' 
+               }
+            });
+      });
 });
 
 //$('.megaMenu a').mouseover(function() {
