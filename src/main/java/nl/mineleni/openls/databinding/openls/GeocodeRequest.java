@@ -39,42 +39,63 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * @author mprins
  * @since 1.6
  */
-
 public class GeocodeRequest implements XmlNamespaceConstants {
-    /**
-     * serialization id.
-     */
-    private static final long serialVersionUID = -1347583150356760221L;
-    private final Vector<Address> addressList = new Vector<Address>();
+	/**
+	 * serialization id.
+	 */
+	private static final long serialVersionUID = -1347583150356760221L;
+	/** interne adres lijst. */
+	private final Vector<Address> addressList = new Vector<Address>();
 
-    public void addAddress(Address val) {
-        this.addressList.add(val);
-    }
+	/**
+	 * Adds the address.
+	 * 
+	 * @param val
+	 *            the val
+	 */
+	public void addAddress(final Address val) {
+		this.addressList.add(val);
+	}
 
-    public Address getAddressAt(int i) {
-        return this.addressList.get(i);
-    }
+	/**
+	 * Gets the address at.
+	 * 
+	 * @param i
+	 *            the i
+	 * @return the address at
+	 */
+	public Address getAddressAt(final int i) {
+		return this.addressList.get(i);
+	}
 
-    public int getAddressSize() {
-        return this.addressList.size();
-    }
+	/**
+	 * Gets the address size.
+	 * 
+	 * @return the address size
+	 */
+	public int getAddressSize() {
+		return this.addressList.size();
+	}
 
-    @Override
-    public String toXML() {
-
-        final StringBuilder sb = new StringBuilder("<"
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodeRequest " + "xmlns:"
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX + "=\""
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_URI + "\" " + "xmlns:"
-                + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + "=\""
-                + XmlNamespaceConstants.OGC_GML_NAMESPACE_URI + "\">");
-
-        for (final Address addrl : this.addressList) {
-            sb.append(addrl.toXML());
-        }
-        sb.append("</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodeRequest>");
-        return sb.toString();
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
+	@Override
+	public String toXML() {
+		final StringBuilder sb = new StringBuilder("<"
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodeRequest " + "xmlns:"
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX + "=\""
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_URI + "\" " + "xmlns:"
+				+ XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + "=\""
+				+ XmlNamespaceConstants.OGC_GML_NAMESPACE_URI + "\">");
+		for (final Address addrl : this.addressList) {
+			sb.append(addrl.toXML());
+		}
+		sb.append("</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodeRequest>");
+		return sb.toString();
+	}
 }
