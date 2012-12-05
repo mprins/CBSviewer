@@ -424,7 +424,6 @@ a.olControlZoomOut {
 	width:100%;
 	height: 72px;
 	background-position: left top;
-	background-color: white;
 }
 
 .teaserContent
@@ -556,7 +555,8 @@ a.olControlZoomOut {
 
 #inhoud {
     height:100%;
-    padding:76px 0;
+    padding-top:76px;
+	padding-bottom:88px;
     margin:-76px 0;
     z-index:1;
 }
