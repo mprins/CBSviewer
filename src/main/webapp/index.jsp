@@ -114,10 +114,10 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 <div id="footer">
 	<div class="teaserPanel">
 				<div class="teaserContent">
-					<a id="_teasersControl__linkOpMaatHyperLink" class="opMaat" title="Uw Gemeente Op Maat">Uw Gemeente Op Maat<span>Publicaties en Documenten</span></a>
-					<a href="#" title="CBS In uw buurt nieuws" class="rss">CBS In uw buurt nieuws<span>De laatste ontwikkelingen</span></a>
-					<a href="#" title="CBS Databank - Statline" class="databank">CBS Databank - Statline<span>Professionele data nodig?</span></a>
-					<a href="#" title="Gebruikersreacties gezocht" class="gezocht"><strong>Gezocht:</strong> Gebruikersreacties<span>Heeft u tips of suggesties?</span></a>
+					<a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/publicaties/gemeente-op-maat/gemeente-op-maat/default.htm" class="opMaat" title="Uw Gemeente Op Maat">Uw Gemeente Op Maat<span>Publicaties en Documenten</span></a>
+					<a href="http://www.cbs.nl/nl-NL/menu/_unique/_nieuws/default.htm" title="CBS In uw buurt nieuws" class="rss">CBS In uw buurt nieuws<span>De laatste ontwikkelingen</span></a>
+					<a href="http://statline.cbs.nl" title="CBS Databank - Statline" class="databank">CBS Databank - Statline<span>Professionele data nodig?</span></a>
+					<a href="http://www.cbs.nl/nl-NL/menu/informatie/publiek/inlichtingen/default.htm" title="Gebruikersreacties gezocht" class="gezocht"><strong>Gezocht:</strong> Gebruikersreacties<span>Heeft u tips of suggesties?</span></a>
 				</div>
 			</div>		
 			<div class="footer">

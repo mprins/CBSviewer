@@ -13,6 +13,9 @@ config.imgPath = "img/";
 /** id van de div met de kaart. */
 config.mapDiv = "cbsKaart";
 
+/** id van de buttons voor het selecteren bij meerdere resultaten */
+config.buttonDiv = "button";
+
 /** id van de div voor de legenda. */
 config.legendDiv = "legenda";
 

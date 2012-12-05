@@ -117,6 +117,13 @@ a.accesskey:focus {
 	background-color:#dfdfdf;
 }
 
+#zoekContainer .adreslijst li .selected, #zoekContainer .adreslijst li .selected:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #AFAFAF), color-stop(1, #E0E0E0) );
+	background:-moz-linear-gradient( center top, #AFAFAF 5%, #E0E0E0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#AFAFAF', endColorstr='#E0E0E0');
+	background-color:#AFAFAF;
+}
+
 #zoekContainer .adreslijst li .button:active {
 	position:relative;
 	top:1px;
@@ -555,7 +562,7 @@ a.olControlZoomOut {
 
 #inhoud {
     height:100%;
-    padding-top:76px;
+	padding:76px 0px 88px 0px;
 	padding-bottom:88px;
     margin:-76px 0;
     z-index:1;

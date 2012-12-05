@@ -24,7 +24,6 @@ jQuery(document).ready(function() {
 		}
 	});
  
-	/* Werkt dit alleen in Chrome??? */
 	$("#delete").click(function() {
 		$("#adres").val("");
 		$(".adreslijst").empty();
@@ -33,6 +32,7 @@ jQuery(document).ready(function() {
 		$("#x").hide();
 	});		
 	
+	/* for testing purposes only at the moment */
    $('#content a')
       .click(function()
       {

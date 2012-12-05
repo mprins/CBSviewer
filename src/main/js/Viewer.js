@@ -43,7 +43,7 @@ Viewer = function() {
 			// jQuery('#ac-2').prop('checked', true);
 		}
 	}
-
+	
 	/**
 	 * zorgt voor correct afhandelen van viewport resize.
 	 * 
@@ -157,6 +157,17 @@ Viewer = function() {
 			_map.panTo(new OpenLayers.LonLat(x, y));
 			var zm = _map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius));
 			_map.zoomTo(zm);
+		},
+		
+
+		/**
+		* actief maken van de geselecteerde zoekknop
+		* @param {id}
+		*            button id
+		*/
+		toggleSelectedButton : function(id) {
+			jQuery('.adreslijst').find('li a').removeClass("selected");
+			jQuery("#"+this.config.buttonDiv+id).addClass('selected');
 		},
 
 		/**

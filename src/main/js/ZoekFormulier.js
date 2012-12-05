@@ -73,18 +73,23 @@ var ZoekFormulier = {
 			Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
 			break;
 		default:
-			html += '<p style="clear:both">' + OpenLayers.i18n("KEY_ZOEKEN_MEER_ADRES") + '</p>';
+			//html += '<p style="clear:both">' + OpenLayers.i18n("KEY_ZOEKEN_MEER_ADRES") + '</p>';
 			html += '<ul class="adreslijst">';
 
 			for ( var i = 0; i < data.length; i++) {
-				html += '<li><a class="button" href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ','
+				var selected = "";
+				if (i == 0)
+					selected = " selected";
+			
+				html += '<li><a id="button' + i + '" class="button' + selected + '" href="#" onclick="Viewer.toggleSelectedButton(' + i + ');Viewer.zoomTo(' + data[i].xCoord + ','
 						+ data[i].yCoord + ',' + data[i].radius + ');return false;" title="'
 						+ OpenLayers.i18n("KEY_ZOEKEN_LINK_TTL", {
 							'0' : '' + data[i].addressString
 						}) + '">' + data[i].addressString + '</a></li>';
 			}
 			html += '</ul>';
-			Viewer.zoomTo(data[data.length - 1].xCoord, data[data.length - 1].yCoord, data[data.length - 1].radius);
+
+			Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
 		}
 		paragraaf.empty().html(html);
 	},
