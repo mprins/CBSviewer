@@ -626,6 +626,11 @@ display: inline;
    color: #000000;
 }
 
+.dropDownMenu a:hover .redcolor
+{
+color:red;
+}
+
 #highlightmore
 {
 	font-size:16px;
