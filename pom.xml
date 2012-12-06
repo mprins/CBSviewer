@@ -90,7 +90,7 @@
 		<phantomjs.baseurl>https://phantomjs.googlecode.com/files</phantomjs.baseurl>
 		<!-- @see https://github.com/pivotal/jasmine/downloads -->
 		<jasmine.baseurl>http://cloud.github.com/downloads/pivotal/jasmine</jasmine.baseurl>
-		<jasmine.archive>jasmine-standalone-1.2.0.zip</jasmine.archive>
+		<jasmine.archive>jasmine-standalone-1.3.1.zip</jasmine.archive>
 	</properties>
 	<profiles>
 		<profile>
