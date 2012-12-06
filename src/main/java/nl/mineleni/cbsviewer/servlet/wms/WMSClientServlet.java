@@ -43,6 +43,7 @@ import nl.mineleni.cbsviewer.util.SpatialUtil;
 import nl.mineleni.cbsviewer.util.xml.LayerDescriptor;
 
 import org.geotools.data.ows.Layer;
+import org.geotools.data.ows.StyleImpl;
 import org.geotools.data.ows.WMSCapabilities;
 import org.geotools.data.wms.WMSUtils;
 import org.geotools.data.wms.WebMapServer;
@@ -447,25 +448,141 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 *             van de WMS
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
+	 * 
+	 * 
 	 */
 	private File[] getLegends(final LayerDescriptor lyrDesc)
 			throws ServiceException, IOException {
 
+		if (null == this.getCachedWMS(lyrDesc).getCapabilities().getRequest()
+				.getGetLegendGraphic()) {
+			LOGGER.debug("getGetLegendGraphic tested null, server ondersteund geen getGetLegendGraphic request.");
+			return this.getLegendsFromLayerStyles(lyrDesc);
+		} else {
+			return this.getLegendsFromService(lyrDesc);
+		}
+
+	}
+
+	/**
+	 * get legenda afbeeldingen door gebruik te maken legendUrl.
+	 * 
+	 * @param lyrDesc
+	 *            de layerdescriptor met de WMS informatie
+	 * @return een array met legenda afbeeldings bestanden
+	 * @throws ServiceException
+	 *             Geeft aan dat er een fout is opgetreden tijden het benaderen
+	 *             van de WMS
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @todo refactor; this getting way too complicated
+	 */
+	private File[] getLegendsFromLayerStyles(final LayerDescriptor lyrDesc)
+			throws ServiceException, IOException {
 		final String[] layerNames = lyrDesc.getLayers().split(",\\s*");
 		final String[] styleNames = lyrDesc.getStyles().split(",\\s*");
-
 		final File[] legends = new File[layerNames.length];
+
+		BufferedImage image;
+		for (int l = 0; l < layerNames.length; l++) {
+			final String key = layerNames[l] + "::" + styleNames[l];
+			if (this.legendCache.containsKey(key)) {
+				// in de cache kijken of we deze legenda afbeelding nog
+				// hebben
+				final String fname = this.legendCache.get(key).getName();
+				if (null != fname) {
+					// element zou verlopen kunnen zijn
+					legends[l] = new File(fname);
+					if (!legends[l].exists()) {
+						// (mogelijk) is het bestand gewist..
+						ImageIO.write(this.legendCache.get(key).getImage(),
+								"png", legends[l]);
+					}
+					LOGGER.debug("Legenda bestand uit cache: "
+							+ legends[l].getAbsolutePath());
+				}
+			} else {
+				for (final Layer layer : this.getCachedWMS(lyrDesc)
+						.getCapabilities().getLayerList()) {
+					// LOGGER.debug("layer name uit capabilities is: " +
+					// layer.getName());
+					if (layerNames[l].equalsIgnoreCase(layer.getName())) {
+						// layer gevonden
+						for (final StyleImpl style : layer.getStyles()) {
+							// LOGGER.debug("style name uit capabilities is: "
+							// + style.getName());
+							if (styleNames[l].equalsIgnoreCase(style.getName())) {
+								// style gevonden, eerste legenda ophalen
+								final String legendUrl = (String) style
+										.getLegendURLs().get(0);
+								LOGGER.debug("Legenda url uit capabilities is: "
+										+ legendUrl);
+								image = ImageIO.read(new URL(legendUrl));
+								// op schijf opslaan
+								legends[l] = File
+										.createTempFile(
+												"legenda",
+												".png",
+												new File(
+														this.getServletContext()
+																.getRealPath(
+																		MAP_CACHE_DIR.code)));
+								legends[l].deleteOnExit();
+								ImageIO.write(image, "png", legends[l]);
+								// in de cache opslaan
+								this.legendCache
+										.put(key,
+												new CacheImage(
+														image,
+														legends[l]
+																.getAbsolutePath(),
+														System.currentTimeMillis()
+																+ (MILLISECONDS_TO_CACHE_ELEMENTS * 24)));
+								LOGGER.debug("Legenda bestand opgeslagen: "
+										+ legends[l].getAbsolutePath());
+							}
+						}
+					}
+				}
+			}
+		}
+		return legends;
+	}
+
+	/**
+	 * get legenda afbeeldingen door gebruik te maken van
+	 * GetLegendGraphicRequest.
+	 * 
+	 * @param lyrDesc
+	 *            de layerdescriptor met de WMS informatie
+	 * @return een array met legenda afbeeldings bestanden
+	 * @throws ServiceException
+	 *             Geeft aan dat er een fout is opgetreden tijden het benaderen
+	 *             van de WMS
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * 
+	 * @todo refactor; this getting way too complicated
+	 */
+	private File[] getLegendsFromService(final LayerDescriptor lyrDesc)
+			throws ServiceException, IOException {
+		final String[] layerNames = lyrDesc.getLayers().split(",\\s*");
+		final String[] styleNames = lyrDesc.getStyles().split(",\\s*");
+		final File[] legends = new File[layerNames.length];
+
 		try {
 			final GetLegendGraphicRequest legend = this.getCachedWMS(lyrDesc)
 					.createGetLegendGraphicRequest();
 			BufferedImage image;
 			for (int l = 0; l < layerNames.length; l++) {
 				final String key = layerNames[l] + "::" + styleNames[l];
+
 				if (this.legendCache.containsKey(key)) {
-					// in de cache kijken of we deze legenda afbeelding al
+					// in de cache kijken of we deze legenda afbeelding nog
 					// hebben
-					String fname = this.legendCache.get(key).getName();
+					final String fname = this.legendCache.get(key).getName();
 					if (null != fname) {
+						// element zou verlopen kunnen zijn
 						legends[l] = new File(fname);
 						if (!legends[l].exists()) {
 							// (mogelijk) is het bestand gewist..
@@ -487,12 +604,16 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					final GetLegendGraphicResponse response = this
 							.getCachedWMS(lyrDesc).issueRequest(legend);
 					image = ImageIO.read(response.getInputStream());
+
+					// op schijf opslaan
 					legends[l] = File.createTempFile(
 							"legenda",
 							".png",
 							new File(this.getServletContext().getRealPath(
 									MAP_CACHE_DIR.code)));
 					legends[l].deleteOnExit();
+					ImageIO.write(image, "png", legends[l]);
+					// in de cache opslaan
 					this.legendCache
 							.put(key,
 									new CacheImage(
@@ -500,9 +621,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 											legends[l].getAbsolutePath(),
 											System.currentTimeMillis()
 													+ (MILLISECONDS_TO_CACHE_ELEMENTS * 24)));
-					LOGGER.debug("Legenda bestand: "
+					LOGGER.debug("Legenda bestand opgeslagen: "
 							+ legends[l].getAbsolutePath());
-					ImageIO.write(image, "png", legends[l]);
+
 				}
 			}
 		} catch (final UnsupportedOperationException u) {
@@ -569,6 +690,14 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	@Override
 	public void init(final ServletConfig config) throws ServletException {
 		super.init(config);
+
+		try {
+			org.geotools.util.logging.Logging.ALL
+					.setLoggerFactory("org.geotools.util.logging.Log4JLoggerFactory");
+		} catch (ClassNotFoundException | IllegalArgumentException e1) {
+			// ignore
+		}
+
 		try {
 			this.bgWMSCache = new WMSCache(this.getServletContext()
 					.getRealPath(MAP_CACHE_DIR.code), NUMBER_CACHE_ELEMENTS);
