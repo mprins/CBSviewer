@@ -12,12 +12,12 @@
 	<div class="dropDownMenu clearfix">
 	<!--a id="skipNavigation"></a-->
 	<ul class="siteNavigation">
-		<li class="sectionDepartment">
+		<li class="sectionTheme">
 			<a class="hasMenu" href="#">Selecteer een CBS kaartlaag</a>
 			<div class="navDropDown"> 
 				<ol class="navCategories">
 					<li>
-						<a href="#">Op thema<span>Naast de basisthema's is er ook de mogelijkheid om meer thema's te bekijken. Klik hiervoor onderin het menu op 'Meer thema's...'</span></a>
+						<a id="themamenu" href="#">Op thema<span>Naast de basisthema's is er ook de mogelijkheid om meer thema's te bekijken. Klik hiervoor onderin het menu op 'Meer thema's...'</span></a>
 							<div class="contentasset">
 								<div class="megaMenu megaThreeColumns">
 										<div class="ac-container ac-menu">			

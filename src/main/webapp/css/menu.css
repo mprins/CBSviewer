@@ -19,74 +19,18 @@
 
 .siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li { margin: 0; padding: 0; list-style: none;}
 
-#drop-down-menu>ul>li
-{
-	display:block;
-	position:relative;
-	float:left}
-#drop-down-menu>li>ul{display:none}
-#drop-down-menu>li:hover>ul
-{ 
-	display:block; 
-	position:absolute}
-#drop-down-menu>li:hover>li
-{ 
-	font-size:70%;
-	clear:left; 
-	width:12em}
-
 .megaMenu, .megaMenu ul, .navCategories, .megaMenu .col  {	min-height: 525px;}
-.sectionBrands .navDropDown,
-.sectionOffers .navDropDown,
-.sectionStyle .navDropDown 
-{
-	background:#fff;
-	width:172px;
-	padding:10px 5px 10px;
-	
-	-moz-box-shadow:0 1px 10px 3px rgba(0, 0, 0, .3);
-	-webkit-box-shadow:0 1px 10px 3px rgba(0, 0, 0, .3);
-	box-shadow: 0 1px 10px 3px rgba(0, 0, 0, .3);
-	
-	-moz-border-radius:0 0 3px 3px;
-	-webkit-border-radius:0 0 3px 3px;
-	border-radius: 0 0 3px 3px;
-}
-.sectionStyle .navDropDown 
-{
-	width:150px;
-}
-.siteNavigation .sectionDepartment:hover .navDropDown,
-.siteNavigation .sectionBrands:hover .navDropDown,
-.siteNavigation .sectionOffers:hover .navDropDown,
-.siteNavigation .sectionStyle:hover .navDropDown 
+
+.siteNavigation .sectionTheme:hover .navDropDown
+/*.siteNavigation>li>a.hasMenu:focus ~ .navDropDown */
 {
 	left:auto;
 }
 
-.ie7 .sectionDepartment:hover .navDropDown 
+.ie7 .sectionTheme:hover .navDropDown,
+.ie7 .sectionTheme:focus .navDropDown
 {
 	left:0px;
-}
-
-.ie7 .sectionBrands:hover .navDropDown 
-{
-	left:164px;
-}
-.ie7 .sectionOffers:hover .navDropDown 
-{
-	left:345px;
-}
-.ie7 .sectionStyle:hover .navDropDown 
-{
-	left:451px;
-}
-
-.sectionBrands .navDropDown .menuTitle,
-.sectionOffers .navDropDown .menuTitle,
-.sectionStyle .navDropDown .menuTitle  
-{
-	margin-left:0;
 }
 
 .megaMenu.show { left: 20%;}
@@ -94,7 +38,9 @@
 .navCategories>li {width: 20%;}
 .ie7 .navCategories>li>a {width: 19%;}
 .navCategories li:hover>.contentasset>.megaMenu, 
-.navCategories>li:first-child .megaMenu { left: 20%;}
+.navCategories li:focus>.contentasset>.megaMenu, 
+.navCategories>li:first-child .megaMenu
+ { left: 20%;}
 
 /* Close button for iPad */
 .closeMega {
@@ -172,20 +118,6 @@
 .siteNavigation>li:first-child>a { border-left-width: 0px}
 .siteNavigation>li:last-child>a { border-right-width: 0px}
 
-.siteNavigation>li:hover>a 
-{
-	color: black;
-	text-shadow: none;
-	border-color: #404040;	
-	background: rgb(238,238,238); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
-	background: linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
-}
-
 .hasMenu:after, 
 /* IE7 fix */
 .ie7 .hasMenu span {
@@ -225,10 +157,7 @@
 	border-radius: 0 0 3px 3px;
 }
 	
-.no-boxshadow .navCategories,
-.no-boxshadow .sectionBrands .navDropDown,
-.no-boxshadow .sectionOffers .navDropDown,
-.no-boxshadow .sectionStyle .navDropDown  {
+.no-boxshadow .navCategories  {
 	border: solid #D4CFCB;
 	border-width: 0 1px 1px 1px;
 }
@@ -246,21 +175,16 @@
 	border-color: white;
 }
 
-.navCategories>li>a:hover {	color:#E51D9B; }
+.navCategories>li>a:hover, .navCategories>li>a:focus {	color:#E51D9B; }
 .navCategories>li>a.current,
-.navCategories>li>a:hover,
-.navCategories>li:hover>a 
+.navCategories>li>a:hover, .navCategories>li>a:focus ,
+.navCategories>li:hover>a, .navCategories>li:focus>a 
 {
 	background: white;			
 	text-shadow: none;
 	border-color: #e4e4e4;
 	text-decoration: underline;				
 }
-
-/*.hasMenu:focus  + .navDropDown
-{
-	left: 0px;
-}*/	
 
 .navCategories>li>a:after,
 .navCategories>li:hover>a:after,
@@ -333,10 +257,7 @@
 .megaTwoThirdsColumns ul:last-child { width: 25%; }	
 		
 .megaMenu ul li, 
-.megaMenu .col .padding,
-.sectionBrands .navDropDown li,
-.sectionOffers .navDropDown li,
-.sectionStyle .navDropDown li {
+.megaMenu .col .padding {
 	padding: 2px 10px 2px 10px; 
 	display: block; 
 }
@@ -458,18 +379,12 @@ p.marginNone{ margin:0;}
 	line-height: 37px;
 }
 
-.navCategories .megaMenu li a,
-.sectionBrands li a,
-.sectionOffers li a,
-.sectionStyle li a {
+.navCategories .megaMenu li a {
 	color: #333366;
 	text-decoration: none;
 }
 
-.navCategories .megaMenu li a:hover,
-.sectionBrands li a:hover,
-.sectionOffers li a:hover,
-.sectionStyle li a:hover {
+.navCategories .megaMenu li a:hover {
 	color: #000000;
 	text-decoration: underline;
 }
