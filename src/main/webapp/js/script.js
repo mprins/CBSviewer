@@ -61,6 +61,16 @@ jQuery(document).ready(function() {
                }
             });
       });
+
+	$('.hasMenu').focus(function() {
+	  if ($('.navDropDown').css('left') == '0px') {
+			$(".navDropDown").css("left","-9999px");
+			$(".megaMenu").focus();
+		}
+	else {
+		  $(".navDropDown").css("left","0px");
+		 }
+	});
 });
 
 //$('.megaMenu a').mouseover(function() {

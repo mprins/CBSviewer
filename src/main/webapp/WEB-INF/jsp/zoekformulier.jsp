@@ -9,8 +9,6 @@
 
 	<fmt:setBundle basename="LabelsBundle" />
 	
-	<!-- zoek formulier voor de versie zonder javascript en/of css -->
-	<!-- todo, geeft nog 4 fouten bij w3c check, nog oplossen later -->
 	<div id="zoekContainer">
 		<form title="Zoekformulier" method="get" action="adres" id="zoekFormulier">
 			<p class="zoekinput">

@@ -14,7 +14,7 @@
 
 .dropDownMenu
 {
-	position:absolute;left:5px;top:18px;
+	position:absolute;left:5px;top:10px;
 }
 
 .siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li { margin: 0; padding: 0; list-style: none;}
@@ -199,6 +199,8 @@
 	padding-right: 10px
 }
 
+
+
 .navDropDown {
 	position:absolute;
 	top: 35px;
@@ -254,6 +256,11 @@
 	border-color: #e4e4e4;
 	text-decoration: underline;				
 }
+
+/*.hasMenu:focus  + .navDropDown
+{
+	left: 0px;
+}*/	
 
 .navCategories>li>a:after,
 .navCategories>li:hover>a:after,
@@ -618,7 +625,7 @@ display: inline;
 
 .dropDownMenu a span {display: none;}
 
-.dropDownMenu a:hover span {
+.dropDownMenu a:hover span{
   font-size:11px;
 	display: block;
    position: fixed; top: 276px; left: 5px; width: 183px;

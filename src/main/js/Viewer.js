@@ -158,17 +158,6 @@ Viewer = function() {
 			var zm = _map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius));
 			_map.zoomTo(zm);
 		},
-		
-
-		/**
-		* actief maken van de geselecteerde zoekknop
-		* @param {id}
-		*            button id
-		*/
-		toggleSelectedButton : function(id) {
-			jQuery('.adreslijst').find('li a').removeClass("selected");
-			jQuery("#"+this.config.buttonDiv+id).addClass('selected');
-		},
 
 		/**
 		 * Controls aan de kaart hangen.
