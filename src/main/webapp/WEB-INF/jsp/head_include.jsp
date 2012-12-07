@@ -34,6 +34,9 @@
 		<!--[if IE 8]>
 		<link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />
 		<![endif]-->
+		<!--[if IE lt 10]>
+		<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
+		<![endif]-->
 		]]>
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
 	</jsp:text>
