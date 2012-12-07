@@ -431,7 +431,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
             return image;
         } catch (ServiceException | IOException e) {
             LOGGER.error(
-                    "Er is een fout opgetreden bij het benaderen van de achtergrond WMS service.",
+                    "Er is een fout opgetreden bij het benaderen van de voorgrond WMS service.",
                     e);
             throw new ServletException(e);
         }
