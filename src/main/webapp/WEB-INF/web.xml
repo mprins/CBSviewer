@@ -124,5 +124,7 @@
 		<servlet-name>AdresZoekServlet</servlet-name>
 		<url-pattern>/adres</url-pattern>
 	</servlet-mapping>
-
+	<listener>
+		<listener-class>nl.mineleni.cbsviewer.servlet.GeotoolsContextListener</listener-class>
+	</listener>
 </web-app>
