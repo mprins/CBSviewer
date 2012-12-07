@@ -1,22 +1,20 @@
 @charset "UTF-8";
 
-body
-{
+body {
 	background-color: #fff;
 	font-size: 11px;
-	font-family: Arial, Helvetica, verdana, sans-serif;
-	
+	font-family: Arial, Helvetica, Verdana, Geneva, Lucida, sans-serif;
 	width: 100%;
-	height:100%;
+	height: 100%;
 	text-align: left;
 	margin-left: auto;
-	margin-right: auto;	
+	margin-right: auto;
 }
 
 html,body{
-    height:100%;    
-    margin:0;
-    padding:0;
+	height:100%;    
+	margin:0;
+	padding:0;
 }
 
 /* opmaak van de elementen */
@@ -41,7 +39,7 @@ html.js #kaartContainer.nothidden {
 }
 
 /* verbergen als er javascript is, hier zit de core kaart + formulier in.*/
-html.js #coreContainer,html.js #coreMapImage {
+html.js #coreContainer, html.js #coreMapImage {
 	display: none;
 }
 
@@ -302,7 +300,35 @@ a.accesskey:focus {
 }
 
 .kaartnavi {
-	
+	position: absolute;
+	display: inline;
+    margin-left: 1em;
+}
+
+.kaartnavi fieldset{
+	border: 1px solid #dcdcdc;
+	padding: 2px;
+	border-radius: 6px;
+}
+
+.kaartnavi button{
+	border: 1px solid #dcdcdc;
+	cursor: pointer;
+	background-color: #ededed;
+	padding: 0 10px;
+	line-height: 2;
+	min-height: 2em;
+	color: #000;
+	display:block;
+	border-radius: 6px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #fff;
+	box-shadow: inset 0 1px 0 0 #fff;
+}
+
+.kaartnavi button:hover{
+	box-shadow: inset 0 1px 0 0 #aaa;
+	border: 1px solid #555;
 }
 
 /*openlayers elementen*/

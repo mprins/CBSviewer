@@ -23,7 +23,7 @@
 				
 				<button type="button" id="delete"><span id="x">X</span></button>
 
-				<input value="" type="submit" accesskey="s" id="searchbutton"/>		
+				<input value="" type="submit" accesskey="s" id="searchbutton"/>
 			</p>
 		</form>
 		<p id="zoekresultaten">
@@ -39,6 +39,6 @@
 						title="${ttl}">${adres}</a></li>
 				</c:forEach>
 			</ul>
-		</c:if>		
+		</c:if>
 	</div>
 </jsp:root>

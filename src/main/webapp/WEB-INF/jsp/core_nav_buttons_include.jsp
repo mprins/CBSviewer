@@ -57,37 +57,42 @@
 			<!-- knoppen -->
 			<fieldset id="in-en-uit-zoomen" title="in- en uitzoomen">
 				<legend><fmt:message key="KEY_NAVIGATIE_ZOOM_LEGEND" /></legend>
-				<label for="zoomUitBtn">zoom uit</label>
-				<button id="zoomUitBtn" type="submit" name="straal"
-					value="${straal*2}" title="zoom uit">−</button>
-
-				<label for="zoomInBtn">zoom in</label>
-				<button id="zoomInBtn" type="submit" name="straal" value="${zoomin}"
-					title="zoom in">+</button>
+				
+				<fmt:message var="ttl" key="KEY_BTN_NAVI_ZOOMOUT_LBL" />
+				<label for="zoomUitBtn">${ttl}</label>
+				<button id="zoomUitBtn" type="submit" name="straal" value="${straal*2}" title="${ttl}">−</button>
+				
+				<fmt:message var="ttl" key="KEY_BTN_NAVI_ZOOMIN_LBL" />
+				<label for="zoomInBtn">${ttl}</label>
+				<button id="zoomInBtn" type="submit" name="straal" value="${zoomin}" title="${ttl}">+</button>
 			</fieldset>
+
 			<fieldset id="verschuiven" title="verschuiven">
 				<legend><fmt:message key="KEY_NAVIGATIE_SCHUIF_LEGEND" /></legend>
-				<label for="schuifLinksBtn">schuif naar links</label>
-				<button id="schuifLinksBtn" type="submit" name="xcoord"
-					value="${naarLinks}" title="naar links">←</button>
+				
+				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANLEFT_LBL" />
+				<label for="schuifLinksBtn">${ttl}</label>
+				<button id="schuifLinksBtn" type="submit" name="xcoord" value="${naarLinks}" title="${ttl}">←</button>
+				
+				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANRIGHT_LBL" />
+				<label for="schuifRechtsBtn">${ttl}</label>
+				<button id="schuifRechtsBtn" type="submit" name="xcoord" value="${naarRechts}" title="${ttl}">→</button>
+				
+				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANUP_LBL" />
+				<label for="schuifOmhoogBtn">${ttl}</label>
+				<button id="schuifOmhoogBtn" type="submit" name="ycoord" value="${naarBoven}" title="${ttl}">↑</button>
 
-				<label for="schuifRechtsBtn">schuif naar rechts</label>
-				<button id="schuifRechtsBtn" type="submit" name="xcoord"
-					value="${naarRechts}" title="naar rechts">→</button>
-
-				<label for="schuifOmhoogBtn">schuif naar boven</label>
-				<button id="schuifOmhoogBtn" type="submit" name="ycoord"
-					value="${naarBoven}" title="omhoog">↑</button>
-
-				<label for="schuifOmlaagBtn">schuif naar beneden</label>
-				<button id="schuifOmlaagBtn" type="submit" name="ycoord"
-					value="${naarBeneden}" title="omlaag">↓</button>
+				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANDOWN_LBL" />
+				<label for="schuifOmlaagBtn">${ttl}</label>
+				<button id="schuifOmlaagBtn" type="submit" name="ycoord" value="${naarBeneden}" title="${ttl}">↓</button>
 			</fieldset>
+			
 			<fieldset id="wisselachtergrond" title="wissel achtergrondkaart">
 				<legend><fmt:message key="KEY_NAVIGATIE_BASEMAP_LEGEND" /></legend>
-				<label for="wisselBtn">Wissel achtergrondkaart</label>
-				<button id="wisselBtn" type="submit" name="achtergrond"
-					value="${wisselachtergrond}" title="wissel">${wisselachtergrondBtn}</button>
+				
+				<fmt:message var="ttl" key="KEY_TOGGLE_BASEMAP_TITLE" />
+				<label for="wisselBtn">${ttl}</label>
+				<button id="wisselBtn" type="submit" name="achtergrond" value="${wisselachtergrond}" title="${ttl}">${wisselachtergrondBtn}</button>
 			</fieldset>
 			<p>
 				<input type="hidden" name="coreonly" value="true" />
