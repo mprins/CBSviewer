@@ -155,7 +155,7 @@
 														</ul>
 														<ul class="navright">
 															<!--ul class="navright"-->
-																<li class="menuTitle"><i>Voorzieningen</i><br/>Kortste afstand</li>
+																<li class="menuTitle"><em>Voorzieningen</em><br/>Kortste afstand</li>
 																<li><a href="#" name="wijkenbuurten2010_thema_gemeenten2010_huisartsenpraktijk_gemiddelde_afstand_in_km">Huisartsenpraktijk<span>Huisartsenpraktijk gemiddelde afstand in km</span></a>
 																	<ul>
 																		<li>Gemeente<br/><a href="#" name="wijkenbuurten2010_thema_gemeenten2010_huisartsenpraktijk_gemiddelde_afstand_in_km">2010</a></li>
@@ -338,7 +338,7 @@
 																<li><a class="disabled" href="#">Combinatiebedrijven (%)<span class="redcolor">Dit thema is niet aanwezig.</span></a>
 																</li>
 																
-																<li class="menuTitle"><i>Voorzieningen</i><br/>Kortste afstand</li>
+																<li class="menuTitle"><em>Voorzieningen</em><br/>Kortste afstand</li>
 																<li><a href="#" name="wijkenbuurten2010_thema_gemeenten2010_restaurant_gemiddelde_afstand_in_km">Restaurant<span>Restaurant gemiddelde afstand in km</span></a>
 																	<ul>
 																		<li>Gemeente<br/><a href="#" name="wijkenbuurten2010_thema_gemeenten2010_restaurant_gemiddelde_afstand_in_km">2010</a> | <a href="#" name="wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km">2009</a></li>
