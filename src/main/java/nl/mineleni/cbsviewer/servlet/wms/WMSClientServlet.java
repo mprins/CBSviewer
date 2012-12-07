@@ -507,8 +507,16 @@ public class WMSClientServlet extends AbstractWxSServlet {
                                         .getLegendURLs().get(0);
                                 LOGGER.debug("Legenda url uit capabilities is: "
                                         + legendUrl);
-                                legends[l] = this.cacheLegend(
-                                        ImageIO.read(new URL(legendUrl)), key);
+                                if (this.isNotNullNotEmptyNotWhiteSpaceOnly(legendUrl)) {
+                                    try {
+                                        legends[l] = this.cacheLegend(ImageIO
+                                                .read(new URL(legendUrl)), key);
+                                    } catch (final MalformedURLException e) {
+                                        LOGGER.warn(
+                                                "Er werd geen geldige URL voor de legenda gevonden.",
+                                                e);
+                                    }
+                                }
                             }
                         }
                     }
