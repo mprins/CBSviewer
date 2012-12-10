@@ -403,13 +403,22 @@ a.olControlZoomOut {
  */
 .olLayerGrid .olTileImage {
 	-webkit-transition: opacity 0.2s linear;
-	-moz-transition: opacity 0.2s linear;
 	-o-transition: opacity 0.2s linear;
 	transition: opacity 0.2s linear;
 }
 
 .olImageLoadError {
-	display: none;
+	display: none !important;
+}
+
+/* GMaps should not set styles on its container */
+.olForeignContainer {
+	opacity: 1 !important;
+}
+
+/* Prevent tile scaling on Android 4 when d-pad keys are pressed */
+.olMapViewport > div > * {
+	outline-width: 0;
 }
 
 .utilBlock {
@@ -762,7 +771,6 @@ a.olControlZoomOut {
 	position: relative;
 	z-index: 10;
 	-webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-	-moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
 	-o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
 	-ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
 	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
@@ -780,7 +788,6 @@ a.olControlZoomOut {
 .ac-container input:checked  ~ .ac-small,.ac-container input:focus  ~
 	.ac-small {
 	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
-	-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
@@ -806,7 +813,6 @@ a.olControlZoomOut {
 	position: relative;
 	z-index: 10;
 	-webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-	-moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
 	-o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
 	-ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
 	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
@@ -814,7 +820,6 @@ a.olControlZoomOut {
 
 .ac-container input:checked  ~ .ac-menuheight {
 	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
-	-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
