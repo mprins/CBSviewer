@@ -54,6 +54,12 @@
 			<comments>For jQuery Form Plugin</comments>
 			<distribution>manual</distribution>
 		</license>
+		<license>
+			<name>GNU Lesser General Public License (LGPL)</name>
+			<comments>The binary distribution of this project includes part of Geotools.</comments>
+			<distribution>repo</distribution>
+			<url>https://raw.github.com/mprins/geotools/master/licenses/LICENSE</url>
+		</license>
 	</licenses>
 	<issueManagement>
 		<system>GitHub</system>
