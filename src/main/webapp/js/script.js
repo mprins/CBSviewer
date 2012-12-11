@@ -91,6 +91,10 @@ jQuery('.megaMenu a').click(function() {
 			return n.id == _id;
 		});
 		Viewer.loadWMS(maps[0]);
+		// bijwerken pagina titel
+		jQuery('title').html(OpenLayers.i18n('KEY_KAART_TITEL', {
+			'0' : '' + maps[0].name
+		}));
 
 		_defaultId = _id;
 	}
