@@ -15,6 +15,7 @@ jQuery(document).ready(function() {
 	// console.debug('opzoeken van ' + _defaultId + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
 
+	/*
 	jQuery("#adres").keyup(function() {
 	jQuery("#x").fadeIn();
 	if (jQuery.trim(jQuery("#adres").val()) == "") {
@@ -30,6 +31,7 @@ jQuery(document).ready(function() {
 		jQuery("#zoekresultaten").empty();
 		jQuery("#x").hide();
 	});		
+	*/
 	
 	/* for testing purposes only at the moment */
    jQuery('#content a')
