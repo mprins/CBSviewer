@@ -65,7 +65,7 @@
     <div id="headerleft" class="headerColumn headertop">
 		<div class="logo">			
 			<div id="cbslogo">
-				<!--img src="" id="cbslogo" width="100%" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/-->
+				<h1 class="titel"><fmt:message key="KEY_PAG_TITEL" /></h1>
 			</div>
 		</div>
 	</div>

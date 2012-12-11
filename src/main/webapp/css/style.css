@@ -19,7 +19,8 @@ html,body {
 
 /* opmaak van de elementen */
 .error,.todo {
-	background: url("../img/error.png") no-repeat scroll -12px 1px transparent;
+	background: url("../img/error.png") no-repeat scroll -12px 1px
+		transparent;
 	padding-left: 16px;
 	text-align: center;
 	color: #f00;
@@ -88,9 +89,11 @@ a.accesskey:focus {
 	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
 	box-shadow: inset 0px 1px 0px 0px #ffffff;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed
+		), color-stop(1, #dfdfdf) );
 	background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed',endColorstr='#dfdfdf' );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed',
+		endColorstr='#dfdfdf' );
 	background-color: #ededed;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -106,17 +109,21 @@ a.accesskey:focus {
 }
 
 #zoekContainer .adreslijst li .button:hover {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf
+		), color-stop(1, #ededed) );
 	background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf',endColorstr='#ededed' );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf',
+		endColorstr='#ededed' );
 	background-color: #dfdfdf;
 }
 
 #zoekContainer .adreslijst li .selected,#zoekContainer .adreslijst li .selected:hover
 	{
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #AFAFAF), color-stop(1, #E0E0E0) );
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #AFAFAF
+		), color-stop(1, #E0E0E0) );
 	background: -moz-linear-gradient(center top, #AFAFAF 5%, #E0E0E0 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AFAFAF',endColorstr='#E0E0E0' );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AFAFAF',
+		endColorstr='#E0E0E0' );
 	background-color: #AFAFAF;
 }
 
@@ -154,7 +161,18 @@ a.accesskey:focus {
 	border-right: none;
 }
 
-#cbslogo {
+.titel {
+	color: #C53658;
+	text-align: center;
+}
+
+/* wegschuiven in de RIA */
+html.js .titel {
+	position: absolute;
+	top: -500px;
+}
+
+html.js #cbslogo {
 	max-width: 321px;
 	height: 100%;
 	background-image: url(../img/template/hdr_logo.gif);
@@ -370,7 +388,8 @@ div.olControlZoom a {
 	padding: 0;
 	color: white;
 	font-size: 18px;
-	font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+	font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica,
+		sans-serif;
 	font-weight: bold;
 	text-decoration: none;
 	text-align: center;
@@ -417,7 +436,7 @@ a.olControlZoomOut {
 }
 
 /* Prevent tile scaling on Android 4 when d-pad keys are pressed */
-.olMapViewport > div > * {
+.olMapViewport>div>* {
 	outline-width: 0;
 }
 
@@ -705,13 +724,16 @@ a.olControlZoomOut {
 	font-size: 14px;
 	background: #ffffff;
 	background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ffffff),color-stop(100%, #eaeaea) );
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ffffff),
+		color-stop(100%, #eaeaea) );
 	background: -webkit-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
 	background: -o-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
 	background: -ms-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
 	background: linear-gradient(top, #ffffff 1%, #eaeaea 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#ffffff',endColorstr='#eaeaea', GradientType=0 );
-	box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3), 1px 0px 0px 0px rgba(255, 255, 255, 0.9) inset, 0px 2px 2px rgba(0, 0, 0, 0.1);
+	filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#ffffff',
+		endColorstr='#eaeaea', GradientType=0 );
+	box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3), 1px 0px 0px 0px
+		rgba(255, 255, 255, 0.9) inset, 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .ac-menu label {
@@ -736,7 +758,8 @@ a.olControlZoomOut {
 	background: #dedede;
 	color: #000000;
 	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
-	box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3), 0px 2px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3), 0px 2px 2px
+		rgba(0, 0, 0, 0.1);
 }
 
 .ac-container label:hover:after,.ac-container input:checked+label:hover:after,.ac-container input:focus+label:after
@@ -747,7 +770,8 @@ a.olControlZoomOut {
 	height: 24px;
 	right: 13px;
 	top: 7px;
-	background: transparent url(../img/template/arrow_down.png) no-repeat center center;
+	background: transparent url(../img/template/arrow_down.png) no-repeat
+		center center;
 }
 
 .ac-menu label:hover:after,.ac-menu input:checked+label:hover:after {
@@ -785,8 +809,8 @@ a.olControlZoomOut {
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
 }
 
-.ac-container input:checked  ~ .ac-small,.ac-container input:focus  ~
-	.ac-small {
+.ac-container input:checked    ~ .ac-small,.ac-container input:focus   
+	~ .ac-small {
 	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
@@ -795,7 +819,7 @@ a.olControlZoomOut {
 }
 
 /* show scrollbar for large legendas */
-.ac-container input:checked  ~ .ac-small {
+.ac-container input:checked    ~ .ac-small {
 	height: 100%;
 	max-height: 350px;
 	overflow: auto;
@@ -818,7 +842,7 @@ a.olControlZoomOut {
 	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
 }
 
-.ac-container input:checked  ~ .ac-menuheight {
+.ac-container input:checked    ~ .ac-menuheight {
 	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
@@ -826,15 +850,15 @@ a.olControlZoomOut {
 	box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3);
 }
 
-.ac-container input:checked  ~ .ac-menuheight {
+.ac-container input:checked    ~ .ac-menuheight {
 	height: 493px;
 }
 
-.ac-container input:checked  ~ .ac-medium {
+.ac-container input:checked    ~ .ac-medium {
 	height: 180px;
 }
 
-.ac-container input:checked  ~ .ac-large {
+.ac-container input:checked    ~ .ac-large {
 	height: 230px;
 }
 
