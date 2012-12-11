@@ -15,31 +15,30 @@ jQuery(document).ready(function() {
 	// console.debug('opzoeken van ' + _defaultId + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
 
-	$("#adres").keyup(function() {
-	$("#x").fadeIn();
-	if ($.trim($("#adres").val()) == "") {
-		$("#x").fadeOut();
-		$(".adreslijst").empty();
-		$("#zoekresultaten").empty();
+	jQuery("#adres").keyup(function() {
+	jQuery("#x").fadeIn();
+	if (jQuery.trim(jQuery("#adres").val()) == "") {
+		jQuery("#x").fadeOut();
+		jQuery(".adreslijst").empty();
+		jQuery("#zoekresultaten").empty();
 		}
 	});
  
-	$("#delete").click(function() {
-		$("#adres").val("");
-		$(".adreslijst").empty();
-		$("#zoekresultaten").empty();
-
-		$("#x").hide();
+	jQuery("#delete").click(function() {
+		jQuery("#adres").val("");
+		jQuery(".adreslijst").empty();
+		jQuery("#zoekresultaten").empty();
+		jQuery("#x").hide();
 	});		
 	
 	/* for testing purposes only at the moment */
-   $('#content a')
+   jQuery('#content a')
       .click(function()
       {
          // Destroy currrent tooltip if present
-         if($(this).data("qtip")) $(this).qtip("destroy");
+         if(jQuery(this).data("qtip")) jQuery(this).qtip("destroy");
          
-         $(this).html('topRight') 
+         jQuery(this).html('topRight') 
             .qtip({
                content: 'Dit is de inhoud',			   
 			   position: { adjust: { screen: true, scroll:true, resize:true } },
@@ -62,29 +61,29 @@ jQuery(document).ready(function() {
             });
       });
 
-	$('.hasMenu').focus(function() {
-	  if ($('.navDropDown').css('left') == '0px') {
-			$(".navDropDown").css("left","-9999px");
-			$(".megaMenu").focus();
+	jQuery('.hasMenu').focus(function() {
+	  if (jQuery('.navDropDown').css('left') == '0px') {
+			jQuery(".navDropDown").css("left","-9999px");
+			jQuery(".megaMenu").focus();
 		}
 	else {
-		  $(".navDropDown").css("left","0px");
+		  jQuery(".navDropDown").css("left","0px");
 		 }
 	});
 });
 
-//$('.megaMenu a').mouseover(function() {
+//jQuery('.megaMenu a').mouseover(function() {
 //	jQuery('span',this).html('Get name from AvailableLayers.xml?');	
 //});
 
 /**
   * Change theme from menu
   */
-$('.megaMenu a').click(function() {
+jQuery('.megaMenu a').click(function() {
 	// only load new themes
-	if ($(this).attr('name') != _defaultId)
+	if (jQuery(this).attr('name') != _defaultId)
 	{
-		var _id = $(this).attr('name');
+		var _id = jQuery(this).attr('name');
 
 		var maps = jQuery.grep(_layers, function(n, i) {
 			return n.id == _id;
@@ -117,11 +116,13 @@ var setupPage = {
 		var aCore = '<a class="accesskey" href="?coreonly=true">' + OpenLayers.i18n('KEY_CSSERROR') + '</a>';
 		jQuery('#' + config.mapDiv).prepend(aCore);
 
-		// eventueel de font-size aanpassen zodat het altijd past:
-		// http://jsfiddle.net/ad5pf/1/ en
-		// http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
-		
 		ZoekFormulier.init();
+		
+		// uitvouwen van de accordion na change event
+		jQuery('#' + config.featureInfoDiv).change(function() {
+			jQuery('#ac-2').prop('checked', true);
+		});
+
 	}
 };
 

@@ -39,8 +39,7 @@ Viewer = function() {
 	function _showInfo(evt) {
 		if (evt.text != undefined) {
 			jQuery('#' + config.featureInfoDiv).html(evt.text);
-			// QUICKFIX: uitvouwen van de accordion
-			// jQuery('#ac-2').prop('checked', true);
+			jQuery('#' + config.featureInfoDiv).change();
 		}
 	}
 	
