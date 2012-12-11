@@ -162,8 +162,7 @@ a.accesskey:focus {
 	background-color: #fff;
 	background-size: auto 51px;
 }
-
-#zoekFormulier #delete {
+/*#zoekFormulier #delete {
 	float: left;
 	width: 34px;
 	height: 31px;
@@ -186,7 +185,7 @@ a.accesskey:focus {
 
 #zoekFormulier #delete #x:hover {
 	color: #36c;
-}
+}*/
 
 #zoekFormulier #searchbutton:active {
 	background-position: 0px 31px;

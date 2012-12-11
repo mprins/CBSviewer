@@ -14,7 +14,8 @@ jQuery(document).ready(function() {
 	});
 	// console.debug('opzoeken van ' + _defaultId + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
-
+	
+	/*
 	$("#adres").keyup(function() {
 	$("#x").fadeIn();
 	if ($.trim($("#adres").val()) == "") {
@@ -30,7 +31,8 @@ jQuery(document).ready(function() {
 		$("#zoekresultaten").empty();
 
 		$("#x").hide();
-	});		
+	});	
+	*/
 	
 	/* for testing purposes only at the moment */
    $('#content a')
