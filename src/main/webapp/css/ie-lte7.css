@@ -24,3 +24,7 @@ div.olControlZoom a:hover {
 	background: #130085;
 	filter: alpha(opacity = 100);
 }
+
+#naarCoreLink {
+	top: 0;
+}
