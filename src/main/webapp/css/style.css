@@ -205,15 +205,9 @@ html.js #cbslogo {
 	color: #36c;
 }*/
 
-#zoekFormulier #searchbutton:active {
-	background-position: 0px 31px;
-	height: 31px;
-	cursor: wait;
-}
-
 #zoekFormulier #searchbutton {
-	background-image: url('../img/search.gif');
-	background-position: 0px 93px;
+	background-image: url('../img/search.png');
+	background-position: 0px 62px;
 	width: 31px;
 	height: 31px;
 	cursor: pointer;
@@ -221,7 +215,7 @@ html.js #cbslogo {
 }
 
 #zoekFormulier #searchbutton:hover,#zoekFormulier #searchbutton:focus {
-	background-position: 0px 62px;
+	background-position: 0px 31px;
 	cursor: hand;
 	cursor: pointer;
 	height: 31px;
