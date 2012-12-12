@@ -139,11 +139,12 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 		</li>
 	</ul>
 
+
+</div>
+
 	<div id="copyright" class="copy">
 		<fmt:message key="KEY_COPYRIGHT" />
 	</div>
-</div>
-
 <div id="footer">			
 		<a href="#">Doorsturen</a>
 		<a href="#">Disclaimer</a>

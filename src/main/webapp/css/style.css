@@ -528,9 +528,6 @@ a.olControlZoomOut {
 
 #inhoud {
 	height: 100%;
-	padding: 76px 0px 88px 0px;
-	padding-bottom: 88px;
-	margin: -76px 0;
 	z-index: 1;
 }
 
