@@ -893,6 +893,7 @@
 								<configLocation>${basedir}/checkstyle-ruleset.xml</configLocation>
 								<suppressionsLocation>${basedir}/checkstyle-suppressions.xml</suppressionsLocation>
 								<enableRSS>true</enableRSS>
+								<excludes>**/WMSComplexTypes.java</excludes>
 							</configuration>
 							<reportSets>
 								<reportSet>
@@ -913,6 +914,9 @@
 								<minimumTokens>100</minimumTokens>
 								<targetJdk>${jdk.version}</targetJdk>
 								<includeTests>false</includeTests>
+								<excludes>
+									<exclude>**/WMSComplexTypes.java</exclude>
+								</excludes>
 							</configuration>
 						</plugin>
 						<plugin>
@@ -928,7 +932,7 @@
 								<effort>Default</effort>
 								<threshold>Normal</threshold>
 								<xmlOutput>true</xmlOutput>
-								<excludeFilterFile />
+								<onlyAnalyze>nl.mineleni.*</onlyAnalyze>
 							</configuration>
 						</plugin>
 						<plugin>
