@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
 	// console.debug('opzoeken van ' + _defaultId + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
 
-	// het accordion menu en settings panel werkt nu ook zonder javascript en CSS3. 
+	// het accordion menu en settings panel werkt nu ook zonder Javascript en CSS3. 
 	// Dit stukje zorgt voor een vloeiender menu	
 	var settings_head = jQuery('.settingsPanel > li > a'),
 	settings_body = jQuery('.settingsPanel li > .settingsContent');
@@ -155,9 +155,14 @@ var setupPage = {
 
 		ZoekFormulier.init();
 		
-		// uitvouwen van de accordion na change event
+		// uitvouwen van de accordion na change event, klap de legenda in voor meer duideijkheid voor de gebruiker
 		jQuery('#' + config.featureInfoDiv).change(function() {
-			jQuery('#ac-2').prop('checked', true);
+			if (jQuery('#keyfeatureinfo a').attr('class') != 'active') {
+				jQuery('#keylegend .settingsContent').slideUp('normal');
+				jQuery('#keyfeatureinfo a').next().stop(true,true).slideToggle('normal');
+				jQuery('#keylegend a').removeClass('active');
+				jQuery('#keyfeatureinfo a').addClass('active');
+			}
 		});
 	}
 };
