@@ -15,6 +15,36 @@ jQuery(document).ready(function() {
 	// console.debug('opzoeken van ' + _defaultId + ' in ', _layers, maps);
 	Viewer.loadWMS(maps[0]);
 
+	// het accordion menu en settings panel werkt nu ook zonder javascript en CSS3. 
+	// Dit stukje zorgt voor een vloeiender menu	
+	var settings_head = jQuery('.settingsPanel > li > a'),
+	settings_body = jQuery('.settingsPanel li > .settingsContent');
+	settings_head.first().addClass('active').next().slideDown('normal');
+	settings_head.on('click', function(event) {
+		event.preventDefault();
+
+		if (jQuery(this).attr('class') != 'active') {
+			settings_body.slideUp('normal');
+			jQuery(this).next().stop(true,true).slideToggle('normal');
+			settings_head.removeClass('active');
+			jQuery(this).addClass('active');
+		}
+	});	
+
+	var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'),
+	menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');
+	menuAccordion_head.first().addClass('active').next().slideDown('normal');
+	menuAccordion_head.on('click', function(event) {
+		event.preventDefault();
+
+		if (jQuery(this).attr('class') != 'active') {
+			menuAccordion_body.slideUp('normal');
+			jQuery(this).next().stop(true,true).slideToggle('normal');
+			menuAccordion_head.removeClass('active');
+			jQuery(this).addClass('active');
+		}
+	});
+	
 	/*
 	jQuery("#adres").keyup(function() {
 	jQuery("#x").fadeIn();
@@ -63,6 +93,7 @@ jQuery(document).ready(function() {
             });
       });
 
+	/* Fix this just like the accordion 
 	jQuery('.hasMenu').focus(function() {
 	  if (jQuery('.navDropDown').css('left') == '0px') {
 			jQuery(".navDropDown").css("left","-9999px");
@@ -71,7 +102,7 @@ jQuery(document).ready(function() {
 	else {
 		  jQuery(".navDropDown").css("left","0px");
 		 }
-	});
+	}); */
 });
 
 //jQuery('.megaMenu a').mouseover(function() {
@@ -83,7 +114,7 @@ jQuery(document).ready(function() {
   */
 jQuery('.megaMenu a').click(function() {
 	// only load new themes
-	if (jQuery(this).attr('name') != _defaultId)
+	if (jQuery(this).attr('name') != _defaultId && jQuery(this).attr('class') != 'accordionheader')
 	{
 		var _id = jQuery(this).attr('name');
 

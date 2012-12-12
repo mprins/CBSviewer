@@ -108,11 +108,10 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 	
 	<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
 	
-	<div class="ac-container">
-		<div>
-			<input id="ac-1" name="accordion-1" type="checkbox" checked="checked"/>
-			<label for="ac-1"><fmt:message key="KEY_LEGENDA_TITEL" /></label>
-			<div class="ac-small" id="legenda">
+	<ul class="settingsPanel">			
+		<li id="keylegend" class="legendPanel">
+			<a href="#keylegend"><fmt:message key="KEY_LEGENDA_TITEL" /></a>
+			<div id="legenda" class="settingsContent">
 				<p>
 					<!-- plaats voor de legenda, dynamisch en statisch -->
 					<c:if test="${param.coreonly==true}">
@@ -125,11 +124,10 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 					</c:if>
 				</p>
 			</div>
-		</div>
-		<div>
-			<input id="ac-2" name="accordion-1" type="checkbox"/>
-			<label for="ac-2"><fmt:message key="KEY_INFO_TITEL" /></label>
-			<div class="ac-small" id="featureinfo">
+		</li>			
+		<li id="keyfeatureinfo" class="featureinfoPanel">
+			<a href="#keyfeatureinfo"><fmt:message key="KEY_INFO_TITEL" /></a>
+			<div id="featureinfo" class="settingsContent">
 				<p>
 					<c:if test="${param.coreonly==true}">
 						<c:if test="${not empty featureinfo}">
@@ -138,33 +136,20 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 					</c:if>
 				</p>
 			</div>
-		</div>
-	</div>
+		</li>
+	</ul>
 
 	<div id="copyright" class="copy">
 		<fmt:message key="KEY_COPYRIGHT" />
 	</div>
 </div>
 
-<div id="footer">
-	<div class="teaserPanel">
-				<div class="teaserContent">
-					<a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/publicaties/gemeente-op-maat/gemeente-op-maat/default.htm" class="opMaat" title="Uw Gemeente Op Maat">Uw Gemeente Op Maat<span>Publicaties en Documenten</span></a>
-					<a href="http://www.cbs.nl/nl-NL/menu/_unique/_nieuws/default.htm" title="CBS In uw buurt nieuws" class="rss">CBS In uw buurt nieuws<span>De laatste ontwikkelingen</span></a>
-					<a href="http://statline.cbs.nl" title="CBS Databank - Statline" class="databank">CBS Databank - Statline<span>Professionele data nodig?</span></a>
-					<a href="http://www.cbs.nl/nl-NL/menu/informatie/publiek/inlichtingen/default.htm" title="Gebruikersreacties gezocht" class="gezocht"><strong>Gezocht:</strong> Gebruikersreacties<span>Heeft u tips of suggesties?</span></a>
-				</div>
-			</div>		
-			<div class="footer">
-				<div id="_footerPanel">
-					<fmt:message key="KEY_COPYRIGHT" />
-					<a href="#">Doorsturen</a>
-					<a href="#">Disclaimer</a>
-					<a href="#">Privacyverklaring</a>
-					<a href="#">Sitemap</a>
-					<a href="#" class="last">RSS</a> 
-				</div>
-            </div>		
+<div id="footer">			
+		<a href="#">Doorsturen</a>
+		<a href="#">Disclaimer</a>
+		<a href="#">Privacyverklaring</a>
+		<a href="#">Sitemap</a>
+		<a href="#" class="last">RSS</a> 	
 </div>
 
 		<c:if test="${param.coreonly!=true}">

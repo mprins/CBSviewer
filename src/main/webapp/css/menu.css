@@ -19,7 +19,7 @@
 
 .siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li { margin: 0; padding: 0; list-style: none;}
 
-.megaMenu, .megaMenu ul, .navCategories, .megaMenu .col  {	min-height: 525px;}
+.megaMenu, .megaMenu ul, .navCategories, .megaMenu .col  {	min-height: 510px;}
 
 .siteNavigation .sectionTheme:hover .navDropDown
 /*.siteNavigation>li>a.hasMenu:focus ~ .navDropDown */
@@ -131,8 +131,6 @@
 	padding-right: 10px
 }
 
-
-
 .navDropDown {
 	position:absolute;
 	top: 35px;
@@ -224,39 +222,39 @@
 	border-radius: 0 0 3px 0;
 }
 
-.megaMenu ul, .megaMenu .col {
+.megaMenu ul ul, .megaMenu .col {
 	width: 33%;
 	float: left;
 }
-.megaMenu ul:last-child,
+.megaMenu ul ul:last-child,
 .megaMenu .col:last-child { border: none; width: 33.6666666%}
 
-.megaOneColumn ul, 
+.megaOneColumn ul ul, 
 .megaOneColumn .col { width: 100%;} 
-.megaOneColumn ul:last-child,
+.megaOneColumn ul ul:last-child,
 .megaOneColumn .col:last-child { width: 100%; }
 
-.megaTwoColumns ul, 
+.megaTwoColumns ul ul, 
 .megaTwoColumns .col { width: 49.75%;}
-.megaTwoColumns ul:last-child,
+.megaTwoColumns ul ul:last-child,
 .megaTwoColumns .col:last-child { width: 50%; }
 		
-.megaThreeColumns ul, 
+.megaThreeColumns ul ul, 
 .megaThreeColumns .col { width: 33%;}
-.megaThreeColumns ul:last-child,
+.megaThreeColumns ul ul:last-child,
 .megaThreeColumns .col:last-child { width: 34%; }
 		
-.megaFourColumns ul, 
+.megaFourColumns ul ul, 
 .megaFourColumns .col { width: 24.75%;}
-.megaFourColumns ul:last-child,
+.megaFourColumns ul ul:last-child,
 .megaFourColumns .col:last-child { width: 25.25%; }
 
 .megaTwoThirdsColumns .col { width: 50%;}
 .megaTwoThirdsColumns .col:last-child { width: 50%;}
-.megaTwoThirdsColumns ul { width: 24.5%; }
-.megaTwoThirdsColumns ul:last-child { width: 25%; }	
+.megaTwoThirdsColumns ul ul { width: 24.5%; }
+.megaTwoThirdsColumns ul ul:last-child { width: 25%; }	
 		
-.megaMenu ul li, 
+.megaMenu ul ul li, 
 .megaMenu .col .padding {
 	padding: 2px 10px 2px 10px; 
 	display: block; 
