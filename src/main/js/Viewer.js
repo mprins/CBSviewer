@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
 /**
  * Viewer.
  * 
@@ -37,12 +43,12 @@ Viewer = function() {
 	 * @private
 	 */
 	function _showInfo(evt) {
-		if (evt.text != undefined) {
+		if (evt.text !== undefined) {
 			jQuery('#' + config.featureInfoDiv).html(evt.text);
 			jQuery('#' + config.featureInfoDiv).change();
 		}
 	}
-	
+
 	/**
 	 * zorgt voor correct afhandelen van viewport resize.
 	 * 
@@ -55,7 +61,8 @@ Viewer = function() {
 			var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
 			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-			// var h = jQuery('#' + this.config.mapDiv).parent().height();
+			// var h = jQuery('#' + this.config.mapDiv).parent().height() -
+			// borderH;
 			var h = jQuery('#' + this.config.mapDiv).parent().parent().height() - borderH;
 
 			jQuery('#' + this.config.mapDiv).width(w).height(h);
@@ -113,9 +120,9 @@ Viewer = function() {
 
 			if (this.config.toggleSize) {
 				// toggle knop voor vergroten/verkleinen van de kaart
-				var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('KEY_TOGGLE_SIZE')
-						+ '" onclick="Viewer.toggleFullSize();"></a>';
-				jQuery('#' + config.mapDiv).prepend(aToggle);
+				var aToggleMapSize = '<a class="max" href="#" id="toggleSize" title="'
+						+ OpenLayers.i18n('KEY_TOGGLE_SIZE') + '" onclick="Viewer.toggleFullSize();"></a>';
+				jQuery('#' + config.mapDiv).prepend(aToggleMapSize);
 			}
 			if (this.config.fullSize) {
 				this.toggleFullSize();
@@ -126,7 +133,7 @@ Viewer = function() {
 					clearTimeout(_resizeTimeOut);
 				}
 				_resizeTimeOut = setTimeout(_resize, 200); // 200 is time in
-															// miliseconds
+				// miliseconds
 			});
 		},
 
@@ -146,9 +153,9 @@ Viewer = function() {
 		 * verplaats en zoom de kaart naar de gevraagde locatie.
 		 * 
 		 * @param {number}
-		 *            x x coordinaat
+		 *            x de x coordinaat
 		 * @param {number}
-		 *            y y coordinaat
+		 *            y de y coordinaat
 		 * @param {number}
 		 *            radius straal van het gebied
 		 */
@@ -280,15 +287,15 @@ Viewer = function() {
 					var bounds = vectors[0].getDataExtent();
 					_map.panTo(bounds.getCenterLonLat());
 				}
-
 			} else {
 				// vergroten
 				var borderW = parseInt(jQuery('#' + this.config.mapDiv).css('borderLeftWidth'), 10)
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 				var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
+
 				var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-				// var h = jQuery('#' + this.config.mapDiv).parent().height();
+				// var hh = jQuery('#' + this.config.mapDiv).parent().height();
 				var h = jQuery('#' + this.config.mapDiv).parent().parent().height() - borderH;
 
 				jQuery('#' + this.config.mapDiv).width(w).height(h);
@@ -296,7 +303,6 @@ Viewer = function() {
 				_fullSize = true;
 				_map.updateSize();
 			}
-
 		},
 
 		/**

@@ -17,16 +17,16 @@ describe(
 					'Na het initialiseren van Viewer',
 					function() {
 						var _wms = {
-							'name' : 'wms-layer',
-							'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows',
-							'layers' : 'cbsvierkanten100m2010:cbs_inwoners_2000_per_hectare',
-							'styles' : 'cbsvierkant100m_inwoners_2000'
+							'name' : 'autochtonen_2011',
+							'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms',
+							'layers' : 'autochtonen_2011',
+							'styles' : 'cbsvierkanten500m.p_auto2011'
 						};
 						var _wms2 = {
-							'name' : 'cbs_inwoners_2010_per_hectare',
-							'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows',
-							'layers' : 'cbsvierkanten100m2010:cbs_inwoners_2000_per_hectare',
-							'styles' : 'cbsvierkant100m_inwoners_2000'
+							'name' : 'wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen',
+							'url' : 'http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms',
+							'layers' : 'cbs_buurten_2011',
+							'styles' : 'wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen'
 						};
 
 						beforeEach(function() {
@@ -115,7 +115,7 @@ describe(
 									// expect(latlon.lat).toEqual(y);
 									expect(Viewer.getMap().getZoom()).not.toEqual(config.map.initialZoom);
 								});
-						it('na schakelen basemap is de actieve basemap lufo',function(){
+						it('na schakelen basemap is de actieve basemap lufo', function() {
 							Viewer.toggleBaseMap();
 							expect(Viewer.getMap().baseLayer.name).toEqual('lufo');
 						});

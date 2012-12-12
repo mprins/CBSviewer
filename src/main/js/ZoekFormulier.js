@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
 /**
  * Functies voor het zoekformulier zoals gedefinieerd in zoekformulier.jsp.
  * 
@@ -91,9 +97,9 @@ var ZoekFormulier = {
 
 			for ( var i = 0; i < data.length; i++) {
 				var selected = "";
-				if (i == 0)
+				if (i === 0) {
 					selected = " selected";
-
+				}
 				html += '<li><a id="button' + i + '" class="button' + selected
 						+ '" href="#" onclick="ZoekFormulier.toggleSelectedButton(' + i + ');Viewer.zoomTo('
 						+ data[i].xCoord + ',' + data[i].yCoord + ',' + data[i].radius + ');return false;" title="'
