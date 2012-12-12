@@ -16,20 +16,13 @@ import nl.mineleni.openls.databinding.openls.GeocodedAddress;
 public final class OpenLSClientUtil {
 
 	/** De constante PLACE_TYPE_COUNTRYSUBDIVISION. {@value} */
-	public final static String PLACE_TYPE_COUNTRYSUBDIVISION = "CountrySubdivision";
+	public static final String PLACE_TYPE_COUNTRYSUBDIVISION = "CountrySubdivision";
 
 	/** De constante PLACE_TYPE_MUNICIPALITY. {@value} */
 	public static final String PLACE_TYPE_MUNICIPALITY = "Municipality";
 
 	/** De constante PLACE_TYPE_MUNICIPALITYSUBDIVISION. {@value} */
 	public static final String PLACE_TYPE_MUNICIPALITYSUBDIVISION = "MunicipalitySubdivision";
-
-	/**
-	 * private constructor voor deze utility klasse.
-	 */
-	private OpenLSClientUtil() {
-		/* private constructor voor deze utility klasse. */
-	}
 
 	/**
 	 * Gets the geocoded address list.
@@ -61,7 +54,7 @@ public final class OpenLSClientUtil {
 	 * @return the open ls client address list
 	 */
 	public static List<OpenLSClientAddress> getOpenLSClientAddressList(
-			final GeocodeResponse gcr, int... max) {
+			final GeocodeResponse gcr, final int... max) {
 		final List<OpenLSClientAddress> addressList = new ArrayList<OpenLSClientAddress>();
 		final List<GeocodedAddress> gcal = getGeocodedAddressList(gcr);
 
@@ -125,5 +118,12 @@ public final class OpenLSClientUtil {
 			}
 		}
 		return addressList;
+	}
+
+	/**
+	 * private constructor voor deze utility klasse.
+	 */
+	private OpenLSClientUtil() {
+		/* private constructor voor deze utility klasse. */
 	}
 }

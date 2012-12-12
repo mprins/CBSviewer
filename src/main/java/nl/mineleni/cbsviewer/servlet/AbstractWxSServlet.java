@@ -40,6 +40,35 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 	private static final long serialVersionUID = -5563479037661945586L;
 
 	/**
+	 * Checking for String that is not null, not empty, and not white space only
+	 * using standard Java classes.
+	 * 
+	 * @param toTest
+	 *            String to be checked for not null, not empty, and not white
+	 *            space only.
+	 * @return {@code true} if provided String is not null, is not empty, and
+	 *         has at least one character that is not considered white space.
+	 */
+	protected boolean isNotNullNotEmptyNotWhiteSpaceOnly(final String toTest) {
+		return ((toTest != null) && !toTest.isEmpty() && !toTest.trim()
+				.isEmpty());
+	}
+
+	/**
+	 * Parse de forward parameter van een request.
+	 * 
+	 * @see nl.mineleni.cbsviewer.util.NumberConstants#REQ_PARAM_FORWARD
+	 * @return {@code true}, als parameter aanwezig is en waarde "true" heeft,
+	 *         anders / default {@code false}
+	 * @param request
+	 *            Het servlet request
+	 */
+	protected boolean parseForward(final HttpServletRequest request) {
+		return (null == request.getParameter(REQ_PARAM_FORWARD.code) ? false
+				: Boolean.valueOf(request.getParameter(REQ_PARAM_FORWARD.code)));
+	}
+
+	/**
 	 * Parse locatie uit een request. Indien waarden niet geldig zijn of
 	 * ontbreken worden de defaults
 	 * {@link nl.mineleni.cbsviewer.util.NumberConstants#DEFAULT_XCOORD} ,
@@ -53,10 +82,9 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 	 * @throws ServletException
 	 *             Als parsen is mislukt
 	 */
-	protected int[] parseLocation(HttpServletRequest request)
+	protected int[] parseLocation(final HttpServletRequest request)
 			throws ServletException {
 		try {
-
 			final Enumeration<String> attr = request.getAttributeNames();
 			while (attr.hasMoreElements()) {
 				final String name = attr.nextElement();
@@ -65,7 +93,6 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 			}
 
 			final Map<String, String[]> p = request.getParameterMap();
-
 			for (final Map.Entry<String, String[]> e : p.entrySet()) {
 				LOGGER.debug("parameter key: " + e.getKey() + " value: "
 						+ Arrays.toString(e.getValue()));
@@ -88,7 +115,6 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 							.getParameter(REQ_PARAM_STRAAL.code)) ? OPENLS_ZOOMSCALE_STANDAARD
 							.toString() : request
 							.getParameter(REQ_PARAM_STRAAL.code))).intValue();
-
 			request.setAttribute(REQ_PARAM_XCOORD.code, xcoord);
 			request.setAttribute(REQ_PARAM_YCOORD.code, ycoord);
 			request.setAttribute(REQ_PARAM_STRAAL.code, straal);
@@ -103,35 +129,5 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 					e);
 			throw new ServletException(e);
 		}
-
-	}
-
-	/**
-	 * Checking for String that is not null, not empty, and not white space only
-	 * using standard Java classes.
-	 * 
-	 * @param toTest
-	 *            String to be checked for not null, not empty, and not white
-	 *            space only.
-	 * @return {@code true} if provided String is not null, is not empty, and
-	 *         has at least one character that is not considered white space.
-	 */
-	protected boolean isNotNullNotEmptyNotWhiteSpaceOnly(String toTest) {
-		return ((toTest != null) && !toTest.isEmpty() && !toTest.trim()
-				.isEmpty());
-	}
-
-	/**
-	 * Parse de forward parameter van een request.
-	 * 
-	 * @see nl.mineleni.cbsviewer.util.NumberConstants#REQ_PARAM_FORWARD
-	 * @return {@code true}, als parameter aanwezig is en waarde "true" heeft,
-	 *         anders / default {@code false}
-	 * @param request
-	 *            Het servlet request
-	 */
-	protected boolean parseForward(HttpServletRequest request) {
-		return (null == request.getParameter(REQ_PARAM_FORWARD.code) ? false
-				: Boolean.valueOf(request.getParameter(REQ_PARAM_FORWARD.code)));
 	}
 }

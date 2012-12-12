@@ -3,11 +3,14 @@ package nl.mineleni.openls.databinding.openls;
 import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
+ * OLS Building.
+ * 
  * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
  * 
- * &lt;element name="Building" type="xls:BuildingLocatorType" substitutionGroup="xls:_StreetLocation">
+ * &lt;element name="Building" type="xls:BuildingLocatorType" 
+ * 		substitutionGroup="xls:_StreetLocation">
  *   &lt;annotation>
  *     &lt;documentation>An addressable place; normally a location on a street: number, 
  *     subdivision name and/or building name.&lt;/documentation>
@@ -31,142 +34,142 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * @author mprins
  */
 public class Building implements XmlNamespaceConstants {
-    /**
-     * serialization id.
-     */
-    private static final long serialVersionUID = -6760538060544745111L;
-    /**
-     * building number.
-     */
-    private String number;
+	/**
+	 * serialization id.
+	 */
+	private static final long serialVersionUID = -6760538060544745111L;
+	/**
+	 * building number.
+	 */
+	private String number;
 
-    /** number subdivision. */
-    private String subdivision;
-    /**
-     * name of the building.
-     */
-    private String buildingName;
+	/** number subdivision. */
+	private String subdivision;
+	/**
+	 * name of the building.
+	 */
+	private String buildingName;
 
-    /** The has number. */
-    private boolean hasNumber;
+	/** The has number. */
+	private boolean hasNumber;
 
-    /** The has subdivision. */
-    private boolean hasSubdivision;
+	/** The has subdivision. */
+	private boolean hasSubdivision;
 
-    /** The has building name. */
-    private boolean hasBuildingName;
+	/** The has building name. */
+	private boolean hasBuildingName;
 
-    /**
-     * Instantiates a new building.
-     */
-    public Building() {
-        this.hasNumber = false;
-        this.hasSubdivision = false;
-        this.hasBuildingName = false;
-    }
+	/**
+	 * Instantiates a new building.
+	 */
+	public Building() {
+		this.hasNumber = false;
+		this.hasSubdivision = false;
+		this.hasBuildingName = false;
+	}
 
-    /**
-     * Sets the number.
-     * 
-     * @param number
-     *            the new number
-     */
-    public void setNumber(String number) {
-        this.hasNumber = true;
-        this.number = number;
-    }
+	/**
+	 * Sets the number.
+	 * 
+	 * @param number
+	 *            the new number
+	 */
+	public void setNumber(String number) {
+		this.hasNumber = true;
+		this.number = number;
+	}
 
-    /**
-     * Gets the number.
-     * 
-     * @return the number
-     */
-    public String getNumber() {
-        return this.number;
-    }
+	/**
+	 * Gets the number.
+	 * 
+	 * @return the number
+	 */
+	public String getNumber() {
+		return this.number;
+	}
 
-    /**
-     * Checks for number.
-     * 
-     * @return true, if successful
-     */
-    public boolean hasNumber() {
-        return this.hasNumber;
-    }
+	/**
+	 * Checks for number.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasNumber() {
+		return this.hasNumber;
+	}
 
-    /**
-     * Sets the subdivision.
-     * 
-     * @param subdivision
-     *            the new subdivision
-     */
-    public void setSubdivision(String subdivision) {
-        this.hasSubdivision = true;
-        this.subdivision = subdivision;
-    }
+	/**
+	 * Sets the subdivision.
+	 * 
+	 * @param subdivision
+	 *            the new subdivision
+	 */
+	public void setSubdivision(String subdivision) {
+		this.hasSubdivision = true;
+		this.subdivision = subdivision;
+	}
 
-    /**
-     * Gets the subdivision.
-     * 
-     * @return the subdivision
-     */
-    public String getSubdivision() {
-        return this.subdivision;
-    }
+	/**
+	 * Gets the subdivision.
+	 * 
+	 * @return the subdivision
+	 */
+	public String getSubdivision() {
+		return this.subdivision;
+	}
 
-    /**
-     * Checks for subdivision.
-     * 
-     * @return true, if successful
-     */
-    public boolean hasSubdivision() {
-        return this.hasSubdivision;
-    }
+	/**
+	 * Checks for subdivision.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasSubdivision() {
+		return this.hasSubdivision;
+	}
 
-    /**
-     * Sets the building name.
-     * 
-     * @param buildingName
-     *            the new building name
-     */
-    public void setBuildingName(String buildingName) {
-        this.hasBuildingName = true;
-        this.buildingName = buildingName;
-    }
+	/**
+	 * Sets the building name.
+	 * 
+	 * @param buildingName
+	 *            the new building name
+	 */
+	public void setBuildingName(String buildingName) {
+		this.hasBuildingName = true;
+		this.buildingName = buildingName;
+	}
 
-    /**
-     * Gets the building name.
-     * 
-     * @return the building name
-     */
-    public String getBuildingName() {
-        return this.buildingName;
-    }
+	/**
+	 * Gets the building name.
+	 * 
+	 * @return the building name
+	 */
+	public String getBuildingName() {
+		return this.buildingName;
+	}
 
-    /**
-     * Checks for building name.
-     * 
-     * @return true, if successful
-     */
-    public boolean hasBuildingName() {
-        return this.hasBuildingName;
-    }
+	/**
+	 * Checks for building name.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasBuildingName() {
+		return this.hasBuildingName;
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see nl.mineleni.openls.databinding.common.XmlNamespaceConstants#toXML()
-     */
-    @Override
-    public String toXML() {
-        String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":Building";
-        if (this.hasNumber()) {
-            xml += " number=\"" + this.getNumber() + "\"";
-        }
-        xml += ">";
-        xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":Building>";
-        return xml;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.databinding.common.XmlNamespaceConstants#toXML()
+	 */
+	@Override
+	public String toXML() {
+		String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":Building";
+		if (this.hasNumber()) {
+			xml += " number=\"" + this.getNumber() + "\"";
+		}
+		xml += ">";
+		xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":Building>";
+		return xml;
+	}
 }

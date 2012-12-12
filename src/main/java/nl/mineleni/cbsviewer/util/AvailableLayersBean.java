@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.util;
 
@@ -113,7 +113,7 @@ public class AvailableLayersBean {
 	/**
 	 * geeft de eerste layerdescriptor met de gevraagde naam.
 	 * 
-	 * @param name
+	 * @param lyrName
 	 *            de naam van de wms laag
 	 * @return the layer by name
 	 * @see LayerDescriptor#getLayers()

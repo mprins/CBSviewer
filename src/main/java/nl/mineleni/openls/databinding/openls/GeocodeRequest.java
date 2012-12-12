@@ -5,11 +5,14 @@ import java.util.Vector;
 import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
+ * OLS GeocodeRequest.
+ * 
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>
  * 
- * &lt;element name="GeocodeRequest" type="xls:GeocodeRequestType" substitutionGroup="xls:_RequestParameters"> 
+ * &lt;element name="GeocodeRequest" type="xls:GeocodeRequestType" 
+ * 		substitutionGroup="xls:_RequestParameters"> 
  *  &lt;annotation>
  *      &lt;documentation>Geocode Service Request&lt;/documentation> 
  *  &lt;/annotation>

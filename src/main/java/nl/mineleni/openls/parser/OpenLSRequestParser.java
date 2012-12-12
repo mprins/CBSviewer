@@ -130,11 +130,10 @@ public class OpenLSRequestParser extends DefaultHandler {
 	 */
 	public GeocodeRequest getGeocodeRequest() {
 		GeocodeRequest geocodeRequest = null;
-		if (this.objStack.firstElement() != null) {
-			if (this.objStack.firstElement().getClass() == new GeocodeRequest()
-					.getClass()) {
-				geocodeRequest = (GeocodeRequest) this.objStack.firstElement();
-			}
+		if (this.objStack.firstElement() != null
+				&& this.objStack.firstElement().getClass() == new GeocodeRequest()
+						.getClass()) {
+			geocodeRequest = (GeocodeRequest) this.objStack.firstElement();
 		}
 		return geocodeRequest;
 	}

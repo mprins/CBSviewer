@@ -136,10 +136,8 @@ public class WMSCache extends Cache<BoundingBox, CacheImage, BufferedImage> {
 	public void remove(final BoundingBox bbox) {
 		super.remove(bbox);
 		final CachableImage<BufferedImage> entry = get(bbox);
-		if (entry != null) {
-			if (!(new File(entry.getName())).delete()) {
-				LOGGER.warn("Het cachebestand kon niet worden verwijderd.");
-			}
+		if (entry != null && !(new File(entry.getName())).delete()) {
+			LOGGER.warn("Het cachebestand kon niet worden verwijderd.");
 		}
 	}
 

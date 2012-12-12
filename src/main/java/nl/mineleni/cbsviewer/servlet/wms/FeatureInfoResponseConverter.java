@@ -57,7 +57,7 @@ public final class FeatureInfoResponseConverter {
 			.getLogger(FeatureInfoResponseConverter.class);
 
 	/** resource bundle. */
-	private static final LabelsBundle _RESOURCES = new LabelsBundle();
+	private static final LabelsBundle RESOURCES = new LabelsBundle();
 
 	/**
 	 * Cleanup html.
@@ -125,7 +125,7 @@ public final class FeatureInfoResponseConverter {
 				LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo");
 				return
 
-				_RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
+				RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
 			}
 		} catch (ParserConfigurationException | SAXException e) {
 			LOGGER.error("Fout tijdens parsen van GML. ", e);
@@ -170,7 +170,7 @@ public final class FeatureInfoResponseConverter {
 	 * 
 	 * @param input
 	 *            inputstream met de featureinfo response.
-	 * @param Type
+	 * @param type
 	 *            het Type conversie
 	 * @param attributes
 	 *            namen van de feature attributen

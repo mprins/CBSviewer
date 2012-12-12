@@ -161,12 +161,10 @@ public class OpenLSResponseParser extends DefaultHandler {
 	 */
 	public GeocodeResponse getGeocodeResponse() {
 		GeocodeResponse geocodeResponse = null;
-		if (this.objStack.firstElement() != null) {
-			if (this.objStack.firstElement().getClass() == new GeocodeResponse()
-					.getClass()) {
-				geocodeResponse = (GeocodeResponse) this.objStack
-						.firstElement();
-			}
+		if (this.objStack.firstElement() != null
+				&& this.objStack.firstElement().getClass() == new GeocodeResponse()
+						.getClass()) {
+			geocodeResponse = (GeocodeResponse) this.objStack.firstElement();
 		}
 		return geocodeResponse;
 	}

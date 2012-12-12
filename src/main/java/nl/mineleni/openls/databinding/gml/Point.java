@@ -5,6 +5,8 @@ import java.util.Vector;
 import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
+ * GML Point.
+ * 
  * http://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd
  * 
  * <pre>
@@ -28,58 +30,58 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  */
 public class Point implements XmlNamespaceConstants {
 
-    /**
-     * serialisation id.
-     */
-    private static final long serialVersionUID = -163863783181316506L;
-    private Vector<Pos> pos = new Vector<Pos>();;
-    private String srsName;
+	/**
+	 * serialisation id.
+	 */
+	private static final long serialVersionUID = -163863783181316506L;
+	private final Vector<Pos> pos = new Vector<Pos>();;
+	private String srsName;
 
-    private boolean hasSrsName;
+	private boolean hasSrsName;
 
-    public Point() {
-        this.hasSrsName = false;
-    }
+	public Point() {
+		this.hasSrsName = false;
+	}
 
-    public void addPos(Pos pos) {
-        this.pos.add(pos);
-    }
+	public void addPos(Pos p) {
+		this.pos.add(p);
+	}
 
-    public Pos getPosAt(int i) {
-        return this.pos.get(i);
-    }
+	public Pos getPosAt(int i) {
+		return this.pos.get(i);
+	}
 
-    public int getPosSize() {
-        return this.pos.size();
-    }
+	public int getPosSize() {
+		return this.pos.size();
+	}
 
-    public void setSrsName(String srsName) {
-        this.hasSrsName = true;
-        this.srsName = srsName;
-    }
+	public void setSrsName(String srsName) {
+		this.hasSrsName = true;
+		this.srsName = srsName;
+	}
 
-    public String getSrsName() {
-        return this.srsName;
-    }
+	public String getSrsName() {
+		return this.srsName;
+	}
 
-    public boolean hasSrsName() {
-        return this.hasSrsName;
-    }
+	public boolean hasSrsName() {
+		return this.hasSrsName;
+	}
 
-    @Override
-    public String toXML() {
-        final StringBuilder sb = new StringBuilder("<"
-                + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + ":Point");
+	@Override
+	public String toXML() {
+		final StringBuilder sb = new StringBuilder("<"
+				+ XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + ":Point");
 
-        if (this.hasSrsName()) {
-            sb.append(" srsName=\"").append(this.getSrsName()).append("\"");
-        }
-        sb.append(">");
-        for (final Pos p : this.pos) {
-            sb.append(p.toXML());
-        }
-        sb.append("</" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX
-                + ":Point>");
-        return sb.toString();
-    }
+		if (this.hasSrsName()) {
+			sb.append(" srsName=\"").append(this.getSrsName()).append("\"");
+		}
+		sb.append(">");
+		for (final Pos p : this.pos) {
+			sb.append(p.toXML());
+		}
+		sb.append("</" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX
+				+ ":Point>");
+		return sb.toString();
+	}
 }
