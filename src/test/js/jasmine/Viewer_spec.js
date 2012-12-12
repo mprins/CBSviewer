@@ -92,8 +92,7 @@ describe(
 							expect(config.map.width).toBeLessThan(parseInt(w));
 							var h = document.getElementById(config.mapDiv).style.height;
 							// console.log('h:', h);
-							// werkt niet zie opmerking in Viewer.js
-							// expect(config.map.height).toBeLessThan(parseInt(h));
+							expect(config.map.height).toBeLessThan(parseInt(h));
 
 							// toggle back
 							Viewer.toggleFullSize();
@@ -115,9 +114,24 @@ describe(
 									// expect(latlon.lat).toEqual(y);
 									expect(Viewer.getMap().getZoom()).not.toEqual(config.map.initialZoom);
 								});
+
 						it('na schakelen basemap is de actieve basemap lufo', function() {
 							Viewer.toggleBaseMap();
 							expect(Viewer.getMap().baseLayer.name).toEqual('lufo');
+						});
+
+						it('na twee keer schakelen basemap is de actieve basemap topo', function() {
+							Viewer.toggleBaseMap();
+							Viewer.toggleBaseMap();
+							expect(Viewer.getMap().baseLayer.name).toEqual('topo');
+						});
+
+						it('printpreview kaart afmeting is gelijk aan config.', function() {
+							Viewer.printPrepare();
+							var w = document.getElementById(config.mapDiv).style.width;
+							var h = document.getElementById(config.mapDiv).style.height;
+							expect(config.map.width).toEqual(parseInt(w));
+							expect(config.map.height).toEqual(parseInt(h));
 						});
 					});
 
