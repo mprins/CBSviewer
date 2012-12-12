@@ -30,6 +30,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import flexjson.JSONSerializer;
+import flexjson.transformer.NumberTransformer;
 
 /**
  * Servlet implementation class AdresZoekServlet.
@@ -40,26 +41,27 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(AbstractWxSServlet.class);
+
 	/** serialization id. */
 	private static final long serialVersionUID = 1L;
-
-	/** De open ls client die het echte werk doet. */
-	private transient OpenLSClient openLSClient;
-
-	/** de Open LS server url. */
-	private String openLSServerUrl;
-
-	/** maximum aantal terug te geven adressen. */
-	private int openLSmaxResults;
-
-	/** gazetteer service url config parameter. {@value} . */
-	public static final String SERVLETCONFIG_OPENLS_SERVER_URL = "openlsserverurl";
 
 	/**
 	 * gazetteer service max. aantal terug te geven resultaten config parameter.
 	 * * {@value} .
 	 */
-	public static final String SERVLETCONFIG_OPENLS_MAX_RESULTS = "openlsmaxresults";
+	private static final String SERVLETCONFIG_OPENLS_MAX_RESULTS = "openlsmaxresults";
+
+	/** gazetteer service url config parameter. {@value} . */
+	private static final String SERVLETCONFIG_OPENLS_SERVER_URL = "openlsserverurl";
+
+	/** De open ls client die het echte werk doet. */
+	private transient OpenLSClient openLSClient;
+
+	/** maximum aantal terug te geven adressen. */
+	private int openLSmaxResults;
+
+	/** de Open LS server url. */
+	private String openLSServerUrl;
 
 	/**
 	 * zorgt ervoor dat eventuele doubles als integer worden gerenderd. Als het
@@ -116,20 +118,15 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 	 *         objecten
 	 */
 	private String returnJson(final List<OpenLSClientAddress> addrl) {
-		final JSONSerializer serializer = new JSONSerializer();
-		String json = "";
-		switch (addrl.size()) {
-		case 0:
-			json = serializer.exclude("class")
+		if (addrl.size() < 1) {
+			return "[]";
+		} else {
+			String json = new JSONSerializer().exclude("class")
+					.transform(new NumberTransformer(), "xCoord", "yCoord")
 					.prettyPrint(LOGGER.isDebugEnabled()).serialize(addrl);
-			break;
-		default:
-			json = serializer.exclude("class")
-					.prettyPrint(LOGGER.isDebugEnabled()).serialize(addrl);
-			break;
+			LOGGER.debug("json: " + json);
+			return json;
 		}
-		LOGGER.debug("json: " + json);
-		return json;
 	}
 
 	/*
@@ -199,6 +196,7 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);
 			} else {
+				// in geval van directe aanroep voor bijv. ajax
 				if (format != null && format.equalsIgnoreCase("json")) {
 					// geeft zoekresultaat als json
 					final String json = returnJson(addrl);
