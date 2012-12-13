@@ -23,6 +23,7 @@ var ZoekFormulier = {
 	init : function() {
 		jQuery('#zoekFormulier').ajaxForm({
 			beforeSerialize : this.handleBeforeSerialize,
+			beforeSubmit: this.handleBeforeSubmit,
 			success : this.handleSuccess,
 			dataType : 'json',
 			data : {
@@ -48,6 +49,24 @@ var ZoekFormulier = {
 		return true;
 	},
 	/**
+	 * Controleren of het formulier juist is ingevuld.
+	 * 
+	 * @param {String}
+	 *            $form html snippet
+	 * @param {Object}
+	 *            options een jQuery.ajax options object
+	 * @returns {Boolean} true to continue the request
+	 * 
+	 * @see http://docs.jquery.com/Ajax/jQuery.ajax#options
+	 * @private
+	 */
+	handleBeforeSubmit : function($form, options) {
+		if (jQuery('#adres[title]').val() === jQuery('#adres').attr('title'))
+			return false;
+			
+		return true;
+	},
+	/**
 	 * Actief maken van de geselecteerde zoekknop
 	 * 
 	 * @param {id}
@@ -70,7 +89,7 @@ var ZoekFormulier = {
 	 */
 	addPlaceholders: function(props) {
 		//jQuery.extend($.support, {
-		//	placeHolder: !!(jQuery('.adres', zoekFormulier)[0].placeholder !== undefined || jQuery('.adres', zoekFormulier)[0].placeHolder !== undefined)
+		//	placeHolder: !!(jQuery('#adres', zoekFormulier)[0].placeholder !== undefined || jQuery('#adres', zoekFormulier)[0].placeHolder !== undefined)
 		//});
 
 		// create placeholders by using "value" attribute
@@ -96,7 +115,7 @@ var ZoekFormulier = {
 			});
 
 			// only add placeholder on load when value is empty or placeholder or input is not focused (focus is preserved while reloading/XHR)
-			if (((jQuery('#adres').val() === '') || ($('#adres').val() === placeholder)) && (!jQuery('#adres').attr('data-focused'))) {
+			if (((jQuery('#adres').val() === '') || (jQuery('#adres').val() === placeholder)) && (!jQuery('#adres').attr('data-focused'))) {
 				jQuery('#adres').val(placeholder);
 				jQuery('#adres').addClass('adresEmpty');
 			}
