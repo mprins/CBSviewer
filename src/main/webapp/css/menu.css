@@ -19,7 +19,7 @@
 
 .siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li { margin: 0; padding: 0; list-style: none;}
 
-.megaMenu, .megaMenu ul, .navCategories, .megaMenu .col  {	min-height: 510px;}
+.megaMenu, .megaMenu ul, .navCategories, .megaMenu .col  {	min-height: 520px;}
 
 .siteNavigation .sectionTheme:hover .navDropDown
 /*.siteNavigation>li>a.hasMenu:focus ~ .navDropDown */
@@ -474,30 +474,33 @@ display: inline;
 
 /* level 2 list */
 .navleft ul {
+	z-index:1010;
 	min-height: 0px;
 	display: none;
 	margin: 0;
-	padding: 3px 3px 3px 3px;
+	padding: 3px 8px 3px 8px;
 	position: absolute;
 	top: 0px;
 	left: 190px;
+	width: 120px !important;
 	background-color: #ffffff;
 	z-index:1007;
-	border: solid 1px #b4b4b4;
+	border: solid 1px #b4b4b4 !important;
 }
 
 /* level 2 list */
 .navright ul {
+	z-index:1010;
 	min-height: 0px;
 	display: none;
 	margin: 0;
-	padding: 3px 3px 3px 3px;
-	width: 200px;
+	padding: 3px 8px 3px 8px;
+	width: 120px !important;
 	position: absolute;
 	top: 0px;
-	left: -70px;
+	left: -130px;
 	background-color: #ffffff;
-	border: solid 1px #b4b4b4;
+	border: solid 1px #b4b4b4 !important;
 }
 
 .navleft ul li, .navright ul li {
