@@ -154,6 +154,7 @@ var setupPage = {
 		jQuery('#' + config.mapDiv).prepend(aCore);
 
 		ZoekFormulier.init();
+		ZoekFormulier.addPlaceholders();
 		
 		// uitvouwen van de accordion na change event, klap de legenda in voor meer duideijkheid voor de gebruiker
 		jQuery('#' + config.featureInfoDiv).change(function() {

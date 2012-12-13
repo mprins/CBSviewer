@@ -161,6 +161,11 @@ a.accesskey:focus {
 	border-right: none;
 }
 
+.adresEmpty {
+    color: #ddd !important;
+}
+
+
 .titel {
 	color: #C53658;
 	text-align: center;

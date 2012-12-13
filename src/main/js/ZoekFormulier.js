@@ -59,6 +59,50 @@ var ZoekFormulier = {
 		jQuery('.adreslijst').find('li a').removeClass("selected");
 		jQuery("#button" + id).addClass('selected');
 	},
+	
+	/**
+	 * Tonen van een placeholder in het zoek veld
+	 * Dit kan vanaf html5 ook met het placeholder attribuut alleen deze komt niet door de W3C check
+	 *
+	 * @param (props)
+	 *
+	 * @private
+	 */
+	addPlaceholders: function(props) {
+		//jQuery.extend($.support, {
+		//	placeHolder: !!(jQuery('.adres', zoekFormulier)[0].placeholder !== undefined || jQuery('.adres', zoekFormulier)[0].placeHolder !== undefined)
+		//});
+
+		// create placeholders by using "value" attribute
+		//if (!jQuery.support.placeHolder) {
+	
+			var placeholder = jQuery('#adres').attr('title');
+			jQuery('#adres[title]').bind({
+				'focus': function() {
+					if (jQuery(this).val() === placeholder) {
+						jQuery(this).val('');
+						jQuery(this).removeClass('adresEmpty');
+					}
+					jQuery(this).attr('data-focused', 'yes');
+				},
+
+				'blur': function() {
+					if (jQuery(this).val() === '') {
+						jQuery(this).val(placeholder);
+						jQuery(this).addClass('adresEmpty');
+					}
+					jQuery(this).removeAttr('data-focused');
+				}
+			});
+
+			// only add placeholder on load when value is empty or placeholder or input is not focused (focus is preserved while reloading/XHR)
+			if (((jQuery('#adres').val() === '') || ($('#adres').val() === placeholder)) && (!jQuery('#adres').attr('data-focused'))) {
+				jQuery('#adres').val(placeholder);
+				jQuery('#adres').addClass('adresEmpty');
+			}
+		//}
+	},
+	
 	/**
 	 * Bijwerken van de pagina en eventueel de kaart inzoomen.
 	 * 
