@@ -7,12 +7,12 @@
 }
 
 /*reset accordion container, accordion content, label, body etc.*/
-.ac-container,.ac-container label,.ac-container input     ~ .ac-small,.ac-container input:checked 
-	           ~ .ac-small,.header,.headertop,body {
+.header,.headertop,body,.settingsPanel,.settingsContent,.menuAccordion, .titel,.subtitel {
 	width: auto;
 	height: auto;
 	line-height: auto;
 	position: static;
+	display: initial !important;
 }
 
 body { /* border: 1px solid #F00;*/
@@ -25,21 +25,26 @@ body { /* border: 1px solid #F00;*/
 
 /*table*/
 #attribuutTabel {
-	
+	display: block !important;
 }
 
 /*div*/
 #legenda {
-	
+    display: block !important;
 }
 
 /*div*/
 #featureinfo {
-	
+
 }
 
 a:after {
 	content: " (" attr(href) ") ";
+	font-size: 8pt;
+}
+
+.settingsPanel a:after {
+	content: "";
 	font-size: 8pt;
 }
 
