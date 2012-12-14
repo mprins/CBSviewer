@@ -438,6 +438,10 @@ a.olControlZoomOut {
 	outline-width: 0;
 }
 
+.olButton:focus {
+	outline-width: 1px;
+}
+
 .utilBlock {
 	min-width: 130px;
 	margin-top: 8px;
