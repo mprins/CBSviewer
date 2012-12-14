@@ -40,7 +40,7 @@
 		</c:if>
 
 		<jsp:include page="kaart">
-			<!-- TODO: mapid waarde moet uit de request komen bijv. ?mapid=cbs_inwoners_2000_per_hectare -->
+			<!-- TODO: mapid waarde moet uit de request/menu komen bijv. ?mapid=cbs_inwoners_2000_per_hectare -->
 			<!-- StringConstants.REQ_PARAM_MAPID -->
 			<jsp:param name="mapid" value="wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners" />
 
@@ -74,11 +74,10 @@
     <div id="headerright" class="headerColumn headertop">
 		<div class="utilBlock">	
 			<a class="featureinfo" href="#">Over CBS in uw buurt
-				<!-- NB. expliciet lege alt voor info.png -->
-				<span class="custom menuinfo"><img src="img/info.png" alt="" height="37" width="32" />
-					<em>Over CBS in uw buurt</em>Het CBS heeft veel gegevens op regionaal niveau. Die zijn al lange tijd beschikbaar via de statistische database StatLine. Cartografische systemen geven de mogelijkheid de regionale gegevens ook op een meer aantrekkelijke manier te presenteren. Daarvoor heeft het CBS deze site opgezet. 
-Drie maal per jaar vernieuwt het CBS de gegevens op deze site. Zo mogelijk wordt de site dan ook uitgebreid met nieuwe onderwerpen. 
-Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien over buurten, maar ook over wijken? Wilt u er zeker van zijn dat u de meest recente cijfers ziet? Ga dan naar  de tabel "Kerncijfers wijken en buurten" in StatLine. U kunt daar selecteren welke gegevens u op uw scherm wilt zien.
+				<!-- NB. expliciet lege alt voor img/info.png -->
+				<span class="custom menuinfo">
+					<img src="img/info.png" alt="" height="37" width="32" />
+					<fmt:message key="KEY_PAG_ABOUT" />
 				</span>
 			</a>
 			<a href="#">Hoe werkt dit?</a>
@@ -145,13 +144,8 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 	<div id="copyright" class="copy">
 		<fmt:message key="KEY_COPYRIGHT" />
 	</div>
-<div id="footer">			
-		<a href="#">Doorsturen</a>
-		<a href="#">Disclaimer</a>
-		<a href="#">Privacyverklaring</a>
-		<a href="#">Sitemap</a>
-		<a href="#" class="last">RSS</a> 	
-</div>
+
+<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
 
 		<c:if test="${param.coreonly!=true}">
 			<!-- scripts als laatste laden -->
