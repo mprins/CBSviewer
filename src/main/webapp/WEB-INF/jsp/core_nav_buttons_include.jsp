@@ -40,7 +40,7 @@
 	</c:choose>
 
 	<!--  de te gebruiken HTTP methode voor de formulieren -->
-	<c:set var="formMethod" value="GET" />
+	<c:set var="formMethod" value="get" />
 
 	<!-- 
 	include bestand met navigatie knoppen voor de core versie, 
