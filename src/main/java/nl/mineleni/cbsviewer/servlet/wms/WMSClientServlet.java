@@ -9,6 +9,7 @@ package nl.mineleni.cbsviewer.servlet.wms;
 import static nl.mineleni.cbsviewer.util.StringConstants.MAP_CACHE_DIR;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_BGMAP;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_CACHEDIR;
+import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_DOWNLOADLINK;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_FEATUREINFO;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_KAART;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_LEGENDAS;
@@ -808,6 +809,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				request.setAttribute(REQ_PARAM_MAPID.code, mapId);
 				request.setAttribute(REQ_PARAM_LEGENDAS.code, legendas);
 				request.setAttribute(REQ_PARAM_FEATUREINFO.code, fInfo);
+				request.setAttribute(REQ_PARAM_DOWNLOADLINK.code,
+						layer.getLink());
 			} catch (final ServiceException e) {
 				LOGGER.error(
 						"Er is een service exception opgetreden bij benaderen van de voorgrond WMS",

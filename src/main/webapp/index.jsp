@@ -151,6 +151,14 @@
 	<div id="copyright" class="copy">
 		<fmt:message key="KEY_COPYRIGHT" />
 	</div>
+	
+	<div id="downloadLink">
+		<!-- StringConstants.REQ_PARAM_DOWNLOADLINK -->
+		<c:if test="${not empty downloadLink}">
+			<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
+			<a href="${downloadLink}"><c:out value="${linkText}"/></a>
+		</c:if>
+	</div>
 
 	<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
 
