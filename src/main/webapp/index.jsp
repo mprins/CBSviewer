@@ -4,7 +4,6 @@
 	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
-		import="nl.mineleni.cbsviewer.util.StringConstants"
 		trimDirectiveWhitespaces="false" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 	<jsp:output doctype-root-element="html"
@@ -87,7 +86,7 @@
 						alt="" height="37" width="32" /> <fmt:message key="KEY_PAG_ABOUT" />
 				</span>
 				</a> 
-				<a href="#">Hoe werkt dit?</a> 
+				<a href="help.jsp">Hoe werkt dit?</a> 
 				<a href="#">Veel gestelde vragen</a>
 				<a href="#">Contact</a>
 			</div>
@@ -150,6 +149,14 @@
 
 	<div id="copyright" class="copy">
 		<fmt:message key="KEY_COPYRIGHT" />
+	</div>
+	
+	<div id="downloadLink">
+		<!-- StringConstants.REQ_PARAM_DOWNLOADLINK -->
+		<c:if test="${not empty downloadLink}">
+			<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
+			<a href="${downloadLink}"><c:out value="${linkText}"/></a>
+		</c:if>
 	</div>
 
 	<jsp:include page="WEB-INF/jsp/footer_include.jsp" />

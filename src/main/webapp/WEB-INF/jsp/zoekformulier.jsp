@@ -27,7 +27,9 @@
 			</p>
 		</form>
 		<p id="zoekresultaten">
-			<c:out value="${gevonden}" />
+			<!-- REQ_PARAM_GEVONDEN.code -->
+			<c:out value="${gevonden}" /> 
+			<c:out value="${param.gevonden}" />
 		</p>
 		<c:if test="${adreslijst!=null }">
 			<!-- for item in lijst maak url -->

@@ -781,7 +781,9 @@ a.olControlZoomOut {
 }
 
 .settingsPanel li:target > .settingsContent,
-.menuAccordion li:target > .menuAccordionContent
+.menuAccordion li:target > .menuAccordionContent,
+.settingsPanel li:first-child > .settingsContent, /* needed in coreonly mode, in other cases Jquery */
+.menuAccordion li:first-child > .menuAccordionContent /* needed in coreonly mode */
  {
-	display: block;
+	display:block;
 }

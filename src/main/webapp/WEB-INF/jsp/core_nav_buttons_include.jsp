@@ -3,9 +3,8 @@
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
 	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
-		pageEncoding="UTF-8" session="false"
-		trimDirectiveWhitespaces="false" language="java" isThreadSafe="false"
-		isErrorPage="false" />
+		pageEncoding="UTF-8" session="false" trimDirectiveWhitespaces="false"
+		language="java" isThreadSafe="false" isErrorPage="false" />
 
 	<fmt:setBundle basename="LabelsBundle" />
 
@@ -28,21 +27,20 @@
 	<c:choose>
 		<c:when test="${param.achtergrond == 'topografie'}">
 			<c:set var="wisselachtergrond" value="luchtfoto" />
-			<!--<fmt:message key="nl.mineleni.cbsviewer.util.LabelsBundle.KEY_TOGGLE_BASEMAP_LUFO" var="wisselachtergrondBtn" />-->
-			<c:set value="Toon luchtfoto" var="wisselachtergrondBtn" />
+			<fmt:message key="KEY_TOGGLE_BASEMAP_LUFO" var="wisselachtergrondBtn" />
 		</c:when>
 		<c:when test="${param.achtergrond == 'luchtfoto'}">
 			<c:set var="wisselachtergrond" value="topografie" />
-			<!--<fmt:message key="nl.mineleni.cbsviewer.util.LabelsBundle.KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />-->
-			<c:set value="Toon topografie" var="wisselachtergrondBtn" />
+			<fmt:message key="KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />
 		</c:when>
 		<c:otherwise>
 			<c:set var="wisselachtergrond" value="luchtfoto" />
-			<!--<fmt:message key="nl.mineleni.cbsviewer.util.LabelsBundle.KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />-->
-			<c:set value="Toon luchtfoto" var="wisselachtergrondBtn" />
+			<fmt:message key="KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />
 		</c:otherwise>
 	</c:choose>
 
+	<!--  de te gebruiken HTTP methode voor de formulieren -->
+	<c:set var="formMethod" value="GET" />
 
 	<!-- 
 	include bestand met navigatie knoppen voor de core versie, 
@@ -51,49 +49,67 @@
 
 	<div id="kaartnavi" class="kaartnavi">
 		<fmt:message key="KEY_NAVIGATIE_TITEL" />
-		<form id="zoomFormulier" action="index.jsp" method="get"
-			title="in- en uitzoomen van de kaart en verschuiven van de zoeklocatie">
+		<form id="zoomFormulier" action="index.jsp" method="${formMethod}"
+			title="in- en uitzoomen van de kaartop de zoeklocatie">
 
 			<!-- knoppen -->
 			<fieldset id="in-en-uit-zoomen" title="in- en uitzoomen">
-				<legend><fmt:message key="KEY_NAVIGATIE_ZOOM_LEGEND" /></legend>
-				
+				<legend>
+					<fmt:message key="KEY_NAVIGATIE_ZOOM_LEGEND" />
+				</legend>
+
 				<fmt:message var="ttl" key="KEY_BTN_NAVI_ZOOMOUT_LBL" />
 				<label for="zoomUitBtn">${ttl}</label>
-				<button id="zoomUitBtn" type="submit" name="straal" value="${straal*2}" title="${ttl}">−</button>
-				
+				<button id="zoomUitBtn" type="submit" name="straal"
+					value="${straal*2}" title="${ttl}">−</button>
+
 				<fmt:message var="ttl" key="KEY_BTN_NAVI_ZOOMIN_LBL" />
 				<label for="zoomInBtn">${ttl}</label>
-				<button id="zoomInBtn" type="submit" name="straal" value="${zoomin}" title="${ttl}">+</button>
+				<button id="zoomInBtn" type="submit" name="straal" value="${zoomin}"
+					title="${ttl}">+</button>
 			</fieldset>
+			<p>
+				<input type="hidden" name="coreonly" value="true" />
+				<!-- defaults -->
+				<input type="hidden" name="straal" value="${straal}" /> <input
+					type="hidden" name="xcoord" value="${xcoord}" /> <input
+					type="hidden" name="ycoord" value="${ycoord}" /> <input
+					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
+					type="hidden" name="mapid" value="${param.mapid}" /> <input
+					type="hidden" name="gevonden" value="${param.gevonden}" />
+			</p>
+
+		</form>
+
+		<form id="schuifFormulier" action="index.jsp" method="${formMethod}"
+			title="Verschuiven van de zoeklocatie">
 
 			<fieldset id="verschuiven" title="verschuiven">
-				<legend><fmt:message key="KEY_NAVIGATIE_SCHUIF_LEGEND" /></legend>
-				
+				<legend>
+					<fmt:message key="KEY_NAVIGATIE_SCHUIF_LEGEND" />
+				</legend>
+
 				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANLEFT_LBL" />
 				<label for="schuifLinksBtn">${ttl}</label>
-				<button id="schuifLinksBtn" type="submit" name="xcoord" value="${naarLinks}" title="${ttl}">←</button>
-				
+				<button id="schuifLinksBtn" type="submit" name="xcoord"
+					value="${naarLinks}" title="${ttl}">←</button>
+
 				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANRIGHT_LBL" />
 				<label for="schuifRechtsBtn">${ttl}</label>
-				<button id="schuifRechtsBtn" type="submit" name="xcoord" value="${naarRechts}" title="${ttl}">→</button>
-				
+				<button id="schuifRechtsBtn" type="submit" name="xcoord"
+					value="${naarRechts}" title="${ttl}">→</button>
+
 				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANUP_LBL" />
 				<label for="schuifOmhoogBtn">${ttl}</label>
-				<button id="schuifOmhoogBtn" type="submit" name="ycoord" value="${naarBoven}" title="${ttl}">↑</button>
+				<button id="schuifOmhoogBtn" type="submit" name="ycoord"
+					value="${naarBoven}" title="${ttl}">↑</button>
 
 				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANDOWN_LBL" />
 				<label for="schuifOmlaagBtn">${ttl}</label>
-				<button id="schuifOmlaagBtn" type="submit" name="ycoord" value="${naarBeneden}" title="${ttl}">↓</button>
+				<button id="schuifOmlaagBtn" type="submit" name="ycoord"
+					value="${naarBeneden}" title="${ttl}">↓</button>
 			</fieldset>
-			
-			<fieldset id="wisselachtergrond" title="wissel achtergrondkaart">
-				<legend><fmt:message key="KEY_NAVIGATIE_BASEMAP_LEGEND" /></legend>
-				
-				<fmt:message var="ttl" key="KEY_TOGGLE_BASEMAP_TITLE" />
-				<label for="wisselBtn">${ttl}</label>
-				<button id="wisselBtn" type="submit" name="achtergrond" value="${wisselachtergrond}" title="${ttl}">${wisselachtergrondBtn}</button>
-			</fieldset>
+
 			<p>
 				<input type="hidden" name="coreonly" value="true" />
 
@@ -103,6 +119,31 @@
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
 					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
 					type="hidden" name="mapid" value="${param.mapid}" />
+			</p>
+		</form>
+
+		<form id="achtergrondFormulier" action="index.jsp"
+			method="${formMethod}" title="Wisselen van de achtergrondkaart">
+			<fieldset id="wisselachtergrond" title="wissel achtergrondkaart">
+				<legend>
+					<fmt:message key="KEY_NAVIGATIE_BASEMAP_LEGEND" />
+				</legend>
+
+				<fmt:message var="ttl" key="KEY_TOGGLE_BASEMAP_TITLE" />
+				<label for="wisselBtn">${ttl}</label>
+				<button id="wisselBtn" type="submit" name="achtergrond"
+					value="${wisselachtergrond}" title="${ttl}">${wisselachtergrondBtn}</button>
+			</fieldset>
+
+			<p>
+				<input type="hidden" name="coreonly" value="true" />
+				<!-- defaults -->
+				<input type="hidden" name="straal" value="${straal}" /> <input
+					type="hidden" name="xcoord" value="${xcoord}" /> <input
+					type="hidden" name="ycoord" value="${ycoord}" /> <input
+					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
+					type="hidden" name="mapid" value="${param.mapid}" /> <input
+					type="hidden" name="gevonden" value="${param.gevonden}" />
 			</p>
 		</form>
 

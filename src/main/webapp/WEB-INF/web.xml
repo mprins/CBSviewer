@@ -13,7 +13,8 @@
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
-		<description>reverse proxy servlet om XHR te laten werken</description>
+		<description>reverse proxy servlet om XHR te laten werken, binnen de applicatie wordt alleen het GetFeatureInfo 
+			request via deze proxy geleid</description>
 		<display-name>ReverseProxyServlet</display-name>
 		<servlet-name>ReverseProxyServlet</servlet-name>
 		<servlet-class>nl.mineleni.cbsviewer.servlet.ReverseProxyServlet</servlet-class>
@@ -33,72 +34,53 @@
 		<display-name>WMSClientServlet</display-name>
 		<servlet-name>WMSClientServlet</servlet-name>
 		<servlet-class>nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet</servlet-class>
-		<!--
+		<!-- NB. deze pdok service is alleen voor whitelisted IP's beschikbaar. -->
 		<init-param>
-			<description>WMS capabilities url van achtergrond kaart</description> 
+			<description>WMS capabilities url van achtergrond (topografie) kaart</description> 
 			<param-name>bgCapabilitiesURL</param-name> 
 			<param-value>http://geodata.nationaalgeoregister.nl/brtachtergrondkaart/ows?REQUEST=GetCapabilities&amp;SERVICE=WMS</param-value> 
 		</init-param>
 		<init-param>
-			<description>lagen voor de achtergrond WMS (CSV), 
-				in volgorde "bovenste" laag eerste, "onderste" laag als laatste in de lijst. 
-				Indien leeg dan worden alle lagen uit het capabilities document gebruikt.</description>
+			<description>lagen voor de achtergrond (topografie) WMS (CSV), 
+					in volgorde "bovenste" laag eerste, "onderste" laag als laatste in de lijst. 
+					Indien leeg dan worden alle lagen uit het capabilities document gebruikt.</description>
 			<param-name>bgWMSlayers</param-name>
 			<param-value>top10nlfunctioneelgebiedlabels,gemeentenamen,top10nlgeografischgebiedlabels, 
-				top10nlgebouwen,top10nlprovinciegrenzen,top10nlnationalegrenzen, 
-				top10nlspoorbaandeellijnen, top10nlwaterdeellijnen, 
-				top10nlwaterdeelvlakken, points,countries,top250nllijnen,lines,borders, 
-				top250nlvlakken,builtup_areas,polygons,shorelines, 
-				ondergrond</param-value>
+					top10nlgebouwen,top10nlprovinciegrenzen,top10nlnationalegrenzen, 
+					top10nlspoorbaandeellijnen,top10nlwaterdeellijnen, top10nlwaterdeelvlakken, points,countries,
+					top250nllijnen,lines,borders, top250nlvlakken,builtup_areas,polygons,shorelines, ondergrond</param-value>
 		</init-param> 
-		-->
-		<!-- <init-param> <description>WMS capabilities url van achtergrond kaart</description> 
-			<param-name>bgCapabilitiesURL</param-name> <param-value>http://geodata.nationaalgeoregister.nl/top10nl/ows?version=1.1.1&amp;request=GetCapabilities&amp;service=WMS</param-value> 
-			</init-param> <init-param> <description>lagen voor de achtergrond WMS (CSV), 
-			in volgorde "bovenste" laag eerste, "onderste" laag als laatste in de lijst. 
-			Indien leeg dan worden alle lagen uit het capabilities document gebruikt.</description> 
-			<param-name>bgWMSlayers</param-name> <param-value>top10nl:functioneelgebied_labels,top10nl:gebouwen,top10nl:geo_labels,top10nl:inrichtingselement_punten,top10nl:inrichtingselementlijnen, 
-			top10nl:spoorbaandeel_lijnen,top10nl:waterdeellijnen,top10nl:wegdeelvlakken,top10nl:waterdeel_vlakken,top10nl:terreinen</param-value> 
-			</init-param> -->
-		<!-- -->
+		<!-- Alternatieve basemap van WhereGroup, alleen voor ontwikkeldoeleinden.
+			zie: http://www.wheregroup.com/de/osmwms -->
+		<!-- 
 		<init-param>
-			<description>WMS capabilities url van achtergrond kaart</description>
+			<description>WMS capabilities url van achtergrond (topografie) kaart</description>
 			<param-name>bgCapabilitiesURL</param-name>
 			<param-value>http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&amp;SERVICE=WMS&amp;VERSION=1.1.1</param-value>
 		</init-param>
 		<init-param>
-			<description>lagen voor de achtergrond WMS (CSV), 
-				in volgorde &quot;bovenste&quot; laag eerste, &quot;onderste&quot; laag als laatste in de lijst. 
-				Indien leeg dan worden alle lagen uit het capabilities document gebruikt.</description>
+			<description>lagen voor de achtergrond (topografie) WMS (CSV), 
+					in volgorde "bovenste" laag eerste, "onderste" laag als laatste in de lijst. 
+					Indien leeg dan worden alle lagen uit het capabilities document gebruikt.</description>
 			<param-name>bgWMSlayers</param-name>
 			<param-value>Bahn, Grossstadt,Stadt,Dorf,Stadtteil,Weiler,Ortschaft, 
 				Autobahn,Kraftfahrstrasse,Bundesstrasse,Landstrasse,einfache_Strasse,Zufahrtswege,Wohnstrasse,Wege, 
 				Inselpunkte,Kueste,Insel,Wasserbecken,Kanal,Baeche,Fluesse,Wasser,Gebaeude,Fussgaengerzone,Wiese,Wald,
 				Naherholungsgebiet,Park,unkultiviertes_Land,Gruenflaeche,Bauland,Industriegebiet,Landwirtschaft,Grenzen</param-value>
 		</init-param>
-		 
-		<!-- <param-value>OSM_Basic</param-value> -->
-		<!-- <param-value>Grenzen,Landwirtschaft,Industriegebiet,Bauland,Gruenflaeche,unkultiviertes_Land,Park,Naherholungsgebiet,Wald,Wiese,Fussgaengerzone, 
-			Gebaeude,Wasser,Fluesse,Baeche,Kanal,Wasserbecken,Insel,Kueste,Inselpunkte,Strand,Fussgaengerweg,Radweg,Wege,Wohnstrasse,Zufahrtswege, 
-			einfache_Strasse,Landstrasse,Bundesstrasse,Kraftfahrstrasse,Autobahn,Ortschaft,Weiler,Stadtteil,Dorf,Stadt,Grossstadt,Bahn,Bahnhof, 
-			Airport,Kirchengelaende,Friedhof,Kirche,Graeber,copyright</param-value> copyright,Graeber,Kirche,Friedhof,Kirchengelaende,Airport,Bahnhof,Bahn, 
-			Grossstadt,Stadt,Dorf,Stadtteil,Weiler,Ortschaft,Autobahn,Kraftfahrstrasse,Bundesstrasse,Landstrasse,einfache_Strasse,Zufahrtswege,Wohnstrasse,Wege, 
-			Radweg,Fussgaengerweg,Strand,Inselpunkte,Kueste,Insel,Wasserbecken,Kanal,Baeche,Fluesse,Wasser,Gebaeude,Fussgaengerzone,Wiese,Wald,Naherholungsgebiet, 
-			Park,unkultiviertes_Land,Gruenflaeche,Bauland,Industriegebiet,Landwirtschaft,Grenzen -->
-
+		-->
 		<init-param>
 			<description>WMS capabilities url van achtergrond luchtfoto's</description>
 			<param-name>lufoCapabilitiesURL</param-name>
 			<param-value>http://gisdemo2.agro.nl/arcgis/services/Luchtfoto2010/MapServer/WMSServer?REQUEST=GetCapabilities&amp;SERVICE=WMS</param-value>
 		</init-param>
 		<init-param>
-			<description>lagen voor de achtergrond WMS (CSV), 
-				in volgorde &quot;bovenste&quot; laag eerste, &quot;onderste&quot; laag als laatste in de lijst. 
+			<description>lagen voor de achtergrond (luchtfoto) WMS (CSV), 
+				in volgorde "bovenste" laag eerste, "onderste" laag als laatste in de lijst. 
 				Indien leeg dan worden alle lagen uit het capabilities document gebruikt.</description>
 			<param-name>lufoWMSlayers</param-name>
 			<param-value/>
 		</init-param>
-
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
@@ -116,7 +98,7 @@
 			<param-value>http://geodata.nationaalgeoregister.nl/geocoder/Geocoder</param-value>
 		</init-param>
 		<init-param>
-			<description>max. aantal terug te geven resultaten config parameter</description>
+			<description>max. aantal (op het scherm) weer te geven resultaten config parameter</description>
 			<param-name>openlsmaxresults</param-name>
 			<param-value>5</param-value>
 		</init-param>

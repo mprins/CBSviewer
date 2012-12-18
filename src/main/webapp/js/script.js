@@ -1,10 +1,12 @@
+/**
+ * @fileoverview event handlers en elementen voor de pagina.
+ */
+
 // opzoeken van de gevraagde kaart in de _layers, id's zitten in
 // AvailableLayers.xml
 var _defaultId = "wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners";
 
-/**
- * @fileoverview event handlers en elementen voor de pagina.
- */
+
 jQuery(document)
 		.ready(
 				function() {
@@ -127,6 +129,15 @@ jQuery('.megaMenu a').click(function() {
 		jQuery('#pagSubTitle').html(OpenLayers.i18n('KEY_KAART_TITEL', {
 			'0' : '' + maps[0].name
 		}));
+		
+		// bijwerken download link
+		if (maps[0].link) {
+			jQuery('#downloadLink').html('<a href="' + maps[0].link + '">' + OpenLayers.i18n('KEY_KAART_TITEL', {
+				'0' : '' + maps[0].name
+			}) + '</a>');
+		} else {
+			jQuery('#downloadLink').html('');
+		}
 
 		_defaultId = _id;
 	}

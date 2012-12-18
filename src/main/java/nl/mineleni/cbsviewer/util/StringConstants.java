@@ -62,6 +62,8 @@ public enum StringConstants {
 	REQ_PARAM_KAART("kaart"),
 	/** parameter cache dir. */
 	REQ_PARAM_CACHEDIR("dir"),
+	/** download link. */
+	REQ_PARAM_DOWNLOADLINK("downloadLink"),
 
 	/** openls request param naam voor request. */
 	OPENLS_REQ_PARAM_REQUEST("Request"),
