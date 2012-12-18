@@ -181,9 +181,8 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 							this.formatCoord(addr.getyCoord()));
 					request.setAttribute(REQ_PARAM_STRAAL.code,
 							addr.getRadius());
-					request.setAttribute(
-							REQ_PARAM_GEVONDEN.code,
-							_RESOURCES.getString("KEY_ZOEKEN_EEN_ADRES")
+					request.setAttribute(REQ_PARAM_GEVONDEN.code,
+							_RESOURCES.getString("KEY_ZOEKEN_EEN_ADRES") + " "
 									+ addr.getAddressString());
 				} else {
 					// meer dan 1 adressen gevonden
