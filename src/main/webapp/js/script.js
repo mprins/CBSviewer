@@ -1,12 +1,14 @@
 /**
- * @fileoverview event handlers en elementen voor de pagina.
+ * @fileoverview event handlers en elementen voor de ria pagina.
  */
 
 // opzoeken van de gevraagde kaart in de _layers, id's zitten in
 // AvailableLayers.xml
 var _defaultId = "wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners";
 
-
+/**
+ * document onload event handling.
+ */
 jQuery(document)
 		.ready(
 				function() {

@@ -1,5 +1,5 @@
 /**
- * dynamische elementen aan de pagina toevoegen.
+ * @fileoverview event handlers en elementen voor de core pagina.
  */
 var setupPage = {
 	init : function() {
