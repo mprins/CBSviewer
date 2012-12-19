@@ -45,7 +45,7 @@ public final class FeatureInfoResponseConverter {
 		/** het gmltype. */
 		GMLTYPE,
 		/**
-		 * het htmltype. Dit doet niet veel...
+		 * het htmltype. Unsupported...
 		 * 
 		 * @see FeatureInfoResponseConverter#cleanupHTML(InputStream)
 		 */
@@ -74,6 +74,7 @@ public final class FeatureInfoResponseConverter {
 		LOGGER.warn("unsported feature");
 		// misschien met net.sourceforge.htmlcleaner:htmlcleaner
 		// http://search.maven.org/#artifactdetails%7Cnet.sourceforge.htmlcleaner%7Chtmlcleaner%7C2.2%7Cjar
+		// of jsoup
 		return convertStreamToString(htmlStream);
 	}
 
@@ -123,9 +124,7 @@ public final class FeatureInfoResponseConverter {
 				LOGGER.debug("Gemaakte HTML tabel:\n" + sb);
 			} else {
 				LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo");
-				return
-
-				RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
+				return RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
 			}
 		} catch (ParserConfigurationException | SAXException e) {
 			LOGGER.error("Fout tijdens parsen van GML. ", e);
