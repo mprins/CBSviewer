@@ -235,6 +235,8 @@ Viewer = function() {
 				opacity : 0.8
 			});
 			_map.addLayer(layer);
+			var fInfoControl = _map.getControlsByClass('WMSGetFeatureInfo');
+			fInfoControl[0].url = wmsConfig.url;
 		},
 
 		/**
@@ -257,7 +259,20 @@ Viewer = function() {
 		 * verwijder alle overlays. Voorlopig alleen type {OpenLayers.Layer.WMS}
 		 */
 		removeOverlays : function() {
-			var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
+			// reset featureinfo text
+			jQuery('#' + config.featureInfoDiv).html(OpenLayers.i18n('KEY_INFO_GEEN_FEATURES'));
+			// verwijder ikoontjes die de controls tekenen 
+			var lyrs = _map.getLayersByName('ClickDrawControl');
+			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+				lyrs[lyr].removeAllFeatures();
+			}
+			lyrs = _map.getLayersByName('OpenLayers.Handler.KeyboardPoint');
+			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+				lyrs[lyr].removeAllFeatures();
+			}
+			
+			// verwijder WMS lagen
+			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
 				if (!lyrs[lyr].isBaseLayer) {
 					_map.removeLayer(lyrs[lyr]);
