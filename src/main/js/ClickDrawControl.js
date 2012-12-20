@@ -72,6 +72,8 @@ ClickDrawControl = OpenLayers.Class(OpenLayers.Control, {
 	 * @private
 	 */
 	drawOrMove : function(e) {
+		// verplaats naar bovenste
+		this.map.setLayerIndex(this.layer, this.map.getNumLayers()-1);
 		var lonlat = this.map.getLonLatFromPixel(e.xy);
 		if (!this.point) {
 			var geometry = new OpenLayers.Geometry.Point(lonlat.lon, lonlat.lat);
