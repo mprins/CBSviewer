@@ -29,6 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -674,10 +675,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	@Override
 	public void init(final ServletConfig config) throws ServletException {
 		super.init(config);
-
+		final ServletContext ctx = this.getServletContext();
 		try {
-			this.bgWMSCache = new WMSCache(this.getServletContext()
-					.getRealPath(MAP_CACHE_DIR.code), NUMBER_CACHE_ELEMENTS);
+			this.bgWMSCache = new WMSCache(ctx.getRealPath(MAP_CACHE_DIR.code),
+					NUMBER_CACHE_ELEMENTS);
 		} catch (final IOException e) {
 			LOGGER.error(
 					"Inititalisatie fout voor de achtergrond topografie cache.",
@@ -685,8 +686,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		}
 
 		try {
-			this.bgWMSLuFoCache = new WMSCache(this.getServletContext()
-					.getRealPath(MAP_CACHE_DIR.code), NUMBER_CACHE_ELEMENTS);
+			this.bgWMSLuFoCache = new WMSCache(
+					ctx.getRealPath(MAP_CACHE_DIR.code), NUMBER_CACHE_ELEMENTS);
 		} catch (final IOException e) {
 			LOGGER.error(
 					"Inititalisatie fout voor de achtergrond luchtfoto cache.",

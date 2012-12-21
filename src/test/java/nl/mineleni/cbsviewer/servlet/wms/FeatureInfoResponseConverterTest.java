@@ -1,5 +1,8 @@
-/**
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms;
 
@@ -24,7 +27,6 @@ import org.junit.Test;
  * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter}.
  * 
  * @author prinsmc
- * 
  */
 public class FeatureInfoResponseConverterTest {
 
@@ -37,16 +39,16 @@ public class FeatureInfoResponseConverterTest {
 	@Before
 	public void setUp() throws Exception {
 		XMLUnit.setIgnoreWhitespace(true);
+		XMLUnit.setIgnoreComments(true);
 	}
 
 	/**
-	 * Test method for.
+	 * Test methode voor
+	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
+	 * . Test met een lege response.
 	 * 
 	 * @throws Exception
 	 *             the exception
-	 *             {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
-	 *             .
-	 * @todo verder testen van html
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML0() throws Exception {
@@ -61,13 +63,12 @@ public class FeatureInfoResponseConverterTest {
 	}
 
 	/**
-	 * Test method for.
+	 * Test methode voor
+	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
+	 * . Test met een response met 1 item.
 	 * 
 	 * @throws Exception
 	 *             the exception
-	 *             {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
-	 *             .
-	 * @todo verder testen van html
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML1() throws Exception {
@@ -91,13 +92,12 @@ public class FeatureInfoResponseConverterTest {
 	}
 
 	/**
-	 * Test method for.
+	 * Test methode voor
+	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
+	 * . Test met een response met 3 items.
 	 * 
 	 * @throws Exception
 	 *             the exception
-	 *             {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
-	 *             .
-	 * @todo verder testen van html
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML3() throws Exception {
@@ -122,14 +122,14 @@ public class FeatureInfoResponseConverterTest {
 	}
 
 	/**
-	 * Test method for
+	 * Test methode voor
 	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
-	 * .
+	 * . Test met een response met 0 items.
 	 * 
 	 * @throws IOException
 	 */
 	@Test
-	@Ignore("unsupported conversion")
+	@Ignore("vooralsnog een unsupported conversie")
 	public final void testConvertToHTMLTableHTML0() throws IOException {
 		final String test = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
@@ -139,14 +139,14 @@ public class FeatureInfoResponseConverterTest {
 	}
 
 	/**
-	 * Test method for
+	 * Test methode voor
 	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
-	 * .
+	 * . Test met een response met 1 item.
 	 * 
 	 * @throws IOException
 	 */
 	@Test
-	@Ignore("unsupported conversion")
+	@Ignore("vooralsnog een unsupported conversie")
 	public final void testConvertToHTMLTableHTML1() throws IOException {
 		final String test = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
@@ -156,14 +156,14 @@ public class FeatureInfoResponseConverterTest {
 	}
 
 	/**
-	 * Test method for
+	 * Test methode voor
 	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
-	 * .
+	 * . Test met een response met 3 items.
 	 * 
 	 * @throws IOException
 	 */
 	@Test
-	@Ignore("unsupported conversion")
+	@Ignore("vooralsnog een unsupported conversie")
 	public final void testConvertToHTMLTableHTML3() throws IOException {
 		final String test = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
