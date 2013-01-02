@@ -166,6 +166,26 @@ Viewer = function() {
 		},
 
 		/**
+		 * Voert een identify uit voor de gegeven locatie. Indien de x/y buiten
+		 * de kaartuitsnede vallen wordt de kaart eerst verschoven zodat de
+		 * locatie in beeld valt.
+		 * 
+		 * @param {number}
+		 *            x de x coordinaat
+		 * @param {number}
+		 *            y de y coordinaat
+		 */
+		featureInfo : function(x, y) {
+			var lonlat = new OpenLayers.LonLat(x, y);
+			if (!_map.getExtent().containsLonLat(lonlat)) {
+				_map.panTo(lonlat);
+			}
+			_map.events.triggerEvent('click', {
+				xy : _map.getPixelFromLonLat(lonlat)
+			});
+		},
+
+		/**
 		 * Controls aan de kaart hangen.
 		 * 
 		 * @private
@@ -261,7 +281,7 @@ Viewer = function() {
 		removeOverlays : function() {
 			// reset featureinfo text
 			jQuery('#' + config.featureInfoDiv).html(OpenLayers.i18n('KEY_INFO_GEEN_FEATURES'));
-			// verwijder ikoontjes die de controls tekenen 
+			// verwijder ikoontjes die de controls tekenen
 			var lyrs = _map.getLayersByName('ClickDrawControl');
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
 				lyrs[lyr].removeAllFeatures();
@@ -270,7 +290,7 @@ Viewer = function() {
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
 				lyrs[lyr].removeAllFeatures();
 			}
-			
+
 			// verwijder WMS lagen
 			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {

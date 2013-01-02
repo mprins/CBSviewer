@@ -31,6 +31,7 @@ var ZoekFormulier = {
 			}
 		});
 	},
+	
 	/**
 	 * Bijwerken van verborgen velden in het formulier.
 	 * 
@@ -48,6 +49,7 @@ var ZoekFormulier = {
 		$form.find('input[name="forward"]').val('false');
 		return true;
 	},
+	
 	/**
 	 * Controleren of het formulier juist is ingevuld.
 	 * 
@@ -61,11 +63,12 @@ var ZoekFormulier = {
 	 * @private
 	 */
 	handleBeforeSubmit : function($form, options) {
-		if (jQuery('#adres[title]').val() === jQuery('#adres').attr('title'))
+		if (jQuery('#adres[title]').val() === jQuery('#adres').attr('title')){
 			return false;
-			
+		}
 		return true;
 	},
+	
 	/**
 	 * Actief maken van de geselecteerde zoekknop
 	 * 
@@ -83,7 +86,7 @@ var ZoekFormulier = {
 	 * Tonen van een placeholder in het zoek veld
 	 * Dit kan vanaf html5 ook met het placeholder attribuut alleen deze komt niet door de W3C check
 	 *
-	 * @param (props)
+	 * @param props
 	 *
 	 * @private
 	 */
@@ -152,27 +155,31 @@ var ZoekFormulier = {
 			html += OpenLayers.i18n("KEY_ZOEKEN_EEN_ADRES");
 			html += '<ul class="adreslijst"><li>' + data[0].addressString + '</li></ul>';
 			Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
+			Viewer.featureInfo(data[0].xCoord, data[0].yCoord);
 			break;
 		default:
-			// html += '<p style="clear:both">' +
-			// OpenLayers.i18n("KEY_ZOEKEN_MEER_ADRES") + '</p>';
+			// html += '<p style="clear:both">' + OpenLayers.i18n("KEY_ZOEKEN_MEER_ADRES") + '</p>';
 			html += '<ul class="adreslijst">';
 
 			for ( var i = 0; i < data.length; i++) {
+				// lijst met list items aanmaken waarvan de eerste 'geselecteerd' is
 				var selected = "";
 				if (i === 0) {
 					selected = " selected";
 				}
 				html += '<li><a id="button' + i + '" class="button' + selected
 						+ '" href="#" onclick="ZoekFormulier.toggleSelectedButton(' + i + ');Viewer.zoomTo('
-						+ data[i].xCoord + ',' + data[i].yCoord + ',' + data[i].radius + ');return false;" title="'
+						+ data[i].xCoord + ',' + data[i].yCoord + ',' + data[i].radius + ');Viewer.featureInfo('
+						+ data[i].xCoord + ',' + data[i].yCoord+');return false;" title="'
 						+ OpenLayers.i18n("KEY_ZOEKEN_LINK_TTL", {
 							'0' : '' + data[i].addressString
 						}) + '">' + data[i].addressString + '</a></li>';
 			}
+			
 			html += '</ul>';
-
+			// inzoomen op het 'geselecteerde' (== eerste) adres
 			Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
+			Viewer.featureInfo(data[0].xCoord, data[0].yCoord);
 		}
 		paragraaf.empty().html(html);
 	}

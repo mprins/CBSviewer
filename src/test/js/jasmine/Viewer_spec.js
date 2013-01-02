@@ -133,6 +133,20 @@ describe(
 							expect(config.map.width).toEqual(parseInt(w));
 							expect(config.map.height).toEqual(parseInt(h));
 						});
+
+						it('Na uitvoeren van featureInfo vallen de (x,y) binnen de kaart uitsnede.', function() {
+							Viewer.loadWMS(_wms);
+							var x = 145954, y = 457088;
+							var lonlat = new OpenLayers.LonLat(x, y);
+							Viewer.featureInfo(x, y);
+							expect(Viewer.getMap().getExtent().containsLonLat(lonlat)).toEqual(true);
+							/* TODO
+							 * expect((Viewer.getMap().getLayersByName("ClickDrawControl")).length).toBe(1);
+							 * console.debug(Viewer.getMap().getLayersByName('ClickDrawControl'));
+							 * console.debug(Viewer.getMap().getLayersByClass('OpenLayers.Layer.Vector'));
+							 */
+						});
+
 					});
 
 		});
