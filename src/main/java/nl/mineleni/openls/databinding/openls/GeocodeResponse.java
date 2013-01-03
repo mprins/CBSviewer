@@ -26,41 +26,42 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * </pre>
  * 
  * @author Mark
+ * @since 1.7
  */
 public class GeocodeResponse implements XmlNamespaceConstants {
-    /**
-     * serialization id.
-     */
-    private static final long serialVersionUID = -8343502033013447204L;
+	/**
+	 * serialization id.
+	 */
+	private static final long serialVersionUID = -8343502033013447204L;
 
-    private Vector<GeocodeResponseList> geocodeResponseList = new Vector<GeocodeResponseList>();
+	private final Vector<GeocodeResponseList> geocodeResponseList = new Vector<>();
 
-    public void addGeocodeResponseList(GeocodeResponseList val) {
-        this.geocodeResponseList.add(val);
-    }
+	public void addGeocodeResponseList(GeocodeResponseList val) {
+		this.geocodeResponseList.add(val);
+	}
 
-    public GeocodeResponseList getGeocodeResponseListAt(int i) {
-        return this.geocodeResponseList.get(i);
-    }
+	public GeocodeResponseList getGeocodeResponseListAt(int i) {
+		return this.geocodeResponseList.get(i);
+	}
 
-    public int getGeocodeResponseListSize() {
-        return this.geocodeResponseList.size();
-    }
+	public int getGeocodeResponseListSize() {
+		return this.geocodeResponseList.size();
+	}
 
-    @Override
-    public String toXML() {
-        final StringBuilder sb = new StringBuilder("<"
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodeResponse " + "xmlns:"
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX + "=\""
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_URI + "\" " + "xmlns:"
-                + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + "=\""
-                + XmlNamespaceConstants.OGC_GML_NAMESPACE_URI + "\">");
-        for (final GeocodeResponseList gcrl : this.geocodeResponseList) {
-            sb.append(gcrl.toXML());
-        }
-        sb.append("</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodeResponse>");
-        return sb.toString();
-    }
+	@Override
+	public String toXML() {
+		final StringBuilder sb = new StringBuilder("<"
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodeResponse " + "xmlns:"
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX + "=\""
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_URI + "\" " + "xmlns:"
+				+ XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + "=\""
+				+ XmlNamespaceConstants.OGC_GML_NAMESPACE_URI + "\">");
+		for (final GeocodeResponseList gcrl : this.geocodeResponseList) {
+			sb.append(gcrl.toXML());
+		}
+		sb.append("</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodeResponse>");
+		return sb.toString();
+	}
 }

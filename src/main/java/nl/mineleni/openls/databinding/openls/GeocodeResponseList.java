@@ -29,45 +29,46 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * </pre>
  * 
  * @author mprins
+ * @since 1.7
  */
 public class GeocodeResponseList implements XmlNamespaceConstants {
 
-    /** serialisation id */
-    private static final long serialVersionUID = 6830914161263736467L;
-    private Vector<GeocodedAddress> geocodedAddress = new Vector<GeocodedAddress>();
-    private int numberOfGeocodedAddresses;
+	/** serialisation id */
+	private static final long serialVersionUID = 6830914161263736467L;
+	private final Vector<GeocodedAddress> geocodedAddress = new Vector<>();
+	private int numberOfGeocodedAddresses;
 
-    public void addGeocodedAddress(GeocodedAddress val) {
-        this.geocodedAddress.add(val);
-    }
+	public void addGeocodedAddress(GeocodedAddress val) {
+		this.geocodedAddress.add(val);
+	}
 
-    public GeocodedAddress getGeocodedAddressAt(int i) {
-        return this.geocodedAddress.get(i);
-    }
+	public GeocodedAddress getGeocodedAddressAt(int i) {
+		return this.geocodedAddress.get(i);
+	}
 
-    public int getGeocodedAddressSize() {
-        return this.geocodedAddress.size();
-    }
+	public int getGeocodedAddressSize() {
+		return this.geocodedAddress.size();
+	}
 
-    public void setNumberOfGeocodedAddresses(int val) {
-        this.numberOfGeocodedAddresses = val;
-    }
+	public void setNumberOfGeocodedAddresses(int val) {
+		this.numberOfGeocodedAddresses = val;
+	}
 
-    public int getNumberOfGeocodedAddresses() {
-        return this.numberOfGeocodedAddresses;
-    }
+	public int getNumberOfGeocodedAddresses() {
+		return this.numberOfGeocodedAddresses;
+	}
 
-    @Override
-    public String toXML() {
-        final StringBuilder sb = new StringBuilder("<"
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodeResponseList " + "numberOfGeocodedAddresses=\""
-                + Integer.toString(this.getGeocodedAddressSize()) + "\">");
-        for (final GeocodedAddress gca : this.geocodedAddress) {
-            sb.append(gca.toXML());
-        }
-        sb.append("</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodeResponseList>");
-        return sb.toString();
-    }
+	@Override
+	public String toXML() {
+		final StringBuilder sb = new StringBuilder("<"
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodeResponseList " + "numberOfGeocodedAddresses=\""
+				+ Integer.toString(this.getGeocodedAddressSize()) + "\">");
+		for (final GeocodedAddress gca : this.geocodedAddress) {
+			sb.append(gca.toXML());
+		}
+		sb.append("</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodeResponseList>");
+		return sb.toString();
+	}
 }

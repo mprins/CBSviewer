@@ -64,7 +64,7 @@ import org.slf4j.LoggerFactory;
  * </pre>
  * 
  * @author prinsmc
- * @since 1.6
+ * @since 1.7
  */
 public class ReverseProxyServlet extends AbstractBaseServlet {
 	// CHECKSTYLE.ON:
@@ -93,7 +93,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 * 
 	 * @see #ALLOWED_HOSTS
 	 */
-	private final Set<String> allowedHosts = new HashSet<String>();
+	private final Set<String> allowedHosts = new HashSet<>();
 
 	/**
 	 * optie om text/xml mime type voor response te forceren. default waarde is

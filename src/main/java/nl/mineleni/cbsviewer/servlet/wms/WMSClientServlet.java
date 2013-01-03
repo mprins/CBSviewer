@@ -328,7 +328,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 							this.getMapRequest);
 
 			final String[] layerNames = lyrDesc.getLayers().split(",\\s*");
-			final Set<Layer> queryLayers = new HashSet<Layer>();
+			final Set<Layer> queryLayers = new HashSet<>();
 			final WMSCapabilities caps = this.getCachedWMS(lyrDesc)
 					.getCapabilities();
 

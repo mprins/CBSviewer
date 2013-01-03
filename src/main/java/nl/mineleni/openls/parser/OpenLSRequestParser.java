@@ -26,6 +26,8 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /**
  * The Class OpenLSRequestParser.
+ * 
+ * @since 1.7
  */
 public class OpenLSRequestParser extends DefaultHandler {
 
@@ -37,7 +39,7 @@ public class OpenLSRequestParser extends DefaultHandler {
 	private StringBuffer eValBuf;
 
 	/** The obj stack. */
-	private final Stack<XmlNamespaceConstants> objStack = new Stack<XmlNamespaceConstants>();
+	private final Stack<XmlNamespaceConstants> objStack = new Stack<>();
 
 	/** The parser. */
 	private SAXParser parser;

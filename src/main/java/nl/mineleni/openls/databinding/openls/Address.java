@@ -38,6 +38,7 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * </pre>
  * 
  * @author mprins
+ * @since 1.7
  */
 public class Address implements XmlNamespaceConstants {
 	/**
@@ -48,8 +49,8 @@ public class Address implements XmlNamespaceConstants {
 	private String countryCode;
 	private StreetAddress streetAddress;
 	private PostalCode postalCode;
-	private final Vector<Place> place = new Vector<Place>();
-	private final Map<String, String> placeMap = new HashMap<String, String>();
+	private final Vector<Place> place = new Vector<>();
+	private final Map<String, String> placeMap = new HashMap<>();
 
 	private boolean hasCountryCode;
 	private boolean hasStreetAddress;

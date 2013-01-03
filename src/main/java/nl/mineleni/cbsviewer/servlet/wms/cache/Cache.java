@@ -30,6 +30,7 @@ import org.slf4j.LoggerFactory;
  * @param <T>
  *            het cacheble object
  * @author prinsmc
+ * @since 1.7
  */
 public class Cache<K, V extends Cachable<T>, T> implements Caching<K, V, T> {
 	/** logger. */

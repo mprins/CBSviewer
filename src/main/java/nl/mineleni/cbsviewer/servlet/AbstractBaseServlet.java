@@ -19,6 +19,7 @@ import org.slf4j.LoggerFactory;
  * Gedeelde basis servlet.
  * 
  * @author mprins
+ * 
  */
 public abstract class AbstractBaseServlet extends HttpServlet {
 

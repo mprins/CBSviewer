@@ -177,7 +177,7 @@ public class OpenLSClient {
 			final Map<String, String> getParams) {
 		final HttpPost httppost = new HttpPost(url);
 		try {
-			final List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+			final List<NameValuePair> nvps = new ArrayList<>();
 			for (final Entry<String, String> getParam : getParams.entrySet()) {
 				nvps.add(new BasicNameValuePair(URLEncoder.encode(
 						getParam.getKey(), "UTF-8"), URLEncoder.encode(
