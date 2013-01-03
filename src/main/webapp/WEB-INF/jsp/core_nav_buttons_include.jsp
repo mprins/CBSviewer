@@ -35,7 +35,7 @@
 		</c:when>
 		<c:otherwise>
 			<c:set var="wisselachtergrond" value="luchtfoto" />
-			<fmt:message key="KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />
+			<fmt:message key="KEY_TOGGLE_BASEMAP_LUFO" var="wisselachtergrondBtn" />
 		</c:otherwise>
 	</c:choose>
 
