@@ -192,7 +192,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 							responseBody = FeatureInfoResponseConverter
 									.convertToHTMLTable(
 											get.getEntity().getContent(),
-											FeatureInfoResponseConverter.Type.GMLTYPE,
+											"GMLTYPE",
 											this.layers.getLayerByLayers(lName)
 													.getAttributes()
 													.split(",\\s*"));

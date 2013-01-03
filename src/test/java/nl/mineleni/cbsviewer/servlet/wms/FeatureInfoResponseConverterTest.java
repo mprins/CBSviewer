@@ -14,7 +14,6 @@ import static org.junit.Assert.assertNotNull;
 
 import java.io.IOException;
 
-import nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type;
 import nl.mineleni.cbsviewer.util.LabelsBundle;
 
 import org.custommonkey.xmlunit.XMLUnit;
@@ -56,7 +55,7 @@ public class FeatureInfoResponseConverterTest {
 		final String testXML = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse0.gml"),
-				Type.GMLTYPE, colNames);
+				"GMLTYPE", colNames);
 		assertNotNull(testXML);
 		assertEquals(new LabelsBundle().getString("KEY_INFO_GEEN_FEATURES"),
 				testXML);
@@ -77,7 +76,7 @@ public class FeatureInfoResponseConverterTest {
 		final String testXML = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse1.gml"),
-				Type.GMLTYPE, colNames);
+				"GMLTYPE", colNames);
 		assertNotNull(testXML);
 
 		// Validator v = new Validator(testXML);
@@ -106,7 +105,7 @@ public class FeatureInfoResponseConverterTest {
 		final String testXML = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse3.gml"),
-				Type.GMLTYPE, colNames);
+				"GMLTYPE", colNames);
 		assertNotNull(testXML);
 		assertXpathExists("//caption", testXML);
 		assertXpathExists("/table/caption", testXML);
@@ -134,7 +133,7 @@ public class FeatureInfoResponseConverterTest {
 		final String test = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse0.html"),
-				Type.HTMLTYPE, null);
+				"HTMLTYPE", null);
 		assertNotNull(test);
 	}
 
@@ -151,7 +150,7 @@ public class FeatureInfoResponseConverterTest {
 		final String test = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse1.html"),
-				Type.HTMLTYPE, null);
+				"HTMLTYPE", null);
 		assertNotNull(test);
 	}
 
@@ -168,7 +167,7 @@ public class FeatureInfoResponseConverterTest {
 		final String test = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse3.html"),
-				Type.HTMLTYPE, null);
+				"HTMLTYPE", null);
 		assertNotNull(test);
 	}
 }

@@ -64,6 +64,7 @@ import org.slf4j.LoggerFactory;
  * WMS client voor de applicatie.
  * 
  * @author prinsmc
+ * @since 1.7
  */
 public class WMSClientServlet extends AbstractWxSServlet {
 
@@ -166,22 +167,23 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * 
 	 * @param bbox
 	 *            the bbox
-	 * @param type
-	 *            the type
+	 * @param baseMapType
+	 *            het type basemap, {@code "luchtfoto"} of (default)
+	 *            {@code "topografie"}
 	 * @return background/basemap image
 	 * @throws ServletException
 	 *             Geeft aan dat er een fout is opgetreden bij het benaderen van
 	 *             de achtergrondgrond WMS service
 	 */
 	private BufferedImage getBackGroundMap(final BoundingBox bbox,
-			final BasemapType type) throws ServletException {
+			final String baseMapType) throws ServletException {
 
 		GetMapRequest map;
-		switch (type) {
-		case luchtfoto:
+		switch (baseMapType.toLowerCase()) {
+		case "luchtfoto":
 			if (this.bgWMSLuFoCache.containsKey(bbox)) {
 				// ophalen uit cache
-				LOGGER.debug("Achtergrond " + type
+				LOGGER.debug("Achtergrond " + baseMapType
 						+ " afbeelding uit de cache serveren.");
 				return this.bgWMSLuFoCache.getImage(bbox);
 			}
@@ -199,12 +201,12 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				}
 			}
 			break;
-		case topografie:
+		case "topografie":
 			// implicit fall thru naar default
 		default:
 			if (this.bgWMSCache.containsKey(bbox)) {
 				// ophalen uit cache
-				LOGGER.debug("Achtergrond " + type
+				LOGGER.debug("Achtergrond " + baseMapType
 						+ " afbeelding uit de cache serveren.");
 				return this.bgWMSCache.getImage(bbox);
 			}
@@ -236,12 +238,12 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		try {
 			final GetMapResponse response = this.bgWMS.issueRequest(map);
 			final BufferedImage image = ImageIO.read(response.getInputStream());
-			switch (type) {
-			case luchtfoto:
+			switch (baseMapType.toLowerCase()) {
+			case "luchtfoto":
 				this.bgWMSLuFoCache.put(bbox, image, SECONDS_TO_CACHE_ELEMENTS);
-
 				break;
-			case topografie:
+			case "topografie":
+				// implicit fall thru naar default
 			default:
 				this.bgWMSCache.put(bbox, image, SECONDS_TO_CACHE_ELEMENTS);
 				break;
@@ -351,9 +353,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					.issueRequest(getFeatureInfoRequest);
 
 			final String html = FeatureInfoResponseConverter
-					.convertToHTMLTable(response.getInputStream(),
-							FeatureInfoResponseConverter.Type.GMLTYPE, lyrDesc
-									.getAttributes().split(",\\s*"));
+					.convertToHTMLTable(response.getInputStream(), "GMLTYPE",
+							lyrDesc.getAttributes().split(",\\s*"));
 			this.featInfoCache.put(key,
 					new CachableString(html, System.currentTimeMillis()
 							+ MILLISECONDS_TO_CACHE_ELEMENTS));
@@ -782,14 +783,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		final int straal = dXcoordYCoordStraal[2];
 		final BoundingBox bbox = SpatialUtil.calcRDBBOX(xcoord, ycoord, straal);
 
-		BasemapType basemaptype = BasemapType.topografie;
+		String basemaptype = "topografie";
 		final String mType = request.getParameter(REQ_PARAM_BGMAP.code);
 		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(mType)) {
-			try {
-				basemaptype = BasemapType.valueOf(mType);
-			} catch (final IllegalArgumentException e) {
-				LOGGER.debug("Ongeldige waarde gebruikt voor basemap type, de default wordt gebruikt.");
-			}
+			basemaptype = mType;
 		}
 		final BufferedImage bg = this.getBackGroundMap(bbox, basemaptype);
 

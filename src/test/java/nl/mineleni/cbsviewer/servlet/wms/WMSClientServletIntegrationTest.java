@@ -160,7 +160,7 @@ public class WMSClientServletIntegrationTest {
 
 				this.allowing(WMSClientServletIntegrationTest.this.request)
 						.getParameter(REQ_PARAM_BGMAP.code);
-				this.will(returnValue(BasemapType.topografie.toString()));
+				this.will(returnValue("topografie"));
 
 				this.allowing(WMSClientServletIntegrationTest.this.request)
 						.getParameter(REQ_PARAM_MAPID.code);
