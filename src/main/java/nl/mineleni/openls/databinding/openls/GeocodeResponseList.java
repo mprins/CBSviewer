@@ -5,6 +5,7 @@ import java.util.Vector;
 import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
+ * OLS GeocodeResponseList.
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>
@@ -33,31 +34,69 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  */
 public class GeocodeResponseList implements XmlNamespaceConstants {
 
-	/** serialisation id */
+	/** serialisation id. */
 	private static final long serialVersionUID = 6830914161263736467L;
+
+	/** The geocoded address. */
 	private final Vector<GeocodedAddress> geocodedAddress = new Vector<>();
+
+	/** The number of geocoded addresses. */
 	private int numberOfGeocodedAddresses;
 
+	/**
+	 * Adds the geocoded address.
+	 * 
+	 * @param val
+	 *            the val
+	 */
 	public void addGeocodedAddress(GeocodedAddress val) {
 		this.geocodedAddress.add(val);
 	}
 
+	/**
+	 * Gets the geocoded address at.
+	 * 
+	 * @param i
+	 *            the i
+	 * @return the geocoded address at
+	 */
 	public GeocodedAddress getGeocodedAddressAt(int i) {
 		return this.geocodedAddress.get(i);
 	}
 
+	/**
+	 * Gets the geocoded address size.
+	 * 
+	 * @return the geocoded address size
+	 */
 	public int getGeocodedAddressSize() {
 		return this.geocodedAddress.size();
 	}
 
+	/**
+	 * Sets the number of geocoded addresses.
+	 * 
+	 * @param val
+	 *            the new number of geocoded addresses
+	 */
 	public void setNumberOfGeocodedAddresses(int val) {
 		this.numberOfGeocodedAddresses = val;
 	}
 
+	/**
+	 * Gets the number of geocoded addresses.
+	 * 
+	 * @return the number of geocoded addresses
+	 */
 	public int getNumberOfGeocodedAddresses() {
 		return this.numberOfGeocodedAddresses;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
 	@Override
 	public String toXML() {
 		final StringBuilder sb = new StringBuilder("<"

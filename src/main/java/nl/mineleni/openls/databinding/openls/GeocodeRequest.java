@@ -6,7 +6,6 @@ import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
  * OLS GeocodeRequest.
- * 
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>

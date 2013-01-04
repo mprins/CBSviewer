@@ -3,7 +3,7 @@ package nl.mineleni.openls.databinding.openls;
 import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
- * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
+ * OLS PostalCode. http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
  * 
@@ -30,41 +30,67 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * @author mprins
  */
 public class PostalCode implements XmlNamespaceConstants {
-    /**
-     * serialization id.
-     */
-    private static final long serialVersionUID = -78484525678140670L;
+	/**
+	 * serialization id.
+	 */
+	private static final long serialVersionUID = -78484525678140670L;
 
-    private String postalCode;
+	/** The postal code. */
+	private String postalCode;
 
-    private boolean hasPostalCode;
+	/** The has postal code. */
+	private boolean hasPostalCode;
 
-    public PostalCode() {
-        this.hasPostalCode = false;
-    }
+	/**
+	 * Instantiates a new postal code.
+	 */
+	public PostalCode() {
+		this.hasPostalCode = false;
+	}
 
-    public void setPostalCode(String postalCode) {
-        this.hasPostalCode = true;
-        this.postalCode = postalCode;
-    }
+	/**
+	 * Sets the postal code.
+	 * 
+	 * @param postalCode
+	 *            the new postal code
+	 */
+	public void setPostalCode(String postalCode) {
+		this.hasPostalCode = true;
+		this.postalCode = postalCode;
+	}
 
-    public String getPostalCode() {
-        return this.postalCode;
-    }
+	/**
+	 * Gets the postal code.
+	 * 
+	 * @return the postal code
+	 */
+	public String getPostalCode() {
+		return this.postalCode;
+	}
 
-    public boolean hasPostalCode() {
-        return this.hasPostalCode;
-    }
+	/**
+	 * Checks for postal code.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasPostalCode() {
+		return this.hasPostalCode;
+	}
 
-    @Override
-    public String toXML() {
-        String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":PostalCode>";
-        if (this.hasPostalCode()) {
-            xml += this.getPostalCode();
-        }
-        xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":PostalCode>";
-        return xml;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
+	@Override
+	public String toXML() {
+		String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":PostalCode>";
+		if (this.hasPostalCode()) {
+			xml += this.getPostalCode();
+		}
+		xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":PostalCode>";
+		return xml;
+	}
 }

@@ -3,7 +3,7 @@ package nl.mineleni.openls.databinding.openls;
 import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
- * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
+ * OLS Street. http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
  * 
@@ -63,41 +63,66 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * @author mprins
  */
 public class Street implements XmlNamespaceConstants {
-    /**
-     * serialization id.
-     */
-    private static final long serialVersionUID = -7318834532989520351L;
-    /** The name for a street (e.g., Main). */
-    private String street;
+	/**
+	 * serialization id.
+	 */
+	private static final long serialVersionUID = -7318834532989520351L;
+	/** The name for a street (e.g., Main). */
+	private String street;
 
-    private boolean hasStreet;
+	/** The has street. */
+	private boolean hasStreet;
 
-    public Street() {
-        this.hasStreet = false;
-    }
+	/**
+	 * Instantiates a new street.
+	 */
+	public Street() {
+		this.hasStreet = false;
+	}
 
-    public void setStreet(String street) {
-        this.hasStreet = true;
-        this.street = street;
-    }
+	/**
+	 * Sets the street.
+	 * 
+	 * @param street
+	 *            the new street
+	 */
+	public void setStreet(String street) {
+		this.hasStreet = true;
+		this.street = street;
+	}
 
-    public String getStreet() {
-        return this.street;
-    }
+	/**
+	 * Gets the street.
+	 * 
+	 * @return the street
+	 */
+	public String getStreet() {
+		return this.street;
+	}
 
-    public boolean hasStreet() {
-        return this.hasStreet;
-    }
+	/**
+	 * Checks for street.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasStreet() {
+		return this.hasStreet;
+	}
 
-    @Override
-    public String toXML() {
-        String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":Street>";
-        if (this.hasStreet()) {
-            xml += this.getStreet();
-        }
-        xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":Street>";
-        return xml;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
+	@Override
+	public String toXML() {
+		String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":Street>";
+		if (this.hasStreet()) {
+			xml += this.getStreet();
+		}
+		xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":Street>";
+		return xml;
+	}
 }
