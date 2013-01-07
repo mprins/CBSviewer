@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -94,12 +94,18 @@ UpdateLegendControl = OpenLayers.Class(OpenLayers.Control, {
 			return;
 		} else {
 			// test if layer is WMS
-			if (evt.layer instanceof OpenLayers.Layer.WMS) {
+			if (evt.layer.CLASS_NAME == "OpenLayers.Layer.WMS") {
 				var lyr = evt.layer;
-				var legendUrl = lyr.url + '?SERVICE=WMS&REQUEST=GetLegendGraphic' + '&FORMAT=image%2Fpng'
-						+ '&WIDTH=36&HEIGHT=36' + '&LAYER=' + lyr.params.LAYERS + '&STYLE=' + lyr.params.STYLES
-						+ '&VERSION=' + lyr.params.VERSION + '&EXCEPTIONS=' + lyr.params.EXCEPTIONS;
-				var newHtml = '<img src="' + legendUrl + '" alt="Legenda voor kaartlaag ' + lyr.name + '"/>';
+				var wmsLyrs = (lyr.params.LAYERS).split(',');
+				var wmsLyrStyles = (lyr.params.STYLES).split(',');
+				var newHtml = "";
+				for (i = 0, l = wmsLyrs.length; i < l; i++) {
+					var legendUrl = lyr.url + '?SERVICE=WMS&REQUEST=GetLegendGraphic' + '&FORMAT=image%2Fpng'
+							+ '&WIDTH=36&HEIGHT=36' + '&LAYER=' + wmsLyrs[i] + '&STYLE=' + wmsLyrStyles[i]
+							+ '&VERSION=1.1.1&EXCEPTIONS=' + lyr.params.EXCEPTIONS;
+					newHtml += '<img src="' + legendUrl + '" alt="Legenda voor kaartlaag ' + lyr.name + ' ('
+							+ wmsLyrs[i] + ')"/>';
+				}
 
 				if (newHtml != this.element.innerHTML) {
 					this.element.innerHTML = newHtml;
