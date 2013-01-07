@@ -144,7 +144,7 @@
 				</os>
 			</activation>
 			<properties>
-				<phantomjs.archive>phantomjs-1.8.0-windows.zip</phantomjs.archive>
+				<phantomjs.archive>phantomjs-1.8.1-windows.zip</phantomjs.archive>
 				<phantomjs.executable>phantomjs.exe</phantomjs.executable>
 			</properties>
 			<build>
@@ -190,8 +190,7 @@
 				</os>
 			</activation>
 			<properties>
-				<!-- <phantomjs.archive>phantomjs-1.8.0-linux-x86_64.tar.bz2</phantomjs.archive> -->
-				<phantomjs.archive>phantomjs-1.7.0-linux-i686.tar.bz2</phantomjs.archive>
+				<phantomjs.archive>phantomjs-1.8.1-linux-i686.tar.bz2</phantomjs.archive>
 				<phantomjs.executable>phantomjs</phantomjs.executable>
 			</properties>
 			<build>
@@ -237,7 +236,7 @@
 				</os>
 			</activation>
 			<properties>
-				<phantomjs.archive>phantomjs-1.8.0-macosx.zip</phantomjs.archive>
+				<phantomjs.archive>phantomjs-1.8.1-macosx.zip</phantomjs.archive>
 				<phantomjs.executable>phantomjs</phantomjs.executable>
 			</properties>
 			<build>
