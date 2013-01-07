@@ -181,6 +181,7 @@ var ZoekFormulier = {
 			Viewer.zoomTo(data[0].xCoord, data[0].yCoord, data[0].radius);
 			Viewer.featureInfo(data[0].xCoord, data[0].yCoord);
 		}
+
 		paragraaf.empty().html(html);
 	}
 };

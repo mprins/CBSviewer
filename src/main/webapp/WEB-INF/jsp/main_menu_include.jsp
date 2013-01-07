@@ -9,11 +9,11 @@
 
 	<fmt:setBundle basename="LabelsBundle" />
 
-	<div class="dropDownMenu clearfix">
+	<div class="dropDownMenu">
 	<!--a id="skipNavigation"></a-->
 	<ul class="siteNavigation">
-		<li class="sectionTheme">
-			<a class="hasMenu">Selecteer een CBS kaartlaag</a>
+		<li id="thememenu" class="sectionTheme">
+			<a href="#thememenu" class="hasMenu">Selecteer een CBS kaartlaag</a>
 			<div class="navDropDown"> 
 				<ol class="navCategories">
 					<li id="keymenu">

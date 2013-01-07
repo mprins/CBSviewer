@@ -200,7 +200,7 @@ Viewer = function() {
 			}));
 			_map.addControl(new OpenLayers.Control.Zoom());
 			_map.addControl(new OpenLayers.Control.Navigation({
-				zoomWheelEnabled : false
+				zoomWheelEnabled : true
 			}));
 			_map.addControl(new OpenLayers.Control.KeyboardClick({
 				/* alleen actief als de kaart focus heeft */
