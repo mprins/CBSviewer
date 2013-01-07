@@ -60,7 +60,7 @@
 
 <body>
 	<div id="wrapper">
-		<div id="header" style="min-width:350px">
+		<div id="header">
 			<div id="headercenter" class="column">
 				<h2 id="pagSubTitle" class="subtitel">
 					<fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message>

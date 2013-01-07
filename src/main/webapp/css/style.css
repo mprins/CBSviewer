@@ -523,6 +523,7 @@ a.olControlZoomOut {
 }
 
 #header {
+  min-width:350px;
   padding-left: 326px;  
   padding-right: 270px;  
   max-height:76px;
@@ -562,8 +563,9 @@ a.olControlZoomOut {
 	min-height:100%;
 }
 
-#inhoud {
-	padding:76px 0px 29px; /* padding for header/footer */
+#inhoud { 
+	padding:76px 0px 29px; /* padding for header/footer */	
+	min-height:100%;
 }
 
 #legendaContainer {

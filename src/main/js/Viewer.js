@@ -63,7 +63,8 @@ Viewer = function() {
 			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
 			// var h = jQuery('#' + this.config.mapDiv).parent().height() -
 			// borderH;
-			var h = jQuery('#' + this.config.mapDiv).parent().parent().height() - borderH;
+			// 150px nog verwijderen als ik een oplossing heb die #inhoud op 100% van de schermhoogte kan zetten. Werkt alleen in sommige browsers
+			var h = jQuery('#' + this.config.mapDiv).parent().parent().parent().height() - borderH - 150;
 
 			jQuery('#' + this.config.mapDiv).width(w).height(h);
 			_map.updateSize();
@@ -328,10 +329,10 @@ Viewer = function() {
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 				var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-
+						
 				var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
 				// var hh = jQuery('#' + this.config.mapDiv).parent().height();
-				var h = jQuery('#' + this.config.mapDiv).parent().parent().height() - borderH;
+				var h = jQuery('#' + this.config.mapDiv).parent().parent().parent().height() - borderH - 150;
 
 				jQuery('#' + this.config.mapDiv).width(w).height(h);
 				jQuery('#toggleSize').toggleClass('restore max');
