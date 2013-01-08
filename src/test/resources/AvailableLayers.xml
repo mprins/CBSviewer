@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd ">
+	<!-- 
+		dit is een document met test configuratie, 
+		oa. voor AvailableLayersBeanTest en WMSClientServletTest
+	-->
 	<Layerdescriptor>
 		<id>vierkanten500m_oad2000</id>
 		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2000</name>
