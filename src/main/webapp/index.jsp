@@ -67,7 +67,7 @@
 				</h2>
 			</div>
 			<div id="headerleft" class="column">
-				<img src="img/template/cbslogo-2.gif" alt="Centraal Bureau voor de Statistiek" border="0"/>
+				<img src="img/template/cbslogo-2.gif" alt="Centraal Bureau voor de Statistiek" class="logo"/>
 			</div>
 			<div id="headerright" class="column">
 				<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>

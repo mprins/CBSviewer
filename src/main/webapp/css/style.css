@@ -563,6 +563,11 @@ a.olControlZoomOut {
 	min-height:100%;
 }
 
+.logo
+{
+	border:none;
+}
+
 #inhoud { 
 	padding:76px 0px 29px; /* padding for header/footer */	
 	min-height:100%;
