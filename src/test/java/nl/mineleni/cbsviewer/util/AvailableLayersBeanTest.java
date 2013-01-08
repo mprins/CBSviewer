@@ -43,8 +43,6 @@ import org.xml.sax.SAXException;
  */
 public class AvailableLayersBeanTest {
 	private static final String ID1 = "vierkanten500m_oad2000";
-
-	private static final String ID2 = "wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners";
 	private static final String LAYERS1 = "omgevings_adres_dichtheid_2000";
 	private static final String NAME1 = "Vierkanten 500 x 500m - Omgevingsadressendichtheid 2000";
 
@@ -120,7 +118,7 @@ public class AvailableLayersBeanTest {
 	}
 
 	/**
-	 * XML testcase voor {@link AvailableLayers.xml}
+	 * XML testcase voor test {@link AvailableLayers.xml}.
 	 * 
 	 * @todo xpath tests
 	 */
@@ -135,15 +133,15 @@ public class AvailableLayersBeanTest {
 		v.addSchemaSource(schema);
 		assertTrue(v.isInstanceValid(doc));
 
-		// test inhoud van document
+		// test inhoud van het test document
 		try {
 			final String TESTXML = convertStreamToString(this.getClass()
 					.getClassLoader()
 					.getResourceAsStream("AvailableLayers.xml"));
 			// vanwege gekkigheid in XPath werken seleciets in de default
 			// namespace niet, bijv.
-			// /Layers/Layerdescriptor[1]/id faalt. Daarom local-name functie
-			// gebruiken
+			// /Layers/Layerdescriptor[1]/id faalt.
+			// Daarom local-name functie gebruiken
 			assertXpathExists(
 					"/*[local-name()='Layers']/*[local-name()='Layerdescriptor']/*[local-name()='id']",
 					TESTXML);
@@ -172,7 +170,7 @@ public class AvailableLayersBeanTest {
 	}
 
 	/**
-	 * XML testcase voor {@link AvailableLayers.xsd}
+	 * XML testcase voor {@link AvailableLayers.xsd}.
 	 */
 	@Test
 	public void testAvailableLayersXSD() {
@@ -188,6 +186,23 @@ public class AvailableLayersBeanTest {
 			fail(e.getMessage());
 		}
 
+	}
+
+	/**
+	 * XML testcase voor deployment {@link AvailableLayers.xml}.
+	 * 
+	 * @todo xpath tests
+	 */
+	@Test
+	public void testDeploymentAvailableLayersXML() {
+		// valideer document
+		final Source schema = new StreamSource(this.getClass().getClassLoader()
+				.getResourceAsStream("AvailableLayers.xsd"));
+		final Source doc = new StreamSource(this.getClass().getClassLoader()
+				.getResourceAsStream("../classes/AvailableLayers.xml"));
+		final Validator v = new Validator();
+		v.addSchemaSource(schema);
+		assertTrue(v.isInstanceValid(doc));
 	}
 
 	/**
