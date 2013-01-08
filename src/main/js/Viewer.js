@@ -99,7 +99,8 @@ Viewer = function() {
 			// merge any controls met default
 			jQuery.extend(true, this.config, {
 				map : {
-					controls : []
+					controls : [],
+					tileManager: new OpenLayers.TileManager()
 				}
 			});
 			jQuery(window).unload(function() {
@@ -201,7 +202,10 @@ Viewer = function() {
 			}));
 			_map.addControl(new OpenLayers.Control.Zoom());
 			_map.addControl(new OpenLayers.Control.Navigation({
-				zoomWheelEnabled : true
+				zoomWheelEnabled : true,
+				dragPanOptions: {
+					enableKinetic: true
+				}
 			}));
 			_map.addControl(new OpenLayers.Control.KeyboardClick({
 				/* alleen actief als de kaart focus heeft */
