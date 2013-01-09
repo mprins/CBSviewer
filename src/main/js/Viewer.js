@@ -60,8 +60,8 @@ Viewer = function() {
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 			var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css("padding-top")); // inhoud padding set in css
-			var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css("padding-bottom"));
+			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud padding set in css
+			var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-bottom'), 10);
 			
 			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
 			var h = jQuery(window).height() -  headerH - footerH - borderH;
@@ -333,8 +333,8 @@ Viewer = function() {
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 				var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-				var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css("padding-top")); // inhoud padding set in css
-				var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css("padding-bottom"));
+				var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud padding set in css
+				var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-bottom'), 10);
 				
 				var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
 				var h = jQuery(window).height() -  headerH - footerH - borderH;
