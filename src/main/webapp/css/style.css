@@ -264,6 +264,7 @@ html.js #cbslogo {
 	background-color: #fff;
 	height:60px;
 	bottom:0;
+	left:0;
 }
 
 .copy {
@@ -496,9 +497,7 @@ a.olControlZoomOut {
 }
 
 #footer {
-	position:absolute;
 	width:100%;
-	bottom:0; 
 	background:#ddd;
 	background-color: #426A98;
 	background-repeat: no-repeat;
