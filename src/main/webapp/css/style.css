@@ -777,3 +777,8 @@ a.olControlZoomOut {
  {
 	display:block;
 }
+
+#downloadLink a {
+	background: transparent url(../img/opendata.png) 0px 1px no-repeat;
+	padding-left: 18px;
+}
