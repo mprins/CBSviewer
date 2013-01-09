@@ -13,7 +13,7 @@
 	cursor: pointer;
 	left: 5px;
 	position: absolute;
-	top: 10px;
+	top: 86px;
 }
 .siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li {
 	list-style: none;
@@ -36,7 +36,6 @@
 	width: 20%;
 }
 .navCategories li:hover>.contentasset>.megaMenu, 
-.navCategories li:focus>.contentasset>.megaMenu, 
 .navCategories>li:first-child .megaMenu {
 	left: 20%;
 }
@@ -68,7 +67,6 @@
 }
 .siteNavigation {
 	float: left;
-	margin-top: 70px;
 	position: relative;
 	width: 100%;
 }
@@ -154,19 +152,20 @@
 	padding: 10px 0 10px 10px;
 	text-shadow: 2px 2px 2px #ffffff;
 }
-.navCategories>li>a:hover, .navCategories>li>a:focus {
+.navCategories>li>a:hover {
 	color: #E51D9B;
 }
 .navCategories>li>a.current,
-.navCategories>li>a:hover, .navCategories>li>a:focus ,
-.navCategories>li:hover>a, .navCategories>li:focus>a {
+.navCategories>li>a:hover,
+.navCategories>li:hover>a {
 	background: white;
 	border-color: #e4e4e4;
 	text-decoration: underline;
 	text-shadow: none;
 }
 .navCategories>li>a:after,
-.navCategories>li:hover>a:after {
+.navCategories>li:hover>a:after
+ {
 	background: url(../img/template/arrows_sprite_8.png) no-repeat -30px 0;
 	content: '';
 	display: inline-block;
@@ -312,7 +311,8 @@
 	color: #333366;
 	text-decoration: none;
 }
-.navCategories .megaMenu li a:hover {
+.navCategories .megaMenu li a:hover
+ {
 	color: #000000;
 	text-decoration: underline;
 }
@@ -337,14 +337,15 @@
 .navleft a {
 	width: 245px;
 }
-.navleft a:hover, .navright a:hover {
+.navleft a:hover, .navright a:hover{
 	background-color: #000;
 	color: #fff;
 }
 .navleft .menuTitle, .navright .menuTitle {
 	padding: 0px;
 }
-.navleft li:hover > a, .navright li:hover > a {
+.navleft li:hover > a, .navright li:hover > a,
+.navleft li:focus > a, .navright li:focus > a {
 	background-color: #eeeeee;
 	color: #000000;
 }
@@ -356,7 +357,7 @@
 	border: none;
 	color: #333366;
 }
-.navleft ul a:hover, .navright ul a:hover {
+.navleft ul a:hover, .navright ul a:hover{
 	background-color: #eeeeee;
 	color: #000 !important;
 	text-decoration: underline;

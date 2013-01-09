@@ -95,7 +95,7 @@ public enum StringConstants {
 	 * @return De lijst met alle code namen.
 	 */
 	public static List<String> codeNamen() {
-		final List<String> codeNames = new ArrayList<String>();
+		final List<String> codeNames = new ArrayList<>();
 		for (final StringConstants strConst : StringConstants.values()) {
 			codeNames.add(strConst.code);
 		}

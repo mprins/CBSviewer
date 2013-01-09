@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
 /**
  * Een control die een ikoontje tekent op de plaats waar geklikt is.
  * 
@@ -66,6 +72,8 @@ ClickDrawControl = OpenLayers.Class(OpenLayers.Control, {
 	 * @private
 	 */
 	drawOrMove : function(e) {
+		// verplaats naar bovenste
+		this.map.setLayerIndex(this.layer, this.map.getNumLayers()-1);
 		var lonlat = this.map.getLonLatFromPixel(e.xy);
 		if (!this.point) {
 			var geometry = new OpenLayers.Geometry.Point(lonlat.lon, lonlat.lat);

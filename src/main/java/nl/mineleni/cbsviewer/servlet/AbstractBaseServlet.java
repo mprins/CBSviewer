@@ -1,5 +1,8 @@
-/**
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet;
 
@@ -16,6 +19,7 @@ import org.slf4j.LoggerFactory;
  * Gedeelde basis servlet.
  * 
  * @author mprins
+ * 
  */
 public abstract class AbstractBaseServlet extends HttpServlet {
 
@@ -32,19 +36,55 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(AbstractBaseServlet.class);
 	/** proxyserver address for the this service. {@value} */
-	protected String proxyHost = null;
+	private String proxyHost = null;
 
 	/** proxyserver port for the this service. {@value} */
-	protected int proxyPort = -1;
+	private int proxyPort = -1;
 
 	/** user id voor bijv. authenticatie. @see #USER_ID */
-	protected String userID = null;
+	private String userID = null;
 
 	/** password voor bijv. authenticatie. @see #USER_PASSWORD */
-	protected String passID = null;
+	private String passID = null;
 
 	/** De gedeelde, read-only, resourcebundel voor de applicatie. */
 	protected LabelsBundle _RESOURCES = new LabelsBundle();
+
+	/**
+	 * Gets the proxy host.
+	 * 
+	 * @return the proxyHost
+	 */
+	public String getProxyHost() {
+		return this.proxyHost;
+	}
+
+	/**
+	 * Gets the proxy port.
+	 * 
+	 * @return the proxyPort
+	 */
+	public int getProxyPort() {
+		return this.proxyPort;
+	}
+
+	/**
+	 * Gets the user id.
+	 * 
+	 * @return the userID
+	 */
+	public String getUserID() {
+		return this.userID;
+	}
+
+	/**
+	 * Gets the pass id.
+	 * 
+	 * @return the passID
+	 */
+	public String getPassID() {
+		return this.passID;
+	}
 
 	/**
 	 * Leest de config opties uit de web.xml in; het gaat om {@link #USER_ID} en
@@ -62,15 +102,17 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
+
 		// netwerk data/parameters
 		this.proxyHost = System.getProperty("http.proxyHost");
 		try {
-			proxyPort = Integer.valueOf(System.getProperty("http.proxyPort"));
+			this.proxyPort = Integer.valueOf(System
+					.getProperty("http.proxyPort"));
 		} catch (final NumberFormatException e) {
 			LOGGER.debug("Geen proxy poort gedefinieerd.");
 		}
-		LOGGER.info("Instellen van proxy config: " + proxyHost + ":"
-				+ proxyPort);
+		LOGGER.info("Instellen van proxy config: " + this.proxyHost + ":"
+				+ this.proxyPort);
 
 		// user data/parameters
 		this.userID = config.getInitParameter(USER_ID);

@@ -31,26 +31,9 @@ import org.xml.sax.SAXException;
  * FeatureInfo responses te parsen en te converteren naar een andere vorm.
  * 
  * @author mprins
- * @since 1.6
+ * @since 1.7
  */
 public final class FeatureInfoResponseConverter {
-
-	/**
-	 * het inputstream Type.
-	 * 
-	 * @see FeatureInfoResponseConverter#convertToHTMLTable(InputStream, Type,
-	 *      String[])
-	 */
-	public enum Type {
-		/** het gmltype. */
-		GMLTYPE,
-		/**
-		 * het htmltype. Dit doet niet veel...
-		 * 
-		 * @see FeatureInfoResponseConverter#cleanupHTML(InputStream)
-		 */
-		HTMLTYPE;
-	}
 
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
@@ -74,6 +57,7 @@ public final class FeatureInfoResponseConverter {
 		LOGGER.warn("unsported feature");
 		// misschien met net.sourceforge.htmlcleaner:htmlcleaner
 		// http://search.maven.org/#artifactdetails%7Cnet.sourceforge.htmlcleaner%7Chtmlcleaner%7C2.2%7Cjar
+		// of jsoup
 		return convertStreamToString(htmlStream);
 	}
 
@@ -123,9 +107,7 @@ public final class FeatureInfoResponseConverter {
 				LOGGER.debug("Gemaakte HTML tabel:\n" + sb);
 			} else {
 				LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo");
-				return
-
-				RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
+				return RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
 			}
 		} catch (ParserConfigurationException | SAXException e) {
 			LOGGER.error("Fout tijdens parsen van GML. ", e);
@@ -171,7 +153,7 @@ public final class FeatureInfoResponseConverter {
 	 * @param input
 	 *            inputstream met de featureinfo response.
 	 * @param type
-	 *            het Type conversie
+	 *            het type conversie, ondersteund is {@code "GMLTYPE"}
 	 * @param attributes
 	 *            namen van de feature attributen
 	 * @return een html tabel
@@ -179,12 +161,11 @@ public final class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public static String convertToHTMLTable(final InputStream input,
-			final FeatureInfoResponseConverter.Type type,
-			final String[] attributes) throws IOException {
-		switch (type) {
-		case GMLTYPE:
+			final String type, final String[] attributes) throws IOException {
+		switch (type.toUpperCase()) {
+		case "GMLTYPE":
 			return convertGML(input, attributes);
-		case HTMLTYPE:
+		case "HTMLTYPE":
 			return cleanupHTML(input);
 		default:
 			return convertStreamToString(input);

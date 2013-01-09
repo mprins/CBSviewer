@@ -105,7 +105,7 @@ describe(
 						it(
 								'na aanroepen van zoomTo is de x coordinaat voor het midden van de kaart gelijk aan gevraagd en is zoomnivo anders.',
 								function() {
-									var x = 150000, y = 300000, r = 20000;
+									var x = 150000, y = 300000, r = 10000;
 									Viewer.zoomTo(x, y, r);
 									var latlon = Viewer.getMap().getCenter();
 									expect(latlon.lon).toEqual(x);
@@ -133,6 +133,20 @@ describe(
 							expect(config.map.width).toEqual(parseInt(w));
 							expect(config.map.height).toEqual(parseInt(h));
 						});
+
+						it('Na uitvoeren van featureInfo vallen de (x,y) binnen de kaart uitsnede.', function() {
+							Viewer.loadWMS(_wms);
+							var x = 145954, y = 457088;
+							var lonlat = new OpenLayers.LonLat(x, y);
+							Viewer.featureInfo(x, y);
+							expect(Viewer.getMap().getExtent().containsLonLat(lonlat)).toEqual(true);
+							/* TODO
+							 * expect((Viewer.getMap().getLayersByName("ClickDrawControl")).length).toBe(1);
+							 * console.debug(Viewer.getMap().getLayersByName('ClickDrawControl'));
+							 * console.debug(Viewer.getMap().getLayersByClass('OpenLayers.Layer.Vector'));
+							 */
+						});
+
 					});
 
 		});

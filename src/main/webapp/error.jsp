@@ -15,18 +15,13 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Systeemfout</title>
 
-
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 
-<!--[if lte IE 7]>
-		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all" />
-	<![endif]-->
-<!--[if gte IE 8]>
-		<link rel="stylesheet" href="css/ie-8.css" type="text/css" media="all" />
-	<![endif]-->
+<!--[if lte IE 7]><link rel="stylesheet" href="css/ie-lte7.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 8]>    <link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />   <![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />     <![endif]-->
 
-<link rel="stylesheet" href="css/print.css" type="text/css"
-	media="print" />
+<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
 
 </head>
 <body>

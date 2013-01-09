@@ -4,6 +4,7 @@ import nl.mineleni.openls.XmlNamespaceConstants;
 import nl.mineleni.openls.databinding.gml.Point;
 
 /**
+ * OLS GeocodedAddress.
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>
@@ -21,60 +22,106 @@ import nl.mineleni.openls.databinding.gml.Point;
  * @author mprins
  */
 public class GeocodedAddress implements XmlNamespaceConstants {
-    /**
-     * serialization id.
-     */
-    private static final long serialVersionUID = -2711370703109529657L;
+	/**
+	 * serialization id.
+	 */
+	private static final long serialVersionUID = -2711370703109529657L;
 
-    private Point point;
-    private Address address;
+	/** The point. */
+	private Point point;
 
-    private boolean hasPoint;
-    private boolean hasAddress;
+	/** The address. */
+	private Address address;
 
-    public GeocodedAddress() {
-        this.hasPoint = false;
-        this.hasAddress = false;
-    }
+	/** The has point. */
+	private boolean hasPoint;
 
-    public void setPoint(Point point) {
-        this.hasPoint = true;
-        this.point = point;
-    }
+	/** The has address. */
+	private boolean hasAddress;
 
-    public Point getPoint() {
-        return this.point;
-    }
+	/**
+	 * Instantiates a new geocoded address.
+	 */
+	public GeocodedAddress() {
+		this.hasPoint = false;
+		this.hasAddress = false;
+	}
 
-    public boolean hasPoint() {
-        return this.hasPoint;
-    }
+	/**
+	 * Sets the point.
+	 * 
+	 * @param point
+	 *            the new point
+	 */
+	public void setPoint(Point point) {
+		this.hasPoint = true;
+		this.point = point;
+	}
 
-    public void setAddress(Address address) {
-        this.hasAddress = true;
-        this.address = address;
-    }
+	/**
+	 * Gets the point.
+	 * 
+	 * @return the point
+	 */
+	public Point getPoint() {
+		return this.point;
+	}
 
-    public Address getAddress() {
-        return this.address;
-    }
+	/**
+	 * Checks for point.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasPoint() {
+		return this.hasPoint;
+	}
 
-    public boolean hasAddress() {
-        return this.hasAddress;
-    }
+	/**
+	 * Sets the address.
+	 * 
+	 * @param address
+	 *            the new address
+	 */
+	public void setAddress(Address address) {
+		this.hasAddress = true;
+		this.address = address;
+	}
 
-    @Override
-    public String toXML() {
-        String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodedAddress>";
-        if (this.hasPoint()) {
-            xml += this.point.toXML();
-        }
-        if (this.hasAddress()) {
-            xml += this.address.toXML();
-        }
-        xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodedAddress>";
-        return xml;
-    }
+	/**
+	 * Gets the address.
+	 * 
+	 * @return the address
+	 */
+	public Address getAddress() {
+		return this.address;
+	}
+
+	/**
+	 * Checks for address.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasAddress() {
+		return this.hasAddress;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
+	@Override
+	public String toXML() {
+		String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodedAddress>";
+		if (this.hasPoint()) {
+			xml += this.point.toXML();
+		}
+		if (this.hasAddress()) {
+			xml += this.address.toXML();
+		}
+		xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodedAddress>";
+		return xml;
+	}
 }

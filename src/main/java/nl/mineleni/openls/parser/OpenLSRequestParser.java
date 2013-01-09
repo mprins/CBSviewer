@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
+ */
 package nl.mineleni.openls.parser;
 
 import java.io.IOException;
@@ -26,6 +32,8 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /**
  * The Class OpenLSRequestParser.
+ * 
+ * @since 1.7
  */
 public class OpenLSRequestParser extends DefaultHandler {
 
@@ -37,7 +45,7 @@ public class OpenLSRequestParser extends DefaultHandler {
 	private StringBuffer eValBuf;
 
 	/** The obj stack. */
-	private final Stack<XmlNamespaceConstants> objStack = new Stack<XmlNamespaceConstants>();
+	private final Stack<XmlNamespaceConstants> objStack = new Stack<>();
 
 	/** The parser. */
 	private SAXParser parser;
@@ -50,10 +58,9 @@ public class OpenLSRequestParser extends DefaultHandler {
 		factory.setValidating(false);
 		try {
 			this.parser = factory.newSAXParser();
-		} catch (final ParserConfigurationException e) {
-			LOGGER.error("Configureren van de saxparser is mislukt: ", e);
-		} catch (final SAXException e) {
-			LOGGER.error("Maken van de saxparser is mislukt: ", e);
+		} catch (final ParserConfigurationException | SAXException e) {
+			LOGGER.error("Configureren of maken van de saxparser is mislukt: ",
+					e);
 		}
 	}
 
@@ -84,42 +91,53 @@ public class OpenLSRequestParser extends DefaultHandler {
 		} else {
 			eName = nsName[0];
 		}
-		if (eName.equalsIgnoreCase("Address")) {
-			final Address obj = (Address) (this.objStack.pop());
+		switch (eName.toLowerCase()) {
+		case "address":
+			final Address address = (Address) (this.objStack.pop());
 			if (this.objStack.peek().getClass() == new GeocodeRequest()
 					.getClass()) {
-				((GeocodeRequest) (this.objStack.peek())).addAddress(obj);
+				((GeocodeRequest) (this.objStack.peek())).addAddress(address);
 			}
-		} else if (eName.equalsIgnoreCase("StreetAddress")) {
-			final StreetAddress obj = (StreetAddress) (this.objStack.pop());
+			break;
+		case "streetaddress":
+			final StreetAddress streetaddress = (StreetAddress) (this.objStack
+					.pop());
 			if (this.objStack.peek().getClass() == new Address().getClass()) {
-				((Address) (this.objStack.peek())).setStreetAddress(obj);
+				((Address) (this.objStack.peek()))
+						.setStreetAddress(streetaddress);
 			}
-		} else if (eName.equalsIgnoreCase("Building")) {
-			final Building obj = (Building) (this.objStack.pop());
+			break;
+		case "building":
+			final Building building = (Building) (this.objStack.pop());
 			if (this.objStack.peek().getClass() == new StreetAddress()
 					.getClass()) {
-				((StreetAddress) (this.objStack.peek())).setBuilding(obj);
+				((StreetAddress) (this.objStack.peek())).setBuilding(building);
 			}
-		} else if (eName.equalsIgnoreCase("Street")) {
-			final Street obj = (Street) (this.objStack.pop());
-			obj.setStreet(this.eValBuf.toString());
+			break;
+		case "street":
+			final Street street = (Street) (this.objStack.pop());
+			street.setStreet(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new StreetAddress()
 					.getClass()) {
-				((StreetAddress) (this.objStack.peek())).setStreet(obj);
+				((StreetAddress) (this.objStack.peek())).setStreet(street);
 			}
-		} else if (eName.equalsIgnoreCase("Place")) {
-			final Place obj = (Place) (this.objStack.pop());
-			obj.setPlace(this.eValBuf.toString());
+			break;
+		case "place":
+			final Place place = (Place) (this.objStack.pop());
+			place.setPlace(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new Address().getClass()) {
-				((Address) (this.objStack.peek())).addPlace(obj);
+				((Address) (this.objStack.peek())).addPlace(place);
 			}
-		} else if (eName.equalsIgnoreCase("PostalCode")) {
-			final PostalCode obj = (PostalCode) (this.objStack.pop());
-			obj.setPostalCode(this.eValBuf.toString());
+			break;
+		case "postalcode":
+			final PostalCode pc = (PostalCode) (this.objStack.pop());
+			pc.setPostalCode(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new Address().getClass()) {
-				((Address) (this.objStack.peek())).setPostalCode(obj);
+				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
+			break;
+		default:
+			return;
 		}
 	}
 
@@ -130,9 +148,9 @@ public class OpenLSRequestParser extends DefaultHandler {
 	 */
 	public GeocodeRequest getGeocodeRequest() {
 		GeocodeRequest geocodeRequest = null;
-		if (this.objStack.firstElement() != null
-				&& this.objStack.firstElement().getClass() == new GeocodeRequest()
-						.getClass()) {
+		if ((this.objStack.firstElement() != null)
+				&& (this.objStack.firstElement().getClass() == new GeocodeRequest()
+						.getClass())) {
 			geocodeRequest = (GeocodeRequest) this.objStack.firstElement();
 		}
 		return geocodeRequest;
@@ -149,11 +167,9 @@ public class OpenLSRequestParser extends DefaultHandler {
 		this.objStack.clear();
 		try {
 			this.parser.parse(new InputSource(new StringReader(data)), this);
-		} catch (final SAXException e) {
+		} catch (final SAXException | IOException e) {
 			LOGGER.error("OpenLS response XML verwerken is mislukt: " + data
 					+ ": ", e);
-		} catch (final IOException e) {
-			LOGGER.error("OpenLS response XML lezen is mislukt: ", e);
 		}
 		return this.getGeocodeRequest();
 	}
@@ -170,54 +186,59 @@ public class OpenLSRequestParser extends DefaultHandler {
 			throws SAXException {
 		this.eValBuf = new StringBuffer();
 		final String[] nsName = qName.split(":");
-		String eName = "";
+		String eName = nsName[0];
 		if (nsName.length > 1) {
 			eName = nsName[1];
-		} else {
-			eName = nsName[0];
 		}
-		if (eName.equalsIgnoreCase("GeocodeRequest")) {
-			final GeocodeRequest obj = new GeocodeRequest();
-			this.objStack.push(obj);
-		} else if (eName.equalsIgnoreCase("Address")) {
-			final Address obj = new Address();
-			this.objStack.push(obj);
+		switch (eName.toLowerCase()) {
+		case "geocoderequest":
+			this.objStack.push(new GeocodeRequest());
+			break;
+		case "address":
+			final Address address = new Address();
+			this.objStack.push(address);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("countryCode")) {
-					obj.setCountryCode(value);
+					address.setCountryCode(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase("StreetAddress")) {
-			final StreetAddress obj = new StreetAddress();
-			this.objStack.push(obj);
-		} else if (eName.equalsIgnoreCase("Building")) {
-			final Building obj = new Building();
-			this.objStack.push(obj);
+			break;
+		case "streetaddress":
+			this.objStack.push(new StreetAddress());
+			break;
+		case "building":
+			final Building building = new Building();
+			this.objStack.push(building);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("number")) {
-					obj.setNumber(value);
+					building.setNumber(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase("Street")) {
-			final Street obj = new Street();
-			this.objStack.push(obj);
-		} else if (eName.equalsIgnoreCase("Place")) {
-			final Place obj = new Place();
-			this.objStack.push(obj);
+			break;
+		case "street":
+			this.objStack.push(new Street());
+			break;
+		case "place":
+			final Place place = new Place();
+			this.objStack.push(place);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("type")) {
-					obj.setType(value);
+					place.setType(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase("PostalCode")) {
-			final PostalCode obj = new PostalCode();
-			this.objStack.push(obj);
+			break;
+		case "postalcode":
+			this.objStack.push(new PostalCode());
+			break;
+		default:
+			return;
 		}
+
 	}
 }

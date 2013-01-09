@@ -3,7 +3,7 @@ package nl.mineleni.openls.databinding.openls;
 import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
- * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
+ * OLS StreetAddress. http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
  * 
@@ -43,60 +43,106 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * @author Mark
  */
 public class StreetAddress implements XmlNamespaceConstants {
-    /**
-     * serialization id.
-     */
-    private static final long serialVersionUID = 4263464123444246781L;
+	/**
+	 * serialization id.
+	 */
+	private static final long serialVersionUID = 4263464123444246781L;
 
-    private Building building;
-    private Street street;
+	/** The building. */
+	private Building building;
 
-    private boolean hasBuilding;
-    private boolean hasStreet;
+	/** The street. */
+	private Street street;
 
-    public StreetAddress() {
-        this.hasBuilding = false;
-        this.hasStreet = false;
-    }
+	/** The has building. */
+	private boolean hasBuilding;
 
-    public void setBuilding(Building building) {
-        this.hasBuilding = true;
-        this.building = building;
-    }
+	/** The has street. */
+	private boolean hasStreet;
 
-    public Building getBuilding() {
-        return this.building;
-    }
+	/**
+	 * Instantiates a new street address.
+	 */
+	public StreetAddress() {
+		this.hasBuilding = false;
+		this.hasStreet = false;
+	}
 
-    public boolean hasBuilding() {
-        return this.hasBuilding;
-    }
+	/**
+	 * Sets the building.
+	 * 
+	 * @param building
+	 *            the new building
+	 */
+	public void setBuilding(Building building) {
+		this.hasBuilding = true;
+		this.building = building;
+	}
 
-    public void setStreet(Street street) {
-        this.hasStreet = true;
-        this.street = street;
-    }
+	/**
+	 * Gets the building.
+	 * 
+	 * @return the building
+	 */
+	public Building getBuilding() {
+		return this.building;
+	}
 
-    public Street getStreet() {
-        return this.street;
-    }
+	/**
+	 * Checks for building.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasBuilding() {
+		return this.hasBuilding;
+	}
 
-    public boolean hasStreet() {
-        return this.hasStreet;
-    }
+	/**
+	 * Sets the street.
+	 * 
+	 * @param street
+	 *            the new street
+	 */
+	public void setStreet(Street street) {
+		this.hasStreet = true;
+		this.street = street;
+	}
 
-    @Override
-    public String toXML() {
-        String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":StreetAddress>";
-        if (this.hasBuilding()) {
-            xml += this.building.toXML();
-        }
-        if (this.hasStreet()) {
-            xml += this.street.toXML();
-        }
-        xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":StreetAddress>";
-        return xml;
-    }
+	/**
+	 * Gets the street.
+	 * 
+	 * @return the street
+	 */
+	public Street getStreet() {
+		return this.street;
+	}
+
+	/**
+	 * Checks for street.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasStreet() {
+		return this.hasStreet;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
+	@Override
+	public String toXML() {
+		String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":StreetAddress>";
+		if (this.hasBuilding()) {
+			xml += this.building.toXML();
+		}
+		if (this.hasStreet()) {
+			xml += this.street.toXML();
+		}
+		xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":StreetAddress>";
+		return xml;
+	}
 }

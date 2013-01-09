@@ -3,7 +3,7 @@ package nl.mineleni.openls.databinding.openls;
 import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
- * http://schemas.opengis.net/ols/1.2.0/ADT.xsd
+ * OLS Place. http://schemas.opengis.net/ols/1.2.0/ADT.xsd
  * 
  * <pre>
  * 
@@ -33,60 +33,106 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * @author mprins
  */
 public class Place implements XmlNamespaceConstants {
-    /**
-     * serialization id.
-     */
-    private static final long serialVersionUID = -3969318615339164005L;
+	/**
+	 * serialization id.
+	 */
+	private static final long serialVersionUID = -3969318615339164005L;
 
-    private String type;
-    private String place;
+	/** The type. */
+	private String type;
 
-    private boolean hasType;
-    private boolean hasPlace;
+	/** The place. */
+	private String place;
 
-    public Place() {
-        this.hasType = false;
-        this.hasPlace = false;
-    }
+	/** The has type. */
+	private boolean hasType;
 
-    public void setType(String type) {
-        this.hasType = true;
-        this.type = type;
-    }
+	/** The has place. */
+	private boolean hasPlace;
 
-    public String getType() {
-        return this.type;
-    }
+	/**
+	 * Instantiates a new place.
+	 */
+	public Place() {
+		this.hasType = false;
+		this.hasPlace = false;
+	}
 
-    public boolean hasType() {
-        return this.hasType;
-    }
+	/**
+	 * Sets the type.
+	 * 
+	 * @param type
+	 *            the new type
+	 */
+	public void setType(String type) {
+		this.hasType = true;
+		this.type = type;
+	}
 
-    public void setPlace(String place) {
-        this.hasPlace = true;
-        this.place = place;
-    }
+	/**
+	 * Gets the type.
+	 * 
+	 * @return the type
+	 */
+	public String getType() {
+		return this.type;
+	}
 
-    public String getPlace() {
-        return this.place;
-    }
+	/**
+	 * Checks for type.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasType() {
+		return this.hasType;
+	}
 
-    public boolean hasPlace() {
-        return this.hasPlace;
-    }
+	/**
+	 * Sets the place.
+	 * 
+	 * @param place
+	 *            the new place
+	 */
+	public void setPlace(String place) {
+		this.hasPlace = true;
+		this.place = place;
+	}
 
-    @Override
-    public String toXML() {
-        String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":Place";
-        if (this.hasType()) {
-            xml += " type=\"" + this.getType() + "\"";
-        }
-        xml += ">";
-        if (this.hasPlace()) {
-            xml += this.getPlace();
-        }
-        xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX + ":Place>";
-        return xml;
-    }
+	/**
+	 * Gets the place.
+	 * 
+	 * @return the place
+	 */
+	public String getPlace() {
+		return this.place;
+	}
+
+	/**
+	 * Checks for place.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasPlace() {
+		return this.hasPlace;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
+	@Override
+	public String toXML() {
+		String xml = "<" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":Place";
+		if (this.hasType()) {
+			xml += " type=\"" + this.getType() + "\"";
+		}
+		xml += ">";
+		if (this.hasPlace()) {
+			xml += this.getPlace();
+		}
+		xml += "</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX + ":Place>";
+		return xml;
+	}
 }

@@ -27,16 +27,16 @@
 		<param name="locationInfo" value="true" />
 	</appender>
 	<logger name="nl.mineleni.cbsviewer">
-		<level value="debug" />
+		<level value="info" />
 	</logger>
 	<logger name="org.geotools">
-		<level value="info" />
+		<level value="warn" />
 	</logger>
 	<logger name="org.apache.http">
-		<level value="info" />
+		<level value="warn" />
 	</logger>
 	<logger name="org.apache.commons">
-		<level value="info" />
+		<level value="warn" />
 	</logger>
 	<root>
 		<!-- kies: consoleAppender voor in de ide of rollingFileAppender voor op 

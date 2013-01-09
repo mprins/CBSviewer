@@ -5,6 +5,7 @@ import java.util.Vector;
 import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
+ * OLS GeocodeResponse.
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>
@@ -26,41 +27,66 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * </pre>
  * 
  * @author Mark
+ * @since 1.7
  */
 public class GeocodeResponse implements XmlNamespaceConstants {
-    /**
-     * serialization id.
-     */
-    private static final long serialVersionUID = -8343502033013447204L;
+	/**
+	 * serialization id.
+	 */
+	private static final long serialVersionUID = -8343502033013447204L;
 
-    private Vector<GeocodeResponseList> geocodeResponseList = new Vector<GeocodeResponseList>();
+	/** The geocode response list. */
+	private final Vector<GeocodeResponseList> geocodeResponseList = new Vector<>();
 
-    public void addGeocodeResponseList(GeocodeResponseList val) {
-        this.geocodeResponseList.add(val);
-    }
+	/**
+	 * Adds the geocode response list.
+	 * 
+	 * @param val
+	 *            the val
+	 */
+	public void addGeocodeResponseList(GeocodeResponseList val) {
+		this.geocodeResponseList.add(val);
+	}
 
-    public GeocodeResponseList getGeocodeResponseListAt(int i) {
-        return this.geocodeResponseList.get(i);
-    }
+	/**
+	 * Gets the geocode response list at.
+	 * 
+	 * @param i
+	 *            the i
+	 * @return the geocode response list at
+	 */
+	public GeocodeResponseList getGeocodeResponseListAt(int i) {
+		return this.geocodeResponseList.get(i);
+	}
 
-    public int getGeocodeResponseListSize() {
-        return this.geocodeResponseList.size();
-    }
+	/**
+	 * Gets the geocode response list size.
+	 * 
+	 * @return the geocode response list size
+	 */
+	public int getGeocodeResponseListSize() {
+		return this.geocodeResponseList.size();
+	}
 
-    @Override
-    public String toXML() {
-        final StringBuilder sb = new StringBuilder("<"
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodeResponse " + "xmlns:"
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX + "=\""
-                + XmlNamespaceConstants.OPENLS_NAMESPACE_URI + "\" " + "xmlns:"
-                + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + "=\""
-                + XmlNamespaceConstants.OGC_GML_NAMESPACE_URI + "\">");
-        for (final GeocodeResponseList gcrl : this.geocodeResponseList) {
-            sb.append(gcrl.toXML());
-        }
-        sb.append("</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
-                + ":GeocodeResponse>");
-        return sb.toString();
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
+	@Override
+	public String toXML() {
+		final StringBuilder sb = new StringBuilder("<"
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodeResponse " + "xmlns:"
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX + "=\""
+				+ XmlNamespaceConstants.OPENLS_NAMESPACE_URI + "\" " + "xmlns:"
+				+ XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + "=\""
+				+ XmlNamespaceConstants.OGC_GML_NAMESPACE_URI + "\">");
+		for (final GeocodeResponseList gcrl : this.geocodeResponseList) {
+			sb.append(gcrl.toXML());
+		}
+		sb.append("</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
+				+ ":GeocodeResponse>");
+		return sb.toString();
+	}
 }

@@ -60,11 +60,12 @@ Viewer = function() {
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 			var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
+			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud padding set in css
+			var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-bottom'), 10);
+			
 			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-			// var h = jQuery('#' + this.config.mapDiv).parent().height() -
-			// borderH;
-			var h = jQuery('#' + this.config.mapDiv).parent().parent().height() - borderH;
-
+			var h = jQuery(window).height() -  headerH - footerH - borderH;
+			
 			jQuery('#' + this.config.mapDiv).width(w).height(h);
 			_map.updateSize();
 			var vectors = _map.getLayersByClass("OpenLayers.Layer.Vector");
@@ -98,7 +99,8 @@ Viewer = function() {
 			// merge any controls met default
 			jQuery.extend(true, this.config, {
 				map : {
-					controls : []
+					controls : [],
+					tileManager: new OpenLayers.TileManager()
 				}
 			});
 			jQuery(window).unload(function() {
@@ -166,6 +168,26 @@ Viewer = function() {
 		},
 
 		/**
+		 * Voert een identify uit voor de gegeven locatie. Indien de x/y buiten
+		 * de kaartuitsnede vallen wordt de kaart eerst verschoven zodat de
+		 * locatie in beeld valt.
+		 * 
+		 * @param {number}
+		 *            x de x coordinaat
+		 * @param {number}
+		 *            y de y coordinaat
+		 */
+		featureInfo : function(x, y) {
+			var lonlat = new OpenLayers.LonLat(x, y);
+			if (!_map.getExtent().containsLonLat(lonlat)) {
+				_map.panTo(lonlat);
+			}
+			_map.events.triggerEvent('click', {
+				xy : _map.getPixelFromLonLat(lonlat)
+			});
+		},
+
+		/**
 		 * Controls aan de kaart hangen.
 		 * 
 		 * @private
@@ -180,7 +202,10 @@ Viewer = function() {
 			}));
 			_map.addControl(new OpenLayers.Control.Zoom());
 			_map.addControl(new OpenLayers.Control.Navigation({
-				zoomWheelEnabled : false
+				zoomWheelEnabled : true,
+				dragPanOptions: {
+					enableKinetic: true
+				}
 			}));
 			_map.addControl(new OpenLayers.Control.KeyboardClick({
 				/* alleen actief als de kaart focus heeft */
@@ -235,6 +260,8 @@ Viewer = function() {
 				opacity : 0.8
 			});
 			_map.addLayer(layer);
+			var fInfoControl = _map.getControlsByClass('WMSGetFeatureInfo');
+			fInfoControl[0].url = wmsConfig.url;
 		},
 
 		/**
@@ -257,7 +284,20 @@ Viewer = function() {
 		 * verwijder alle overlays. Voorlopig alleen type {OpenLayers.Layer.WMS}
 		 */
 		removeOverlays : function() {
-			var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
+			// reset featureinfo text
+			jQuery('#' + config.featureInfoDiv).html(OpenLayers.i18n('KEY_INFO_GEEN_FEATURES'));
+			// verwijder ikoontjes die de controls tekenen
+			var lyrs = _map.getLayersByName('ClickDrawControl');
+			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+				lyrs[lyr].removeAllFeatures();
+			}
+			lyrs = _map.getLayersByName('OpenLayers.Handler.KeyboardPoint');
+			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+				lyrs[lyr].removeAllFeatures();
+			}
+
+			// verwijder WMS lagen
+			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
 				if (!lyrs[lyr].isBaseLayer) {
 					_map.removeLayer(lyrs[lyr]);
@@ -293,11 +333,12 @@ Viewer = function() {
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 				var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-
+				var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud padding set in css
+				var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-bottom'), 10);
+				
 				var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-				// var hh = jQuery('#' + this.config.mapDiv).parent().height();
-				var h = jQuery('#' + this.config.mapDiv).parent().parent().height() - borderH;
-
+				var h = jQuery(window).height() -  headerH - footerH - borderH;
+				
 				jQuery('#' + this.config.mapDiv).width(w).height(h);
 				jQuery('#toggleSize').toggleClass('restore max');
 				_fullSize = true;

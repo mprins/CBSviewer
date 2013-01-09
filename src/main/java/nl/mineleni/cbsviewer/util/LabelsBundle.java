@@ -61,7 +61,7 @@ public class LabelsBundle extends ResourceBundle {
 	 */
 	public String getOpenLayersLangBundle() {
 		final StringBuilder sb = new StringBuilder(
-				"//<![CDATA[\nOpenLayers.Lang.nl = OpenLayers.Util.extend({");
+				"/* <![CDATA[ */OpenLayers.Lang.nl = OpenLayers.Util.extend({");
 		for (final Enumeration<String> keys = this.getKeys(); keys
 				.hasMoreElements();) {
 			final String key = keys.nextElement();
@@ -76,7 +76,7 @@ public class LabelsBundle extends ResourceBundle {
 			sb.append("',");
 		}
 		sb.deleteCharAt(sb.length() - 1);
-		sb.append("}, OpenLayers.Lang.nl);\n//]]>\n");
+		sb.append("}, OpenLayers.Lang.nl);/* ]]> */");
 		return sb.toString();
 	}
 

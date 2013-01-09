@@ -6,7 +6,6 @@ import nl.mineleni.openls.XmlNamespaceConstants;
 
 /**
  * OLS GeocodeRequest.
- * 
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>
@@ -40,7 +39,7 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * </pre>
  * 
  * @author mprins
- * @since 1.6
+ * @since 1.7
  */
 public class GeocodeRequest implements XmlNamespaceConstants {
 	/**
@@ -48,7 +47,7 @@ public class GeocodeRequest implements XmlNamespaceConstants {
 	 */
 	private static final long serialVersionUID = -1347583150356760221L;
 	/** interne adres lijst. */
-	private final Vector<Address> addressList = new Vector<Address>();
+	private final Vector<Address> addressList = new Vector<>();
 
 	/**
 	 * Adds the address.

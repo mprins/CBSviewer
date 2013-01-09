@@ -35,12 +35,12 @@
 		</c:when>
 		<c:otherwise>
 			<c:set var="wisselachtergrond" value="luchtfoto" />
-			<fmt:message key="KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />
+			<fmt:message key="KEY_TOGGLE_BASEMAP_LUFO" var="wisselachtergrondBtn" />
 		</c:otherwise>
 	</c:choose>
 
 	<!--  de te gebruiken HTTP methode voor de formulieren -->
-	<c:set var="formMethod" value="GET" />
+	<c:set var="formMethod" value="get" />
 
 	<!-- 
 	include bestand met navigatie knoppen voor de core versie, 

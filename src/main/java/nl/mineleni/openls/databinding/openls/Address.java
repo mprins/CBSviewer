@@ -38,6 +38,7 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * </pre>
  * 
  * @author mprins
+ * @since 1.7
  */
 public class Address implements XmlNamespaceConstants {
 	/**
@@ -45,22 +46,49 @@ public class Address implements XmlNamespaceConstants {
 	 */
 	private static final long serialVersionUID = -4508692290538906979L;
 
+	/** The country code. */
 	private String countryCode;
-	private StreetAddress streetAddress;
-	private PostalCode postalCode;
-	private final Vector<Place> place = new Vector<Place>();
-	private final Map<String, String> placeMap = new HashMap<String, String>();
 
+	/** The street address. */
+	private StreetAddress streetAddress;
+
+	/** The postal code. */
+	private PostalCode postalCode;
+
+	/** The place. */
+	private final Vector<Place> place = new Vector<>();
+
+	/** The place map. */
+	private final Map<String, String> placeMap = new HashMap<>();
+
+	/** The has country code. */
 	private boolean hasCountryCode;
+
+	/** The has street address. */
 	private boolean hasStreetAddress;
+
+	/** The has postal code. */
 	private boolean hasPostalCode;
 
+	/**
+	 * Instantiates a new address.
+	 */
 	public Address() {
 		this.hasCountryCode = false;
 		this.hasStreetAddress = false;
 		this.hasPostalCode = false;
 	}
 
+	/**
+	 * Instantiates a new address.
+	 * 
+	 * @param countryCode
+	 *            the country code
+	 * @param streetAddress
+	 *            the street address
+	 * @param postalCode
+	 *            the postal code
+	 */
 	public Address(String countryCode, StreetAddress streetAddress,
 			PostalCode postalCode) {
 		this.hasCountryCode = true;
@@ -71,45 +99,99 @@ public class Address implements XmlNamespaceConstants {
 		this.postalCode = postalCode;
 	}
 
+	/**
+	 * Sets the country code.
+	 * 
+	 * @param countryCode
+	 *            the new country code
+	 */
 	public void setCountryCode(String countryCode) {
 		this.hasCountryCode = true;
 		this.countryCode = countryCode;
 	}
 
+	/**
+	 * Gets the country code.
+	 * 
+	 * @return the country code
+	 */
 	public String getCountryCode() {
 		return this.countryCode;
 	}
 
+	/**
+	 * Checks for country code.
+	 * 
+	 * @return true, if successful
+	 */
 	public boolean hasCountryCode() {
 		return this.hasCountryCode;
 	}
 
+	/**
+	 * Sets the street address.
+	 * 
+	 * @param streetAddress
+	 *            the new street address
+	 */
 	public void setStreetAddress(StreetAddress streetAddress) {
 		this.hasStreetAddress = true;
 		this.streetAddress = streetAddress;
 	}
 
+	/**
+	 * Gets the street address.
+	 * 
+	 * @return the street address
+	 */
 	public StreetAddress getStreetAddress() {
 		return this.streetAddress;
 	}
 
+	/**
+	 * Checks for street address.
+	 * 
+	 * @return true, if successful
+	 */
 	public boolean hasStreetAddress() {
 		return this.hasStreetAddress;
 	}
 
+	/**
+	 * Sets the postal code.
+	 * 
+	 * @param postalCode
+	 *            the new postal code
+	 */
 	public void setPostalCode(PostalCode postalCode) {
 		this.hasPostalCode = true;
 		this.postalCode = postalCode;
 	}
 
+	/**
+	 * Gets the postal code.
+	 * 
+	 * @return the postal code
+	 */
 	public PostalCode getPostalCode() {
 		return this.postalCode;
 	}
 
+	/**
+	 * Checks for postal code.
+	 * 
+	 * @return true, if successful
+	 */
 	public boolean hasPostalCode() {
 		return this.hasPostalCode;
 	}
 
+	/**
+	 * Adds the place.
+	 * 
+	 * @param val
+	 *            the val
+	 */
 	public void addPlace(Place val) {
 		this.place.add(val);
 		if (!val.getType().equals("")) {
@@ -117,18 +199,44 @@ public class Address implements XmlNamespaceConstants {
 		}
 	}
 
+	/**
+	 * Gets the place at.
+	 * 
+	 * @param i
+	 *            the i
+	 * @return the place at
+	 */
 	public Place getPlaceAt(int i) {
 		return this.place.get(i);
 	}
 
+	/**
+	 * Gets the place size.
+	 * 
+	 * @return the place size
+	 */
 	public int getPlaceSize() {
 		return this.place.size();
 	}
 
+	/**
+	 * Gets the place by type.
+	 * 
+	 * @param type
+	 *            the type
+	 * @return the place by type
+	 */
 	public String getPlaceByType(String type) {
 		return this.placeMap.get(type);
 	}
 
+	/**
+	 * Checks for place type.
+	 * 
+	 * @param type
+	 *            the type
+	 * @return true, if successful
+	 */
 	public boolean hasPlaceType(String type) {
 		return (this.placeMap.get(type) != null);
 	}
@@ -140,7 +248,6 @@ public class Address implements XmlNamespaceConstants {
 	 */
 	@Override
 	public String toXML() {
-
 		final StringBuilder sb = new StringBuilder("<"
 				+ XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX + ":Address");
 		if (this.hasCountryCode()) {

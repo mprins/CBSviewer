@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
+ */
 package nl.mineleni.openls.parser;
 
 import java.io.IOException;
@@ -30,6 +36,8 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /**
  * The Class OpenLSResponseParser.
+ * 
+ * @since 1.7
  */
 public class OpenLSResponseParser extends DefaultHandler {
 
@@ -41,7 +49,7 @@ public class OpenLSResponseParser extends DefaultHandler {
 	private StringBuffer eValBuf;
 
 	/** object stack. */
-	private final Stack<XmlNamespaceConstants> objStack = new Stack<XmlNamespaceConstants>();
+	private final Stack<XmlNamespaceConstants> objStack = new Stack<>();
 
 	/** SAX parser. */
 	private SAXParser parser;
@@ -54,10 +62,9 @@ public class OpenLSResponseParser extends DefaultHandler {
 		factory.setValidating(false);
 		try {
 			this.parser = factory.newSAXParser();
-		} catch (final ParserConfigurationException e) {
-			LOGGER.error("Configureren van de saxparser is mislukt: ", e);
-		} catch (final SAXException e) {
-			LOGGER.error("Maken van de saxparser is mislukt: ", e);
+		} catch (final ParserConfigurationException | SAXException e) {
+			LOGGER.error("Configureren of maken van de saxparser is mislukt: ",
+					e);
 		}
 	}
 
@@ -88,69 +95,85 @@ public class OpenLSResponseParser extends DefaultHandler {
 		} else {
 			eName = nsName[0];
 		}
-		if (eName.equalsIgnoreCase("GeocodeResponseList")) {
-			final GeocodeResponseList obj = (GeocodeResponseList) (this.objStack
+		switch (eName.toLowerCase()) {
+		case "geocoderesponselist":
+			final GeocodeResponseList gcResList = (GeocodeResponseList) (this.objStack
 					.pop());
 			if (this.objStack.peek().getClass() == new GeocodeResponse()
 					.getClass()) {
 				((GeocodeResponse) (this.objStack.peek()))
-						.addGeocodeResponseList(obj);
+						.addGeocodeResponseList(gcResList);
 			}
-		} else if (eName.equalsIgnoreCase("GeocodedAddress")) {
-			final GeocodedAddress obj = (GeocodedAddress) (this.objStack.pop());
+			break;
+		case "geocodedaddress":
+			final GeocodedAddress gcaddress = (GeocodedAddress) (this.objStack
+					.pop());
 			if (this.objStack.peek().getClass() == new GeocodeResponseList()
 					.getClass()) {
 				((GeocodeResponseList) (this.objStack.peek()))
-						.addGeocodedAddress(obj);
+						.addGeocodedAddress(gcaddress);
 			}
-		} else if (eName.equalsIgnoreCase("Point")) {
-			final Point obj = (Point) (this.objStack.pop());
+			break;
+		case "point":
+			final Point point = (Point) (this.objStack.pop());
 			if (this.objStack.peek().getClass() == new GeocodedAddress()
 					.getClass()) {
-				((GeocodedAddress) (this.objStack.peek())).setPoint(obj);
+				((GeocodedAddress) (this.objStack.peek())).setPoint(point);
 			}
-		} else if (eName.equalsIgnoreCase("pos")) {
-			final Pos obj = (Pos) (this.objStack.pop());
-			obj.setXY(this.eValBuf.toString());
+			break;
+		case "pos":
+			final Pos pos = (Pos) (this.objStack.pop());
+			pos.setXY(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new Point().getClass()) {
-				((Point) (this.objStack.peek())).addPos(obj);
+				((Point) (this.objStack.peek())).addPos(pos);
 			}
-		} else if (eName.equalsIgnoreCase("Address")) {
-			final Address obj = (Address) (this.objStack.pop());
+			break;
+		case "address":
+			final Address address = (Address) (this.objStack.pop());
 			if (this.objStack.peek().getClass() == new GeocodedAddress()
 					.getClass()) {
-				((GeocodedAddress) (this.objStack.peek())).setAddress(obj);
+				((GeocodedAddress) (this.objStack.peek())).setAddress(address);
 			}
-		} else if (eName.equalsIgnoreCase("StreetAddress")) {
-			final StreetAddress obj = (StreetAddress) (this.objStack.pop());
+			break;
+		case "streetaddress":
+			final StreetAddress streetaddress = (StreetAddress) (this.objStack
+					.pop());
 			if (this.objStack.peek().getClass() == new Address().getClass()) {
-				((Address) (this.objStack.peek())).setStreetAddress(obj);
+				((Address) (this.objStack.peek()))
+						.setStreetAddress(streetaddress);
 			}
-		} else if (eName.equalsIgnoreCase("Building")) {
-			final Building obj = (Building) (this.objStack.pop());
+			break;
+		case "building":
+			final Building building = (Building) (this.objStack.pop());
 			if (this.objStack.peek().getClass() == new StreetAddress()
 					.getClass()) {
-				((StreetAddress) (this.objStack.peek())).setBuilding(obj);
+				((StreetAddress) (this.objStack.peek())).setBuilding(building);
 			}
-		} else if (eName.equalsIgnoreCase("Street")) {
-			final Street obj = (Street) (this.objStack.pop());
-			obj.setStreet(this.eValBuf.toString());
+			break;
+		case "street":
+			final Street street = (Street) (this.objStack.pop());
+			street.setStreet(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new StreetAddress()
 					.getClass()) {
-				((StreetAddress) (this.objStack.peek())).setStreet(obj);
+				((StreetAddress) (this.objStack.peek())).setStreet(street);
 			}
-		} else if (eName.equalsIgnoreCase("Place")) {
-			final Place obj = (Place) (this.objStack.pop());
-			obj.setPlace(this.eValBuf.toString());
+			break;
+		case "place":
+			final Place place = (Place) (this.objStack.pop());
+			place.setPlace(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new Address().getClass()) {
-				((Address) (this.objStack.peek())).addPlace(obj);
+				((Address) (this.objStack.peek())).addPlace(place);
 			}
-		} else if (eName.equalsIgnoreCase("PostalCode")) {
-			final PostalCode obj = (PostalCode) (this.objStack.pop());
-			obj.setPostalCode(this.eValBuf.toString());
+			break;
+		case "postalcode":
+			final PostalCode pc = (PostalCode) (this.objStack.pop());
+			pc.setPostalCode(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new Address().getClass()) {
-				((Address) (this.objStack.peek())).setPostalCode(obj);
+				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
+			break;
+		default:
+			return;
 		}
 	}
 
@@ -161,9 +184,9 @@ public class OpenLSResponseParser extends DefaultHandler {
 	 */
 	public GeocodeResponse getGeocodeResponse() {
 		GeocodeResponse geocodeResponse = null;
-		if (this.objStack.firstElement() != null
-				&& this.objStack.firstElement().getClass() == new GeocodeResponse()
-						.getClass()) {
+		if ((this.objStack.firstElement() != null)
+				&& (this.objStack.firstElement().getClass() == new GeocodeResponse()
+						.getClass())) {
 			geocodeResponse = (GeocodeResponse) this.objStack.firstElement();
 		}
 		return geocodeResponse;
@@ -181,11 +204,9 @@ public class OpenLSResponseParser extends DefaultHandler {
 		this.objStack.clear();
 		try {
 			this.parser.parse(new InputSource(new StringReader(data)), this);
-		} catch (final SAXException e) {
+		} catch (final SAXException | IOException e) {
 			LOGGER.error("OpenLS response XML verwerken is mislukt: " + data
 					+ ": ", e);
-		} catch (final IOException e) {
-			LOGGER.error("OpenLS response XML lezen is mislukt: ", e);
 		}
 		return this.getGeocodeResponse();
 	}
@@ -202,88 +223,95 @@ public class OpenLSResponseParser extends DefaultHandler {
 			throws SAXException {
 		this.eValBuf = new StringBuffer();
 		final String[] nsName = qName.split(":");
-		String eName = "";
+		String eName = nsName[0];
 		if (nsName.length > 1) {
 			eName = nsName[1];
-		} else {
-			eName = nsName[0];
 		}
-		if (eName.equalsIgnoreCase("GeocodeResponse")) {
-			final GeocodeResponse obj = new GeocodeResponse();
-			this.objStack.push(obj);
-		} else if (eName.equalsIgnoreCase("GeocodeResponseList")) {
-			final GeocodeResponseList obj = new GeocodeResponseList();
-			this.objStack.push(obj);
+		switch (eName.toLowerCase()) {
+		case "geocoderesponse":
+			this.objStack.push(new GeocodeResponse());
+			break;
+		case "geocoderesponselist":
+			final GeocodeResponseList gcResList = new GeocodeResponseList();
+			this.objStack.push(gcResList);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("numberOfGeocodedAddresses")) {
 					final int val = Integer.parseInt(value);
-					obj.setNumberOfGeocodedAddresses(val);
+					gcResList.setNumberOfGeocodedAddresses(val);
 				}
 			}
-		} else if (eName.equalsIgnoreCase("GeocodedAddress")) {
-			final GeocodedAddress obj = new GeocodedAddress();
-			this.objStack.push(obj);
-		} else if (eName.equalsIgnoreCase("Point")) {
-			final Point obj = new Point();
-			this.objStack.push(obj);
+			break;
+		case "geocodedaddress":
+			this.objStack.push(new GeocodedAddress());
+			break;
+		case "point":
+			final Point point = new Point();
+			this.objStack.push(point);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("srsName")) {
-					obj.setSrsName(value);
+					point.setSrsName(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase("pos")) {
-			final Pos obj = new Pos();
-			this.objStack.push(obj);
+			break;
+		case "pos":
+			final Pos pos = new Pos();
+			this.objStack.push(pos);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("dimension")) {
-					obj.setDimension(Integer.parseInt(value));
+					pos.setDimension(Integer.parseInt(value));
 				}
 			}
-		} else if (eName.equalsIgnoreCase("Address")) {
-			final Address obj = new Address();
-			this.objStack.push(obj);
+			break;
+		case "address":
+			final Address address = new Address();
+			this.objStack.push(address);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("countryCode")) {
-					obj.setCountryCode(value);
+					address.setCountryCode(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase("StreetAddress")) {
-			final StreetAddress obj = new StreetAddress();
-			this.objStack.push(obj);
-		} else if (eName.equalsIgnoreCase("Building")) {
-			final Building obj = new Building();
-			this.objStack.push(obj);
+			break;
+		case "streetaddress":
+			this.objStack.push(new StreetAddress());
+			break;
+		case "building":
+			final Building building = new Building();
+			this.objStack.push(building);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("number")) {
-					obj.setNumber(value);
+					building.setNumber(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase("Street")) {
-			final Street obj = new Street();
-			this.objStack.push(obj);
-		} else if (eName.equalsIgnoreCase("Place")) {
-			final Place obj = new Place();
-			this.objStack.push(obj);
+			break;
+		case "street":
+			this.objStack.push(new Street());
+			break;
+		case "place":
+			final Place place = new Place();
+			this.objStack.push(place);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("type")) {
-					obj.setType(value);
+					place.setType(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase("PostalCode")) {
-			final PostalCode obj = new PostalCode();
-			this.objStack.push(obj);
+			break;
+		case "postalcode":
+			this.objStack.push(new PostalCode());
+			break;
+		default:
+			return;
 		}
 	}
 }

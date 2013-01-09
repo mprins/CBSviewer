@@ -12,6 +12,7 @@ import nl.mineleni.openls.databinding.openls.GeocodedAddress;
  * Utility klasse OpenLSClientUtil.
  * 
  * @author mprins
+ * @since 1.7
  */
 public final class OpenLSClientUtil {
 
@@ -33,7 +34,7 @@ public final class OpenLSClientUtil {
 	 */
 	public static List<GeocodedAddress> getGeocodedAddressList(
 			final GeocodeResponse gcr) {
-		final List<GeocodedAddress> addressList = new ArrayList<GeocodedAddress>();
+		final List<GeocodedAddress> addressList = new ArrayList<>();
 		for (int i = 0; i < gcr.getGeocodeResponseListSize(); i++) {
 			final GeocodeResponseList gcrl = gcr.getGeocodeResponseListAt(i);
 			for (int j = 0; j < gcrl.getGeocodedAddressSize(); j++) {
@@ -55,7 +56,7 @@ public final class OpenLSClientUtil {
 	 */
 	public static List<OpenLSClientAddress> getOpenLSClientAddressList(
 			final GeocodeResponse gcr, final int... max) {
-		final List<OpenLSClientAddress> addressList = new ArrayList<OpenLSClientAddress>();
+		final List<OpenLSClientAddress> addressList = new ArrayList<>();
 		final List<GeocodedAddress> gcal = getGeocodedAddressList(gcr);
 
 		int listSize = gcal.size();

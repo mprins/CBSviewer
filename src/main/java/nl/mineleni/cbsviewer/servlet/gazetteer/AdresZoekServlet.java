@@ -154,7 +154,7 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 						response);
 			}
 		} else {
-			final Map<String, String> openLSParams = new TreeMap<String, String>();
+			final Map<String, String> openLSParams = new TreeMap<>();
 			openLSParams.put(OPENLS_REQ_PARAM_REQUEST.code,
 					OPENLS_REQ_VALUE_GEOCODE.code);
 			openLSParams.put(OPENLS_REQ_PARAM_SEARCH.code, zoekTerm);

@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * GML Pos. Beschrijft het Pos element uit GML 3.2.1.
  * http://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd
  * 
  * <pre>
@@ -38,100 +39,174 @@ import org.slf4j.LoggerFactory;
  * @author Mark
  */
 public class Pos implements XmlNamespaceConstants {
-    /**
-     * serialisation id.
-     */
-    private static final long serialVersionUID = -1063398145364381070L;
+	/**
+	 * serialisation id.
+	 */
+	private static final long serialVersionUID = -1063398145364381070L;
 
-    /** logger. */
-    private static final Logger LOGGER = LoggerFactory.getLogger(Pos.class);
+	/** logger. */
+	private static final Logger LOGGER = LoggerFactory.getLogger(Pos.class);
 
-    private Double x;
-    private Double y;
-    private int dimension;
+	/** The x. */
+	private Double x;
 
-    private boolean hasX;
-    private boolean hasY;
-    private boolean hasXY;
-    private boolean hasDimension;
+	/** The y. */
+	private Double y;
 
-    public Pos() {
-        this.hasX = false;
-        this.hasY = false;
-        this.hasXY = false;
-        this.hasDimension = false;
-    }
+	/** The dimension. */
+	private int dimension;
 
-    public void setXY(String xy) {
-        try {
-            final String[] xySplit = xy.split(" ");
-            if (xySplit.length == 2) {
-                this.setX(Double.parseDouble(xySplit[0]));
-                this.setY(Double.parseDouble(xySplit[1]));
-            }
-            this.hasXY = true;
-        } catch (final NumberFormatException e) {
-            LOGGER.error("Verwerken van puntlocatie mislukt, waarde: " + xy
-                    + ": ", e);
-        }
-    }
+	/** The has x. */
+	private boolean hasX;
 
-    public void setX(Double x) {
-        this.hasX = true;
-        if (this.hasY) {
-            this.hasXY = true;
-        }
-        this.x = x;
-    }
+	/** The has y. */
+	private boolean hasY;
 
-    public Double getX() {
-        return this.x;
-    }
+	/** The has xy. */
+	private boolean hasXY;
 
-    public void setY(Double y) {
-        this.hasY = true;
-        if (this.hasX) {
-            this.hasXY = true;
-        }
-        this.y = y;
-    }
+	/** The has dimension. */
+	private boolean hasDimension;
 
-    public Double getY() {
-        return this.y;
-    }
+	/**
+	 * Instantiates a new pos.
+	 */
+	public Pos() {
+		this.hasX = false;
+		this.hasY = false;
+		this.hasXY = false;
+		this.hasDimension = false;
+	}
 
-    public String getXY() {
-        return this.x.toString() + " " + this.y.toString();
-    }
+	/**
+	 * Sets the xy.
+	 * 
+	 * @param xy
+	 *            the new xy
+	 */
+	public void setXY(String xy) {
+		try {
+			final String[] xySplit = xy.split(" ");
+			if (xySplit.length == 2) {
+				this.setX(Double.parseDouble(xySplit[0]));
+				this.setY(Double.parseDouble(xySplit[1]));
+			}
+			this.hasXY = true;
+		} catch (final NumberFormatException e) {
+			LOGGER.error("Verwerken van puntlocatie mislukt, waarde: " + xy
+					+ ": ", e);
+		}
+	}
 
-    public boolean hasXY() {
-        return this.hasXY;
-    }
+	/**
+	 * Sets the x.
+	 * 
+	 * @param x
+	 *            the new x
+	 */
+	public void setX(Double x) {
+		this.hasX = true;
+		if (this.hasY) {
+			this.hasXY = true;
+		}
+		this.x = x;
+	}
 
-    public void setDimension(int dimension) {
-        this.dimension = dimension;
-    }
+	/**
+	 * Gets the x.
+	 * 
+	 * @return the x
+	 */
+	public Double getX() {
+		return this.x;
+	}
 
-    public int getDimension() {
-        return this.dimension;
-    }
+	/**
+	 * Sets the y.
+	 * 
+	 * @param y
+	 *            the new y
+	 */
+	public void setY(Double y) {
+		this.hasY = true;
+		if (this.hasX) {
+			this.hasXY = true;
+		}
+		this.y = y;
+	}
 
-    public boolean hasDimension() {
-        return this.hasDimension;
-    }
+	/**
+	 * Gets the y.
+	 * 
+	 * @return the y
+	 */
+	public Double getY() {
+		return this.y;
+	}
 
-    @Override
-    public String toXML() {
-        String xml = "<" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX
-                + ":Pos";
-        if (this.hasDimension()) {
-            xml += " dimension=\"" + this.getDimension() + "\"";
-        }
-        xml += ">";
-        if (this.hasXY()) {
-            xml += this.getXY();
-        }
-        xml += "</" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + ":Pos>";
-        return xml;
-    }
+	/**
+	 * Gets the xy.
+	 * 
+	 * @return the xy
+	 */
+	public String getXY() {
+		return this.x.toString() + " " + this.y.toString();
+	}
+
+	/**
+	 * Checks for xy.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasXY() {
+		return this.hasXY;
+	}
+
+	/**
+	 * Sets the dimension.
+	 * 
+	 * @param dimension
+	 *            the new dimension
+	 */
+	public void setDimension(int dimension) {
+		this.dimension = dimension;
+	}
+
+	/**
+	 * Gets the dimension.
+	 * 
+	 * @return the dimension
+	 */
+	public int getDimension() {
+		return this.dimension;
+	}
+
+	/**
+	 * Checks for dimension.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean hasDimension() {
+		return this.hasDimension;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
+	@Override
+	public String toXML() {
+		String xml = "<" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX
+				+ ":Pos";
+		if (this.hasDimension()) {
+			xml += " dimension=\"" + this.getDimension() + "\"";
+		}
+		xml += ">";
+		if (this.hasXY()) {
+			xml += this.getXY();
+		}
+		xml += "</" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + ":Pos>";
+		return xml;
+	}
 }

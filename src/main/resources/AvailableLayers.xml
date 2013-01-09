@@ -346,7 +346,7 @@
 		<attributes>gid,p_auto2011</attributes>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_autochtonen_2011</id>
+		<id>vierkanten500m_wautochtonen_2011</id>
 		<name>Percentage westerse allochtonen 2011</name>
 		<layers>westers_allochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
@@ -620,7 +620,7 @@
 		<attributes>gid,p_auto2011</attributes>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_autochtonen_2011</id>
+		<id>vierkanten100m_wautochtonen_2011</id>
 		<name>Percentage westerse allochtonen 2011</name>
 		<layers>westers_allochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
@@ -2168,7 +2168,7 @@
 		<styles>wijkenbuurten2009_thema_buurten2009_restaurant_gemiddelde_afstand_in_km</styles>
 		<attributes>GM_NAAM,WK_NAAM,BU_NAAM,restaurant_gemiddelde_afstand_in_km</attributes>
 	</Layerdescriptor>	
-	
+	<!-- uitzetten want duplicaat id's
 	<Layerdescriptor>
 		<id>vierkanten500m_oad2001</id>
 		<name>Vierkanten 500 x 500m - Omgevingsadressendichtheid 2001</name>
@@ -2625,8 +2625,9 @@
 		<styles>cbsvierkanten500m.wozwon2011</styles>
 		<attributes>gid,wozwon2011</attributes>
 	</Layerdescriptor>
-
+	-->
 	<!-- CBSVIERKANTEN 100m -->
+	<!-- uitzetten want duplicaat id's
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2000</id>
 		<name>Inwoners 2000</name>
@@ -2779,6 +2780,7 @@
 		<styles>cbsvierkanten100m_p_auto2011</styles>
 		<attributes>gid,p_auto2011</attributes>
 	</Layerdescriptor>
+	-->
 	<Layerdescriptor>
 		<id>vierkanten100m_allochtonen_2011</id>
 		<name>Percentage westerse allochtonen 2011</name>
@@ -2787,6 +2789,7 @@
 		<styles>cbsvierkanten100m_p_wal2011</styles>
 		<attributes>gid,p_wal2011</attributes>
 	</Layerdescriptor>
+	<!-- uitzetten want duplicaat id's
 	<Layerdescriptor>
 		<id>vierkanten100m_niet_westers_allochtonen_2011</id>
 		<name>Percentage niet westerse allochtonen 2011</name>
@@ -2899,8 +2902,9 @@
 		<styles>cbsvierkanten100m_wozwon2011</styles>
 		<attributes>gid,wozwon2011</attributes>
 	</Layerdescriptor>
-	
+	-->
 	<!-- GEMEENTE/WIJK/BUURT 2011 -->
+	<!-- uitzetten want duplicaat id's
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</id>
 		<name>CBS Gemeenten 2011 - Aantal inwoners</name>
@@ -3225,8 +3229,9 @@
 		<styles>wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen</styles>
 		<attributes>GM_NAAM,WK_NAAM,BU_NAAM,percentage_niet_westerse_allochtonen</attributes>
 	</Layerdescriptor>	
-	
+	-->
 	<!-- GEMEENTEN/WIJKEN/BUURTEN 2010 -->	
+	<!-- uitzetten want duplicaat id's
 	<Layerdescriptor>
 		<id>wijkenbuurten2010_thema_gemeenten2010_omgevingsadressendichtheid</id>
 		<name>CBS Gemeenten 2010 - Omgevingsadressendichtheid</name>
@@ -3776,8 +3781,9 @@
 		<styles>wijkenbuurten2010_thema_buurten2010_restaurant_gemiddelde_afstand_in_km</styles>
 		<attributes>GM_NAAM,WK_NAAM,BU_NAAM,restaurant_gemiddelde_afstand_in_km</attributes>
 	</Layerdescriptor>	
-	
+	-->
 	<!-- GEMEENTEN/WIJKEN/BUURTEN 2009 -->
+	<!-- uitzetten want duplicaat id's
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_omgevingsadressendichtheid</id>
 		<name>CBS Gemeenten 2009 - Omgevingsadressendichtheid</name>
@@ -4327,8 +4333,9 @@
 		<styles>wijkenbuurten2009_thema_buurten2009_restaurant_gemiddelde_afstand_in_km</styles>
 		<attributes>GM_NAAM,WK_NAAM,BU_NAAM,restaurant_gemiddelde_afstand_in_km</attributes>
 	</Layerdescriptor>	
-
+	-->
 	<!-- Bevolkingskernen 2008 -->
+	<!-- uitzetten want duplicaat id's
 	<Layerdescriptor>
 		<id>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</id>
 		<name>CBS Gemeenten 2009 - Restaurant_gemiddelde_afstand_in_km</name>
@@ -4337,4 +4344,5 @@
 		<styles>wijkenbuurten2009_thema_gemeenten2009_restaurant_gemiddelde_afstand_in_km</styles>
 		<attributes>GM_NAAM,restaurant_gemiddelde_afstand_in_km</attributes>
 	</Layerdescriptor>	
+	 -->
 </Layers>

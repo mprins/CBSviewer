@@ -25,6 +25,7 @@ import org.opengis.geometry.BoundingBox;
 
 /**
  * @author prinsmc
+ * @since 1.7
  */
 public class WMSCacheTest {
 	private final int CACHE_ELEMENTS = 100;
@@ -53,7 +54,7 @@ public class WMSCacheTest {
 	public void setUp() throws Exception {
 		this.emptyCache = new WMSCache(this.CACHEDIR, this.CACHE_ELEMENTS);
 
-		final HashMap<BoundingBox, BufferedImage> cacheData = new HashMap<BoundingBox, BufferedImage>();
+		final HashMap<BoundingBox, BufferedImage> cacheData = new HashMap<>();
 		cacheData.put(this.testKey, this.testValue);
 		this.filledCache = new WMSCache(cacheData, this.CACHEDIR,
 				this.CACHE_ELEMENTS, this.SECONDS_TO_CACHE_ELEMENTS);

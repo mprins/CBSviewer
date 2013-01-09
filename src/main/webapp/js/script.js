@@ -1,12 +1,14 @@
 /**
- * @fileoverview event handlers en elementen voor de pagina.
+ * @fileoverview event handlers en elementen voor de ria pagina.
  */
 
 // opzoeken van de gevraagde kaart in de _layers, id's zitten in
 // AvailableLayers.xml
 var _defaultId = "wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners";
 
-
+/**
+ * document onload event handling.
+ */
 jQuery(document)
 		.ready(
 				function() {
@@ -23,17 +25,19 @@ jQuery(document)
 					// het accordion menu en settings panel werkt nu ook zonder
 					// Javascript en CSS3.
 					// Dit stukje zorgt voor een vloeiender menu
-					var settings_head = jQuery('.settingsPanel > li > a'), settings_body = jQuery('.settingsPanel li > .settingsContent');
+					var settings_head = jQuery('.settingsPanel > li > a');
 					settings_head.first().addClass('active').next().slideDown('normal');
+					
 					settings_head.on('click', function(event) {
 						event.preventDefault();
 
+						jQuery(this).next().stop(true, true).slideToggle('normal');
 						if (jQuery(this).attr('class') != 'active') {
-							settings_body.slideUp('normal');
-							jQuery(this).next().stop(true, true).slideToggle('normal');
-							settings_head.removeClass('active');
 							jQuery(this).addClass('active');
 						}
+						else {
+							jQuery(this).removeClass('active');
+						}						
 					});
 
 					var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'), menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');
@@ -173,9 +177,7 @@ var setupPage = {
 		// meer duideijkheid voor de gebruiker
 		jQuery('#' + config.featureInfoDiv).change(function() {
 			if (jQuery('#keyfeatureinfo a').attr('class') != 'active') {
-				jQuery('#keylegend .settingsContent').slideUp('normal');
 				jQuery('#keyfeatureinfo a').next().stop(true, true).slideToggle('normal');
-				jQuery('#keylegend a').removeClass('active');
 				jQuery('#keyfeatureinfo a').addClass('active');
 			}
 		});

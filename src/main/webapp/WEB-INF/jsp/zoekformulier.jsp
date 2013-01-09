@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
 	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
 	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"
@@ -36,9 +37,16 @@
 			<ul class="adreslijst">
 				<c:forEach var="adres" items="${adreslijst}">
 					<fmt:message var="ttl" key="KEY_ZOEKEN_LINK_TTL"><fmt:param value="${adres}" /></fmt:message>
-					<li><a class="button"
-						href="index.jsp?gevonden=${adres}&amp;xcoord=${adres.xCoord}&amp;ycoord=${adres.yCoord}&amp;straal=${adres.radius}&amp;coreonly=${param.coreonly}"
-						title="${ttl}">${adres}</a></li>
+					<li>
+						<c:url value="/index.jsp" var="adreslink">
+							<c:param name="gevonden" value="${adres}" />
+							<c:param name="xcoord" value="${adres.xCoord}" />
+							<c:param name="ycoord" value="${adres.yCoord}" />
+							<c:param name="straal" value="${adres.radius}" />
+							<c:param name="coreonly" value="${param.coreonly}" />
+						</c:url> 
+						<a class="button" href="${fn:escapeXml(adreslink)}" title="${ttl}">${adres}</a>
+					</li>
 				</c:forEach>
 			</ul>
 		</c:if>

@@ -74,7 +74,8 @@ public class AvailableLayersBean {
 
 	/**
 	 * Geeft de kaarten als json object ({@code asVar == false}) of javascript
-	 * variabele.
+	 * variabele, ingepakt in een CDATA sectie. Het object is een array met
+	 * LayerDescriptors.
 	 * 
 	 * @param asVar
 	 *            {@code true} als er een javascript variabele moet worden
@@ -88,7 +89,7 @@ public class AvailableLayersBean {
 		final String json = serializer.exclude("class")
 				.prettyPrint(LOGGER.isDebugEnabled()).serialize(this.layers);
 		if (asVar) {
-			return "//<![CDATA[\nvar _layers=" + json + ";\n//]]>";
+			return "/* <![CDATA[ */var _layers=" + json + ";/* ]]> */";
 		}
 		return json;
 	}
