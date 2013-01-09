@@ -124,22 +124,22 @@
 				</li>
 			</ul>				
 		</div>
-	</div>
-	<div id="footerWrapper">		
-		<div id="copyright" class="copy">
-			<fmt:message key="KEY_COPYRIGHT" />
-		</div>
-				
-		<div id="downloadLink">
-			<!-- StringConstants.REQ_PARAM_DOWNLOADLINK -->
-			<c:if test="${not empty downloadLink}">
-				<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
-				<a href="${fn:escapeXml(downloadLink)}"><c:out value="${linkText}" /></a>
-			</c:if>
-		</div>		
+		<div id="footerWrapper">		
+			<div id="copyright" class="copy">
+				<fmt:message key="KEY_COPYRIGHT" />
+			</div>
+					
+			<div id="downloadLink">
+				<!-- StringConstants.REQ_PARAM_DOWNLOADLINK -->
+				<c:if test="${not empty downloadLink}">
+					<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
+					<a href="${fn:escapeXml(downloadLink)}"><c:out value="${linkText}" /></a>
+				</c:if>
+			</div>		
 
-		<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
-	</div>
+			<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
+		</div>
+	</div>	
 
 	<c:if test="${param.coreonly!=true}">
 		<!-- scripts als laatste laden -->

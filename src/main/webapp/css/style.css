@@ -259,6 +259,7 @@ html.js #cbslogo {
 }
 
 #footerWrapper {
+	z-index:1025;
 	position:absolute;
 	width:100%;
 	background-color: #fff;
