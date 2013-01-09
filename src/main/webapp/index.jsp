@@ -62,9 +62,9 @@
 	<div id="wrapper">
 		<div id="header">
 			<div id="headercenter" class="column">
-				<h2 id="pagSubTitle" class="subtitel">
+				<h1 id="pagSubTitle" class="subtitel">
 					<fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message>
-				</h2>
+				</h1>
 			</div>
 			<div id="headerleft" class="column">
 				<img src="img/template/cbslogo-2.gif" alt="Centraal Bureau voor de Statistiek" class="logo"/>
