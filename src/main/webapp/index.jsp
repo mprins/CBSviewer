@@ -122,12 +122,14 @@
 						</c:if>
 					</div>
 				</li>
-			</ul>	
-
+			</ul>				
+		</div>
+		
+		<div id="footerWrapper">		
 			<div id="copyright" class="copy">
 				<fmt:message key="KEY_COPYRIGHT" />
 			</div>
-			
+				
 			<div id="downloadLink">
 				<!-- StringConstants.REQ_PARAM_DOWNLOADLINK -->
 				<c:if test="${not empty downloadLink}">
@@ -135,9 +137,9 @@
 					<a href="${fn:escapeXml(downloadLink)}"><c:out value="${linkText}" /></a>
 				</c:if>
 			</div>		
-		</div>
 
-		<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
+			<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
+		</div>
 
 		<c:if test="${param.coreonly!=true}">
 			<!-- scripts als laatste laden -->

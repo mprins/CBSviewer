@@ -258,6 +258,14 @@ html.js #cbslogo {
 	background-color: #eff0f2;
 }
 
+#footerWrapper {
+	position:absolute;
+	width:100%;
+	background-color: #fff;
+	height:60px;
+	bottom:0;
+}
+
 .copy {
 	font-style: italic;
 	font-size: 80%;
@@ -569,8 +577,7 @@ a.olControlZoomOut {
 }
 
 #inhoud { 
-	padding:76px 0px 29px; /* padding for header/footer */	
-	min-height:100%;
+	padding:76px 0px 60px; /* padding for header/footer/copyright/download link, used in Viewer.js */	
 }
 
 #legendaContainer {

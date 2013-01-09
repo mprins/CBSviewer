@@ -60,12 +60,12 @@ Viewer = function() {
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 			var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
+			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css("padding-top")); // inhoud padding set in css
+			var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css("padding-bottom"));
+			
 			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-			// var h = jQuery('#' + this.config.mapDiv).parent().height() -
-			// borderH;
-			// 150px nog verwijderen als ik een oplossing heb die #inhoud op 100% van de schermhoogte kan zetten. Werkt alleen in sommige browsers
-			var h = jQuery('#' + this.config.mapDiv).parent().parent().parent().height() - borderH - 150;
-
+			var h = jQuery(window).height() -  headerH - footerH - borderH;
+			
 			jQuery('#' + this.config.mapDiv).width(w).height(h);
 			_map.updateSize();
 			var vectors = _map.getLayersByClass("OpenLayers.Layer.Vector");
@@ -333,11 +333,12 @@ Viewer = function() {
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 				var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-						
+				var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css("padding-top")); // inhoud padding set in css
+				var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css("padding-bottom"));
+				
 				var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-				// var hh = jQuery('#' + this.config.mapDiv).parent().height();
-				var h = jQuery('#' + this.config.mapDiv).parent().parent().parent().height() - borderH - 150;
-
+				var h = jQuery(window).height() -  headerH - footerH - borderH;
+				
 				jQuery('#' + this.config.mapDiv).width(w).height(h);
 				jQuery('#toggleSize').toggleClass('restore max');
 				_fullSize = true;
