@@ -553,6 +553,7 @@ a.olControlZoomOut {
 }
 
 #headerright {
+  max-height:76px;
   width: 270px;      
   margin-right: -270px;  
   z-index:1020;
