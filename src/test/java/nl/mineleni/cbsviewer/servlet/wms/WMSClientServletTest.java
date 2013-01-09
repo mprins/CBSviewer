@@ -172,6 +172,10 @@ public class WMSClientServletTest {
 		} catch (final SecurityException s) {
 			assumeNoException(s);
 		} catch (final ServletException e) {
+			if (e.getRootCause().getClass()
+					.equals(java.net.ConnectException.class)) {
+				assumeNoException(e);
+			}
 			fail("Servlet Exception voor init() in test setup.(testInitServletConfig) "
 					+ e.getLocalizedMessage());
 		}
