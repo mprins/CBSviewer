@@ -4,7 +4,7 @@
 	<groupId>nl.cbs.cbsviewer</groupId>
 	<artifactId>cbsviewer</artifactId>
 	<packaging>war</packaging>
-	<version>0.3-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>CBSviewer Webapp</name>
 	<description>Webrichtlijnen compliant webmap viewer.</description>
 	<url>http://mineleni.github.com/CBSviewer/</url>
@@ -162,7 +162,7 @@
 								</goals>
 								<configuration>
 									<target>
-										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<setproxy proxyhost="wpad.agro.nl" proxyport="8080" />
 										<mkdir dir="${basedir}/cache/" />
 										<mkdir dir="${basedir}/target/test-js/" />
 										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/" usetimestamp="true" />
@@ -208,7 +208,7 @@
 								</goals>
 								<configuration>
 									<target>
-										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<setproxy proxyhost="wpad.agro.nl" proxyport="8080" />
 										<mkdir dir="${basedir}/cache/" />
 										<mkdir dir="${basedir}/target/test-js/" />
 										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/" usetimestamp="true" />
@@ -254,7 +254,7 @@
 								</goals>
 								<configuration>
 									<target>
-										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<setproxy proxyhost="wpad.agro.nl" proxyport="8080" />
 										<mkdir dir="${basedir}/cache/" />
 										<mkdir dir="${basedir}/target/test-js/" />
 										<get src="${phantomjs.baseurl}/${phantomjs.archive}" dest="${basedir}/cache/" usetimestamp="true" />
@@ -363,7 +363,7 @@
 								</goals>
 								<configuration>
 									<target>
-										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<setproxy proxyhost="wpad.agro.nl" proxyport="8080" />
 										<mkdir dir="${basedir}/cache" />
 										<get src="https://closure-compiler.googlecode.com/files/compiler-latest.zip" dest="${basedir}/cache/" usetimestamp="true" />
 										<unzip src="${basedir}/cache/compiler-latest.zip" dest="${basedir}/target">
@@ -611,7 +611,7 @@
 						<configuration>
 							<target>
 								<!-- klaarzetten van Jasmine libs -->
-								<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+								<setproxy proxyhost="wpad.agro.nl" proxyport="8080" />
 								<mkdir dir="${basedir}/cache/" />
 								<mkdir dir="${basedir}/target/test-js/" />
 								<get src="${jasmine.baseurl}/${jasmine.archive}" dest="${basedir}/cache/" usetimestamp="true" />
