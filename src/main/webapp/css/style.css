@@ -11,7 +11,7 @@ body {
 }
 
 html,body {	
-	margin: 0;
+	margin: 0;r
 	padding: 0;
 	height: 100%;
 }
@@ -346,11 +346,19 @@ html.js #cbslogo {
 	color: #fff;
 	background-color: rgba(0, 60, 136, 0.8);
 }
+
 #sliderFGMap .ui-slider-handle{
 	border: 1px solid #d3d3d3;
 	background: #e6e6e6;
 	font-weight: normal;
 	color: #555;
+}
+
+#slidervalue {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	color: #fff;
 }
 
 .kaartnavi {

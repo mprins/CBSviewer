@@ -151,15 +151,24 @@ Viewer = function() {
 			});
 
 			if (this.config.fgAlphaSlider) {
-				var aSlider = jQuery("<div id='sliderFGMap'></div>").insertBefore(jQuery('#' + config.mapDiv)).slider({
-					value : _opacity,
-					min : 0.1,
-					max : 0.9,
-					step : 0.1,
+				var aSlider = jQuery('<div id="sliderFGMap"><span id="slidervalue"></span></div>').insertBefore(
+						jQuery('#' + config.mapDiv)).slider({
+					value : _opacity * 100,
+					min : 10,
+					max : 90,
+					step : 10,
+					animate : "slow",
 					slide : function(event, ui) {
-						Viewer.setOpacity(ui.value);
+						// TODO ingesloten in een closure, wil eigenlijk
+						// this.setOpacity(ui.value) gebruiken
+						// TODO tooltip oid met de waarde tonen, zie ook
+						// http://access.aol.com/aegis/#goto_slider
+						Viewer.setOpacity(ui.value / 100);
+						jQuery('#slidervalue').html((100 - ui.value) + '% transparant');
+						// console.debug(this);
 					}
 				});
+				jQuery('#slidervalue').html(100 - (_opacity * 100) + '% transparant');
 			}
 		},
 
@@ -268,7 +277,6 @@ Viewer = function() {
 				_opacity = opacity;
 				lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
 				for ( var lyr = 0; lyr < lyrs.length; lyr++) {
-					console.debug("set opacity:", lyrs[lyr], _opacity);
 					if (!lyrs[lyr].isBaseLayer) {
 						lyrs[lyr].setOpacity(_opacity);
 					}
