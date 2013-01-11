@@ -39,11 +39,16 @@
 	<c:set value="${param.straal}" var="straal" />
 </c:if>
 
-<jsp:include page="kaart">
-	<!-- TODO: mapid waarde moet uit de request/menu komen bijv. ?mapid=cbs_inwoners_2000_per_hectare -->
-	<!-- StringConstants.REQ_PARAM_MAPID -->
-	<jsp:param name="mapid" value="wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners" />
+<c:if test="${empty param.mapid}">
+	<!-- default thema kaartlaag -->
+	<c:set value="wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners" var="mapid" />
+</c:if>
+ <c:if test="${not empty param.mapid}">
+	<c:set value="${param.mapid}" var="mapid" />
+</c:if>
 
+<jsp:include page="kaart">
+	<jsp:param value="${mapid}" name="mapid" />
 	<jsp:param value="${xcoord}" name="xcoord" />
 	<jsp:param value="${ycoord}" name="ycoord" />
 	<jsp:param value="${straal}" name="straal" />
