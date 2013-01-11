@@ -190,7 +190,8 @@
 				</os>
 			</activation>
 			<properties>
-				<phantomjs.archive>phantomjs-1.8.1-linux-i686.tar.bz2</phantomjs.archive>
+				<!--<phantomjs.archive>phantomjs-1.8.1-linux-i686.tar.bz2</phantomjs.archive>-->
+				<phantomjs.archive>phantomjs-1.8.1-linux-x86_64.tar.bz2</phantomjs.archive>
 				<phantomjs.executable>phantomjs</phantomjs.executable>
 			</properties>
 			<build>
