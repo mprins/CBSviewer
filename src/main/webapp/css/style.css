@@ -336,6 +336,22 @@ html.js #cbslogo {
 #toggleBaseMap.topo { /*kaart icon*/
 	background-position: right bottom;
 }
+#sliderFGMap {
+	position: absolute;
+	z-index: 1000;
+	/* afstand vanaf de rand van de kaart */
+	right: 150px;
+	width: 200px;
+	line-height: 21px;
+	color: #fff;
+	background-color: rgba(0, 60, 136, 0.8);
+}
+#sliderFGMap .ui-slider-handle{
+	border: 1px solid #d3d3d3;
+	background: #e6e6e6;
+	font-weight: normal;
+	color: #555;
+}
 
 .kaartnavi {
 	position: absolute;

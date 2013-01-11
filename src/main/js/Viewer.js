@@ -36,6 +36,14 @@ Viewer = function() {
 	var _resizeTimeOut = false;
 
 	/**
+	 * Opacity van de voorgrond (WMS) laag.
+	 * 
+	 * @type {Number}
+	 * @private
+	 */
+	var _opacity = 0.8;
+
+	/**
 	 * update het informatie element met feature info.
 	 * 
 	 * @param {OpenLayers.Event}
@@ -60,12 +68,16 @@ Viewer = function() {
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 			var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud padding set in css
+			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud
+			// padding
+			// set
+			// in
+			// css
 			var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-bottom'), 10);
-			
+
 			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-			var h = jQuery(window).height() -  headerH - footerH - borderH;
-			
+			var h = jQuery(window).height() - headerH - footerH - borderH;
+
 			jQuery('#' + this.config.mapDiv).width(w).height(h);
 			_map.updateSize();
 			var vectors = _map.getLayersByClass("OpenLayers.Layer.Vector");
@@ -100,7 +112,7 @@ Viewer = function() {
 			jQuery.extend(true, this.config, {
 				map : {
 					controls : [],
-					tileManager: new OpenLayers.TileManager()
+					tileManager : new OpenLayers.TileManager()
 				}
 			});
 			jQuery(window).unload(function() {
@@ -137,6 +149,18 @@ Viewer = function() {
 				_resizeTimeOut = setTimeout(_resize, 200); // 200 is time in
 				// miliseconds
 			});
+
+			if (this.config.fgAlphaSlider) {
+				var aSlider = jQuery("<div id='sliderFGMap'></div>").insertBefore(jQuery('#' + config.mapDiv)).slider({
+					value : _opacity,
+					min : 0.1,
+					max : 0.9,
+					step : 0.1,
+					slide : function(event, ui) {
+						Viewer.setOpacity(ui.value);
+					}
+				});
+			}
 		},
 
 		/**
@@ -203,8 +227,8 @@ Viewer = function() {
 			_map.addControl(new OpenLayers.Control.Zoom());
 			_map.addControl(new OpenLayers.Control.Navigation({
 				zoomWheelEnabled : true,
-				dragPanOptions: {
-					enableKinetic: true
+				dragPanOptions : {
+					enableKinetic : true
 				}
 			}));
 			_map.addControl(new OpenLayers.Control.KeyboardClick({
@@ -228,6 +252,27 @@ Viewer = function() {
 			if (_map !== null) {
 				_map.destroy();
 				_map = null;
+			}
+		},
+
+		/**
+		 * Stelt de doorzichtigheid van de voorgrond kaart in.
+		 * 
+		 * @param opacity
+		 *            float waarde tussen 0 1n 1
+		 * @returns
+		 */
+		setOpacity : function(opacity) {
+			opacity = parseFloat(opacity);
+			if (0.09 < opacity && opacity < .91) {
+				_opacity = opacity;
+				lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
+				for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+					console.debug("set opacity:", lyrs[lyr], _opacity);
+					if (!lyrs[lyr].isBaseLayer) {
+						lyrs[lyr].setOpacity(_opacity);
+					}
+				}
 			}
 		},
 
@@ -257,7 +302,7 @@ Viewer = function() {
 				isBaseLayer : false,
 				visibility : true,
 				singleTile : false,
-				opacity : 0.8
+				opacity : _opacity
 			});
 			_map.addLayer(layer);
 			var fInfoControl = _map.getControlsByClass('WMSGetFeatureInfo');
@@ -333,12 +378,16 @@ Viewer = function() {
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 				var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-				var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud padding set in css
+				var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud
+				// padding
+				// set
+				// in
+				// css
 				var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-bottom'), 10);
-				
+
 				var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-				var h = jQuery(window).height() -  headerH - footerH - borderH;
-				
+				var h = jQuery(window).height() - headerH - footerH - borderH;
+
 				jQuery('#' + this.config.mapDiv).width(w).height(h);
 				jQuery('#toggleSize').toggleClass('restore max');
 				_fullSize = true;
