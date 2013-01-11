@@ -591,6 +591,7 @@
 							<nocompress>${debug}</nocompress>
 							<excludes>
 								<exclude>**/lib/*.min.js</exclude>
+								<exclude>**/*.min.css</exclude>
 								<exclude>**/lib/OpenLayers.js</exclude>
 							</excludes>
 							<outputDirectory>${project.build.directory}/${project.build.finalName}/js</outputDirectory>
