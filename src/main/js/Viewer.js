@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -68,11 +68,8 @@ Viewer = function() {
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 			var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud
-			// padding
-			// set
-			// in
-			// css
+			// inhoud padding set in css
+			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10);
 			var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-bottom'), 10);
 
 			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
@@ -89,6 +86,26 @@ Viewer = function() {
 			}
 		}
 	}
+
+	/**
+	 * Stelt de doorzichtigheid van de voorgrond kaart in.
+	 * 
+	 * @param alpha
+	 *            float waarde tussen 0 1n 1
+	 */
+	function _setOpacity(alpha) {
+		alpha = parseFloat(alpha);
+		if (0.09 < alpha && alpha < .91) {
+			_opacity = alpha;
+			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
+			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+				if (!lyrs[lyr].isBaseLayer) {
+					lyrs[lyr].setOpacity(_opacity);
+				}
+			}
+		}
+	}
+
 	/**
 	 * Publieke interface van deze klasse.
 	 * 
@@ -151,7 +168,7 @@ Viewer = function() {
 			});
 
 			if (this.config.fgAlphaSlider) {
-				var aSlider = jQuery('<div id="sliderFGMap"><span id="slidervalue"></span></div>').insertBefore(
+				var aSlider = jQuery('<div id="sliderFGMap"><span id="slidervalue"></span></div>').prependTo(
 						jQuery('#' + config.mapDiv)).slider({
 					value : _opacity * 100,
 					min : 10,
@@ -159,16 +176,28 @@ Viewer = function() {
 					step : 10,
 					animate : "slow",
 					slide : function(event, ui) {
-						// TODO ingesloten in een closure, wil eigenlijk
-						// this.setOpacity(ui.value) gebruiken
-						// TODO tooltip oid met de waarde tonen, zie ook
-						// http://access.aol.com/aegis/#goto_slider
-						Viewer.setOpacity(ui.value / 100);
-						jQuery('#slidervalue').html((100 - ui.value) + '% transparant');
-						// console.debug(this);
+						_setOpacity(ui.value / 100);
+						jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+							'0' : (100 - ui.value)
+						}));
+						jQuery(this).find('a:first').text(ui.value);
+						// tooltip
+						if (ui.value > 50) {
+							jQuery('#slidervalue').css({
+								'left' : '50%'
+							});
+						} else {
+							jQuery('#slidervalue').css({
+								'left' : ui.value + '%'
+							});
+						}
 					}
 				});
-				jQuery('#slidervalue').html(100 - (_opacity * 100) + '% transparant');
+				// instellen initiele waarde
+				jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+					'0' : 100 - (_opacity * 100)
+				}));
+				jQuery('#sliderFGMap').find('a:first').text((_opacity * 100));
 			}
 		},
 
@@ -272,16 +301,7 @@ Viewer = function() {
 		 * @returns
 		 */
 		setOpacity : function(opacity) {
-			opacity = parseFloat(opacity);
-			if (0.09 < opacity && opacity < .91) {
-				_opacity = opacity;
-				lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
-				for ( var lyr = 0; lyr < lyrs.length; lyr++) {
-					if (!lyrs[lyr].isBaseLayer) {
-						lyrs[lyr].setOpacity(_opacity);
-					}
-				}
-			}
+			_setOpacity(opacity);
 		},
 
 		/**
