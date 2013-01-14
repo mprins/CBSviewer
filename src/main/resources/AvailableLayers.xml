@@ -748,7 +748,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</styles>
 		<attributes>aantal_inwoners</attributes>
-		<link>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wfs?request=GetFeature&amp;typeName=wijkenbuurten2011:gemeenten2011&amp;outputFormat=SHAPE-ZIP</link>
+		<!--<link>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wfs?request=GetFeature&amp;typeName=wijkenbuurten2011:gemeenten2011&amp;outputFormat=SHAPE-ZIP</link>-->
 	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_wijken2011_aantal_inwoners</id>
