@@ -83,7 +83,7 @@
 					type="hidden" name="xcoord" value="${xcoord}" /> <input
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
 					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
-					type="hidden" name="mapid" value="${param.mapid}" /> <input
+					type="hidden" name="mapid" value="${mapid}" /> <input
 					type="hidden" name="gevonden" value="${param.gevonden}" /><input
 					type="hidden" name="doorzicht" value="${doorzicht}" />
 			</p>
@@ -127,7 +127,7 @@
 					type="hidden" name="xcoord" value="${xcoord}" /> <input
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
 					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
-					type="hidden" name="mapid" value="${param.mapid}" /> <input
+					type="hidden" name="mapid" value="${mapid}" /> <input
 					type="hidden" name="doorzicht" value="${doorzicht}" />
 			</p>
 		</form>
@@ -152,7 +152,7 @@
 					type="hidden" name="xcoord" value="${xcoord}" /> <input
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
 					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
-					type="hidden" name="mapid" value="${param.mapid}" /> <input
+					type="hidden" name="mapid" value="${mapid}" /> <input
 					type="hidden" name="gevonden" value="${param.gevonden}" /><input
 					type="hidden" name="doorzicht" value="${doorzicht}" />
 			</p>
