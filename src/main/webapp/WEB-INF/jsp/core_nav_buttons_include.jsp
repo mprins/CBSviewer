@@ -170,12 +170,15 @@
 						key="KEY_NAVIGATIE_FGMAP_TRANSP_LABEL" /></label> <select id="transSlct"
 					name="doorzicht">
 					<c:forEach begin="10" end="90" step="10" var="alpha">
+						<fmt:message key="KEY_TRANSP_SLIDER_LABEL" var="alphaLabel">
+							<fmt:param value="${alpha}"></fmt:param>
+						</fmt:message>
 						<c:choose>
 							<c:when test="${doorzicht eq alpha}">
-								<option value="${alpha}" selected="">${alpha} %</option>
+								<option value="${alpha}" selected="">${alphaLabel}</option>
 							</c:when>
 							<c:otherwise>
-								<option value="${alpha}">${alpha} %</option>
+								<option value="${alpha}">${alphaLabel}</option>
 							</c:otherwise>
 						</c:choose>
 					</c:forEach>
