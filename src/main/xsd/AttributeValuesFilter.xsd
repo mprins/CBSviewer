@@ -14,8 +14,13 @@
 		<xs:sequence>
 			<xs:element name="Filter" type="l:attributeValueFilter"
 				maxOccurs="unbounded" minOccurs="0">
+				<xs:unique name="uniqueInputAttributeValue">
+					<xs:selector xpath="attributeValueFilter" />
+					<xs:field xpath="inputAttributeValue" />
+				</xs:unique>
 			</xs:element>
 		</xs:sequence>
+
 	</xs:complexType>
 
 	<xs:complexType name="attributeValueFilter">

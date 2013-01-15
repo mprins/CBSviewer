@@ -6,6 +6,7 @@
  */
 package nl.mineleni.cbsviewer.servlet.wms;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -14,6 +15,7 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.custommonkey.xmlunit.XMLUnit;
 import org.custommonkey.xmlunit.exceptions.ConfigurationException;
+import org.custommonkey.xmlunit.exceptions.XMLUnitRuntimeException;
 import org.custommonkey.xmlunit.jaxp13.Validator;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,6 +40,35 @@ public class AttributeValuesFilterTest {
 	}
 
 	/**
+	 * XML testcase voor deployment {@link validAttributeValuesFilter.xml} en
+	 * {@link invalidAttributeValuesFilter.xml}.
+	 */
+	@Test
+	public void testAttributeValuesFilterXML() {
+		// valideer document
+		final Validator v = new Validator();
+		final Source schema = new StreamSource(this.getClass().getClassLoader()
+				.getResourceAsStream("AttributeValuesFilter.xsd"));
+		v.addSchemaSource(schema);
+
+		// test resources
+		final Source validdoc = new StreamSource(this.getClass()
+				.getClassLoader()
+				.getResourceAsStream("validAttributeValuesFilter.xml"));
+		assertTrue(v.isInstanceValid(validdoc));
+
+		final Source invaliddoc = new StreamSource(this.getClass()
+				.getClassLoader()
+				.getResourceAsStream("invalidAttributeValuesFilter.xml"));
+		try {
+			v.isInstanceValid(invaliddoc);
+			fail("Expected excepion did not occur.");
+		} catch (final XMLUnitRuntimeException x) {
+			assertEquals("Schema is invalid", x.getMessage());
+		}
+	}
+
+	/**
 	 * XML testcase voor {@link AttributeValuesFilter.xsd}.
 	 */
 	@Test
@@ -57,18 +88,18 @@ public class AttributeValuesFilterTest {
 
 	/**
 	 * XML testcase voor deployment {@link AttributeValuesFilter.xml}.
-	 * 
-	 * @todo xpath tests
 	 */
 	@Test
-	public void testDeploymentAvailableLayersXML() {
+	public void testDeploymentAttributeValuesFilterXML() {
 		// valideer document
+		final Validator v = new Validator();
 		final Source schema = new StreamSource(this.getClass().getClassLoader()
 				.getResourceAsStream("AttributeValuesFilter.xsd"));
+		v.addSchemaSource(schema);
+		// deployment resource
 		final Source doc = new StreamSource(this.getClass().getClassLoader()
 				.getResourceAsStream("../classes/AttributeValuesFilter.xml"));
-		final Validator v = new Validator();
-		v.addSchemaSource(schema);
 		assertTrue(v.isInstanceValid(doc));
+
 	}
 }
