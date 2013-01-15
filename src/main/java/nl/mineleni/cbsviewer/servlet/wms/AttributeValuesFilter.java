@@ -50,8 +50,8 @@ public class AttributeValuesFilter {
 			@SuppressWarnings("unchecked")
 			final JAXBElement<FilterList> element = (JAXBElement<FilterList>) u
 					.unmarshal(f);
-			final FilterList layerslist = element.getValue();
-			filters = layerslist.getFilter();
+			final FilterList fList = element.getValue();
+			filters = fList.getFilter();
 		} catch (final JAXBException e) {
 			LOGGER.error(
 					"Er is een fout opgetreden bij het inlezen van de filters.",
@@ -66,4 +66,19 @@ public class AttributeValuesFilter {
 		return filters;
 	}
 
+	/**
+	 * Filtert de input.
+	 * 
+	 * @param input
+	 *            een te filteren waarde
+	 * @return de gefilterde input zoals in de filtermapping beschreven.
+	 */
+	public String filterValue(String input) {
+		for (AttributeValueFilter filter : filters) {
+			if (input.equals(filter.getInputAttributeValue())) {
+				return filter.getOutputAttributeValue();
+			}
+		}
+		return input;
+	}
 }
