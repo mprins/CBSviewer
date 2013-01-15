@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -9,6 +9,7 @@ package nl.mineleni.cbsviewer.servlet.wms;
 import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.USER_ID;
 import static nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.USER_PASSWORD;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_BGMAP;
+import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_FGMAP_ALPHA;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_MAPID;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_STRAAL;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_XCOORD;
@@ -161,6 +162,10 @@ public class WMSClientServletIntegrationTest {
 				this.allowing(WMSClientServletIntegrationTest.this.request)
 						.getParameter(REQ_PARAM_BGMAP.code);
 				this.will(returnValue("topografie"));
+
+				this.allowing(WMSClientServletIntegrationTest.this.request)
+						.getParameter(REQ_PARAM_FGMAP_ALPHA.code);
+				this.will(returnValue(".7"));
 
 				this.allowing(WMSClientServletIntegrationTest.this.request)
 						.getParameter(REQ_PARAM_MAPID.code);
