@@ -50,6 +50,12 @@
 		</license>
 		<license>
 			<name>MIT license</name>
+			<url>https://raw.github.com/jquery/jquery-ui/master/MIT-LICENSE.txt</url>
+			<comments>For any parts of jQuery-UI</comments>
+			<distribution>repo</distribution>
+		</license>
+		<license>
+			<name>MIT license</name>
 			<url>http://malsup.github.com/mit-license.txt</url>
 			<comments>For jQuery Form Plugin</comments>
 			<distribution>manual</distribution>
