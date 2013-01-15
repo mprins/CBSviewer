@@ -563,7 +563,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
-					<warSourceExcludes>**/*.html,**/*.psd,**/*.css,**/js/*.js</warSourceExcludes>
+					<warSourceExcludes>**/*.html,**/*.psd,**/css/*.css,**/js/*.js</warSourceExcludes>
 					<archive>
 						<forced>true</forced>
 						<index>true</index>
