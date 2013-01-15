@@ -175,7 +175,7 @@
 						</fmt:message>
 						<c:choose>
 							<c:when test="${doorzicht eq alpha}">
-								<option value="${alpha}" selected="">${alphaLabel}</option>
+								<option value="${alpha}" selected="selected">${alphaLabel}</option>
 							</c:when>
 							<c:otherwise>
 								<option value="${alpha}">${alphaLabel}</option>
