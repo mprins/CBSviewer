@@ -83,6 +83,14 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="aliases" type="xs:string" maxOccurs="1"
+				minOccurs="0">
+				<!-- TODO constraint toevoegen die controleert of er evenveel aliases zijn als attributes -->
+				<xs:annotation>
+					<xs:documentation>De (optionele) alias mapping voor 
+					attributes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="link" type="xs:anyURI" maxOccurs="1"
 				minOccurs="0">
 				<xs:annotation>
