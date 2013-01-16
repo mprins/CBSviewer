@@ -178,7 +178,7 @@ a.accesskey:focus {
 .subtitel {
 	font-size: 1.8em;
 	text-align: center;
-	font-family:Georgia,serif;
+	font-family:Arial, Verdana,Helvetica,sans-serif;
 	color:#4E443C;
 	font-variant: small-caps; 
 	text-transform: none; 
