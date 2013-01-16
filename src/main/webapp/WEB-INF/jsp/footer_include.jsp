@@ -9,7 +9,8 @@
 	 -->
 	<jsp:text>
 		<div id="footer">
-			<a class="featureinfo" href="#">Over CBS in uw buurt</a> 
+			<a href="/">Home</a> 
+			<a href="#">Over CBS in uw buurt</a> 
 			<a href="help.jsp">Hoe werkt dit?</a> 
 			<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm">Disclaimer</a> 
 			<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/privacy/default.htm">Privacyverklaring</a>
