@@ -10,144 +10,122 @@ var _defaultId = "wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners";
  * document onload event handling.
  */
 jQuery(document)
-		.ready(
-				function() {
-					// create map
-					Viewer.init(config);
+	.ready(
+		function() {
+			// create map
+			Viewer.init(config);
 
-					var maps = jQuery.grep(_layers, function(n, i) {
-						return n.id == _defaultId;
-					});
-					// console.debug('opzoeken van ' + _defaultId + ' in ',
-					// _layers, maps);
-					Viewer.loadWMS(maps[0]);
+			var maps = jQuery.grep(_layers, function(n, i) {
+				return n.id == _defaultId;
+			});
 
-					// het accordion menu en settings panel werkt nu ook zonder
-					// Javascript en CSS3.
-					// Dit stukje zorgt voor een vloeiender menu
-					var settings_head = jQuery('.settingsPanel > li > a');
-					settings_head.first().addClass('active').next().slideDown('normal');
+			Viewer.loadWMS(maps[0]);
 
-					settings_head.on('click', function(event) {
-						event.preventDefault();
+			/* slidedown effect */
+			var settings_head = jQuery('.settingsPanel > li > a');
+			settings_head.first().addClass('active').next().slideDown('normal');
+			
+			settings_head.on('click', function(event) {
+				event.preventDefault();
 
-						jQuery(this).next().stop(true, true).slideToggle('normal');
-						if (jQuery(this).attr('class') != 'active') {
-							jQuery(this).addClass('active');
-						} else {
-							jQuery(this).removeClass('active');
-						}
-					});
+				jQuery(this).next().stop(true, true).slideToggle('normal');
+				if (jQuery(this).attr('class') != 'active') {
+					jQuery(this).addClass('active');
+				}
+				else {
+					jQuery(this).removeClass('active');
+				}						
+			});
 
-					var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'), menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');
-					menuAccordion_head.first().addClass('active').next().slideDown('normal');
-					menuAccordion_head.on('click', function(event) {
-						event.preventDefault();
+			var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'), menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');
+			menuAccordion_head.first().addClass('active').next().slideDown('normal');
+			menuAccordion_head.on('click', function(event) {
+				event.preventDefault();
 
-						if (jQuery(this).attr('class') != 'active') {
-							menuAccordion_body.slideUp('normal');
-							jQuery(this).next().stop(true, true).slideToggle('normal');
-							menuAccordion_head.removeClass('active');
-							jQuery(this).addClass('active');
-						}
-					});
+				if (jQuery(this).attr('class') != 'active') {
+					menuAccordion_body.slideUp('normal');
+					jQuery(this).next().stop(true, true).slideToggle('normal');
+					menuAccordion_head.removeClass('active');
+					jQuery(this).addClass('active');
+				}
+			});
+		});
+	
+/**
+ * Close megamenu on menu click 
+ */
+jQuery('#hasMenu').click(function() {
+	if (parseInt(jQuery('.navDropDown').css('left')) < 0) {
+		jQuery('.navDropDown').css('left', 'auto');
+	}
+	else {
+		jQuery('.navDropDown').css('left', '-9999px');
+	}		
+	return false;
+});
 
-					/*
-					 * jQuery("#adres").keyup(function() {
-					 * jQuery("#x").fadeIn(); if
-					 * (jQuery.trim(jQuery("#adres").val()) == "") {
-					 * jQuery("#x").fadeOut(); jQuery(".adreslijst").empty();
-					 * jQuery("#zoekresultaten").empty(); } });
-					 * 
-					 * jQuery("#delete").click(function() {
-					 * jQuery("#adres").val(""); jQuery(".adreslijst").empty();
-					 * jQuery("#zoekresultaten").empty(); jQuery("#x").hide();
-					 * });
-					 */
+/**
+ * Use a timeout to hide the sub menu, todo: call function after timeout instead of delay
+ */
+jQuery("ul.navleft li, ul.navright li").hover(function() {
+  var timeout = jQuery(this).data("timeout");
+  if(timeout) clearTimeout(timeout);
+  jQuery(this).find("ul.submenu").delay(250).show(50);
+}, function() {
+    jQuery(this).data("timeout", setTimeout(jQuery.proxy(function() {
+        jQuery(this).find("ul.submenu").hide();
+    }, this), 250));
+});
 
-					/* for testing purposes only at the moment */
-					jQuery('#content a').click(function() {
-						// Destroy currrent tooltip if present
-						if (jQuery(this).data("qtip"))
-							jQuery(this).qtip("destroy");
+/**
+ * Hide sub menu on click
+ */
+jQuery(document).click(function() {
+    jQuery('ul.submenu:visible').hide();
+});
 
-						jQuery(this).html('topRight').qtip({
-							content : 'Dit is de inhoud',
-							position : {
-								adjust : {
-									screen : true,
-									scroll : true,
-									resize : true
-								}
-							},
-							show : {
-								solo : true,
-								when : false,
-								ready : true
-							},
-							hide : false,
-							style : {
-								border : {
-									width : 1,
-									radius : 3
-								},
-								padding : 5,
-								textAlign : 'center',
-								tip : true,
-								name : 'light'
-							}
-						});
-					});
-
-					/*
-					 * Fix this just like the accordion
-					 * jQuery('.hasMenu').focus(function() { if
-					 * (jQuery('.navDropDown').css('left') == '0px') {
-					 * jQuery(".navDropDown").css("left","-9999px");
-					 * jQuery(".megaMenu").focus(); } else {
-					 * jQuery(".navDropDown").css("left","0px"); } });
-					 */
-				});
-
-// jQuery('.megaMenu a').mouseover(function() {
-// jQuery('span',this).html('Get name from AvailableLayers.xml?');
-// });
-
+/**
+ * Hide main menu on click
+ */
+jQuery('.closeMega').click(function() {
+	jQuery('.navDropDown').css('left', '-9999px');
+});
+	
 /**
  * Change theme from menu
  */
-jQuery('.megaMenu a').click(
-		function() {
-			// only load new themes
-			if (jQuery(this).attr('name') != _defaultId && jQuery(this).attr('class') != 'accordionheader') {
-				var _id = jQuery(this).attr('name');
+jQuery('.megaMenu a').click(function() {
+	// only load new themes
+	if (jQuery(this).attr('name') != _defaultId && jQuery(this).attr('class') != 'accordionheader') {
+		var _id = jQuery(this).attr('name');
 
-				var maps = jQuery.grep(_layers, function(n, i) {
-					return n.id == _id;
-				});
-				Viewer.loadWMS(maps[0]);
-				// bijwerken pagina titel
-				jQuery('title').html(OpenLayers.i18n('KEY_KAART_TITEL', {
-					'0' : '' + maps[0].name
-				}));
-				jQuery('#pagSubTitle').html(OpenLayers.i18n('KEY_KAART_TITEL', {
-					'0' : '' + maps[0].name
-				}));
-
-				// bijwerken download link
-				if (maps[0].link) {
-					jQuery('#downloadLink').html(
-							'<a href="' + maps[0].link + '">Download de dataset voor'
-									+ OpenLayers.i18n('KEY_KAART_TITEL', {
-										'0' : '' + maps[0].name
-									}) + '</a>');
-				} else {
-					jQuery('#downloadLink').html('');
-				}
-
-				_defaultId = _id;
-			}
+		var maps = jQuery.grep(_layers, function(n, i) {
+			return n.id == _id;
 		});
+		Viewer.loadWMS(maps[0]);
+		// bijwerken pagina titel
+		jQuery('title').html(OpenLayers.i18n('KEY_KAART_TITEL', {
+			'0' : '' + maps[0].name
+		}));
+		jQuery('#pagSubTitle').html(OpenLayers.i18n('KEY_KAART_TITEL', {
+			'0' : '' + maps[0].name
+		}));
+		
+		// bijwerken download link
+		if (maps[0].link) {
+			jQuery('#downloadLink').html('<a href="' + maps[0].link + '">' + OpenLayers.i18n('KEY_KAART_TITEL', {
+				'0' : '' + maps[0].name
+			}) + '</a>');
+		} else {
+			jQuery('#downloadLink').html('');
+		}
+		
+		// close menu
+		jQuery('.navDropDown').css('left', '-9999px');
+
+		_defaultId = _id;
+	}
+});
 
 /**
  * dynamische elementen aan de pagina toevoegen.

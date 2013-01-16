@@ -23,8 +23,11 @@
 .megaMenu, .megaMenu ul, .navCategories, .megaMenu .col {
 	min-height: 520px;
 }
-.siteNavigation .sectionTheme:hover .navDropDown {
+.siteNavigation .sectionTheme:hover .navDropDown  {
 	left: auto;
+}
+html.js .siteNavigation .sectionTheme:hover .navDropDown {
+	left: -9999px;
 }
 .megaMenu.show {
 	left: 20%;
@@ -39,31 +42,25 @@
 .navCategories>li:first-child .megaMenu {
 	left: 20%;
 }
-.closeMega
-{
-	background: linear-gradient(top, rgba(234,74,175,1) 0%,rgba(229,29,155,1) 100%);
-	background: -moz-linear-gradient(top, rgba(234,74,175,1) 0%, rgba(229,29,155,1) 100%);
-	background: -ms-linear-gradient(top, rgba(234,74,175,1) 0%,rgba(229,29,155,1) 100%);
-	background: -o-linear-gradient(top, rgba(234,74,175,1) 0%,rgba(229,29,155,1) 100%);
-	background: rgb(234,74,175);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,74,175,1)), color-stop(100%,rgba(229,29,155,1)));
-	background: -webkit-linear-gradient(top, rgba(234,74,175,1) 0%,rgba(229,29,155,1) 100%);
-	border: solid 2px white;
-	border-radius: 24px;
-	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .2);
-	color: white;
-	cursor: pointer;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea4aaf', endColorstr='#e51d9b',GradientType=0 );
-	font-size: 15px;
-	font-weight: bold;
-	height: 24px;
-	line-height: 24px;
+.closeMega {
 	position: absolute;
 	right: 7px;
-	text-align: center;
 	top: 5px;
-	width: 24px;
 	z-index: 1005;
+	background-image: url('../img/closemenu.png');
+	background-position: 0px 62px;
+	width: 31px;
+	height: 31px;
+	cursor: pointer;
+	border: none;
+}
+
+.closeMega:hover {
+	background-position: 0px 31px;
+	cursor: hand;
+	cursor: pointer;
+	height: 31px;
+}
 }
 .siteNavigation {
 	float: left;
@@ -107,14 +104,14 @@
 .siteNavigation>li:last-child>a {
 	border-right-width: 0px;
 }
-.hasMenu:after {
+#hasMenu:after {
 	color: #666666;
 	content: "?";
 	display: inline-block;
 	padding: 0 0 0 10px;
 	text-shadow: none;
 }
-.siteNavigation>li>a.hasMenu {
+.siteNavigation>li>a#hasMenu {
 	padding-right: 10px;
 }
 .navDropDown {
@@ -149,10 +146,11 @@
 	color: #353535;
 	display: block;
 	font-weight: bold;
-	padding: 10px 0 10px 10px;
+	padding: 15px 0 15px 15px;
 	text-shadow: 2px 2px 2px #ffffff;
 }
-.navCategories>li>a:hover {
+.navCategories>li>a:hover,
+.navCategories>li>a:focus  {
 	color: #E51D9B;
 }
 .navCategories>li>a.current,
@@ -164,7 +162,8 @@
 	text-shadow: none;
 }
 .navCategories>li>a:after,
-.navCategories>li:hover>a:after
+.navCategories>li:hover>a:after,
+.navCategories>li:focus>a:after
  {
 	background: url(../img/template/arrows_sprite_8.png) no-repeat -30px 0;
 	content: '';
@@ -176,11 +175,14 @@
 	top: 2px;
 	width: 6px;
 }
-.navCategories>li:hover>a:after {
+.navCategories>li:hover>a:after,
+.navCategories>li:focus>a:after {
 	background-position: -16px 0;
 }
 .navCategories>li>a:hover:after,
-.navCategories>li:hover>a:after {
+.navCategories>li:hover>a:after,
+.navCategories>li>a:focus:after,
+.navCategories>li:focus>a:after {
 	color: #353535;
 }
 .megaMenu {
@@ -311,8 +313,8 @@
 	color: #333366;
 	text-decoration: none;
 }
-.navCategories .megaMenu li a:hover
- {
+.navCategories .megaMenu li a:hover,
+.navCategories .megaMenu li a:focus {
 	color: #000000;
 	text-decoration: underline;
 }
@@ -337,8 +339,8 @@
 .navleft a {
 	width: 245px;
 }
-.navleft a:hover, .navright a:hover{
-	background-color: #000;
+.navleft a:hover, .navright a:hover,
+.navleft a:focus, .navright a:focus {
 	color: #fff;
 }
 .navleft .menuTitle, .navright .menuTitle {
@@ -352,18 +354,29 @@
 .navleft ul li a, .navright ul li a {
 	display: inline;
 }
-.navleft ul li:hover a, .navleft li:hover li a, .navright ul li:hover a, .navright li:hover li a {
+.navleft ul li:hover a, .navleft li:hover li a, .navright ul li:hover a, .navright li:hover li a,
+.navleft ul li:focus a, .navleft li:focus li a, .navright ul li:focus a, .navright li:focus li a {
 	background-color: #ffffff;
 	border: none;
 	color: #333366;
 }
-.navleft ul a:hover, .navright ul a:hover{
+.navleft ul a:hover, .navright ul a:hover, 
+.navleft ul a:focus, .navright ul a:focus {
 	background-color: #eeeeee;
 	color: #000 !important;
 	text-decoration: underline;
 }
-.navleft li:hover > ul, .navright li:hover > ul {
-	display: inline;
+.navleft li:hover > ul, .navright li:hover > ul,
+.navleft li:focus > ul, .navright li:focus > ul {
+	display: block;
+}
+html.js .navleft li:hover > ul, html.js .navright li:hover > ul,
+html.js .navleft li:focus > ul, html.js .navright li:focus > ul {
+	display: none;
+}
+/* needed for jquery handling */
+html.js .navleft > li, html.js .navright > li { 
+	display: inline-block; vertical-align: top; 
 }
 .navleft ul {
 	background-color: #ffffff;
@@ -418,7 +431,8 @@
 .dropDownMenu a span {
 	display: none;
 }
-.dropDownMenu a:hover span {
+.dropDownMenu a:hover span
+ {
 	color: #000000;
 	display: block;
 	font-size: 11px;
@@ -426,7 +440,7 @@
 	margin: 0px;
 	padding: 5px;
 	position: fixed;
-	top: 276px;
+	top: 305px;
 	width: 183px;
 	z-index: 100;
 }
