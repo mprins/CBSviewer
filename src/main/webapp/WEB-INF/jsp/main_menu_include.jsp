@@ -378,6 +378,9 @@
 						<a href="#jaarmenu">Op jaar<span>Selecteer een kaartlaag op jaar</span></a>
 						 <div class="contentasset">
 							<div class="megaMenu megaThreeColumns">
+						 		<div class="underConstruction">
+									Selecteren op jaar hoeft niet te worden getest. Dit komt in fase 2.
+								</div>	
 								<!-- gebruik dezelfde markup als je wel of geen accordion hebt -->
 								<ul><li> 
 									<ul>
@@ -444,7 +447,7 @@
 										<li><a href="#">100m vierkant<span>Dit is de tooltip</span></a></li>
 										<li><a href="#">500m vierkant<span>Dit is de tooltip</span></a></li>	
 									</ul>
-								</li></ul>		
+								</li></ul>								
 							</div>
 						</div>
 					</li>
@@ -452,6 +455,9 @@
 						<a href="#kaartlaagmenu">Op kaartlaag<span>Selecteer een kaartlaag</span></a>
 						<div class="contentasset">
 							<div class="megaMenu megaFourColumns">
+						 		<div class="underConstruction">
+									Selecteren op kaartlaag hoeft niet te worden getest. Dit komt in fase 2.
+								</div>	
 								<ul><li>
 									<ul>										
 										<li class="menuTitle"><p><img src="img/template/bodemgebruik.png" alt="Bodemgebruik"/></p>Bodemgebruik</li>
