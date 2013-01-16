@@ -64,6 +64,21 @@
 </head>
 
 <body>
+	<div id="footerWrapper">		
+		<div id="copyright" class="copy">
+			<fmt:message key="KEY_COPYRIGHT" />
+		</div>
+				
+		<div id="downloadLink">
+			<!-- StringConstants.REQ_PARAM_DOWNLOADLINK -->
+			<c:if test="${not empty downloadLink}">
+				<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
+				<a href="${fn:escapeXml(downloadLink)}"><c:out value="${linkText}" /></a>
+			</c:if>
+		</div>		
+
+		<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
+	</div>
 	<div id="wrapper">
 		<div id="header">
 			<div id="headercenter" class="column">
@@ -98,8 +113,6 @@
 				</div>
 			</div>
 			
-			<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
-
 			<ul class="settingsPanel">
 				<li id="keylegend" class="legendPanel">
 					<a href="#keylegend"><fmt:message key="KEY_LEGENDA_TITEL" /></a>
@@ -127,22 +140,9 @@
 						</c:if>
 					</div>
 				</li>
-			</ul>				
-		</div>
-		<div id="footerWrapper">		
-			<div id="copyright" class="copy">
-				<fmt:message key="KEY_COPYRIGHT" />
-			</div>
-					
-			<div id="downloadLink">
-				<!-- StringConstants.REQ_PARAM_DOWNLOADLINK -->
-				<c:if test="${not empty downloadLink}">
-					<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
-					<a href="${fn:escapeXml(downloadLink)}"><c:out value="${linkText}" /></a>
-				</c:if>
-			</div>		
-
-			<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
+			</ul>		
+			
+			<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />					
 		</div>
 	</div>	
 
