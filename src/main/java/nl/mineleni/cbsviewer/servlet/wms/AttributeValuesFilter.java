@@ -14,6 +14,9 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
+import nl.mineleni.cbsviewer.servlet.wms.xml.AttributeValueFilter;
+import nl.mineleni.cbsviewer.servlet.wms.xml.FilterList;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,7 +45,7 @@ public class AttributeValuesFilter {
 	public AttributeValuesFilter() {
 		try {
 			final JAXBContext jc = JAXBContext
-					.newInstance("nl.mineleni.cbsviewer.servlet.wms");
+					.newInstance("nl.mineleni.cbsviewer.servlet.wms.xml");
 			final Unmarshaller u = jc.createUnmarshaller();
 			final File f = new File(this.getClass().getClassLoader()
 					.getResource("AttributeValuesFilter.xml").getFile());
