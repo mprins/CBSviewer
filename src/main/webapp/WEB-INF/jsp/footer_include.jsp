@@ -11,11 +11,10 @@
 		<div id="footer">
 			<a class="featureinfo" href="#">Over CBS in uw buurt</a> 
 			<a href="help.jsp">Hoe werkt dit?</a> 
-			<a href="#">Doorsturen</a> 
-			<a href="#">Disclaimer</a> 
-			<a href="#">Privacyverklaring</a>
-			<a href="#">Sitemap</a> 
-			<a href="#" class="last">RSS</a>
+			<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm">Disclaimer</a> 
+			<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/privacy/default.htm">Privacyverklaring</a>
+			<a href="#">Download</a> 
+			<a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm" class="last">Contact</a>
 		</div>
 	</jsp:text>
 </jsp:root>
