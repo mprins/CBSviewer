@@ -75,10 +75,10 @@ mvn -Popenlayers,developer
   
 *** Jasmine plugin
 
-  Er is een specifiek profiel <<<jasmine>>> waarin een server gestart kan worden.
+  Er is een specifiek profiel <<<jasmineserver>>> waarin een server gestart kan worden.
   
 +----+
-mvn -Pjasmine jasmine:bdd
+mvn -Pjasmineserver jasmine:bdd
 +----+
   
   Start de tests op: {{http://localhost:8234/}}, de pagina kan worden geladen in een broser naar keuze.
