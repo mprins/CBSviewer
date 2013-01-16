@@ -38,8 +38,6 @@
 													</li>
 													<li><a class="disabled" href="#">Inwoners 0 tot 15 jaar<span class="redcolor">Dit thema is niet aanwezig.</span></a>
 													</li>	
-													<li><a class="disabled" href="#">Inwoners 0 tot 20 jaar<span class="redcolor">Dit thema is niet aanwezig.</span></a>
-													</li>	
 													<li><a class="disabled" href="#">Inwoners 15 tot 25 jaar<span class="redcolor">Dit thema is niet aanwezig.</span></a>
 													</li>	
 													<li><a class="disabled" href="#">Inwoners 25 tot 45 jaar<span class="redcolor">Dit thema is niet aanwezig.</span></a>
