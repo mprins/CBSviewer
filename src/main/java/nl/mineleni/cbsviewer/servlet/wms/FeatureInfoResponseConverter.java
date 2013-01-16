@@ -82,10 +82,10 @@ public final class FeatureInfoResponseConverter {
 			if (iter.hasNext()) {
 				// tabel maken
 				sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\">");
-				//sb.append("<caption>");
+				sb.append("<caption>");
 				// removed because also in header accordion
 				//sb.append("Informatie over de zoeklocatie.");
-				//sb.append("</caption>");
+				sb.append("</caption>");
 				sb.append("<thead><tr>");
 				for (final String n : attributes) {
 					sb.append("<th scope=\"col\">" + n + "</th>");
