@@ -258,6 +258,10 @@ html.js #cbslogo {
 	background-color: #eff0f2;
 }
 
+.attribuutTabel .even {
+	background-color: #fff;
+}
+
 #footerWrapper {
 	z-index:1025;
 	position:absolute;

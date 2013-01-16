@@ -14,9 +14,6 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import nl.mineleni.cbsviewer.util.xml.AttributeValueFilter;
-import nl.mineleni.cbsviewer.util.xml.FilterList;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,6 +34,8 @@ public class AttributeValuesFilter {
 	 */
 	private List<AttributeValueFilter> filters = null;
 
+	private boolean hasFilters;
+
 	/**
 	 * default constructor.
 	 */
@@ -52,18 +51,12 @@ public class AttributeValuesFilter {
 					.unmarshal(f);
 			final FilterList fList = element.getValue();
 			filters = fList.getFilter();
+			hasFilters = (!filters.isEmpty());
 		} catch (final JAXBException e) {
 			LOGGER.error(
 					"Er is een fout opgetreden bij het inlezen van de filters.",
 					e);
 		}
-	}
-
-	/**
-	 * @return the filters
-	 */
-	public List<AttributeValueFilter> getFilters() {
-		return filters;
 	}
 
 	/**
@@ -73,12 +66,22 @@ public class AttributeValuesFilter {
 	 *            een te filteren waarde
 	 * @return de gefilterde input zoals in de filtermapping beschreven.
 	 */
-	public String filterValue(String input) {
+	public String filterValue(Object input) {
 		for (AttributeValueFilter filter : filters) {
-			if (input.equals(filter.getInputAttributeValue())) {
+			if (input.toString().equals(filter.getInputAttributeValue())) {
 				return filter.getOutputAttributeValue();
 			}
 		}
-		return input;
+		return input.toString();
 	}
+
+	/**
+	 * Geeft aan of het filter inhoud heeft.
+	 * 
+	 * @return {@code true} als het filter inhoud heeft
+	 */
+	public boolean hasFilters() {
+		return this.hasFilters;
+	}
+
 }

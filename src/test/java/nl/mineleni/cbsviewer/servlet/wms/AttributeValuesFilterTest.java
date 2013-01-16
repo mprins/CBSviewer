@@ -27,6 +27,9 @@ import org.junit.Test;
  * @author prinsmc
  */
 public class AttributeValuesFilterTest {
+	/** test subject. */
+	private AttributeValuesFilter filter;
+
 	/**
 	 * set up.
 	 * 
@@ -37,6 +40,28 @@ public class AttributeValuesFilterTest {
 	public void setUp() throws Exception {
 		XMLUnit.setIgnoreWhitespace(true);
 		XMLUnit.setIgnoreComments(true);
+		filter = new AttributeValuesFilter();
+	}
+
+	/**
+	 * Test voor
+	 * {@link nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter#hasFilters()}
+	 * .
+	 */
+	@Test
+	public void testHasFilters() {
+		assertTrue(filter.hasFilters());
+	}
+
+	/**
+	 * Test voor
+	 * {@link nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter#filterValue(String)}
+	 * .
+	 */
+	@Test
+	public void testFilterValue() {
+		assertEquals("expected", filter.filterValue("expected"));
+		assertEquals("geheim", filter.filterValue(-99997));
 	}
 
 	/**
