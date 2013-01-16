@@ -68,7 +68,7 @@ mvn -Popenlayers,developer
 ** Javascript
 
   Er wordt gebruik gemaakt van het {{{Jasmine}http://pivotal.github.com/jasmine/}} framework. De code voor unit test 
-  gaat in <<</src/test/js/jsamine/>>>, iedere test moet ook worden opgenomen in de testrunner pagina 
+  gaat in <<</src/test/js/jasmine/>>>, iedere test moet ook worden opgenomen in de testrunner pagina 
   <<<PhantomSpecRunner.html>>>. Tests worden automatisch gedraaid in een PhantomJS/Webkit runtime tijdens de test 
   fase van Maven.
   Om unit tests met de hand te draaien zijn er onderstaande opties.

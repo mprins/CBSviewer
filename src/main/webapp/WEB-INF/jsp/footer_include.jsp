@@ -13,7 +13,7 @@
 			<a href="help.jsp">Hoe werkt dit?</a> 
 			<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm">Disclaimer</a> 
 			<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/privacy/default.htm">Privacyverklaring</a>
-			<a href="#">Download</a> 
+			<a href="download.jsp">Download</a> 
 			<a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm" class="last">Contact</a>
 		</div>
 	</jsp:text>

@@ -824,3 +824,34 @@ a.olControlZoomOut {
 	background: transparent url(../img/opendata.png) 0px 1px no-repeat;
 	padding-left: 18px;
 }
+
+table.download {
+	font: 11px/24px Arial, Helvetica, Verdana, Geneva, Lucida, sans-serif;
+	border-collapse: collapse;
+	width: 600px;
+}
+
+.download th {
+	padding: 0 0.5em;
+	text-align: left;
+	}
+
+.download tr.yellow td {
+	border-top: 1px solid #FB7A31;
+	border-bottom: 1px solid #FB7A31;
+	background: #FFC;
+	}
+
+.download td {
+	border-bottom: 1px solid #CCC;
+	padding: 0 0.5em;
+	}
+
+.download td:first-child {
+	width: 190px;
+	}
+
+.download td+td {
+	border-left: 1px solid #CCC;
+	text-align: center;
+	}
