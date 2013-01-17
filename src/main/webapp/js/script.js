@@ -6,6 +6,9 @@
 // AvailableLayers.xml
 var _defaultId = "wijkenbuurten2011_thema_gemeenten2011_bevolkingsdichtheid_inwoners_per_km2";
 
+// multiple versions of JQuery/JQuery UI can cause problems.
+jQuery.noConflict();
+
 /**
  * document onload event handling.
  */

@@ -440,6 +440,7 @@
 							<preloadSources>
 								<!-- HtmlUnit 2.9 heeft problemen met 1.8.1 -->
 								<source>http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</source>
+								<source>src/main/webapp/lib/jquery-ui-1.9.2.custom.min.js</source>
 								<source>src/test/js/lib/OpenLayers-test.js</source>
 								<source>src/test/js/lib/jasmin_util.js</source>
 								<source>src/main/webapp/js/config.js</source>

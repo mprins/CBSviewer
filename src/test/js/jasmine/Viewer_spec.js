@@ -105,7 +105,7 @@ describe(
 						it(
 								'na aanroepen van zoomTo is de x coordinaat voor het midden van de kaart gelijk aan gevraagd en is zoomnivo anders.',
 								function() {
-									var x = 150000, y = 300000, r = 100000;
+									var x = 140000, y = 300000, r = 100000;
 									Viewer.zoomTo(x, y, r);
 									var latlon = Viewer.getMap().getCenter();
 									expect(latlon.lon).toEqual(x);
