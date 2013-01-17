@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -27,11 +27,10 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.custommonkey.xmlunit.XMLUnit;
 import org.custommonkey.xmlunit.exceptions.ConfigurationException;
+import org.custommonkey.xmlunit.exceptions.XMLUnitRuntimeException;
 import org.custommonkey.xmlunit.exceptions.XpathException;
 import org.custommonkey.xmlunit.jaxp13.Validator;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
@@ -46,10 +45,8 @@ public class AvailableLayersBeanTest {
 	private static final String LAYERS1 = "omgevings_adres_dichtheid_2000";
 	private static final String NAME1 = "Vierkant 500m - Omgevingsadressendichtheid 2000";
 
-	@AfterClass
-	public static void cleanUp() {
-
-	}
+	/** test subject. */
+	private AvailableLayersBean bean;
 
 	/**
 	 * Converteert een stream naar een string.
@@ -81,17 +78,6 @@ public class AvailableLayersBeanTest {
 		}
 	}
 
-	@BeforeClass
-	public static void initXmlUnit() throws IOException {
-
-		XMLUnit.setIgnoreWhitespace(true);
-		XMLUnit.setIgnoreAttributeOrder(true);
-		XMLUnit.setIgnoreComments(true);
-		XMLUnit.setIgnoreDiffBetweenTextAndCDATA(true);
-	}
-
-	private AvailableLayersBean bean;
-
 	/**
 	 * set up.
 	 * 
@@ -100,8 +86,9 @@ public class AvailableLayersBeanTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
+		XMLUnit.setIgnoreWhitespace(true);
+		XMLUnit.setIgnoreComments(true);
 		bean = new AvailableLayersBean();
-
 	}
 
 	@Test
@@ -118,22 +105,32 @@ public class AvailableLayersBeanTest {
 	}
 
 	/**
-	 * XML testcase voor test {@link AvailableLayers.xml}.
-	 * 
-	 * @todo xpath tests
+	 * XML testcase voor test {@link AvailableLayers.xml} en
+	 * {@link invalidAvailableLayers.xml}.
 	 */
 	@Test
 	public void testAvailableLayersXML() {
 		// valideer document
+		final Validator v = new Validator();
 		final Source schema = new StreamSource(this.getClass().getClassLoader()
 				.getResourceAsStream("AvailableLayers.xsd"));
+		v.addSchemaSource(schema);
+
+		final Source invaliddoc = new StreamSource(this.getClass()
+				.getClassLoader()
+				.getResourceAsStream("invalidAvailableLayers.xml"));
+		try {
+			v.isInstanceValid(invaliddoc);
+			fail("Expected excepion did not occur.");
+		} catch (final XMLUnitRuntimeException x) {
+			assertEquals("Schema is invalid", x.getMessage());
+		}
+
 		final Source doc = new StreamSource(this.getClass().getClassLoader()
 				.getResourceAsStream("AvailableLayers.xml"));
-		final Validator v = new Validator();
-		v.addSchemaSource(schema);
 		assertTrue(v.isInstanceValid(doc));
 
-		// test inhoud van het test document
+		// test inhoud van het geldige test document
 		try {
 			final String TESTXML = convertStreamToString(this.getClass()
 					.getClassLoader()
@@ -236,4 +233,5 @@ public class AvailableLayersBeanTest {
 		assertEquals(ID1, bean.getLayerByName(NAME1).getId());
 		assertEquals(NAME1, bean.getLayerByName(NAME1).getName());
 	}
+
 }

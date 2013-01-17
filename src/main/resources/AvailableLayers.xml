@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd ">
+	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd">
 	<Layerdescriptor>
 		<id>vierkanten500m_oad2000</id>
 		<name>Vierkant 500m - Omgevingsadressendichtheid 2000</name>

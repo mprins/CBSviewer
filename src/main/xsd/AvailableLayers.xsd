@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	targetNamespace="http://xml.util.cbsviewer.mineleni.nl" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://xml.util.cbsviewer.mineleni.nl" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
 	jxb:version="2.0" attributeFormDefault="unqualified"
 	elementFormDefault="qualified" xmlns:l="http://xml.util.cbsviewer.mineleni.nl">
 
@@ -15,13 +15,19 @@
 	<xs:complexType name="layersList">
 		<xs:sequence>
 			<xs:element name="Layerdescriptor" type="l:layerDescriptor"
-				maxOccurs="unbounded" minOccurs="1" />
+				maxOccurs="unbounded" minOccurs="1">
+				<xs:unique name="uniqueLayerDescriptor">
+					<xs:selector xpath="layerDescriptor" />
+					<xs:field xpath="id" />
+				</xs:unique>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name="layerDescriptor">
 		<xs:annotation>
-			<xs:documentation>Beschrijft een kaartlaag voor de applicatie. Een
+			<xs:documentation>
+				Beschrijft een kaartlaag voor de applicatie. Een
 				laag kan bestaan uit 1 of meer lagen van 1 WMS.
 			</xs:documentation>
 		</xs:annotation>
@@ -66,8 +72,7 @@
 					<xs:documentation>
 						De lijst met STYLES, een kommagescheiden string
 						met een of meer namen van de styles van de WMS.
-						Het aantal moet
-						gelijk zijn aan het aantal
+						Het aantal moet gelijk zijn aan het aantal
 						lagen.
 					</xs:documentation>
 				</xs:annotation>
@@ -77,25 +82,27 @@
 				<xs:annotation>
 					<xs:documentation>
 						De te tonen feature attributen als resultaat van
-						een FeatureInfo request (kommagescheiden string). 
-						Dit geeft de mogelijkheid om attributen zoals een FeatureId
-						uit de lijst te filteren.
+						een FeatureInfo request (kommagescheiden string).
+						Dit geeft de mogelijkheid om attributen zoals een
+						FeatureId uit de lijst te filteren.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="aliases" type="xs:string" maxOccurs="1"
 				minOccurs="0">
-				<!-- TODO constraint toevoegen die controleert of er evenveel aliases zijn als attributes -->
 				<xs:annotation>
-					<xs:documentation>De (optionele) alias mapping voor 
-					attributes.</xs:documentation>
+					<xs:documentation>De (optionele) alias mapping voor attributes
+						(kommagescheiden string). LET OP, het aantal aliases
+						dient hetzelfde te zijn als het aantal attributes.
+					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="link" type="xs:anyURI" maxOccurs="1"
 				minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>De (optionele) download link voor de dataset
-						waarvan deze laag is gemaakt.</xs:documentation>
+						waarvan deze (WMS) laag is gemaakt.
+					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
