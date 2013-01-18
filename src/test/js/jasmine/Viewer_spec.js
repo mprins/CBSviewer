@@ -32,8 +32,8 @@ describe(
 						beforeEach(function() {
 							mapDiv = document.createElement('div');
 							mapDiv.id = config.mapDiv;
-							mapDiv.style.width = '300px';
-							mapDiv.style.height = '300px';
+							mapDiv.style.width = '500px';
+							mapDiv.style.height = '400px';
 							document.body.appendChild(mapDiv);
 
 							Viewer.init(config);
@@ -102,10 +102,9 @@ describe(
 							expect(config.map.height).toEqual(parseInt(h));
 						});
 
-						it(
-								'na aanroepen van zoomTo is de x coordinaat voor het midden van de kaart gelijk aan gevraagd en is zoomnivo anders.',
+						it('na aanroepen van zoomTo is de x coordinaat voor het midden van de kaart gelijk aan gevraagd en is zoomnivo anders.',
 								function() {
-									var x = 140000, y = 300000, r = 100000;
+									var x = 140000, y = 300000, r = 10000;
 									Viewer.zoomTo(x, y, r);
 									var latlon = Viewer.getMap().getCenter();
 									expect(latlon.lon).toEqual(x);
