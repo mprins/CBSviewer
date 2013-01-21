@@ -421,7 +421,7 @@
 		<profile>
 			<id>jasmineserver</id>
 			<build>
-				<defaultGoal>dbb</defaultGoal>
+				<defaultGoal>jasmine:bdd</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>com.github.searls</groupId>
@@ -431,16 +431,15 @@
 						<executions>
 							<execution>
 								<goals>
-									<goal>dbb</goal>
+									<goal>bdd</goal>
 								</goals>
 							</execution>
 						</executions>
 						<configuration>
 							<browserVersion>FIREFOX_3_6</browserVersion>
 							<preloadSources>
-								<!-- HtmlUnit 2.9 heeft problemen met 1.8.1 -->
-								<source>http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</source>
-								<source>src/main/webapp/lib/jquery-ui-1.9.2.custom.min.js</source>
+								<source>src/main/webapp/lib/jquery-1.9.0.min.js</source>
+								<source>src/main/webapp/lib/jquery-ui-1.10.0.custom.min.js</source>
 								<source>src/test/js/lib/OpenLayers-test.js</source>
 								<source>src/test/js/lib/jasmin_util.js</source>
 								<source>src/main/webapp/js/config.js</source>
