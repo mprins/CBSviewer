@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context privileged="false" cookies="false">
+<Context privileged="false" cookies="false" override="true">
 	<Valve className="org.apache.catalina.valves.AccessLogValve"
 		prefix="cbsviewer_access_log." suffix=".log" pattern="common" />
 	<Logger className="org.apache.catalina.logger.FileLogger"
