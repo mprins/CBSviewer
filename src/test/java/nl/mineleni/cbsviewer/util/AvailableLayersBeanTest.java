@@ -44,7 +44,7 @@ import org.xml.sax.SAXException;
 public class AvailableLayersBeanTest {
 	private static final String ID1 = "vierkanten500m_oad2000";
 	private static final String LAYERS1 = "omgevings_adres_dichtheid_2000";
-	private static final String NAME1 = "Vierkanten 500 x 500m - Omgevingsadressendichtheid 2000";
+	private static final String NAME1 = "Vierkant 500m - Omgevingsadressendichtheid 2000";
 
 	@AfterClass
 	public static void cleanUp() {
