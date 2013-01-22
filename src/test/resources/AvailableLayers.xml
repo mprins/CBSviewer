@@ -12,7 +12,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
 		<styles>cbsvierkanten500m.oad2000</styles>
 		<attributes>oad2000</attributes>
-		<aliases>OAD (adressen per km2)</aliases>
+		<!--aliases>OAD (adressen per km2)</aliases-->
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</id>
