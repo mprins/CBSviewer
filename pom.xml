@@ -698,6 +698,7 @@
 					</arguments>
 				</configuration>
 			</plugin>
+			<!--
 			<plugin>
 				<groupId>com.github.timurstrekalov</groupId>
 				<artifactId>saga-maven-plugin</artifactId>
@@ -716,10 +717,14 @@
 					<outputDir>${project.build.directory}/site</outputDir>
 					<noInstrumentPatterns>
 						<pattern>\b.+/test/.+\.js\b</pattern>
+						<pattern>\b(\w*)\.min\.js\b</pattern>
+						<pattern>\b/lib/(\w*)\.js\b</pattern>
+						<pattern>.+/config\.js</pattern>
 					</noInstrumentPatterns>
 					<outputStrategy>TOTAL</outputStrategy>
 				</configuration>
 			</plugin>
+			-->
  			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
