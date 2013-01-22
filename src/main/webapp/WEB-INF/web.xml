@@ -40,7 +40,7 @@
 			<param-name>bgCapabilitiesURL</param-name> 
 			<param-value>http://geodata.nationaalgeoregister.nl/brtachtergrondkaart/ows?REQUEST=GetCapabilities&amp;SERVICE=WMS</param-value> 
 		</init-param>
-		<!--init-param>
+		<init-param>
 			<description>lagen voor de achtergrond (topografie) WMS (CSV), 
 					in volgorde "bovenste" laag eerste, "onderste" laag als laatste in de lijst. 
 					Indien leeg dan worden alle lagen uit het capabilities document gebruikt.</description>
@@ -49,11 +49,11 @@
 					top10nlgebouwen,top10nlprovinciegrenzen,top10nlnationalegrenzen, 
 					top10nlspoorbaandeellijnen,top10nlwaterdeellijnen, top10nlwaterdeelvlakken, points,countries,
 					top250nllijnen,lines,borders, top250nlvlakken,builtup_areas,polygons,shorelines, ondergrond</param-value>
-		</init-param--> 
+		</init-param> 
 		<!-- Alternatieve basemap van WhereGroup, alleen voor ontwikkeldoeleinden.
 			zie: http://www.wheregroup.com/de/osmwms -->
 		
-		<init-param>
+		<!--init-param>
 			<description>WMS capabilities url van achtergrond (topografie) kaart</description>
 			<param-name>bgCapabilitiesURL</param-name>
 			<param-value>http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&amp;SERVICE=WMS&amp;VERSION=1.1.1</param-value>
@@ -67,7 +67,7 @@
 				Autobahn,Kraftfahrstrasse,Bundesstrasse,Landstrasse,einfache_Strasse,Zufahrtswege,Wohnstrasse,Wege, 
 				Inselpunkte,Kueste,Insel,Wasserbecken,Kanal,Baeche,Fluesse,Wasser,Gebaeude,Fussgaengerzone,Wiese,Wald,
 				Naherholungsgebiet,Park,unkultiviertes_Land,Gruenflaeche,Bauland,Industriegebiet,Landwirtschaft,Grenzen</param-value>
-		</init-param>
+		</init-param-->
 		
 		<init-param>
 			<description>WMS capabilities url van achtergrond luchtfoto's</description>
