@@ -55,8 +55,8 @@
 													</li>	
 													<li><a href="#" name="vierkanten500m_toename_inwoners_2000_2010">Verandering inwonertal 2000-2010<span><fmt:message key="KEY_TOOLTIP3" /></span></a>
 														<ul class="submenu">
-															<li>100m vierkant<br/><a href="#" name="vierkanten100m_toename_inwoners_2000_2010">2010</a> | <a href="#" name="vierkanten100m_toename_inwoners_2000_2010">2000</a></li>
-															<li>500m vierkant<br/><a href="#" name="vierkanten500m_toename_inwoners_2000_2010">2010</a> | <a href="#" name="vierkanten500m_toename_inwoners_2000_2010">2000</a></li>
+															<li>100m vierkant<br/><a href="#" name="vierkanten100m_toename_inwoners_2000_2010">2010-2000</a></li>
+															<li>500m vierkant<br/><a href="#" name="vierkanten500m_toename_inwoners_2000_2010">2010-2000</a></li>
 														</ul>
 													</li>
 
