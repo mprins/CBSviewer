@@ -1,12 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://xml.util.cbsviewer.mineleni.nl" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
-	jxb:version="2.0" attributeFormDefault="unqualified"
-	elementFormDefault="qualified" xmlns:l="http://xml.util.cbsviewer.mineleni.nl">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:l="http://xml.util.cbsviewer.mineleni.nl"
+	targetNamespace="http://xml.util.cbsviewer.mineleni.nl" 
+	jxb:version="2.0" attributeFormDefault="qualified"
+	elementFormDefault="qualified">
 
 	<xs:element name="Layers" type="l:layersList">
 		<xs:annotation>
-			<xs:documentation>Beschrijft een verzameling van kaartlagen voor de
+			<xs:documentation>
+				Beschrijft een verzameling van kaartlagen voor de
 				applicatie.
 			</xs:documentation>
 		</xs:annotation>
@@ -91,7 +95,8 @@
 			<xs:element name="aliases" type="xs:string" maxOccurs="1"
 				minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>De (optionele) alias mapping voor attributes
+					<xs:documentation>
+						De (optionele) alias mapping voor attributes
 						(kommagescheiden string). LET OP, het aantal aliases
 						dient hetzelfde te zijn als het aantal attributes.
 					</xs:documentation>
@@ -100,7 +105,8 @@
 			<xs:element name="link" type="xs:anyURI" maxOccurs="1"
 				minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>De (optionele) download link voor de dataset
+					<xs:documentation>
+						De (optionele) download link voor de dataset
 						waarvan deze (WMS) laag is gemaakt.
 					</xs:documentation>
 				</xs:annotation>
