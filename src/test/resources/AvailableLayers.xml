@@ -3,7 +3,7 @@
 	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd">
 	<!-- 
 		dit is een document met test configuratie, 
-		oa. voor AvailableLayersBeanTest en WMSClientServletTest
+		oa. voor AvailableLayersXMLTest en WMSClientServletTest
 	-->
 	<Layerdescriptor>
 		<id>vierkanten500m_oad2000</id>
