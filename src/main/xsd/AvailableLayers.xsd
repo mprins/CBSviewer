@@ -82,7 +82,8 @@
 						De te tonen feature attributen als resultaat van
 						een FeatureInfo request (kommagescheiden string).
 						Dit geeft de mogelijkheid om attributen zoals een
-						FeatureId uit de lijst te filteren.
+						FeatureId uit de lijst te filteren, deze match is 
+						case-sensitive.
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>

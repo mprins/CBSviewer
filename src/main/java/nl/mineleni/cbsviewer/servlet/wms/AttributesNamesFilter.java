@@ -18,31 +18,36 @@ public class AttributesNamesFilter {
 	/**
 	 * lijst met beschikbare filters.
 	 */
-	private AvailableLayersBean layers = null;
+	private final AvailableLayersBean layers = new AvailableLayersBean();
 
 	/**
 	 * default constructor.
 	 */
 	public AttributesNamesFilter() {
-		layers = new AvailableLayersBean();
+
 	}
 
 	/**
 	 * Filtert de input.
 	 * 
-	 * @param input
+	 * @param attribute
 	 *            een te filteren waarde
 	 * @return de gefilterde input zoals in de filtermapping beschreven.
 	 */
-	public String filterValue(String input, String layerID) {
-		String[] aliases = layers.getLayerByID(layerID).getAliases()
-				.split(",\\s*");
-		for (String alias : aliases) {
-			if (alias.equals(input)) {
-				return alias;
+	public String filterValue(String attribute, String layerID) {
+		if (this.hasFilters(layerID)) {
+			String[] aliases = layers.getLayerByID(layerID).getAliases()
+					.split(",\\s*");
+			String[] attributes = layers.getLayerByID(layerID).getAttributes()
+					.split(",\\s*");
+
+			for (int i = 0; i < attributes.length; i++) {
+				if (attributes[i].equals(attribute)) {
+					return aliases[i];
+				}
 			}
 		}
-		return input;
+		return attribute;
 	}
 
 	/**
