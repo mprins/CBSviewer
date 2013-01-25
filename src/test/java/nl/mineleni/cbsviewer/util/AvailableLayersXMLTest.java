@@ -94,7 +94,7 @@ public class AvailableLayersXMLTest {
 	 */
 	@After
 	public void afterTest() {
-		v = null;
+		this.v = null;
 	}
 
 	/**
@@ -105,10 +105,10 @@ public class AvailableLayersXMLTest {
 	 */
 	@Before
 	public void beforeTest() throws Exception {
-		v = new Validator();
+		this.v = new Validator();
 		final Source schema = new StreamSource(new File(
 				"target/classes/AvailableLayers.xsd"));
-		v.addSchemaSource(schema);
+		this.v.addSchemaSource(schema);
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class AvailableLayersXMLTest {
 		// final Source invaliddoc = new StreamSource(new File(
 		// "target/test-classes/invalidAvailableLayers.xml"));
 		try {
-			assertFalse(v.isInstanceValid(invaliddoc));
+			assertFalse(this.v.isInstanceValid(invaliddoc));
 			// fail("Expected excepion did not occur.");
 		} catch (final XMLUnitRuntimeException x) {
 			assertEquals("Schema is invalid", x.getMessage());
@@ -136,7 +136,7 @@ public class AvailableLayersXMLTest {
 				.getResourceAsStream("AvailableLayers.xml"));
 		// final Source doc = new StreamSource(new File(
 		// "target/test-classes/AvailableLayers.xml"));
-		assertTrue(v.isInstanceValid(doc));
+		assertTrue(this.v.isInstanceValid(doc));
 
 	}
 
@@ -187,7 +187,7 @@ public class AvailableLayersXMLTest {
 	@Test
 	public void testAvailableLayersXSD() {
 		try {
-			assertTrue(v.isSchemaValid());
+			assertTrue(this.v.isSchemaValid());
 		} catch (final ConfigurationException e) {
 			fail(e.getMessage());
 		} catch (final Exception e) {
@@ -198,8 +198,6 @@ public class AvailableLayersXMLTest {
 	/**
 	 * XML testcase voor deployment {@link AvailableLayers.xml}, valideert het
 	 * document dat in de war terecht komt.
-	 * 
-	 * @todo xpath tests
 	 */
 	@Test
 	public void testDeploymentAvailableLayersXML() {
@@ -208,7 +206,7 @@ public class AvailableLayersXMLTest {
 		// .getResourceAsStream("AvailableLayers.xsd"));
 		final Source doc = new StreamSource(this.getClass().getClassLoader()
 				.getResourceAsStream("../classes/AvailableLayers.xml"));
-		assertTrue(v.isInstanceValid(doc));
+		assertTrue(this.v.isInstanceValid(doc));
 	}
 
 }

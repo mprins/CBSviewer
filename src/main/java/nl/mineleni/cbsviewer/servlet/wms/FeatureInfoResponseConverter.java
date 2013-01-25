@@ -119,9 +119,9 @@ public final class FeatureInfoResponseConverter {
 				sb.append("</tbody>");
 				sb.append("</table>");
 				iter.close();
-				LOGGER.debug("Gemaakte HTML tabel:\n" + sb);
+				LOGGER.debug("Gemaakte HTML tabel: " + sb);
 			} else {
-				LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo");
+				LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo.");
 				return RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
 			}
 		} catch (ParserConfigurationException | SAXException e) {

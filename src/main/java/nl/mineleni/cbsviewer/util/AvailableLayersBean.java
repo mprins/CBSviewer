@@ -118,8 +118,8 @@ public class AvailableLayersBean {
 	 *            de naam van de wms laag
 	 * @return the layer by name
 	 * @see LayerDescriptor#getLayers()
-	 * @deprecated dit is niet een erg specifieke manier om een layerdescriptor
-	 *             op te zoeken, bij voorkeur niet gebruiken.
+	 * @deprecated gebruik {@link #getLayerByLayers(String, String)} of
+	 *             {@link #getLayerByID(String)}
 	 */
 	@Deprecated
 	public LayerDescriptor getLayerByLayers(final String lyrName) {
@@ -127,6 +127,30 @@ public class AvailableLayersBean {
 			if ((desc.getLayers().replaceAll("\\s", ""))
 					.equalsIgnoreCase(lyrName.replaceAll("\\s", ""))) {
 				return desc;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * geeft de eerste layerdescriptor met de gevraagde naam.
+	 * 
+	 * @param lyrName
+	 *            de naam van de wms laag
+	 * @param lyrUrl
+	 *            de url van de wms
+	 * 
+	 * @return the layer by name and url
+	 * @see LayerDescriptor#getLayers()
+	 */
+	public LayerDescriptor getLayerByLayers(final String lyrName,
+			final String lyrUrl) {
+		for (final LayerDescriptor desc : this.layers) {
+			if ((desc.getLayers().replaceAll("\\s", ""))
+					.equalsIgnoreCase(lyrName.replaceAll("\\s", ""))) {
+				if (desc.getUrl().equalsIgnoreCase(lyrUrl)) {
+					return desc;
+				}
 			}
 		}
 		return null;

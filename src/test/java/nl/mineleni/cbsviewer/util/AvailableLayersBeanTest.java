@@ -23,6 +23,7 @@ public class AvailableLayersBeanTest {
 	private static final String ID1 = "vierkanten500m_oad2000";
 	private static final String LAYERS1 = "omgevings_adres_dichtheid_2000";
 	private static final String NAME1 = "Vierkant 500m - Omgevingsadressendichtheid 2000";
+	private static final String URL1 = "http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms";
 
 	/** test subject. */
 	private AvailableLayersBean bean;
@@ -77,12 +78,13 @@ public class AvailableLayersBeanTest {
 	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByLayers(String) }
 	 * .
 	 * 
-	 * @deprecated test een deprecated methode
+	 * 
 	 */
-	@Deprecated
+
 	@Test
 	public void testGetLayerByLayers() {
 		assertEquals(ID1, this.bean.getLayerByLayers(LAYERS1).getId());
+		assertEquals(ID1, this.bean.getLayerByLayers(LAYERS1, URL1).getId());
 	}
 
 	/**
