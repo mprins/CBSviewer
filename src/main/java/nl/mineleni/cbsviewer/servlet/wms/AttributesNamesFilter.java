@@ -36,10 +36,10 @@ public class AttributesNamesFilter {
 	 */
 	public String filterValue(String attribute, String layerID) {
 		if (this.hasFilters(layerID)) {
-			String[] aliases = layers.getLayerByID(layerID).getAliases()
-					.split(",\\s*");
-			String[] attributes = layers.getLayerByID(layerID).getAttributes()
-					.split(",\\s*");
+			final String[] aliases = this.layers.getLayerByID(layerID)
+					.getAliases().split(",\\s*");
+			final String[] attributes = this.layers.getLayerByID(layerID)
+					.getAttributes().split(",\\s*");
 
 			for (int i = 0; i < attributes.length; i++) {
 				if (attributes[i].equals(attribute)) {
@@ -55,7 +55,7 @@ public class AttributesNamesFilter {
 	 * 
 	 * @return {@code true} als het filter inhoud heeft
 	 */
-	public boolean hasFilters(String layerID) {
-		return (null != layers.getLayerByID(layerID).getAliases());
+	private boolean hasFilters(String layerID) {
+		return (null != this.layers.getLayerByID(layerID).getAliases());
 	}
 }

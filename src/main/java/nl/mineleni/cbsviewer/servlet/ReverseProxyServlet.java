@@ -190,12 +190,9 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 								}
 							}
 							responseBody = FeatureInfoResponseConverter
-									.convertToHTMLTable(
-											get.getEntity().getContent(),
-											"GMLTYPE",
-											this.layers.getLayerByLayers(lName)
-													.getAttributes()
-													.split(",\\s*"));
+									.convertToHTMLTable(get.getEntity()
+											.getContent(), "GMLTYPE",
+											this.layers.getLayerByLayers(lName));
 						} else {
 							// force the response to have XML content type (WMS
 							// servers generally don't)

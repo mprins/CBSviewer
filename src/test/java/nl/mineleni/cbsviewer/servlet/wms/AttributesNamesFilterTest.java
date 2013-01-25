@@ -7,8 +7,6 @@
 package nl.mineleni.cbsviewer.servlet.wms;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -37,7 +35,7 @@ public class AttributesNamesFilterTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		filter = new AttributesNamesFilter();
+		this.filter = new AttributesNamesFilter();
 	}
 
 	/**
@@ -47,19 +45,11 @@ public class AttributesNamesFilterTest {
 	 */
 	@Test
 	public void testFilterValue() {
-		assertEquals("expected", filter.filterValue("expected", hasFilterID));
-		assertEquals("dichtheid", filter.filterValue("oad2000", hasFilterID));
-		assertEquals("expected", filter.filterValue("expected", hasNoFilterID));
-	}
-
-	/**
-	 * Test voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.AttributesNamesFilter#hasFilters()}
-	 * .
-	 */
-	@Test
-	public void testHasFilters() {
-		assertTrue(filter.hasFilters(hasFilterID));
-		assertFalse(filter.hasFilters(hasNoFilterID));
+		assertEquals("expected",
+				this.filter.filterValue("expected", this.hasFilterID));
+		assertEquals("dichtheid",
+				this.filter.filterValue("oad2000", this.hasFilterID));
+		assertEquals("expected",
+				this.filter.filterValue("expected", this.hasNoFilterID));
 	}
 }

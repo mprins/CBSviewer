@@ -35,7 +35,7 @@ public class AvailableLayersBeanTest {
 	 */
 	@Before
 	public void beforeTest() throws Exception {
-		bean = new AvailableLayersBean();
+		this.bean = new AvailableLayersBean();
 	}
 
 	/**
@@ -44,20 +44,21 @@ public class AvailableLayersBeanTest {
 	 */
 	@After
 	public void afterTest() {
-		bean = null;
+		this.bean = null;
 	}
 
 	@Test
 	public void testAsJSON() {
-		assertTrue(bean.asJSON().startsWith("/* <![CDATA[ */var _layers="));
+		assertTrue(this.bean.asJSON().startsWith("/* <![CDATA[ */var _layers="));
 	}
 
 	@Test
 	public void testAsJSONBoolean() {
-		assertTrue(bean.asJSON(true).startsWith("/* <![CDATA[ */var _layers="));
-		assertFalse(bean.asJSON(false)
-				.startsWith("/* <![CDATA[ */var _layers="));
-		assertTrue(bean.asJSON(false).startsWith("["));
+		assertTrue(this.bean.asJSON(true).startsWith(
+				"/* <![CDATA[ */var _layers="));
+		assertFalse(this.bean.asJSON(false).startsWith(
+				"/* <![CDATA[ */var _layers="));
+		assertTrue(this.bean.asJSON(false).startsWith("["));
 	}
 
 	/**
@@ -67,18 +68,21 @@ public class AvailableLayersBeanTest {
 	 */
 	@Test
 	public void testGetLayerByID() {
-		assertEquals(ID1, bean.getLayerByID(ID1).getId());
-		assertEquals(NAME1, bean.getLayerByID(ID1).getName());
+		assertEquals(ID1, this.bean.getLayerByID(ID1).getId());
+		assertEquals(NAME1, this.bean.getLayerByID(ID1).getName());
 	}
 
 	/**
 	 * testcase voor
 	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByLayers(String) }
 	 * .
+	 * 
+	 * @deprecated test een deprecated methode
 	 */
+	@Deprecated
 	@Test
 	public void testGetLayerByLayers() {
-		assertEquals(ID1, bean.getLayerByLayers(LAYERS1).getId());
+		assertEquals(ID1, this.bean.getLayerByLayers(LAYERS1).getId());
 	}
 
 	/**
@@ -88,8 +92,8 @@ public class AvailableLayersBeanTest {
 	 */
 	@Test
 	public void testGetLayerByName() {
-		assertEquals(ID1, bean.getLayerByName(NAME1).getId());
-		assertEquals(NAME1, bean.getLayerByName(NAME1).getName());
+		assertEquals(ID1, this.bean.getLayerByName(NAME1).getId());
+		assertEquals(NAME1, this.bean.getLayerByName(NAME1).getName());
 	}
 
 }
