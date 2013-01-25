@@ -53,8 +53,8 @@ public class AttributeValuesFilter {
 			final JAXBElement<FilterList> element = (JAXBElement<FilterList>) u
 					.unmarshal(f);
 			final FilterList fList = element.getValue();
-			filters = fList.getFilter();
-			hasFilters = (!filters.isEmpty());
+			this.filters = fList.getFilter();
+			this.hasFilters = (!this.filters.isEmpty());
 		} catch (final JAXBException e) {
 			LOGGER.error(
 					"Er is een fout opgetreden bij het inlezen van de filters.",
@@ -70,12 +70,15 @@ public class AttributeValuesFilter {
 	 * @return de gefilterde input zoals in de filtermapping beschreven.
 	 */
 	public String filterValue(Object input) {
-		for (AttributeValueFilter filter : filters) {
-			if (input.toString().equals(filter.getInputAttributeValue())) {
-				return filter.getOutputAttributeValue();
+		if (null != input) {
+			for (final AttributeValueFilter filter : this.filters) {
+				if (input.toString().equals(filter.getInputAttributeValue())) {
+					return filter.getOutputAttributeValue();
+				}
 			}
+			return input.toString();
 		}
-		return input.toString();
+		return null;
 	}
 
 	/**
