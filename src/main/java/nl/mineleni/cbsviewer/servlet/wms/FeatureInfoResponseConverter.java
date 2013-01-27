@@ -43,7 +43,10 @@ public final class FeatureInfoResponseConverter {
 	/** resource bundle. */
 	private static final LabelsBundle RESOURCES = new LabelsBundle();
 
+	/** attribuut waarden filter. */
 	private static final AttributeValuesFilter valuesFilter = new AttributeValuesFilter();
+
+	/** attribuut namen filter. */
 	private static final AttributesNamesFilter namesFilter = new AttributesNamesFilter();
 
 	/**
@@ -89,7 +92,7 @@ public final class FeatureInfoResponseConverter {
 				// tabel maken
 				sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\">");
 				sb.append("<caption>");
-				sb.append("Informatie over de zoeklocatie.");
+				sb.append(RESOURCES.getString("KEY_INFO_TABEL_CAPTION"));  
 				sb.append("</caption>");
 				sb.append("<thead><tr>");
 				for (final String n : fieldNames) {
