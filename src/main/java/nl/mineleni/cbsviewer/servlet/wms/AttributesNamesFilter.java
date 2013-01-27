@@ -32,6 +32,9 @@ public class AttributesNamesFilter {
 	 * 
 	 * @param attribute
 	 *            een te filteren waarde
+	 * @param layerID
+	 *            de identifier van de layer
+	 * 
 	 * @return de gefilterde input zoals in de filtermapping beschreven.
 	 */
 	public String filterValue(String attribute, String layerID) {
@@ -52,6 +55,8 @@ public class AttributesNamesFilter {
 
 	/**
 	 * Geeft aan of het filter inhoud heeft.
+	 * @param layerID
+	 *            de identifier van de layer
 	 * 
 	 * @return {@code true} als het filter inhoud heeft
 	 */
