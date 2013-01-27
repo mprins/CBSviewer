@@ -37,6 +37,7 @@ public class AttributeValuesFilter {
 	 */
 	private List<AttributeValueFilter> filters = null;
 
+	/** cached flag telling about filters. */
 	private boolean hasFilters;
 
 	/**
