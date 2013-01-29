@@ -29,6 +29,9 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 	/** sleutel voor password. {@value} */
 	public static final String USER_PASSWORD = "user_password";
 
+	/** De gedeelde, read-only, resourcebundel voor de applicatie. */
+	protected LabelsBundle _RESOURCES = new LabelsBundle();
+
 	/** default serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
@@ -46,9 +49,6 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 
 	/** password voor bijv. authenticatie. @see #USER_PASSWORD */
 	private String passID = null;
-
-	/** De gedeelde, read-only, resourcebundel voor de applicatie. */
-	protected LabelsBundle _RESOURCES = new LabelsBundle();
 
 	/**
 	 * Gets the proxy host.

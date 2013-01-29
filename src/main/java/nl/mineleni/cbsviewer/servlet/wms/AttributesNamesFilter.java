@@ -21,13 +21,6 @@ public class AttributesNamesFilter {
 	private final AvailableLayersBean layers = new AvailableLayersBean();
 
 	/**
-	 * default constructor.
-	 */
-	public AttributesNamesFilter() {
-
-	}
-
-	/**
 	 * Filtert de input.
 	 * 
 	 * @param attribute
@@ -55,6 +48,7 @@ public class AttributesNamesFilter {
 
 	/**
 	 * Geeft aan of het filter inhoud heeft.
+	 * 
 	 * @param layerID
 	 *            de identifier van de layer
 	 * 

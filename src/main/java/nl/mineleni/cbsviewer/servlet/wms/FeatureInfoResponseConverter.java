@@ -44,16 +44,24 @@ public final class FeatureInfoResponseConverter {
 	private static final LabelsBundle RESOURCES = new LabelsBundle();
 
 	/** attribuut waarden filter. */
-	private static final AttributeValuesFilter valuesFilter = new AttributeValuesFilter();
+	private static final AttributeValuesFilter VALUESFILTER = new AttributeValuesFilter();
 
 	/** attribuut namen filter. */
-	private static final AttributesNamesFilter namesFilter = new AttributesNamesFilter();
+	private static final AttributesNamesFilter NAMESFILTER = new AttributesNamesFilter();
+
+	/**
+	 * private constructor.
+	 */
+	private FeatureInfoResponseConverter() {
+		// private constructor voor utility klasse
+	}
 
 	/**
 	 * Cleanup html.
 	 * 
 	 * @param htmlStream
-	 *            the html stream
+	 *            input HTML stream, bijvoorbeeld uit een GetFeatureInfo
+	 *            request.
 	 * @return the string
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
@@ -61,7 +69,7 @@ public final class FeatureInfoResponseConverter {
 	 */
 	private static String cleanupHTML(final InputStream htmlStream)
 			throws IOException {
-		LOGGER.warn("unsported feature");
+		LOGGER.warn("unsupported feature");
 		// misschien met net.sourceforge.htmlcleaner:htmlcleaner
 		// http://search.maven.org/#artifactdetails%7Cnet.sourceforge.htmlcleaner%7Chtmlcleaner%7C2.2%7Cjar
 		// of jsoup
@@ -72,9 +80,9 @@ public final class FeatureInfoResponseConverter {
 	 * Converteer gml imputstream naar html tabel.
 	 * 
 	 * @param gmlStream
-	 *            the gml stream
-	 * @param attributes
-	 *            the attributes
+	 *            input GML stream, bijvoorbeeld uit een GetFeatureInfo request.
+	 * @param layer
+	 *            the layer
 	 * @return een html tabel
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
@@ -83,7 +91,6 @@ public final class FeatureInfoResponseConverter {
 			final LayerDescriptor layer) throws IOException {
 		final StringBuilder sb = new StringBuilder();
 		final String[] fieldNames = layer.getAttributes().split(",\\s*");
-
 		try {
 			final GML gml = new GML(Version.WFS1_0);
 			final SimpleFeatureIterator iter = gml
@@ -92,26 +99,24 @@ public final class FeatureInfoResponseConverter {
 				// tabel maken
 				sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\">");
 				sb.append("<caption>");
-				sb.append(RESOURCES.getString("KEY_INFO_TABEL_CAPTION"));  
+				sb.append(RESOURCES.getString("KEY_INFO_TABEL_CAPTION"));
 				sb.append("</caption>");
 				sb.append("<thead><tr>");
 				for (final String n : fieldNames) {
 					sb.append("<th scope=\"col\">"
-							+ namesFilter.filterValue(n, layer.getId())
+							+ NAMESFILTER.filterValue(n, layer.getId())
 							+ "</th>");
 				}
-				sb.append("</tr></thead>");
-
-				sb.append("<tbody>");
+				sb.append("</tr></thead><tbody>");
 				int i = 0;
 				while (iter.hasNext()) {
 					sb.append("<tr class=\""
 							+ (((i++ % 2) == 0) ? "odd" : "even") + "\">");
 					final SimpleFeature f = iter.next();
 					for (final String n : fieldNames) {
-						if (valuesFilter.hasFilters()) {
+						if (VALUESFILTER.hasFilters()) {
 							sb.append("<td>"
-									+ valuesFilter.filterValue(f
+									+ VALUESFILTER.filterValue(f
 											.getAttribute(n)) + "</td>");
 						} else {
 							sb.append("<td>" + f.getAttribute(n) + "</td>");
@@ -119,8 +124,7 @@ public final class FeatureInfoResponseConverter {
 					}
 					sb.append("</tr>");
 				}
-				sb.append("</tbody>");
-				sb.append("</table>");
+				sb.append("</tbody></table>");
 				iter.close();
 				LOGGER.debug("Gemaakte HTML tabel: " + sb);
 			} else {
@@ -172,8 +176,8 @@ public final class FeatureInfoResponseConverter {
 	 *            inputstream met de featureinfo response.
 	 * @param type
 	 *            het type conversie, ondersteund is {@code "GMLTYPE"}
-	 * @param attributes
-	 *            namen van de feature attributen
+	 * @param layer
+	 *            de layerdescriptor
 	 * @return een html tabel
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
@@ -188,12 +192,5 @@ public final class FeatureInfoResponseConverter {
 		default:
 			return convertStreamToString(input);
 		}
-	}
-
-	/**
-	 * private constructor.
-	 */
-	private FeatureInfoResponseConverter() {
-		// private constructor voor utility klasse
 	}
 }

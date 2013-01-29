@@ -26,6 +26,13 @@ public final class OpenLSClientUtil {
 	public static final String PLACE_TYPE_MUNICIPALITYSUBDIVISION = "MunicipalitySubdivision";
 
 	/**
+	 * private constructor voor deze utility klasse.
+	 */
+	private OpenLSClientUtil() {
+		/* private constructor voor deze utility klasse. */
+	}
+
+	/**
 	 * Gets the geocoded address list.
 	 * 
 	 * @param gcr
@@ -119,12 +126,5 @@ public final class OpenLSClientUtil {
 			}
 		}
 		return addressList;
-	}
-
-	/**
-	 * private constructor voor deze utility klasse.
-	 */
-	private OpenLSClientUtil() {
-		/* private constructor voor deze utility klasse. */
 	}
 }
