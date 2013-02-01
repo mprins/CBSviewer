@@ -519,9 +519,9 @@
 					<optimize>!${debug}</optimize>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
-					<showDeprecation>true</showDeprecation>
-					<showWarnings>true</showWarnings>
-					<verbose>true</verbose>
+					<showDeprecation>${debug}</showDeprecation>
+					<showWarnings>${debug}</showWarnings>
+					<verbose>${debug}</verbose>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -542,6 +542,7 @@
 					<sassOptions>
 						<always_update>true</always_update>
 						<style>${sass.OutputStyle}</style>
+						<debug_info>${debug}</debug_info>
 					</sassOptions>
 				</configuration>
 			</plugin>
