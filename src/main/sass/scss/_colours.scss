@@ -1,5 +1,5 @@
-
+/* veel gebruikte kleuren, oa voor controls in de kaart.*/
 $BlueColour:		rgb(0, 60, 136);
-$BlueColourTransp:	rgba(0, 60, 136, 0.8);
-$BlueColourLighter:	rgb(0, 71, 163);
-$BlueColourDarker:	rgb(0, 49, 112);
+$BlueColourTransp:	rgba($BlueColour, 0.8);
+$BlueColourLighter:	lighten($BlueColour, 10%);
+$BlueColourDarker:	darken($BlueColour, 10%);
