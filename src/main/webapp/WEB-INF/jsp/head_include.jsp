@@ -9,6 +9,7 @@
 	 -->
 	<jsp:text>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="Content-Script-Type" content="text/javascript" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
 		<meta http-equiv="Content-Language" content="nl-NL" />
