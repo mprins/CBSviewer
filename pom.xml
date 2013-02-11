@@ -1077,23 +1077,15 @@
 								</pluginExecution>
 								<pluginExecution>
 									<pluginExecutionFilter>
-										<groupId>
-											org.jasig.maven
-										</groupId>
-										<artifactId>
-											sass-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.0.2,)
-										</versionRange>
+										<groupId>org.jasig.maven</groupId>
+										<artifactId>sass-maven-plugin</artifactId>
+										<versionRange>[1.0.2,)</versionRange>
 										<goals>
-											<goal>
-												update-stylesheets
-											</goal>
+											<goal>update-stylesheets</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>

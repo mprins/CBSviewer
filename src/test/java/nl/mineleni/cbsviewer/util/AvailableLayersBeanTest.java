@@ -83,7 +83,6 @@ public class AvailableLayersBeanTest {
 
 	@Test
 	public void testGetLayerByLayers() {
-		assertEquals(ID1, this.bean.getLayerByLayers(LAYERS1).getId());
 		assertEquals(ID1, this.bean.getLayerByLayers(LAYERS1, URL1).getId());
 	}
 
