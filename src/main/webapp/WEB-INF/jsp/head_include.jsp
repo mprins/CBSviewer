@@ -42,7 +42,6 @@
 		<![CDATA[
 		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie-lte7.css" type="text/css" media="screen" /><![endif]-->
 		<!--[if IE 8]>    <link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />   <![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />     <![endif]-->
 		]]>
 		<link rel="stylesheet" href="css/print.css" type="text/css"
 			media="print" />
