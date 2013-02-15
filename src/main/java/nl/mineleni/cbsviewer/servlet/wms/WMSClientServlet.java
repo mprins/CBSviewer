@@ -418,7 +418,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			final GetMapResponse response = this.getCachedWMS(lyrDesc)
 					.issueRequest(this.getMapRequest);
 			final BufferedImage image = ImageIO.read(response.getInputStream());
-
+			this.drawScaleBar(image, bbox);
 			this.fgWMSCache.put(key, new CacheImage(image,
 					SECONDS_TO_CACHE_ELEMENTS));
 
@@ -439,6 +439,24 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					e);
 			throw new ServletException(e);
 		}
+	}
+
+	/**
+	 * Teken een schaalbalk in de (kaart) afbeelding.
+	 * 
+	 * @param bbox
+	 *            the bbox
+	 * @param image
+	 *            afbeelding waarin de schaalbalk wordt getekend
+	 */
+	private void drawScaleBar(final BufferedImage image, final BoundingBox bbox){
+		//MAP_DIMENSION
+		final Graphics2D g = image.createGraphics();
+		// scale m/px (TODO: CRS gebruiken)
+		final double scale = bbox.getWidth() / MAP_DIMENSION;
+		LOGGER.debug("teken schaalbalk, schaal: " + scale);
+		
+		g.drawString(scale + " meter per pixel",10,MAP_DIMENSION-10);
 	}
 
 	/**
