@@ -97,7 +97,7 @@ Viewer = function() {
 		alpha = parseFloat(alpha);
 		if (0.09 < alpha && alpha < .91) {
 			_opacity = alpha;
-			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
+			var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
 				if (!lyrs[lyr].isBaseLayer) {
 					lyrs[lyr].setOpacity(_opacity);
@@ -112,7 +112,6 @@ Viewer = function() {
 	 * @returns {Viewer} publieke methodes
 	 */
 	return {
-
 		/**
 		 * Constructor, attach to the DOM.
 		 * 
@@ -364,18 +363,18 @@ Viewer = function() {
 			// reset featureinfo text
 			jQuery('#' + config.featureInfoDiv).html(OpenLayers.i18n('KEY_INFO_GEEN_FEATURES'));
 			// verwijder ikoontjes die de controls tekenen
-			var lyrs = _map.getLayersByName('ClickDrawControl');
-			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+			var lyrs = _map.getLayersByName('ClickDrawControl'), lyr;
+			for ( lyr = 0; lyr < lyrs.length; lyr++) {
 				lyrs[lyr].removeAllFeatures();
 			}
 			lyrs = _map.getLayersByName('OpenLayers.Handler.KeyboardPoint');
-			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+			for ( lyr = 0; lyr < lyrs.length; lyr++) {
 				lyrs[lyr].removeAllFeatures();
 			}
 
 			// verwijder WMS lagen
 			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
-			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+			for ( lyr = 0; lyr < lyrs.length; lyr++) {
 				if (!lyrs[lyr].isBaseLayer) {
 					_map.removeLayer(lyrs[lyr]);
 					lyrs[lyr].destroy();

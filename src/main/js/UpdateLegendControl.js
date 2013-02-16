@@ -124,5 +124,7 @@ UpdateLegendControl = OpenLayers.Class(OpenLayers.Control, {
 		if (this.emptyString !== null) {
 			this.element.innerHTML = this.emptyString;
 		}
-	}
+	},
+        
+        CLASS_NAME : 'UpdateLegendControl'
 });

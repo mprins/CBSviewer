@@ -72,7 +72,7 @@ var ZoekFormulier = {
 	/**
 	 * Actief maken van de geselecteerde zoekknop
 	 * 
-	 * @param {id}
+	 * @param id
 	 *            button id
 	 * 
 	 * @private
@@ -91,38 +91,29 @@ var ZoekFormulier = {
 	 * @private
 	 */
 	addPlaceholders: function(props) {
-		//jQuery.extend($.support, {
-		//	placeHolder: !!(jQuery('#adres', zoekFormulier)[0].placeholder !== undefined || jQuery('#adres', zoekFormulier)[0].placeHolder !== undefined)
-		//});
-
-		// create placeholders by using "value" attribute
-		//if (!jQuery.support.placeHolder) {
-	
-			var placeholder = jQuery('#adres').attr('title');
-			jQuery('#adres[title]').bind({
+		var placeholder = jQuery('#adres').attr('title');
+		jQuery('#adres[title]').bind({
 				'focus': function() {
-					if (jQuery(this).val() === placeholder) {
-						jQuery(this).val('');
-						jQuery(this).removeClass('adresEmpty');
-					}
-					jQuery(this).attr('data-focused', 'yes');
+						if (jQuery(this).val() === placeholder) {
+								jQuery(this).val('');
+								jQuery(this).removeClass('adresEmpty');
+						}
+						jQuery(this).attr('data-focused', 'yes');
 				},
-
 				'blur': function() {
-					if (jQuery(this).val() === '') {
-						jQuery(this).val(placeholder);
-						jQuery(this).addClass('adresEmpty');
-					}
-					jQuery(this).removeAttr('data-focused');
+						if (jQuery(this).val() === '') {
+								jQuery(this).val(placeholder);
+								jQuery(this).addClass('adresEmpty');
+						}
+						jQuery(this).removeAttr('data-focused');
 				}
-			});
+		});
 
-			// only add placeholder on load when value is empty or placeholder or input is not focused (focus is preserved while reloading/XHR)
-			if (((jQuery('#adres').val() === '') || (jQuery('#adres').val() === placeholder)) && (!jQuery('#adres').attr('data-focused'))) {
+		// only add placeholder on load when value is empty or placeholder or input is not focused (focus is preserved while reloading/XHR)
+		if (((jQuery('#adres').val() === '') || (jQuery('#adres').val() === placeholder)) && (!jQuery('#adres').attr('data-focused'))) {
 				jQuery('#adres').val(placeholder);
 				jQuery('#adres').addClass('adresEmpty');
-			}
-		//}
+		}
 	},
 	
 	/**

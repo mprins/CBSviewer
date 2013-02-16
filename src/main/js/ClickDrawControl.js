@@ -121,7 +121,6 @@ ClickDrawControl = OpenLayers.Class(OpenLayers.Control, {
 		}
 		return true;
 	},
-
+        
 	CLASS_NAME : 'ClickDrawControl'
-
 });
