@@ -262,12 +262,13 @@ Viewer = function() {
 				observeElement : this.config.mapDiv
 			}));
 			_map.addControl(new OpenLayers.Control.Zoom());
-			_map.addControl(new OpenLayers.Control.Navigation({
+			_map.addControl(new OpenLayers.Control.Navigation(
+			/* dit zijn de defaults {
 				zoomWheelEnabled : true,
 				dragPanOptions : {
 					enableKinetic : true
-				}
-			}));
+				}}*/
+			));
 			_map.addControl(new OpenLayers.Control.KeyboardClick({
 				/* alleen actief als de kaart focus heeft */
 				observeElement : this.config.mapDiv
@@ -279,7 +280,7 @@ Viewer = function() {
 			}));
 			_map.addControl(new ClickDrawControl());
 			_map.addControl(new OpenLayers.Control.ScaleLine({
-				maxWidth: 150,
+				maxWidth: 200,
 				bottomOutUnits: '' // geen mi/ft
 			}));
 		},
