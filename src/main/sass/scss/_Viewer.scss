@@ -1,5 +1,5 @@
 /* css voor Viewer.js */
-$ViewerControlBorder: 1px solid #aaa;
+$ViewerControlBorder: 1px solid $ControlBorderColour;
 
 #toggleSize {
 	position: absolute;

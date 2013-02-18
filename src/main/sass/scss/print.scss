@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import 'colours';
+
 /* niet af te drukken elementen en klassen. In essentie alle eyecandy, navigatie, hyperlinks etc. */
 #toggleSize,#toggleBaseMap,.olControlZoom,#zoekContainer,#coreexitlink,#kaartnavi,.dropDownMenu,.utilBlock,#footer,#cbslogo,#downloadLink,#sliderFGMap,#slidervalue
 	{
@@ -16,7 +18,7 @@
 	display: initial;
 }
 
-body { /* border: 1px solid #F00;*/
+body {
 	
 }
 
@@ -33,12 +35,10 @@ body { /* border: 1px solid #F00;*/
 	display: block !important;
 }
 
-/*div*/
 #legenda {
 	display: block !important;
 }
 
-/*div*/
 #featureinfo {
 	
 }
@@ -53,9 +53,8 @@ a:after {
 	font-size: 8pt;
 }
 
-/*div*/
 #cbsKaart {
-	border: 1px solid #ccc;
+	border: 1px solid $ControlBorderColour;
 }
 
 /* @media ( max-device-ratio : 1/1) /* portrait of vierkant */
