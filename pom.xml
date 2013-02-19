@@ -634,6 +634,7 @@
 										<include>**/WMSGetFeatureInfo.js</include>
 										<include>**/UpdateLegendControl.js</include>
 										<include>**/ClickDrawControl.js</include>
+										<include>**/OverviewMap.js</include>
 										<include>**/Viewer.js</include>
 										<include>**/ZoekFormulier.js</include>
 									</includes>
@@ -728,7 +729,7 @@
 			<plugin>
 				<groupId>com.github.timurstrekalov</groupId>
 				<artifactId>saga-maven-plugin</artifactId>
-				<version>1.3.0</version>
+				<version>1.3.2</version>
 				<executions>
 					<execution>
 						<phase>site</phase>
@@ -741,6 +742,7 @@
 					<baseDir>src/test/js/lib</baseDir>
 					<includes>PhantomSpecRunner.html</includes>
 					<outputDir>${project.build.directory}/site</outputDir>
+					<browserVersion>CHROME_16</browserVersion>
 					<noInstrumentPatterns>
 						<pattern>\b.+/test/.+\.js\b</pattern>
 						<pattern>\b(\w*)\.min\.js\b</pattern>
