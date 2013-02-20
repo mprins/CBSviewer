@@ -724,11 +724,10 @@
 					</arguments>
 				</configuration>
 			</plugin>
-			<!--
 			<plugin>
 				<groupId>com.github.timurstrekalov</groupId>
 				<artifactId>saga-maven-plugin</artifactId>
-				<version>1.3.0</version>
+				<version>1.3.2</version>
 				<executions>
 					<execution>
 						<phase>site</phase>
@@ -741,6 +740,7 @@
 					<baseDir>src/test/js/lib</baseDir>
 					<includes>PhantomSpecRunner.html</includes>
 					<outputDir>${project.build.directory}/site</outputDir>
+					<browserVersion>CHROME_16</browserVersion>
 					<noInstrumentPatterns>
 						<pattern>\b.+/test/.+\.js\b</pattern>
 						<pattern>\b(\w*)\.min\.js\b</pattern>
@@ -750,7 +750,6 @@
 					<outputStrategy>TOTAL</outputStrategy>
 				</configuration>
 			</plugin>
-			-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-doap-plugin</artifactId>
