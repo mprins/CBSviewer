@@ -94,6 +94,8 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 		// maximize button
 		var btn = document.createElement("button");
 		btn.innerHTML = '+';
+		btn.type = 'button';
+		btn.name = 'tonen';
 		this.maximizeDiv = btn;
 		this.maximizeDiv.style.display = 'none';
 		this.maximizeDiv.className = this.displayClass + 'MaximizeButton overviewMapButton olButton';
@@ -103,8 +105,10 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 		this.div.appendChild(this.maximizeDiv);
 
 		// minimize button
-		btn = document.createElement("button");
+		var btn = document.createElement("button");
 		btn.innerHTML = '−';
+		btn.type = 'button';
+		btn.name = 'verbergen';
 		this.minimizeDiv = btn;
 		this.minimizeDiv.style.display = 'none';
 		this.minimizeDiv.className = this.displayClass + 'MinimizeButton overviewMapButton olButton';
