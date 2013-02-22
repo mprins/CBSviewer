@@ -95,7 +95,7 @@ Viewer = function() {
 	 */
 	function _setOpacity(alpha) {
 		alpha = parseFloat(alpha);
-		if (0.09 < alpha && alpha < .91) {
+		if (0.09 < alpha && alpha < 0.91) {
 			_opacity = alpha;
 			var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
