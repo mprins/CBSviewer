@@ -97,14 +97,14 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 		this.div.appendChild(this.maximizeDiv);
 
 		// minimize button
-		var btn = document.createElement("button");
+		btn = document.createElement("button");
 		btn.innerHTML = '−';
 		btn.type = 'button';
 		btn.name = 'verbergen';
 		this.minimizeDiv = btn;
 		this.minimizeDiv.style.display = 'none';
 		this.minimizeDiv.className = this.displayClass + 'MinimizeButton overviewMapButton olButton';
-		this.minimizeDiv.title = OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_OFF');;
+		this.minimizeDiv.title = OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_OFF');
 		this.div.appendChild(this.minimizeDiv);
 
 		this.minimizeControl();
