@@ -15,12 +15,6 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 
 	/** @override */
 	maximized : true,
-	
-	/** @override */
-	maximizeTitle : OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_ON'),
-	
-	/** @override */
-	minimizeTitle : OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_OFF'),
 
 	/** @override */
 	mapOptions : {
@@ -99,9 +93,7 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 		this.maximizeDiv = btn;
 		this.maximizeDiv.style.display = 'none';
 		this.maximizeDiv.className = this.displayClass + 'MaximizeButton overviewMapButton olButton';
-		if (this.maximizeTitle) {
-			this.maximizeDiv.title = this.maximizeTitle;
-		}
+		this.maximizeDiv.title = OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_ON');
 		this.div.appendChild(this.maximizeDiv);
 
 		// minimize button
@@ -112,9 +104,7 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 		this.minimizeDiv = btn;
 		this.minimizeDiv.style.display = 'none';
 		this.minimizeDiv.className = this.displayClass + 'MinimizeButton overviewMapButton olButton';
-		if (this.minimizeTitle) {
-			this.minimizeDiv.title = this.minimizeTitle;
-		}
+		this.minimizeDiv.title = OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_OFF');;
 		this.div.appendChild(this.minimizeDiv);
 
 		this.minimizeControl();

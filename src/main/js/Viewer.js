@@ -180,7 +180,7 @@ Viewer = function() {
 						jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
 							'0' : (100 - ui.value)
 						}));
-						jQuery(this).find('a:first').text(ui.value);
+						jQuery(this).find('a:first').text(100 - ui.value);
 						// tooltip
 						if (ui.value > 50) {
 							jQuery('#slidervalue').css({
