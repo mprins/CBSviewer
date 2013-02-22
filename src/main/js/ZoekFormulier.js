@@ -158,13 +158,13 @@ var ZoekFormulier = {
 				if (i === 0) {
 					selected = " selected";
 				}
-				html += '<li><a id="button' + i + '" class="button' + selected
-						+ '" href="#" onclick="ZoekFormulier.toggleSelectedButton(' + i + ');Viewer.zoomTo('
-						+ data[i].xCoord + ',' + data[i].yCoord + ',' + data[i].radius + ');Viewer.featureInfo('
-						+ data[i].xCoord + ',' + data[i].yCoord+');return false;" title="'
-						+ OpenLayers.i18n("KEY_ZOEKEN_LINK_TTL", {
-							'0' : '' + data[i].addressString
-						}) + '">' + data[i].addressString + '</a></li>';
+				html += '<li><a id="button' + i + '" class="button' + selected +
+					'" href="#" onclick="ZoekFormulier.toggleSelectedButton(' + i + ');Viewer.zoomTo(' +
+					data[i].xCoord + ',' + data[i].yCoord + ',' + data[i].radius + ');Viewer.featureInfo(' +
+					data[i].xCoord + ',' + data[i].yCoord+');return false;" title="' +
+					OpenLayers.i18n("KEY_ZOEKEN_LINK_TTL", {
+						'0' : '' + data[i].addressString
+					}) + '">' + data[i].addressString + '</a></li>';
 			}
 			
 			html += '</ul>';
