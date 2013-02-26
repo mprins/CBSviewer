@@ -625,7 +625,11 @@
 								<exclude>**/*.min.css</exclude>
 								<exclude>**/lib/OpenLayers.js</exclude>
 							</excludes>
-							<outputDirectory>${project.build.directory}/${project.build.finalName}/js</outputDirectory>
+							<includes>
+								<include>**/lib/jquery.form.js</include>
+								<include>**/lib/jquery.layout.js</include>
+							</includes>
+							<outputDirectory>${project.build.directory}/${project.build.finalName}/lib</outputDirectory>
 							<aggregations>
 								<aggregation>
 									<includes>

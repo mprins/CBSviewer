@@ -1,5 +1,4 @@
-/**
- * @preserve
+/*!
  * jquery.layout 1.3.0 - Release Candidate 30.74
  * $Date: 2012-10-28 08:00:00 (Sun, 28 Oct 2012) $
  * $Rev: 303007 $
