@@ -620,16 +620,14 @@
 							<nosuffix>true</nosuffix>
 							<failOnWarning>false</failOnWarning>
 							<nocompress>${debug}</nocompress>
+							<jswarn>${debug}</jswarn>
+							<sourceDirectory>src/main/js</sourceDirectory>
 							<excludes>
 								<exclude>**/lib/*.min.js</exclude>
 								<exclude>**/*.min.css</exclude>
 								<exclude>**/lib/OpenLayers.js</exclude>
 							</excludes>
-							<includes>
-								<include>**/lib/jquery.form.js</include>
-								<include>**/lib/jquery.layout.js</include>
-							</includes>
-							<outputDirectory>${project.build.directory}/${project.build.finalName}/lib</outputDirectory>
+							<outputDirectory>${project.build.directory}/${project.build.finalName}/js</outputDirectory>
 							<aggregations>
 								<aggregation>
 									<includes>
