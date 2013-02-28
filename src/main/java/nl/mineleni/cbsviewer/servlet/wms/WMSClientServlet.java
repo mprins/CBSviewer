@@ -696,7 +696,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			// CHECKSTYLE.OFF: MagicNumber - dit zijn midden en hoogte van het
 			// plaatje "info.png"
 			g.drawImage(infoImage, MAP_DIMENSION_MIDDLE - 16,
-					MAP_DIMENSION_MIDDLE - 37, null);
+					MAP_DIMENSION_MIDDLE - 36, null);
 			// CHECKSTYLE.ON: MagicNumber
 		}
 		// opslaan van plaatje zodat de browser het op kan halen

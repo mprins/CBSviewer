@@ -40,10 +40,10 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 		this.layer = new OpenLayers.Layer.Vector(this.CLASS_NAME, {
 			styleMap : new OpenLayers.StyleMap({
 				externalGraphic : 'img/info.png',
-				graphicHeight : 37,
+				graphicHeight : 40,
 				graphicWidth : 32,
 				graphicXOffset : -16,
-				graphicYOffset : -37
+				graphicYOffset : -36
 			})
 		});
 		this.map.addLayer(this.layer);
