@@ -8,7 +8,7 @@
  * Viewer.
  * 
  * @author mprins
- * @returns {Viewer} Viewer object
+ * @return {Viewer} Viewer object
  * @class
  */
 Viewer = function() {
@@ -171,6 +171,7 @@ Viewer = function() {
 				var aSlider = jQuery('<div id="sliderFGMap"><span id="slidervalue"></span></div>').prependTo(
 						jQuery('#' + config.mapDiv)).slider({
 					value : _opacity * 100,
+					range : 'min',
 					min : 10,
 					max : 90,
 					step : 10,
@@ -181,7 +182,7 @@ Viewer = function() {
 							'0' : (100 - ui.value)
 						}));
 						jQuery(this).find('a:first').text(100 - ui.value);
-						// tooltip
+						// move tooltip
 						if (ui.value > 50) {
 							jQuery('#slidervalue').css({
 								'left' : '50%'
@@ -193,11 +194,12 @@ Viewer = function() {
 						}
 					}
 				});
-				// instellen initiele waarde
+				// instellen initiele waarde op tooltip
 				jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
 					'0' : 100 - (_opacity * 100)
 				}));
-				jQuery('#sliderFGMap').find('a:first').text((_opacity * 100));
+				// en slider
+				jQuery('#sliderFGMap').find('a:first').text(100 - (_opacity * 100));
 			}
 		},
 
