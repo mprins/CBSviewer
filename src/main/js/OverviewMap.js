@@ -26,7 +26,7 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 		w : 140,
 		h : 140
 	},
-	
+
 	/** @override */
 	autoPan : true,
 
@@ -88,7 +88,7 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 		// maximize button
 		var btn = document.createElement("button");
 		btn.innerHTML = '+';
-		btn.type = 'button';
+		// btn.type = 'button';
 		btn.name = 'tonen';
 		this.maximizeDiv = btn;
 		this.maximizeDiv.style.display = 'none';
@@ -99,7 +99,7 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 		// minimize button
 		btn = document.createElement("button");
 		btn.innerHTML = '−';
-		btn.type = 'button';
+		// btn.type = 'button';
 		btn.name = 'verbergen';
 		this.minimizeDiv = btn;
 		this.minimizeDiv.style.display = 'none';
