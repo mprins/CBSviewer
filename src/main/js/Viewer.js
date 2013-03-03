@@ -9,9 +9,9 @@
  * 
  * @author mprins
  * @return {Viewer} Viewer object
- * @class
+ * @class Viewer, de viewer component.
  */
-Viewer = function() {
+var Viewer = function() {
 	/**
 	 * Map object, initially null.
 	 * 
@@ -109,7 +109,7 @@ Viewer = function() {
 	/**
 	 * Publieke interface van deze klasse.
 	 * 
-	 * @returns {Viewer} publieke methodes
+	 * @return {Viewer} publieke methodes
 	 */
 	return {
 		/**
@@ -117,6 +117,7 @@ Viewer = function() {
 		 * 
 		 * @param {object}
 		 *            config Configratie object
+		 * @constructor
 		 */
 		init : function(config) {
 			this.config = config;

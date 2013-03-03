@@ -197,8 +197,8 @@
 				</os>
 			</activation>
 			<properties>
-				<!--<phantomjs.archive>phantomjs-1.8.1-linux-i686.tar.bz2</phantomjs.archive>-->
-				<phantomjs.archive>phantomjs-1.8.1-linux-x86_64.tar.bz2</phantomjs.archive>
+				<!--<phantomjs.archive>phantomjs-1.8.2-linux-i686.tar.bz2</phantomjs.archive>-->
+				<phantomjs.archive>phantomjs-1.8.2-linux-x86_64.tar.bz2</phantomjs.archive>
 				<phantomjs.executable>phantomjs</phantomjs.executable>
 			</properties>
 			<build>
@@ -244,7 +244,7 @@
 				</os>
 			</activation>
 			<properties>
-				<phantomjs.archive>phantomjs-1.8.1-macosx.zip</phantomjs.archive>
+				<phantomjs.archive>phantomjs-1.8.2-macosx.zip</phantomjs.archive>
 				<phantomjs.executable>phantomjs</phantomjs.executable>
 			</properties>
 			<build>
@@ -304,7 +304,6 @@
 								<id>getOpenLayers</id>
 								<phase>initialize</phase>
 								<goals>
-									<!-- evt. export gebruiken -->
 									<goal>checkout</goal>
 								</goals>
 								<configuration>
@@ -328,7 +327,7 @@
 								</goals>
 								<phase>process-sources</phase>
 								<configuration>
-									<!-- note: python executable needs to be in the path -->
+									<!-- note: a python executable needs to be in the path -->
 									<executable>python</executable>
 									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
 									<arguments>
@@ -346,7 +345,7 @@
 								</goals>
 								<phase>generate-test-sources</phase>
 								<configuration>
-									<!-- note: python executable needs to be in the path -->
+									<!-- note: a python executable needs to be in the path -->
 									<executable>python</executable>
 									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
 									<arguments>

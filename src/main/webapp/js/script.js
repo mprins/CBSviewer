@@ -55,6 +55,8 @@ jQuery(document)
 
 /**
  * Close megamenu on menu click
+ * 
+ * @returns false
  */
 jQuery('#hasMenu').click(function() {
 	if (parseInt(jQuery('.navDropDown').css('left')) < 0) {
