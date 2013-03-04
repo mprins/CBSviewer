@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery UI Autocomplete - Remote datasource</title>
+
+<link rel="stylesheet" href="css/compiled.css" type="text/css"
+	media="screen" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/menu.css" type="text/css" media="all" />
+<link rel="stylesheet"
+	href="css/no-theme/jquery-ui-1.10.1.custom.min.css" type="text/css"
+	media="screen" />
+<!--[if lte IE 7]><link rel="stylesheet" href="css/ie-lte7.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 8]>    <link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />   <![endif]-->
+<link rel="stylesheet" href="css/print.css" type="text/css"
+	media="print" />
+
+<script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="lib/jquery-ui-1.10.1.custom.min.js"></script>
+
+<style>
+.ui-autocomplete-loading {
+	background: white url('img/ui-anim_basic_16x16.gif') right center no-repeat;
+}
+
+.ui-autocomplete {
+	max-height: 200px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height we use height instead, but this forces the menu to always be this tall */
+* html .ui-autocomplete {
+	height: 200px;
+}
+</style>
+<script src="autocomplete.js"></script>
+</head>
+<body>
+
+	<div class="zoekContainer">
+		<form id="zoekFormulier">
+			<p class="zoekinput">
+				<input value="true" name="coreonly" type="hidden" /> <input
+					value="false" name="forward" type="hidden" /> <label for="adres">adres</label>
+				<input id="adres" type="text" />
+			</p>
+		</form>
+	</div>
+
+	<div class="ui-widget" style="margin-top: 2em; font-family: Arial;">
+		gekozen resultaat:
+		<div id="log"
+			style="height: 200px; width: 300px; overflow: auto; border: 1px solid #000"
+			class="ui-widget-content"></div>
+	</div>
+
+
+
+
+
+
+</body>
+</html>
