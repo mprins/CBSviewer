@@ -151,7 +151,7 @@
 				</os>
 			</activation>
 			<properties>
-				<phantomjs.archive>phantomjs-1.8.1-windows.zip</phantomjs.archive>
+				<phantomjs.archive>phantomjs-1.8.2-windows.zip</phantomjs.archive>
 				<phantomjs.executable>phantomjs.exe</phantomjs.executable>
 			</properties>
 			<build>
