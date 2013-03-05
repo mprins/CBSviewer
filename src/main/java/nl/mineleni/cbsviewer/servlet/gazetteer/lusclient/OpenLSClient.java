@@ -23,9 +23,13 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.params.ConnRoutePNames;
+import org.apache.http.conn.scheme.PlainSocketFactory;
+import org.apache.http.conn.scheme.Scheme;
+import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.PoolingClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
@@ -54,7 +58,15 @@ public class OpenLSClient {
 	 * {@code http.proxyHost} en {@code http.proxyPort}.
 	 */
 	public OpenLSClient() {
-		this.client = new DefaultHttpClient();
+		SchemeRegistry schemeRegistry = new SchemeRegistry();
+		schemeRegistry.register(new Scheme("http", 80, PlainSocketFactory
+				.getSocketFactory()));
+		PoolingClientConnectionManager cm = new PoolingClientConnectionManager(
+				schemeRegistry);
+		cm.setMaxTotal(200);
+		cm.setDefaultMaxPerRoute(20);
+
+		this.client = new DefaultHttpClient(cm);
 		final String pHost = System.getProperty("http.proxyHost");
 		int pPort = -1;
 		try {

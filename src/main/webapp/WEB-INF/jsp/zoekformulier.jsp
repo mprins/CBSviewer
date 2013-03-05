@@ -13,25 +13,25 @@
 	<div id="zoekContainer">
 		<form title="Zoekformulier" method="get" action="adres" id="zoekFormulier">
 			<p class="zoekinput">
-				<input type="text" id="adres" accesskey="8" name="adres" title="Vul een adres of postcode in" value="${param.adres}"/>
-				
+				<label for="adres">adres zoeken<input type="text" id="adres" accesskey="8" name="adres" 
+					title="Vul een adres of postcode in" value="${param.adres}"/>
+					<input value="" type="submit" accesskey="s" id="searchbutton"/></label>
+
 				<c:if test="${request.straal != null}">
 					<input type="hidden" name="straal" value="${straal}"/>
 				</c:if>
-				
+
 				<input type="hidden" name="coreonly" value="true"/>
 				<input type="hidden" name="forward" value="true"/>
-				
-				<!--button type="button" id="delete"><span id="x">X</span></button-->
-
-				<input value="" type="submit" accesskey="s" id="searchbutton"/>
 			</p>
 		</form>
+
 		<p id="zoekresultaten">
 			<!-- REQ_PARAM_GEVONDEN.code -->
 			<c:out value="${gevonden}" /> 
 			<c:out value="${param.gevonden}" />
 		</p>
+
 		<c:if test="${adreslijst!=null }">
 			<!-- for item in lijst maak url -->
 			<ul class="adreslijst">
@@ -45,7 +45,7 @@
 							<c:param name="straal" value="${adres.radius}" />
 							<c:param name="coreonly" value="${param.coreonly}" />
 						</c:url> 
-						<a class="button" href="${fn:escapeXml(adreslink)}" title="${ttl}">${adres}</a>
+						<a class="" href="${fn:escapeXml(adreslink)}" title="${ttl}">${adres}</a>
 					</li>
 				</c:forEach>
 			</ul>
