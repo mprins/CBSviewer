@@ -1,6 +1,9 @@
 package nl.mineleni.cbsviewer.servlet.gazetteer.lusclient;
 
 import static javax.servlet.http.HttpServletResponse.SC_OK;
+import static nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress.APPEND_GEMEENTE;
+import static nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress.APPEND_PLAATS;
+import static nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress.APPEND_PROVINCIE;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -102,8 +105,12 @@ public class OpenLSClient {
 			for (final Entry<String, String> getParam : getParams.entrySet()) {
 				qs.append(URLEncoder.encode(getParam.getKey(), "UTF-8"))
 						.append("=")
-						.append(URLEncoder.encode(getParam.getValue(), "UTF-8"))
-						.append("&");
+						.append(URLEncoder.encode(
+								(getParam.getValue())
+										.replaceAll(APPEND_GEMEENTE, "")
+										.replaceAll(APPEND_PLAATS, "")
+										.replaceAll(APPEND_PROVINCIE, ""),
+								"UTF-8")).append("&");
 			}
 		} catch (final UnsupportedEncodingException e) {
 			LOGGER.error("De gebruikte Java VM ondersteunt geen UTF-8 encoding: "
@@ -193,7 +200,9 @@ public class OpenLSClient {
 			for (final Entry<String, String> getParam : getParams.entrySet()) {
 				nvps.add(new BasicNameValuePair(URLEncoder.encode(
 						getParam.getKey(), "UTF-8"), URLEncoder.encode(
-						getParam.getValue(), "UTF-8")));
+						(getParam.getValue()).replaceAll(APPEND_GEMEENTE, "")
+								.replaceAll(APPEND_PLAATS, "")
+								.replaceAll(APPEND_PROVINCIE, ""), "UTF-8")));
 			}
 			httppost.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
 
