@@ -45,7 +45,7 @@
 							<c:param name="straal" value="${adres.radius}" />
 							<c:param name="coreonly" value="${param.coreonly}" />
 						</c:url> 
-						<a class="" href="${fn:escapeXml(adreslink)}" title="${ttl}">${adres}</a>
+						<a href="${fn:escapeXml(adreslink)}" title="${ttl}">${adres}</a>
 					</li>
 				</c:forEach>
 			</ul>

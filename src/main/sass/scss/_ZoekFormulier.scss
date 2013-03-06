@@ -1,12 +1,10 @@
 /* styles voor het zoekformulier (zoekformulier.jsp en ZoekFormulier.js) */
 
+$ControlBorder: 1px solid $ControlBorderColour;
+
 .zoekinput {
 	margin: 0;
 	padding: 0;
-}
-
-#zoekresultaten {
-
 }
 
 #zoekContainer {
@@ -15,7 +13,13 @@
 	padding-bottom: 3px;
 }
 
-#zoekContainer .adreslijst {
+
+#zoekresultaten {
+	z-index: 100;
+	line-height: 25px;
+}
+
+.adreslijst {
 
 }
 
@@ -23,7 +27,7 @@
 	min-width: 120px;
 	height: 27px;
 	line-height: 27px;
-	border: solid 1px $BlueColour;
+	border: $ControlBorder;
 	margin: 0;
 }
 
@@ -32,7 +36,7 @@
 	background-position: 0px 31px;
 	width: 31px;
 	height: 31px;
-	border: solid 1px $BlueColour;
+	border: $ControlBorder;
 	&:hover {
 		background-position: 0px 62px;
 	}
@@ -50,7 +54,7 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	background: #fff;
-	border: solid 1px $BlueColour;
+	border: $ControlBorder;
 }
 
 .ui-menu {
