@@ -24,6 +24,9 @@ jQuery(document)
 
 					Viewer.loadWMS(maps[0]);
 
+					/* popup */
+					jQuery('.fancybox').fancybox();
+					
 					/* slidedown effect */
 					var settings_head = jQuery('.settingsPanel > li > a');
 					settings_head.first().addClass('active').next().slideDown('normal');

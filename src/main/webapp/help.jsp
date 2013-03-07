@@ -99,7 +99,7 @@
 		opgevraagd over het thema.</p>
 
 
-	<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
+	<!--jsp:include page="WEB-INF/jsp/footer_include.jsp" /-->
 
 </body>
 	</html>
