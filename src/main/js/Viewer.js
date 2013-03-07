@@ -225,31 +225,36 @@ var Viewer = function() {
 		 *            y de y coordinaat
 		 * @param {number}
 		 *            radius straal van het gebied
+		 * @param {boolean}
+		 *            withFeatureInfo voert een featureInfo request uit na
+		 *            uitvoeren van de zoom en pan actie.
 		 */
-		zoomTo : function(x, y, radius) {
-			_map.panTo(new OpenLayers.LonLat(x, y));
-			var zm = _map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius));
-			_map.zoomTo(zm);
-		},
-
-		/**
-		 * Voert een identify uit voor de gegeven locatie. Indien de x/y buiten
-		 * de kaartuitsnede vallen wordt de kaart eerst verschoven zodat de
-		 * locatie in beeld valt.
-		 * 
-		 * @param {number}
-		 *            x de x coordinaat
-		 * @param {number}
-		 *            y de y coordinaat
-		 */
-		featureInfo : function(x, y) {
+		zoomTo : function(x, y, radius, withFeatureInfo) {
 			var lonlat = new OpenLayers.LonLat(x, y);
-			if (!_map.getExtent().containsLonLat(lonlat)) {
-				_map.panTo(lonlat);
+
+			console.debug("zoomTo kaart", x, y, radius, withFeatureInfo, lonlat);
+
+			_map.panTo(lonlat);
+			_map.zoomTo(_map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius)));
+			// _map.zoomToExtent(new OpenLayers.Bounds(x - radius, y - radius, x
+			// + radius, y + radius));
+
+			if (withFeatureInfo) {
+				_map.events.register('moveend', _map, function() {
+					// evt. loadend op wms layer gebruiken
+					console.debug("moveend functie kaart na verschuiven", x, y, lonlat);
+					_map.events.triggerEvent('click', {
+						xy : _map.getPixelFromLonLat(lonlat)
+					});
+				});
+
+//				_map.events.register('zoomend', _map, function() {
+//					console.debug("zoomend functie kaart na verschuiven", x, y, lonlat);
+//					_map.events.triggerEvent('click', {
+//						xy : _map.getPixelFromLonLat(lonlat)
+//					});
+//				});
 			}
-			_map.events.triggerEvent('click', {
-				xy : _map.getPixelFromLonLat(lonlat)
-			});
 		},
 
 		/**
