@@ -61,6 +61,7 @@ jQuery(document)
  * 
  * @returns false
  */
+ 
 jQuery('#hasMenu').click(function() {
 	if (parseInt(jQuery('.navDropDown').css('left')) < 0) {
 		jQuery('.navDropDown').css('left', 'auto');
@@ -74,22 +75,23 @@ jQuery('#hasMenu').click(function() {
  * Use a timeout to hide the sub menu, todo: call function after timeout instead
  * of delay
  */
-jQuery("ul.navleft li, ul.navright li").hover(function() {
-	var timeout = jQuery(this).data("timeout");
-	if (timeout)
-		clearTimeout(timeout);
-	jQuery(this).find("ul.submenu").delay(250).show(50);
-}, function() {
-	jQuery(this).data("timeout", setTimeout(jQuery.proxy(function() {
+jQuery("ul.navleft li, ul.navright li").click(function() {
+	// hide all except the one clicked on
+	jQuery('ul.submenu').not(jQuery(this).find("ul.submenu")).hide();
+	
+	if( !jQuery(this).find("ul.submenu").is(':visible') ) {
+		jQuery(this).find("ul.submenu").show(100);
+    }
+	else {
 		jQuery(this).find("ul.submenu").hide();
-	}, this), 250));
+	}
 });
 
 /**
  * Hide sub menu on click
  */
 jQuery(document).click(function() {
-	jQuery('ul.submenu:visible').hide();
+	//jQuery('ul.submenu:visible').hide();
 });
 
 /**
