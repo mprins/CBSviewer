@@ -22,6 +22,14 @@
 						<div class="contentasset">
 							<div class="megaMenu megaThreeColumns">
 								<ul class="menuAccordion">
+									<c:url value="/index.jsp" var="adreslink">
+										<c:param name="gevonden" value="${adres}" />
+										<c:param name="xcoord" value="${adres.xCoord}" />
+										<c:param name="ycoord" value="${adres.yCoord}" />
+										<c:param name="straal" value="${adres.radius}" />
+										<c:param name="coreonly" value="${param.coreonly}" />
+										<c:param name="mapid" value="wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners" />
+									</c:url>
 									<li id="keytheme1">
 										<a href="#keytheme1" class="accordionheader"><fmt:message key="KEY_THEME_MAINTHEME" /><span><fmt:message key="KEY_THEME_MAINTHEME_TOOLTIP" /></span></a>
 										<div class="menuAccordionContent">
@@ -50,7 +58,7 @@
 
 													<a href="#">Inwoners totaal<span><fmt:message key="KEY_TOOLTIP1" /></span></a>
 														<ul class="submenu">
-															<li>Gemeente<br/><a href="?mapid=wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2010_thema_gemeenten2010_aantal_inwoners">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2009_thema_gemeenten2009_aantal_inwoners">2009</a></li>
+															<li>Gemeente<br/><a href="${fn:escapeXml(adreslink)}">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2010_thema_gemeenten2010_aantal_inwoners">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2009_thema_gemeenten2009_aantal_inwoners">2009</a></li>
 															<li>Wijk<br/><a href="?mapid=wijkenbuurten2011_thema_wijken2011_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2011_thema_wijken2011_aantal_inwoners">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_wijken2010_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2010_thema_wijken2010_aantal_inwoners">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_wijken2009_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2009_thema_wijken2009_aantal_inwoners">2009</a></li>
 															<li>Buurt<br/><a href="?mapid=wijkenbuurten2011_thema_buurten2011_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2011_thema_buurten2011_aantal_inwoners">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_buurten2010_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2010_thema_buurten2010_aantal_inwoners">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_buurten2009_aantal_inwoners&amp;coreonly=true" name="wijkenbuurten2009_thema_buurten2009_aantal_inwoners">2009</a></li>
 

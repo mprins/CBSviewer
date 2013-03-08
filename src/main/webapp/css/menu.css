@@ -347,7 +347,8 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	padding: 0px;
 }
 .navleft li:hover > a, .navright li:hover > a,
-.navleft li:focus > a, .navright li:focus > a {
+.navleft li:focus > a, .navright li:focus > a,
+.submenuopened {
 	background-color: #eeeeee;
 	color: #000000;
 }

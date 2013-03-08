@@ -75,15 +75,18 @@ jQuery('#hasMenu').click(function() {
  * Use a timeout to hide the sub menu, todo: call function after timeout instead
  * of delay
  */
-jQuery("ul.navleft li, ul.navright li").click(function() {
+jQuery('ul.navleft li, ul.navright li').click(function() {
 	// hide all except the one clicked on
-	jQuery('ul.submenu').not(jQuery(this).find("ul.submenu")).hide();
+	jQuery('ul.submenu').not(jQuery(this).find('ul.submenu')).hide();
+	jQuery('.menuAccordionContent').not(jQuery(this).find('a')).find('a').removeClass('submenuopened');
 	
-	if( !jQuery(this).find("ul.submenu").is(':visible') ) {
-		jQuery(this).find("ul.submenu").show(100);
+	if( !jQuery(this).find('ul.submenu').is(':visible') ) {
+		jQuery(this).find('ul.submenu').show(70);
+		jQuery(this).children('a').addClass('submenuopened');		
     }
 	else {
-		jQuery(this).find("ul.submenu").hide();
+		jQuery(this).find('ul.submenu').hide();
+		jQuery(this).children('a').removeClass('submenuopened');
 	}
 });
 
@@ -111,7 +114,10 @@ jQuery('.megaMenu a').click(
 		function(event) {
 			event.preventDefault();
 			// only load new themes
-			if (jQuery(this).attr('name') != _defaultId && jQuery(this).attr('class') != 'accordionheader') {
+			if (jQuery(this).attr('name') != _defaultId 
+				&& jQuery(this).attr('href') != '#'
+				&& jQuery(this).attr('class') != 'accordionheader') {
+				
 				var _id = jQuery(this).attr('name');
 
 				var maps = jQuery.grep(_layers, function(n, i) {
@@ -139,7 +145,7 @@ jQuery('.megaMenu a').click(
 
 				// close menu
 				jQuery('.navDropDown').css('left', '-9999px');
-
+				
 				_defaultId = _id;
 			}
 		});
