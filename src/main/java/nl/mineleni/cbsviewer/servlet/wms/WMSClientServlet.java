@@ -16,7 +16,12 @@ import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_KAART;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_LEGENDAS;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_MAPID;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.awt.image.RescaleOp;
 import java.io.File;
@@ -161,6 +166,72 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		this.featInfoCache = null;
 		this.getMapRequest = null;
 		super.destroy();
+	}
+
+	/**
+	 * Teken een schaalbalk in de (kaart) afbeelding. meter based CRS only.
+	 * 
+	 * @param bbox
+	 *            the bbox
+	 * @param image
+	 *            afbeelding waarin de schaalbalk wordt getekend
+	 * 
+	 * @todo only works for CRS in meters
+	 */
+	private void drawScaleBar(final BufferedImage image, final BoundingBox bbox) {
+		// CHECKSTYLE.OFF: MagicNumber - pixel layout
+		// start positie in px
+		final int xOffset = 10;
+		final int fontSize = 12;
+		final int yOffset = MAP_DIMENSION - xOffset;
+		final Graphics2D g = image.createGraphics();
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+				RenderingHints.VALUE_ANTIALIAS_ON);
+		g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
+				RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+
+		// scale crs units per px
+		final double scale = bbox.getWidth() / MAP_DIMENSION;
+		// max lengte in px van schaalbalk
+		int barLength = MAP_DIMENSION / 2;
+		int dist = (int) (barLength * scale); // crs units
+		// logaritmisch lengte afronden
+		final int digits = (int) (Math.log(dist) / Math.log(10));
+		final double pow10 = Math.pow(10, digits);
+		final int rounded = (int) (dist / pow10);
+		int barLen = 1;
+		if (rounded > 5) {
+			barLen = 5;
+		} else if (rounded > 2) {
+			barLen = 2;
+		}
+		dist = (int) (barLen * pow10);
+		barLength = (int) (dist / scale);
+
+		// TODO CRS units gebruiken
+		// bbox.getCoordinateReferenceSystem().getCoordinateSystem().getAxis(0).getUnit()...
+		String units = "m";
+		if (dist >= 1000) {
+			dist = dist / 1000;
+			units = "km";
+		}
+
+		g.setColor(Color.BLACK);
+		g.setStroke(new BasicStroke(2, BasicStroke.CAP_ROUND,
+				BasicStroke.JOIN_ROUND));
+		g.drawLine(xOffset, yOffset, xOffset + barLength, yOffset);
+		g.drawLine(xOffset, yOffset, xOffset, yOffset - fontSize);
+		g.drawLine(xOffset + barLength, yOffset, xOffset + barLength,
+				yOffset - fontSize);
+
+		final Font font = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
+		final FontMetrics metrics = g.getFontMetrics(font);
+		g.setFont(font);
+		g.drawString(
+				dist + units,
+				(xOffset + barLength / 2) - (metrics.stringWidth(dist + units) / 2),
+				yOffset - metrics.getDescent() - 2);
+		// CHECKSTYLE.ON: MagicNumber
 	}
 
 	/**
@@ -418,7 +489,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			final GetMapResponse response = this.getCachedWMS(lyrDesc)
 					.issueRequest(this.getMapRequest);
 			final BufferedImage image = ImageIO.read(response.getInputStream());
-
+			this.drawScaleBar(image, bbox);
 			this.fgWMSCache.put(key, new CacheImage(image,
 					SECONDS_TO_CACHE_ELEMENTS));
 
@@ -448,7 +519,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 *            de layerdescriptor met de WMS informatie
 	 * @return een array met legenda afbeeldings bestanden
 	 * @throws ServiceException
-	 *             Geeft aan dat er een fout is opgetreden tijden het benaderen
+	 *             Geeft aan dat er een fout is opgetreden tijdens het benaderen
 	 *             van de WMS
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
@@ -625,7 +696,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			// CHECKSTYLE.OFF: MagicNumber - dit zijn midden en hoogte van het
 			// plaatje "info.png"
 			g.drawImage(infoImage, MAP_DIMENSION_MIDDLE - 16,
-					MAP_DIMENSION_MIDDLE - 37, null);
+					MAP_DIMENSION_MIDDLE - 36, null);
 			// CHECKSTYLE.ON: MagicNumber
 		}
 		// opslaan van plaatje zodat de browser het op kan halen

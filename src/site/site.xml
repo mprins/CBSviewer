@@ -23,6 +23,7 @@
 		<head>
 			<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 			<link rel="icon" href="favicon.ico" type="image/x-icon" />
+			<link rel="meta" title="DOAP" href="${project.url}/doap_${project.artifactId}.rdf" type="application/rdf+xml"/>
 		</head>
 		<links>
 			<item name="Wiki" href="https://github.com/MinELenI/CBSviewer/wiki" />
@@ -64,11 +65,9 @@
 			<item name="Broncode" href="${project.scm.url}" />
 		</menu>
 		<menu ref="reports" />
-		<!--
 		<menu name="Manual Tests">
 			<item name="Saga testdekking" href="/total-report.html" />
 		</menu>
-		-->
 		<menu name="About Maven 3.0">
 			<item name="FAQ" href="/faq.html" />
 			<item name="Running maven" href="http://maven.apache.org/run-maven/index.html" />

@@ -24,6 +24,9 @@ jQuery(document)
 
 					Viewer.loadWMS(maps[0]);
 
+					/* popup */
+					jQuery('.fancybox').fancybox();
+					
 					/* slidedown effect */
 					var settings_head = jQuery('.settingsPanel > li > a');
 					settings_head.first().addClass('active').next().slideDown('normal');
@@ -55,6 +58,8 @@ jQuery(document)
 
 /**
  * Close megamenu on menu click
+ * 
+ * @returns false
  */
 jQuery('#hasMenu').click(function() {
 	if (parseInt(jQuery('.navDropDown').css('left')) < 0) {
@@ -161,10 +166,9 @@ var setupPage = {
 		jQuery('#' + config.mapDiv).prepend(aCore);
 
 		ZoekFormulier.init();
-		ZoekFormulier.addPlaceholders();
 
 		// uitvouwen van de accordion na change event, klap de legenda in voor
-		// meer duideijkheid voor de gebruiker
+		// meer duidelijkheid voor de gebruiker
 		jQuery('#' + config.featureInfoDiv).change(function() {
 			if (jQuery('#keyfeatureinfo a').attr('class') != 'active') {
 				jQuery('#keyfeatureinfo a').next().stop(true, true).slideToggle('normal');

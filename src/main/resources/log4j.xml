@@ -27,7 +27,7 @@
 		<param name="locationInfo" value="true" />
 	</appender>
 	<logger name="nl.mineleni.cbsviewer">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 	<logger name="org.geotools">
 		<level value="warn" />
@@ -45,6 +45,6 @@
 			<appender-ref ref="consoleAppender" /> 
 			<appender-ref ref="rollingFileAppender" /> 
 			-->
-		<appender-ref ref="rollingFileAppender" />
+		<appender-ref ref="ganymedeAppender" />
 	</root>
 </log4j:configuration>

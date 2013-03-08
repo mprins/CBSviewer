@@ -8,10 +8,10 @@
  * Viewer.
  * 
  * @author mprins
- * @returns {Viewer} Viewer object
- * @class
+ * @return {Viewer} Viewer object
+ * @class Viewer, de viewer component.
  */
-Viewer = function() {
+var Viewer = function() {
 	/**
 	 * Map object, initially null.
 	 * 
@@ -95,9 +95,9 @@ Viewer = function() {
 	 */
 	function _setOpacity(alpha) {
 		alpha = parseFloat(alpha);
-		if (0.09 < alpha && alpha < .91) {
+		if (0.09 < alpha && alpha < 0.91) {
 			_opacity = alpha;
-			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
+			var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
 				if (!lyrs[lyr].isBaseLayer) {
 					lyrs[lyr].setOpacity(_opacity);
@@ -109,15 +109,15 @@ Viewer = function() {
 	/**
 	 * Publieke interface van deze klasse.
 	 * 
-	 * @returns {Viewer} publieke methodes
+	 * @return {Viewer} publieke methodes
 	 */
 	return {
-
 		/**
 		 * Constructor, attach to the DOM.
 		 * 
 		 * @param {object}
 		 *            config Configratie object
+		 * @constructor
 		 */
 		init : function(config) {
 			this.config = config;
@@ -129,7 +129,8 @@ Viewer = function() {
 			jQuery.extend(true, this.config, {
 				map : {
 					controls : [],
-					tileManager : new OpenLayers.TileManager()
+					tileManager : new OpenLayers.TileManager(),
+					theme : null
 				}
 			});
 			jQuery(window).unload(function() {
@@ -171,6 +172,7 @@ Viewer = function() {
 				var aSlider = jQuery('<div id="sliderFGMap"><span id="slidervalue"></span></div>').prependTo(
 						jQuery('#' + config.mapDiv)).slider({
 					value : _opacity * 100,
+					range : 'min',
 					min : 10,
 					max : 90,
 					step : 10,
@@ -180,8 +182,8 @@ Viewer = function() {
 						jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
 							'0' : (100 - ui.value)
 						}));
-						jQuery(this).find('a:first').text(ui.value);
-						// tooltip
+						jQuery(this).find('a:first').text(100 - ui.value);
+						// move tooltip
 						if (ui.value > 50) {
 							jQuery('#slidervalue').css({
 								'left' : '50%'
@@ -193,11 +195,12 @@ Viewer = function() {
 						}
 					}
 				});
-				// instellen initiele waarde
+				// instellen initiele waarde op tooltip
 				jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
 					'0' : 100 - (_opacity * 100)
 				}));
-				jQuery('#sliderFGMap').find('a:first').text((_opacity * 100));
+				// en slider
+				jQuery('#sliderFGMap').find('a:first').text(100 - (_opacity * 100));
 			}
 		},
 
@@ -263,12 +266,7 @@ Viewer = function() {
 				observeElement : this.config.mapDiv
 			}));
 			_map.addControl(new OpenLayers.Control.Zoom());
-			_map.addControl(new OpenLayers.Control.Navigation({
-				zoomWheelEnabled : true,
-				dragPanOptions : {
-					enableKinetic : true
-				}
-			}));
+			_map.addControl(new OpenLayers.Control.Navigation());
 			_map.addControl(new OpenLayers.Control.KeyboardClick({
 				/* alleen actief als de kaart focus heeft */
 				observeElement : this.config.mapDiv
@@ -279,6 +277,17 @@ Viewer = function() {
 				}
 			}));
 			_map.addControl(new ClickDrawControl());
+			_map.addControl(new OpenLayers.Control.ScaleLine({
+				maxWidth : 200,
+				bottomOutUnits : '' // geen mi/ft
+			}));
+			_map.addControl(new OverviewMap({
+				mapOptions : {
+					maxExtent : this.config.map.restrictedExtent,
+					resolutions : this.config.map.resolutions,
+					projection : this.config.map.projection
+				}
+			}));
 		},
 
 		/**
@@ -360,18 +369,18 @@ Viewer = function() {
 			// reset featureinfo text
 			jQuery('#' + config.featureInfoDiv).html(OpenLayers.i18n('KEY_INFO_GEEN_FEATURES'));
 			// verwijder ikoontjes die de controls tekenen
-			var lyrs = _map.getLayersByName('ClickDrawControl');
-			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+			var lyrs = _map.getLayersByName('ClickDrawControl'), lyr;
+			for (lyr = 0; lyr < lyrs.length; lyr++) {
 				lyrs[lyr].removeAllFeatures();
 			}
 			lyrs = _map.getLayersByName('OpenLayers.Handler.KeyboardPoint');
-			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+			for (lyr = 0; lyr < lyrs.length; lyr++) {
 				lyrs[lyr].removeAllFeatures();
 			}
 
 			// verwijder WMS lagen
 			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
-			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+			for (lyr = 0; lyr < lyrs.length; lyr++) {
 				if (!lyrs[lyr].isBaseLayer) {
 					_map.removeLayer(lyrs[lyr]);
 					lyrs[lyr].destroy();

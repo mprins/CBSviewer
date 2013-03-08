@@ -29,5 +29,5 @@ WMSGetFeatureInfo = OpenLayers.Class(OpenLayers.Control.WMSGetFeatureInfo, {
 		OpenLayers.Control.WMSGetFeatureInfo.prototype.initialize.apply(this, [ options ]);
 	},
 
-	CLASS_NAME : "WMSGetFeatureInfo"
+	CLASS_NAME : 'WMSGetFeatureInfo'
 });

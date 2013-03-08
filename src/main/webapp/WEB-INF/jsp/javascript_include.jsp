@@ -17,9 +17,10 @@
 	<jsp:text>
 		<![CDATA[<script type="text/javascript" src="lib/OpenLayers.js"></script>
 <script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="lib/jquery.form.js"></script>
 <script type="text/javascript" src="lib/jquery.qtip-1.0.0-rc3.min.js"></script>
-<script type="text/javascript" src="lib/jquery-ui-1.10.0.custom.min.js"></script>
+<script type="text/javascript" src="lib/jquery-ui-1.10.1.custom.min.js"></script>
+<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="lib/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="js/cbsviewer.js"></script>
 <script type="text/javascript" id="language" charset="utf-8">]]>
 	</jsp:text>

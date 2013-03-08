@@ -7,7 +7,7 @@
 	<version>1.1-SNAPSHOT</version>
 	<name>CBSviewer Webapp</name>
 	<description>Webrichtlijnen compliant webmap viewer.</description>
-	<url>http://mineleni.github.com/CBSviewer/</url>
+	<url>http://mineleni.github.com/CBSviewer</url>
 	<inceptionYear>2012</inceptionYear>
 	<organization>
 		<name><![CDATA[Ministerie EL&amp;I]]></name>
@@ -35,7 +35,7 @@
 			<url>https://raw.github.com/MinELenI/CBSviewer/master/LICENSE.md</url>
 			<comments />
 			<distribution>repo</distribution>
-		</license>	
+		</license>
 		<license>
 			<name>BSD license</name>
 			<url>https://raw.github.com/openlayers/openlayers/master/license.txt</url>
@@ -53,12 +53,6 @@
 			<url>https://raw.github.com/jquery/jquery-ui/master/MIT-LICENSE.txt</url>
 			<comments>For any parts of jQuery-UI</comments>
 			<distribution>repo</distribution>
-		</license>
-		<license>
-			<name>MIT license</name>
-			<url>http://malsup.github.com/mit-license.txt</url>
-			<comments>For jQuery Form Plugin</comments>
-			<distribution>manual</distribution>
 		</license>
 		<license>
 			<name>GNU Lesser General Public License (LGPL)</name>
@@ -87,7 +81,7 @@
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>9.0-beta1</geotools.version>
+		<geotools.version>9.0-RC1</geotools.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
@@ -151,7 +145,7 @@
 				</os>
 			</activation>
 			<properties>
-				<phantomjs.archive>phantomjs-1.8.1-windows.zip</phantomjs.archive>
+				<phantomjs.archive>phantomjs-1.8.2-windows.zip</phantomjs.archive>
 				<phantomjs.executable>phantomjs.exe</phantomjs.executable>
 			</properties>
 			<build>
@@ -197,8 +191,8 @@
 				</os>
 			</activation>
 			<properties>
-				<!--<phantomjs.archive>phantomjs-1.8.1-linux-i686.tar.bz2</phantomjs.archive>-->
-				<phantomjs.archive>phantomjs-1.8.1-linux-x86_64.tar.bz2</phantomjs.archive>
+				<!--<phantomjs.archive>phantomjs-1.8.2-linux-i686.tar.bz2</phantomjs.archive>-->
+				<phantomjs.archive>phantomjs-1.8.2-linux-x86_64.tar.bz2</phantomjs.archive>
 				<phantomjs.executable>phantomjs</phantomjs.executable>
 			</properties>
 			<build>
@@ -244,7 +238,7 @@
 				</os>
 			</activation>
 			<properties>
-				<phantomjs.archive>phantomjs-1.8.1-macosx.zip</phantomjs.archive>
+				<phantomjs.archive>phantomjs-1.8.2-macosx.zip</phantomjs.archive>
 				<phantomjs.executable>phantomjs</phantomjs.executable>
 			</properties>
 			<build>
@@ -304,7 +298,6 @@
 								<id>getOpenLayers</id>
 								<phase>initialize</phase>
 								<goals>
-									<!-- evt. export gebruiken -->
 									<goal>checkout</goal>
 								</goals>
 								<configuration>
@@ -328,7 +321,7 @@
 								</goals>
 								<phase>process-sources</phase>
 								<configuration>
-									<!-- note: python executable needs to be in the path -->
+									<!-- note: a python executable needs to be in the path -->
 									<executable>python</executable>
 									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
 									<arguments>
@@ -346,7 +339,7 @@
 								</goals>
 								<phase>generate-test-sources</phase>
 								<configuration>
-									<!-- note: python executable needs to be in the path -->
+									<!-- note: a python executable needs to be in the path -->
 									<executable>python</executable>
 									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
 									<arguments>
@@ -440,8 +433,7 @@
 							<browserVersion>FIREFOX_3_6</browserVersion>
 							<preloadSources>
 								<source>src/main/webapp/lib/jquery-1.9.1.min.js</source>
-								<source>src/main/webapp/lib/jquery-ui-1.10.0.custom.min.js</source>
-								<source>src/main/webapp/lib/jquery.form.js</source>
+								<source>src/main/webapp/lib/jquery-ui-1.10.1.custom.min.js</source>
 								<source>src/test/js/lib/OpenLayers-test.js</source>
 								<source>src/test/js/lib/jasmin_util.js</source>
 								<source>src/main/webapp/js/config.js</source>
@@ -631,6 +623,8 @@
 							<nosuffix>true</nosuffix>
 							<failOnWarning>false</failOnWarning>
 							<nocompress>${debug}</nocompress>
+							<jswarn>${debug}</jswarn>
+							<sourceDirectory>src/main/js</sourceDirectory>
 							<excludes>
 								<exclude>**/lib/*.min.js</exclude>
 								<exclude>**/*.min.css</exclude>
@@ -645,6 +639,7 @@
 										<include>**/WMSGetFeatureInfo.js</include>
 										<include>**/UpdateLegendControl.js</include>
 										<include>**/ClickDrawControl.js</include>
+										<include>**/OverviewMap.js</include>
 										<include>**/Viewer.js</include>
 										<include>**/ZoekFormulier.js</include>
 									</includes>
@@ -735,11 +730,10 @@
 					</arguments>
 				</configuration>
 			</plugin>
-			<!--
 			<plugin>
 				<groupId>com.github.timurstrekalov</groupId>
 				<artifactId>saga-maven-plugin</artifactId>
-				<version>1.3.0</version>
+				<version>1.3.3</version>
 				<executions>
 					<execution>
 						<phase>site</phase>
@@ -750,18 +744,42 @@
 				</executions>
 				<configuration>
 					<baseDir>src/test/js/lib</baseDir>
+					<browserVersion>CHROME_16</browserVersion>
 					<includes>PhantomSpecRunner.html</includes>
-					<outputDir>${project.build.directory}/site</outputDir>
 					<noInstrumentPatterns>
 						<pattern>\b.+/test/.+\.js\b</pattern>
 						<pattern>\b(\w*)\.min\.js\b</pattern>
 						<pattern>\b/lib/(\w*)\.js\b</pattern>
 						<pattern>.+/config\.js</pattern>
 					</noInstrumentPatterns>
+					<outputDir>${project.build.directory}/site</outputDir>
 					<outputStrategy>TOTAL</outputStrategy>
 				</configuration>
 			</plugin>
-			-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-doap-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<id>site</id>
+						<phase>site</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<lang>nl</lang>
+					<doapOptions>
+						<category>webapp</category>
+						<programmingLanguage>JavaScript</programmingLanguage>
+						<programmingLanguage>Java</programmingLanguage>
+						<downloadPage />
+						<mailingList />
+					</doapOptions>
+				</configuration>
+			</plugin>
  			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
@@ -1088,23 +1106,15 @@
 								</pluginExecution>
 								<pluginExecution>
 									<pluginExecutionFilter>
-										<groupId>
-											org.jasig.maven
-										</groupId>
-										<artifactId>
-											sass-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.0.2,)
-										</versionRange>
+										<groupId>org.jasig.maven</groupId>
+										<artifactId>sass-maven-plugin</artifactId>
+										<versionRange>[1.0.2,)</versionRange>
 										<goals>
-											<goal>
-												update-stylesheets
-											</goal>
+											<goal>update-stylesheets</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
@@ -1144,7 +1154,7 @@
 		<dependency>
 			<groupId>org.jmock</groupId>
 			<artifactId>jmock-junit4</artifactId>
-			<version>2.6.0-RC2</version>
+			<version>2.6.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

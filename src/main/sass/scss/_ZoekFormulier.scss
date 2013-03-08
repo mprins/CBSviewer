@@ -1,0 +1,118 @@
+/* styles voor het zoekformulier (zoekformulier.jsp en ZoekFormulier.js) */
+
+$ControlBorder: 1px solid $ControlBorderColour;
+
+.zoekinput {
+	margin: 0;
+	padding: 0;
+}
+
+#zoekContainer {
+	width: 100%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+
+#zoekresultaten {
+	z-index: 100;
+	line-height: 25px;
+}
+
+#adres {
+	min-width: 120px;
+	height: 27px;
+	line-height: 27px;
+	border: $ControlBorder;
+	margin: 0;
+}
+
+#searchbutton {
+	background-image: url('../img/search.png');
+	background-position: 0px 31px;
+	width: 31px;
+	height: 31px;
+	border: $ControlBorder;
+	&:hover {
+		background-position: 0px 62px;
+	}
+	&:focus {
+		background-position: 0px 62px;
+	}
+}
+
+.ui-autocomplete-loading {
+	background: #fff url('../img/ui-anim_basic_16x16.gif') right center no-repeat;
+}
+
+.ui-autocomplete {
+	max-height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: #fff;
+	border: $ControlBorder;
+}
+
+.ui-menu {
+	z-index: 1010;
+}
+
+ul.adreslijst {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 100px;
+	overflow: hidden;
+	margin-right: 1px;
+}
+
+ul.adreslijst a {
+	background: #369;
+	text-decoration: none;
+	padding-left: 5px;
+}
+
+ul.adreslijst li.list {
+	float: left;
+	width: 250px;
+	margin: -32767px -125px 0px 0px;
+}
+
+ul.adreslijst li.list a.selector {
+	position: relative;
+	z-index: 50;
+	display: block;
+	float: left;
+	width: 120px;
+	margin-top: 32767px;
+	background: transparent;
+}
+
+ul.adreslijst li.list a.selector:hover,ul.adreslijst li.list a.selector:focus,ul.adreslijst li.list a.selector:active
+	{
+	margin-right: 1px;
+	background: #000;
+}
+
+ul.adressen {
+	float: left;
+	padding: 25px 0px 0px 0px;
+	margin: 0;
+	list-style: none;
+	background: #369;
+	margin: -25px 0px 0px 0px;
+}
+
+ul.adressen li a {
+	float: left;
+	width: 120px;
+	background: #369;
+	clear: left;
+	color: #fff;
+}
+
+ul.adressen a:hover,ul.adressen a:focus,ul.adressen a:active {
+	background: #900;
+	margin-right: 1px;
+	color: #fff;
+}

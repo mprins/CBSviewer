@@ -28,7 +28,7 @@ html,body {
 	font-variant: small-caps;
 }
 
-/* verstopt */
+/* verstopt, ook voor screenreaders */
 .hidden {
 	display: none;
 }
@@ -42,7 +42,7 @@ html.js #coreContainer,html.js #coreMapImage {
 	display: none;
 }
 
-html.js  #coreContainer p {
+html.js #coreContainer p {
 	display: none;
 }
 
@@ -67,108 +67,6 @@ a.accesskey:focus {
 .legendaTitel {
 	
 }
-/* (adres) zoeken elementen */
-.zoekenTitel {
-	
-}
-
-#zoekContainer {
-	width:100%;
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
-
-.zoekinput {
-	margin: 0;
-	padding: 0;
-}
-
-/* Make sure it works in all browsers */
-#zoekContainer .adreslijst li .button {
-	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
-	box-shadow: inset 0px 1px 0px 0px #ffffff;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed
-		), color-stop(1, #dfdfdf) );
-	background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed',
-		endColorstr='#dfdfdf' );
-	background-color: #ededed;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	line-height: 30px;
-	border-radius: 6px;
-	border: 1px solid #dcdcdc;
-	/*display:inline-block;*/
-	color: #000000;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 6px 14px;
-	text-shadow: 1px 1px 0px #ffffff;
-}
-
-#zoekContainer .adreslijst li .button:hover {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf
-		), color-stop(1, #ededed) );
-	background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf',
-		endColorstr='#ededed' );
-	background-color: #dfdfdf;
-}
-
-#zoekContainer .adreslijst li .selected,#zoekContainer .adreslijst li .selected:hover
-	{
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #AFAFAF
-		), color-stop(1, #E0E0E0) );
-	background: -moz-linear-gradient(center top, #AFAFAF 5%, #E0E0E0 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AFAFAF',
-		endColorstr='#E0E0E0' );
-	background-color: #AFAFAF;
-}
-
-#zoekContainer .adreslijst li .button:active {
-	position: relative;
-	top: 1px;
-}
-
-#zoekresultaten {
-	float:right;
-	margin-left:-350px;
-	width:350px;
-}
-
-#zoekContainer .adreslijst li {
-	display: inline;
-	padding-right: 3px;
-}
-
-#zoekContainer .adreslijst {
-	z-index: 1010;
-	list-style-image: none;
-	margin: 0;
-	float:right;
-	margin-left:-350px;
-}
-
-#zoekFormulier #adres {
-	float: left;
-	width: 235px;
-	min-width: 120px;
-	height: 27px;
-	line-height: 27px;
-	text-indent: 10px;
-	font-size: 16px;
-	color: #333;
-	background: #fff;
-	border: solid 1px #2d598c;
-	border-top: solid 1px #2d598c;
-	border-right: none;
-}
-
-.adresEmpty {
-    color: #ddd !important;
-}
-
 
 .titel {
 	color: #C53658;
@@ -178,8 +76,8 @@ a.accesskey:focus {
 .subtitel {
 	font-size: 1.8em;
 	text-align: center;
-	font-family:Arial, Verdana,Helvetica,sans-serif;
-	color:#4E443C;
+	font-family: Arial, Verdana,Helvetica,sans-serif;
+	color: #4E443C;
 	text-transform: none; 
 	font-weight: 100; 
 	margin-bottom: 0;
@@ -199,46 +97,6 @@ html.js #cbslogo {
 	background-color: #fff;
 	background-size: auto 51px;
 }/*
-/*#zoekFormulier #delete {
-	float: left;
-	width: 34px;
-	height: 31px;
-	line-height: 20px;
-	padding: 0 10px 0 10px;
-	font-family: "Lucida Sans", "Lucida Sans Unicode", sans-serif;
-	font-size: 18px;
-	font-weight: bold;
-	background: #fff;
-	border: solid 1px #2d598c;
-	border-top: solid 1px #2d598c;
-	border-left: none;
-}
-
-#zoekFormulier #delete #x {
-	color: #A1B9ED;
-	cursor: pointer;
-	display: none;
-}
-
-#zoekFormulier #delete #x:hover {
-	color: #36c;
-}*/
-
-#zoekFormulier #searchbutton {
-	background-image: url('../img/search.png');
-	background-position: 0px 62px;
-	width: 31px;
-	height: 31px;
-	cursor: pointer;
-	border: none;
-}
-
-#zoekFormulier #searchbutton:hover,#zoekFormulier #searchbutton:focus {
-	background-position: 0px 31px;
-	cursor: hand;
-	cursor: pointer;
-	height: 31px;
-}
 
 /* feature informatie */
 .featureinfo {
@@ -473,7 +331,7 @@ html.js #cbslogo {
 }
 
 .menuinfo {
-	background: #ffffff;
+	background: #fff;
 	border: 1px solid #2BB0D7;
 }
 
@@ -481,7 +339,7 @@ html.js #cbslogo {
 
 .disabled {
 	color: red;
-	background-color: #dddddd;
+	background-color: #ddd;
 }
 
 .settingsPanel 
