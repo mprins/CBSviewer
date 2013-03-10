@@ -22,7 +22,6 @@
 	position: absolute;
 	left: 10px;
 	bottom: 10px;
-	/*font-size: xx-small;*/
 }
 
 .olControlScaleLineBottom {
@@ -46,8 +45,8 @@
 	font-size: 1px;
 	/*top right bottom left*/
 	border-color: $BlueColourLighter $BlueColourDarker $BlueColourDarker $BlueColourLighter;
-	border-radius: 4px;
-	box-shadow: 2px 2px 2px #000;
+	@include border-radius(4px);
+	@include box-shadow(2px 2px 2px #000);
 }
 
 div.olControlZoom {
@@ -55,7 +54,7 @@ div.olControlZoom {
 	top: 55px;
 	left: 8px;
 	background: rgba(255, 255, 255, 0.2);
-	border-radius: 4px;
+	@include border-radius(4px);
 	padding: 2px;
 }
 
@@ -79,39 +78,22 @@ div.olControlZoom a {
 }
 
 a.olControlZoomIn {
-	border-radius: 4px 4px 0 0;
+	@include border-top-radius(4px);
 }
 
 a.olControlZoomOut {
-	border-radius: 0 0 4px 4px;
+	@include border-bottom-radius(4px);
 }
 
-/**
- * Animations
- */
-
 .olLayerGrid .olTileImage {
-	-webkit-transition: opacity 0.2s linear;
-	-moz-transition: opacity 0.2s linear;
-	-o-transition: opacity 0.2s linear;
-	transition: opacity 0.2s linear;
+	@include transition(opacity 0.2s linear);
 }
 
 /* Turn on GPU support where available */
 .olTileImage {
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
+	@include translateZ(0);
+	@include backface-visibility(hidden);
+	@include perspective(1000);
 }
 
 /* when replacing tiles, do not show tile and backbuffer at the same time */

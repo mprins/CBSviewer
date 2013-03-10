@@ -21,7 +21,7 @@
 	text-align: center;
 	color: #fff;
 	padding: 0;
-	border: 1px solid $ControlBorderColour;
+	border: $ControlBorder;
 	background: $BlueColourTransp;
 	&:focus, &:hover {
 		outline-width: 1px;

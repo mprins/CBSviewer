@@ -1,5 +1,4 @@
 /* css voor Viewer.js */
-$ViewerControlBorder: 1px solid $ControlBorderColour;
 
 #toggleSize {
 	position: absolute;
@@ -9,7 +8,7 @@ $ViewerControlBorder: 1px solid $ControlBorderColour;
 	height: 21px;
 	z-index: 900;
 	display: block;
-	border: $ViewerControlBorder;
+	border: $ControlBorder;
 	&.max { /*max icon*/
 		background: url('../img/maxmin.png') no-repeat -21px 0;
 	}
@@ -30,7 +29,7 @@ $ViewerControlBorder: 1px solid $ControlBorderColour;
 	color: #fff;
 	text-align: right;
 	display: block;
-	border: $ViewerControlBorder;
+	border: $ControlBorder;
 	background-color: $BlueColourTransp;
 	&:hover {
 		background-color: $BlueColour;
@@ -54,7 +53,7 @@ $ViewerControlBorder: 1px solid $ControlBorderColour;
 	line-height: 21px;
 	color: #fff;
 	background-color: $BlueColourTransp;
-	border: $ViewerControlBorder;
+	border: $ControlBorder;
 	display: block;
 	&:hover {
 		background-color: $BlueColour;
@@ -62,7 +61,7 @@ $ViewerControlBorder: 1px solid $ControlBorderColour;
 }
 
 #sliderFGMap .ui-slider-handle {
-	border: $ViewerControlBorder;
+	border: $ControlBorder;
 	background: #fff;
 	font-weight: normal;
 	color: $BlueColour;
@@ -82,5 +81,5 @@ $ViewerControlBorder: 1px solid $ControlBorderColour;
 	background-color: #fff;
 	line-height: 15px;
 	padding: 2px;
-	border: $ViewerControlBorder;
+	border: $ControlBorder;
 }
