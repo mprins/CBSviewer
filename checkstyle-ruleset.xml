@@ -75,7 +75,6 @@
 				value="LITERAL_CATCH,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_IF,LITERAL_TRY" />
 		</module>
 		<module name="AvoidInlineConditionals" />
-		<module name="DoubleCheckedLocking" />
 		<module name="EmptyStatement" />
 		<module name="EqualsHashCode" />
 		<module name="HiddenField">
@@ -85,7 +84,7 @@
 		<module name="IllegalInstantiation" />
 		<module name="InnerAssignment" />
 		<module name="MagicNumber">
-			<property name="ignoreNumbers" value="-1, 0, 1, 2, 3" />
+			<property name="ignoreNumbers" value="-1, 0, 1, 2, 3, 4, 1000" />
 		</module>
 		<module name="MissingSwitchDefault" />
 		<module name="RedundantThrows" />
