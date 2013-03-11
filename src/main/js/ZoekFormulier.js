@@ -22,8 +22,10 @@ var ZoekFormulier = {
 	 * @constructor
 	 */
 	init : function(viewer) {
-		// de zoekknop verwijderen, die heeft geen funtie meer in de RIA
+		// de zoekknop, method en action van formulier verwijderen, die hebben geen funtie meer in de RIA
 		jQuery('#searchbutton').remove();
+		jQuery('#zoekFormulier').removeAttr('action');
+		jQuery('#zoekFormulier').removeAttr('method');
 
 		// verborgen velden instellen voor RIA functies
 		jQuery('#zoekFormulier').find('input[name="coreonly"]').val('false');
@@ -70,8 +72,8 @@ var ZoekFormulier = {
 				}
 			},
 			minLength : 4 /* characters */,
-			delay : 500 /* milliseconds */,
-			autoFocus : true
+			delay : 400 /* milliseconds */,
+			autoFocus : false
 		});
 	}
 };
