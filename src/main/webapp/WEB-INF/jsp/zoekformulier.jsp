@@ -15,7 +15,7 @@
 				<fieldset>
 					<label for="adres">Zoek adres:</label>
 					<input name="adres" id="adres" accesskey="8" onkeypress="if (event.keyCode==13){document.getElementById('searchbutton').click();return false}" value="${param.adres}" onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}" onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};" type="text"/>
-					<input name="searchbutton" id="searchbutton" accesskey="s" class="searchButton" type="submit"/>
+					<input disabled="true" name="searchbutton" id="searchbutton" accesskey="s" class="searchbutton" value="" type="submit"/>
 				
 					<c:if test="${request.straal != null}">
 						<input type="hidden" name="straal" value="${straal}" />

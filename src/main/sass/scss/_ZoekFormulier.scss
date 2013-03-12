@@ -6,7 +6,7 @@
 }
 
 #zoekresultaten {
-	z-index: 1040;
+	z-index: 2040;
 	line-height: 25px;
 }
 
@@ -20,7 +20,7 @@
 #zoekContainer fieldset {
   background-image: url(../img/new/title-bg.png);
   background-repeat: no-repeat;
-  padding: 9px 0 9px 35px;
+  padding: 6px 0 6px 35px;
   border: none;
   width: 614px;
 }
@@ -45,10 +45,11 @@
 
 #searchbutton {
   padding: 0 7px;
+  margin-left:5px;
   margin-top: 0px;
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/btn_header_search.gif');
+  background: url('../img/new/btn_header_search.gif') no-repeat;
   border: none;
 }
 
@@ -62,6 +63,7 @@
 	overflow-x: hidden;
 	background: #fff;
 	border: $ControlBorder;
+	z-index:1031 !important;
 }
 
 .ui-menu {
