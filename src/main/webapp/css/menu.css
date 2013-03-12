@@ -13,7 +13,7 @@
 	cursor: pointer;
 	left: 5px;
 	position: absolute;
-	top: 86px;
+	top: 165px;
 }
 .siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li {
 	list-style: none;
@@ -441,7 +441,7 @@ html.js .navleft > li, html.js .navright > li {
 	margin: 0px;
 	padding: 5px;
 	position: fixed;
-	top: 305px;
+	top: 395px;
 	width: 183px;
 	z-index: 100;
 }

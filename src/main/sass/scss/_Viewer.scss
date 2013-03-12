@@ -19,9 +19,9 @@
 
 #toggleBaseMap {
 	position: absolute;
-	top: -1px;
+	bottom: 150px;
 	/* afstand vanaf de rand van de kaart */
-	right: 50px;
+	right: 26px;
 	/* -right iets (2px) meer dan de breedte van de achtergrond sprite>40px */
 	padding: 0 42px 0 2px;
 	z-index: 900;
@@ -48,7 +48,7 @@
 	position: absolute;
 	z-index: 900;
 	top: 4px;
-	right: 170px;
+	right: 70px;
 	width: 200px;
 	line-height: 21px;
 	color: #fff;

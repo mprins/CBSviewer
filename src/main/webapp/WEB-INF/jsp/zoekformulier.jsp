@@ -10,23 +10,22 @@
 	<fmt:setBundle basename="LabelsBundle" />
 
 	<div id="zoekContainer">
-		<form title="Zoekformulier" method="get" action="adres"
-			id="zoekFormulier">
+		<form title="Zoekformulier" method="get" action="adres"	id="zoekFormulier">
 			<p class="zoekinput">
-				<label for="adres">adres zoeken<input type="text" id="adres"
-					accesskey="8" name="adres" title="Vul een adres of postcode in"
-					value="${param.adres}" /> <input value="" type="submit"
-					accesskey="s" id="searchbutton" /></label>
+				<fieldset>
+					<label for="adres">Zoek adres:</label>
+					<input name="adres" id="adres" accesskey="8" onkeypress="if (event.keyCode==13){document.getElementById('searchbutton').click();return false}" value="${param.adres}" onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}" onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};" type="text"/>
+					<input name="searchbutton" id="searchbutton" accesskey="s" class="searchButton" type="submit"/>
+				
+					<c:if test="${request.straal != null}">
+						<input type="hidden" name="straal" value="${straal}" />
+					</c:if>
 
-				<c:if test="${request.straal != null}">
-					<input type="hidden" name="straal" value="${straal}" />
-				</c:if>
-
-				<input type="hidden" name="coreonly" value="true" /> <input
-					type="hidden" name="forward" value="true" />
+					<input type="hidden" name="coreonly" value="true" /> 
+					<input type="hidden" name="forward" value="true" />			
+				</fieldset>
 			</p>
 		</form>
-
 		<div id="zoekresultaten">
 			<!-- REQ_PARAM_GEVONDEN.code -->
 			<c:out value="${gevonden}" />

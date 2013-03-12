@@ -64,35 +64,33 @@
 </head>
 
 <body>
-	<div id="footerWrapper">		
-		<div id="copyright" class="copy">
-			<fmt:message key="KEY_COPYRIGHT" />
-		</div>
-				
-		<div id="downloadLink">
-			<!-- StringConstants.REQ_PARAM_DOWNLOADLINK -->
-			<c:if test="${not empty downloadLink}">
-				<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
-				<a href="${fn:escapeXml(downloadLink)}"><c:out value="${linkText}" /></a>
-			</c:if>
-		</div>		
-
-		<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
-	</div>
-	<div id="wrapper">
-		<div id="header">
-			<div id="headercenter" class="column">
-				<h1 id="pagSubTitle" class="subtitel">
-					<fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message>
-				</h1>
+	<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
+	<div class="page">
+		<div class="header">
+			<div class="h1">
+				<a href="/" title="www.cbsinuwbuurt.nl" name="top">
+					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" title="CBS in uw buurt"/>
+				</a>
 			</div>
-			<div id="headerleft" class="column">
-				<img src="img/template/cbslogo-2.gif" alt="Centraal Bureau voor de Statistiek" class="logo"/>
+			<div class="mainMenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a class="fancybox fancybox.ajax" href="help.jsp">Over CBS in uw buurt</a></li>
+					<li><a class="fancybox fancybox.ajax" href="help.jsp">Hoe werkt dit?</a></li>
+					<li><a class="fancybox fancybox.ajax" href="download.jsp">Download</a></li>
+					<!-- div id downloadlink contains image -->
+					<c:if test="${not empty downloadLink}">
+						<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
+						<li><a href="${fn:escapeXml(downloadLink)}"><c:out value="${linkText}" /></a></li>
+					</c:if>
+				</ul>
 			</div>
-			<div id="headerright" class="column">
-				<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
+			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
+			<div class="pagetitle">
+				<h3><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h3>
 			</div>
-		</div>
+			<div class="clearer"></div>			
+        </div>	
 
 		<div id="inhoud">	
 			<div id="coreContainer" class="kaartContainer">
@@ -141,7 +139,6 @@
 					</div>
 				</li>
 			</ul>		
-			
 			<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />					
 		</div>
 	</div>	
