@@ -13,10 +13,10 @@
 		<div id="footerWrapper">	
 			<span class="introduction"><fmt:message key="KEY_COPYRIGHT" /></span>
 			<ul>
-				<li><a href="http://www.cbs.nl">Contact</a></li>
-				<li><a href="http://www.cbs.nl">Gebruikersvoorwaarden</a></li>
-				<li><a href="http://www.cbs.nl">Sitemap</a></li>
-				<li class="goTop"><a href="#top"><span>link naar boven</span></a></li>
+				<li><a href="http://www.cbs.nl"><fmt:message key="KEY_FOOTER_CONTACT" /></a></li>
+				<li><a href="http://www.cbs.nl"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a></li>
+				<li><a href="http://www.cbs.nl"><fmt:message key="KEY_FOOTER_SITEMAP" /></a></li>
+				<li class="goTop"><a href="#top"><span><fmt:message key="KEY_FOOTER_LINKTOP" /></span></a></li>
 			</ul>
 		</div>
 	</jsp:text>

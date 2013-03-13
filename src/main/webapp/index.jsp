@@ -74,10 +74,10 @@
 			</div>
 			<div class="mainMenu">
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a class="fancybox fancybox.ajax" href="help.jsp">Over CBS in uw buurt</a></li>
-					<li><a class="fancybox fancybox.ajax" href="help.jsp">Hoe werkt dit?</a></li>
-					<li><a class="fancybox fancybox.ajax" href="download.jsp">Download</a></li>
+					<li><a href="/"><fmt:message key="KEY_MENU_HOME" /></a></li>
+					<li><a class="fancybox fancybox.ajax" href="help.jsp"><fmt:message key="KEY_MENU_ABOUT" /></a></li>
+					<li><a class="fancybox fancybox.ajax" href="help.jsp"><fmt:message key="KEY_MENU_HELP" /></a></li>
+					<li><a class="fancybox fancybox.ajax" href="download.jsp"><fmt:message key="KEY_MENU_DOWNLOAD" /></a></li>
 					<!-- div id downloadlink contains image -->
 					<c:if test="${not empty downloadLink}">
 						<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>

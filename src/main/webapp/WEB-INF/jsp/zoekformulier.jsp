@@ -13,7 +13,7 @@
 		<form title="Zoekformulier" method="get" action="adres"	id="zoekFormulier">
 			<p class="zoekinput">
 				<fieldset>
-					<label for="adres">Zoek adres:</label>
+					<label for="adres"><fmt:message key="KEY_ADRESZOEKEN_TITEL" /></label>
 					<input name="adres" id="adres" accesskey="8" onkeypress="if (event.keyCode==13){document.getElementById('searchbutton').click();return false}" value="${param.adres}" onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}" onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};" type="text"/>
 					<input name="searchbutton" id="searchbutton" accesskey="s" class="searchbutton" value="" type="submit"/>
 				
@@ -34,8 +34,7 @@
 			<c:if test="${adreslijst!=null}">
 				<!-- for item in lijst maak url -->
 				<ul class="adreslijst">
-					<li class="list"><a class="selector" href="#">maak een
-							keuze uit de lijst</a>
+					<li class="list"><a class="selector" href="#"><fmt:message key="KEY_ZOEKEN_CHOICE" /></a>
 						<ul class="adressen">
 							<c:forEach var="adres" items="${adreslijst}">
 								<fmt:message var="ttl" key="KEY_ZOEKEN_LINK_TTL">

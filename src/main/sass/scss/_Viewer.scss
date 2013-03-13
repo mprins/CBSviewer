@@ -48,7 +48,7 @@
 	position: absolute;
 	z-index: 900;
 	top: 4px;
-	right: 70px;
+	right: 35px;
 	width: 200px;
 	line-height: 21px;
 	color: #fff;
@@ -65,6 +65,7 @@
 	background: #fff;
 	font-weight: normal;
 	color: $BlueColour;
+	cursor:pointer;
 }
 
 #sliderFGMap a {
