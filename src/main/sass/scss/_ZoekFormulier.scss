@@ -6,8 +6,13 @@
 }
 
 #zoekresultaten {
+	position:absolute;
+	left: 128px;
+	top: 37px;
+	width: 266px;
 	z-index: 2040;
 	line-height: 25px;
+	background:#fff;
 }
 
 #zoekContainer {
@@ -89,7 +94,7 @@ ul.adreslijst {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	width: 100px;
+	width: 266px;
 	overflow: hidden;
 	margin-right: 1px;
 }
@@ -102,7 +107,7 @@ ul.adreslijst a {
 
 ul.adreslijst li.list {
 	float: left;
-	width: 250px;
+	width: 266px;
 	margin: -32767px -125px 0px 0px;
 }
 
@@ -111,7 +116,7 @@ ul.adreslijst li.list a.selector {
 	z-index: 50;
 	display: block;
 	float: left;
-	width: 120px;
+	width: 266px;
 	margin-top: 32767px;
 	background: transparent;
 }
@@ -133,7 +138,7 @@ ul.adressen {
 
 ul.adressen li a {
 	float: left;
-	width: 120px;
+	width: 266px;
 	background: #369;
 	clear: left;
 	color: #fff;
