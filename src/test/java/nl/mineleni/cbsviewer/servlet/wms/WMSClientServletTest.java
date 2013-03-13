@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -20,25 +20,21 @@ import javax.servlet.ServletException;
 import nl.mineleni.cbsviewer.util.StringConstants;
 
 import org.jmock.Expectations;
-import org.jmock.Mockery;
-import org.jmock.integration.junit4.JMock;
-import org.jmock.integration.junit4.JUnit4Mockery;
+import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 /**
  * Test case for {@link nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet}.
  * 
  * @author mprins
  */
-@RunWith(JMock.class)
 public class WMSClientServletTest {
 	/** servlet die we testen. */
 	private WMSClientServlet servlet;
 	/** junit mockery. */
-	private final Mockery mockery = new JUnit4Mockery();
+	private final JUnitRuleMockery mockery = new JUnitRuleMockery();
 	/** ge-mockte servlet config gebruikt in de test. */
 	private ServletConfig servletConfig;
 	/** ge-mockte servlet context gebruikt in de test. */

@@ -27,13 +27,10 @@ import javax.servlet.http.HttpServletResponse;
 import nl.mineleni.cbsviewer.util.StringConstants;
 
 import org.jmock.Expectations;
-import org.jmock.Mockery;
-import org.jmock.integration.junit4.JMock;
-import org.jmock.integration.junit4.JUnit4Mockery;
+import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 /**
  * Test case for {@link nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet}. dit
@@ -42,12 +39,11 @@ import org.junit.runner.RunWith;
  * 
  * @author mprins
  */
-@RunWith(JMock.class)
 public class WMSClientServletIntegrationTest {
 	/** servlet die we testen. */
 	private WMSClientServlet servlet;
 	/** junit mockery. */
-	private final Mockery mockery = new JUnit4Mockery();
+	private final JUnitRuleMockery mockery = new JUnitRuleMockery();
 	/** mocked servlet request. */
 	private HttpServletRequest request;
 	/** ge-mockte servlet config gebruikt in de test. */

@@ -26,12 +26,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.jmock.Expectations;
-import org.jmock.Mockery;
-import org.jmock.integration.junit4.JMock;
-import org.jmock.integration.junit4.JUnit4Mockery;
+import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 /**
  * Unit tests voor {@link nl.mineleni.cbsviewer.servlet.ReverseProxyServlet }
@@ -39,13 +36,12 @@ import org.junit.runner.RunWith;
  * @author prinsmc
  * 
  */
-@RunWith(JMock.class)
 public class ReverseProxyServletTest {
 	/** servlet die we testen. */
 	private ReverseProxyServlet pxyServlet;
 
 	/** junit mockery. */
-	private final Mockery mockery = new JUnit4Mockery();
+	private final JUnitRuleMockery mockery = new JUnitRuleMockery();
 
 	/** ge-mockte servlet request gebruikt in de test. */
 	private HttpServletRequest request;

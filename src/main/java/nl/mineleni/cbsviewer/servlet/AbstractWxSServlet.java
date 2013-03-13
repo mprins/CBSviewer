@@ -1,5 +1,8 @@
-/**
+/*
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet;
 
@@ -85,6 +88,7 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 	protected int[] parseLocation(final HttpServletRequest request)
 			throws ServletException {
 		try {
+			@SuppressWarnings("unchecked")
 			final Enumeration<String> attr = request.getAttributeNames();
 			while (attr.hasMoreElements()) {
 				final String name = attr.nextElement();
@@ -92,6 +96,7 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 						+ request.getAttribute(name));
 			}
 
+			@SuppressWarnings("unchecked")
 			final Map<String, String[]> p = request.getParameterMap();
 			for (final Map.Entry<String, String[]> e : p.entrySet()) {
 				LOGGER.debug("parameter key: " + e.getKey() + " value: "
