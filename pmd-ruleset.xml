@@ -34,6 +34,9 @@
 
 	<!-- Belangrijk: de default rule sets als laatste aanroepen -->
 	<rule ref="rulesets/basic.xml" />
-	<rule ref="rulesets/unusedcode.xml" />
+	<rule ref="rulesets/unusedcode.xml">
+		<!-- work around http://sourceforge.net/p/pmd/bugs/1012/ -->
+		<exclude name="UselessParentheses" />
+	</rule>
 	<rule ref="rulesets/imports.xml" />
 </ruleset>
