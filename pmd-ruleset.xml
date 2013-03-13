@@ -31,12 +31,13 @@
 	<rule ref="rulesets/strictexception.xml" />
 	<rule ref="rulesets/sunsecure.xml" />
 	<rule ref="rulesets/typeresolution.xml" />
-
-	<!-- Belangrijk: de default rule sets als laatste aanroepen -->
-	<rule ref="rulesets/basic.xml" />
-	<rule ref="rulesets/unusedcode.xml">
+	<rule ref="rulesets/unnecessary.xml">
 		<!-- work around http://sourceforge.net/p/pmd/bugs/1012/ -->
 		<exclude name="UselessParentheses" />
 	</rule>
+
+	<!-- Belangrijk: de default rule sets als laatste aanroepen -->
+	<rule ref="rulesets/basic.xml" />
+	<rule ref="rulesets/unusedcode.xml" />
 	<rule ref="rulesets/imports.xml" />
 </ruleset>
