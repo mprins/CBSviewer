@@ -92,6 +92,7 @@ var Viewer = function() {
 	 * 
 	 * @param alpha
 	 *            float waarde tussen 0 1n 1
+	 * @private
 	 */
 	function _setOpacity(alpha) {
 		alpha = parseFloat(alpha);
@@ -104,6 +105,31 @@ var Viewer = function() {
 				}
 			}
 		}
+	}
+
+	/**
+	 * event handler voor na de zoomTo functie van deze viewer.
+	 * 
+	 * @param lonlat
+	 *            {OpenLayers.LonLat} de zoomlokatie
+	 * 
+	 * @private
+	 */
+	function _afterZoomTo(lonlat) {
+		// @param layer {OpenLayers.layer.WMS} wms layer waarop gewacht wordt
+		// function _afterZoomTo(lonlat, layer) {
+		_map.getControlsByClass('ClickDrawControl')[0].trigger({
+			xy : _map.getPixelFromLonLat(lonlat)
+		});
+
+		_map.getControlsByClass('WMSGetFeatureInfo')[0].deactivate();
+		_map.getControlsByClass('WMSGetFeatureInfo')[0].activate();
+		_map.events.triggerEvent('click', {
+			xy : _map.getPixelFromLonLat(lonlat)
+		});
+
+		_map.events.unregister('zoomend', _map, _afterZoomTo);
+		// layer.events.unregister('loadend', layer, _afterZoomTo);
 	}
 
 	/**
@@ -231,29 +257,22 @@ var Viewer = function() {
 		 */
 		zoomTo : function(x, y, radius, withFeatureInfo) {
 			var lonlat = new OpenLayers.LonLat(x, y);
-
-			console.debug("zoomTo kaart", x, y, radius, withFeatureInfo, lonlat);
-
 			_map.panTo(lonlat);
 			_map.zoomTo(_map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius)));
-			// _map.zoomToExtent(new OpenLayers.Bounds(x - radius, y - radius, x
-			// + radius, y + radius));
 
 			if (withFeatureInfo) {
-				_map.events.register('moveend', _map, function() {
-					// evt. loadend op wms layer gebruiken
-					console.debug("moveend functie kaart na verschuiven", x, y, lonlat);
-					_map.events.triggerEvent('click', {
-						xy : _map.getPixelFromLonLat(lonlat)
-					});
-				});
-
-//				_map.events.register('zoomend', _map, function() {
-//					console.debug("zoomend functie kaart na verschuiven", x, y, lonlat);
-//					_map.events.triggerEvent('click', {
-//						xy : _map.getPixelFromLonLat(lonlat)
-//					});
-//				});
+				// met een zoomend werkt het soms raar, maar met wachten op
+				// loadend van het eerste wms thema gaat het vaker mis
+				_map.events.register('zoomend', _map, _afterZoomTo(lonlat));
+				// var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS'),
+				// lyr;
+				// for (lyr = 0; lyr < lyrs.length; lyr++) {
+				// if (!lyrs[lyr].isBaseLayer) {
+				// lyrs[lyr].events.register('loadend', lyrs[lyr],
+				// _afterZoomTo(lonlat, lyrs[lyr]));
+				// break;
+				// }
+				// }
 			}
 		},
 
