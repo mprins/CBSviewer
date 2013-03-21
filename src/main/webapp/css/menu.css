@@ -121,6 +121,9 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	line-height:40px;
 	padding: 10px 10px 10px 15px;
 }
+.navCategories>li>a span {
+	line-height:20px;
+}
 .navCategories>li>a.current,
 .navCategories>li>a:hover,
 .navCategories>li>a:focus  {
