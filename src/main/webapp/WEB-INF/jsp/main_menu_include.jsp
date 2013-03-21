@@ -541,7 +541,7 @@
 					</li>
 					<li id="infobox"></li>
 				</ol>
-				<span href="#closemega" class="closeMega"></span>
+				<span href="#closemega" class="closeMega">Sluit</span>
 			</div>
 		</li>
 	</ul>
