@@ -238,6 +238,8 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	float: left;
 	margin: 0 3px;
 	padding: 0 0 0px;
+	font-size:12px;
+	font-family: 'Arial';
 	padding-left: 10px;
 	position: relative;
 }
@@ -318,6 +320,9 @@ html.js .navleft > li, html.js .navright > li {
 	top: 0px;
 	width: 190px !important;
 	z-index: 1010;
+}
+.navbottom {
+	top:-145px !important;
 }
 .navleft ul li, .navright ul li {
 	float: none;

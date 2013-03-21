@@ -72,9 +72,8 @@ jQuery('#hasMenu').click(function() {
 });
 
 /**
- * Use a timeout to hide the sub menu, todo: call function after timeout instead
- * of delay
- */
+  * Close all sub menu's and open current
+  */
 jQuery('ul.navleft li, ul.navright li').click(function() {
 	// hide all except the one clicked on
 	jQuery('ul.submenu').not(jQuery(this).find('ul.submenu')).hide();
