@@ -36,7 +36,7 @@
 		<meta name="DC.creator"   scheme="OVERHEID.dienstAgentschapInstellingOfProject" content="CBS" />
 		<meta name="DC.publisher" scheme="OVERHEID.dienstAgentschapInstellingOfProject" content="CBS" />
 
-		<link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.1.custom.min.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.2.custom.min.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/no-theme/jquery.fancybox.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/compiled.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
