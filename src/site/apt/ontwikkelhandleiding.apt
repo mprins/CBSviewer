@@ -67,26 +67,16 @@ mvn -Popenlayers,developer
 
 ** Javascript
 
-  Er wordt gebruik gemaakt van het {{{Jasmine}http://pivotal.github.com/jasmine/}} framework. De code voor unit test 
-  gaat in <<</src/test/js/jasmine/>>>, iedere test moet ook worden opgenomen in de testrunner pagina 
-  <<<PhantomSpecRunner.html>>>. Tests worden automatisch gedraaid in een PhantomJS/Webkit runtime tijdens de test 
-  fase van Maven.
-  Om unit tests met de hand te draaien zijn er onderstaande opties.
-  
-*** Jasmine plugin
-
-  Er is een specifiek profiel <<<jasmineserver>>> waarin een server gestart kan worden.
+  Er wordt gebruik gemaakt van het {{{Jasmine}http://pivotal.github.com/jasmine/}} framework. De code voor een unit test 
+  gaat in <<</src/test/js/jasmine/>>>. Tests worden automatisch gedraaid in een HtmlUnit runtime tijdens de test 
+  fase van Maven. Om unit tests met de hand te draaien zijn tijdens het ontwikkelen kan het <<<jasmineserver>>> profiel 
+  worden gebruikt.
   
 +----+
 mvn -Pjasmineserver jasmine:bdd
 +----+
   
-  Start de tests op: {{http://localhost:8234/}}, de pagina kan worden geladen in een broser naar keuze.
-  
-*** Browser
-
-  Je kunt het bestand met de unit tests openen in een browser naar keuze, het kan zijn dat bepaalde zaken niet werken 
-  vanwege url beperkingen van de browser.
+  Start de tests op: {{http://localhost:8234/}}, de pagina kan worden geladen in een browser naar keuze.
   
 * {Applicatie testen} 
 
