@@ -51,7 +51,7 @@
 
 div.olControlZoom {
 	position: absolute;
-	top: 55px;
+	top: 35px;
 	right: 8px;
 	background: rgba(255, 255, 255, 0.2);
 	@include border-radius(4px);
@@ -71,9 +71,9 @@ div.olControlZoom a {
 	height: 22px;
 	width: 22px;
 	line-height: 19px;
-	background: $BlueColourTransp;
+	background: $BlueColour;
 	&:hover	{
-		background: $BlueColour;
+		background: $BlueColourTransp;
 	}
 }
 

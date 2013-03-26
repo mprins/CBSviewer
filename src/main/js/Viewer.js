@@ -195,7 +195,8 @@ var Viewer = function() {
 			});
 
 			if (this.config.fgAlphaSlider) {
-				var aSlider = jQuery('<div id="sliderFGMap"><span id="slidervalue"></span></div>').prependTo(
+				// removed <span id="slidervalue"></span> according new cbs style
+				var aSlider = jQuery('<div id="sliderFGMap"></div>').prependTo(
 						jQuery('#' + config.mapDiv)).slider({
 					value : _opacity * 100,
 					range : 'min',
@@ -205,12 +206,12 @@ var Viewer = function() {
 					animate : "slow",
 					slide : function(event, ui) {
 						_setOpacity(ui.value / 100);
-						jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+						/*jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
 							'0' : (100 - ui.value)
-						}));
-						jQuery(this).find('a:first').text(100 - ui.value);
+						}));*/
+						jQuery(this).find('a:first').text(ui.value);
 						// move tooltip
-						if (ui.value > 50) {
+						/*if (ui.value > 50) {
 							jQuery('#slidervalue').css({
 								'left' : '50%'
 							});
@@ -218,15 +219,15 @@ var Viewer = function() {
 							jQuery('#slidervalue').css({
 								'left' : ui.value + '%'
 							});
-						}
+						}*/
 					}
 				});
 				// instellen initiele waarde op tooltip
-				jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+				/*jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
 					'0' : 100 - (_opacity * 100)
-				}));
+				}));*/
 				// en slider
-				jQuery('#sliderFGMap').find('a:first').text(100 - (_opacity * 100));
+				jQuery('#sliderFGMap').find('a:first').text((_opacity * 100));
 			}
 		},
 

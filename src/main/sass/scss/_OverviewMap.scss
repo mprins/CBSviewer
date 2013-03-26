@@ -23,10 +23,10 @@
 	color: #fff;
 	padding: 0;
 	border: $ControlBorder;
-	background: $BlueColourTransp;
+	background: $BlueColour;;
 	&:focus, &:hover {
 		outline-width: 1px;
-		background: $BlueColour;
+		background: $BlueColourTransp
 	}
 }
 

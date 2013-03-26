@@ -13,6 +13,7 @@
 	left: 2px;
 	position: absolute;
 	top: 165px;
+	z-index: 1050;
 }
 .siteNavigation, .siteNavigation ol, .siteNavigation ul, .siteNavigation li {
 	list-style: none;
