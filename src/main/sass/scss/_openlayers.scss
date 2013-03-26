@@ -25,14 +25,14 @@
 }
 
 .olControlScaleLineBottom {
-	border: solid 2px black;
+	border: solid 2px $BlueColour;
 	border-bottom: none;
 	margin-top:-2px;
 	text-align: center;
 }
 
 .olControlScaleLineTop {
-	border: solid 2px black;
+	border: solid 2px $BlueColour;
 	border-top: none;
 	text-align: center;
 }
