@@ -306,7 +306,7 @@ html.js .navleft > li, html.js .navright > li {
 	min-height: 0px;
 	padding: 3px 8px 3px 8px;
 	position: absolute;
-	top: 0px;
+	top: -10px;
 	width: 190px !important;
 	z-index: 1007;
 	z-index: 1010;
@@ -320,7 +320,7 @@ html.js .navleft > li, html.js .navright > li {
 	min-height: 0px;
 	padding: 3px 8px 3px 8px;
 	position: absolute;
-	top: 0px;
+	top: -10px;
 	width: 190px !important;
 	z-index: 1010;
 }
@@ -362,7 +362,7 @@ html.js .navleft > li, html.js .navright > li {
 	margin: 0px;
 	padding: 5px;
 	position: fixed;
-	top: 395px;
+	top: 375px;
 	width: 183px;
 	z-index: 100;
 }
