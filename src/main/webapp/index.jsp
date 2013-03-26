@@ -86,8 +86,8 @@
 				</ul>
 			</div>
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
-			<div class="pagetitle">
-				<h3><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h3>
+			<div class="pagetitle">				
+				<h3 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h3>
 			</div>
 			<div class="clearer"></div>			
         </div>	
