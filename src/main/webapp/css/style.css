@@ -339,16 +339,7 @@ html.js #cbslogo {
 	background-repeat: no-repeat;
 	background-color: #fff;
 	background-size: auto 51px;
-}/*
-
-/* feature informatie */
-.featureinfo {
-	
-}
-
-#featureinfo {
-	
-}
+}*/
 
 .attribuutTabel {
 	background-color:#fff;
@@ -487,24 +478,20 @@ html.js #cbslogo {
 	position: relative;
 	line-height:32px;
 	height: 32px;
-	color: #fdfdfd;
-	font: bold 12px/32px Arial, sans-serif;
+	color: #271d6c;
+	font-family: 'SoHo Medium';
+	font-size:16px;
 	text-decoration: none;
-	text-shadow: 0px 1px 0px rgba(0,0,0, .35);
 	min-width: 110px;
-	padding: 0 10px 0 40px;
-	background: #94979E;
-	background: -moz-linear-gradient(top,  #94979E 0%, #6F7277 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#94979E), color-stop(100%,#6F7277));
-	background: -webkit-linear-gradient(top,  #94979E 0%,#6F7277 100%);
-	background: -o-linear-gradient(top,  #94979E 0%,#6F7277 100%);
-	background: -ms-linear-gradient(top,  #94979E 0%,#6F7277 100%);
-	background: linear-gradient(top,  #94979E 0%,#6F7277 100%);
-
-	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-	box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+	padding: 0 15px 0 40px;
+	background: #efefef;
 }
+.settingsPanel li:last-child > a {
+    font-size: 12px;
+    font-family: arial, sans-serif;
+	color: #000;
+}
+
 .menuAccordion li > .accordionheader {
 	position: absolute;
 	left:-190px;
@@ -518,17 +505,11 @@ html.js #cbslogo {
     padding: 4px 8px;
 }
 
-.settingsPanel > li:hover > a,
-.settingsPanel > li:target > a,
-.settingsPanel > li > a.active {
-	color: #fff !important;
-	background: #31629F;
-	background: -moz-linear-gradient(top,  #31629F 0%, #003C88 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#31629F), color-stop(100%,#003C88));
-	background: -webkit-linear-gradient(top,  #31629F 0%,#003C88 100%);
-	background: -o-linear-gradient(top,  #31629F 0%,#003C88 100%);
-	background: -ms-linear-gradient(top,  #31629F 0%,#003C88 100%);
-	background: linear-gradient(top,  #31629F 0%,#003C88 100%);	
+.settingsPanel > li:first-child:hover > a,
+.settingsPanel > li:first-child:target > a,
+.settingsPanel > li:first-child > a.active {
+	color: #271d6c !important;
+	background: #ffffff;
 }
 
 .menuAccordion > li > a.active {
@@ -543,6 +524,10 @@ html.js #cbslogo {
 	height:470px;
 }
 
+#featureinfo {
+	padding: 10px;
+}
+
 /* Images */
 .settingsPanel > li > a:before
  {
@@ -552,7 +537,7 @@ html.js #cbslogo {
 	content: '';
 	width: 24px;
 	height: 24px;
-	margin: 4px 8px;
+	margin: 5px 12px;
 
 	background-repeat: no-repeat;
 	background-image: url(../img/template/settings_icons.png);
