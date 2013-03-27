@@ -30,17 +30,16 @@ jQuery(document)
 					/* slidedown effect */
 					var settings_head = jQuery('.settingsPanel > li > a');
 					settings_head.first().addClass('active').next().slideDown('normal');
-
+					jQuery('#legenda').css('max-height', jQuery(window).height() - 500); //todo: compute height on click
+					
 					settings_head.on('click', function(event) {
-						event.preventDefault();
-
-						jQuery('#legenda').css('max-height', jQuery(window).height() - 350 - jQuery('#keyfeatureinfo').height());
+						event.preventDefault();						
 						jQuery(this).next().stop(true, true).slideToggle('normal');
 						if (jQuery(this).attr('class') != 'active') {
 							jQuery(this).addClass('active');
 						} else {
 							jQuery(this).removeClass('active');
-						}
+						}						
 					});
 
 					var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'), menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');

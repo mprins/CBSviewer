@@ -76,7 +76,7 @@ var Viewer = function() {
 			var h = jQuery(window).height() - headerH - footerH - borderH;
 
 			jQuery('#' + this.config.mapDiv).width(w).height(h);			
-			jQuery('#legenda').css('max-height', jQuery(window).height() - 350 - jQuery('#keyfeatureinfo').height());
+			jQuery('#legenda').css('max-height', jQuery(window).height() - 500); // todo: compute height and remove from here
 			
 			_map.updateSize();
 			var vectors = _map.getLayersByClass("OpenLayers.Layer.Vector");
