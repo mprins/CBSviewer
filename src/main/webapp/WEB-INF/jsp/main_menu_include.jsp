@@ -256,6 +256,7 @@
 														</ul>
 													</li>
 													<li><a class="disabled" href="#">Binnenlandse migratie<span class="redcolor">Dit thema is niet aanwezig.</span></a></li>
+													<li><a class="disabled" href="#">Buitenlandse migratie<span class="redcolor">Dit thema is niet aanwezig.</span></a></li>
 													<li><a class="disabled" href="#">Mannen<span class="redcolor">Dit thema is niet aanwezig.</span></a>
 													</li>
 													<li><a class="disabled" href="#">Vrouwen<span class="redcolor">Dit thema is niet aanwezig.</span></a>
@@ -384,8 +385,6 @@
 												</li>
 
 												<li class="menuTitle">Aantal binnen 3 kilometer</li>
-												<li><a class="disabled" href="#">Huisartsenpraktijk<span class="redcolor">Dit thema is niet aanwezig.</span></a>
-												</li>
 												<li><a class="disabled" href="#">Kinderdagverblijf<span class="redcolor">Dit thema is niet aanwezig.</span></a>
 												</li>
 												<li><a class="disabled" href="#">Basisonderwijs<span class="redcolor">Dit thema is niet aanwezig.</span></a>

@@ -34,6 +34,7 @@ jQuery(document)
 					settings_head.on('click', function(event) {
 						event.preventDefault();
 
+						jQuery('#legenda').css('max-height', jQuery(window).height() - 350 - jQuery('#keyfeatureinfo').height());
 						jQuery(this).next().stop(true, true).slideToggle('normal');
 						if (jQuery(this).attr('class') != 'active') {
 							jQuery(this).addClass('active');

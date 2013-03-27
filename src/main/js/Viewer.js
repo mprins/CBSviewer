@@ -75,7 +75,9 @@ var Viewer = function() {
 			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
 			var h = jQuery(window).height() - headerH - footerH - borderH;
 
-			jQuery('#' + this.config.mapDiv).width(w).height(h);
+			jQuery('#' + this.config.mapDiv).width(w).height(h);			
+			jQuery('#legenda').css('max-height', jQuery(window).height() - 350 - jQuery('#keyfeatureinfo').height());
+			
 			_map.updateSize();
 			var vectors = _map.getLayersByClass("OpenLayers.Layer.Vector");
 			if (vectors.length > 0) {
