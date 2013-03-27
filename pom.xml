@@ -288,7 +288,7 @@
 							</execution>
 						</executions>
 						<configuration>
-							<browserVersion>CHROME_16</browserVersion>
+							<browserVersion>CHROME</browserVersion>
 							<jsSrcDir>src/main/js</jsSrcDir>
 							<jsTestSrcDir>src/test/js/jasmine</jsTestSrcDir>
 							<debug>${debug}</debug>
@@ -546,7 +546,6 @@
 				<version>1.4.0</version>
 				<executions>
 					<execution>
-						<!-- <phase>site</phase>-->
 						<goals>
 							<goal>coverage</goal>
 						</goals>
@@ -554,7 +553,7 @@
 				</executions>
 				<configuration>
 					<baseDir>http://localhost:${jasmine.serverPort}</baseDir>
-					<browserVersion>CHROME_16</browserVersion>
+					<browserVersion>CHROME</browserVersion>
 					<noInstrumentPatterns>
 						<pattern>\b.+/spec/.+\.js\b</pattern>
 						<pattern>\b(\w*)\.min\.js\b</pattern>
