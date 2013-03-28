@@ -97,11 +97,9 @@ public final class FeatureInfoResponseConverter {
 					.decodeFeatureIterator(gmlStream);
 			if (iter.hasNext()) {
 				// tabel maken
-				sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\">");
-				sb.append("<caption>");
+				sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\"><caption>");
 				sb.append(RESOURCES.getString("KEY_INFO_TABEL_CAPTION"));
-				sb.append("</caption>");
-				sb.append("<thead><tr>");
+				sb.append("</caption><thead><tr>");
 				for (final String n : fieldNames) {
 					sb.append("<th scope=\"col\">"
 							+ NAMESFILTER.filterValue(n, layer.getId())
@@ -150,8 +148,9 @@ public final class FeatureInfoResponseConverter {
 	 */
 	private static String convertStreamToString(final InputStream is)
 			throws IOException {
+		final Writer writer = new StringWriter();
 		if (is != null) {
-			final Writer writer = new StringWriter();
+
 			final char[] buffer = new char[1024];
 			try {
 				final Reader reader = new BufferedReader(new InputStreamReader(
@@ -163,10 +162,8 @@ public final class FeatureInfoResponseConverter {
 			} finally {
 				is.close();
 			}
-			return writer.toString();
-		} else {
-			return "";
 		}
+		return writer.toString();
 	}
 
 	/**
@@ -183,7 +180,7 @@ public final class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public static String convertToHTMLTable(final InputStream input,
-			final String type, LayerDescriptor layer) throws IOException {
+			final String type, final LayerDescriptor layer) throws IOException {
 		switch (type.toUpperCase()) {
 		case "GMLTYPE":
 			return convertGML(input, layer);

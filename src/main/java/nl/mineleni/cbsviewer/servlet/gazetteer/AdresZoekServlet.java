@@ -24,6 +24,7 @@ import nl.mineleni.cbsviewer.servlet.AbstractWxSServlet;
 import nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient;
 import nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress;
 import nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtil;
+import nl.mineleni.cbsviewer.util.LabelsBundle;
 import nl.mineleni.openls.databinding.openls.GeocodeResponse;
 
 import org.slf4j.Logger;
@@ -53,6 +54,9 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 
 	/** gazetteer service url config parameter. {@value} . */
 	private static final String SERVLETCONFIG_OPENLS_SERVER_URL = "openlsserverurl";
+
+	/** De gedeelde, read-only, resourcebundel voor de applicatie. */
+	private final LabelsBundle _labels = new LabelsBundle();
 
 	/** De open ls client die het echte werk doet. */
 	private transient OpenLSClient openLSClient;
@@ -151,7 +155,7 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 		LOGGER.debug("Zoeken naar: " + zoekTerm);
 		if (zoekTerm.length() < 1) {
 			request.setAttribute(REQ_PARAM_GEVONDEN.code,
-					this._RESOURCES.getString("KEY_ZOEKEN_NIETS_INGEVULD"));
+					this._labels.getString("KEY_ZOEKEN_NIETS_INGEVULD"));
 			if (forwardResponse) {
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);
@@ -169,10 +173,10 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 			if (forwardResponse) {
 				if (addrl.isEmpty()) {
 					// niets gevonden
-					LOGGER.debug(this._RESOURCES
+					LOGGER.debug(this._labels
 							.getString("KEY_ZOEKEN_GEEN_ADRES") + zoekTerm);
 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-							this._RESOURCES.getString("KEY_ZOEKEN_GEEN_ADRES"));
+							this._labels.getString("KEY_ZOEKEN_GEEN_ADRES"));
 				} else if (addrl.size() == 1) {
 					// 1 adres gevonden
 					LOGGER.debug("Er is 1 match gevonden voor: " + zoekTerm);
@@ -185,7 +189,7 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 					request.setAttribute(REQ_PARAM_STRAAL.code,
 							addr.getRadius());
 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-							this._RESOURCES.getString("KEY_ZOEKEN_EEN_ADRES")
+							this._labels.getString("KEY_ZOEKEN_EEN_ADRES")
 									+ " " + addr.getAddressString());
 				} else {
 					// meer dan 1 adressen gevonden
@@ -193,7 +197,7 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 							+ zoekTerm);
 					request.setAttribute("adreslijst", addrl);
 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-							this._RESOURCES.getString("KEY_ZOEKEN_MEER_ADRES"));
+							this._labels.getString("KEY_ZOEKEN_MEER_ADRES"));
 				}
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);

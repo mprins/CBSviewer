@@ -30,7 +30,7 @@ public class AttributesNamesFilter {
 	 * 
 	 * @return de gefilterde input zoals in de filtermapping beschreven.
 	 */
-	public String filterValue(String attribute, String layerID) {
+	public String filterValue(final String attribute, final String layerID) {
 		if (this.hasFilters(layerID)) {
 			final String[] aliases = this.layers.getLayerByID(layerID)
 					.getAliases().split(",\\s*");
@@ -54,7 +54,7 @@ public class AttributesNamesFilter {
 	 * 
 	 * @return {@code true} als het filter inhoud heeft
 	 */
-	private boolean hasFilters(String layerID) {
+	private boolean hasFilters(final String layerID) {
 		return (null != this.layers.getLayerByID(layerID).getAliases());
 	}
 }

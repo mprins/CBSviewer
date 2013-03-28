@@ -108,11 +108,7 @@ public class GeotoolsContextListener implements ServletContextListener {
 		DataAccessFinder.reset();
 
 		// force cleanup memory
-		System.gc();
 		System.runFinalization();
-		System.gc();
-		System.runFinalization();
-		System.gc();
 	}
 
 	/**

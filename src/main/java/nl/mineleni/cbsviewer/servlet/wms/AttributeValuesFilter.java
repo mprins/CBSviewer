@@ -35,7 +35,7 @@ public class AttributeValuesFilter {
 	/**
 	 * lijst met beschikbare filters.
 	 */
-	private List<AttributeValueFilter> filters = null;
+	private List<AttributeValueFilter> filters;
 
 	/** cached flag telling about filters. */
 	private boolean hasFilters;

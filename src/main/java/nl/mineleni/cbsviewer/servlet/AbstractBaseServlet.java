@@ -10,8 +10,6 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
-import nl.mineleni.cbsviewer.util.LabelsBundle;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,9 +27,6 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 	/** sleutel voor password. {@value} */
 	public static final String USER_PASSWORD = "user_password";
 
-	/** De gedeelde, read-only, resourcebundel voor de applicatie. */
-	protected LabelsBundle _RESOURCES = new LabelsBundle();
-
 	/** default serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
@@ -39,16 +34,16 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(AbstractBaseServlet.class);
 	/** proxyserver address for the this service. {@value} */
-	private String proxyHost = null;
+	private String proxyHost;
 
 	/** proxyserver port for the this service. {@value} */
 	private int proxyPort = -1;
 
 	/** user id voor bijv. authenticatie. @see #USER_ID */
-	private String userID = null;
+	private String userID;
 
 	/** password voor bijv. authenticatie. @see #USER_PASSWORD */
-	private String passID = null;
+	private String passID;
 
 	/**
 	 * Gets the proxy host.
@@ -117,8 +112,10 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 		// user data/parameters
 		this.userID = config.getInitParameter(USER_ID);
 		this.passID = config.getInitParameter(USER_PASSWORD);
-		LOGGER.debug("User ID is: " + this.userID
-				+ "; User password lengte is: "
-				+ (null != this.passID ? this.passID.length() : ""));
+		if (LOGGER.isDebugEnabled()) {
+			LOGGER.debug("User ID is: " + this.userID
+					+ "; User password lengte is: "
+					+ (null != this.passID ? this.passID.length() : "0"));
+		}
 	}
 }
