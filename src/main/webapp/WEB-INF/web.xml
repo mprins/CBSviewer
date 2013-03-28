@@ -52,8 +52,8 @@
 		</init-param> 
 		<!-- Alternatieve basemap van WhereGroup, alleen voor ontwikkeldoeleinden.
 			zie: http://www.wheregroup.com/de/osmwms -->
-		<!-- 
-		<init-param>
+
+		<!--init-param>
 			<description>WMS capabilities url van achtergrond (topografie) kaart</description>
 			<param-name>bgCapabilitiesURL</param-name>
 			<param-value>http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&amp;SERVICE=WMS&amp;VERSION=1.1.1</param-value>
@@ -67,8 +67,8 @@
 				Autobahn,Kraftfahrstrasse,Bundesstrasse,Landstrasse,einfache_Strasse,Zufahrtswege,Wohnstrasse,Wege, 
 				Inselpunkte,Kueste,Insel,Wasserbecken,Kanal,Baeche,Fluesse,Wasser,Gebaeude,Fussgaengerzone,Wiese,Wald,
 				Naherholungsgebiet,Park,unkultiviertes_Land,Gruenflaeche,Bauland,Industriegebiet,Landwirtschaft,Grenzen</param-value>
-		</init-param>
-		-->
+		</init-param-->
+
 
 		<init-param>
 			<description>WMS capabilities url van achtergrond luchtfoto's</description>

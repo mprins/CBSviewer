@@ -68,21 +68,43 @@
 	<div class="page">
 		<div class="header">
 			<div class="h1">
-				<a href="/" title="www.cbsinuwbuurt.nl" name="top">
+				<c:url value="/index.jsp" var="indexLink">
+					<c:param name="coreonly" value="${param.coreonly}" />
+				</c:url>
+				<a href="${fn:escapeXml(indexLink)}" title="www.cbsinuwbuurt.nl" name="top">
 					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" title="CBS in uw buurt"/>
 				</a>
 			</div>
 			<div class="mainMenu">
 				<ul>
-					<li><a href="/"><fmt:message key="KEY_MENU_HOME" /></a></li>
-					<li><a class="fancybox fancybox.ajax" href="help.jsp"><fmt:message key="KEY_MENU_ABOUT" /></a></li>
-					<li><a class="fancybox fancybox.ajax" href="help.jsp"><fmt:message key="KEY_MENU_HELP" /></a></li>
-					<li><a class="fancybox fancybox.ajax" href="download.jsp"><fmt:message key="KEY_MENU_DOWNLOAD" /></a></li>
+					<li>
+						<c:url value="/index.jsp" var="indexLink">
+							<c:param name="coreonly" value="${param.coreonly}" />
+						</c:url>
+						<a href="${fn:escapeXml(indexLink)}"><fmt:message key="KEY_MENU_HOME" /></a></li>
+					<li>
+						<c:url value="/about.jsp" var="aboutLink">
+							<c:param name="coreonly" value="${param.coreonly}" />
+						</c:url>
+						<a class="fancybox fancybox.ajax" href="${fn:escapeXml(aboutLink)}"><fmt:message key="KEY_MENU_ABOUT" /></a>
+					</li>
+					<li>
+						<c:url value="/faq.jsp" var="faqLink">
+							<c:param name="coreonly" value="${param.coreonly}" />
+						</c:url>
+						<a class="fancybox fancybox.ajax" href="${fn:escapeXml(faqLink)}"><fmt:message key="KEY_MENU_HELP" /></a>
+					</li>
+					<li>
+						<c:url value="/download.jsp" var="downloadLink">
+							<c:param name="coreonly" value="${param.coreonly}" />
+						</c:url>
+						<a class="fancybox fancybox.ajax" href="${fn:escapeXml(downloadLink)}"><fmt:message key="KEY_MENU_DOWNLOAD" /></a>
+					</li>
 					<!-- div id downloadlink contains image -->
-					<c:if test="${not empty downloadLink}">
+					<!--c:if test="${not empty downloadLink}">
 						<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
 						<li><a href="${fn:escapeXml(downloadLink)}"><c:out value="${linkText}" /></a></li>
-					</c:if>
+					</c:if-->
 				</ul>
 			</div>
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
@@ -130,7 +152,7 @@
 				</li>
 				<li id="keyfeatureinfo" class="featureinfoPanel">
 					<a href="#keyfeatureinfo"><fmt:message key="KEY_INFO_TITEL" /></a>
-					<div id="featureinfo" class="settingsContent">
+					<div id="featureinfo" class="settingsContent" style="max-height:100px">
 						<c:if test="${param.coreonly==true}">
 							<c:if test="${not empty featureinfo}">
 								<c:out value="${featureinfo}" escapeXml="false" />
