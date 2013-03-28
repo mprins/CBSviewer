@@ -15,8 +15,92 @@ ${project.name} ${project.version} Release Notes
 
 %{toc|section=1|fromDepth=0|toDepth=1}
 
-* {${project.version} Release Notes}
+* ${project.version} Release Notes
+
+  Een complete lijst van de issues van deze release wordt gegeven in de tracker 
+  {{{https://github.com/MinELenI/CBSviewer/issues?milestone=8&state=closed}milestone ${project.version}}}
 
 ** Verbetering
 
+  * autocomplete voor adreszoeken
+  
+  []
+  
 ** Nieuw
+
+  * nieuwe huisstijl CBS websites
+  
+  * gebruik van Compass
+  
+  * schaalbalk op de kaart
+  
+  * overzichtskaartje
+  
+  []
+
+* {1.1 Release Notes}
+
+  Een complete lijst van de issues van deze release wordt gegeven in de tracker 
+  {{{https://github.com/MinELenI/CBSviewer/issues?milestone=7&state=closed}milestone 1.1}}
+
+** Verbetering
+
+  * printen
+  
+  []
+  
+** Nieuw
+
+  * feature attribuutnaam mapper
+  
+  * feature attribuutwaarde mapper
+  
+  * transparantie voor de voorgrondkaart
+  
+  * gebruik van Sass
+  
+  []
+
+* {1.0 Release Notes}
+
+  Een complete lijst van de issues van deze release wordt gegeven in de tracker 
+  {{{https://github.com/MinELenI/CBSviewer/issues?milestone=4&state=closed}milestone 1.0}}
+  
+** Verbetering
+
+  * bugfixes en workarounds voor pdok gazetteer en adreszoeken.
+  
+  * verbetering in feature informatie parsing en presentatie
+  
+  [] 
+
+** Nieuw
+
+  * wisselen achtergrond kaart
+  
+  []
+
+
+* {0.2 Release Notes}
+
+  Milestone twee bevat functie uitbreidingen.
+
+  Een complete lijst van de issues van deze release wordt gegeven in de tracker 
+  {{{https://github.com/MinELenI/CBSviewer/issues?milestone=2&state=closed}milestone 0.2}}
+
+** Nieuw
+
+  * adres zoeken
+  
+  * feature informatie
+  
+  * lagen menu
+  
+  [] 
+
+* {0.1 Release Notes}
+
+  Initiele oplevering van een basis viewer.
+   
+  Een complete lijst van de issues van deze release wordt gegeven in de tracker 
+  {{{https://github.com/MinELenI/CBSviewer/issues?milestone=2&state=closed}milestone 0.1}}
