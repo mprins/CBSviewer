@@ -221,16 +221,16 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				BasicStroke.JOIN_ROUND));
 		g.drawLine(xOffset, yOffset, xOffset + barLength, yOffset);
 		g.drawLine(xOffset, yOffset, xOffset, yOffset - fontSize);
-		g.drawLine(xOffset + barLength, yOffset, xOffset + barLength,
-				yOffset - fontSize);
+		g.drawLine(xOffset + barLength, yOffset, xOffset + barLength, yOffset
+				- fontSize);
 
 		final Font font = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
 		final FontMetrics metrics = g.getFontMetrics(font);
 		g.setFont(font);
-		g.drawString(
-				dist + units,
-				(xOffset + barLength / 2) - (metrics.stringWidth(dist + units) / 2),
-				yOffset - metrics.getDescent() - 2);
+		g.drawString(dist + units,
+				(xOffset + barLength / 2)
+						- (metrics.stringWidth(dist + units) / 2), yOffset
+						- metrics.getDescent() - 2);
 		// CHECKSTYLE.ON: MagicNumber
 	}
 
@@ -672,6 +672,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 *            de voorgrondkaart
 	 * @param imageAchtergrond
 	 *            de achtergrondgrondkaart
+	 * @param alpha
+	 *            alpha transparantie van de voorgrondkaart
 	 * @return de file met de afbeelding
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
@@ -859,13 +861,18 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		float alpha = 0.8f;
 		final String trans = request.getParameter(REQ_PARAM_FGMAP_ALPHA.code);
 		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(trans)) {
+			// CHECKSTYLE.OFF: MagicNumber - default alpha transparantie is 80%
 			try {
+
 				alpha = 1 - (Float.parseFloat(trans) / 100);
 				if ((0 > alpha) && (alpha > 1)) {
 					alpha = 0.8f;
 				}
+
 			} catch (final NumberFormatException n) {
+				alpha = 0.8f;
 			}
+			// CHECKSTYLE.ON: MagicNumber
 		}
 		LOGGER.debug("Transparantie / alpha ingesteld op:" + alpha);
 
