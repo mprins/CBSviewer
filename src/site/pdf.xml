@@ -16,18 +16,15 @@ outputName="maven-pdf-plugin">
     </authors>
     <keywords>a11y</keywords>
     <description>${project.description}</description>
-    <date>${date}</date>
+    <!-- date>${date}</date -->
   </meta>
   <toc name="Inhoud">
     <item name="Home" href="/index.html" />
     <item name="Release notes" href="/releasenotes.html" />
-    <item name="Functioneel ontwerp"
-    href="/functioneelontwerp.html" />
+    <item name="Functioneel ontwerp" href="/functioneelontwerp.html" />
     <item name="Technisch ontwerp" href="/technischontwerp.html" />
-    <item name="Ontwikkel handleiding"
-    href="/ontwikkelhandleiding.html" />
-    <item name="Installatie handleiding"
-    href="/installatiehandleiding.html" />
+    <item name="Ontwikkel handleiding" href="/ontwikkelhandleiding.html" />
+    <item name="Installatie handleiding" href="/installatiehandleiding.html" />
   </toc>
   <cover>
     <coverTitle>${project.name}</coverTitle>
