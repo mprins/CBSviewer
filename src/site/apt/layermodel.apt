@@ -1,0 +1,52 @@
+	 -----
+	 map layer model 
+	 -----
+	 mprins
+	 -----
+	 30 mar 2013
+	 -----
+
+~~ http://maven.apache.org/doxia/references/apt-format.html
+
+Voorgrond kaartlaag model
+
+%{toc|section=1|fromDepth=0|toDepth=1}
+
+* Beschrijving
+
+  De voorgrond kaart bestaat uit één of meer lagen (layer elementen) van een WMS service, dit maakt 
+  het mogelijk om voor alle lagen tegelijk een featureinfo verzoek om attribuut informatie uit te voeren
+  en andere handelingen uit te voeren.
+  
+  In de applicatie kan telkens één voorgrond laag gebruikt worden.
+  
+  Featureinformatie wordt opgehaald als GML en geparsed op het serverside deel van de applicatie, op babsis van de 
+  descriptor wordt een tabel gemaakt met de gevraagde feature attributen.
+  
+** Voorbeeld lagen beschrijving
+
+%{snippet|url=https://raw.github.com/MinELenI/CBSviewer/master/src/test/resources/AvailableLayers.xml}
+
+  De Layerdescriptor is gedefineerd in <<<{{{http://github.com/MinELenI/CBSviewer/blob/master/src/main/xsd/AvailableLayers.xsd}AvailableLayers.xsd}}>>>
+
+* Attribuut namen filtering
+
+  Attribuutnamen kunnen per laag gefilterd worden, hiervoor is een mapping voorzien in het LayerDescriptor.
+  element.
+
+** Voorbeeld 
+
+%{snippet|id=layermodel_apt_1|url=https://raw.github.com/MinELenI/CBSviewer/master/src/test/resources/AvailableLayers.xml}
+
+* Attribuut waarden filtering
+
+  Attribuutwaarden in een feature info response kunnen globaal voor de applicatie gefilterd worden middels het attribuut waarden filter
+  beschreven in <<<{{{https://github.com/MinELenI/CBSviewer/blob/master/src/main/resources/AttributeValuesFilter.xml}AttributeValuesFilter.xml}}>>>
+  Deze functie is vooral nuttig als er ooit shapefiles zijn gebruikt omdat op deze wijze de null waarden en eventuele
+  code waarden kunnen worden herschreven in de resultaat tabel.
+
+** Voorbeeld 
+
+%{snippet|url=https://raw.github.com/MinELenI/CBSviewer/master/src/test/resources/AttributeValuesFilter.xml}
+
+  Het attribuutwaarden filter is gedefinieerd in <<<{{{https://github.com/MinELenI/CBSviewer/blob/master/src/main/xsd/AttributeValuesFilter.xsd}AttributeValuesFilter.xsd}}}}}
