@@ -49,4 +49,4 @@ Voorgrond kaartlaag model
 
 %{snippet|url=https://raw.github.com/MinELenI/CBSviewer/master/src/test/resources/AttributeValuesFilter.xml}
 
-  Het attribuutwaarden filter is gedefinieerd in <<<{{{https://github.com/MinELenI/CBSviewer/blob/master/src/main/xsd/AttributeValuesFilter.xsd}AttributeValuesFilter.xsd}}}}}
+  Het attribuutwaarden filter is gedefinieerd in <<<{{{https://github.com/MinELenI/CBSviewer/blob/master/src/main/xsd/AttributeValuesFilter.xsd}AttributeValuesFilter.xsd}}>>>
