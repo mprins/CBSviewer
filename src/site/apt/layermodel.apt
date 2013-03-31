@@ -14,13 +14,13 @@ Voorgrond kaartlaag model
 
 * Beschrijving
 
-  De voorgrond kaart bestaat uit één of meer lagen (layer elementen) van een WMS service, dit maakt 
+  De voorgrond kaart bestaat uit Ã©Ã©n of meer lagen (layer elementen) van een WMS service, dit maakt 
   het mogelijk om voor alle lagen tegelijk een featureinfo verzoek om attribuut informatie uit te voeren
   en andere handelingen uit te voeren.
   
-  In de applicatie kan telkens één voorgrond laag gebruikt worden.
+  In de applicatie kan telkens Ã©Ã©n voorgrond laag gebruikt worden.
   
-  Featureinformatie wordt opgehaald als GML en geparsed op het serverside deel van de applicatie, op babsis van de 
+  Feature-informatie wordt opgehaald als GML en geparsed op het serverside deel van de applicatie, op babsis van de 
   descriptor wordt een tabel gemaakt met de gevraagde feature attributen.
   
 ** Voorbeeld lagen beschrijving
