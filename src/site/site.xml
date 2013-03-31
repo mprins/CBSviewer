@@ -34,10 +34,10 @@
 		<menu name="Informatie">
 			<item name="Home" href="/index.html" />
 			<item name="Release notes" href="/releasenotes.html" />
-			<item name="Functioneel ontwerp" href="/functioneelontwerp.html" />
 			<item name="Technisch ontwerp" href="/technischontwerp.html" />
 			<item name="Ontwikkel handleiding" href="/ontwikkelhandleiding.html" />
 			<item name="Wiki" href="https://github.com/MinELenI/CBSviewer/wiki" />
+			<item name="PDF documentatie" href="/maven-pdf-plugin.pdf" />
 		</menu>
 		<menu name="Installatie">
 			<item name="Installatie handleiding" href="/installatiehandleiding.html" />

@@ -10,7 +10,7 @@
 
 Ontwikkel handleiding
 
-%{toc|section=1|fromDepth=0|toDepth=3}
+%{toc|section=1|fromDepth=1|toDepth=3}
 
   Dit project gebruikt {{{Maven}http://maven.apache.org/run-maven/index.html}} als build tool 
   en {{{Github}https://github.com/MinELenI/CBSviewer}} voor broncode beheer.

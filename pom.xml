@@ -4,13 +4,13 @@
 	<groupId>nl.cbs.cbsviewer</groupId>
 	<artifactId>cbsviewer</artifactId>
 	<packaging>war</packaging>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.2-SNAPSHOT</version>
 	<name>CBSviewer Webapp</name>
 	<description>Webrichtlijnen compliant webmap viewer.</description>
 	<url>http://mineleni.github.com/CBSviewer</url>
 	<inceptionYear>2012</inceptionYear>
 	<organization>
-		<name><![CDATA[Ministerie EL&amp;I]]></name>
+		<name><![CDATA[Ministerie EZ]]></name>
 		<url>https://github.com/organizations/MinELenI</url>
 	</organization>
 	<developers>
@@ -18,13 +18,13 @@
 			<id>mprins</id>
 			<name>Mark Prins</name>
 			<url>https://github.com/mprins</url>
-			<organization>Dienst Landelijk Gebied, Ministerie EL en I</organization>
+			<organization>Dienst Landelijk Gebied, Ministerie EZ</organization>
 			<organizationUrl>http://www.dienstlandelijkgebied.nl/</organizationUrl>
 		</developer>
 		<developer>
 			<id>pmanders</id>
 			<name>Paul Manders</name>
-			<organization>Centraal Bureau voor de Statistiek, Ministerie EL en I</organization>
+			<organization>Centraal Bureau voor de Statistiek, Ministerie EZ</organization>
 			<organizationUrl>http://www.cbs.nl/</organizationUrl>
 		</developer>
 	</developers>
@@ -861,7 +861,6 @@
 					</reportPlugins>
 				</configuration>
 			</plugin>
-			<!--
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pdf-plugin</artifactId>
@@ -876,11 +875,11 @@
 						<configuration>
 							<locales>nl</locales>
 							<outputDirectory>${project.reporting.outputDirectory}</outputDirectory>
+							<includeReports>true</includeReports>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-			-->
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
