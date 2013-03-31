@@ -23,5 +23,5 @@ Technisch Ontwerp
 * Layer object
 
   Binnen de applicatie is onderscheid tussen een achtergrond en thematische kaart. Voor de voorgrond kaart is een 
-  speciaal model gedefineerd, dit is beschreven in {{{layermodel.html}}}.
+  speciaal model gedefineerd, dit is beschreven in {{{./layermodel.html}het layer model}}.
   
