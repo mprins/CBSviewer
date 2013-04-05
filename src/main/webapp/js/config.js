@@ -31,7 +31,27 @@ config.map = {
 	initialZoom : 3,
 	// initiele afmeting van de kaart
 	height : 500,
-	width : 610
+	width : 610,
+
+	topoWMTS : {
+		url : 'http://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaart/',
+		layer : "brtachtergrondkaart",
+		matrixSet : 'EPSG:28992',
+		matrixIds : [ 'EPSG:28992:0', 'EPSG:28992:1', 'EPSG:28992:2', 'EPSG:28992:3', 'EPSG:28992:4', 'EPSG:28992:5',
+				'EPSG:28992:6', 'EPSG:28992:7', 'EPSG:28992:8', 'EPSG:28992:9', 'EPSG:28992:10', 'EPSG:28992:11',
+				'EPSG:28992:12', 'EPSG:28992:13' ],
+		format : 'image/png8',
+		style : '_null'
+	},
+
+	aerialWMTS : {
+		url : 'http://geodata1.nationaalgeoregister.nl/luchtfoto/wms/',
+		layer : 'luchtfoto',
+		matrixSet : 'nltilingschema',
+		matrixIds : [ '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13' ],
+		format : 'image/jpeg',
+		style : 'default'
+	}
 };
 
 /**

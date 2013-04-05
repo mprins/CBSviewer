@@ -272,6 +272,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					map.addLayer(layer);
 				}
 			}
+			map.setFormat("image/jpeg");
 			break;
 		case "topografie":
 			// implicit fall thru naar default
@@ -295,9 +296,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					map.addLayer(layer);
 				}
 			}
+			map.setFormat("image/png");
 		}
 
-		map.setFormat("image/png");
 		map.setDimensions(MAP_DIMENSION, MAP_DIMENSION);
 		map.setTransparent(true);
 		map.setBGColour("0xffffff");
