@@ -43,7 +43,7 @@ public class GeotoolsContextListener implements ServletContextListener {
 	 * @see ServletContextListener#contextInitialized(ServletContextEvent)
 	 */
 	@Override
-	public void contextInitialized(ServletContextEvent arg0) {
+	public void contextInitialized(final ServletContextEvent arg0) {
 		try {
 			org.geotools.util.logging.Logging.ALL
 					.setLoggerFactory("org.geotools.util.logging.Log4JLoggerFactory");
@@ -69,7 +69,7 @@ public class GeotoolsContextListener implements ServletContextListener {
 	 * @see ServletContextListener#contextDestroyed(ServletContextEvent)
 	 */
 	@Override
-	public void contextDestroyed(ServletContextEvent arg0) {
+	public void contextDestroyed(final ServletContextEvent arg0) {
 		// unload all deferred authority factories so that we get rid of the
 		// timer tasks in them
 		try {
@@ -120,10 +120,10 @@ public class GeotoolsContextListener implements ServletContextListener {
 	 *             the factory exception
 	 */
 	private void disposeAuthorityFactories(
-			Set<? extends AuthorityFactory> factories) throws FactoryException {
+			final Set<? extends AuthorityFactory> factories)
+			throws FactoryException {
 		for (final AuthorityFactory af : factories) {
 			if (af instanceof AbstractAuthorityFactory) {
-				LOGGER.debug("Opruimen referencing factory " + af);
 				((AbstractAuthorityFactory) af).dispose();
 			}
 		}

@@ -35,10 +35,10 @@ public class AttributeValuesFilter {
 	/**
 	 * lijst met beschikbare filters.
 	 */
-	private List<AttributeValueFilter> filters;
+	private transient List<AttributeValueFilter> filters;
 
 	/** cached flag telling about filters. */
-	private boolean hasFilters;
+	private transient boolean hasFilters;
 
 	/**
 	 * default constructor.

@@ -34,16 +34,16 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(AbstractBaseServlet.class);
 	/** proxyserver address for the this service. {@value} */
-	private String proxyHost;
+	private transient String proxyHost;
 
 	/** proxyserver port for the this service. {@value} */
-	private int proxyPort = -1;
+	private transient int proxyPort = -1;
 
 	/** user id voor bijv. authenticatie. @see #USER_ID */
-	private String userID;
+	private transient String userID;
 
 	/** password voor bijv. authenticatie. @see #USER_PASSWORD */
-	private String passID;
+	private transient String passID;
 
 	/**
 	 * Gets the proxy host.
@@ -95,7 +95,7 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 	 * @see javax.servlet.GenericServlet#init(javax.servlet.ServletConfig)
 	 */
 	@Override
-	public void init(ServletConfig config) throws ServletException {
+	public void init(final ServletConfig config) throws ServletException {
 		super.init(config);
 
 		// netwerk data/parameters

@@ -18,7 +18,7 @@ public class AttributesNamesFilter {
 	/**
 	 * lijst met beschikbare filters.
 	 */
-	private final AvailableLayersBean layers = new AvailableLayersBean();
+	private transient final AvailableLayersBean layers = new AvailableLayersBean();
 
 	/**
 	 * Filtert de input.

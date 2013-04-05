@@ -14,9 +14,11 @@
 	<rule ref="rulesets/java/controversial.xml">
 		<exclude name="AtLeastOneConstructor" />
 	</rule>
+	<!-- 
 	<rule ref="rulesets/java/coupling.xml">
-		<exclude name="LawOfDemeterRule" />
+		<exclude name="LawOfDemeterRule"/>
 	</rule>
+	 -->
 	<rule ref="rulesets/java/design.xml" />
 	<rule ref="rulesets/java/finalizers.xml" />
 	<rule ref="rulesets/java/j2ee.xml" />

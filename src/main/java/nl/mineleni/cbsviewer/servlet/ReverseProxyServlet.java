@@ -93,7 +93,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 * 
 	 * @see #ALLOWED_HOSTS
 	 */
-	private final Set<String> allowedHosts = new HashSet<>();
+	private final transient Set<String> allowedHosts = new HashSet<>();
 
 	/**
 	 * optie om text/xml mime type voor response te forceren. default waarde is
@@ -101,7 +101,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 * 
 	 * @see #FORCE_XML_MIME
 	 */
-	private boolean forceXmlResponse = false;
+	private transient boolean forceXmlResponse;
 
 	/** onze http client. */
 	private final transient HttpClient client = new DefaultHttpClient();
@@ -115,13 +115,15 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 * @return <code>true</code> if the name of the server is found in the list
 	 */
 	private boolean checkUrlAllowed(String serverUrl) {
-		serverUrl = serverUrl.toLowerCase();
-		serverUrl = serverUrl.substring(serverUrl.indexOf("//") + 2);
+		serverUrl = serverUrl.toLowerCase().substring(
+				serverUrl.indexOf("//") + 2);
 		if (serverUrl.contains("/")) {
-			serverUrl = serverUrl.substring(0, serverUrl.indexOf("/"));
+			serverUrl = serverUrl.substring(0, serverUrl.indexOf('/'));
 		}
-		LOGGER.debug("test server = " + serverUrl);
-		return (this.allowedHosts.contains(serverUrl));
+		if (LOGGER.isDebugEnabled()) {
+			LOGGER.debug("test server = " + serverUrl);
+		}
+		return this.allowedHosts.contains(serverUrl);
 	}
 
 	/*
@@ -163,13 +165,17 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 							+ ERR_MSG_FORBIDDEN);
 					response.flushBuffer();
 				} else {
-					LOGGER.debug("proxy GET param:" + serverUrl);
+					if (LOGGER.isDebugEnabled()) {
+						LOGGER.debug("proxy GET param:" + serverUrl);
+					}
 					// intercept and modify request
 					if (serverUrl.contains("GetFeatureInfo")) {
 						serverUrl = serverUrl.replace("text%2Fhtml",
 								"application%2Fvnd.ogc.gml");
-						LOGGER.debug("proxy GetFeatureInfo GET param: "
-								+ serverUrl);
+						if (LOGGER.isDebugEnabled()) {
+							LOGGER.debug("proxy GetFeatureInfo GET param: "
+									+ serverUrl);
+						}
 					}
 
 					final HttpResponse get = this.client.execute(new HttpGet(
@@ -186,12 +192,16 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 											.substring(
 													"QUERY_LAYERS=".length(),
 													s.length()));
-									LOGGER.debug("Query layers = " + lName);
+									if (LOGGER.isDebugEnabled()) {
+										LOGGER.debug("Query layers = " + lName);
+									}
 								}
 							}
 							final String wmsUrl = serverUrl.substring(0,
-									serverUrl.indexOf("?"));
-							LOGGER.debug("WMS url = " + wmsUrl);
+									serverUrl.indexOf('?'));
+							if (LOGGER.isDebugEnabled()) {
+								LOGGER.debug("WMS url = " + wmsUrl);
+							}
 							responseBody = FeatureInfoResponseConverter
 									.convertToHTMLTable(get.getEntity()
 											.getContent(), "GMLTYPE",
@@ -327,7 +337,9 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 		final String[] names = csvHostnames.split(";");
 		for (final String name : names) {
 			this.allowedHosts.add(name);
-			LOGGER.debug("toevoegen aan allowed host namen: " + name);
+			if (LOGGER.isDebugEnabled()) {
+				LOGGER.debug("toevoegen aan allowed host namen: " + name);
+			}
 		}
 
 		if ((null != this.getProxyHost()) && (this.getProxyPort() > 0)) {

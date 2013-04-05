@@ -95,7 +95,6 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 				LOGGER.debug("attribute: " + name + " value: "
 						+ request.getAttribute(name));
 			}
-
 			@SuppressWarnings("unchecked")
 			final Map<String, String[]> p = request.getParameterMap();
 			for (final Map.Entry<String, String[]> e : p.entrySet()) {
