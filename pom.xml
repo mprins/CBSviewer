@@ -7,7 +7,7 @@
 	<version>1.2-SNAPSHOT</version>
 	<name>CBSviewer Webapp</name>
 	<description>Webrichtlijnen compliant webmap viewer.</description>
-	<url>http://mineleni.github.com/CBSviewer</url>
+	<url>http://mineleni.github.io/CBSviewer</url>
 	<inceptionYear>2012</inceptionYear>
 	<organization>
 		<name><![CDATA[Ministerie EZ]]></name>

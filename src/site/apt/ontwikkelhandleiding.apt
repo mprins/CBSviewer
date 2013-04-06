@@ -115,7 +115,7 @@ mvn site
 mvn site-deploy -Dgithub.username=<login> -Dgithub.password=<passwd>  
 +----+
 
-  De website staat dan op: http://mineleni.github.com/CBSviewer/
+  De website staat dan op: http://mineleni.github.io/CBSviewer/
 
 * {Externe Informatie en links}
 

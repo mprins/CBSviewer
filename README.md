@@ -3,7 +3,7 @@
 Webrichtlijnen (WCAG 2.0) compliant webmapping applicatie.
 
 See the -Jenkins deployed- running version master version at: http://gisdemo.agro.nl/cbsviewer/ 
-documentation is available at: http://mineleni.github.com/CBSviewer/
+documentation is available at: http://mineleni.github.io/CBSviewer/
 
 [![Travis Build Status](https://travis-ci.org/MinELenI/CBSviewer.png?branch=master)](https://travis-ci.org/MinELenI/CBSviewer)
 
