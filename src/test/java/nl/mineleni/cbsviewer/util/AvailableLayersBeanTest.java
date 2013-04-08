@@ -22,6 +22,7 @@ import org.junit.Test;
 public class AvailableLayersBeanTest {
 	private static final String ID1 = "vierkanten500m_oad2000";
 	private static final String LAYERS1 = "omgevings_adres_dichtheid_2000";
+	private static final String STYLES1 = "cbsvierkanten500m.oad2000";
 	private static final String NAME1 = "Vierkant 500m - Omgevingsadressendichtheid 2000";
 	private static final String URL1 = "http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms";
 
@@ -75,15 +76,27 @@ public class AvailableLayersBeanTest {
 
 	/**
 	 * testcase voor
-	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByLayers(String) }
+	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByLayers(String, String) }
 	 * .
 	 * 
 	 * 
 	 */
-
 	@Test
-	public void testGetLayerByLayers() {
+	public void testGetLayerByLayersStringString() {
 		assertEquals(ID1, this.bean.getLayerByLayers(LAYERS1, URL1).getId());
+	}
+
+	/**
+	 * testcase voor
+	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByLayers(String,String, String) }
+	 * .
+	 * 
+	 * 
+	 */
+	@Test
+	public void testGetLayerByLayersStringStringString() {
+		assertEquals(ID1, this.bean.getLayerByLayers(LAYERS1, URL1, STYLES1)
+				.getId());
 	}
 
 	/**

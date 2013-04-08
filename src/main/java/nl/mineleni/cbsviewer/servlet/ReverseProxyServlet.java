@@ -78,7 +78,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	public static final String ERR_MSG_MISSING_CONFIG = "De \'allowed_hosts\' parameter ontbreekt in servletconfig.";
 
 	/** Melding als proxy wordt geweigerd. {@value} */
-	private static final String ERR_MSG_FORBIDDEN = " is niet in de lijst met toegestane servers.";
+	private static final String ERR_MSG_FORBIDDEN = " is niet in de lijst met toegestane servers opgenomen.";
 
 	/** generated serialVersionUID. */
 	private static final long serialVersionUID = 1512103319305509379L;
@@ -184,6 +184,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 						String responseBody;
 						if (serverUrl.contains("GetFeatureInfo")) {
 							String lName = "";
+							String styles = "";
 							// uitzoeken querylayers
 							final String[] params = serverUrl.split("&");
 							for (final String s : params) {
@@ -196,6 +197,14 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 										LOGGER.debug("Query layers = " + lName);
 									}
 								}
+								if (s.contains("STYLES=")) {
+									styles = EncodingUtil.decodeURIComponent(s
+											.substring("STYLES=".length(),
+													s.length()));
+									if (LOGGER.isDebugEnabled()) {
+										LOGGER.debug("Layer styles = " + styles);
+									}
+								}
 							}
 							final String wmsUrl = serverUrl.substring(0,
 									serverUrl.indexOf('?'));
@@ -206,8 +215,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 									.convertToHTMLTable(get.getEntity()
 											.getContent(), "GMLTYPE",
 											this.layers.getLayerByLayers(lName,
-													wmsUrl));
-
+													wmsUrl, styles));
 						} else {
 							// force the response to have XML content type (WMS
 							// servers generally don't)

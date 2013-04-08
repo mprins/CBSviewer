@@ -98,14 +98,14 @@ public class AvailableLayersBean {
 	/**
 	 * geeft de eerste layerdescriptor met de gevraagde id.
 	 * 
-	 * @param name
+	 * @param id
 	 *            de ID van de laag
 	 * @return the layer by id
 	 * @see LayerDescriptor#getId()
 	 */
-	public LayerDescriptor getLayerByID(final String name) {
+	public LayerDescriptor getLayerByID(final String id) {
 		for (final LayerDescriptor desc : this.layers) {
-			if (desc.getId().equalsIgnoreCase(name)) {
+			if (desc.getId().equalsIgnoreCase(id)) {
 				return desc;
 			}
 		}
@@ -115,7 +115,7 @@ public class AvailableLayersBean {
 	/**
 	 * geeft de eerste layerdescriptor met de gevraagde naam.
 	 * 
-	 * @param lyrName
+	 * @param queryLyrName
 	 *            de naam van de wms laag
 	 * @param lyrUrl
 	 *            de url van de wms
@@ -123,13 +123,44 @@ public class AvailableLayersBean {
 	 * @return the layer by name and url
 	 * @see LayerDescriptor#getLayers()
 	 */
-	public LayerDescriptor getLayerByLayers(final String lyrName,
+	public LayerDescriptor getLayerByLayers(final String queryLyrName,
 			final String lyrUrl) {
 		for (final LayerDescriptor desc : this.layers) {
 			if ((desc.getLayers().replaceAll("\\s", ""))
-					.equalsIgnoreCase(lyrName.replaceAll("\\s", ""))) {
+					.equalsIgnoreCase(queryLyrName.replaceAll("\\s", ""))) {
 				if (desc.getUrl().equalsIgnoreCase(lyrUrl)) {
+					LOGGER.debug("Gevonden layer-id is: " + desc.getId());
 					return desc;
+				}
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * geeft de eerste layerdescriptor met de gevraagde naam, url.
+	 * 
+	 * @param queryLyrName
+	 *            de naam van de wms laag
+	 * @param lyrUrl
+	 *            de url van de wms
+	 * @param styles
+	 *            wms styles
+	 * 
+	 * @return the layer by name and url
+	 * @see LayerDescriptor#getLayers()
+	 */
+	public LayerDescriptor getLayerByLayers(final String queryLyrName,
+			final String lyrUrl, final String styles) {
+		for (final LayerDescriptor desc : this.layers) {
+			if ((desc.getLayers().replaceAll("\\s", ""))
+					.equalsIgnoreCase(queryLyrName.replaceAll("\\s", ""))) {
+				if (desc.getUrl().equalsIgnoreCase(lyrUrl)) {
+					if (desc.getStyles().replaceAll("\\s", "")
+							.equalsIgnoreCase(styles)) {
+						LOGGER.debug("Gevonden layer-id is: " + desc.getId());
+						return desc;
+					}
 				}
 			}
 		}
@@ -147,6 +178,7 @@ public class AvailableLayersBean {
 	public LayerDescriptor getLayerByName(final String name) {
 		for (final LayerDescriptor desc : this.layers) {
 			if (desc.getName().equalsIgnoreCase(name)) {
+				LOGGER.debug("Gevonden layer-id is: " + desc.getId());
 				return desc;
 			}
 		}

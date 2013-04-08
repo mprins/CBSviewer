@@ -790,8 +790,8 @@
 	  <layers>gemeenten2011</layers>
 	  <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 	  <styles>wijkenbuurten_thema_gemeenten_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
-	  <attributes>BEV_DICHTH</attributes>
-	  <aliases>Inwoners per km2</aliases>
+	  <attributes>gemeentenaam, bevolkingsdichtheid_inwoners_per_km2</attributes>
+	  <aliases>Gemeente, Inwoners per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 	  <id>wijkenbuurten2010_thema_gemeenten2010_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -799,7 +799,7 @@
 	  <layers>gemeenten2010</layers>
 	  <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 	  <styles>wijkenbuurten_thema_gemeenten_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
-	  <attributes>BEV_DICHTH</attributes>
+	  <attributes>bevolkingsdichtheid_inwoners_per_km2</attributes>
 	  <aliases>Inwoners per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
