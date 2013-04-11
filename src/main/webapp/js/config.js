@@ -22,6 +22,9 @@ config.legendDiv = "legenda";
 /** id van de div voor de featureinfo. */
 config.featureInfoDiv = "featureinfo";
 
+/** default map id, als in AvailableLayers.xml. */
+config.defaultMapId = "wijkenbuurten2011_thema_gemeenten2011_bevolkingsdichtheid_inwoners_per_km2";
+
 /** instellingen voor de kaart. Voorlopig alleen RD projectie. */
 config.map = {
 	projection : "EPSG:28992",

@@ -2,10 +2,6 @@
  * @fileoverview event handlers en elementen voor de ria pagina.
  */
 
-// opzoeken van de gevraagde kaart in de _layers, id's zitten in
-// AvailableLayers.xml
-var _defaultId = "wijkenbuurten2011_thema_gemeenten2011_bevolkingsdichtheid_inwoners_per_km2";
-
 // multiple versions of JQuery/JQuery UI can cause problems.
 jQuery.noConflict();
 
@@ -19,7 +15,7 @@ jQuery(document)
 					Viewer.init(config);
 
 					var maps = jQuery.grep(_layers, function(n, i) {
-						return n.id == _defaultId;
+						return n.id == config.defaultMapId;
 					});
 
 					Viewer.loadWMS(maps[0]);
@@ -113,7 +109,7 @@ jQuery('.megaMenu a').click(
 		function(event) {
 			event.preventDefault();
 			// only load new themes
-			if (jQuery(this).attr('name') != _defaultId 
+			if (jQuery(this).attr('name') != config.defaultMapId 
 				&& jQuery(this).attr('href') != '#'
 				&& jQuery(this).attr('class') != 'accordionheader') {
 				
@@ -145,7 +141,7 @@ jQuery('.megaMenu a').click(
 				// close menu
 				jQuery('.navDropDown').css('left', '-9999px');
 				
-				_defaultId = _id;
+				config.defaultMapId = _id;
 			}
 		});
 
