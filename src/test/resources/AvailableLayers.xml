@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd">
+	<!-- START SNIPPET: layermodel_apt_0 -->
 	<Layerdescriptor>
 		<id>vierkanten500m_oad2000</id>
 		<name>Vierkant 500m - Omgevingsadressendichtheid 2000</name>
@@ -8,8 +9,8 @@
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
 		<styles>cbsvierkanten500m.oad2000</styles>
 		<attributes>oad2000</attributes>
-		<aliases>dichtheid</aliases>
 	</Layerdescriptor>
+	<!-- START SNIPPET: layermodel_apt_0 -->
 	<!-- START SNIPPET: layermodel_apt_1 -->
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</id>
@@ -17,9 +18,10 @@
 		<layers>gemeenten2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</styles>
-		<attributes>aantal_inwoners, gemnaam</attributes>
-		<aliases>aantal_inwoners, gemeente</aliases>
-		<link>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wfs?request=GetFeature&amp;typeName=wijkenbuurten2011:gemeenten2011&amp;outputFormat=SHAPE-ZIP</link>
+		<attributes>gemnaam, aantal_inwoners</attributes>
+		<aliases>gemeente, aantal_inwoners</aliases>
+		<link>http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2013-wijk-en-buurtkaart-2011-versie-2.htm</link>
+		<metadata>http://nationaalgeoregister.nl/geonetwork/srv/nl/main.home?searchuuid=37bb3886-38d9-430b-9eee-b1c1745b8510</metadata>
 	</Layerdescriptor>
 	<!-- START SNIPPET: layermodel_apt_1 -->
 </Layers>

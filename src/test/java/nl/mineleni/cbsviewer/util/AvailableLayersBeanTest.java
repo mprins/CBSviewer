@@ -9,6 +9,7 @@ package nl.mineleni.cbsviewer.util;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import nl.mineleni.cbsviewer.util.xml.LayerDescriptor;
 
 import org.junit.After;
 import org.junit.Before;
@@ -101,7 +102,7 @@ public class AvailableLayersBeanTest {
 
 	/**
 	 * testcase voor
-	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByName(String) }
+	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByName(String)}
 	 * .
 	 */
 	@Test
@@ -110,4 +111,23 @@ public class AvailableLayersBeanTest {
 		assertEquals(NAME1, this.bean.getLayerByName(NAME1).getName());
 	}
 
+	/**
+	 * testcase voor
+	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayers()}.
+	 */
+	@Test
+	public void testGetLayers() {
+		assertEquals(2, this.bean.getLayers().size());
+		// test ook de ordering van de onderliggende arraylist
+		assertEquals(ID1, this.bean.getLayers().get(0).getId());
+	}
+
+	/**
+	 * testcase voor
+	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayers()}.
+	 */
+	@Test(expected = UnsupportedOperationException.class)
+	public void testGetLayersImmutable() {
+		this.bean.getLayers().add(new LayerDescriptor());
+	}
 }

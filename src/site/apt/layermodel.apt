@@ -14,27 +14,28 @@ Voorgrond kaartlaag model
 
 * Beschrijving
 
-  De voorgrond kaart bestaat uit één of meer lagen (layer elementen) van een WMS service, dit maakt 
+  De voorgrond kaart bestaat uit één of meer lagen (Layer elementen) van een WMS service, dit maakt 
   het mogelijk om voor alle lagen tegelijk een featureinfo verzoek om attribuut informatie uit te voeren
   en andere handelingen uit te voeren.
   
   In de applicatie kan telkens één voorgrond laag gebruikt worden.
   
-  Feature-informatie wordt opgehaald als GML en geparsed op het serverside deel van de applicatie, op babsis van de 
+  Feature-informatie wordt opgehaald als GML en geparsed op het serverside deel van de applicatie, op basis van de 
   descriptor wordt een tabel gemaakt met de gevraagde feature attributen.
   
 ** Voorbeeld lagen beschrijving
 
-%{snippet|url=https://raw.github.com/MinELenI/CBSviewer/master/src/test/resources/AvailableLayers.xml}
+%{snippet|id=layermodel_apt_0|url=https://raw.github.com/MinELenI/CBSviewer/master/src/test/resources/AvailableLayers.xml}
 
-  De Layerdescriptor is gedefineerd in <<<{{{http://github.com/MinELenI/CBSviewer/blob/master/src/main/xsd/AvailableLayers.xsd}AvailableLayers.xsd}}>>>
+  De {{{./apidocs/nl/mineleni/cbsviewer/util/xml/LayersList.html}LayerList}} is gedefineerd in 
+  <<<{{{http://github.com/MinELenI/CBSviewer/blob/master/src/main/xsd/AvailableLayers.xsd}AvailableLayers.xsd}}>>>
 
-* Attribuut namen filtering
+* Attribuut namen filtering en mapping
 
   Attribuutnamen kunnen per laag gefilterd worden, hiervoor is een mapping voorzien in het LayerDescriptor.
   element.
 
-** Voorbeeld 
+** Voorbeeld
 
 %{snippet|id=layermodel_apt_1|url=https://raw.github.com/MinELenI/CBSviewer/master/src/test/resources/AvailableLayers.xml}
 
@@ -45,7 +46,7 @@ Voorgrond kaartlaag model
   Deze functie is vooral nuttig als er ooit shapefiles zijn gebruikt omdat op deze wijze de null waarden en eventuele
   code waarden kunnen worden herschreven in de resultaat tabel.
 
-** Voorbeeld 
+** Voorbeeld
 
 %{snippet|url=https://raw.github.com/MinELenI/CBSviewer/master/src/test/resources/AttributeValuesFilter.xml}
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -7,6 +7,7 @@
 package nl.mineleni.cbsviewer.util;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
@@ -60,6 +61,14 @@ public class AvailableLayersBean {
 					"Er is een fout opgetreden bij het inlezen van de layers.",
 					e);
 		}
+	}
+
+	/**
+	 * accessor voor de lijst met layers.
+	 * 
+	 */
+	public List<LayerDescriptor> getLayers() {
+		return Collections.unmodifiableList(layers);
 	}
 
 	/**
