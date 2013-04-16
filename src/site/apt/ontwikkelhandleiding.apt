@@ -10,10 +10,10 @@
 
 Ontwikkel handleiding
 
-%{toc|section=1|fromDepth=1|toDepth=3}
+%{toc|section=1|fromDepth=2|toDepth=3}
 
-  Dit project gebruikt {{{Maven}http://maven.apache.org/run-maven/index.html}} als build tool 
-  en {{{Github}https://github.com/MinELenI/CBSviewer}} voor broncode beheer.
+  Dit project gebruikt {{{http://maven.apache.org/run-maven/index.html}Maven}} als build tool 
+  en {{{https://github.com/MinELenI/CBSviewer}Github}} voor broncode beheer.
 
 	[PROXY] Een aantal van de maven commando's heeft internet toegang nodig, het kan zijn dat je 
              hiervoor http of https proxy configuratie gegevens moet aangeven op de commando regel. 
@@ -38,7 +38,7 @@ Ontwikkel handleiding
 
   Het project gebruikt Maven 3 als build tool, als IDE raden we Eclipse 4.2 aan omdat deze de 
   beste Maven integratie heeft.
-  Het project is opgezet als een {{{war}http://en.wikipedia.org/wiki/WAR_file_format_(Sun)}}} artifact. 
+  Het project is opgezet als een {{{http://en.wikipedia.org/wiki/WAR_file_format_(Sun)}war}}} artifact. 
   Voor het maken van een .war of release is alleen een juist geconfigureerde Maven installatie nodig.
   
   Om de ontwikkelomgeving op te zetten is het nodig om een build van OpenLayers te maken, dit gaat met 
@@ -50,27 +50,42 @@ mvn -Popenlayers,developer
 
   Hiermee wordt een debug versie van OpenLayers in de broncode ondergebracht, een compacte versie voor de webapp en 
   een volledige versie voor de unit tests.
-  De OpenLayers build configuratie is opgeslagen in het bestand <<</OL-build.cfg>>>.
+  De OpenLayers build configuratie is vastgelegd in het bestand <<</OL-build.cfg>>>.
+  
+  Naast een Maven installatie zijn de volgende tools nodig:
+  
+    [PhantomJS] te vrkrijgen via {{http://phantomjs.org/download.html}}
+    
+    [Graphviz] te verkrijgen via {{http://www.graphviz.org/Download.php}}
+    
+  Deze tools dienen in het pad te worden opgenomen zodat ze vanuit de werkdirectory opgestart kunnen worden.
   
 ** {code conventies en formatting}
 
-  Voor formatting van de Javascript code wordt het profiel gebruikt zoals dat te vinden is in de <<<ide/>>> directory.
+  Voor formatting van de Javascript code wordt het Eclipse profiel gebruikt zoals dat te vinden is in de <<<ide/>>> directory.
   
-  Voor formatting van de Java code wordt het profiel gebruikt zoals dat te vinden is in de <<<ide/>>> directory.
+  Voor formatting van de Java code wordt het Eclipse profiel gebruikt zoals dat te vinden is in de <<<ide/>>> directory.
    
 
 * {Unit testen}
 
 ** Java
 
-  Er wordt gebruik gemaakt van JUnit 4 tests.
+  Er wordt gebruik gemaakt van JUnit 4 tests, tests worden uitgevoerd als onderdeel van de normale bouw cyclus.
+  Losse tests kunnen met onderstaand commando worden gedraaid:
+  
++----+
+mvn -Dtest=<klassenaam> test
++----+
+  
 
 ** Javascript
 
   Er wordt gebruik gemaakt van het {{{Jasmine}http://pivotal.github.com/jasmine/}} framework. De code voor een unit test 
-  gaat in <<</src/test/js/jasmine/>>>. Tests worden automatisch gedraaid in een HtmlUnit runtime tijdens de test 
-  fase van Maven. Om unit tests met de hand te draaien zijn tijdens het ontwikkelen kan het <<<jasmineserver>>> profiel 
-  worden gebruikt.
+  gaat in <<</src/test/js/jasmine/>>>. Tests worden automatisch gedraaid in een HtmlUnit en/of 
+  {{{http://phantomjs.org/download.html}PhantomJS}} runtime tijdens de test fase van Maven.
+   
+  Om unit tests met de hand te draaien zijn tijdens het ontwikkelen kan het <<<jasmineserver>>> profiel worden gebruikt.
   
 +----+
 mvn -Pjasmineserver jasmine:bdd
@@ -86,7 +101,7 @@ mvn -Pjasmineserver jasmine:bdd
 mvn -Pdeveloper jetty:run
 +----+
 
-  Jetty start een webserver op op poort 8020 met de {{{applicatie in de root}http://localhost:8020/}}.
+  Jetty start een webserver op op poort 8020 met de {{{http://localhost:8020/}applicatie in de root}}.
 
 * {Documentatie genereren}
 
@@ -97,19 +112,13 @@ mvn site
 +----+
 
   Tijdens het maken van de site worden ook de unit en integratie tests gedraaid (er vindt dus een 
-  volledige build plaats!).
-
-~~  Als je <<<dot>>> of <<<Graphviz>> hebt geinstalleerd kun je javadoc met UML klasse diagrammen genereren; 
-~~  dit doe je door op de commandline de optie <<<-Dhavedot=true>>> mee te geven zoals in onderstaand voorbeeld 
-~~  om de documentatie te genereren
-~~  
-~~+- ---+
-~~mvn -Dhavedot=true site
-~~+- ---+
+  volledige build plaats!). Voor het genereren van de klasse diagrammen is een lokale installatie van
+  <<<dot>>> en/of <<<Graphviz>>> nodig. 
 
 ** {Documentatie uploaden}
 
-  De documentatie moet "met de hand" naar de Github website worden overgedragen, hiervoor is authenticatie nodig.
+  De documentatie kan "met de hand" naar de Github website worden overgedragen, hiervoor is authenticatie nodig.
+  Normaal gesproken zorgt de {{{./integration.html}build server}} voor het bijwerken van de online documentatie.
   
 +----+
 mvn site-deploy -Dgithub.username=<login> -Dgithub.password=<passwd>  
@@ -119,9 +128,9 @@ mvn site-deploy -Dgithub.username=<login> -Dgithub.password=<passwd>
 
 * {Externe Informatie en links}
 
-  * {{{Algemene GitHub documentatie}http://help.github.com/}}
+  * {{{http://help.github.com/}Algemene GitHub documentatie}}
   
-  * {{{GitHub pull request documentatie}http://help.github.com/send-pull-requests/}}
+  * {{{http://help.github.com/send-pull-requests/}GitHub pull request documentatie}}
   
   * 
  

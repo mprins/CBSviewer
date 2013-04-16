@@ -13,7 +13,7 @@ ${project.name} ${project.version} Release Notes
 
   Dit zijn de release notes van ${project.name} versie ${project.version}. 
 
-%{toc|section=1|fromDepth=0|toDepth=2}
+%{toc|section=1|fromDepth=2|toDepth=2}
 
 * ${project.version} Release Notes
 
