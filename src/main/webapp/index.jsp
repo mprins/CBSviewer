@@ -152,7 +152,7 @@
 				</li>
 				<li id="keyfeatureinfo" class="featureinfoPanel">
 					<a href="#keyfeatureinfo"><fmt:message key="KEY_INFO_TITEL" /></a>
-					<div id="featureinfo" class="settingsContent" style="max-height:100px">
+					<div id="featureinfo" class="settingsContent">
 						<c:if test="${param.coreonly==true}">
 							<c:if test="${not empty featureinfo}">
 								<c:out value="${featureinfo}" escapeXml="false" />

@@ -560,6 +560,7 @@ html.js #cbslogo {
 
 #featureinfo {
 	padding: 10px;
+	max-height: 100px;
 }
 
 /* Images */
