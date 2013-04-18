@@ -76,7 +76,7 @@ var Viewer = function() {
 			var h = jQuery(window).height() - headerH - footerH - borderH;
 
 			jQuery('#' + this.config.mapDiv).width(w).height(h);
-			// todo: compute height and remove from here
+			// TODO compute height and remove from here
 			jQuery('#legenda').css('max-height', jQuery(window).height() - 500);
 
 			_map.updateSize();
@@ -195,8 +195,6 @@ var Viewer = function() {
 			});
 
 			if (this.config.fgAlphaSlider) {
-				// removed <span id="slidervalue"></span> according new cbs
-				// style
 				var aSlider = jQuery('<div id="sliderFGMap"></div>').prependTo(jQuery('#' + config.mapDiv)).slider({
 					value : _opacity * 100,
 					range : 'min',
@@ -206,26 +204,19 @@ var Viewer = function() {
 					animate : "slow",
 					slide : function(event, ui) {
 						_setOpacity(ui.value / 100);
-						/*
-						 * jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
-						 * '0' : (100 - ui.value) }));
-						 */
 						jQuery(this).find('a:first').text(ui.value);
-						// move tooltip
-						/*
-						 * if (ui.value > 50) { jQuery('#slidervalue').css({
-						 * 'left' : '50%' }); } else {
-						 * jQuery('#slidervalue').css({ 'left' : ui.value + '%'
-						 * }); }
-						 */
+						// TODO Eventueel nog een verborgen span in de A
+						// toevoegen tbv. toegankelijkheid, zie:
+						// http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/C7
+						jQuery(this).find('a:first').attr('title', OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+							'0' : (100 - ui.value)
+						}));
 					}
 				});
-				// instellen initiele waarde op tooltip
-				/*
-				 * jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
-				 * '0' : 100 - (_opacity * 100) }));
-				 */
-				// en slider
+				// instellen initiele waarde voor slider GUI
+				jQuery('#sliderFGMap').find('a:first').attr('title', OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+					'0' : (100 - (_opacity * 100))
+				}));
 				jQuery('#sliderFGMap').find('a:first').text((_opacity * 100));
 			}
 		},
