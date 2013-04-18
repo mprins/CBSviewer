@@ -3,46 +3,45 @@
 /* -------------------------------------------------------------------------- */
 /* typography.
 /* -------------------------------------------------------------------------- */
-
 body {
 	font-size: 12px;
 	line-height: 1.67em;
 	width: 100%;
 	height: 100%;
-	border:0;	
-	min-width:660px;
-	min-height:510px;
+	border: 0;
+	min-width: 660px;
+	min-height: 510px;
 	overflow: auto;
 	overflow-y: hidden;
 }
 
-html,body {	
+html,body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 }
 
 input {
-	font-size:91.7%;
+	font-size: 91.7%;
 }
 
 li {
-	list-style:none;
-	list-style-image:none;
-	list-style-position:outside;
-	list-style-type:none;
+	list-style: none;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
 }
 
 select {
-	font-size:91.7%;
+	font-size: 91.7%;
 }
 
 strong {
-	font-weight:700;
+	font-weight: 700;
 }
 
 textarea {
-	font-size:91.7%;
+	font-size: 91.7%;
 }
 
 a {
@@ -51,78 +50,78 @@ a {
 }
 
 a:hover {
-  color: #0064B3;
+	color: #0064B3;
 }
 
 @font-face {
-  font-family: 'SoHo Regular';
-  src: url(../fonts/soho-regular-latin-1.ttf);
+	font-family: 'SoHo Regular';
+	src: url(../fonts/soho-regular-latin-1.ttf);
 }
 
 @font-face {
-  font-family: 'SoHo Medium';
-  src: url(../fonts/soho-medium-latin-1.ttf);
+	font-family: 'SoHo Medium';
+	src: url(../fonts/soho-medium-latin-1.ttf);
 }
 
 @font-face {
-  font-family: 'Akko Regular';
-  src: url(../fonts/akko-regular-latin-1.ttf);
+	font-family: 'Akko Regular';
+	src: url(../fonts/akko-regular-latin-1.ttf);
 }
 
-h1, h2, h3 {
-  font-family: 'SoHo Medium';
-  font-size: 24px;
+h1,h2,h3 {
+	font-family: 'SoHo Medium';
+	font-size: 24px;
 }
 
 .page h1 {
-  color:#00a1cd;
-  font-size: 2em;
-  font-weight: normal;
-  margin-bottom:1em;
+	color: #00a1cd;
+	font-size: 2em;
+	font-weight: normal;
+	margin-bottom: 1em;
 }
 
 .pagetitle {
-	position:absolute;
-	z-index:1030;
+	position: absolute;
+	z-index: 1030;
 	border-radius: 0 0 3px 0;
 	-moz-border-radius: 0 3px 0 0;
-	background-color:rgba(255,255,255,0.8);
-	line-height:0px;
-	top:131px;
-	left:2px;
-	padding:3px 15px 3px 15px;
+	background-color: rgba(255, 255, 255, 0.8);
+	line-height: 0px;
+	top: 131px;
+	left: 2px;
+	padding: 3px 15px 3px 15px;
 }
 
 .page h2 {
-  /*color: #00a1cd;*/
-  color: #00A4CB;
-  font-size: 1.3em;
-  font-weight: normal;
-  margin-bottom:.563em;
+	/*color: #00a1cd;*/
+	color: #00A4CB;
+	font-size: 1.3em;
+	font-weight: normal;
+	margin-bottom: .563em;
 }
 
 .page h3, #pagSubTitle {
-  color:#555;
-  font-size:107.69%;
-  font-weight:700;
+	color: #555;
+	font-size: 107.69%;
+	font-weight: 700;
 }
 
 .page h4 {
-  color:#555;
-  font-size:100%;
-  font-weight:700;
+	color: #555;
+	font-size: 100%;
+	font-weight: 700;
 }
 
 /* -------------------------------------------------------------------------- */
 /* layout.
 /* -------------------------------------------------------------------------- */
 .page {
-	position:relative; 
-	margin:0 auto; 
-	width:100%;
-	height:auto !important; 
-	height:100%; 
-	min-height:100%;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
 	/*-webkit-box-shadow: 0 0 8px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    0 0 8px rgba(50, 50, 50, 0.3);
 	box-shadow:         0 0 8px rgba(50, 50, 50, 0.3);*/
@@ -131,170 +130,176 @@ h1, h2, h3 {
 /* -------------------------------------------------------------------------- */
 /* header.
 /* -------------------------------------------------------------------------- */
-
 .page .header {
-  position: relative;
-  height: 133px;
-  width:100%;
-  margin-bottom: 25px;
+	position: relative;
+	height: 133px;
+	width: 100%;
+	margin-bottom: 25px;
 }
 
 .page .header .h1 {
-  float: left;
-  height: 78px;
-  padding: 15px 0 0 35px;
+	float: left;
+	height: 78px;
+	padding: 15px 0 0 35px;
 }
 
 .page .header .logo {
-  float: left;
-  height: 78px;
-  padding: 11px 0 0 35px;
+	float: left;
+	height: 78px;
+	padding: 11px 0 0 35px;
 }
 
 .page .header img {
-  border:0;
- }
+	border: 0;
+}
 
 .page .header .title {
-  position: absolute;
-  top: 120px;
-  left: 0;
+	position: absolute;
+	top: 120px;
+	left: 0;
 }
 
 .page .header .mainMenu {
-  position: absolute;
-  right: 0;
-  top: 58px;
+	position: absolute;
+	right: 0;
+	top: 58px;
 }
 
 .page .header .mainMenu ul {
-  margin: 0 10px 0 0;
+	margin: 0 10px 0 0;
 }
+
 .page .header .mainMenu ul li {
-  float: left;
+	float: left;
 }
+
 .page .header .mainMenu ul li a {
-  font-family: 'Akko Regular';
-  font-size: 1.25em;
-  padding: 4px 8px;
-  text-decoration: none;
+	font-family: 'Akko Regular';
+	font-size: 1.25em;
+	padding: 4px 8px;
+	text-decoration: none;
 }
+
 .page .header .mainMenu ul li a:hover {
-  background-color: #ECECEC;
+	background-color: #ECECEC;
 }
-.page .header .mainMenu ul li a:visited,
-.page .header .mainMenu ul li a:hover {
-  color: #27206A;
+
+.page .header .mainMenu ul li a:visited,.page .header .mainMenu ul li a:hover {
+	color: #27206A;
 }
 
 /* maintain text readability in popup */
 .smallpopup {
-	max-width:700px;
+	max-width: 700px;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+	width: 10px;
 }
+
 ::-webkit-scrollbar-track {
-    background: #FFF;
-    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+	background: #FFF;
+	-webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 ::-webkit-scrollbar-thumb {
-    background: #CCC;
-    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+	background: #CCC;
+	-webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #AAA;
+	background: #AAA;
 }
+
 ::-webkit-scrollbar-thumb:active {
-    background: #888;
-    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+	background: #888;
+	-webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* footer stuff */
 #footerWrapper {
-	z-index:1001;
-	position:absolute;
-	width:100%;
+	z-index: 1001;
+	position: absolute;
+	width: 100%;
 	background-color: #fff;
-	height:33px;
-	bottom:0;
-	left:0;
+	height: 33px;
+	bottom: 0;
+	left: 0;
 }
 
 /*
 .page .footer {
-border-top: solid 1px #cecece;
-clear:both;
-overflow:hidden;
-padding:13px 0 100px;
-position:relative;
-width:100%;
-}*/
+	border-top: solid 1px #cecece;
+	clear:both;
+	overflow:hidden;
+	padding:13px 0 100px;
+	position:relative;
+	width:100%;
+}
+*/
 
 #footerWrapper .introduction {
-color: #27206A;
-display:block;
-line-height:2em;
-margin-right:65ex;
-padding:0 0 0 20px;
-position:absolute;
-left:0;
-top:0;
-width:50%;
-z-index:1;
+	color: #27206A;
+	display: block;
+	line-height: 2em;
+	margin-right: 65ex;
+	padding: 0 0 0 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	z-index: 1;
 }
 
 #footerWrapper .introduction a {
-text-decoration:underline;
+	text-decoration: underline;
 }
 
 #footerWrapper ul {
-line-height:2em;
-list-style:none;
-padding-left:33.19em;
-padding-right:0px;
-position:absolute;
-right:0;
-text-align:right;
-top:0;
-width:388px;
+	line-height: 2em;
+	list-style: none;
+	padding-left: 33.19em;
+	padding-right: 0px;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 0;
+	width: 388px;
 }
 
 #footerWrapper ul li {
-display:inline;
+	display: inline;
 }
 
 #footerWrapper ul li a {
-padding:0 15px 0 0;
-text-decoration:underline;
+	padding: 0 15px 0 0;
+	text-decoration: underline;
 }
 
 #footerWrapper ul li a:hover {
-text-decoration:underline;
+	text-decoration: underline;
 }
 
 #footerWrapper ul li.goTop {
-padding:0 0 0 7px;
-position:absolute;
-right:0;
-top:2px;
-width:17px;
+	padding: 0 0 0 7px;
+	position: absolute;
+	right: 0;
+	top: 2px;
+	width: 17px;
 }
 
 #footerWrapper ul li.goTop a span {
-display:none;
+	display: none;
 }
 
 #footerWrapper ul li.goTop a:hover {
-background-position:0 -17px;
+	background-position: 0 -17px;
 }
 /* end footer stuff */
 
 /* opmaak van de elementen */
 .error,.todo {
-	background: url("../img/error.png") no-repeat scroll -12px 1px
-		transparent;
+	background: url("../img/error.png") no-repeat scroll -12px 1px transparent;
 	padding-left: 16px;
 	text-align: center;
 	color: #f00;
@@ -313,7 +318,7 @@ html.js #kaartContainer.nothidden {
 }
 
 /* verbergen als er javascript is, hier zit de core kaart + formulier in.*/
-html.js #coreContainer,html.js #coreMapImage {
+html.js #coreContainer, html.js #coreMapImage {
 	display: none;
 }
 
@@ -351,18 +356,21 @@ a.accesskey:focus {
 .subtitel {
 	font-size: 1.8em;
 	text-align: center;
-	font-family: Arial, Verdana,Helvetica,sans-serif;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
 	color: #4E443C;
-	text-transform: none; 
-	font-weight: 100; 
+	text-transform: none;
+	font-weight: 100;
 	margin-bottom: 0;
 }
 
 /* wegschuiven in de RIA */
-/*html.js .titel, html.js .subtitel {
+/*
+html.js .titel, html.js .subtitel {
 	position: absolute;
 	top: -500px;
-}*/
+}
+*/
+
 /*
 html.js #cbslogo {
 	max-width: 321px;
@@ -371,10 +379,10 @@ html.js #cbslogo {
 	background-repeat: no-repeat;
 	background-color: #fff;
 	background-size: auto 51px;
-}*/
-
+}
+*/
 .attribuutTabel {
-	background-color:#fff;
+	background-color: #fff;
 	width: 100%;
 }
 
@@ -405,7 +413,6 @@ html.js #cbslogo {
 .kaart:focus {
 	outline-style: solid;
 }
-
 
 .kaartnavi {
 	position: absolute;
@@ -444,11 +451,12 @@ html.js #cbslogo {
 }
 
 .logo {
-	border:none;
+	border: none;
 }
 
-#inhoud { 
-	padding:113px 0px 33px; /* padding for header/footer/copyright/download link, used in Viewer.js */	
+#inhoud {
+	padding: 113px 0px 33px;
+	/* padding for header/footer/copyright/download link, used in Viewer.js */
 }
 
 .custom {
@@ -466,14 +474,12 @@ html.js #cbslogo {
 }
 
 /* end feature info css tests */
-
 .disabled {
 	color: red;
 	background-color: #ddd;
 }
 
-.settingsPanel 
-{
+.settingsPanel {
 	z-index: 1003;
 	position: absolute;
 	left: 4px;
@@ -489,73 +495,70 @@ html.js #cbslogo {
 	margin: 0px;
 }
 
-.settingsPanel,
-.settingsPanel ul,
-.settingsPanel li,
-.settingsPanel a {
+.settingsPanel,.settingsPanel ul,.settingsPanel li,.settingsPanel a {
 	margin: 0;
 	padding: 0;
 	border: none;
 	outline: none;
 }
 
-.settingsPanel li, 
-.menuAccordion li {
+.settingsPanel li,.menuAccordion li {
 	list-style: none;
 }
 
 /* Layout & Style */
-.settingsPanel li > a {
-	display:block;
+.settingsPanel li>a {
+	display: block;
 	position: relative;
-	line-height:32px;
+	line-height: 32px;
 	height: 32px;
 	color: #271d6c;
 	font-family: 'SoHo Medium';
-	font-size:16px;
+	font-size: 16px;
 	text-decoration: none;
 	min-width: 110px;
 	padding: 0 15px 0 40px;
 	background: #efefef;
 }
-.settingsPanel li:last-child > a {
-    font-size: 12px;
-    font-family: arial, sans-serif;
+
+.settingsPanel li:last-child>a {
+	font-size: 12px;
+	font-family: arial, sans-serif;
 	color: #000;
 }
 
-.menuAccordion li > .accordionheader {
+.menuAccordion li>.accordionheader {
 	position: absolute;
-	left:-190px;
-	bottom:0px;
+	left: -190px;
+	bottom: 0px;
 	height: 22px;
-	line-height:22px;
-	width:180px;
+	line-height: 22px;
+	width: 180px;
 	color: #271d6c;
-    font-family: Arial;
-    font-size: 1em;
-    padding: 4px 8px;
+	font-family: Arial;
+	font-size: 1em;
+	padding: 4px 8px;
 }
 
-.settingsPanel > li:first-child:hover > a,
-.settingsPanel > li:first-child:target > a,
-.settingsPanel > li:first-child > a.active {
+.settingsPanel>li:first-child:hover>a,
+.settingsPanel>li:first-child:target>a,
+.settingsPanel>li:first-child>a.active {
 	color: #271d6c !important;
 	background: #ffffff;
 }
 
-.menuAccordion > li > a.active {
-	display:none;
+.menuAccordion>li>a.active {
+	display: none;
 }
 
-.settingsContent, .menuAccordionContent {
-	background-color:rgba(255,255,255,1);
-	overflow-x:hidden; 
-	overflow-y:auto;
+.settingsContent,.menuAccordionContent {
+	background-color: rgba(255, 255, 255, 1);
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .menuAccordionContent {
-	height:470px;
+	height: 470px;
 }
 
 #featureinfo {
@@ -564,8 +567,7 @@ html.js #cbslogo {
 }
 
 /* Images */
-.settingsPanel > li > a:before
- {
+.settingsPanel>li>a:before {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -573,34 +575,40 @@ html.js #cbslogo {
 	width: 24px;
 	height: 24px;
 	margin: 5px 12px;
-
 	background-repeat: no-repeat;
 	background-image: url(../img/template/settings_icons.png);
 	background-position: 0px 0px;
 }
 
-.settingsPanel li.legendPanel > a:before { background-position: 0px 0px; }
-.settingsPanel li.legendPanel:hover > a:before,
-.settingsPanel li.legendPanel:target > a:before,
-.settingsPanel li.legendPanel > a.active:before { background-position: 0px -24px; }
+.settingsPanel li.legendPanel>a:before {
+	background-position: 0px 0px;
+}
 
-.settingsPanel li.featureinfoPanel > a:before { background-position: -24px 0px; }
-.settingsPanel li.featureinfoPanel:hover > a:before,
-.settingsPanel li.featureinfoPanel:target > a:before,
-.settingsPanel li.featureinfoPanel > a.active:before { background-position: -24px -24px; }
+.settingsPanel li.legendPanel:hover>a:before,
+.settingsPanel li.legendPanel:target>a:before,
+.settingsPanel li.legendPanel>a.active:before {
+	background-position: 0px -24px;
+}
+
+.settingsPanel li.featureinfoPanel>a:before {
+	background-position: -24px 0px;
+}
+
+.settingsPanel li.featureinfoPanel:hover>a:before,
+.settingsPanel li.featureinfoPanel:target>a:before,
+.settingsPanel li.featureinfoPanel>a.active:before {
+	background-position: -24px -24px;
+}
 
 /* Functionality */
-.settingsPanel li > .settingsContent,
-.menuAccordion li > .menuAccordionContent {
+.settingsPanel li>.settingsContent,.menuAccordion li>.menuAccordionContent {
 	display: none;
 }
 
-.settingsPanel li:target > .settingsContent,
-.menuAccordion li:target > .menuAccordionContent,
-.settingsPanel li:first-child > .settingsContent, /* needed in coreonly mode, in other cases Jquery */
-.menuAccordion li:first-child > .menuAccordionContent /* needed in coreonly mode */
- {
-	display:block;
+.settingsPanel li:target>.settingsContent, .menuAccordion li:target>.menuAccordionContent,
+.settingsPanel li:first-child>.settingsContent,	/* needed in coreonly mode, in other cases Jquery */
+.menuAccordion li:first-child>.menuAccordionContent	/* needed in coreonly mode */ {
+	display: block;
 }
 
 #downloadLink a {
@@ -617,24 +625,24 @@ table.download {
 .download th {
 	padding: 0 0.5em;
 	text-align: left;
-	}
+}
 
 .download tr.yellow td {
 	border-top: 1px solid #FB7A31;
 	border-bottom: 1px solid #FB7A31;
 	background: #FFC;
-	}
+}
 
 .download td {
 	border-bottom: 1px solid #CCC;
 	padding: 0 0.5em;
-	}
+}
 
 .download td:first-child {
 	width: 190px;
-	}
+}
 
 .download td+td {
 	border-left: 1px solid #CCC;
 	text-align: center;
-	}
+}
