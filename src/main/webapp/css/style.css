@@ -56,17 +56,17 @@ a:hover {
 
 @font-face {
   font-family: 'SoHo Regular';
-  src: url(../../fonts/soho-regular-latin-1.ttf);
+  src: url(../fonts/soho-regular-latin-1.ttf);
 }
 
 @font-face {
   font-family: 'SoHo Medium';
-  src: url(../../fonts/soho-medium-latin-1.ttf);
+  src: url(../fonts/soho-medium-latin-1.ttf);
 }
 
 @font-face {
   font-family: 'Akko Regular';
-  src: url(../../fonts/akko-regular-latin-1.ttf);
+  src: url(../fonts/akko-regular-latin-1.ttf);
 }
 
 h1, h2, h3 {
