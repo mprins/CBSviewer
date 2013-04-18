@@ -72,7 +72,7 @@
 					<c:param name="coreonly" value="${param.coreonly}" />
 				</c:url>
 				<a href="${fn:escapeXml(indexLink)}" title="www.cbsinuwbuurt.nl" name="top">
-					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" title="CBS in uw buurt"/>
+					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" />
 				</a>
 			</div>
 			<div class="mainMenu">
@@ -109,7 +109,7 @@
 			</div>
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
 			<div class="pagetitle">				
-				<h3 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h3>
+				<h1 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h1>
 			</div>
 			<div class="clearer"></div>			
         </div>	
