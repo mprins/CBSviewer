@@ -3,7 +3,8 @@
 @import 'colours';
 
 /* niet af te drukken elementen en klassen. In essentie alle eyecandy, navigatie, hyperlinks etc. */
-#toggleSize,#toggleBaseMap,.olControlZoom,#zoekContainer,#coreexitlink,#kaartnavi,.dropDownMenu,.utilBlock,#footer,#cbslogo,#downloadLink,#sliderFGMap,.OverviewMap
+#toggleSize,#toggleBaseMap,.olControlZoom,#zoekContainer,#coreexitlink,#kaartnavi,
+.dropDownMenu,.utilBlock,#footer,#cbslogo,#downloadLink,#sliderFGMap,.OverviewMap
 	{
 	display: none;
 }
@@ -13,7 +14,7 @@
 	{
 	width: auto;
 	height: auto;
-	line-height: auto;
+	line-height: 1;
 	position: static;
 	display: initial;
 }
