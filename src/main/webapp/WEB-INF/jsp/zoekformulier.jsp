@@ -14,7 +14,11 @@
 			<p class="zoekinput">
 				<fieldset>
 					<label for="adres"><fmt:message key="KEY_ADRESZOEKEN_TITEL" /></label>
-					<input name="adres" id="adres" accesskey="8" onkeypress="if (event.keyCode==13){document.getElementById('searchbutton').click();return false}" value="${param.adres}" onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}" onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};" type="text"/>
+					<input name="adres" id="adres" accesskey="8" 
+						onkeypress="if (event.keyCode==13){document.getElementById('searchbutton').click();return false}" 
+						value="${param.adres}" onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}" 
+						onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};" 
+						type="text"/>
 					<input name="searchbutton" id="searchbutton" accesskey="s" class="searchbutton" value="" type="submit"/>
 				
 					<c:if test="${request.straal != null}">
@@ -49,7 +53,8 @@
 									</c:url> <a href="${fn:escapeXml(adreslink)}" title="${ttl}">${adres}</a>
 								</li>
 							</c:forEach>
-						</ul></li>
+						</ul>
+					</li>
 				</ul>
 			</c:if>
 		</div>
