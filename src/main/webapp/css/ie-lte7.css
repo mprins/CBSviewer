@@ -89,3 +89,8 @@ div.olControlZoom a:hover {
 .siteNavigation>li>a {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#545454', endColorstr='#1e1e1e',GradientType=0 );
 }
+
+.ui-autocomplete {
+	zoom: 1;
+	filter: alpha(opacity=90);
+}
