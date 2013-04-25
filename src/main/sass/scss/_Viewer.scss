@@ -6,7 +6,7 @@
 	right: -1px;
 	width: 21px;
 	height: 21px;
-	z-index: 900;
+	z-index: $z-MapControl;
 	display: block;
 	border: $ControlBorder;
 	&.max { /*max icon*/
@@ -29,7 +29,7 @@
 	-moz-border-radius: 6px 6px 6px 6px;
 	/* -right iets (2px) meer dan de breedte van de achtergrond sprite>40px */
 	padding: 2px 50px 2px 10px;
-	z-index: 900;
+	z-index: $z-MapControl;
 	line-height: 22px;
 	color: #fff;
 	font-size: 14px;
@@ -53,7 +53,7 @@
 
 #sliderFGMap {
 	position: absolute;
-	z-index: 900;
+	z-index: $z-MapControl;
 	top: 53px;
 	right: 55px;
 	border-radius: 6px 6px 6px 6px;

@@ -10,14 +10,14 @@
 	left: 128px;
 	top: 37px;
 	width: 266px;
-	z-index: 2040;
+	z-index: $z-zoekContainer * 2;
 	line-height: 25px;
 	background:#fff;
 }
 
 #zoekContainer {
 	position: absolute;
-	z-index:1060;
+	z-index: $z-zoekContainer;
 	top: 93px;
 	left: 0;
 }
@@ -70,7 +70,7 @@
 	opacity: 0.9;
 	border: $ControlBorder;
 	padding: 0;
-	z-index:1061 !important;
+	z-index: $z-zoekContainer + 1 !important;
 }
 
 .ui-menu .ui-menu-item {

@@ -227,17 +227,6 @@ h1,h2,h3 {
 	left: 0;
 }
 
-/*
-.page .footer {
-	border-top: solid 1px #cecece;
-	clear:both;
-	overflow:hidden;
-	padding:13px 0 100px;
-	position:relative;
-	width:100%;
-}
-*/
-
 #footerWrapper .introduction {
 	color: #27206A;
 	display: block;
@@ -346,24 +335,6 @@ html.js #coreContainer p {
 	margin-bottom: 0;
 }
 
-/* wegschuiven in de RIA */
-/*
-html.js .titel, html.js .subtitel {
-	position: absolute;
-	top: -500px;
-}
-*/
-
-/*
-html.js #cbslogo {
-	max-width: 321px;
-	height: 100%;
-	background-image: url(../img/template/hdr_logo.gif);
-	background-repeat: no-repeat;
-	background-color: #fff;
-	background-size: auto 51px;
-}
-*/
 .attribuutTabel {
 	background-color: #fff;
 	width: 100%;

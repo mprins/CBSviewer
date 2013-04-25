@@ -7,7 +7,7 @@ a.accesskey {
 	top : 0;
 	background-color: #fff;
 	width: 100%;
-	z-index: 1061;
+	z-index: $z-zoekContainer + 5;
 }
 
 }

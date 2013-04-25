@@ -4,4 +4,11 @@ $BlueColourTransp:	rgba($BlueColour, 0.8);
 $BlueColourLighter:	lighten($BlueColour, 10%);
 $BlueColourDarker:	darken($BlueColour, 10%);
 
+/* control borders in de kaart */
 $ControlBorderColour: rgb(170, 170, 170);
+$ControlBorder: 1px solid $ControlBorderColour;
+
+/* z-indexes */
+$z-zoekContainer: 1060;
+$z-OverviewMapMinimizeButton: 1000;
+$z-MapControl: 900;
