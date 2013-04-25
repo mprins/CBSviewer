@@ -47,7 +47,7 @@
 			<c:set var="doorzicht" value="${param.doorzicht}" />
 		</c:otherwise>
 	</c:choose>
-	<!--  de te gebruiken HTTP methode voor de formulieren -->
+	<!--  de te gebruiken HTTP methode (post|get) voor de formulieren -->
 	<c:set var="formMethod" value="get" />
 
 	<!-- 
@@ -57,24 +57,23 @@
 
 	<div id="kaartnavi" class="kaartnavi">
 		<fmt:message key="KEY_NAVIGATIE_TITEL" />
-		<form id="zoomFormulier" action="index.jsp" method="${formMethod}"
-			title="in- en uitzoomen van de kaartop de zoeklocatie">
-
+		<form id="zoomFormulier" action="index.jsp" method="${formMethod}">
 			<!-- knoppen -->
-			<fieldset id="in-en-uit-zoomen" title="in- en uitzoomen">
+			<fieldset id="in-en-uit-zoomen">
 				<legend>
 					<fmt:message key="KEY_NAVIGATIE_ZOOM_LEGEND" />
 				</legend>
 
-				<fmt:message var="ttl" key="KEY_BTN_NAVI_ZOOMOUT_LBL" />
-				<label for="zoomUitBtn">${ttl}</label>
-				<button id="zoomUitBtn" type="submit" name="straal"
-					value="${straal*2}" title="${ttl}">−</button>
 
-				<fmt:message var="ttl" key="KEY_BTN_NAVI_ZOOMIN_LBL" />
-				<label for="zoomInBtn">${ttl}</label>
-				<button id="zoomInBtn" type="submit" name="straal" value="${zoomin}"
-					title="${ttl}">+</button>
+				<label for="zoomUitBtn"><fmt:message
+						key="KEY_BTN_NAVI_ZOOMOUT_LBL" /></label>
+				<button id="zoomUitBtn" type="submit" name="straal"
+					value="${straal*2}">−</button>
+
+
+				<label for="zoomInBtn"><fmt:message
+						key="KEY_BTN_NAVI_ZOOMIN_LBL" /></label>
+				<button id="zoomInBtn" type="submit" name="straal" value="${zoomin}">+</button>
 			</fieldset>
 			<p>
 				<input type="hidden" name="coreonly" value="true" />
@@ -87,36 +86,33 @@
 					type="hidden" name="gevonden" value="${param.gevonden}" /><input
 					type="hidden" name="doorzicht" value="${doorzicht}" />
 			</p>
-
 		</form>
 
-		<form id="schuifFormulier" action="index.jsp" method="${formMethod}"
-			title="Verschuiven van de zoeklocatie">
-
-			<fieldset id="verschuiven" title="verschuiven">
+		<form id="schuifFormulier" action="index.jsp" method="${formMethod}">
+			<fieldset id="verschuiven">
 				<legend>
 					<fmt:message key="KEY_NAVIGATIE_SCHUIF_LEGEND" />
 				</legend>
 
-				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANLEFT_LBL" />
-				<label for="schuifLinksBtn">${ttl}</label>
+				<label for="schuifLinksBtn"><fmt:message
+						key="KEY_BTN_NAVI_PANLEFT_LBL" /></label>
 				<button id="schuifLinksBtn" type="submit" name="xcoord"
-					value="${naarLinks}" title="${ttl}">←</button>
+					value="${naarLinks}">←</button>
 
-				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANRIGHT_LBL" />
-				<label for="schuifRechtsBtn">${ttl}</label>
+				<label for="schuifRechtsBtn"><fmt:message
+						key="KEY_BTN_NAVI_PANRIGHT_LBL" /></label>
 				<button id="schuifRechtsBtn" type="submit" name="xcoord"
-					value="${naarRechts}" title="${ttl}">→</button>
+					value="${naarRechts}">→</button>
 
-				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANUP_LBL" />
-				<label for="schuifOmhoogBtn">${ttl}</label>
+				<label for="schuifOmhoogBtn"><fmt:message
+						key="KEY_BTN_NAVI_PANUP_LBL" /></label>
 				<button id="schuifOmhoogBtn" type="submit" name="ycoord"
-					value="${naarBoven}" title="${ttl}">↑</button>
+					value="${naarBoven}">↑</button>
 
-				<fmt:message var="ttl" key="KEY_BTN_NAVI_PANDOWN_LBL" />
-				<label for="schuifOmlaagBtn">${ttl}</label>
+				<label for="schuifOmlaagBtn"><fmt:message
+						key="KEY_BTN_NAVI_PANDOWN_LBL" /></label>
 				<button id="schuifOmlaagBtn" type="submit" name="ycoord"
-					value="${naarBeneden}" title="${ttl}">↓</button>
+					value="${naarBeneden}">↓</button>
 			</fieldset>
 
 			<p>
@@ -133,16 +129,17 @@
 		</form>
 
 		<form id="achtergrondFormulier" action="index.jsp"
-			method="${formMethod}" title="Wisselen van de achtergrondkaart">
-			<fieldset id="wisselachtergrond" title="wissel achtergrondkaart">
+			method="${formMethod}">
+			<fieldset id="wisselachtergrond">
 				<legend>
 					<fmt:message key="KEY_NAVIGATIE_BASEMAP_LEGEND" />
 				</legend>
 
-				<fmt:message var="ttl" key="KEY_TOGGLE_BASEMAP_TITLE" />
-				<label for="wisselBtn">${ttl}</label>
+
+				<label for="wisselBtn"><fmt:message
+						key="KEY_TOGGLE_BASEMAP_TITLE" /></label>
 				<button id="wisselBtn" type="submit" name="achtergrond"
-					value="${wisselachtergrond}" title="${ttl}">${wisselachtergrondBtn}</button>
+					value="${wisselachtergrond}">${wisselachtergrondBtn}</button>
 			</fieldset>
 
 			<p>
@@ -159,9 +156,8 @@
 		</form>
 
 		<form id="voorgrondFormulier" action="index.jsp"
-			method="${formMethod}" title="Aanpassen van de transparantie">
-			<fieldset id="transparantie"
-				title="Pas transparantie van het thema aan">
+			method="${formMethod}">
+			<fieldset id="transparantie">
 				<legend>
 					<fmt:message key="KEY_NAVIGATIE_FGMAP_LEGEND" />
 				</legend>

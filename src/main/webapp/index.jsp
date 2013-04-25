@@ -71,7 +71,8 @@
 				<c:url value="/index.jsp" var="indexLink">
 					<c:param name="coreonly" value="${param.coreonly}" />
 				</c:url>
-				<a href="${fn:escapeXml(indexLink)}" title="www.cbsinuwbuurt.nl" name="top">
+				<a href="${fn:escapeXml(indexLink)}" name="top">
+					<span class="visually-hidden">www.cbsinuwbuurt.nl</span>
 					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" />
 				</a>
 			</div>
