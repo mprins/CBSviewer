@@ -326,23 +326,6 @@ html.js #coreContainer p {
 	display: none;
 }
 
-a.accesskey {
-	position: absolute;
-	top: -500px;
-	text-align: center;
-	display: block;
-	height: 21px;
-	overflow: hidden;
-}
-
-a.accesskey:focus {
-	top: 0;
-	background-color: #fff;
-	width: 100%;
-	color: #000;
-	z-index: 900;
-}
-
 /* legenda elementen */
 .legendaTitel {
 	

@@ -158,8 +158,8 @@ var setupPage = {
 
 		// a11y link toevoegen in de DOM boven de kaart
 		var aLink = '<a id="activeerKeys" class="accesskey" href="" accesskey="1" onclick="jQuery(\'#' + config.mapDiv
-				+ '\').attr(\'tabindex\',-1).focus(); return false;" title="' + OpenLayers.i18n('KEY_KEYBOARDNAV_TTL')
-				+ '">' + OpenLayers.i18n('KEY_KEYBOARDNAV') + '</a>';
+				+ '\').attr(\'tabindex\',-1).focus(); return false;">' + OpenLayers.i18n('KEY_KEYBOARDNAV')
+				+ '<br/>'+ OpenLayers.i18n('KEY_KEYBOARDNAV_TTL') + OpenLayers.i18n('KEY_MENU_HELP')+'</a>';
 		jQuery('#' + config.mapDiv).prepend(aLink);
 
 		// core link toevoegen aan de kaart voor het geval de javascript kaart
