@@ -171,15 +171,15 @@ var Viewer = function() {
 			_map.zoomTo(this.config.map.initialZoom);
 
 			// toggle knop voor omschakelen basemap
-			var aToggle = '<a class="lufo" href="#" id="toggleBaseMap" onclick="Viewer.toggleBaseMap();">'
-					+ '<span class=visually-hidden>' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>'
+			var aToggle = '<a class="lufo hasTooltip" href="#" id="toggleBaseMap" onclick="Viewer.toggleBaseMap();">'
+					+ '<span>' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>'
 					+ OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO') + '</a>';
 			jQuery('#' + config.mapDiv).prepend(aToggle);
 
 			if (this.config.toggleSize) {
 				// toggle knop voor vergroten/verkleinen van de kaart
-				var aToggleMapSize = '<a class="max" href="#" id="toggleSize" onclick="Viewer.toggleFullSize();">'
-						+ '<span class=visually-hidden>' + OpenLayers.i18n('KEY_TOGGLE_SIZE') + '</span></a>';
+				var aToggleMapSize = '<a class="max hasTooltip" href="#" id="toggleSize" onclick="Viewer.toggleFullSize();">'
+						+ '<span>' + OpenLayers.i18n('KEY_TOGGLE_SIZE') + '</span></a>';
 				jQuery('#' + config.mapDiv).prepend(aToggleMapSize);
 			}
 			if (this.config.fullSize) {
@@ -195,34 +195,29 @@ var Viewer = function() {
 			});
 
 			if (this.config.fgAlphaSlider) {
-				var aSlider = jQuery(
-						'<div id="transparantie" class="transparantieslider"><span class="visually-hidden"></span></div>')
-						.prependTo(jQuery('#' + config.mapDiv)).slider({
-							value : _opacity * 100,
-							range : 'min',
-							min : 10,
-							max : 90,
-							step : 10,
-							animate : "slow",
-							slide : function(event, ui) {
-								_setOpacity(ui.value / 100);
-								jQuery(this).find('a:first').text(ui.value);
-								jQuery(this).find('span:first').text(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
-									'0' : (100 - ui.value)
-								}));
-								jQuery(this).find('a:first').attr('title', OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
-									'0' : (100 - ui.value)
-								}));
-							}
-						});
+				var aSlider = jQuery('<div id="transparantie" class="transparantieslider"></div>').prependTo(
+						jQuery('#' + config.mapDiv)).slider({
+					value : _opacity * 100,
+					range : 'min',
+					min : 10,
+					max : 90,
+					step : 10,
+					animate : 'slow',
+					slide : function(event, ui) {
+						_setOpacity(ui.value / 100);
+						jQuery(this).find('a:first').text(ui.value);
+						jQuery(this).find('a:first').append('<span>' + OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+							'0' : (100 - ui.value)
+						}) + '</span>');
+						jQuery(this).find('a:first').addClass('hasTooltip');
+					}
+				});
 				// instellen initiele waarde voor slider GUI
-				jQuery('#transparantie').find('a:first').attr('title', OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
-					'0' : (100 - (_opacity * 100))
-				}));
+				jQuery('#transparantie').find('a:first').addClass('hasTooltip');
 				jQuery('#transparantie').find('a:first').text((_opacity * 100));
-				jQuery('#transparantie').find('span:first').text(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+				jQuery('#transparantie').find('a:first').append('<span>' + OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
 					'0' : (100 - (_opacity * 100))
-				}));
+				}) + '</span>');
 			}
 		},
 
@@ -473,6 +468,7 @@ var Viewer = function() {
 				_map.setBaseLayer(topo);
 				jQuery('#toggleBaseMap').text(OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO'));
 			}
+			jQuery('#toggleBaseMap').append('<span>' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>');
 			jQuery('#toggleBaseMap').toggleClass('lufo topo');
 		},
 

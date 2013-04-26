@@ -87,24 +87,20 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 
 		// maximize button
 		var btn = document.createElement("button");
-		btn.innerHTML = '+';
-		// btn.type = 'button';
+		btn.innerHTML = '<span>'+OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_ON')+'</span>+';
 		btn.name = 'tonen';
 		this.maximizeDiv = btn;
 		this.maximizeDiv.style.display = 'none';
-		this.maximizeDiv.className = this.displayClass + 'MaximizeButton overviewMapButton olButton';
-		this.maximizeDiv.title = OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_ON');
+		this.maximizeDiv.className = this.displayClass + 'MaximizeButton overviewMapButton olButton hasTooltip';
 		this.div.appendChild(this.maximizeDiv);
 
 		// minimize button
 		btn = document.createElement("button");
-		btn.innerHTML = '−';
-		// btn.type = 'button';
+		btn.innerHTML = '<span>'+OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_OFF')+'</span>−';
 		btn.name = 'verbergen';
 		this.minimizeDiv = btn;
 		this.minimizeDiv.style.display = 'none';
-		this.minimizeDiv.className = this.displayClass + 'MinimizeButton overviewMapButton olButton';
-		this.minimizeDiv.title = OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_OFF');
+		this.minimizeDiv.className = this.displayClass + 'MinimizeButton overviewMapButton olButton hasTooltip';
 		this.div.appendChild(this.minimizeDiv);
 
 		this.minimizeControl();
