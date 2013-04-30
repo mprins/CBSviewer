@@ -10,8 +10,7 @@
 	<fmt:setBundle basename="LabelsBundle" />
 
 	<div id="zoekContainer">
-		<form method="get" action="adres" id="zoekFormulier">
-			<p class="zoekinput">
+		<form method="get" action="adres" id="zoekFormulier" class="zoekinput">
 			<fieldset>
 				<label for="adres"><fmt:message key="KEY_ADRESZOEKEN_TITEL" /></label>
 				<input name="adres" id="adres" accesskey="8"
@@ -19,17 +18,16 @@
 					value="${param.adres}"
 					onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}"
 					onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};"
-					type="text" /> <input name="searchbutton" id="searchbutton"
+					type="text" />
+				<input name="searchbutton" id="searchbutton"
 					accesskey="s" class="searchbutton" value="" type="submit" />
 
 				<c:if test="${request.straal != null}">
 					<input type="hidden" name="straal" value="${straal}" />
 				</c:if>
-
-				<input type="hidden" name="coreonly" value="true" /> <input
-					type="hidden" name="forward" value="true" />
+				<input type="hidden" name="coreonly" value="true" />
+				<input type="hidden" name="forward" value="true" />
 			</fieldset>
-			</p>
 		</form>
 		<div id="zoekresultaten">
 			<!-- REQ_PARAM_GEVONDEN.code -->
@@ -39,23 +37,29 @@
 			<c:if test="${adreslijst!=null}">
 				<!-- for item in lijst maak url -->
 				<ul class="adreslijst">
-					<li class="list"><a class="selector" href="#"><fmt:message
-								key="KEY_ZOEKEN_CHOICE" /></a>
+					<li class="list">
+						<a class="selector" href="#">
+							<fmt:message key="KEY_ZOEKEN_CHOICE" />
+						</a>
 						<ul class="adressen">
 							<c:forEach var="adres" items="${adreslijst}">
 								<fmt:message var="ttl" key="KEY_ZOEKEN_LINK_TTL">
 									<fmt:param value="${adres}" />
 								</fmt:message>
-								<li><c:url value="/index.jsp" var="adreslink">
-										<c:param name="gevonden" value="${adres}" />
-										<c:param name="xcoord" value="${adres.xCoord}" />
-										<c:param name="ycoord" value="${adres.yCoord}" />
-										<c:param name="straal" value="${adres.radius}" />
-										<c:param name="coreonly" value="${param.coreonly}" />
-									</c:url> <a href="${fn:escapeXml(adreslink)}"><span
-										class="visually-hidden">${ttl}</span>${adres}</a></li>
+							<li><c:url value="/index.jsp" var="adreslink">
+									<c:param name="gevonden" value="${adres}" />
+									<c:param name="xcoord" value="${adres.xCoord}" />
+									<c:param name="ycoord" value="${adres.yCoord}" />
+									<c:param name="straal" value="${adres.radius}" />
+									<c:param name="coreonly" value="${param.coreonly}" />
+								</c:url>
+								<a href="${fn:escapeXml(adreslink)}">
+									<span class="visually-hidden">${ttl}</span>${adres}
+								</a>
+							</li>
 							</c:forEach>
-						</ul></li>
+						</ul>
+					</li>
 				</ul>
 			</c:if>
 		</div>
