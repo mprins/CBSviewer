@@ -10,6 +10,7 @@
 	<fmt:setBundle basename="LabelsBundle" />
 
 	<div id="zoekContainer">
+
 		<form method="get" action="adres" id="zoekFormulier" class="zoekinput">
 			<fieldset>
 				<label for="adres"><fmt:message key="KEY_ADRESZOEKEN_TITEL" /></label>
@@ -29,39 +30,50 @@
 				<input type="hidden" name="forward" value="true" />
 			</fieldset>
 		</form>
+
 		<div id="zoekresultaten">
 			<!-- REQ_PARAM_GEVONDEN.code -->
 			<c:out value="${gevonden}" />
 			<c:out value="${param.gevonden}" />
-
 			<c:if test="${adreslijst!=null}">
-				<!-- for item in lijst maak url -->
-				<ul class="adreslijst">
-					<li class="list">
-						<a class="selector" href="#">
-							<fmt:message key="KEY_ZOEKEN_CHOICE" />
-						</a>
-						<ul class="adressen">
-							<c:forEach var="adres" items="${adreslijst}">
-								<fmt:message var="ttl" key="KEY_ZOEKEN_LINK_TTL">
-									<fmt:param value="${adres}" />
-								</fmt:message>
-							<li><c:url value="/index.jsp" var="adreslink">
-									<c:param name="gevonden" value="${adres}" />
-									<c:param name="xcoord" value="${adres.xCoord}" />
-									<c:param name="ycoord" value="${adres.yCoord}" />
-									<c:param name="straal" value="${adres.radius}" />
-									<c:param name="coreonly" value="${param.coreonly}" />
-								</c:url>
-								<a href="${fn:escapeXml(adreslink)}">
-									<span class="visually-hidden">${ttl}</span>${adres}
-								</a>
-							</li>
-							</c:forEach>
-						</ul>
-					</li>
-				</ul>
+
+			<div class="adreskeuze_wrapper">
+				<div class="adreskeuze">
+
+					<ul class="adreslijst">
+						<li class="list">
+							<a class="selector" href="#">
+								<fmt:message key="KEY_ZOEKEN_CHOICE" />
+							</a>
+
+							<ul class="adressen">
+								<c:forEach var="adres" items="${adreslijst}">
+									<!-- for item in lijst maak hyperlinked list item -->
+									<fmt:message var="ttl" key="KEY_ZOEKEN_LINK_TTL">
+										<fmt:param value="${adres}" />
+									</fmt:message>
+								<li><c:url value="/index.jsp" var="adreslink">
+										<c:param name="gevonden" value="${adres}" />
+										<c:param name="xcoord" value="${adres.xCoord}" />
+										<c:param name="ycoord" value="${adres.yCoord}" />
+										<c:param name="straal" value="${adres.radius}" />
+										<c:param name="coreonly" value="${param.coreonly}" />
+									</c:url>
+									<a href="${fn:escapeXml(adreslink)}">
+										<span class="visually-hidden">${ttl}</span>${adres}
+									</a>
+								</li>
+								</c:forEach>
+							</ul>
+
+						</li>
+					</ul>
+
+				</div>
+			</div>
 			</c:if>
 		</div>
+
 	</div>
+
 </jsp:root>

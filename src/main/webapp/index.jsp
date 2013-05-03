@@ -14,7 +14,7 @@
 
 	<fmt:setBundle basename="LabelsBundle" />
 
-	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 <head>
 <jsp:include page="WEB-INF/jsp/head_include.jsp" />
 
@@ -109,13 +109,13 @@
 				</ul>
 			</div>
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
-			<div class="pagetitle">				
+			<div class="pagetitle">
 				<h1 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h1>
 			</div>
-			<div class="clearer"></div>			
-        </div>	
+			<div class="clearer"></div>
+		</div>
 
-		<div id="inhoud">	
+		<div id="inhoud">
 			<div id="coreContainer" class="kaartContainer">
 				<!-- hier komt de statische kaart -->
 				<c:if test="${not empty kaart}">
@@ -133,7 +133,7 @@
 					<!-- hier wordt de dynamische kaart ingehangen -->
 				</div>
 			</div>
-			
+
 			<ul class="settingsPanel">
 				<li id="keylegend" class="legendPanel">
 					<a href="#keylegend"><fmt:message key="KEY_LEGENDA_TITEL" /></a>
@@ -161,10 +161,10 @@
 						</c:if>
 					</div>
 				</li>
-			</ul>		
-			<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />					
+			</ul>
+			<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
 		</div>
-	</div>	
+	</div>
 
 	<c:if test="${param.coreonly!=true}">
 		<!-- scripts als laatste laden -->
@@ -175,5 +175,5 @@
 		<jsp:include page="WEB-INF/jsp/javascript_coreonly_include.jsp" />
 	</c:if>
 </body>
-	</html>
+</html>
 </jsp:root>

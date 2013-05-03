@@ -1,25 +1,15 @@
 /* styles voor het zoekformulier (zoekformulier.jsp en ZoekFormulier.js) */
 
-.zoekinput {
-	margin: 0;
-	padding: 0;
-}
-
-#zoekresultaten {
-	position:absolute;
-	left: 128px;
-	top: 37px;
-	width: 266px;
-	z-index: $z-zoekContainer * 2;
-	line-height: 25px;
-	background:#fff;
-}
-
 #zoekContainer {
 	position: absolute;
 	z-index: $z-zoekContainer;
 	top: 93px;
 	left: 0;
+}
+
+.zoekinput {
+	margin: 0;
+	padding: 0;
 }
 
 #zoekContainer fieldset {
@@ -58,10 +48,12 @@
 	border: none;
 }
 
+/** @override jquery-ui */
 .ui-autocomplete-loading {
 	background: #fff url('../img/ui-anim_basic_16x16.gif') right center no-repeat;
 }
 
+/** @override jquery-ui */
 .ui-autocomplete {
 	max-height: 200px;
 	overflow-y: auto;
@@ -73,6 +65,7 @@
 	z-index: $z-zoekContainer + 1 !important;
 }
 
+/** @override jquery-ui */
 .ui-menu .ui-menu-item {
 	margin: 0px;
 	padding: 5px;
@@ -80,33 +73,63 @@
 	line-height: 100%;
 }
 
+/** @override jquery-ui */
 li.ui-menu-item {
 	border: 1px solid $BlueColour;
 }
 
+/** @override jquery-ui */
 li.ui-menu-item a {
-    display: block !important;
+	display: block !important;
+}
+
+/**
+	dropdown adreskeuzelijst menu vars.
+*/
+$magicWidth: 560px;
+$magicOffscreenMargin: 32767px;
+$magicPadding: 5px;
+$magicLineHeight: 25px;
+
+#zoekresultaten {
+	position: absolute;
+	left: 128px;
+	top: 37px;
+	min-width: $magicWidth /2 ;
+	z-index: $z-zoekContainer * 2;
+	background: #fff;
+}
+
+.adreskeuze_wrapper {
+	position: relative; 
+	height: $magicLineHeight;
+}
+
+.adreskeuze {
+	position: absolute; 
+	z-index: 100;
+	line-height: $magicLineHeight;
 }
 
 ul.adreslijst {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	width: 266px;
-	overflow: hidden;
+	padding: 0; 
+	margin: 0; 
+	list-style:n one; 
+	overflow: hidden; 
+	float: left; 
 	margin-right: 1px;
-}
 
-ul.adreslijst a {
-	background: #369;
-	text-decoration: none;
-	padding-left: 5px;
-}
+	& a {
+		text-decoration: none; 
+		color: $BlueColour; 
+		padding-left: $magicPadding;
+	}
 
-ul.adreslijst li.list {
-	float: left;
-	width: 266px;
-	margin: -32767px -125px 0px 0px;
+	& li.list {
+		float:left;
+		width: $magicWidth;
+		margin: -$magicOffscreenMargin $magicWidth/-2 0 0;
+	}
 }
 
 ul.adreslijst li.list a.selector {
@@ -114,36 +137,39 @@ ul.adreslijst li.list a.selector {
 	z-index: 50;
 	display: block;
 	float: left;
-	width: 266px;
-	margin-top: 32767px;
+	width: $magicWidth/2 - $magicPadding;
+	margin-top: $magicOffscreenMargin;
 	background: transparent;
-}
 
-ul.adreslijst li.list a.selector:hover,ul.adreslijst li.list a.selector:focus,ul.adreslijst li.list a.selector:active
-	{
-	margin-right: 1px;
-	background: #000;
+	&:hover,
+	&:focus,
+	&:active {
+		margin-right: 1px;
+	}
 }
 
 ul.adressen {
-	float: left;
-	padding: 25px 0px 0px 0px;
-	margin: 0;
-	list-style: none;
-	background: #369;
-	margin: -25px 0px 0px 0px;
-}
+	float: left; 
+	padding: $magicLineHeight 0 0 0; 
+	margin: 0; 
+	list-style: none; 
+	margin: -$magicLineHeight 0 0 0;
 
-ul.adressen li a {
-	float: left;
-	width: 266px;
-	background: #369;
-	clear: left;
-	color: #fff;
-}
+	& a:hover,
+	& a:focus,
+	& a:active {
+		background: $BlueColourDarker;
+		margin-right: 1px;
+		color: #fff;
+	}
 
-ul.adressen a:hover,ul.adressen a:focus,ul.adressen a:active {
-	background: #900;
-	margin-right: 1px;
-	color: #fff;
+	&  li a {
+		float: left;
+		width: $magicWidth/2 - $magicPadding;
+		clear: left;
+		// voor <ie9
+		background: $BlueColour;
+		background: $BlueColourTransp;
+		color: #fff;
+	}
 }
