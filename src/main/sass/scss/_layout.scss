@@ -55,23 +55,24 @@ body:hover .visually-hidden button {
 		width: 1px;
 		overflow: hidden;
 	}
-	&:hover span, &:focus span{
+	&:hover span, 
+	&:focus span{
 		clip: auto;
-	    padding: 3px;
-	    border: $ControlBorder;
-	    height: auto;
-	    width: auto;
-	    bottom: 2em;
-	    right: 0px;
-	    z-index: $z-zoekContainer + 100;
-	    max-height: 100px;
-	    white-space: nowrap;
+		padding: 3px;
+		border: $ControlBorder;
+		height: auto;
+		width: auto;
+		bottom: 2em;
+		right: 0px;
+		z-index: $z-zoekContainer + 100;
+		max-height: 100px;
+		white-space: nowrap;
 		display: inline-block;
-	    background-color: $BlueColour;
-	    color: #fff;
-	    @include border-radius(5px);
-	    @include box-shadow(2px 2px 2px $ControlBorderColour);
-	    font-size: 12px;
-	    font-weight: normal;
+		background-color: $BlueColour;
+		color: #fff;
+		@include border-radius(5px);
+		@include box-shadow(2px 2px 2px $ControlBorderColour);
+		font-size: 12px;
+		font-weight: normal;
 	}
 }

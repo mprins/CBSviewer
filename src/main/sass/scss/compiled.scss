@@ -16,6 +16,7 @@ $experimental-support-for-khtml :			false;
 
 /* pagina en widget elementen, volgorde is belangrijk */
 @import 'layout';
+@import 'style';
 @import 'openlayers';
 @import 'Viewer';
 @import 'ZoekFormulier';

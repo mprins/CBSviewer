@@ -3,15 +3,31 @@
 @import 'colours_and_vars';
 
 /* niet af te drukken elementen en klassen. In essentie alle eyecandy, navigatie, hyperlinks etc. */
-#toggleSize,#toggleBaseMap,.olControlZoom,#zoekContainer,#coreexitlink,#kaartnavi,
-.dropDownMenu,.utilBlock,#footer,#cbslogo,#downloadLink,#transparantieslider,.OverviewMap
-	{
+#toggleSize,
+#toggleBaseMap,
+.olControlZoom,
+#zoekContainer,
+#coreexitlink,
+#kaartnavi,
+.dropDownMenu,
+.utilBlock,
+#footer,
+#cbslogo,
+#downloadLink,
+#transparantieslider,
+.OverviewMap {
 	display: none;
 }
 
 /*reset accordion container, accordion content, label, body etc.*/
-.header,.headertop,body,.settingsPanel,.settingsContent,.menuAccordion,.titel,.subtitel
-	{
+.header,
+.headertop,
+body,
+.settingsPanel,
+.settingsContent,
+.menuAccordion,
+.titel,
+.subtitel {
 	width: auto;
 	height: auto;
 	line-height: 1;
@@ -19,7 +35,8 @@
 	display: initial;
 }
 
-.titel,.subtitel {
+.titel,
+.subtitel {
 	top: 0;
 }
 

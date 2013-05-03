@@ -287,21 +287,6 @@ h1,h2,h3 {
 /* end footer stuff */
 
 /* opmaak van de elementen */
-.error,.todo {
-	background: url("../img/error.png") no-repeat scroll -12px 1px transparent;
-	padding-left: 16px;
-	text-align: center;
-	color: #f00;
-	border: 1px solid;
-	font-style: italic;
-	font-variant: small-caps;
-}
-
-/* verstopt, ook voor screenreaders */
-.hidden {
-	display: none;
-}
-
 html.js #kaartContainer.nothidden {
 	display: block !important;
 }

@@ -1,11 +1,12 @@
 /* veel gebruikte kleuren, oa. voor controls in de kaart.*/
-$BlueColour:		rgb(39, 29, 108);
-$BlueColourTransp:	rgba($BlueColour, 0.8);
-$BlueColourLighter:	lighten($BlueColour, 10%);
-$BlueColourDarker:	darken($BlueColour, 10%);
+$BlueColour:			rgb(39, 29, 108);
+$BlueColourTransp:		rgba($BlueColour, 0.8);
+$BlueColourLighter:		lighten($BlueColour, 10%);
+$BlueColourDarker:		darken($BlueColour, 10%);
+$ErrorColor:			rgb(255, 0, 0);
+$ControlBorderColour:	rgb(170, 170, 170);
 
 /* control borders in de kaart */
-$ControlBorderColour: rgb(170, 170, 170);
 $ControlBorder: 1px solid $ControlBorderColour;
 
 /* z-indexes */

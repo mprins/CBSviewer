@@ -114,7 +114,7 @@ $magicLineHeight: 25px;
 ul.adreslijst {
 	padding: 0; 
 	margin: 0; 
-	list-style:n one; 
+	list-style: none; 
 	overflow: hidden; 
 	float: left; 
 	margin-right: 1px;
@@ -163,7 +163,7 @@ ul.adressen {
 		color: #fff;
 	}
 
-	&  li a {
+	& li a {
 		float: left;
 		width: $magicWidth/2 - $magicPadding;
 		clear: left;
