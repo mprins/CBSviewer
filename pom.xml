@@ -92,6 +92,12 @@
 		<http.proxyPort>0</http.proxyPort>
 		<debug>false</debug>
 		<sass.OutputStyle>:compressed</sass.OutputStyle>
+		<openlayers.checkout.url>scm:git:https://github.com/openlayers/openlayers.git</openlayers.checkout.url>
+		<!-- tag, branch, ... -->
+		<openlayers.checkout.versiontype>tag</openlayers.checkout.versiontype>
+		<openlayers.checkout.version>release-2.13-rc1</openlayers.checkout.version>
+		<!-- this can be any other OL build compressor or none -->
+		<openlayers.compress.build>closure</openlayers.compress.build>
 	</properties>
 	<profiles>
 		<profile>
@@ -132,18 +138,11 @@
 				</plugins>
 			</build>
 		</profile>
-		
 		<profile>
 			<!-- specify this profile to build openlayers as part of the build, ie. 
 				-Popenlayers -->
 			<id>openlayers</id>
 			<properties>
-				<openlayers.checkout.url>scm:git:https://github.com/openlayers/openlayers.git</openlayers.checkout.url>
-				<!-- tag, branch, ... -->
-				<openlayers.checkout.versiontype>branch</openlayers.checkout.versiontype>
-				<openlayers.checkout.version>master</openlayers.checkout.version>
-				<!-- this can be any other OL build compressor or none -->
-				<openlayers.compress.build>closure</openlayers.compress.build>
 			</properties>
 			<build>
 				<defaultGoal>process-test-classes</defaultGoal>
@@ -457,8 +456,9 @@
 							<addClasspath>true</addClasspath>
 						</manifest>
 						<manifestEntries>
-							<Implementation-Build>branch: ${scmBranch} rev: ${buildNumber} timestamp: ${timestamp}</Implementation-Build>
+							<Implementation-Build>branch - ${scmBranch} rev - ${buildNumber} time - ${timestamp}</Implementation-Build>
 							<SCM-Revision>${buildNumber}</SCM-Revision>
+							<OpenLayers-Version>${openlayers.checkout.versiontype} - ${openlayers.checkout.version}</OpenLayers-Version>
 							<url>${project.url}</url>
 							<release>${project.version}</release>
 						</manifestEntries>
