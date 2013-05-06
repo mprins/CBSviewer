@@ -3,8 +3,7 @@
 	session="false"%>
 <%
 	//log de exception en de timestamp
-	org.slf4j.Logger logger = org.slf4j.LoggerFactory
-			.getLogger("ERROR.JSP");
+	org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger("nl.mineleni.cbsviewer");
 	logger.error(exception.getLocalizedMessage(), exception);
 %>
 
@@ -16,6 +15,7 @@
 <title>Systeemfout</title>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/compiled.css" type="text/css" media="screen" />
 
 <!--[if lte IE 7]><link rel="stylesheet" href="css/ie-lte7.css" type="text/css" media="screen" /><![endif]-->
 <!--[if IE 8]>    <link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />   <![endif]-->
