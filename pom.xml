@@ -81,7 +81,7 @@
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>9.1</geotools.version>
+		<geotools.version>9.2</geotools.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
@@ -95,7 +95,7 @@
 		<openlayers.checkout.url>scm:git:https://github.com/openlayers/openlayers.git</openlayers.checkout.url>
 		<!-- tag, branch, ... -->
 		<openlayers.checkout.versiontype>tag</openlayers.checkout.versiontype>
-		<openlayers.checkout.version>release-2.13-rc1</openlayers.checkout.version>
+		<openlayers.checkout.version>release-2.13-rc3</openlayers.checkout.version>
 		<!-- this can be any other OL build compressor or none -->
 		<openlayers.compress.build>closure</openlayers.compress.build>
 	</properties>
@@ -311,7 +311,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.4.1</version>
 				<configuration>
 					<pushChanges>false</pushChanges>
 				</configuration>
@@ -363,7 +363,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.0</version>
+				<version>3.1</version>
 				<configuration>
 					<debug>${debug}</debug>
 					<optimize>!${debug}</optimize>
@@ -377,7 +377,7 @@
 			<plugin>
 				<groupId>org.jasig.maven</groupId>
 				<artifactId>sass-maven-plugin</artifactId>
-				<version>1.1.0</version>
+				<version>1.1.1</version>
 				<executions>
 					<execution>
 						<phase>process-sources</phase>
@@ -591,7 +591,7 @@
  			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>3.2</version>
+				<version>3.3</version>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.maven.doxia</groupId>
@@ -736,7 +736,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-project-info-reports-plugin</artifactId>
-							<version>2.6</version>
+							<version>2.7</version>
 							<reportSets>
 								<reportSet>
 									<reports>
