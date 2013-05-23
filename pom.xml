@@ -395,7 +395,6 @@
 								<includes>
 									<include>*.scss</include>
 								</includes>
-								<excludes />
 							</source>
 							<destination>${project.build.directory}/${project.build.finalName}/css</destination>
 						</resource>
