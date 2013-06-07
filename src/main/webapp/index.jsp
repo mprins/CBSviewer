@@ -64,6 +64,8 @@
 </head>
 
 <body>
+	<jsp:include page="WEB-INF/jsp/debug_include.jsp" />
+	
 <c:if test="${param.coreonly!=true}">
 	<fmt:message key="KEY_BROWSERERROR" var="browser_error"/>
 	<![CDATA[
