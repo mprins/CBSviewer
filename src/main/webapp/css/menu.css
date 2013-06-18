@@ -70,7 +70,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	z-index: 1006;
 }
 .siteNavigation>li>a {
-	background-color:rgb(130,4,94);
+	background-color:#82045E;
 	color: white;
 	border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
@@ -114,7 +114,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	display: block;
 }
 .navCategories>li>a {
-	background-color:rgb(130,4,94);
+	background-color:#82045E;
 	border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
 	color: white;
@@ -133,7 +133,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	/*background-color:rgb(175,14,128);*/
 }
 .navCategories>li:nth-child(odd)>a {
-	background-color:rgb(175,14,128);
+	background-color:#AF0E80;
 }
 .navCategories>li:nth-child(odd)>a.current,
 .navCategories>li:nth-child(odd)>a:hover,

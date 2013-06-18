@@ -13,7 +13,9 @@
 			pageContext.setAttribute("isDebugEnabled", logger.isDebugEnabled());</jsp:scriptlet>
 
 	<c:if test="${isDebugEnabled}">
-		<img class="debug" src="img/debug.png"
-			alt="Deze applicatie draait in debug/ontwikkelaars modus" />
+		<div>
+			<img class="debug" src="img/debug.png"
+				alt="Deze applicatie draait in debug/ontwikkelaars modus" />
+		</div>
 	</c:if>
 </jsp:root>

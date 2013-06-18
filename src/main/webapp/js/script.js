@@ -132,16 +132,17 @@ jQuery('.megaMenu a').click(
 					return n.id == _id;
 				});
 				Viewer.loadWMS(maps[0]);
-				// bijwerken pagina titel
-				jQuery('title').html(OpenLayers.i18n('KEY_KAART_TITEL', {
+				// bijwerken pagina titel, IE7/8 proof
+				document.title = OpenLayers.i18n('KEY_KAART_TITEL', {
 					'0' : '' + maps[0].name
-				}));
+				});
+				
 				jQuery('#pagSubTitle').html(OpenLayers.i18n('KEY_KAART_TITEL', {
 					'0' : '' + maps[0].name
 				}));
 
 				// bijwerken download link
-				if (maps[0].link) {
+				/*if (maps[0].link) {
 					jQuery('#downloadLink').html(
 							'<a href="' + maps[0].link + '">Download de dataset voor'
 									+ OpenLayers.i18n('KEY_KAART_TITEL', {
@@ -149,7 +150,7 @@ jQuery('.megaMenu a').click(
 									}) + '</a>');
 				} else {
 					jQuery('#downloadLink').html('');
-				}
+				}*/
 
 				// close menu
 				jQuery('.navDropDown').css('left', '-9999px');
