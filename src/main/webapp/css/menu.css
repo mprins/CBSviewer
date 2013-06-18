@@ -26,7 +26,7 @@
 	min-height: 520px;
 }
 .siteNavigation .sectionTheme:hover .navDropDown  {
-	left: auto;
+	left: 0px;
 }
 html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	left: -9999px;

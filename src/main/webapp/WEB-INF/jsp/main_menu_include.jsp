@@ -409,7 +409,7 @@
 						 <div class="contentasset">
 							<div class="megaMenu megaThreeColumns">
 						 		<div class="underConstruction">
-									Selecteren op jaar hoeft niet te worden getest. Dit komt in fase 2.
+									Gereed in fase 2
 								</div>
 								<!-- gebruik dezelfde markup als je wel of geen accordion hebt -->
 								<ul><li>
@@ -486,7 +486,7 @@
 						<div class="contentasset">
 							<div class="megaMenu megaFourColumns">
 						 		<div class="underConstruction">
-									Selecteren op kaartlaag hoeft niet te worden getest. Dit komt in fase 2.
+									Gereed in fase 2
 								</div>
 								<ul><li>
 									<ul>
@@ -501,22 +501,18 @@
 									</ul>
 									<ul>
 										<li class="menuTitle"><p><img src="img/template/vierkanten.png" alt="Vierkanten"/></p>Vierkanten 100m</li>
-										<li><a href="#">2000<span>Dit is de tooltip</span></a> | <a href="#">2007<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2001<span>Dit is de tooltip</span></a> | <a href="#">2008<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2002<span>Dit is de tooltip</span></a> | <a href="#">2009<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2003<span>Dit is de tooltip</span></a> | <a href="#">2010<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2004<span>Dit is de tooltip</span></a> | <a href="#">2011<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2005<span>Dit is de tooltip</span></a> | <a href="#">2012<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2006<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2000<span>Dit is de tooltip</span></a> | <a href="#">2001<span>Dit is de tooltip</span></a> | <a href="#">2002<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2003<span>Dit is de tooltip</span></a> | <a href="#">2004<span>Dit is de tooltip</span></a> | <a href="#">2005<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2006<span>Dit is de tooltip</span></a> | <a href="#">2007<span>Dit is de tooltip</span></a> | <a href="#">2008<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2009<span>Dit is de tooltip</span></a> | <a href="#">2010<span>Dit is de tooltip</span></a> | <a href="#">2011<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2012<span>Dit is de tooltip</span></a></li>
 
 										<li class="menuTitle">Vierkanten 500m</li>
-										<li><a href="#">2000<span>Dit is de tooltip</span></a> | <a href="#">2007<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2001<span>Dit is de tooltip</span></a> |  <a href="#">2008<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2002<span>Dit is de tooltip</span></a> | <a href="#">2009<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2003<span>Dit is de tooltip</span></a> | <a href="#">2010<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2004<span>Dit is de tooltip</span></a> | <a href="#">2011<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2005<span>Dit is de tooltip</span></a> | <a href="#">2012<span>Dit is de tooltip</span></a></li>
-										<li><a href="#">2006<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2000<span>Dit is de tooltip</span></a> | <a href="#">2001<span>Dit is de tooltip</span></a> | <a href="#">2002<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2003<span>Dit is de tooltip</span></a> | <a href="#">2004<span>Dit is de tooltip</span></a> | <a href="#">2005<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2006<span>Dit is de tooltip</span></a> | <a href="#">2007<span>Dit is de tooltip</span></a> | <a href="#">2008<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2009<span>Dit is de tooltip</span></a> | <a href="#">2010<span>Dit is de tooltip</span></a> | <a href="#">2011<span>Dit is de tooltip</span></a></li>
+										<li><a href="#">2012<span>Dit is de tooltip</span></a></li>
 									</ul>
 									<ul>
 										<li class="menuTitle"><p><img src="img/template/wijkenbuurten.png" alt="Wijken en buurten"/></p>Buurten</li>
