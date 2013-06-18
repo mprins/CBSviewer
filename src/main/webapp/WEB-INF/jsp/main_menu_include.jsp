@@ -409,7 +409,7 @@
 						 <div class="contentasset">
 							<div class="megaMenu megaThreeColumns">
 						 		<div class="underConstruction">
-									Selecteren op jaar hoeft niet te worden getest. Dit komt in fase 2.
+									Gereed in fase 2
 								</div>
 								<!-- gebruik dezelfde markup als je wel of geen accordion hebt -->
 								<ul><li>
@@ -486,7 +486,7 @@
 						<div class="contentasset">
 							<div class="megaMenu megaFourColumns">
 						 		<div class="underConstruction">
-									Selecteren op kaartlaag hoeft niet te worden getest. Dit komt in fase 2.
+									Gereed in fase 2
 								</div>
 								<ul><li>
 									<ul>

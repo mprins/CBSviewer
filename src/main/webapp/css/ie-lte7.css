@@ -34,62 +34,6 @@ div.olControlZoom a:hover {
 	left: 0px;
 }
 
-.ie7 .navCategories>li>a {
-	width: 19%;
-}
-
-.ie7 .hasMenu span {
-	color: #666666;
-	content: "?";
-	display: inline-block;
-	padding: 0 0 0 10px;
-	text-shadow: none;
-}
-
-.navCategories>li {
-	display: inline;
-}
-
-.navCategories li a span {
-	background: url(../img/template/arrows_sprite_8.png) no-repeat -30px 0;
-	content: '';
-	display: inline-block;
-	float: right;
-	height: 9px;
-	position: relative;
-	right: 10px;
-	top: 2px;
-	width: 6px;
-}
-
-.navCategories li a span
-{
-	left: 170px;
-	position: absolute;
-	top: auto;
-}
-
-.siteNavigation {
-	font-size: 90%;
-}
-
-.siteNavigation>li:first-child>a {
-	border-left-width: 2px;
-}
-
-.siteNavigation>li>a {
-	border-left: solid 1px #555;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d4d4d4',GradientType=0 );
-}
-
-.siteNavigation>li:hover>a {
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
-}
-
-.siteNavigation>li>a {
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#545454', endColorstr='#1e1e1e',GradientType=0 );
-}
-
 .ui-autocomplete {
 	zoom: 1;
 	filter: alpha(opacity=90);
