@@ -94,8 +94,8 @@
 		<sass.OutputStyle>:compressed</sass.OutputStyle>
 		<openlayers.checkout.url>scm:git:https://github.com/openlayers/openlayers.git</openlayers.checkout.url>
 		<!-- tag, branch, ... -->
-		<openlayers.checkout.versiontype>branch</openlayers.checkout.versiontype>
-		<openlayers.checkout.version>2.13</openlayers.checkout.version>
+		<openlayers.checkout.versiontype>tag</openlayers.checkout.versiontype>
+		<openlayers.checkout.version>release-2.13</openlayers.checkout.version>
 		<!-- this can be any other OL build compressor or none -->
 		<openlayers.compress.build>closure</openlayers.compress.build>
 	</properties>
