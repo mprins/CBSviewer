@@ -22,12 +22,10 @@ jQuery(document)
 
 					/* popup */
 					jQuery('.fancybox').fancybox();
-					
 					/* slidedown effect */
 					var settings_head = jQuery('.settingsPanel > li > a');
 					settings_head.first().addClass('active').next().slideDown('normal');
-					jQuery('#legenda').css('max-height', jQuery(window).height() - 500); //todo: compute height on click
-					
+
 					settings_head.on('click', function(event) {
 						event.preventDefault();						
 						jQuery(this).next().stop(true, true).slideToggle('normal');
@@ -35,7 +33,9 @@ jQuery(document)
 							jQuery(this).addClass('active');
 						} else {
 							jQuery(this).removeClass('active');
-						}						
+						}
+						if (jQuery(this) == '#keylegend')
+							alert("true");
 					});
 
 					var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'), menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');
@@ -49,15 +49,27 @@ jQuery(document)
 							menuAccordion_head.removeClass('active');
 							jQuery(this).addClass('active');
 						}
+						jQuery('#legenda').css('max-height', 
+								jQuery(window).height() - 
+								jQuery('#footerWrapper').height() - 
+								jQuery('.header').height() - 
+								jQuery('#keyfeatureinfo').height() - 100
+							);					
 					});
+					
+					jQuery('#legenda').css('max-height', 
+						jQuery(window).height() - 
+						jQuery('#footerWrapper').height() - 
+						jQuery('.header').height() - 
+						jQuery('#keyfeatureinfo').height() - 100
+					);									
 				});
-
+				
 /**
  * Close megamenu on menu click
  * 
  * @returns false
- */
- 
+ */ 
 jQuery('#hasMenu').click(function() {
 	if (parseInt(jQuery('.navDropDown').css('left')) < 0) {
 		jQuery('.navDropDown').css('left', 'auto');
@@ -89,6 +101,7 @@ jQuery('ul.navleft li, ul.navright li').click(function() {
  * Hide sub menu on click
  */
 jQuery(document).click(function() {
+
 	//jQuery('ul.submenu:visible').hide();
 });
 
