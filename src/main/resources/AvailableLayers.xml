@@ -7,8 +7,8 @@
   <layers>gemeenten2012</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2012/wms</url>
   <styles>wijkenbuurten_thema_gemeenten_gemeente_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>gemeentenaam, aantal_inwoners</attributes>
+  <aliases>Gemeente, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>gemeenten2011_aantal_inwoners</id>
@@ -16,8 +16,8 @@
   <layers>gemeenten2011</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
   <styles>wijkenbuurten_thema_gemeenten_gemeente_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>gemeentenaam, aantal_inwoners</attributes>
+  <aliases>Gemeente, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>gemeenten2010_aantal_inwoners</id>
@@ -25,8 +25,8 @@
   <layers>gemeenten2010</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
   <styles>wijkenbuurten_thema_gemeenten_gemeente_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>gemeentenaam, aantal_inwoners</attributes>
+  <aliases>Gemeente, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>gemeenten2009_aantal_inwoners</id>
@@ -34,8 +34,8 @@
   <layers>gemeenten2009</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
   <styles>wijkenbuurten_thema_gemeenten_gemeente_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>gemeentenaam, aantal_inwoners</attributes>
+  <aliases>Gemeente, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>wijken2012_aantal_inwoners</id>
@@ -43,8 +43,8 @@
   <layers>CBS_wijken_2012</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2012/wms</url>
   <styles>wijkenbuurten_thema_wijken_wijk_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>gemeentenaam, aantal_inwoners</attributes>
+  <aliases>Gemeente, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>wijken2011_aantal_inwoners</id>
@@ -52,8 +52,8 @@
   <layers>CBS_wijken_2011</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
   <styles>wijkenbuurten_thema_wijken_wijk_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>gemeentenaam, aantal_inwoners</attributes>
+  <aliases>Gemeente, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>wijken2010_aantal_inwoners</id>
@@ -61,8 +61,8 @@
   <layers>CBS_wijken_2010</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
   <styles>wijkenbuurten_thema_wijken_wijk_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>gemeentenaam, aantal_inwoners</attributes>
+  <aliases>Gemeente, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>wijken2009_aantal_inwoners</id>
@@ -70,8 +70,8 @@
   <layers>CBS_wijken_2009</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
   <styles>wijkenbuurten_thema_wijken_wijk_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>gemeentenaam, aantal_inwoners</attributes>
+  <aliases>Gemeente, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>buurten2012_aantal_inwoners</id>
@@ -79,8 +79,8 @@
   <layers>CBS_buurten_2012</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2012/wms</url>
   <styles>wijkenbuurten_thema_buurten_buurt_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>buurtnaam, aantal_inwoners</attributes>
+  <aliases>Buurt, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>buurten2011_aantal_inwoners</id>
@@ -88,8 +88,8 @@
   <layers>CBS_buurten_2011</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
   <styles>wijkenbuurten_thema_buurten_buurt_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>buurtnaam, aantal_inwoners</attributes>
+  <aliases>Buurt, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>buurten2010_aantal_inwoners</id>
@@ -97,8 +97,8 @@
   <layers>CBS_buurten_2010</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
   <styles>wijkenbuurten_thema_buurten_buurt_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>buurtnaam, aantal_inwoners</attributes>
+  <aliases>Buurt, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>buurten2009_aantal_inwoners</id>
@@ -106,8 +106,8 @@
   <layers>CBS_buurten_2009</layers>
   <url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
   <styles>wijkenbuurten_thema_buurten_buurt_aantal_inwoners</styles>
-  <attributes>AANT_INW</attributes>
-  <aliases>Aantal inwoners</aliases>
+  <attributes>buurtnaam, aantal_inwoners</attributes>
+  <aliases>Buurt, Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>
   <id>bevolkingskern2008_aantal_inwoners</id>
@@ -115,7 +115,7 @@
   <layers>cbsbevolkingskernen2008</layers>
   <url>http://geodata.nationaalgeoregister.nl/bevolkingskernen2008/wms</url>
   <styles>bevolkingskern_aantal_inwoners</styles>
-  <attributes>BEV08TOT</attributes>
+  <attributes>aantal_inwoners</attributes>
   <aliases>Aantal inwoners</aliases>
 </Layerdescriptor>
 <Layerdescriptor>

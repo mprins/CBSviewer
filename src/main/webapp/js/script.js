@@ -119,12 +119,25 @@ jQuery('.closeMega').click(function() {
 jQuery('.megaMenu a').click(
 		function(event) {
 			event.preventDefault();
+			
+			// retrieve mapid from url
+			function getURLParameter(name, url) {
+				return decodeURIComponent
+				(
+					(new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(url)||[,""])[1].replace(/\+/g, '%20')
+				)
+				|| null;
+			}
+
+			var selectedMap = getURLParameter('mapid', jQuery(this).attr('href'));
+			
 			// only load new themes
-			if (jQuery(this).attr('name') != config.defaultMapId 
-				&& jQuery(this).attr('href') != '#'
+			if (selectedMap != config.defaultMapId 
+				&& selectedMap != null
+				&& jQuery(this).attr('href') != '#'				
 				&& jQuery(this).attr('class') != 'accordionheader') {
 				
-				var _id = jQuery(this).attr('name');
+				var _id = getURLParameter('mapid', jQuery(this).attr('href'));
 
 				var maps = jQuery.grep(_layers, function(n, i) {
 					return n.id == _id;
