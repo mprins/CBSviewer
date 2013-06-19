@@ -632,30 +632,6 @@
 							<artifactId>maven-changelog-plugin</artifactId>
 							<version>2.2</version>
 						</plugin>
-						<plugin> 
-						  <groupId>de.saumya.mojo</groupId>
-						  <artifactId>gem-maven-plugin</artifactId>
-							<version>@project.parent.version@</version>
-							<executions>
-							  <execution>
-								<goals>
-								  <goal>exec</goal>
-								</goals>
-								<phase>compile</phase>
-								<configuration>
-								  <execArgs>${project.build.directory}/rubygems/bin/compass compile ${basedir}/src/main/sass</execArgs>
-								</configuration>
-							  </execution>
-							</executions>
-							<dependencies>
-							  <dependency>
-								<groupId>rubygems</groupId>
-								<artifactId>compass</artifactId>
-								<version>0.12.2</version>
-								<type>gem</type>
-							  </dependency>
-							</dependencies>
-						</plugin>
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-javadoc-plugin</artifactId>

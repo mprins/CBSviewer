@@ -7,7 +7,7 @@ a.accesskey {
 		top : 0;
 		background-color: #fff;
 		width: 100%;
-		z-index: $z-zoekContainer + 5;
+		z-index: 1065;
 	}
 }
 
@@ -42,7 +42,7 @@ body:hover .visually-hidden button {
 /* decorator voor een tooltip functie van focus-able elementen zoals a en button */
 .hasTooltip {
 	position:relative;
-	z-index: $z-zoekContainer + 100;
+	z-index: 1160;
 	& span {
 		/* afgeleid van .visually-hidden hierboven */
 		position: absolute;
@@ -63,7 +63,7 @@ body:hover .visually-hidden button {
 		width: auto;
 		bottom: 2em;
 		right: 0px;
-		z-index: $z-zoekContainer + 100;
+		z-index: 1160;
 		max-height: 100px;
 		white-space: nowrap;
 		display: inline-block;
