@@ -41,7 +41,7 @@
 
 <c:if test="${empty param.mapid}">
 	<!-- default thema kaartlaag -->
-	<c:set value="wijkenbuurten2011_thema_gemeenten2011_bevolkingsdichtheid_inwoners_per_km2" var="mapid" />
+	<c:set value="gemeenten2012_bevolkingsdichtheid_inwoners_per_km2" var="mapid" />
 </c:if>
  <c:if test="${not empty param.mapid}">
 	<c:set value="${param.mapid}" var="mapid" />

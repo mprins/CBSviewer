@@ -34,8 +34,6 @@ jQuery(document)
 						} else {
 							jQuery(this).removeClass('active');
 						}
-						if (jQuery(this) == '#keylegend')
-							alert("true");
 					});
 
 					var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'), menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');
