@@ -109,90 +109,160 @@
 													<li class="menuTitle">Huishoudens</li>
 													<li><a href="#">Eenpersoonshuishoudens<span><fmt:message key="KEY_TOOLTIP4" /></span></a>
 														<ul class="submenu">
-															<li>Gemeente<br/><a href="?mapid=wijkenbuurten2011_thema_gemeenten2011_percentage_eenpersoonshuishoudens" name="wijkenbuurten2011_thema_gemeenten2011_percentage_eenpersoonshuishoudens">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_percentage_eenpersoonshuishoudens" name="wijkenbuurten2010_thema_gemeenten2010_percentage_eenpersoonshuishoudens">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_percentage_eenpersoonshuishoudens" name="wijkenbuurten2009_thema_gemeenten2009_percentage_eenpersoonshuishoudens">2009</a></li>
-															<li>Wijk<br/><a href="?mapid=wijkenbuurten2011_thema_wijken2011_percentage_eenpersoonshuishoudens" name="wijkenbuurten2011_thema_wijken2011_percentage_eenpersoonshuishoudens">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_wijken2010_percentage_eenpersoonshuishoudens" name="wijkenbuurten2010_thema_wijken2010_percentage_eenpersoonshuishoudens">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_wijken2009_percentage_eenpersoonshuishoudens" name="wijkenbuurten2009_thema_wijken2009_percentage_eenpersoonshuishoudens">2009</a></li>
-															<li>Buurt<br/><a href="?mapid=wijkenbuurten2011_thema_buurten2011_percentage_eenpersoonshuishoudens" name="wijkenbuurten2011_thema_buurten2011_percentage_eenpersoonshuishoudens">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_buurten2010_percentage_eenpersoonshuishoudens" name="wijkenbuurten2010_thema_buurten2010_percentage_eenpersoonshuishoudens">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_buurten2009_percentage_eenpersoonshuishoudens" name="wijkenbuurten2009_thema_buurten2009_percentage_eenpersoonshuishoudens">2009</a></li>
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2012_percentage_eenpersoonshuishoudens')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_percentage_eenpersoonshuishoudens')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_eenpersoonshuishoudens')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_eenpersoonshuishoudens')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_percentage_eenpersoonshuishoudens')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_percentage_eenpersoonshuishoudens')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_eenpersoonshuishoudens')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_eenpersoonshuishoudens')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_percentage_eenpersoonshuishoudens')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_percentage_eenpersoonshuishoudens')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_eenpersoonshuishoudens')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_eenpersoonshuishoudens')}">2009</a></li>
+															<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_inw_in_eenpersoonshuish')}">2008</a></li>
 														</ul>
 													</li>
 													<li><a href="#">Huishoudens zonder kinderen<span><fmt:message key="KEY_TOOLTIP5" /></span></a>
 														<ul class="submenu">
-															<li>Gemeente<br/><a href="?mapid=wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_zonder_kinderen" name="wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_zonder_kinderen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_zonder_kinderen" name="wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_zonder_kinderen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_zonder_kinderen" name="wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_zonder_kinderen">2009</a></li>
-															<li>Wijk<br/><a href="?mapid=wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_zonder_kinderen" name="wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_zonder_kinderen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_zonder_kinderen" name="wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_zonder_kinderen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_zonder_kinderen" name="wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_zonder_kinderen">2009</a></li>
-															<li>Buurt<br/><a href="?mapid=wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_zonder_kinderen" name="wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_zonder_kinderen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_zonder_kinderen" name="wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_zonder_kinderen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_zonder_kinderen" name="wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_zonder_kinderen">2009</a></li>
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2012_percentage_huishoudens_zonder_kinderen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_percentage_huishoudens_zonder_kinderen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_huishoudens_zonder_kinderen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_huishoudens_zonder_kinderen')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_percentage_huishoudens_zonder_kinderen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_percentage_huishoudens_zonder_kinderen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_huishoudens_zonder_kinderen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_huishoudens_zonder_kinderen')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_percentage_huishoudens_zonder_kinderen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_percentage_huishoudens_zonder_kinderen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_huishoudens_zonder_kinderen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_huishoudens_zonder_kinderen')}">2009</a></li>
+															<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_inw_in_meerpers_huish_zonder_kin')}">2008</a></li>
 														</ul>
 													</li>
 													<li><a href="#">Huishoudens met kinderen<span><fmt:message key="KEY_TOOLTIP6" /></span></a>
 														<ul class="submenu">
-															<li>Gemeente<br/><a href="?mapid=wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_met_kinderen" name="wijkenbuurten2011_thema_gemeenten2011_percentage_huishoudens_met_kinderen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_met_kinderen" name="wijkenbuurten2010_thema_gemeenten2010_percentage_huishoudens_met_kinderen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_met_kinderen" name="wijkenbuurten2009_thema_gemeenten2009_percentage_huishoudens_met_kinderen">2009</a></li>
-															<li>Wijk<br/><a href="?mapid=wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_met_kinderen" name="wijkenbuurten2011_thema_wijken2011_percentage_huishoudens_met_kinderen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_met_kinderen" name="wijkenbuurten2010_thema_wijken2010_percentage_huishoudens_met_kinderen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_met_kinderen" name="wijkenbuurten2009_thema_wijken2009_percentage_huishoudens_met_kinderen">2009</a></li>
-															<li>Buurt<br/><a href="?mapid=wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_met_kinderen" name="wijkenbuurten2011_thema_buurten2011_percentage_huishoudens_met_kinderen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_met_kinderen" name="wijkenbuurten2010_thema_buurten2010_percentage_huishoudens_met_kinderen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_met_kinderen" name="wijkenbuurten2009_thema_buurten2009_percentage_huishoudens_met_kinderen">2009</a></li>
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2012_huishoudens_met_kinderen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_huishoudens_met_kinderen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_huishoudens_met_kinderen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_huishoudens_met_kinderen')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_huishoudens_met_kinderen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_huishoudens_met_kinderen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_huishoudens_met_kinderen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_huishoudens_met_kinderen')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_huishoudens_met_kinderen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_huishoudens_met_kinderen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_huishoudens_met_kinderen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_huishoudens_met_kinderen')}">2009</a></li>
+															<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_inw_in_meerpers_huish_met_kind')}">2008</a></li>
 														</ul>
 													</li>
 
 													<li class="menuTitle">Herkomst</li>
 													<li><a href="#">Autochtonen (%)<span><fmt:message key="KEY_TOOLTIP7" /></span></a>
 														<ul class="submenu">
-															<li>100m vierkant<br/><a href="?mapid=vierkanten100m_autochtonen_2011" name="vierkanten100m_autochtonen_2011">2011</a></li>
-															<li>500m vierkant<br/><a href="?mapid=vierkanten500m_autochtonen_2011" name="vierkanten500m_autochtonen_2011">2011</a></li>
+															<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_autochtonen')}">2008</a></li>
+															<li>100m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_autochtonen_2011')}">2011</a></li>
+															<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_autochtonen_2011')}">2011</a></li>
 														</ul>
 													</li>
 													<li><a href="#">Niet-westerse allochtonen (%)<span><fmt:message key="KEY_TOOLTIP8" /></span></a>
 														<ul class="submenu navbottom">
-															<li>Gemeente<br/><a href="?mapid=wijkenbuurten2011_thema_gemeenten2011_percentage_niet_westerse_allochtonen" name="wijkenbuurten2011_thema_gemeenten2011_percentage_niet_westerse_allochtonen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_percentage_niet_westerse_allochtonen" name="wijkenbuurten2010_thema_gemeenten2010_percentage_niet_westerse_allochtonen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_percentage_niet_westerse_allochtonen" name="wijkenbuurten2009_thema_gemeenten2009_percentage_niet_westerse_allochtonen">2009</a></li>
-															<li>Wijk<br/><a href="?mapid=wijkenbuurten2011_thema_wijken2011_percentage_niet_westerse_allochtonen" name="wijkenbuurten2011_thema_wijken2011_percentage_niet_westerse_allochtonen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_wijken2010_percentage_niet_westerse_allochtonen" name="wijkenbuurten2010_thema_wijken2010_percentage_niet_westerse_allochtonen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_wijken2009_percentage_niet_westerse_allochtonen" name="wijkenbuurten2009_thema_wijken2009_percentage_niet_westerse_allochtonen">2009</a></li>
-															<li>Buurt<br/><a href="?mapid=wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen" name="wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_buurten2010_percentage_niet_westerse_allochtonen" name="wijkenbuurten2010_thema_buurten2010_percentage_niet_westerse_allochtonen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_buurten2009_percentage_niet_westerse_allochtonen" name="wijkenbuurten2009_thema_buurten2009_percentage_niet_westerse_allochtonen">2009</a></li>
-															<li>100m vierkant<br/><a href="?mapid=vierkanten100m_niet_westers_allochtonen_2011" name="vierkanten100m_niet_westers_allochtonen_2011">2011</a></li>
-															<li>500m vierkant<br/><a href="?mapid=vierkanten500m_niet_westers_allochtonen_2011" name="vierkanten500m_niet_westers_allochtonen_2011">2011</a></li>
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2012_percentage_niet_westerse_allochtonen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_percentage_niet_westerse_allochtonen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_niet_westerse_allochtonen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_niet_westerse_allochtonen')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_percentage_niet_westerse_allochtonen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_percentage_niet_westerse_allochtonen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_niet_westerse_allochtonen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_niet_westerse_allochtonen')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_percentage_niet_westerse_allochtonen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_percentage_niet_westerse_allochtonen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_niet_westerse_allochtonen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_niet_westerse_allochtonen')}">2009</a></li>
+															<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_niet_westerse_allochtonen')}">2008</a></li>
+															<li>100m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_niet_westers_allochtonen_2011')}">2011</a></li>
+															<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_niet_westers_allochtonen_2011')}">2011</a></li>
 														</ul>
 													</li>
 													<li><a href="#">Westerse allochtonen (%)<span><fmt:message key="KEY_TOOLTIP9" /></span></a>
 														<ul class="submenu navbottom">
-															<li>Gemeente<br/><a href="?mapid=wijkenbuurten2011_thema_gemeenten2011_percentage_westerse_allochtonen" name="wijkenbuurten2011_thema_gemeenten2011_percentage_westerse_allochtonen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_percentage_westerse_allochtonen" name="wijkenbuurten2010_thema_gemeenten2010_percentage_westerse_allochtonen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_percentage_westerse_allochtonen" name="wijkenbuurten2009_thema_gemeenten2009_percentage_westerse_allochtonen">2009</a></li>
-															<li>Wijk<br/><a href="?mapid=wijkenbuurten2011_thema_wijken2011_percentage_westerse_allochtonen" name="wijkenbuurten2011_thema_wijken2011_percentage_westerse_allochtonen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_wijken2010_percentage_westerse_allochtonen" name="wijkenbuurten2010_thema_wijken2010_percentage_westerse_allochtonen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_wijken2009_percentage_westerse_allochtonen" name="wijkenbuurten2009_thema_wijken2009_percentage_westerse_allochtonen">2009</a></li>
-															<li>Buurt<br/><a href="?mapid=wijkenbuurten2011_thema_buurten2011_percentage_westerse_allochtonen" name="wijkenbuurten2011_thema_buurten2011_percentage_westerse_allochtonen">2011</a> | <a href="?mapid=wijkenbuurten2010_thema_buurten2010_percentage_westerse_allochtonen" name="wijkenbuurten2010_thema_buurten2010_percentage_westerse_allochtonen">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_buurten2009_percentage_westerse_allochtonen" name="wijkenbuurten2009_thema_buurten2009_percentage_westerse_allochtonen">2009</a></li>
-															<li>100m vierkant<br/><a href="?mapid=vierkanten100m_allochtonen_2011" name="vierkanten100m_allochtonen_2011">2011</a></li>
-															<li>500m vierkant<br/><a href="?mapid=vierkanten500m_allochtonen_2011" name="vierkanten500m_allochtonen_2011">2011</a></li>
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2012_percentage_westerse_allochtonen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_percentage_westerse_allochtonen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_westerse_allochtonen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_westerse_allochtonen')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_percentage_westerse_allochtonen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_percentage_westerse_allochtonen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_westerse_allochtonen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_westerse_allochtonen')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_percentage_westerse_allochtonen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_percentage_westerse_allochtonen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_westerse_allochtonen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_westerse_allochtonen')}">2009</a></li>
+															<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_westerse_allochtonen')}">2008</a></li>
+															<li>100m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_westers_allochtonen_2011')}">2011</a></li>
+															<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_westers_allochtonen_2011')}">2011</a></li>
 														</ul>
 													</li>
 											</ul>
 											<ul class="navleft">
 													<li class="menuTitle">Inkomen</li>
-													<li><a class="disabled" href="#">Aantal inkomensontvangers<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+													<li><a href="#">Aantal inkomensontvangers<span>XX</span></a>
+														<ul class="submenu">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_aantal_inkomensontvangers')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_aantal_inkomensontvangers')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_aantal_inkomensontvangers')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_aantal_inkomensontvangers')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_aantal_inkomensontvangers')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_aantal_inkomensontvangers')}">2009</a></li>
+														</ul>
 													</li>
-													<li><a class="disabled" href="#">Inkomen per ontvanger<span class="redcolor">Dit thema is niet aanwezig.</span></a>
-													</li>
-													<li><a class="disabled" href="#">Inwoners met laag inkomen (%)<span class="redcolor">Dit thema is niet aanwezig.</span></a>
-													</li>
-													<li><a class="disabled" href="#">Inwoners met hoog inkomen (%)<span class="redcolor">Dit thema is niet aanwezig.</span></a>
-													</li>
-													<li><a class="disabled" href="#">Huishoudens met laag inkomen (%)<span class="redcolor">Dit thema is niet aanwezig.</span></a>
-													</li>
-													<li><a class="disabled" href="#">Huishoudens met hoog inkomen (%)<span class="redcolor">Dit thema is niet aanwezig.</span></a>
-													</li>
-													<li><a class="disabled" href="#">Huishoudens rond of onder sociaal minimum (%)<span class="redcolor">Dit thema is niet aanwezig.</span></a>
-													</li>
+													<li><a href="#">Inkomen per ontvanger<span>XX</span></a>
+														<ul class="submenu">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddeld_inkomen_inkomensontvanger')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_gemiddeld_inkomen_inkomensontvanger')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_gemiddeld_inkomen_inkomensontvanger')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_gemiddeld_inkomen_inkomensontvanger')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_gemiddeld_inkomen_inkomensontvanger')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_gemiddeld_inkomen_inkomensontvanger')}">2009</a></li>
+														</ul>
+													</li>		
+													<li><a href="#">Inwoners met laag inkomen (%)<span>XX</span></a>
+														<ul class="submenu">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_personen_met_laag_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_personen_met_laag_inkomen')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_personen_met_laag_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_personen_met_laag_inkomen')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_personen_met_laag_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_personen_met_laag_inkomen')}">2009</a></li>
+														</ul>
+													</li>	
+													<li><a href="#">Inwoners met hoog inkomen (%)<span>XX</span></a>
+														<ul class="submenu">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_personen_met_hoog_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_personen_met_hoog_inkomen')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_personen_met_hoog_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_personen_met_hoog_inkomen')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_personen_met_hoog_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_personen_met_hoog_inkomen')}">2009</a></li>
+														</ul>
+													</li>	
+													<li><a href="#">Huishoudens met laag inkomen (%)<span>XX</span></a>
+														<ul class="submenu">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_perc_huish_met_laag_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_perc_huish_met_laag_inkomen')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_perc_huish_met_laag_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_perc_huish_met_laag_inkomen')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_perc_huish_met_laag_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_perc_huish_met_laag_inkomen')}">2009</a></li>
+														</ul>
+													</li>	
+													<li><a href="#">Huishoudens met hoog inkomen (%)<span>XX</span></a>
+														<ul class="submenu">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_perc_huish_met_hoog_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_perc_huish_met_hoog_inkomen')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_perc_huish_met_hoog_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_perc_huish_met_hoog_inkomen')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_perc_huish_met_hoog_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_perc_huish_met_hoog_inkomen')}">2009</a></li>
+														</ul>
+													</li>	
+													<li><a href="#">Huishoudens rond of onder sociaal minimum (%)<span>XX</span></a>
+														<ul class="submenu">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_huish_onder_rond_sociaal_min')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_huish_onder_rond_sociaal_min')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_huish_onder_rond_sociaal_min')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_huish_onder_rond_sociaal_min')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_huish_onder_rond_sociaal_min')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_huish_onder_rond_sociaal_min')}">2009</a></li>
+														</ul>
+													</li>														
 
 													<li class="menuTitle">Wonen</li>
 													<li><a href="#">Woningen<span><fmt:message key="KEY_TOOLTIP10" /></span></a>
-														<ul class="submenu">
-															<li>100m vierkant<br/><a href="?mapid=vierkanten100m_woningen_2011" name="vierkanten100m_woningen_2011">2011</a> | <a href="?mapid=vierkanten100m_woningen_2010" name="vierkanten100m_woningen_2010">2010</a><br/><a href="?mapid=vierkanten100m_woningen_2009" name="vierkanten100m_woningen_2009">2009</a> | <a href="?mapid=vierkanten100m_woningen_2008" name="vierkanten100m_woningen_2008">2008</a> | <a href="?mapid=vierkanten100m_woningen_2007" name="vierkanten100m_woningen_2007">2007</a><br/><a href="?mapid=vierkanten100m_woningen_2006" name="vierkanten100m_woningen_2006">2006</a> | <a href="?mapid=vierkanten100m_woningen_2005" name="vierkanten100m_woningen_2005">2005</a> | <a href="?mapid=vierkanten100m_woningen_2011" name="vierkanten100m_woningen_2011">2004</a><br/><a href="?mapid=vierkanten100m_woningen_2003" name="vierkanten100m_woningen_2003">2003</a> | <a href="?mapid=vierkanten100m_woningen_2002" name="vierkanten100m_woningen_2002">2002</a> | <a href="?mapid=vierkanten100m_woningen_2001" name="vierkanten100m_woningen_2001">2001</a><br/><a href="?mapid=vierkanten100m_woningen_2000" name="vierkanten100m_woningen_2000">2000</a></li>
-															<li>500m vierkant<br/><a href="?mapid=vierkanten500m_woningen_2011" name="vierkanten500m_woningen_2011">2011</a> | <a href="?mapid=vierkanten500m_woningen_2010" name="vierkanten500m_woningen_2010">2010</a><br/><a href="?mapid=vierkanten500m_woningen_2009" name="vierkanten500m_woningen_2009">2009</a> | <a href="?mapid=vierkanten500m_woningen_2008" name="vierkanten500m_woningen_2008">2008</a> | <a href="?mapid=vierkanten500m_woningen_2007" name="vierkanten500m_woningen_2007">2007</a><br/><a href="?mapid=vierkanten500m_woningen_2006" name="vierkanten500m_woningen_2006">2006</a> | <a href="?mapid=vierkanten500m_woningen_2005" name="vierkanten500m_woningen_2005">2005</a> | <a href="?mapid=vierkanten500m_woningen_2011" name="vierkanten500m_woningen_2011">2004</a><br/><a href="?mapid=vierkanten500m_woningen_2003" name="vierkanten500m_woningen_2003">2003</a> | <a href="?mapid=vierkanten500m_woningen_2002" name="vierkanten500m_woningen_2002">2002</a> | <a href="?mapid=vierkanten500m_woningen_2001" name="vierkanten500m_woningen_2001">2001</a><br/><a href="?mapid=vierkanten500m_woningen_2000" name="vierkanten500m_woningen_2000">2000</a></li>
+														<ul class="submenu navbottom">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_aantal_woningen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_aantal_woningen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_aantal_woningen')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_aantal_woningen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_aantal_woningen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_aantal_woningen')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_aantal_woningen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_aantal_woningen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_aantal_woningen')}">2009</a></li>
+															<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_woningen')}">2008</a></li>
+															<li>100m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2011')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2010')}">2010</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2009')}">2009</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2008')}">2008</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2007')}">2007</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2006')}">2006</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2005')}">2005</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2004')}">2004</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2003')}">2003</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2002')}">2002</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2001')}">2001</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_woningen_2000')}">2000</a></li>
+															<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2011')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2010')}">2010</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2009')}">2009</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2008')}">2008</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2007')}">2007</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2006')}">2006</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2005')}">2005</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2004')}">2004</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2003')}">2003</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2002')}">2002</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2001')}">2001</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_woningen_2000')}">2000</a></li>
 														</ul>
 													</li>
 													<li><a href="#">Woning WOZ-waarde<span><fmt:message key="KEY_TOOLTIP11" /></span></a>
-														<ul class="submenu">
-															<li>100m vierkant<br/><a href="?mapid=vierkanten100m_wozwon2011" name="vierkanten100m_wozwon2011">2011</a></li>
-															<li>500m vierkant<br/><a href="?mapid=vierkanten500m_gem_woz_waarde_woningen_2011" name="vierkanten500m_gem_woz_waarde_woningen_2011">2011</a></li>
+														<ul class="submenu navbottom">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_gemiddelde_WOZwoningwaarde')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddelde_WOZwoningwaarde')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_gemiddelde_WOZwoningwaarde')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_gemiddelde_WOZwoningwaarde')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_gemiddelde_WOZwoningwaarde')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_gemiddelde_WOZwoningwaarde')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_gemiddelde_WOZwoningwaarde')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_gemiddelde_WOZwoningwaarde')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_gemiddelde_WOZwoningwaarde')}">2009</a></li>
+															<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_WOZwoningwaarde')}">2008</a></li>
+															<li>100m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_gem_woz_waarde_woningen_2011')}">2011</a></li>
+															<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_gem_woz_waarde_woningen_2011')}">2011</a></li>
 														</ul>
 													</li>
 
 													<li class="menuTitle">Bedrijven</li>
-													<li><a class="disabled" href="#">Agrarische bedrijven<span class="redcolor">Dit thema is niet aanwezig.</span></a>																</li>
-													<li><a class="disabled" href="#">Industrie (%)<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+													<li><a href="#">Agrarische bedrijven<span>xxx</span></a>
+														<ul class="submenu">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_aantal_agragrische_bedrijven')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_aantal_agragrische_bedrijven')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_aantal_agragrische_bedrijven')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_aantal_agragrische_bedrijven')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_aantal_agragrische_bedrijven')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_aantal_agragrische_bedrijven')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_aantal_agragrische_bedrijven')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_aantal_agragrische_bedrijven')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_aantal_agragrische_bedrijven')}">2009</a></li>
+														</ul>
 													</li>
-													<li><a class="disabled" href="#">Commerciele dienstverlening (%)<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+													<li><a href="#">Industrie (%)<span>xx</span></a>
+														<ul class="submenu">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_industrie')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_industrie')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_industrie')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_industrie')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_industrie')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_industrie')}">2009</a></li>
+														</ul>
 													</li>
-													<li><a class="disabled" href="#">Niet-commerciele dienstverlening (%)<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+													<li><a href="#">Commerciele dienstverlening (%)<span>xx</span></a>
+														<ul class="submenu navbottom">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_commerciele_dienstverlening')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_commerciele_dienstverlening')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_commerciele_dienstverlening')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_commerciele_dienstverlening')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_commerciele_dienstverlening')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_commerciele_dienstverlening')}">2009</a></li>
+														</ul>
+													</li>
+													<li><a href="#">Niet-commerciele dienstverlening (%)<span>Dit thema is niet aanwezig.</span></a>
+														<ul class="submenu navbottom">
+															<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_percentage_niet_commerciele_dienstverlening')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_percentage_niet_commerciele_dienstverlening')}">2009</a></li>
+															<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_niet_commerciele_dienstverlening')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_niet_commerciele_dienstverlening')}">2009</a></li>
+															<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_niet_commerciele_dienstverlening')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_niet_commerciele_dienstverlening')}">2009</a></li>
+														</ul>
 													</li>
 
 												<!--/ul-->
@@ -202,55 +272,86 @@
 												<li class="menuTitle"><em>Voorzieningen</em><br/>Kortste afstand</li>
 												<li><a href="#">Huisartsenpraktijk<span><fmt:message key="KEY_TOOLTIP12" /></span></a>
 													<ul class="submenu">
-														<li>Gemeente<br/><a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_huisartsenpraktijk_gemiddelde_afstand_in_km" name="wijkenbuurten2010_thema_gemeenten2010_huisartsenpraktijk_gemiddelde_afstand_in_km">2010</a></li>
-														<li>Wijk<br/><a href="?mapid=wijkenbuurten2010_thema_wijken2010_huisartsenpraktijk_gemiddelde_afstand_in_km" name="wijkenbuurten2010_thema_wijken2010_huisartsenpraktijk_gemiddelde_afstand_in_km">2010</a></li>
-														<li>Buurt<br/><a href="?mapid=wijkenbuurten2010_thema_buurten2010_huisartsenpraktijk_gemiddelde_afstand_in_km" name="wijkenbuurten2010_thema_buurten2010_huisartsenpraktijk_gemiddelde_afstand_in_km">2010</a></li>
+														<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddelde_afstand_tot_huisartspraktijk')}">2010</a></li>
+														<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_gemiddelde_afstand_tot_huisartspraktijk')}">2010</a></li>
+														<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_gemiddelde_afstand_tot_huisartspraktijk')}">2010</a></li>
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_huisartspraktijk')}">2008</a></li>
 													</ul>
 												</li>
-												<li><a class="disabled" href="#">Huisartsenpost<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+												<li><a href="#">Huisartsenpost<span>xx</span></a>
+													<ul class="submenu">
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_huisartsenpost')}">2008</a></li>
+													</ul>
 												</li>
 												<li><a href="#">Ziekenhuis, excl. buitenpolikliniek<span><fmt:message key="KEY_TOOLTIP13" /></span></a>
 													<ul class="submenu">
-														<li>Gemeente<br/><a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km" name="wijkenbuurten2010_thema_gemeenten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km" name="wijkenbuurten2009_thema_gemeenten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km">2009</a></li>
-														<li>Wijk<br/><a href="?mapid=wijkenbuurten2010_thema_wijken2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km" name="wijkenbuurten2010_thema_wijken2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_wijken2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km" name="wijkenbuurten2009_thema_wijken2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km">2009</a></li>
-														<li>Buurt<br/><a href="?mapid=wijkenbuurten2010_thema_buurten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km" name="wijkenbuurten2010_thema_buurten2010_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_buurten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km" name="wijkenbuurten2009_thema_buurten2009_ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km">2009</a></li>
+														<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli')}">2009</a></li>
+														<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli')}">2009</a></li>
+														<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli')}">2009</a></li>
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_ziekenhuis_excl_')}">2008</a></li>
 													</ul>
 												</li>
-												<li><a class="disabled" href="#">Kinderdagverblijf<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+												<li><a href="#">Kinderdagverblijf<span>xx</span></a>
+													<ul class="submenu">
+														<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_afstand_tot_kinderdagverblijf')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_afstand_tot_kinderdagverblijf')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_afstand_tot_kinderdagverblijf')}">2009</a></li>
+														<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_afstand_tot_kinderdagverblijf')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_afstand_tot_kinderdagverblijf')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_afstand_tot_kinderdagverblijf')}">2009</a></li>
+														<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_afstand_tot_kinderdagverblijf')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_afstand_tot_kinderdagverblijf')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_afstand_tot_kinderdagverblijf')}">2009</a></li>
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_kinderdagverblij')}">2008</a></li>
+													</ul>
 												</li>
-												<li><a class="disabled" href="#">Buitenschoolse opvang<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+												<li><a href="#">Buitenschoolse opvang<span>xx</span></a>
+													<ul class="submenu">	
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_buitenschoolse_o')}">2008</a></li>
+													</ul>
 												</li>
 												<li><a href="#">Basisonderwijs<span><fmt:message key="KEY_TOOLTIP14" /></span></a>
 													<ul class="submenu">
-														<li>Gemeente<br/><a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_basisonderwijs_gemiddelde_afstand_in_km" name="wijkenbuurten2009_thema_gemeenten2009_basisonderwijs_gemiddelde_afstand_in_km">2009</a></li>
-														<li>Wijk<br/><a href="?mapid=wijkenbuurten2009_thema_wijken2009_basisonderwijs_gemiddelde_afstand_in_km" name="wijkenbuurten2009_thema_wijken2009_basisonderwijs_gemiddelde_afstand_in_km">2009</a></li>
-														<li>Buurt<br/><a href="?mapid=wijkenbuurten2009_thema_buurten2009_basisonderwijs_gemiddelde_afstand_in_km" name="wijkenbuurten2009_thema_buurten2009_basisonderwijs_gemiddelde_afstand_in_km">2009</a></li>
+														<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_gemiddelde_afstand_tot_basisonderwijs')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddelde_afstand_tot_basisonderwijs')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_gemiddelde_afstand_tot_basisonderwijs')}">2009</a></li>
+														<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_gemiddelde_afstand_tot_basisonderwijs')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_gemiddelde_afstand_tot_basisonderwijs')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_gemiddelde_afstand_tot_basisonderwijs')}">2009</a></li>
+														<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_gemiddelde_afstand_tot_basisonderwijs')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_gemiddelde_afstand_tot_basisonderwijs')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_gemiddelde_afstand_tot_basisonderwijs')}">2009</a></li>
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_basisschool')}">2008</a></li>
 													</ul>
 												</li>
-												<li><a class="disabled" href="#">VMBO onderwijs<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+												<li><a href="#">VMBO onderwijs<span>xx</span></a>
+													<ul class="submenu">
+														<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_gemiddelde_afstand_tot_VMBO_school')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddelde_afstand_tot_VMBO_school')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_gemiddelde_afstand_tot_VMBO_school')}">2009</a></li>
+														<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_gemiddelde_afstand_tot_VMBO_school')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_gemiddelde_afstand_tot_VMBO_school')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_gemiddelde_afstand_tot_VMBO_school')}">2009</a></li>
+														<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_gemiddelde_afstand_tot_VMBO_school')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_gemiddelde_afstand_tot_VMBO_school')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_gemiddelde_afstand_tot_VMBO_school')}">2009</a></li>
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_VMBO')}">2008</a></li>
+													</ul>
 												</li>
-												<li><a class="disabled" href="#">HAVO/VWO onderwijs<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+												<li><a href="#">HAVO/VWO onderwijs<span>xx</span></a>
+													<ul class="submenu">
+														<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_gemiddelde_afstand_tot_HAVO_VWO_school')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddelde_afstand_tot_HAVO_VWO_school')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_gemiddelde_afstand_tot_HAVO_VWO_school')}">2009</a></li>
+														<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_gemiddelde_afstand_tot_HAVO_VWO_school')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_gemiddelde_afstand_tot_HAVO_VWO_school')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_gemiddelde_afstand_tot_HAVO_VWO_school')}">2009</a></li>
+														<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_gemiddelde_afstand_tot_HAVO_VWO_school')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_gemiddelde_afstand_tot_HAVO_VWO_school')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_gemiddelde_afstand_tot_HAVO_VWO_school')}">2009</a></li>
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_HAVO_VWO')}">2008</a></li>
+													</ul>
 												</li>
 												<li><a href="#">Grote supermarkt<span><fmt:message key="KEY_TOOLTIP15" /></span></a>
 													<ul class="submenu">
-														<li>Gemeente<br/><a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_grote_supermarkt_gemiddelde_afstand_in_km" name="wijkenbuurten2010_thema_gemeenten2010_grote_supermarkt_gemiddelde_afstand_in_km">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_grote_supermarkt_gemiddelde_afstand_in_km" name="wijkenbuurten2009_thema_gemeenten2009_grote_supermarkt_gemiddelde_afstand_in_km">2009</a></li>
-														<li>Wijk<br/><a href="?mapid=wijkenbuurten2010_thema_wijken2010_grote_supermarkt_gemiddelde_afstand_in_km" name="wijkenbuurten2010_thema_wijken2010_grote_supermarkt_gemiddelde_afstand_in_km">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_wijken2009_grote_supermarkt_gemiddelde_afstand_in_km" name="wijkenbuurten2009_thema_wijken2009_grote_supermarkt_gemiddelde_afstand_in_km">2009</a></li>
-														<li>Buurt<br/><a href="?mapid=wijkenbuurten2010_thema_buurten2010_grote_supermarkt_gemiddelde_afstand_in_km" name="wijkenbuurten2010_thema_buurten2010_grote_supermarkt_gemiddelde_afstand_in_km">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_buurten2009_grote_supermarkt_gemiddelde_afstand_in_km" name="wijkenbuurten2009_thema_buurten2009_grote_supermarkt_gemiddelde_afstand_in_km">2009</a></li>
+														<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_gemiddelde_afstand_tot_grote_supermarkt')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddelde_afstand_tot_grote_supermarkt')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_gemiddelde_afstand_tot_grote_supermarkt')}">2009</a></li>
+														<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_gemiddelde_afstand_tot_grote_supermarkt')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_gemiddelde_afstand_tot_grote_supermarkt')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_gemiddelde_afstand_tot_grote_supermarkt')}">2009</a></li>
+														<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_gemiddelde_afstand_tot_grote_supermarkt')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_gemiddelde_afstand_tot_grote_supermarkt')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_gemiddelde_afstand_tot_grote_supermarkt')}">2009</a></li>
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_grote_supermarkt')}">2008</a></li>
 													</ul>
 												</li>
-													<li><a class="disabled" href="#">Ov. dagelijkse levensmiddelen<span class="redcolor">Dit thema is niet aanwezig.</span></a>
+												<li><a href="#">Ov. dagelijkse levensmiddelen<span>xx</span></a>
+													<ul class="submenu">
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_overige_dagelijk')}">2008</a></li>
+													</ul>
 												</li>
-
 												<li class="menuTitle">Stedelijkheid</li>
 												<li><a href="#">Omgevingsadressendichtheid<span><fmt:message key="KEY_TOOLTIP16" /></span></a>
-													<ul class="submenu navbottom">
-														<li>Gemeente<br/><a href="?mapid=wijkenbuurten2010_thema_gemeenten2010_omgevingsadressendichtheid" name="wijkenbuurten2010_thema_gemeenten2010_omgevingsadressendichtheid">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_gemeenten2009_omgevingsadressendichtheid" name="wijkenbuurten2009_thema_gemeenten2009_omgevingsadressendichtheid">2009</a></li>
-														<li>Wijk<br/><a href="?mapid=wijkenbuurten2010_thema_wijken2010_omgevingsadressendichtheid" name="wijkenbuurten2010_thema_wijken2010_omgevingsadressendichtheid">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_wijken2009_omgevingsadressendichtheid" name="wijkenbuurten2009_thema_wijken2009_omgevingsadressendichtheid">2009</a></li>
-														<li>Buurt<br/><a href="?mapid=wijkenbuurten2010_thema_buurten2010_omgevingsadressendichtheid" name="wijkenbuurten2010_thema_buurten2010_omgevingsadressendichtheid">2010</a> | <a href="?mapid=wijkenbuurten2009_thema_buurten2009_omgevingsadressendichtheid" name="wijkenbuurten2009_thema_buurten2009_omgevingsadressendichtheid">2009</a></li>
-														<li>500m vierkant<br/><a href="?mapid=vierkanten500m_oad2011" name="vierkanten500m_oad2011">2011</a> | <a href="?mapid=vierkanten500m_oad2010" name="vierkanten500m_oad2010">2010</a><br/><a href="?mapid=vierkanten500m_oad2009" name="vierkanten500m_oad2009">2009</a> | <a href="?mapid=vierkanten500m_oad2008" name="vierkanten500m_oad2008">2008</a> | <a href="?mapid=vierkanten500m_oad2007" name="vierkanten500m_oad2007">2007</a><br/><a href="?mapid=vierkanten500m_oad2006" name="vierkanten500m_oad2006">2006</a> | <a href="?mapid=vierkanten500m_oad2005" name="vierkanten500m_oad2005">2005</a> | <a href="?mapid=vierkanten500m_oad2004" name="vierkanten500m_oad2004">2004</a><br/><a href="?mapid=vierkanten500m_oad2003" name="vierkanten500m_oad2003">2003</a> | <a href="?mapid=vierkanten500m_oad2002" name="vierkanten500m_oad2002">2002</a> | <a href="?mapid=vierkanten500m_oad2001" name="vierkanten500m_oad2001">2001</a><br/><a href="?mapid=vierkanten500m_oad2000" name="vierkanten500m_oad2000">2000</a></li>
+													<ul class="submenu navbottom">    
+														<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2012_omgevingsadressendichtheid')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_omgevingsadressendichtheid')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_omgevingsadressendichtheid')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_omgevingsadressendichtheid')}">2009</a></li>
+														<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_omgevingsadressendichtheid')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_omgevingsadressendichtheid')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_omgevingsadressendichtheid')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_omgevingsadressendichtheid')}">2009</a></li>
+														<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_omgevingsadressendichtheid')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_omgevingsadressendichtheid')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_omgevingsadressendichtheid')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_omgevingsadressendichtheid')}">2009</a></li>
+														<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_omgevingsadressendichtheid_adres_km2')}">2008</a></li>
+														<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2011')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2010')}">2010</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2009')}">2009</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2008')}">2008</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2007')}">2007</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2006')}">2006</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2005')}">2005</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2004')}">2004</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2003')}">2003</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2002')}">2002</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2001')}">2001</a><br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_OAD2000')}">2000</a></li>
 													</ul>
 												</li>
-										</ul>
+											</ul>
 										</div>
 									</li>
 									<li id="keytheme2">
