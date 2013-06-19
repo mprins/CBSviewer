@@ -12,4 +12,4 @@ $ControlBorder: 1px solid $ControlBorderColour;
 /* z-indexes */
 $z-zoekContainer: 1060;
 $z-MapControl: 900;
-$z-OverviewMapMinimizeButton: 1000;
+$z-OverviewMapMinimizeButton: $z-MapControl + 100;
