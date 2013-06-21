@@ -12,6 +12,11 @@
 			}
 			pageContext.setAttribute("isDebugEnabled", logger.isDebugEnabled());</jsp:scriptlet>
 
+	<!-- 
+		Indien in log4j.xml het logging level voor nl.mineleni.cbsviewer op debug of meer wordt 
+		ingesteld worden onderstaande afbeelding gerenderd. 
+		Voor lagere logging levels (info, warn, error,...) niet.
+	-->
 	<c:if test="${isDebugEnabled}">
 		<div>
 			<img class="debug" src="img/debug.png"
