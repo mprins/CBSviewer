@@ -9,59 +9,63 @@ jQuery.noConflict();
  * document onload event handling.
  */
 jQuery(document)
-		.ready(
-				function() {
-					// create map
-					Viewer.init(config);
+	.ready(
+	function() {
+		// create map
+		Viewer.init(config);
 
-					var maps = jQuery.grep(_layers, function(n, i) {
-						return n.id == config.defaultMapId;
-					});
+		var maps = jQuery.grep(_layers, function(n, i) {
+			return n.id == config.defaultMapId;
+		});
 
-					Viewer.loadWMS(maps[0]);
+		Viewer.loadWMS(maps[0]);
 
-					/* popup */
-					jQuery('.fancybox').fancybox();
-					/* slidedown effect */
-					var settings_head = jQuery('.settingsPanel > li > a');
-					settings_head.first().addClass('active').next().slideDown('normal');
+		/* popup */
+		jQuery('.fancybox').fancybox();
+		/* slidedown effect */
+		var settings_head = jQuery('.settingsPanel > li > a');
+		settings_head.first().addClass('active').next().slideDown('normal');
 
-					settings_head.on('click', function(event) {
-						event.preventDefault();						
-						jQuery(this).next().stop(true, true).slideToggle('normal');
-						if (jQuery(this).attr('class') != 'active') {
-							jQuery(this).addClass('active');
-						} else {
-							jQuery(this).removeClass('active');
-						}
-					});
+		settings_head.on('click', function(event) {
+			event.preventDefault();						
+			jQuery(this).next().stop(true, true).slideToggle('normal');
+			if (jQuery(this).attr('class') != 'active') {
+				jQuery(this).addClass('active');
+			} else {
+				jQuery(this).removeClass('active');
+			}
+		});
 
-					var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'), menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');
-					menuAccordion_head.first().addClass('active').next().slideDown('normal');
-					menuAccordion_head.on('click', function(event) {
-						event.preventDefault();
+		var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'), menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');
+		menuAccordion_head.first().addClass('active').next().slideDown('normal');
+		menuAccordion_head.on('click', function(event) {
+			event.preventDefault();
 
-						if (jQuery(this).attr('class') != 'active') {
-							menuAccordion_body.slideUp('normal');
-							jQuery(this).next().stop(true, true).slideToggle('normal');
-							menuAccordion_head.removeClass('active');
-							jQuery(this).addClass('active');
-						}
-						jQuery('#legenda').css('max-height', 
-								jQuery(window).height() - 
-								jQuery('#footerWrapper').height() - 
-								jQuery('.header').height() - 
-								jQuery('#keyfeatureinfo').height() - 100
-							);					
-					});
-					
-					jQuery('#legenda').css('max-height', 
-						jQuery(window).height() - 
-						jQuery('#footerWrapper').height() - 
-						jQuery('.header').height() - 
-						jQuery('#keyfeatureinfo').height() - 100
-					);									
-				});
+			if (jQuery(this).attr('class') != 'active') {
+				menuAccordion_body.slideUp('normal');
+				jQuery(this).next().stop(true, true).slideToggle('normal');
+				menuAccordion_head.removeClass('active');
+				jQuery(this).addClass('active');
+			}
+			jQuery('#legenda').css('max-height', 
+					jQuery(window).height() - 
+					jQuery('#footerWrapper').height() - 
+					jQuery('.header').height() - 
+					jQuery('#keyfeatureinfo').height() - 100
+				);					
+		});
+		
+		jQuery('#legenda').css('max-height', 
+			jQuery(window).height() - 
+			jQuery('#footerWrapper').height() - 
+			jQuery('.header').height() - 
+			jQuery('#keyfeatureinfo').height() - 100
+		);	
+
+		jQuery('#thememenu2Header').click(function() {
+			//jQuery('#thememenu2Content').load('main_menu_theme_menu_include.jsp');
+		});					
+});
 				
 /**
  * Close megamenu on menu click
@@ -117,59 +121,59 @@ jQuery('.closeMega').click(function() {
  *            DOM click event
  */
 jQuery('.megaMenu a').click(
-		function(event) {
-			event.preventDefault();
-			
-			// retrieve mapid from url
-			function getURLParameter(name, url) {
-				return decodeURIComponent
-				(
-					(new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(url)||[,""])[1].replace(/\+/g, '%20')
-				)
-				|| null;
-			}
+function(event) {
+	event.preventDefault();
+	
+	// retrieve mapid from url
+	function getURLParameter(name, url) {
+		return decodeURIComponent
+		(
+			(new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(url)||[,""])[1].replace(/\+/g, '%20')
+		)
+		|| null;
+	}
 
-			var selectedMap = getURLParameter('mapid', jQuery(this).attr('href'));
-			
-			// only load new themes
-			if (selectedMap != config.defaultMapId 
-				&& selectedMap != null
-				&& jQuery(this).attr('href') != '#'				
-				&& jQuery(this).attr('class') != 'accordionheader') {
-				
-				var _id = getURLParameter('mapid', jQuery(this).attr('href'));
+	var selectedMap = getURLParameter('mapid', jQuery(this).attr('href'));
+	
+	// only load new themes
+	if (selectedMap != config.defaultMapId 
+		&& selectedMap != null
+		&& jQuery(this).attr('href') != '#'				
+		&& jQuery(this).attr('class') != 'accordionheader') {
+		
+		var _id = getURLParameter('mapid', jQuery(this).attr('href'));
 
-				var maps = jQuery.grep(_layers, function(n, i) {
-					return n.id == _id;
-				});
-				Viewer.loadWMS(maps[0]);
-				// bijwerken pagina titel, IE7/8 proof
-				document.title = OpenLayers.i18n('KEY_KAART_TITEL', {
-					'0' : '' + maps[0].name
-				});
-				
-				jQuery('#pagSubTitle').html(OpenLayers.i18n('KEY_KAART_TITEL', {
-					'0' : '' + maps[0].name
-				}));
-
-				// bijwerken download link
-				/*if (maps[0].link) {
-					jQuery('#downloadLink').html(
-							'<a href="' + maps[0].link + '">Download de dataset voor'
-									+ OpenLayers.i18n('KEY_KAART_TITEL', {
-										'0' : '' + maps[0].name
-									}) + '</a>');
-				} else {
-					jQuery('#downloadLink').html('');
-				}*/
-
-				// close menu
-				jQuery('.navDropDown').css('left', '-9999px');
-				
-				config.defaultMapId = _id;
-			}
+		var maps = jQuery.grep(_layers, function(n, i) {
+			return n.id == _id;
 		});
+		Viewer.loadWMS(maps[0]);
+		// bijwerken pagina titel, IE7/8 proof
+		document.title = OpenLayers.i18n('KEY_KAART_TITEL', {
+			'0' : '' + maps[0].name
+		});
+		
+		jQuery('#pagSubTitle').html(OpenLayers.i18n('KEY_KAART_TITEL', {
+			'0' : '' + maps[0].name
+		}));
 
+		// bijwerken download link
+		/*if (maps[0].link) {
+			jQuery('#downloadLink').html(
+					'<a href="' + maps[0].link + '">Download de dataset voor'
+							+ OpenLayers.i18n('KEY_KAART_TITEL', {
+								'0' : '' + maps[0].name
+							}) + '</a>');
+		} else {
+			jQuery('#downloadLink').html('');
+		}*/
+
+		// close menu
+		jQuery('.navDropDown').css('left', '-9999px');
+		
+		config.defaultMapId = _id;
+	}
+});
+		
 /**
  * dynamische elementen aan de pagina toevoegen.
  */
