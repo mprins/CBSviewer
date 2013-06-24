@@ -332,7 +332,12 @@
 									<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_overige_dagelijk')}">2008</a></li>
 								</ul>
 							</li>
-							<li class="menuTitle">Stedelijkheid</li>
+							<li class="menuTitle">Bodemgebruik</li>
+							<li><a href="#">Bestand bodemgebruik<span><fmt:message key="KEY_TOOLTIP82" /></span></a>
+								<ul class="submenu">    
+									<li>Bodemgebruik<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bodemgebruik2008')}">2008</a></li>
+								</ul>
+							</li>
 							<li><a href="#">Omgevingsadressendichtheid<span><fmt:message key="KEY_TOOLTIP81" /></span></a>
 								<ul class="submenu navbottom">    
 									<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2012_omgevingsadressendichtheid')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_omgevingsadressendichtheid')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_omgevingsadressendichtheid')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_omgevingsadressendichtheid')}">2009</a></li>

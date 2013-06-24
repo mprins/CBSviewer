@@ -6589,4 +6589,13 @@
 		<attributes>buurtnaam, havo_vwo_aantal_binnen_5_km</attributes>
 		<aliases>Buurt, Gemiddeld aantal binnen 5 km</aliases>
 	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>bodemgebruik2008</id>
+		<name>Bestand bodemgebruik 2008</name>
+		<layers>bbg2008_hoofdgroep</layers>
+		<url>http://geodata.nationaalgeoregister.nl/bestandbodemgebruik2008/wms</url>
+		<styles>bestandbodemgebruik2008_bbg2008hoofdgroep</styles>
+		<attributes>Hoofdgroep</attributes>
+		<aliases>Hoofdgroep</aliases>
+	</Layerdescriptor>
 </Layers>
