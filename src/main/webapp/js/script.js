@@ -63,7 +63,7 @@ jQuery(document)
 		);	
 
 		jQuery('#thememenu2Header').click(function() {
-			//jQuery('#thememenu2Content').load('main_menu_theme_menu_include.jsp');
+			jQuery('#thememenu2Content').load('main_menu_theme2_include.jsp');
 		});					
 });
 				
@@ -141,7 +141,7 @@ function(event) {
 		&& jQuery(this).attr('href') != '#'				
 		&& jQuery(this).attr('class') != 'accordionheader') {
 		
-		var _id = getURLParameter('mapid', jQuery(this).attr('href'));
+		var _id = selectedMap;
 
 		var maps = jQuery.grep(_layers, function(n, i) {
 			return n.id == _id;
