@@ -10,6 +10,14 @@
 
 	<fmt:setBundle basename="MenuLabelsBundle" />	
 	
+	<c:url value="/index.jsp" var="adreslink">
+		<c:param name="gevonden" value="${adres}" />
+		<c:param name="xcoord" value="${adres.xCoord}" />
+		<c:param name="ycoord" value="${adres.yCoord}" />
+		<c:param name="straal" value="${adres.radius}" />
+		<c:param name="coreonly" value="${param.coreonly}" />
+		<c:param name="mapid" value="cID" />
+	</c:url>
 	<ul class="navleft">
 				<li class="menuTitle">Bevolking</li>
 				<li><a href="#">Inwoners 0 tot 20 jaar<span><fmt:message key="KEY_TOOLTIP9" /></span></a>

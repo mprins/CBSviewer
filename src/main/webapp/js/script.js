@@ -84,7 +84,9 @@ jQuery('#hasMenu').click(function() {
 /**
   * Close all sub menu's and open current
   */
-jQuery('ul.navleft li, ul.navright li').click(function() {
+jQuery(document).on('click', 'ul.navleft li, ul.navright li', function (event) {
+    event.preventDefault();
+
 	// hide all except the one clicked on
 	jQuery('ul.submenu').not(jQuery(this).find('ul.submenu')).hide();
 	jQuery('.menuAccordionContent').not(jQuery(this).find('a')).find('a').removeClass('submenuopened');
@@ -119,7 +121,7 @@ jQuery('.closeMega').click(function() {
  * 
  * @param event
  *            DOM click event
- */
+ */ 
 jQuery('.megaMenu a').click(
 function(event) {
 	event.preventDefault();
