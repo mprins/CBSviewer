@@ -122,8 +122,7 @@ jQuery('.closeMega').click(function() {
  * @param event
  *            DOM click event
  */ 
-jQuery('.megaMenu a').click(
-function(event) {
+jQuery(document).on('click', '.megaMenu a', function(event) {
 	event.preventDefault();
 	
 	// retrieve mapid from url
