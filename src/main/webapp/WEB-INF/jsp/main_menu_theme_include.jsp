@@ -295,7 +295,7 @@
 									<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_gemiddelde_afstand_tot_buitenschoolse_o')}">2008</a></li>
 								</ul>
 							</li>
-							<li><a href="#">Basisonderwijs<span><fmt:message key="KEY_TOOLTIP166" /></span></a>
+							<li><a href="#">Basisonderwijs<span><fmt:message key="KEY_TOOLTIP66" /></span></a>
 								<ul class="submenu">
 									<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_gemiddelde_afstand_tot_basisonderwijs')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddelde_afstand_tot_basisonderwijs')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_gemiddelde_afstand_tot_basisonderwijs')}">2009</a></li>
 									<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_gemiddelde_afstand_tot_basisonderwijs')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_gemiddelde_afstand_tot_basisonderwijs')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_gemiddelde_afstand_tot_basisonderwijs')}">2009</a></li>

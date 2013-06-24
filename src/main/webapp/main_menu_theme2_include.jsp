@@ -218,7 +218,7 @@
 						<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_aantal_bedrijfsmotorvoertuigen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_aantal_bedrijfsmotorvoertuigen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_aantal_bedrijfsmotorvoertuigen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_aantal_bedrijfsmotorvoertuigen')}">2009</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Motortweewielers totaal<span>xx</span></a>
+				<li><a href="#">Motortweewielers totaal<span><fmt:message key="KEY_TOOLTIP51" /></span></a>
 					<ul class="submenu navbottom">
 						<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2012_aantal_motortweewielers')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_aantal_motortweewielers')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_aantal_motortweewielers')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_aantal_motortweewielers')}">2009</a></li>
 						<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_aantal_motortweewielers')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_aantal_motortweewielers')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_aantal_motortweewielers')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_aantal_motortweewielers')}">2009</a></li>
