@@ -8,8 +8,9 @@
 		trimDirectiveWhitespaces="false" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 
-	<fmt:setBundle basename="MenuLabelsBundle" />					
-		<ul class="navleft">
+	<fmt:setBundle basename="MenuLabelsBundle" />	
+	
+	<ul class="navleft">
 				<li class="menuTitle">Bevolking</li>
 				<li><a href="#">Inwoners 0 tot 20 jaar<span><fmt:message key="KEY_TOOLTIP17" /></span></a>
 					<ul class="submenu">
@@ -121,7 +122,7 @@
 					</ul>
 				</li>
 		</ul>
-		<ul class="navleft">
+	<ul class="navleft">
 				<li class="menuTitle">Wonen</li>
 				<li><a href="#">Huurwoning (%)<span>xx</span></a>
 					<ul class="submenu">
@@ -229,7 +230,7 @@
 					</ul>
 				</li>
 		</ul>
-		<ul class="navright">
+	<ul class="navright">
 			<li class="menuTitle">Bedrijven</li>
 			<li><a href="#">Gewassenbedrijven (%)<span>xx</span></a>
 				<ul class="submenu">
