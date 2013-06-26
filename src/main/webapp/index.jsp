@@ -80,10 +80,13 @@
 				<c:url value="/index.jsp" var="indexLink">
 					<c:param name="coreonly" value="${param.coreonly}" />
 				</c:url>
-				<a href="${fn:escapeXml(indexLink)}" name="top">
+				<a href="${fn:escapeXml(indexLink)}" title="www.cbsinuwbuurt.nl" name="top">
 					<span class="visually-hidden">www.cbsinuwbuurt.nl</span>
-					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" />
-				</a>
+					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" title="CBS in uw buurt" />
+				</a>			
+			</div>
+			<div class="shortMenu">
+				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm"><fmt:message key="KEY_FOOTER_CONTACT" /></a> <a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a> <a href="http://www.cbs.nl/nl-NL/menu/home/default.htm">Cbs.nl</a>
 			</div>
 			<div class="mainMenu">
 				<ul>
@@ -121,7 +124,7 @@
 			<div class="pagetitle">
 				<h1 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h1>
 			</div>
-			<div class="clearer"></div>
+			<div class="clearer"></div>			
 		</div>
 
 		<div id="inhoud">

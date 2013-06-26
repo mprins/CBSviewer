@@ -8,7 +8,7 @@
 		language="java" isThreadSafe="false" isErrorPage="false" />
 
 	<fmt:setBundle basename="LabelsBundle" />
-
+	
 	<div id="zoekContainer">
 
 		<form method="get" action="adres" id="zoekFormulier" class="zoekinput">
@@ -20,8 +20,8 @@
 					onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}"
 					onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};"
 					type="text" />
-				<input name="searchbutton" id="searchbutton"
-					accesskey="s" class="searchbutton" value="" type="submit" />
+				<input name="searchbutton" id="searchbutton" src="../img/new/btn_header_search.gif"
+					accesskey="s" value="" type="image" />					
 
 				<c:if test="${request.straal != null}">
 					<input type="hidden" name="straal" value="${straal}" />

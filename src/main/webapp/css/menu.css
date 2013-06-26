@@ -11,6 +11,7 @@
 	width: 183px;
 }
 .dropDownMenu {
+	line-height: 1.2em;
 	cursor: pointer;
 	left: 2px;
 	position: absolute;
@@ -23,7 +24,7 @@
 	padding: 0;
 }
 .megaMenu, .megaMenu ul, .navCategories, .megaMenu .col {
-	min-height: 520px;
+	min-height: 475px;
 }
 .siteNavigation .sectionTheme:hover .navDropDown  {
 	left: 0px;
@@ -77,7 +78,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	display: block;
 	float: left;
 	height: 35px;
-    font-family: 'SoHo Medium';
+    font-family: 'Soho W01 Medium';
 	font-size:16px;
 	line-height: 33px;
 	padding: 3px 10px 3px 15px;
@@ -118,7 +119,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
 	color: white;
-    font-family: 'SoHo Medium';
+    font-family: 'Soho W01 Medium';
 	font-size:16px;
 	text-decoration: none;
 	line-height:40px;
@@ -221,10 +222,23 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	margin-bottom: 10px;
 }
 
+.menuAccordion li>.accordionheader {
+	position: absolute;
+	left: -190px;
+	bottom: 0px;
+	height: 22px;
+	line-height: 22px;
+	width: 180px;
+	color: #271d6c;
+	font-family: Arial;
+	font-size: 82%;
+	padding: 4px 8px;
+}
+
 .siteNavigation .menuTitle {
 	color: #271d6c;
-	font-family: 'SoHo Medium';
-	font-size: 1.3em;
+	font-family: 'Soho W01 Medium';
+	font-size: 1.1em;
 	margin: 0 10px;
 	padding: 0;
 	text-align: left;
