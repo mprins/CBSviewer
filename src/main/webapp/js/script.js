@@ -64,7 +64,17 @@ jQuery(document)
 
 		jQuery('#thememenu2Header').click(function() {
 			jQuery('#thememenu2Content').load('main_menu_theme2_include.jsp');
-		});					
+		});		
+
+		jQuery('.OverviewMapMaximizeButton').click(function() {	
+			jQuery('#toggleBaseMap').css('bottom','150px');
+			jQuery('#toggleBaseMap').css('right','10px');
+		});
+
+		jQuery('.OverviewMapMinimizeButton').click(function() {	
+			jQuery('#toggleBaseMap').css('bottom','2px');
+			jQuery('#toggleBaseMap').css('right','25px');
+		});
 });
 				
 /**
