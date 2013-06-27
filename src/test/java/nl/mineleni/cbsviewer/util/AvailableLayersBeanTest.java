@@ -9,11 +9,16 @@ package nl.mineleni.cbsviewer.util;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+
 import nl.mineleni.cbsviewer.util.xml.LayerDescriptor;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import flexjson.JSONDeserializer;
 
 /**
  * Test case voor {@link nl.mineleni.cbsviewer.util.AvailableLayersBean}.
@@ -52,16 +57,23 @@ public class AvailableLayersBeanTest {
 
 	@Test
 	public void testAsJSON() {
-		assertTrue(this.bean.asJSON().startsWith("/* <![CDATA[ */var _layers="));
+		assertTrue(this.bean.asJSON().startsWith(
+				"\n/* <![CDATA[ */ var _layers="));
 	}
 
 	@Test
 	public void testAsJSONBoolean() {
 		assertTrue(this.bean.asJSON(true).startsWith(
-				"/* <![CDATA[ */var _layers="));
+				"\n/* <![CDATA[ */ var _layers="));
 		assertFalse(this.bean.asJSON(false).startsWith(
-				"/* <![CDATA[ */var _layers="));
+				"\n/* <![CDATA[ */ var _layers="));
 		assertTrue(this.bean.asJSON(false).startsWith("["));
+		// round trip tests
+		List<LayerDescriptor> layers = new JSONDeserializer<List<LayerDescriptor>>()
+				.use("values", LayerDescriptor.class).deserialize(
+						this.bean.asJSON(false));
+		assertFalse(layers.isEmpty());
+		assertEquals(NAME1, layers.get(0).getName());
 	}
 
 	/**

@@ -85,7 +85,8 @@ public class AvailableLayersBean {
 	/**
 	 * Geeft de kaarten als json object ({@code asVar == false}) of javascript
 	 * variabele, ingepakt in een CDATA sectie. Het object is een array met
-	 * LayerDescriptors. Null waarden worden niet geserialiseerd.
+	 * LayerDescriptors. Null waarden worden niet geserialiseerd, hierdoor zijn
+	 * objecten niet round-trip serialiseerbaar (dus equals() niet bruikbaar).
 	 * 
 	 * @param asVar
 	 *            {@code true} als er een javascript variabele moet worden
