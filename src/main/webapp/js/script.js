@@ -75,6 +75,17 @@ jQuery(document)
 			jQuery('#toggleBaseMap').css('bottom','2px');
 			jQuery('#toggleBaseMap').css('right','25px');
 		});
+		
+		jQuery('#toggleSize').click(function() {	
+			if (jQuery(this).hasClass('restore')) {
+				jQuery(this).css('top','-1px');
+				jQuery(this).css('right','-1px');			
+			}
+			else {
+				jQuery(this).css('top','16px');
+				jQuery(this).css('right','-23px');			
+			}
+		}	);
 });
 				
 /**
