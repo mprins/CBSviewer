@@ -13,7 +13,7 @@
 	<div class="dropDownMenu">
 	<!--a id="skipNavigation"></a-->
 	<ul class="siteNavigation">
-		<li id="thememenu" class="sectionTheme">
+		<li id="toplevel" class="sectionTheme">
 			<a href="#thememenu" id="hasMenu"><fmt:message key="KEY_MAINBUTTON_LABEL" /></a>
 			<div class="navDropDown">
 				<ol class="navCategories">

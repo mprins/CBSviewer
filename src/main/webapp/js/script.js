@@ -64,7 +64,28 @@ jQuery(document)
 
 		jQuery('#thememenu2Header').click(function() {
 			jQuery('#thememenu2Content').load('main_menu_theme2_include.jsp');
-		});					
+		});		
+
+		jQuery('.OverviewMapMaximizeButton').click(function() {	
+			jQuery('#toggleBaseMap').css('bottom','150px');
+			jQuery('#toggleBaseMap').css('right','10px');
+		});
+
+		jQuery('.OverviewMapMinimizeButton').click(function() {	
+			jQuery('#toggleBaseMap').css('bottom','2px');
+			jQuery('#toggleBaseMap').css('right','25px');
+		});
+		
+		jQuery('#toggleSize').click(function() {	
+			if (jQuery(this).hasClass('restore')) {
+				jQuery(this).css('top','-1px');
+				jQuery(this).css('right','-1px');			
+			}
+			else {
+				jQuery(this).css('top','16px');
+				jQuery(this).css('right','-23px');			
+			}
+		}	);
 });
 				
 /**
@@ -102,11 +123,19 @@ jQuery(document).on('click', 'ul.navleft li, ul.navright li', function (event) {
 });
 
 /**
- * Hide sub menu on click
+ * Show infobox on hover
  */
-jQuery(document).click(function() {
+jQuery('.dropDownMenu a').hover(function(event) {
+	event.preventDefault();
+	jQuery(this).children('span').css("display", "none");	
+	jQuery('#infobox').html(jQuery(this).find('span').text());
+});
 
-	//jQuery('ul.submenu:visible').hide();
+/**
+ * Hide infobox on mouseout
+ */
+ jQuery('.dropDownMenu a').mouseout(function() {
+	jQuery('#infobox').html('');
 });
 
 /**
@@ -157,6 +186,10 @@ jQuery(document).on('click', '.megaMenu a', function(event) {
 			'0' : '' + maps[0].name
 		}));
 
+		// hide submenu
+		jQuery('ul.submenu').hide();
+		jQuery('.menuAccordionContent').find('a').removeClass('submenuopened');
+		
 		// bijwerken download link
 		/*if (maps[0].link) {
 			jQuery('#downloadLink').html(
