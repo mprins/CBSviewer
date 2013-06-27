@@ -23,7 +23,7 @@ var ZoekFormulier = {
 	 */
 	init : function(viewer) {
 		// de zoekknop, method en action van formulier verwijderen, die hebben geen funtie meer in de RIA
-		jQuery('input:submit').attr("disabled", true);
+		jQuery('input:image').attr("disabled", true);
 		jQuery('#zoekFormulier').removeAttr('action');
 		jQuery('#zoekFormulier').removeAttr('method');
 
