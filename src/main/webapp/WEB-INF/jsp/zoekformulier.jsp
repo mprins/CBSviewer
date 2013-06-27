@@ -20,7 +20,7 @@
 					onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}"
 					onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};"
 					type="text" />
-				<input name="searchbutton" id="searchbutton" src="../img/new/btn_header_search.gif"
+				<input name="searchbutton" id="searchbutton" src="img/new/btn_header_search.gif"
 					accesskey="s" value="" type="image" />					
 
 				<c:if test="${request.straal != null}">
