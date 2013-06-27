@@ -73,7 +73,6 @@
 	]]>
 </c:if>
 
-	<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
 	<div class="page">
 		<div class="header">
 			<div class="h1">
@@ -176,6 +175,8 @@
 			</ul>
 			<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
 		</div>
+
+		<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
 	</div>
 
 	<c:if test="${param.coreonly!=true}">
