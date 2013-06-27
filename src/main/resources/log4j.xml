@@ -29,6 +29,16 @@
 	<logger name="nl.mineleni.cbsviewer">
 		<level value="debug" />
 	</logger>
+	<!-- deze logger zorgt ook voor javascript compressie van layers, bij een 
+		level =<debug is er geen compressie -->
+	<logger name="nl.mineleni.cbsviewer.util.AvailableLayersBean">
+		<level value="warn" />
+	</logger>
+	<!-- deze logger zorgt ook voor javascript compressie van language
+		resources, bij een level =<debug is er geen compressie -->
+	<logger name="nl.mineleni.cbsviewer.util.LabelsBundle">
+		<level value="warn" />
+	</logger>
 	<logger name="org.geotools">
 		<level value="warn" />
 	</logger>
@@ -39,8 +49,10 @@
 		<level value="warn" />
 	</logger>
 	<root>
-		<!-- kies: consoleAppender voor in de ide of rollingFileAppender voor op 
-			de server 
+		<!-- 
+			kies: consoleAppender voor in de ide of rollingFileAppender 
+			voor op	de server
+			 
 			<appender-ref ref="ganymedeAppender" /> 
 			<appender-ref ref="consoleAppender" /> 
 			<appender-ref ref="rollingFileAppender" /> 
