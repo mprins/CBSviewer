@@ -516,6 +516,7 @@
 							<includes>
 								<include>**/lib/theme/default/style.css</include>
 								<include>**/jquery.fancybox.css</include>
+								<include>**/css/*.css</include>
 								<include>**/*.js</include>
 								<!-- <include>**/jquery.layout.js</include> -->
 							</includes>
