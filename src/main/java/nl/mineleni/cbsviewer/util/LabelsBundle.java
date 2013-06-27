@@ -61,7 +61,7 @@ public class LabelsBundle extends ResourceBundle {
 	 */
 	public String getOpenLayersLangBundle() {
 		final StringBuilder sb = new StringBuilder(
-				"/* <![CDATA[ */OpenLayers.Lang.nl = OpenLayers.Util.extend({");
+				"\n/* <![CDATA[ */ OpenLayers.Lang.nl = OpenLayers.Util.extend({");
 		for (final Enumeration<String> keys = this.getKeys(); keys
 				.hasMoreElements();) {
 			final String key = keys.nextElement();

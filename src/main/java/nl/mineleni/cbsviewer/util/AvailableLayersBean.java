@@ -22,6 +22,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import flexjson.JSONSerializer;
+import flexjson.transformer.AbstractTransformer;
 
 /**
  * AvailableLayersBean maakt de beschikbare kaarten bekend in de applicatie op
@@ -84,22 +85,32 @@ public class AvailableLayersBean {
 	/**
 	 * Geeft de kaarten als json object ({@code asVar == false}) of javascript
 	 * variabele, ingepakt in een CDATA sectie. Het object is een array met
-	 * LayerDescriptors.
+	 * LayerDescriptors. Null waarden worden niet geserialiseerd.
 	 * 
 	 * @param asVar
 	 *            {@code true} als er een javascript variabele moet worden
 	 *            gegeven.
-	 * @return layers als json object
+	 * @return layers als json
 	 * 
 	 * @see #asJSON()
 	 */
 	public String asJSON(final boolean asVar) {
 		final JSONSerializer serializer = new JSONSerializer();
-		final String json = serializer
-				.exclude("class", "aliases", "attributes")
+		final String json = serializer.transform(new AbstractTransformer() {
+			@Override
+			public Boolean isInline() {
+				return true;
+			}
+
+			@Override
+			public void transform(Object object) {
+				// null objecten niet serializeren.
+				return;
+			}
+		}, void.class).exclude("class", "aliases", "attributes")
 				.prettyPrint(LOGGER.isDebugEnabled()).serialize(this.layers);
 		if (asVar) {
-			return "/* <![CDATA[ */var _layers=" + json + ";/* ]]> */";
+			return "\n/* <![CDATA[ */ var _layers=" + json + ";/* ]]> */";
 		}
 		return json;
 	}
@@ -193,5 +204,4 @@ public class AvailableLayersBean {
 		}
 		return null;
 	}
-
 }

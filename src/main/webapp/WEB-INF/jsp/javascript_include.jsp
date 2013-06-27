@@ -15,7 +15,7 @@
 
 
 	<jsp:text>
-		<![CDATA[<script type="text/javascript" src="lib/OpenLayers.js"></script>
+<![CDATA[<script type="text/javascript" src="lib/OpenLayers.js"></script>
 <script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="lib/jquery.qtip-1.0.0-rc3.min.js"></script>
 <script type="text/javascript" src="lib/jquery-ui-1.10.3.custom.min.js"></script>
@@ -26,13 +26,13 @@
 	</jsp:text>
 
 	<!-- hiermee maken we de resourcebundle beschikbaar in het javascript deel van de applicatie -->
-	<jsp:expression>RESOURCES.getOpenLayersLangBundle()</jsp:expression>
+<jsp:expression>RESOURCES.getOpenLayersLangBundle()</jsp:expression>
 
 	<!-- en alle kaartlagen -->
-	<jsp:expression>layers.asJSON()</jsp:expression>
+<jsp:expression>layers.asJSON()</jsp:expression>
 
 	<jsp:text>
-		<![CDATA[</script>
+<![CDATA[</script>
 <script type="text/javascript" src="js/config.js"></script>
 <script type="text/javascript" src="js/script.js"></script>]]>
 	</jsp:text>
