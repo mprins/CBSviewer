@@ -5,9 +5,10 @@
 	background-position: center 5px;
 	background-repeat: no-repeat;
 	border: 0px solid;
+	font-size: 11px;	
 	color: #000000;
 	margin: 10px 0px;
-	padding: 50px 0px 0px 10px;
+	padding: 44px 0px 0px 7px;
 	width: 183px;
 }
 .dropDownMenu {
@@ -55,7 +56,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 	width:200px;
 	color: #271d6c;
     font-family: Arial;
-    font-size: 1em;
+    font-size: 82%;
     padding: 4px 8px;
 	text-decoration:underline;
 }
@@ -225,7 +226,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 .menuAccordion li>.accordionheader {
 	position: absolute;
 	left: -190px;
-	bottom: 0px;
+	bottom: 8px;
 	height: 22px;
 	line-height: 22px;
 	width: 180px;

@@ -70,10 +70,12 @@ h1,h2,h3 {
 }
 
 .page h1 {
-	color: #00a1cd;
-	font-size: 2em;
-	font-weight: normal;
-	margin-bottom: 1em;
+	font-family:'Akko W01 Regular';	
+	color: #00A1CD;
+	font-size: 24px;
+	font-weight: normal;	
+	font-family:'Soho W01 Medium';	
+	margin-bottom: 1em;	
 }
 
 .pagetitle {
@@ -90,11 +92,12 @@ h1,h2,h3 {
 }
 
 .page h2 {
-	/*color: #00a1cd;*/
-	color: #00A4CB;
-	font-size: 1.3em;
-	font-weight: normal;
-	margin-bottom: .563em;
+	font-family:'Akko W01 Regular';	
+	color: #00A1CD;
+	font-size: 24px;
+	font-weight: normal;	
+	font-family:'Soho W01 Medium';	
+	margin-bottom: 0.5em;
 }
 
 .page h3, #pagSubTitle {
@@ -187,15 +190,14 @@ h1,h2,h3 {
 .page .header .mainMenu ul li {
 	border-left: solid 1px #ececec;
 	display:inline;
-	font-size:91.7%;
 	padding: 5px 5px 3px 6px;
 }
 
 .page .header .mainMenu ul li a
 {
-	font-family: 'Akko W01 Regular';
-	font-size: 16px;
 	color:#271d6c;
+	font-family: 'Akko W01 Regular';
+	font-size: 16px;	
 	text-decoration: none;	
 }
 .page .header .mainMenu ul li:hover
@@ -215,7 +217,8 @@ h1,h2,h3 {
 }
 
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 7px;
+	height: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -242,25 +245,25 @@ h1,h2,h3 {
 	z-index: 1001;
 	position: absolute;
 	width: 100%;
-	background-color: #fff;
-	height: 33px;
+	height: 20px;
 	bottom: 0;
 	left: 0;
-	font-size: 81.7%;	
 }
 
 #footerWrapper .introduction {
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 0 0 3px 0;
 	font-family: 'Akko W01 Regular';
     font-size: 13px;
 	color: #27206A;
 	display: block;
-	line-height: 2em;
+	line-height: 1.2em;
 	margin-right: 65ex;
-	padding: 0 0 0 20px;
+	padding: 0 0 0 5px;
 	position: absolute;
-	left: 0;
+	left: 5px;
 	top: 0;
-	width: 50%;
+	width: 420px;
 	z-index: 1;
 }
 
@@ -349,6 +352,17 @@ html.js #coreContainer p {
 	width: 100%;
 }
 
+.attribuutTabel  th {
+	padding: 1px;
+	background-color: #eeeeee;
+	font-weight:bold;
+	text-align:left;
+}
+
+.attribuutTabel  td {
+	padding: 1px;
+}
+
 .attribuutTabel .odd {
 	background-color: #f7f7f7;
 }
@@ -418,7 +432,7 @@ html.js #coreContainer p {
 }
 
 #inhoud {
-	padding: 113px 0px 33px;
+	padding: 113px 0px 0px;
 	/* padding for header/footer/copyright/download link, used in Viewer.js */
 }
 
@@ -506,7 +520,7 @@ html.js #coreContainer p {
 }
 
 .settingsContent {
-	overflow-x: hidden;
+	overflow-x: auto;
 	overflow-y: auto;
 }
 

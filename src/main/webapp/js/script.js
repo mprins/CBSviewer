@@ -102,11 +102,19 @@ jQuery(document).on('click', 'ul.navleft li, ul.navright li', function (event) {
 });
 
 /**
- * Hide sub menu on click
+ * Show infobox on hover
  */
-jQuery(document).click(function() {
+jQuery('.dropDownMenu a').hover(function(event) {
+	event.preventDefault();
+	jQuery(this).children('span').css("display", "none");	
+	jQuery('#infobox').html(jQuery(this).find('span').text());
+});
 
-	//jQuery('ul.submenu:visible').hide();
+/**
+ * Hide infobox on mouseout
+ */
+ jQuery('.dropDownMenu a').mouseout(function() {
+	jQuery('#infobox').html('');
 });
 
 /**
@@ -157,6 +165,10 @@ jQuery(document).on('click', '.megaMenu a', function(event) {
 			'0' : '' + maps[0].name
 		}));
 
+		// hide submenu
+		jQuery('ul.submenu').hide();
+		jQuery('.menuAccordionContent').find('a').removeClass('submenuopened');
+		
 		// bijwerken download link
 		/*if (maps[0].link) {
 			jQuery('#downloadLink').html(
