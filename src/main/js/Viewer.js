@@ -255,15 +255,6 @@ var Viewer = function() {
 				// met een zoomend werkt het soms raar, maar met wachten op
 				// loadend van het eerste wms thema gaat het vaker mis
 				_map.events.register('zoomend', _map, _afterZoomTo(lonlat));
-				// var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS'),
-				// lyr;
-				// for (lyr = 0; lyr < lyrs.length; lyr++) {
-				// if (!lyrs[lyr].isBaseLayer) {
-				// lyrs[lyr].events.register('loadend', lyrs[lyr],
-				// _afterZoomTo(lonlat, lyrs[lyr]));
-				// break;
-				// }
-				// }
 			}
 		},
 
@@ -276,16 +267,16 @@ var Viewer = function() {
 			_map.addControl(new UpdateLegendControl({
 				div : jQuery('#' + this.config.legendDiv)[0]
 			}));
-			_map.addControl(new OpenLayers.Control.KeyboardDefaults({
+			_map.addControl(new OpenLayers.Control.KeyboardDefaults(
 				/* alleen actief als de kaart focus heeft */
-				observeElement : this.config.mapDiv
-			}));
+				//	{ observeElement : this.config.mapDiv }
+			));
 			_map.addControl(new OpenLayers.Control.Zoom());
 			_map.addControl(new OpenLayers.Control.Navigation());
-			_map.addControl(new OpenLayers.Control.KeyboardClick({
+			_map.addControl(new OpenLayers.Control.KeyboardClick(
 				/* alleen actief als de kaart focus heeft */
-				observeElement : this.config.mapDiv
-			}));
+				//	{ observeElement : this.config.mapDiv }
+			));
 			_map.addControl(new WMSGetFeatureInfo({
 				eventListeners : {
 					getfeatureinfo : _showInfo
