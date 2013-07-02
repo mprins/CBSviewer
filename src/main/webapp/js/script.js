@@ -85,7 +85,9 @@ jQuery(document)
 				jQuery(this).css('top','16px');
 				jQuery(this).css('right','-23px');			
 			}
-		}	);
+		});
+		
+		jQuery('#infobox').html(OpenLayers.i18n('KEY_SELECTMENU_DEFAULT_HOVER'));
 });
 				
 /**
