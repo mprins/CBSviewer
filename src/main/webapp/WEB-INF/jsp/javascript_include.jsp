@@ -16,7 +16,7 @@
 
 	<jsp:text>
 <![CDATA[<script type="text/javascript" src="lib/OpenLayers.js"></script>
-<script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="lib/jquery.qtip-1.0.0-rc3.min.js"></script>
 <script type="text/javascript" src="lib/jquery-ui-1.10.3.custom.min.js"></script>
 <script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>

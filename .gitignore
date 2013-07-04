@@ -11,3 +11,4 @@
 /src/main/webapp/maps/*.png
 Thumbs.db
 /nb-configuration.xml
+/src/main/webapp/lib/jquery-1.10.2.min.map
