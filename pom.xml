@@ -55,6 +55,12 @@
 			<distribution>repo</distribution>
 		</license>
 		<license>
+			<name>MIT license</name>
+			<url>https://raw.github.com/jhy/jsoup/master/LICENSE</url>
+			<comments>For any parts of jsoup</comments>
+			<distribution>repo</distribution>
+		</license>
+		<license>
 			<name>GNU Lesser General Public License (LGPL)</name>
 			<comments>The binary distribution of this project includes part of Geotools.</comments>
 			<distribution>repo</distribution>
@@ -1054,6 +1060,11 @@
 			<groupId>net.sf.flexjson</groupId>
 			<artifactId>flexjson</artifactId>
 			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.7.2</version>
 		</dependency>
 		<dependency>
 			<groupId>xmlunit</groupId>

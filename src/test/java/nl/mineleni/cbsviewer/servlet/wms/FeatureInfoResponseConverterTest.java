@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -11,6 +11,7 @@ import static org.custommonkey.xmlunit.XMLAssert.assertXpathExists;
 import static org.custommonkey.xmlunit.XMLAssert.assertXpathValuesEqual;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
 
 import java.io.IOException;
 
@@ -19,7 +20,6 @@ import nl.mineleni.cbsviewer.util.xml.LayerDescriptor;
 
 import org.custommonkey.xmlunit.XMLUnit;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -29,7 +29,10 @@ import org.junit.Test;
  * @author prinsmc
  */
 public class FeatureInfoResponseConverterTest {
-	LayerDescriptor layer;
+	/** resource bundle. */
+	private static final LabelsBundle RESOURCES = new LabelsBundle();
+
+	private LayerDescriptor layer;
 
 	/**
 	 * set up.
@@ -69,10 +72,11 @@ public class FeatureInfoResponseConverterTest {
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML0() throws Exception {
-		final String testXML = FeatureInfoResponseConverter.convertToHTMLTable(
-				this.getClass().getClassLoader()
+		final String testXML = FeatureInfoResponseConverter
+				.convertToHTMLTable(this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse0.gml"),
-				"GMLTYPE", this.layer);
+						FeatureInfoResponseConverter.CONVERTER_TYPE.GMLTYPE,
+						this.layer);
 		assertNotNull(testXML);
 		assertEquals(new LabelsBundle().getString("KEY_INFO_GEEN_FEATURES"),
 				testXML);
@@ -89,10 +93,11 @@ public class FeatureInfoResponseConverterTest {
 	@Test
 	public final void testConvertToHTMLTableGML1() throws Exception {
 		final String[] colNames = this.layer.getAttributes().split(",\\s*");
-		final String testXML = FeatureInfoResponseConverter.convertToHTMLTable(
-				this.getClass().getClassLoader()
+		final String testXML = FeatureInfoResponseConverter
+				.convertToHTMLTable(this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse1.gml"),
-				"GMLTYPE", this.layer);
+						FeatureInfoResponseConverter.CONVERTER_TYPE.GMLTYPE,
+						this.layer);
 		assertNotNull(testXML);
 
 		// Validator v = new Validator(testXML);
@@ -118,10 +123,11 @@ public class FeatureInfoResponseConverterTest {
 	public final void testConvertToHTMLTableGML3() throws Exception {
 		final String[] colNames = this.layer.getAttributes().split(",\\s*");
 
-		final String testXML = FeatureInfoResponseConverter.convertToHTMLTable(
-				this.getClass().getClassLoader()
+		final String testXML = FeatureInfoResponseConverter
+				.convertToHTMLTable(this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse3.gml"),
-				"GMLTYPE", this.layer);
+						FeatureInfoResponseConverter.CONVERTER_TYPE.GMLTYPE,
+						this.layer);
 		assertNotNull(testXML);
 		assertXpathExists("//caption", testXML);
 		assertXpathExists("/table/caption", testXML);
@@ -144,13 +150,14 @@ public class FeatureInfoResponseConverterTest {
 	 * @throws IOException
 	 */
 	@Test
-	@Ignore("vooralsnog een unsupported conversie")
 	public final void testConvertToHTMLTableHTML0() throws IOException {
 		final String test = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse0.html"),
-				"HTMLTYPE", null);
+				FeatureInfoResponseConverter.CONVERTER_TYPE.HTMLTYPE,
+				this.layer);
 		assertNotNull(test);
+		assertSame(RESOURCES.getString("KEY_INFO_GEEN_FEATURES"), test);
 	}
 
 	/**
@@ -161,12 +168,12 @@ public class FeatureInfoResponseConverterTest {
 	 * @throws IOException
 	 */
 	@Test
-	@Ignore("vooralsnog een unsupported conversie")
 	public final void testConvertToHTMLTableHTML1() throws IOException {
 		final String test = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse1.html"),
-				"HTMLTYPE", null);
+				FeatureInfoResponseConverter.CONVERTER_TYPE.HTMLTYPE,
+				this.layer);
 		assertNotNull(test);
 	}
 
@@ -178,12 +185,54 @@ public class FeatureInfoResponseConverterTest {
 	 * @throws IOException
 	 */
 	@Test
-	@Ignore("vooralsnog een unsupported conversie")
 	public final void testConvertToHTMLTableHTML3() throws IOException {
 		final String test = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse3.html"),
-				"HTMLTYPE", null);
+				FeatureInfoResponseConverter.CONVERTER_TYPE.HTMLTYPE,
+				this.layer);
 		assertNotNull(test);
+	}
+
+	public final void testConvert0() throws IOException {
+		final String testHTML = FeatureInfoResponseConverter
+				.convertToHTMLTable(this.getClass().getClassLoader()
+						.getResourceAsStream("GetFeatureInfoResponse0.html"),
+						FeatureInfoResponseConverter.CONVERTER_TYPE.HTMLTYPE,
+						this.layer);
+		final String testXML = FeatureInfoResponseConverter
+				.convertToHTMLTable(this.getClass().getClassLoader()
+						.getResourceAsStream("GetFeatureInfoResponse0.gml"),
+						FeatureInfoResponseConverter.CONVERTER_TYPE.GMLTYPE,
+						this.layer);
+		assertEquals(testHTML, testXML);
+	}
+
+	public final void testConvert2() throws IOException {
+		final String testHTML = FeatureInfoResponseConverter
+				.convertToHTMLTable(this.getClass().getClassLoader()
+						.getResourceAsStream("GetFeatureInfoResponse1.html"),
+						FeatureInfoResponseConverter.CONVERTER_TYPE.HTMLTYPE,
+						this.layer);
+		final String testXML = FeatureInfoResponseConverter
+				.convertToHTMLTable(this.getClass().getClassLoader()
+						.getResourceAsStream("GetFeatureInfoResponse1.gml"),
+						FeatureInfoResponseConverter.CONVERTER_TYPE.GMLTYPE,
+						this.layer);
+		assertEquals(testHTML, testXML);
+	}
+
+	public final void testConvert3() throws IOException {
+		final String testHTML = FeatureInfoResponseConverter
+				.convertToHTMLTable(this.getClass().getClassLoader()
+						.getResourceAsStream("GetFeatureInfoResponse3.html"),
+						FeatureInfoResponseConverter.CONVERTER_TYPE.HTMLTYPE,
+						this.layer);
+		final String testXML = FeatureInfoResponseConverter
+				.convertToHTMLTable(this.getClass().getClassLoader()
+						.getResourceAsStream("GetFeatureInfoResponse3.gml"),
+						FeatureInfoResponseConverter.CONVERTER_TYPE.GMLTYPE,
+						this.layer);
+		assertEquals(testHTML, testXML);
 	}
 }

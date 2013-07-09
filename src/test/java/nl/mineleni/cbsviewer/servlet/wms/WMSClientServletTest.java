@@ -158,6 +158,9 @@ public class WMSClientServletTest {
 				this.oneOf(WMSClientServletTest.this.servletConfig)
 						.getInitParameter("lufoWMSlayers");
 				this.will(returnValue(""));
+				this.oneOf(WMSClientServletTest.this.servletConfig)
+						.getInitParameter("featureInfoType");
+				this.will(returnValue(""));
 			}
 		});
 

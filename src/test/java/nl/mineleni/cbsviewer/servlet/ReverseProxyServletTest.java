@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
+ */
 package nl.mineleni.cbsviewer.servlet;
 
 import static javax.servlet.http.HttpServletResponse.SC_BAD_GATEWAY;
@@ -111,6 +117,9 @@ public class ReverseProxyServletTest {
 						.getInitParameter(ALLOWED_HOSTS);
 				this.will(returnValue(SERVERNAME_DOESNOTEXIST + ";"
 						+ SERVERNAME));
+				this.allowing(ReverseProxyServletTest.this.servletConfig)
+						.getInitParameter("featureInfoType");
+				this.will(returnValue(""));
 			}
 		});
 		// Override getServletConfig/getServletContext to return the mocked

@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,6 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter;
+import nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.CONVERTER_TYPE;
 import nl.mineleni.cbsviewer.util.AvailableLayersBean;
 import nl.mineleni.cbsviewer.util.EncodingUtil;
 
@@ -86,6 +88,12 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	/** log4j logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(ReverseProxyServlet.class);
+
+	/**
+	 * type featureinfo response.
+	 */
+	private static CONVERTER_TYPE type = CONVERTER_TYPE.GMLTYPE;
+
 	/** layers bean. */
 	private final transient AvailableLayersBean layers = new AvailableLayersBean();
 	/**
@@ -171,7 +179,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 					// intercept and modify request
 					if (serverUrl.contains("GetFeatureInfo")) {
 						serverUrl = serverUrl.replace("text%2Fhtml",
-								"application%2Fvnd.ogc.gml");
+								URLEncoder.encode(type.toString(), "UTF-8"));
 						if (LOGGER.isDebugEnabled()) {
 							LOGGER.debug("proxy GetFeatureInfo GET param: "
 									+ serverUrl);
@@ -213,9 +221,9 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 							}
 							responseBody = FeatureInfoResponseConverter
 									.convertToHTMLTable(get.getEntity()
-											.getContent(), "GMLTYPE",
-											this.layers.getLayerByLayers(lName,
-													wmsUrl, styles));
+											.getContent(), type, this.layers
+											.getLayerByLayers(lName, wmsUrl,
+													styles));
 						} else {
 							// force the response to have XML content type (WMS
 							// servers generally don't)
@@ -356,6 +364,14 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 					new HttpHost(this.getProxyHost(), this.getProxyPort(),
 							"http"));
 		}
+
+		// voorgond feature info response type
+		final String mType = config.getInitParameter("featureInfoType");
+		LOGGER.debug("voorgrond kaartlagen mimetype: " + mType);
+		if ((mType != null) && (mType.length() > 0)) {
+			type = CONVERTER_TYPE.valueOf(mType);
+		}
+
 		// override referer, ignore cookies
 		this.client.getParams().setParameter("Referer", "/");
 		this.client.getParams().setParameter(ClientPNames.COOKIE_POLICY,

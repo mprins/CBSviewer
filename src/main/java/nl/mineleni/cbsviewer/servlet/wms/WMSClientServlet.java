@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -41,6 +41,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import nl.mineleni.cbsviewer.servlet.AbstractWxSServlet;
+import nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.CONVERTER_TYPE;
 import nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey;
 import nl.mineleni.cbsviewer.servlet.wms.cache.CachableString;
 import nl.mineleni.cbsviewer.servlet.wms.cache.Cache;
@@ -80,6 +81,11 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(WMSClientServlet.class);
+
+	/**
+	 * type featureinfo response.
+	 */
+	private static CONVERTER_TYPE type = CONVERTER_TYPE.GMLTYPE;
 
 	/**
 	 * vaste afmeting van de kaart (hoogte en breedte). {@value}
@@ -416,17 +422,17 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				}
 			}
 			getFeatureInfoRequest.setQueryLayers(queryLayers);
-			getFeatureInfoRequest.setInfoFormat("application/vnd.ogc.gml");
 			getFeatureInfoRequest.setFeatureCount(10);
 			getFeatureInfoRequest.setQueryPoint(MAP_DIMENSION_MIDDLE,
 					MAP_DIMENSION_MIDDLE);
+			getFeatureInfoRequest.setInfoFormat(type.toString());
 			LOGGER.debug("WMS feature info request url is: "
 					+ getFeatureInfoRequest.getFinalURL());
 			final GetFeatureInfoResponse response = this.getCachedWMS(lyrDesc)
 					.issueRequest(getFeatureInfoRequest);
 
 			final String html = FeatureInfoResponseConverter
-					.convertToHTMLTable(response.getInputStream(), "GMLTYPE",
+					.convertToHTMLTable(response.getInputStream(), type,
 							lyrDesc);
 			this.featInfoCache.put(key,
 					new CachableString(html, System.currentTimeMillis()
@@ -838,6 +844,12 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			this.lufoWMSlayers = lufoWMSlyrs.split("[,]\\s*");
 		}
 
+		// voorgond feature info response type
+		final String mType = config.getInitParameter("featureInfoType");
+		LOGGER.debug("voorgrond kaartlagen mimetype: " + mType);
+		if ((mType != null) && (mType.length() > 0)) {
+			type = CONVERTER_TYPE.valueOf(mType);
+		}
 		// init servers cache
 		this.wmsServersCache = new ConcurrentHashMap<String, WebMapServer>();
 	}

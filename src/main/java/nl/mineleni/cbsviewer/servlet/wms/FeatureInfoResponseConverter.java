@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.Iterator;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -22,7 +23,15 @@ import nl.mineleni.cbsviewer.util.xml.LayerDescriptor;
 import org.geotools.GML;
 import org.geotools.GML.Version;
 import org.geotools.data.simple.SimpleFeatureIterator;
+import org.geotools.feature.DefaultFeatureCollection;
+import org.geotools.feature.FeatureIterator;
+import org.geotools.feature.simple.SimpleFeatureBuilder;
+import org.geotools.feature.simple.SimpleFeatureTypeBuilder;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Element;
 import org.opengis.feature.simple.SimpleFeature;
+import org.opengis.feature.simple.SimpleFeatureType;
+import org.opengis.geometry.primitive.Point;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
@@ -36,25 +45,44 @@ import org.xml.sax.SAXException;
  */
 public final class FeatureInfoResponseConverter {
 
+	/**
+	 * ondersteunde typen voor conversie.
+	 */
+	public enum CONVERTER_TYPE {
+		GMLTYPE("application/vnd.ogc.gml"), HTMLTYPE("text/html"),
+		// XMLTYPE("application/vnd.ogc.wms_xml")
+		;
+		private final String type;
+
+		CONVERTER_TYPE(final String type) {
+			this.type = type;
+		}
+
+		/**
+		 * String value van dit object.
+		 * 
+		 * @return de waarde van dit object als string
+		 * @see java.lang.Enum#toString()
+		 * @see java.lang.Number#toString()
+		 */
+		@Override
+		public String toString() {
+			return this.type;
+		}
+	}
+
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(FeatureInfoResponseConverter.class);
+
+	/** attribuut namen filter. */
+	private static final AttributesNamesFilter NAMESFILTER = new AttributesNamesFilter();
 
 	/** resource bundle. */
 	private static final LabelsBundle RESOURCES = new LabelsBundle();
 
 	/** attribuut waarden filter. */
 	private static final AttributeValuesFilter VALUESFILTER = new AttributeValuesFilter();
-
-	/** attribuut namen filter. */
-	private static final AttributesNamesFilter NAMESFILTER = new AttributesNamesFilter();
-
-	/**
-	 * private constructor.
-	 */
-	private FeatureInfoResponseConverter() {
-		// private constructor voor utility klasse
-	}
 
 	/**
 	 * Cleanup html.
@@ -65,15 +93,44 @@ public final class FeatureInfoResponseConverter {
 	 * @return the string
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
-	 * @todo implementatie
 	 */
-	private static String cleanupHTML(final InputStream htmlStream)
-			throws IOException {
-		LOGGER.warn("unsupported feature");
-		// misschien met net.sourceforge.htmlcleaner:htmlcleaner
-		// http://search.maven.org/#artifactdetails%7Cnet.sourceforge.htmlcleaner%7Chtmlcleaner%7C2.2%7Cjar
-		// of jsoup
-		return convertStreamToString(htmlStream);
+	private static String cleanupHTML(final InputStream htmlStream,
+			final LayerDescriptor layer) throws IOException {
+		final Element table = Jsoup.parse(convertStreamToString(htmlStream))
+				.select("table").first();
+		if (table == null) {
+			LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo.");
+			return RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
+		}
+
+		final DefaultFeatureCollection featureCollection = new DefaultFeatureCollection(
+				"internal");
+		final SimpleFeatureTypeBuilder b = new SimpleFeatureTypeBuilder();
+
+		// 1e rij zijn headers, andere rijen zijn data, geheekl converteren naar
+		// een SimpleFeatureCollection
+		final Element headers = table.select("tr:first-child").first();
+		final Iterator<Element> THs = headers.select("th").iterator();
+		while (THs.hasNext()) {
+			b.add(THs.next().text(), String.class);
+		}
+		b.setCRS(null);
+		b.add("point", Point.class);
+		b.setName("tablerow");
+		final SimpleFeatureType type = b.buildFeatureType();
+		final SimpleFeatureBuilder builder = new SimpleFeatureBuilder(type);
+		final Iterator<Element> rows = table.select("tr:not(:first-child)")
+				.iterator();
+		while (rows.hasNext()) {
+			final Iterator<Element> TH = headers.select("th").iterator();
+			final Iterator<Element> TDs = rows.next().select("td").iterator();
+			final SimpleFeature f = builder.buildFeature(null);
+			while (TDs.hasNext()) {
+				f.setAttribute(TH.next().text(), TDs.next().text());
+			}
+			featureCollection.add(f);
+		}
+		return featureCollectionConverter(featureCollection.features(), layer);
 	}
 
 	/**
@@ -89,52 +146,19 @@ public final class FeatureInfoResponseConverter {
 	 */
 	private static String convertGML(final InputStream gmlStream,
 			final LayerDescriptor layer) throws IOException {
-		final StringBuilder sb = new StringBuilder();
-		final String[] fieldNames = layer.getAttributes().split(",\\s*");
+
 		try {
 			final GML gml = new GML(Version.WFS1_0);
 			final SimpleFeatureIterator iter = gml
 					.decodeFeatureIterator(gmlStream);
-			if (iter.hasNext()) {
-				// tabel maken
-				sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\"><caption>");
-				sb.append(RESOURCES.getString("KEY_INFO_TABEL_CAPTION"));
-				sb.append("</caption><thead><tr>");
-				for (final String n : fieldNames) {
-					sb.append("<th scope=\"col\">"
-							+ NAMESFILTER.filterValue(n, layer.getId())
-							+ "</th>");
-				}
-				sb.append("</tr></thead><tbody>");
-				int i = 0;
-				while (iter.hasNext()) {
-					sb.append("<tr class=\""
-							+ (((i++ % 2) == 0) ? "odd" : "even") + "\">");
-					final SimpleFeature f = iter.next();
-					for (final String n : fieldNames) {
-						if (VALUESFILTER.hasFilters()) {
-							sb.append("<td>"
-									+ VALUESFILTER.filterValue(f
-											.getAttribute(n)) + "</td>");
-						} else {
-							sb.append("<td>" + f.getAttribute(n) + "</td>");
-						}
-					}
-					sb.append("</tr>");
-				}
-				sb.append("</tbody></table>");
-				iter.close();
-				LOGGER.debug("Gemaakte HTML tabel: " + sb);
-			} else {
-				LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo.");
-				return RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
-			}
+			return featureCollectionConverter(iter, layer);
 		} catch (ParserConfigurationException | SAXException e) {
 			LOGGER.error("Fout tijdens parsen van GML. ", e);
+			return "";
 		} finally {
 			gmlStream.close();
 		}
-		return sb.toString();
+
 	}
 
 	/**
@@ -180,14 +204,64 @@ public final class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public static String convertToHTMLTable(final InputStream input,
-			final String type, final LayerDescriptor layer) throws IOException {
-		switch (type.toUpperCase()) {
-		case "GMLTYPE":
+			final CONVERTER_TYPE type, final LayerDescriptor layer)
+			throws IOException {
+		switch (type) {
+		case GMLTYPE:
 			return convertGML(input, layer);
-		case "HTMLTYPE":
-			return cleanupHTML(input);
+		case HTMLTYPE:
+			return cleanupHTML(input, layer);
 		default:
 			return convertStreamToString(input);
 		}
+	}
+
+	private static String featureCollectionConverter(
+			final FeatureIterator<SimpleFeature> iter,
+			final LayerDescriptor layer) {
+		final StringBuilder sb = new StringBuilder();
+		final String[] fieldNames = layer.getAttributes().split(",\\s*");
+
+		if (iter.hasNext()) {
+			// tabel maken
+			sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\"><caption>");
+			sb.append(RESOURCES.getString("KEY_INFO_TABEL_CAPTION"));
+			sb.append("</caption><thead><tr>");
+			for (final String n : fieldNames) {
+				sb.append("<th scope=\"col\">"
+						+ NAMESFILTER.filterValue(n, layer.getId()) + "</th>");
+			}
+			sb.append("</tr></thead><tbody>");
+			int i = 0;
+			while (iter.hasNext()) {
+				sb.append("<tr class=\"" + (((i++ % 2) == 0) ? "odd" : "even")
+						+ "\">");
+				final SimpleFeature f = iter.next();
+				for (final String n : fieldNames) {
+					if (VALUESFILTER.hasFilters()) {
+						sb.append("<td>"
+								+ VALUESFILTER.filterValue(f.getAttribute(n))
+								+ "</td>");
+					} else {
+						sb.append("<td>" + f.getAttribute(n) + "</td>");
+					}
+				}
+				sb.append("</tr>");
+			}
+			sb.append("</tbody></table>");
+			iter.close();
+			LOGGER.debug("Gemaakte HTML tabel: " + sb);
+			return sb.toString();
+		} else {
+			LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo.");
+			return RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
+		}
+	}
+
+	/**
+	 * private constructor.
+	 */
+	private FeatureInfoResponseConverter() {
+		// private constructor voor utility klasse
 	}
 }
