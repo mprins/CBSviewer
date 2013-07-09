@@ -123,7 +123,7 @@
 		<name>Aantal inwoners 2012 - Vierkant 100m</name>
 		<layers>inwoners_2012</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2012</styles>
+		<styles>cbsvierkanten100m_inw2012</styles>
 		<attributes>inw2012</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -132,7 +132,7 @@
 		<name>Aantal inwoners 2011 - Vierkant 100m</name>
 		<layers>inwoners_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2011</styles>
+		<styles>cbsvierkanten100m_inw2011</styles>
 		<attributes>inw2011</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -141,7 +141,7 @@
 		<name>Aantal inwoners 2010 - Vierkant 100m</name>
 		<layers>inwoners_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2010</styles>
+		<styles>cbsvierkanten500m.inw2010</styles>
 		<attributes>inw2010</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -150,7 +150,7 @@
 		<name>Aantal inwoners 2009 - Vierkant 100m</name>
 		<layers>inwoners_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2009</styles>
+		<styles>cbsvierkanten100m_inw2009</styles>
 		<attributes>inw2009</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -159,7 +159,7 @@
 		<name>Aantal inwoners 2008 - Vierkant 100m</name>
 		<layers>inwoners_2008</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2008</styles>
+		<styles>cbsvierkanten100m_inw2008</styles>
 		<attributes>inw2008</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -168,7 +168,7 @@
 		<name>Aantal inwoners 2007 - Vierkant 100m</name>
 		<layers>inwoners_2007</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2007</styles>
+		<styles>cbsvierkanten100m_inw2007</styles>
 		<attributes>inw2007</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -177,7 +177,7 @@
 		<name>Aantal inwoners 2006 - Vierkant 100m</name>
 		<layers>inwoners_2006</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2006</styles>
+		<styles>cbsvierkanten100m_inw2006</styles>
 		<attributes>inw2006</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -186,7 +186,7 @@
 		<name>Aantal inwoners 2005 - Vierkant 100m</name>
 		<layers>inwoners_2005</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2005</styles>
+		<styles>cbsvierkanten100m_inw2005</styles>
 		<attributes>inw2005</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -195,7 +195,7 @@
 		<name>Aantal inwoners 2004 - Vierkant 100m</name>
 		<layers>inwoners_2004</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2004</styles>
+		<styles>cbsvierkanten100m_inw2004</styles>
 		<attributes>inw2004</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -204,7 +204,7 @@
 		<name>Aantal inwoners 2003 - Vierkant 100m</name>
 		<layers>inwoners_2003</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2003</styles>
+		<styles>cbsvierkanten100m_inw2003</styles>
 		<attributes>inw2003</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -213,7 +213,7 @@
 		<name>Aantal inwoners 2002 - Vierkant 100m</name>
 		<layers>inwoners_2002</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2002</styles>
+		<styles>cbsvierkanten100m_inw2002</styles>
 		<attributes>inw2002</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -222,7 +222,7 @@
 		<name>Aantal inwoners 2001 - Vierkant 100m</name>
 		<layers>inwoners_2001</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2001</styles>
+		<styles>cbsvierkanten100m_inw2001</styles>
 		<attributes>inw2001</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -231,7 +231,7 @@
 		<name>Aantal inwoners 2000 - Vierkant 100m</name>
 		<layers>inwoners_2000</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>inw2000</styles>
+		<styles>cbsvierkanten100m_inw2000</styles>
 		<attributes>inw2000</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
@@ -240,8 +240,8 @@
 		<name>Aantal inwoners 2012 - Vierkant 500m</name>
 		<layers>inwoners_2012</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2012</styles>
-		<attributes>inw2012</attributes>
+		<styles>cbsvierkanten500m.inwoners_2012</styles>
+		<attributes>inwoners_2012</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -249,8 +249,8 @@
 		<name>Aantal inwoners 2011 - Vierkant 500m</name>
 		<layers>inwoners_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2011</styles>
-		<attributes>inw2011</attributes>
+		<styles>cbsvierkanten500m.inwoners_2011</styles>
+		<attributes>inwoners_2011</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -258,8 +258,8 @@
 		<name>Aantal inwoners 2010 - Vierkant 500m</name>
 		<layers>inwoners_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2010</styles>
-		<attributes>inw2010</attributes>
+		<styles>cbsvierkanten500m.inwoners_2010</styles>
+		<attributes>inwoners_2010</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -267,8 +267,8 @@
 		<name>Aantal inwoners 2009 - Vierkant 500m</name>
 		<layers>inwoners_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2009</styles>
-		<attributes>inw2009</attributes>
+		<styles>cbsvierkanten500m.inwoners_2009</styles>
+		<attributes>inwoners_2009</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -276,8 +276,8 @@
 		<name>Aantal inwoners 2008 - Vierkant 500m</name>
 		<layers>inwoners_2008</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2008</styles>
-		<attributes>inw2008</attributes>
+		<styles>cbsvierkanten500m.inwoners_2008</styles>
+		<attributes>inwoners_2008</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -285,8 +285,8 @@
 		<name>Aantal inwoners 2007 - Vierkant 500m</name>
 		<layers>inwoners_2007</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2007</styles>
-		<attributes>inw2007</attributes>
+		<styles>cbsvierkanten500m.inwoners_2007</styles>
+		<attributes>inwoners_2007</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -294,8 +294,8 @@
 		<name>Aantal inwoners 2006 - Vierkant 500m</name>
 		<layers>inwoners_2006</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2006</styles>
-		<attributes>inw2006</attributes>
+		<styles>cbsvierkanten500m.inwoners_2006</styles>
+		<attributes>inwoners_2006</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -303,8 +303,8 @@
 		<name>Aantal inwoners 2005 - Vierkant 500m</name>
 		<layers>inwoners_2005</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2005</styles>
-		<attributes>inw2005</attributes>
+		<styles>cbsvierkanten500m.inwoners_2005</styles>
+		<attributes>inwoners_2005</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -312,8 +312,8 @@
 		<name>Aantal inwoners 2004 - Vierkant 500m</name>
 		<layers>inwoners_2004</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2004</styles>
-		<attributes>inw2004</attributes>
+		<styles>cbsvierkanten500m.inwoners_2004</styles>
+		<attributes>inwoners_2004</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -321,8 +321,8 @@
 		<name>Aantal inwoners 2003 - Vierkant 500m</name>
 		<layers>inwoners_2003</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2003</styles>
-		<attributes>inw2003</attributes>
+		<styles>cbsvierkanten500m.inwoners_2003</styles>
+		<attributes>inwoners_2003</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -330,8 +330,8 @@
 		<name>Aantal inwoners 2002 - Vierkant 500m</name>
 		<layers>inwoners_2002</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2002</styles>
-		<attributes>inw2002</attributes>
+		<styles>cbsvierkanten500m.inwoners_2002</styles>
+		<attributes>inwoners_2002</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -339,8 +339,8 @@
 		<name>Aantal inwoners 2001 - Vierkant 500m</name>
 		<layers>inwoners_2001</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2001</styles>
-		<attributes>inw2001</attributes>
+		<styles>cbsvierkanten500m.inwoners_2001</styles>
+		<attributes>inwoners_2001</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -348,8 +348,8 @@
 		<name>Aantal inwoners 2000 - Vierkant 500m</name>
 		<layers>inwoners_2000</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>inwoners_2000</styles>
-		<attributes>inw2000</attributes>
+		<styles>cbsvierkanten500m.inwoners_2000</styles>
+		<attributes>inwoners_2000</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -798,8 +798,8 @@
 		<name>Aantal personen 45 tot 65 jaar - Vierkant 100m</name>
 		<layers>inwoners_2011_45_tot_65_jaar</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>I2011_4564</styles>
-		<attributes>I2011_4564</attributes>
+		<styles>cbsvierkanten100m_i2011_4564</styles>
+		<attributes>i2011_4564</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -807,8 +807,8 @@
 		<name>Aantal personen 45 tot 65 jaar - Vierkant 500m</name>
 		<layers>inwoners_2011_45_tot_65_jaar</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>I2011_4564</styles>
-		<attributes>I2011_4564</attributes>
+		<styles>cbsvierkanten500m.i2011_4564</styles>
+		<attributes>i2011_4564</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -933,8 +933,8 @@
 		<name>Aantal personen 65 jaar en ouder - Vierkant 100m</name>
 		<layers>inwoners_2011_65_plus_jaar</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>I2011_65PL</styles>
-		<attributes>i2011_65PL</attributes>
+		<styles>cbsvierkanten100m_I2011_65pl</styles>
+		<attributes>i2011_65pl</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -942,8 +942,8 @@
 		<name>Aantal personen 65 jaar en ouder - Vierkant 500m</name>
 		<layers>inwoners_2011_65_plus_jaar</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>I2011_65PL</styles>
-		<attributes>i2011_65PL</attributes>
+		<styles>cbsvierkanten500m.i2011_65pl</styles>
+		<attributes>i2011_65pl</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -1059,8 +1059,8 @@
 		<name>Verandering inwonertal 2000-2010 - Vierkant 100m</name>
 		<layers>toename_inwoners_2000_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>tinw_10_00</styles>
-		<attributes>TINW10_00</attributes>
+		<styles>cbsvierkanten100m_tinw_10_00</styles>
+		<attributes>tinw_10_00</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -1068,8 +1068,8 @@
 		<name>Verandering inwonertal 2000-2010 - Vierkant 500m</name>
 		<layers>toename_inwoners_2000_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>tinw_10_00</styles>
-		<attributes>TINW10_00</attributes>
+		<styles>cbsvierkanten500m.tinw_10_00</styles>
+		<attributes>tinw_10_00</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -1437,8 +1437,8 @@
 		<name>Percentage autochtonen 2011 - Vierkant 100m</name>
 		<layers>autochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>P_AUTO2011</styles>
-		<attributes>P_AUTO2011</attributes>
+		<styles>cbsvierkanten100m_p_auto2011</styles>
+		<attributes>p_auto2011</attributes>
 		<aliases>Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -1446,8 +1446,8 @@
 		<name>Percentage autochtonen 2011 - Vierkant 500m</name>
 		<layers>autochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>P_AUTO2011</styles>
-		<attributes>P_AUTO2011</attributes>
+		<styles>cbsvierkanten500m.p_auto2011</styles>
+		<attributes>p_auto2011</attributes>
 		<aliases>Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -1572,8 +1572,8 @@
 		<name>Percentage niet-westerse allochtonen 2011 - Vierkant 100m</name>
 		<layers>niet_westerse_allochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>P_NWAL2011</styles>
-		<attributes>P_NWAL2011</attributes>
+		<styles>cbsvierkanten100m_p_nwal2011</styles>
+		<attributes>p_nwal2011</attributes>
 		<aliases>Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -1581,8 +1581,8 @@
 		<name>Percentage niet-westerse allochtonen 2011 - Vierkant 500m</name>
 		<layers>niet_westerse_allochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>P_NWAL2011</styles>
-		<attributes>P_NWAL2011</attributes>
+		<styles>cbsvierkanten500m.p_nwal2011</styles>
+		<attributes>p_nwal2011</attributes>
 		<aliases>Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -1707,8 +1707,8 @@
 		<name>Percentage westerse allochtonen 2011 - Vierkant 100m</name>
 		<layers>westers_allochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>P_WAL2011</styles>
-		<attributes>P_WAL2011</attributes>
+		<styles>cbsvierkanten100m_p_wal2011</styles>
+		<attributes>p_wal2011</attributes>
 		<aliases>Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -1716,8 +1716,8 @@
 		<name>Percentage westerse allochtonen 2011 - Vierkant 500m</name>
 		<layers>westers_allochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>P_WAL2011</styles>
-		<attributes>P_WAL2011</attributes>
+		<styles>cbsvierkanten500m.p_wal2011</styles>
+		<attributes>p_wal2011</attributes>
 		<aliases>Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2193,8 +2193,8 @@
 		<name>Woningvoorraad 2011 - Vierkant 100m</name>
 		<layers>woningen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2011</styles>
-		<attributes>WON2011</attributes>
+		<styles>cbsvierkanten100m_won2011</styles>
+		<attributes>won2011</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2202,8 +2202,8 @@
 		<name>Woningvoorraad 2010 - Vierkant 100m</name>
 		<layers>woningen_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2010</styles>
-		<attributes>WON2010</attributes>
+		<styles>cbsvierkanten100m_won2010</styles>
+		<attributes>won2010</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2211,8 +2211,8 @@
 		<name>Woningvoorraad 2009 - Vierkant 100m</name>
 		<layers>woningen_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2009</styles>
-		<attributes>WON2009</attributes>
+		<styles>cbsvierkanten100m_won2009</styles>
+		<attributes>won2009</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2220,8 +2220,8 @@
 		<name>Woningvoorraad 2008 - Vierkant 100m</name>
 		<layers>woningen_2008</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2008</styles>
-		<attributes>WON2008</attributes>
+		<styles>cbsvierkanten100m_won2008</styles>
+		<attributes>won2008</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2229,8 +2229,8 @@
 		<name>Woningvoorraad 2007 - Vierkant 100m</name>
 		<layers>woningen_2007</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2007</styles>
-		<attributes>WON2007</attributes>
+		<styles>cbsvierkanten100m_won2007</styles>
+		<attributes>won2007</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2238,8 +2238,8 @@
 		<name>Woningvoorraad 2006 - Vierkant 100m</name>
 		<layers>woningen_2006</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2006</styles>
-		<attributes>WON2006</attributes>
+		<styles>cbsvierkanten100m_won2006</styles>
+		<attributes>won2006</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2247,8 +2247,8 @@
 		<name>Woningvoorraad 2005 - Vierkant 100m</name>
 		<layers>woningen_2005</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2005</styles>
-		<attributes>WON2005</attributes>
+		<styles>cbsvierkanten100m_won2005</styles>
+		<attributes>won2005</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2256,8 +2256,8 @@
 		<name>Woningvoorraad 2004 - Vierkant 100m</name>
 		<layers>woningen_2004</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2004</styles>
-		<attributes>WON2004</attributes>
+		<styles>cbsvierkanten100m_won2004</styles>
+		<attributes>won2004</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2265,8 +2265,8 @@
 		<name>Woningvoorraad 2003 - Vierkant 100m</name>
 		<layers>woningen_2003</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2003</styles>
-		<attributes>WON2003</attributes>
+		<styles>cbsvierkanten100m_won2003</styles>
+		<attributes>won2003</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2274,8 +2274,8 @@
 		<name>Woningvoorraad 2002 - Vierkant 100m</name>
 		<layers>woningen_2002</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2002</styles>
-		<attributes>WON2002</attributes>
+		<styles>cbsvierkanten100m_won2002</styles>
+		<attributes>won2002</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2283,8 +2283,8 @@
 		<name>Woningvoorraad 2001 - Vierkant 100m</name>
 		<layers>woningen_2001</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2001</styles>
-		<attributes>WON2001</attributes>
+		<styles>cbsvierkanten100m_won2001</styles>
+		<attributes>won2001</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2292,8 +2292,8 @@
 		<name>Woningvoorraad 2000 - Vierkant 100m</name>
 		<layers>woningen_2000</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WON2000</styles>
-		<attributes>WON2000</attributes>
+		<styles>cbsvierkanten100m_won2000</styles>
+		<attributes>won2000</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2301,8 +2301,8 @@
 		<name>Woningvoorraad 2011 - Vierkant 500m</name>
 		<layers>woningen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2011</styles>
-		<attributes>WON2011</attributes>
+		<styles>cbsvierkanten500m.won2011</styles>
+		<attributes>won2011</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2310,8 +2310,8 @@
 		<name>Woningvoorraad 2010 - Vierkant 500m</name>
 		<layers>woningen_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2010</styles>
-		<attributes>WON2010</attributes>
+		<styles>cbsvierkanten500m.won2010</styles>
+		<attributes>won2010</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2319,8 +2319,8 @@
 		<name>Woningvoorraad 2009 - Vierkant 500m</name>
 		<layers>woningen_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2009</styles>
-		<attributes>WON2009</attributes>
+		<styles>cbsvierkanten500m.won2009</styles>
+		<attributes>won2009</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2328,8 +2328,8 @@
 		<name>Woningvoorraad 2008 - Vierkant 500m</name>
 		<layers>woningen_2008</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2008</styles>
-		<attributes>WON2008</attributes>
+		<styles>cbsvierkanten500m.won2008</styles>
+		<attributes>won2008</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2337,8 +2337,8 @@
 		<name>Woningvoorraad 2007 - Vierkant 500m</name>
 		<layers>woningen_2007</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2007</styles>
-		<attributes>WON2007</attributes>
+		<styles>cbsvierkanten500m.won2007</styles>
+		<attributes>won2007</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2346,8 +2346,8 @@
 		<name>Woningvoorraad 2006 - Vierkant 500m</name>
 		<layers>woningen_2006</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2006</styles>
-		<attributes>WON2006</attributes>
+		<styles>cbsvierkanten500m.won2006</styles>
+		<attributes>won2006</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2355,8 +2355,8 @@
 		<name>Woningvoorraad 2005 - Vierkant 500m</name>
 		<layers>woningen_2005</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2005</styles>
-		<attributes>WON2005</attributes>
+		<styles>cbsvierkanten500m.won2005</styles>
+		<attributes>won2005</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2364,8 +2364,8 @@
 		<name>Woningvoorraad 2004 - Vierkant 500m</name>
 		<layers>woningen_2004</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2004</styles>
-		<attributes>WON2004</attributes>
+		<styles>cbsvierkanten500m.won2004</styles>
+		<attributes>won2004</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2373,8 +2373,8 @@
 		<name>Woningvoorraad 2003 - Vierkant 500m</name>
 		<layers>woningen_2003</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2003</styles>
-		<attributes>WON2003</attributes>
+		<styles>cbsvierkanten500m.won2003</styles>
+		<attributes>won2003</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2382,8 +2382,8 @@
 		<name>Woningvoorraad 2002 - Vierkant 500m</name>
 		<layers>woningen_2002</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2002</styles>
-		<attributes>WON2002</attributes>
+		<styles>cbsvierkanten500m.won2002</styles>
+		<attributes>won2002</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2391,8 +2391,8 @@
 		<name>Woningvoorraad 2001 - Vierkant 500m</name>
 		<layers>woningen_2001</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2001</styles>
-		<attributes>WON2001</attributes>
+		<styles>cbsvierkanten500m.won2001</styles>
+		<attributes>won2001</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2400,8 +2400,8 @@
 		<name>Woningvoorraad 2000 - Vierkant 500m</name>
 		<layers>woningen_2000</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WON2000</styles>
-		<attributes>WON2000</attributes>
+		<styles>cbsvierkanten500m.won2000</styles>
+		<attributes>won2000</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2499,8 +2499,8 @@
 		<name>Gemiddelde WOZ-waarde woning 2011 (Euro) - Vierkant 100m</name>
 		<layers>gem_woz_waarde_woningen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>WOZWON2011</styles>
-		<attributes>WOZWON2011</attributes>
+		<styles>cbsvierkanten100m_wozwon2011</styles>
+		<attributes>wozwon2011</attributes>
 		<aliases>x 1 000 euro</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -2508,8 +2508,8 @@
 		<name>Gemiddelde WOZ-waarde woning 2011 (Euro) - Vierkant 500m</name>
 		<layers>gem_woz_waarde_woningen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>WOZWON2011</styles>
-		<attributes>WOZWON2011</attributes>
+		<styles>cbsvierkanten500m.wozwon2011</styles>
+		<attributes>wozwon2011</attributes>
 		<aliases>x 1 000 euro</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3480,8 +3480,8 @@
 		<name>Omgevingsadressendichtheid 2011 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2011</styles>
-		<attributes>OAD2011</attributes>
+		<styles>cbsvierkanten500m.oad2011</styles>
+		<attributes>oad2011</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3489,8 +3489,8 @@
 		<name>Omgevingsadressendichtheid 2010 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2010</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2010</styles>
-		<attributes>OAD2010</attributes>
+		<styles>cbsvierkanten500m.oad2010</styles>
+		<attributes>oad2010</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3498,8 +3498,8 @@
 		<name>Omgevingsadressendichtheid 2009 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2009</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2009</styles>
-		<attributes>OAD2009</attributes>
+		<styles>cbsvierkanten500m.oad2009</styles>
+		<attributes>oad2009</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3507,8 +3507,8 @@
 		<name>Omgevingsadressendichtheid 2008 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2008</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2008</styles>
-		<attributes>OAD2008</attributes>
+		<styles>cbsvierkanten500m.oad2008</styles>
+		<attributes>oad2008</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3516,8 +3516,8 @@
 		<name>Omgevingsadressendichtheid 2007 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2007</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2007</styles>
-		<attributes>OAD2007</attributes>
+		<styles>cbsvierkanten500m.oad2007</styles>
+		<attributes>oad2007</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3525,8 +3525,8 @@
 		<name>Omgevingsadressendichtheid 2006 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2006</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2006</styles>
-		<attributes>OAD2006</attributes>
+		<styles>cbsvierkanten500m.oad2006</styles>
+		<attributes>oad2006</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3534,8 +3534,8 @@
 		<name>Omgevingsadressendichtheid 2005 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2005</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2005</styles>
-		<attributes>OAD2005</attributes>
+		<styles>cbsvierkanten500m.oad2005</styles>
+		<attributes>oad2005</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3543,8 +3543,8 @@
 		<name>Omgevingsadressendichtheid 2004 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2004</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2004</styles>
-		<attributes>OAD2004</attributes>
+		<styles>cbsvierkanten500m.oad2004</styles>
+		<attributes>oad2004</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3552,8 +3552,8 @@
 		<name>Omgevingsadressendichtheid 2003 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2003</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2003</styles>
-		<attributes>OAD2003</attributes>
+		<styles>cbsvierkanten500m.oad2003</styles>
+		<attributes>oad2003</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3561,8 +3561,8 @@
 		<name>Omgevingsadressendichtheid 2002 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2002</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2002</styles>
-		<attributes>OAD2002</attributes>
+		<styles>cbsvierkanten500m.oad2002</styles>
+		<attributes>oad2002</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3570,8 +3570,8 @@
 		<name>Omgevingsadressendichtheid 2001 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2001</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2001</styles>
-		<attributes>OAD2001</attributes>
+		<styles>cbsvierkanten500m.oad2001</styles>
+		<attributes>oad2001</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3579,8 +3579,8 @@
 		<name>Omgevingsadressendichtheid 2000 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2000</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>oad2000</styles>
-		<attributes>OAD2000</attributes>
+		<styles>cbsvierkanten500m.oad2000</styles>
+		<attributes>oad2000</attributes>
 		<aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3597,8 +3597,8 @@
 		<name>Aantal personen 0 tot 20 jaar - Vierkant 100m</name>
 		<layers>inwoners_2011_tot_20_jaar</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>I2011_019</styles>
-		<attributes>I2011_019</attributes>
+		<styles>cbsvierkanten100m_i2011_019</styles>
+		<attributes>i2011_019</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3606,8 +3606,8 @@
 		<name>Aantal personen 0 tot 20 jaar - Vierkant 500m</name>
 		<layers>inwoners_2011_tot_20_jaar</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>I2011_019</styles>
-		<attributes>I2011_019</attributes>
+		<styles>cbsvierkanten500m.i2011_019</styles>
+		<attributes>i2011_019</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3624,8 +3624,8 @@
 		<name>Aantal personen 20 tot 45 jaar - Vierkant 100m</name>
 		<layers>inwoners_2011_20_tot_45_jaar</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>I2011_2044</styles>
-		<attributes>I2011_2044</attributes>
+		<styles>cbsvierkanten100m_i2011_2044</styles>
+		<attributes>i2011_2044</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
@@ -3633,8 +3633,8 @@
 		<name>Aantal personen 20 tot 45 jaar - Vierkant 500m</name>
 		<layers>inwoners_2011_20_tot_45_jaar</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>I2011_2044</styles>
-		<attributes>I2011_2044</attributes>
+		<styles>cbsvierkanten500m.i2011_2044</styles>
+		<attributes>i2011_2044</attributes>
 		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>

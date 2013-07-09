@@ -63,17 +63,11 @@ a:hover {
 	color: #0064B3;
 }
 
-h1,h2,h3 {
-	font-family: 'Soho W01 Medium';
-	font-size: 24px;
-}
-
 .page h1 {
-	font-family:'Akko W01 Regular';	
+	/*font-family:'Akko W01 Regular';*/
 	color: #00A1CD;
 	font-size: 24px;
 	font-weight: normal;	
-	font-family:'Soho W01 Medium';	
 	margin-bottom: 1em;	
 }
 
@@ -91,16 +85,15 @@ h1,h2,h3 {
 }
 
 .page h2 {
-	font-family:'Akko W01 Regular';	
+	/*font-family:'Akko W01 Regular';*/
 	color: #00A1CD;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: normal;	
-	font-family:'Soho W01 Medium';	
 	margin-bottom: 0.5em;
 }
 
 .page h3, #pagSubTitle {
-	font-family: 'Akko W01 Regular';
+	/*font-family: 'Akko W01 Regular';*/
     font-size: 14px;
 	color: #555;
 	font-weight: 700;
@@ -168,7 +161,7 @@ h1,h2,h3 {
     display: block;
     float: left;
     color: #666666;
-	font-family: 'Akko W01 Regular';
+	/*font-family: 'Akko W01 Regular';*/
     font-size: 13px;
 	text-decoration:none;
 }
@@ -195,7 +188,7 @@ h1,h2,h3 {
 .page .header .mainMenu ul li a
 {
 	color:#271d6c;
-	font-family: 'Akko W01 Regular';
+	/*font-family: 'Akko W01 Regular';*/
 	font-size: 16px;	
 	text-decoration: none;	
 }
@@ -252,7 +245,7 @@ h1,h2,h3 {
 #footerWrapper .introduction {
 	background-color: rgba(255, 255, 255, 0.4);
 	border-radius: 0 0 3px 0;
-	font-family: 'Akko W01 Regular';
+	/*font-family: 'Akko W01 Regular';*/
     font-size: 13px;
 	color: #27206A;
 	display: block;
@@ -489,7 +482,7 @@ html.js #coreContainer p {
 	line-height: 32px;
 	height: 32px;
 	color: #271d6c;
-	font-family: 'Soho W01 Medium';
+	/*font-family: 'Soho W01 Medium';*/
 	font-size: 16px;
 	text-decoration: none;
 	min-width: 110px;

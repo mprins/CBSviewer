@@ -23,9 +23,6 @@
 		<h1>
 			<fmt:message key="KEY_PAG_TITEL" />		
 		</h1>	
-		<h2>
-			<fmt:message key="KEY_PAG_SUBTITLE" />
-		</h2>
 
 		<h3><fmt:message key="KEY_CONTENT_H3_1" /></h3>
 		<p><fmt:message key="KEY_CONTENT_P1" /></p>

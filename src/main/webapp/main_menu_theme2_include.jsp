@@ -262,7 +262,7 @@
 				</ul>
 			</li>	
 
-			<li class="menuTitle"><em>Voorzieningen</em><br/>Kortste afstand</li>
+			<li class="menuTitle">Kortste afstand</li>
 			<li><a href="#">Restaurant<span><fmt:message key="KEY_TOOLTIP70" /></span></a>
 				<ul class="submenu">
 					<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_gemiddelde_afstand_tot_restaurant')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_gemiddelde_afstand_tot_restaurant')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_gemiddelde_afstand_tot_restaurant')}">2009</a></li>
