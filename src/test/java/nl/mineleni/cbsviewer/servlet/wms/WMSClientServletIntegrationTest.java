@@ -107,6 +107,9 @@ public class WMSClientServletIntegrationTest {
 				this.oneOf(WMSClientServletIntegrationTest.this.servletConfig)
 						.getInitParameter("lufoWMSlayers");
 				this.will(returnValue(""));
+				this.oneOf(WMSClientServletIntegrationTest.this.servletConfig)
+						.getInitParameter("featureInfoType");
+				this.will(returnValue(""));
 			}
 		});
 		// init servlet
