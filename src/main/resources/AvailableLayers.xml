@@ -6592,9 +6592,9 @@
 	<Layerdescriptor>
 		<id>bodemgebruik2008</id>
 		<name>Bestand bodemgebruik 2008</name>
-		<layers>bbg2008_hoofdgroep,bbg2008</layers>
+		<layers>bbg2008_hoofdgroep</layers>
 		<url>http://geodata.nationaalgeoregister.nl/bestandbodemgebruik2008/wms</url>
-		<styles>bestandbodemgebruik2008_bbg2008hoofdgroep,bestandbodemgebruik2008_bbg2008</styles>
+		<styles>bestandbodemgebruik2008_bbg2008hoofdgroep</styles>
 		<attributes>Hoofdgroep</attributes>
 		<aliases>Hoofdgroep</aliases>
 	</Layerdescriptor>

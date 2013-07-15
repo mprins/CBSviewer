@@ -453,7 +453,8 @@ html.js #coreContainer p {
 	position: absolute;
 	left: 4px;
 	top: 220px;
-	width: 200px;
+	width:100%;
+	max-width:250px;
 	margin: 10px auto 30px auto;
 }
 

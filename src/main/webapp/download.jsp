@@ -36,26 +36,31 @@
 			<td><fmt:message key="KEY_TABLE_COLUMNHEADER1" /></td>
 			<td><fmt:message key="KEY_TABLE_COLUMNHEADER2" /></td>
 			<td><fmt:message key="KEY_TABLE_COLUMNHEADER3" /></td>
+		  </tr>		  	  
+		  <tr> 
+			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2013-wijk-en-buurtkaart-2012-versie-1.htm">Gemeente, wijk- en buurtkaart 2012</a></td>
+			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
+			<td>57 MB</td>
+		  </tr>		  
+		  <tr> 
+			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2013-wijk-en-buurtkaart-2011-versie-2.htm">Gemeente, wijk- en buurtkaart 2011</a></td>
+			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
+			<td>57 MB</td>
 		  </tr>
 		  <tr> 
-			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2012-wijk-buurtkaart-2011-1-el.htm">Gemeente, wijk- en buurtkaart 2011</a></td>
+			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2013-wijk-en-buurtkaart-2010-versie-3.htm">Gemeente, wijk- en buurtkaart 2010</a></td>
 			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
-			<td>11.4 MB</td>
-		  </tr>
-		  <tr> 
-			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2012-wijk-en-buurtkaart-2010-2-el.htm">Gemeente, wijk- en buurtkaart 2010</a></td>
-			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
-			<td>11.8 MB</td>
+			<td>32 MB</td>
 		  </tr>
 		  <tr> 
 			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2012-wijk-en-buurtkaart-2009-3-el.htm">Gemeente, wijk- en buurtkaart 2009</a></td>
 			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
-			<td>11.2 MB</td>
+			<td>11 MB</td>
 		  </tr>
 		  <tr> 
 			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2012-bevolkingskernen-2008-el.htm">Bevolkingskernen 2008</a></td>
 			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
-			<td>8.1 MB</td>
+			<td>8 MB</td>
 		  </tr>
 		  <tr> 
 			<td><a href="http://download.cbs.nl/regionale-kaarten/2012-cbs-vierkant-100m.zip">Vierkanten 100 meter bij 100 meter</a></td>
@@ -65,7 +70,7 @@
 		  <tr> 
 			<td><a href="http://download.cbs.nl/regionale-kaarten/2012-cbs-vierkant-500m.zip">Vierkanten 500 meter bij 500 meter</a></td>
 			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
-			<td>8.2 MB</td>
+			<td>8 MB</td>
 		  </tr>
 		</table>
 	</div>

@@ -85,7 +85,7 @@
 				</a>			
 			</div>
 			<div class="shortMenu">
-				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm"><fmt:message key="KEY_FOOTER_CONTACT" /></a> <a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a> <a href="http://www.cbs.nl/nl-NL/menu/home/default.htm">Cbs.nl</a>
+				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm"><fmt:message key="KEY_FOOTER_CONTACT" /></a> <a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a> <a href="http://www.cbs.nl/nl-NL/menu/home/default.htm">cbs.nl</a>
 			</div>
 			<div class="mainMenu">
 				<ul>

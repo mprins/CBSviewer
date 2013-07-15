@@ -49,7 +49,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 .closeMega {
 	position: absolute;
 	right: -170px;
-	bottom: 20px;
+	top: 0px;
 	z-index: 1005;
 	height: 22px;
 	line-height:22px;
@@ -226,7 +226,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 .menuAccordion li>.accordionheader {
 	position: absolute;
 	left: -190px;
-	bottom: 20px;
+	bottom: 60px;
 	height: 22px;
 	line-height: 22px;
 	width: 180px;
@@ -288,7 +288,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 .navleft li:hover > a, .navright li:hover > a,
 .navleft li:focus > a, .navright li:focus > a,
 .submenuopened {
-	background-color: #eeeeee;
+	background-color: #cccccc;
 }
 .navleft ul li a, .navright ul li a {
 	display: inline;
@@ -297,6 +297,7 @@ html.js .siteNavigation .sectionTheme:hover .navDropDown {
 .navleft ul li:hover a, .navleft li:hover li a, .navright ul li:hover a, .navright li:hover li a,
 .navleft ul li:focus a, .navleft li:focus li a, .navright ul li:focus a, .navright li:focus li a {
 	border: none;
+	background-color:white;
 }
 .navleft ul a:hover, .navright ul a:hover, 
 .navleft ul a:focus, .navright ul a:focus {

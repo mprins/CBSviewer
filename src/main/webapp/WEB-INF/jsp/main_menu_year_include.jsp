@@ -13,7 +13,7 @@
 	<div class="contentasset">
 		<div class="megaMenu megaThreeColumns">
 			<div class="underConstruction">
-				Gereed in fase 2
+				In ontwikkeling, verwachte oplevering december 2013
 			</div>
 			<!-- gebruik dezelfde markup als je wel of geen accordion hebt -->
 			<ul>

@@ -127,7 +127,7 @@ jQuery(document).on('click', 'ul.navleft li, ul.navright li', function (event) {
 /**
  * Show infobox on hover
  */
-jQuery('.dropDownMenu a').hover(function(event) {
+ jQuery(document).on('mouseover','.dropDownMenu a', function(event) {
 	event.preventDefault();
 	jQuery(this).children('span').css("display", "none");	
 	jQuery('#infobox').html(jQuery(this).find('span').text());
@@ -136,7 +136,7 @@ jQuery('.dropDownMenu a').hover(function(event) {
 /**
  * Hide infobox on mouseout
  */
- jQuery('.dropDownMenu a').mouseout(function() {
+ jQuery(document).on('mouseout','.dropDownMenu a', function(event) {
 	jQuery('#infobox').html('');
 });
 

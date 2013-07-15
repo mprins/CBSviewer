@@ -21,14 +21,14 @@
 						<a href="#thememenu"><fmt:message key="KEY_FILTER_THEME" /><span><fmt:message key="KEY_FILTER_THEME_TOOLTIP" /></span></a>
 						<jsp:include page="main_menu_theme_include.jsp"/>
 					</li>
-					<li id="yearmenu">
+					<!--li id="yearmenu">
 						<a href="#yearmenu"><fmt:message key="KEY_FILTER_YEAR" /><span><fmt:message key="KEY_FILTER_YEAR_TOOLTIP" /></span></a>
 						<jsp:include page="main_menu_year_include.jsp"/>
 					</li>
 					<li id="layermenu">
 						<a href="#layermenu"><fmt:message key="KEY_FILTER_LAYER" /><span><fmt:message key="KEY_FILTER_LAYER_TOOLTIP" /></span></a>
 						<jsp:include page="main_menu_layer_include.jsp"/>
-					</li>
+					</li-->
 					<li id="infobox"></li>
 				</ol>
 				<a href="#closemega" class="closeMega">Sluit</a>
