@@ -3365,7 +3365,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2012/wms</url>
 		<styles>wijkenbuurten_thema_gemeenten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid\</attributes>
-		<aliases>Gemeente, Omgevingsadressendichtheid</aliases>
+		<aliases>Gemeente, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_omgevingsadressendichtheid</id>
@@ -3374,7 +3374,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten_thema_gemeenten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
-		<aliases>Gemeente, Omgevingsadressendichtheid</aliases>
+		<aliases>Gemeente, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_omgevingsadressendichtheid</id>
@@ -3383,7 +3383,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten_thema_gemeenten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
-		<aliases>Gemeente, Omgevingsadressendichtheid</aliases>
+		<aliases>Gemeente, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2009_omgevingsadressendichtheid</id>
@@ -3392,7 +3392,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten_thema_gemeenten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
-		<aliases>Gemeente, Omgevingsadressendichtheid</aliases>
+		<aliases>Gemeente, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2012_omgevingsadressendichtheid</id>
@@ -3401,7 +3401,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2012/wms</url>
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
-		<aliases>Gemeente, Omgevingsadressendichtheid</aliases>
+		<aliases>Gemeente, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_omgevingsadressendichtheid</id>
@@ -3410,7 +3410,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
-		<aliases>Gemeente, Omgevingsadressendichtheid</aliases>
+		<aliases>Gemeente, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_omgevingsadressendichtheid</id>
@@ -3419,7 +3419,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
-		<aliases>Gemeente, Omgevingsadressendichtheid</aliases>
+		<aliases>Gemeente, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_omgevingsadressendichtheid</id>
@@ -3428,7 +3428,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
-		<aliases>Gemeente, Omgevingsadressendichtheid</aliases>
+		<aliases>Gemeente, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_omgevingsadressendichtheid</id>
@@ -3437,7 +3437,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2012/wms</url>
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>buurtnaam, omgevingsadressendichtheid</attributes>
-		<aliases>Buurt, Omgevingsadressendichtheid</aliases>
+		<aliases>Buurt, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_omgevingsadressendichtheid</id>
@@ -3446,7 +3446,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms</url>
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>buurtnaam, omgevingsadressendichtheid</attributes>
-		<aliases>Buurt, Omgevingsadressendichtheid</aliases>
+		<aliases>Buurt, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_omgevingsadressendichtheid</id>
@@ -3455,7 +3455,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2010/wms</url>
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>buurtnaam, omgevingsadressendichtheid</attributes>
-		<aliases>Buurt, Omgevingsadressendichtheid</aliases>
+		<aliases>Buurt, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_omgevingsadressendichtheid</id>
@@ -3464,7 +3464,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2009/wms</url>
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>buurtnaam, omgevingsadressendichtheid</attributes>
-		<aliases>Buurt, Omgevingsadressendichtheid</aliases>
+		<aliases>Buurt, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_omgevingsadressendichtheid_adres_km2</id>
@@ -3473,7 +3473,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/bevolkingskernen2008/wms</url>
 		<styles>bevolkingskern_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>kern_naam, oad</attributes>
-		<aliases>Kern naam, Omgevingsadressendichtheid</aliases>
+		<aliases>Kern naam, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten500m_OAD2011</id>
