@@ -24,9 +24,9 @@
 			<fmt:message key="KEY_PAG_TITEL" />
 		</h1>
 
-		<h2>
+		<p>
 			<fmt:message key="KEY_HEADER_SUBTITLE" />
-		</h2>
+		</p>
 		
 		<table class="download">
 		  <tr>
