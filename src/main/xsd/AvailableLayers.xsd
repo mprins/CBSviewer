@@ -99,6 +99,15 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="zoom" type="xsd:int" maxOccurs="1"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						De (optionele) zoom waarnaar de kaart moet zoomen 
+						als een (WMS) laag wordt geladen (bij te drukke kaarten).
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>			
 			<xsd:element name="link" type="xsd:anyURI" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>

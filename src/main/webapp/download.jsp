@@ -63,14 +63,14 @@
 			<td>8 MB</td>
 		  </tr>
 		  <tr> 
-			<td><a href="http://download.cbs.nl/regionale-kaarten/2012-cbs-vierkant-100m.zip">Vierkanten 100 meter bij 100 meter</a></td>
+			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2013-kaart-vierkanten-el">Vierkanten 100 meter bij 100 meter</a></td>
 			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
-			<td>106 MB</td>
+			<td>114 MB</td>
 		  </tr>
 		  <tr> 
-			<td><a href="http://download.cbs.nl/regionale-kaarten/2012-cbs-vierkant-500m.zip">Vierkanten 500 meter bij 500 meter</a></td>
+			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2013-kaart-vierkanten-500-bij-500-el">Vierkanten 500 meter bij 500 meter</a></td>
 			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
-			<td>8 MB</td>
+			<td>9 MB</td>
 		  </tr>
 		</table>
 	</div>

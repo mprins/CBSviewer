@@ -2,21 +2,27 @@
 
 @import 'colours_and_vars';
 
+
+
 /* niet af te drukken elementen en klassen. In essentie alle eyecandy, navigatie, hyperlinks etc. */
 #toggleSize,
 #toggleBaseMap,
 .olControlZoom,
+.ZoomControl,
 #zoekContainer,
-#coreexitlink,
+#naarCoreLink,
 #kaartnavi,
 .dropDownMenu,
 .utilBlock,
-#footer,
 #cbslogo,
 #downloadLink,
-#transparantieslider,
+#transparantie,
 .OverviewMap,
-.debug {
+.mainMenu,
+.pagetitle,
+#activeerKeys,
+.debug,
+#footerWrapper {
 	display: none;
 }
 

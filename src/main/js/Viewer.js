@@ -347,7 +347,14 @@ var Viewer = function() {
 				singleTile : false,
 				opacity : _opacity
 			});
+			
+			if (wmsConfig.hasOwnProperty('zoom')) {
+				if (_map.getZoom() < parseInt(wmsConfig.zoom))
+					_map.zoomTo(wmsConfig.zoom);
+			}
+			
 			_map.addLayer(layer);
+			
 			var fInfoControl = _map.getControlsByClass('WMSGetFeatureInfo');
 			fInfoControl[0].url = wmsConfig.url;
 		},

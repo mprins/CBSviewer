@@ -120,13 +120,14 @@
 				</ul>
 			</div>
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
-			<div class="pagetitle">
-				<h1 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h1>
-			</div>
-			<div class="clearer"></div>			
 		</div>
 
 		<div id="inhoud">
+			
+			<div class="pagetitle">
+				<h1 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h1>
+			</div>	
+			
 			<div id="coreContainer" class="kaartContainer">
 				<!-- hier komt de statische kaart -->
 				<c:if test="${not empty kaart}">
