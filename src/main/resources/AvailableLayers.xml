@@ -995,7 +995,7 @@
 		<name>Aantal personen 65 jaar en ouder - Vierkant 100m</name>
 		<layers>inwoners_2011_65_plus_jaar</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_I2011_65pl</styles>
+		<styles>cbsvierkanten100m_i2011_65PL</styles>
 		<attributes>i2011_65pl</attributes>
 		<aliases>Aantal</aliases>
 		<zoom>9</zoom>

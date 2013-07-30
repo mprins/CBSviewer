@@ -513,6 +513,7 @@ html.js #coreContainer p {
 }
 
 .settingsContent {
+	font-size:71.2%;
 	overflow-x: auto;
 	overflow-y: auto;
 }
