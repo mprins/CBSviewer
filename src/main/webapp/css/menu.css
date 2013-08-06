@@ -381,7 +381,7 @@ html.js .navleft > li, html.js .navright > li {
 	margin: 0px;
 	padding: 5px;
 	position: fixed;
-	top: 375px;
+	top: 305px;
 	width: 183px;
 	z-index: 100;
 }
