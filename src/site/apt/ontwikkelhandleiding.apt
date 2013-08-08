@@ -38,7 +38,7 @@ Ontwikkel handleiding
 
   Het project gebruikt Maven 3 als build tool, als IDE raden we Eclipse 4.2 aan omdat deze de 
   beste Maven integratie heeft.
-  Het project is opgezet als een {{{http://en.wikipedia.org/wiki/WAR_file_format_(Sun)}war}}} artifact. 
+  Het project is opgezet als een {{{http://en.wikipedia.org/wiki/WAR_file_format_(Sun)}war}} artifact. 
   Voor het maken van een .war of release is alleen een juist geconfigureerde Maven installatie nodig.
   
   Om de ontwikkelomgeving op te zetten is het nodig om een build van OpenLayers te maken, dit gaat met 
@@ -63,6 +63,8 @@ mvn -Popenlayers,developer
 ** {code conventies en formatting}
 
   Voor formatting van de Javascript code wordt het Eclipse profiel gebruikt zoals dat te vinden is in de <<<ide/>>> directory.
+  Voor het generaren van de api documentatie wordt de jsdoc3 tool gebruikt, deze kent 
+  {{{http://usejsdoc.org/index.html#JSDoc3_Tag_Dictionary}een groot aantal tags}}.
   
   Voor formatting van de Java code wordt het Eclipse profiel gebruikt zoals dat te vinden is in de <<<ide/>>> directory.
    

@@ -891,10 +891,23 @@
 								<reportSet>
 									<reports>
 										<report>jslint</report>
-										<report>jsdoc</report>
 									</reports>
 								</reportSet>
 							</reportSets>
+						</plugin>
+						<plugin>
+							<groupId>com.github.phasebash</groupId>
+							<artifactId>jsdoc3-maven-plugin</artifactId>
+							<version>1.0.5</version>
+							<configuration>
+								<recursive>false</recursive>
+								<directoryRoots>
+									<directoryRoot>${basedir}/src/main/js</directoryRoot>
+								</directoryRoots>
+								<sourceFiles>
+									<sourceFile>${basedir}/src/main/webapp/js/config.js</sourceFile>
+								</sourceFiles>
+							</configuration>
 						</plugin>
 					</reportPlugins>
 				</configuration>

@@ -119,7 +119,7 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 	},
 
 	/**
-	 * 
+	 * create the point.
 	 */
 	createFeature : function() {
 		var center = this.map.getCenter();
@@ -133,7 +133,7 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 	},
 
 	/**
-	 * 
+	 * destroy the point.
 	 */
 	destroyFeature : function() {
 		this.layer.destroyFeatures([ this.point ]);
@@ -141,7 +141,7 @@ OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
 	},
 
 	/**
-	 * 
+	 * draw the point.
 	 */
 	drawFeature : function() {
 		this.layer.drawFeature(this.point);

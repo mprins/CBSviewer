@@ -313,7 +313,6 @@ var Viewer = function() {
 		 * 
 		 * @param opacity
 		 *            float waarde tussen 0 1n 1
-		 * @returns
 		 */
 		setOpacity : function(opacity) {
 			_setOpacity(opacity);
@@ -444,8 +443,6 @@ var Viewer = function() {
 
 		/**
 		 * Stel de kaart in voor afdrukken.
-		 * 
-		 * @returns
 		 */
 		printPrepare : function() {
 			if (_fullSize) {
