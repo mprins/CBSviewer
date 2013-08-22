@@ -469,7 +469,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.3</version>
+				<version>2.4</version>
 				<configuration>
 					<!-- niet kopieren -->
 					<warSourceExcludes>**/css/*.css,**/js/*.js,**/lib/theme/default/style.css,**/jquery.fancybox.css, **/jquery.layout.js</warSourceExcludes>
