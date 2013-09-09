@@ -74,7 +74,7 @@ div.olLayerDiv {
 .olTileImage {
 	@include translateZ(0);
 	@include backface-visibility(hidden);
-	@include perspective(1000);
+	@include perspective(1000px);
 }
 
 /* when replacing tiles, do not show tile and backbuffer at the same time */
