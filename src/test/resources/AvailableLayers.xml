@@ -10,7 +10,7 @@
 		<styles>cbsvierkanten500m.oad2000</styles>
 		<attributes>oad2000</attributes>
 	</Layerdescriptor>
-	<!-- START SNIPPET: layermodel_apt_0 -->
+	<!-- END SNIPPET: layermodel_apt_0 -->
 	<!-- START SNIPPET: layermodel_apt_1 -->
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</id>
@@ -23,5 +23,5 @@
 		<link>http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2013-wijk-en-buurtkaart-2011-versie-2.htm</link>
 		<metadata>http://nationaalgeoregister.nl/geonetwork/srv/nl/main.home?searchuuid=37bb3886-38d9-430b-9eee-b1c1745b8510</metadata>
 	</Layerdescriptor>
-	<!-- START SNIPPET: layermodel_apt_1 -->
+	<!-- END SNIPPET: layermodel_apt_1 -->
 </Layers>

@@ -15,13 +15,13 @@ Technisch Ontwerp
 * Open standaard interfaces
 
   De applicatie gebruikt drie OGC standaard interfaces om te communiceren met data services.
-  Deze interfaces zijn WMS (Web Map Service, versie 1.3.0 en 1.1.1) en WMTS (Web Map Tiled Service, versie 1.0)
-  voor de kaart, legenda en attribuut informatie. Voor de adreszoek functie wordt gebruik gemaakt van
-  OpenLS (Open Loacation Service, versie 1.0, Location Utility Service profiel)
-
+  Deze interfaces zijn WMS (Web Map Service, versies 1.3.0 en 1.1.1) en WMTS (Web Map Tiled Service, versie 1.0)
+  voor de kaart, legenda en attribuut informatie en, voor de adreszoek functie, OpenLS (Open Location Service, 
+  versie 1.0, Location Utility Service profiel). In het {{{./architectuur.html}architectuur overzicht}} is dit 
+  uitgebreid beschreven.
 
 * Layer object
 
-  Binnen de applicatie is onderscheid tussen een achtergrond en thematische kaart. Voor de voorgrond kaart is een 
-  speciaal model gedefineerd, dit is beschreven in {{{./layermodel.html}het layer model}}.
-  
+  Binnen de applicatie is onderscheid gemaakt tussen een achtergrond en thematische kaart. 
+  Voor de voorgrond kaart is een speciaal model gedefineerd, dit is beschreven in 
+  {{{./layermodel.html}het layer model}}.
