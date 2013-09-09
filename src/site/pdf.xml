@@ -22,6 +22,7 @@
 		<item name="Release notes" ref="/releasenotes.apt.vm" />
 		<item name="Technisch ontwerp" ref="/technischontwerp.apt">
 			<item name="Layer model" ref="/layermodel.apt" />
+			<item name="Architectuur" ref="/architectuur.md" />
 		</item>
 		<item name="Ontwikkel handleiding" ref="/ontwikkelhandleiding.apt" />
 		<item name="Installatie handleiding" ref="/installatiehandleiding.apt" />

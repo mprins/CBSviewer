@@ -642,6 +642,16 @@
 					<skipDeploy>true</skipDeploy>
 					<reportPlugins>
 						<plugin>
+							<groupId>org.owasp</groupId>
+							<artifactId>dependency-check-maven</artifactId>
+							<version>1.0.2</version>
+							<configuration>
+								<externalReport>false</externalReport>
+								<proxyUrl>${http.proxyHost}</proxyUrl>
+								<proxyPort>${http.proxyPort}</proxyPort>
+							</configuration>
+						</plugin>
+						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-jxr-plugin</artifactId>
 							<version>2.3</version>

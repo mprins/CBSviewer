@@ -34,7 +34,10 @@
 		<menu name="Informatie">
 			<item name="Home" href="/index.html" />
 			<item name="Release notes" href="/releasenotes.html" />
-			<item name="Technisch ontwerp" href="/technischontwerp.html" />
+			<item name="Technisch ontwerp" href="/technischontwerp.html">
+				<item name="Layer model" href="/layermodel.html" />
+				<item name="Architectuur" href="/architectuur.html" />
+			</item>
 			<item name="Ontwikkel handleiding" href="/ontwikkelhandleiding.html" />
 			<item name="Wiki" href="https://github.com/MinELenI/CBSviewer/wiki" />
 			<item name="PDF documentatie" href="/maven-pdf-plugin.pdf" />
@@ -65,7 +68,7 @@
 			<item name="Broncode" href="${project.scm.url}" />
 		</menu>
 		<menu ref="reports" />
-		<menu name="Manual Tests">
+		<menu name="Andere Tests en rapporten">
 			<item name="Saga testdekking" href="/total-report.html" />
 		</menu>
 		<menu name="About Maven 3.0">
