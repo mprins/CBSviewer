@@ -133,7 +133,7 @@
 				<c:if test="${not empty kaart}">
 					<!-- StringConstants.MAP_CACHE_DIR -->
 					<img id="coreMapImage" src="${dir}/${kaart.name}"
-						alt="kaart voor thema: ${mapname}" width="512px" height="512px"
+						alt="kaart voor thema: ${mapname}" width="512" height="512"
 						longdesc="#featureinfo" />
 					<!-- navigatie knoppen zonder javascript -->
 					<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
