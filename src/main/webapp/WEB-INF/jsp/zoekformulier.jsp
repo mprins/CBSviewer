@@ -12,6 +12,7 @@
 	<div id="zoekContainer">
 
 		<form method="get" action="adres" id="zoekFormulier" class="zoekinput">
+		<!-- TODO / WCAG2 verwijderen fieldset of een legend aan de fieldset toevoegen -->
 			<fieldset>
 				<label for="adres"><fmt:message key="KEY_ADRESZOEKEN_TITEL" /></label>
 				<input name="adres" id="adres" accesskey="8"
