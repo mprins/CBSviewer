@@ -15,7 +15,7 @@
 		<meta http-equiv="Content-Language" content="nl-NL" />
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
+
 		<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
 		<meta name="DCTERMS.type" scheme="OVERHEID.Informatietype" content="webpagina" />
 		<meta name="DCTERMS.language" scheme="DCTERMS.RFC4646" content="nl-NL" />
@@ -28,8 +28,9 @@
 		<meta name="DCTERMS.modified" content="2012-09-10" />
 		<meta name="DCTERMS.title" content="Documenten en publicaties - CBS.nl" />
 		<meta name="OVERHEID.accessibility" scheme="OVERHEID.toegankelijkheid" content="WCAG 2.0 Conformance Level A" />
-		<meta name="DCTERMS.description" content="CBS Kaart applicatie" />
-		
+		<meta name="DCTERMS.description" content="Kaart applicatie" />
+		<meta name="description" content="Kaart applicatie" />
+
 		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
 		<meta name="DC.format"    scheme="DCTERMS.IMT"     content="text/html" />
 		<meta name="DC.language"  scheme="DCTERMS.RFC3066" content="nl-NL" />
