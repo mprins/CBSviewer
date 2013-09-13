@@ -236,8 +236,10 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 									.toString(get.getEntity()).trim();
 						}
 						response.setCharacterEncoding("UTF-8");
-						response.setContentLength(responseBody.length());
-						response.setStatus(SC_OK);
+						// in het geval van multi byte chars, bijv 'Skarsterlân'
+						// is de lengte incorrect, laat voorlopig maar aan de
+						// container over..
+						// response.setContentLength(responseBody.length());
 						final PrintWriter out = response.getWriter();
 						out.print(responseBody);
 						response.flushBuffer();
