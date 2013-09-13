@@ -450,15 +450,18 @@ html.js #coreContainer p {
 	background-color: #ddd;
 }
 
-.settingsPanel {
+/* voor CORE client */
+.settingsPanel {}
+
+/* voor RIA client */
+.js .settingsPanel {
 	z-index: 1003;
 	position: absolute;
 	left: 4px;
 	top: 220px;
 	width:100%;
 	max-width:250px;
-	margin: 10px auto 30px auto;
-}
+	margin: 10px auto 30px auto;}
 
 .menuAccordion {
 	z-index: 1003;

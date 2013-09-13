@@ -44,6 +44,7 @@ body:hover .visually-hidden button {
 .hasTooltip {
 	position:relative;
 	z-index: $z-zoekContainer + 100;
+	
 	& span {
 		/* afgeleid van .visually-hidden hierboven */
 		position: absolute;
@@ -55,6 +56,7 @@ body:hover .visually-hidden button {
 		width: 1px;
 		overflow: hidden;
 	}
+	
 	&:hover span {
 	/* &:focus span { focus is a not working properly in some browsers */
 		clip: auto;
