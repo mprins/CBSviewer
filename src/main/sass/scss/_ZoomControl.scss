@@ -1,6 +1,6 @@
 /** css voor ZoomControl.js */
 
-div.ZoomControl {
+.ZoomControl {
 	position: absolute;
 	top: 35px;
 	right: 8px;
@@ -9,7 +9,7 @@ div.ZoomControl {
 	padding: 2px;
 }
 
-div.ZoomControl a {
+.ZoomControl button {
 	display: block;
 	margin: 1px;
 	padding: 0;
@@ -23,15 +23,17 @@ div.ZoomControl a {
 	width: 22px;
 	line-height: 19px;
 	background: $BlueColour;
-	&:hover, &:focus {
+
+	&:hover, 
+	&:focus {
 		background: $BlueColourTransp;
 	}
 }
 
-a.olControlZoomIn {
+.olControlZoomIn {
 	@include border-top-radius(4px);
 }
 
-a.olControlZoomOut {
+.olControlZoomOut {
 	@include border-bottom-radius(4px);
 }

@@ -178,7 +178,10 @@
 							</c:otherwise>
 						</c:choose>
 					</c:forEach>
-				</select> <input type="submit"></input>
+				</select>
+				<button type="submit">
+					<fmt:message key="KEY_NAVIGATIE_FGMAP_TRANSP_SUBMIT" />
+				</button>
 			</fieldset>
 			<p>
 				<input type="hidden" name="coreonly" value="true" />

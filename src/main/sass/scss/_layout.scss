@@ -3,6 +3,7 @@ a.accesskey {
 	top: -500px;
 	text-align: center;
 	display: block;
+	
 	&:focus { 
 		top : 0;
 		background-color: #fff;
@@ -12,7 +13,7 @@ a.accesskey {
 }
 
 /**
- * .hidden en .visually-hidden best practice zoalsuitgelegd op 
+ * .hidden en .visually-hidden best practice zoals uitgelegd op 
  *   http://a11yproject.com/posts/how-to-hide-content/
  */
 .hidden {
@@ -43,6 +44,7 @@ body:hover .visually-hidden button {
 .hasTooltip {
 	position:relative;
 	z-index: $z-zoekContainer + 100;
+	
 	& span {
 		/* afgeleid van .visually-hidden hierboven */
 		position: absolute;
@@ -54,11 +56,12 @@ body:hover .visually-hidden button {
 		width: 1px;
 		overflow: hidden;
 	}
+	
 	&:hover span {
 	/* &:focus span { focus is a not working properly in some browsers */
 		clip: auto;
 		padding: 2px;
-		/*border: $ControlBorder;*/
+		/* border: $ControlBorder; */
 		height: auto;
 		width: auto;
 		bottom: 3em;
@@ -69,8 +72,8 @@ body:hover .visually-hidden button {
 		display: inline-block;
 		background-color: #fff;
 		color: #000;
-		/*@include border-radius(3px);*/
-		/*@include box-shadow(2px 2px 2px $ControlBorderColour);*/
+		/* @include border-radius(3px); */
+		/* @include box-shadow(2px 2px 2px $ControlBorderColour); */
 		font-size: 12px;
 		font-weight: normal;
 	}

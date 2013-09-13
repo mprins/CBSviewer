@@ -108,6 +108,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 * <code>false</code>
 	 * 
 	 * @see #FORCE_XML_MIME
+	 * @see #init(ServletConfig)
 	 */
 	private transient boolean forceXmlResponse;
 
@@ -224,6 +225,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 											.getContent(), type, this.layers
 											.getLayerByLayers(lName, wmsUrl,
 													styles));
+							response.setContentType("text/html; charset=UTF-8");
 						} else {
 							// force the response to have XML content type (WMS
 							// servers generally don't)
@@ -233,7 +235,11 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 							responseBody = EntityUtils
 									.toString(get.getEntity()).trim();
 						}
-						response.setContentLength(responseBody.length());
+						response.setCharacterEncoding("UTF-8");
+						// in het geval van multi byte chars, bijv 'Skarsterlân'
+						// is de lengte incorrect, laat voorlopig maar aan de
+						// container over..
+						// response.setContentLength(responseBody.length());
 						final PrintWriter out = response.getWriter();
 						out.print(responseBody);
 						response.flushBuffer();

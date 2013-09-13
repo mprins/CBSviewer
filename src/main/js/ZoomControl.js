@@ -26,7 +26,7 @@ ZoomControl = OpenLayers.Class(OpenLayers.Control.Zoom, {
 	getOrCreateLinks : function(el) {
 		var zoomIn = document.getElementById(this.zoomInId), zoomOut = document.getElementById(this.zoomOutId);
 		if (!zoomIn) {
-			zoomIn = document.createElement("a");
+			zoomIn = document.createElement("button");
 			zoomIn.href = "#zoomIn";
 			var tooltip = document.createElement("span");
 			tooltip.appendChild(document.createTextNode(OpenLayers.i18n('KEY_ZOOMIN_TOOLTIP')));
@@ -38,7 +38,7 @@ ZoomControl = OpenLayers.Class(OpenLayers.Control.Zoom, {
 		OpenLayers.Element.addClass(zoomIn, "olButton");
 		OpenLayers.Element.addClass(zoomIn, "hasTooltip");
 		if (!zoomOut) {
-			zoomOut = document.createElement("a");
+			zoomOut = document.createElement("button");
 			zoomOut.href = "#zoomOut";
 			var tooltip = document.createElement("span");
 			tooltip.appendChild(document.createTextNode(OpenLayers.i18n('KEY_ZOOMOUT_TOOLTIP')));
