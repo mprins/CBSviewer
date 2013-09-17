@@ -225,13 +225,13 @@ var setupPage = {
 		var aLink = '<a id="activeerKeys" class="accesskey" href="" accesskey="1" onclick="jQuery(\'#' + config.mapDiv
 				+ '\').attr(\'tabindex\',-1).focus(); return false;">' + OpenLayers.i18n('KEY_KEYBOARDNAV')
 				+ '<br/>'+ OpenLayers.i18n('KEY_KEYBOARDNAV_TTL') + OpenLayers.i18n('KEY_MENU_HELP')+'</a>';
-		jQuery('#' + config.mapDiv).prepend(aLink);
+		jQuery('#' + config.mapDiv).before(aLink);
 
 		// core link toevoegen aan de kaart voor het geval de javascript kaart
 		// niet "goed" is
-		var aCore = '<a id="naarCoreLink" class="accesskey" href="?coreonly=true">' + OpenLayers.i18n('KEY_CSSERROR')
-				+ '</a>';
-		jQuery('#' + config.mapDiv).prepend(aCore);
+		var aCore = '<a id="naarCoreLink" class="accesskey" href="?coreonly=true">' 
+						+ OpenLayers.i18n('KEY_CSSERROR') + '</a>';
+		jQuery('#' + config.mapDiv).before(aCore);
 
 		ZoekFormulier.init();
 

@@ -6,10 +6,11 @@ a.accesskey {
 	
 	&:focus,
 	&:active { 
-		top : 0;
+		top : 113px;
 		background-color: #fff;
 		width: 100%;
-		z-index: $z-zoekContainer + 5;
+		z-index: $z-Debug + 1;
+		border: $ControlBorder;
 	}
 }
 
