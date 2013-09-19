@@ -1,6 +1,6 @@
 language: java
 before_script: mvn -Popenlayers
-script: mvn -Pjenkins test
+script: mvn -Pjenkins verify
 jdk:
 #  - oraclejdk7
   - openjdk7
