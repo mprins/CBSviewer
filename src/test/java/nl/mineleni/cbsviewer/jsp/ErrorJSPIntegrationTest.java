@@ -60,7 +60,7 @@ public class ErrorJSPIntegrationTest extends JSPIntegrationTest {
 	@Test
 	public void testIfValidResponse() throws Exception {
 		response = client
-				.execute(new HttpGet("http://localhost:8020/error.jsp"));
+				.execute(new HttpGet("http://localhost:8021/error.jsp"));
 		boilerplateValidationTests(response);
 	}
 }

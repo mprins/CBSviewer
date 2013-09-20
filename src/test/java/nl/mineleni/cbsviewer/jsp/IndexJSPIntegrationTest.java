@@ -24,7 +24,7 @@ public class IndexJSPIntegrationTest extends JSPIntegrationTest {
 	@Test
 	public void testIfValidResponse() throws Exception {
 		response = client
-				.execute(new HttpGet("http://localhost:8020/index.jsp"));
+				.execute(new HttpGet("http://localhost:8021/index.jsp"));
 		boilerplateValidationTests(response);
 	}
 }

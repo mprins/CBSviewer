@@ -103,7 +103,9 @@ mvn -Pjasmineserver jasmine:bdd
 mvn -Pdeveloper jetty:run
 +----+
 
-  Jetty start een webserver op op poort 8020 met de {{{http://localhost:8020/}applicatie in de root}}.
+  Jetty start een webserver op op poort 8021 met de {{{http://localhost:8021/}applicatie in de root}}. 
+  Voor meer informatie over de Jetty runtime plugin: 
+  {{{http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin}Jetty Maven Plugin}} in de Eclipse wiki.
 
 * {Documentatie genereren}
 

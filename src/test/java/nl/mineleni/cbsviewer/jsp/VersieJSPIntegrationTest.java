@@ -28,7 +28,7 @@ public class VersieJSPIntegrationTest extends JSPIntegrationTest {
 	@Ignore("Mislukt vooralsnog omdat het bestand met versie informatie (/META-INF/MANIFEST.MF) niet gevonden kan worden.")
 	public void testIfValidResponse() throws Exception {
 		response = client.execute(new HttpGet(
-				"http://localhost:8020/versie.jsp"));
+				"http://localhost:8021/versie.jsp"));
 		boilerplateValidationTests(response);
 	}
 }

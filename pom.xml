@@ -126,7 +126,7 @@
 						<configuration>
 							<connectors>
 								<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
-									<port>8020</port>
+									<port>8021</port>
 									<maxIdleTime>60000</maxIdleTime>
 								</connector>
 							</connectors>
@@ -479,7 +479,7 @@
 					<contextPath>/</contextPath>
 					<connectors>
 						<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
-							<port>8020</port>
+							<port>8021</port>
 							<maxIdleTime>60000</maxIdleTime>
 						</connector>
 					</connectors>
@@ -499,7 +499,7 @@
 						<id>start-jetty</id>
 						<phase>pre-integration-test</phase>
 						<goals>
-							<goal>deploy-war</goal>
+							<goal>run-war</goal>
 						</goals>
 						<configuration>
 							<war>${project.build.directory}/${proj.finalname}.war</war>
