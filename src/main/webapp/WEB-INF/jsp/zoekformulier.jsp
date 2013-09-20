@@ -12,21 +12,23 @@
 	<div id="zoekContainer">
 
 		<form method="get" action="adres" id="zoekFormulier" class="zoekinput">
-			<label for="adres"><fmt:message key="KEY_ADRESZOEKEN_TITEL" /></label>
-			<input name="adres" id="adres" accesskey="8"
-				onkeypress="if (event.keyCode==13){document.getElementById('searchbutton').click();return false}"
-				value="${param.adres}"
-				onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}"
-				onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};"
-				type="text" />
-			<input name="searchbutton" id="searchbutton" src="img/new/btn_header_search.gif"
-				accesskey="s" value="" type="image" alt="Zoek adres"/>
+			<div>
+				<label for="adres"><fmt:message key="KEY_ADRESZOEKEN_TITEL" /></label>
+				<input name="adres" id="adres" accesskey="8"
+					onkeypress="if (event.keyCode==13){document.getElementById('searchbutton').click();return false}"
+					value="${param.adres}"
+					onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}"
+					onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};"
+					type="text" />
+				<input name="searchbutton" id="searchbutton" src="img/new/btn_header_search.gif"
+					accesskey="s" value="" type="image" alt="Zoek adres"/>
 
-			<c:if test="${request.straal != null}">
-				<input type="hidden" name="straal" value="${straal}" />
-			</c:if>
-			<input type="hidden" name="coreonly" value="true" />
-			<input type="hidden" name="forward" value="true" />
+				<c:if test="${request.straal != null}">
+					<input type="hidden" name="straal" value="${straal}" />
+				</c:if>
+				<input type="hidden" name="coreonly" value="true" />
+				<input type="hidden" name="forward" value="true" />
+			</div>
 		</form>
 
 		<div id="zoekresultaten">
