@@ -19,11 +19,13 @@ public class VersieJSPIntegrationTest extends JSPIntegrationTest {
 	/**
 	 * testcase voor versie.jsp.
 	 * 
+	 * @todo kijken of we de integratie tests tegen de echte war kunnen laten
+	 *       draaien
 	 * @throws Exception
 	 */
 	@Override
 	@Test
-	@Ignore
+	@Ignore("Mislukt vooralsnog omdat het bestand met versie informatie (/META-INF/MANIFEST.MF) niet gevonden kan worden.")
 	public void testIfValidResponse() throws Exception {
 		response = client.execute(new HttpGet(
 				"http://localhost:8020/versie.jsp"));

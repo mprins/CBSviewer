@@ -6,7 +6,6 @@
 package nl.mineleni.cbsviewer.jsp;
 
 import static javax.servlet.http.HttpServletResponse.SC_OK;
-import static org.custommonkey.xmlunit.XMLAssert.assertXMLValid;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -15,6 +14,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.custommonkey.xmlunit.Validator;
 import org.custommonkey.xmlunit.XMLUnit;
 import org.junit.After;
 import org.junit.Before;
@@ -64,20 +64,26 @@ public abstract class JSPIntegrationTest {
 		// assertEquals("Response encoding zou UTF-8 moeten zijn.", "UTF-8",
 		// response.getEntity().getContentEncoding().getValue());
 
-		final String body = EntityUtils.toString(response.getEntity(), "UTF-8")
-		/* trim leading an trailing whitespace */.trim()
-		/* verwijder eventueel aanwezige UTF-8 BOM */.replace("\uFEFF", "");
-
-		System.out.println("\n\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n");
-		System.out.print(body);
-		System.out.println("\n\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n");
-
+		String body = new String(EntityUtils.toByteArray(response.getEntity()),
+				"UTF-8");
 		assertNotNull("Response body mag geen null zijn.", body);
+
+		body = "<"
+				+ body
+				/* verwijder eventueel aanwezige non-word characters */.replaceFirst(
+						"(^([\\W]+)<)", "")
+						/* verwijder eventueel aanwezige UTF-8 BOM */.replace(
+								"\uFEFF", "")
+						/* trim leading en trailing whitespace */.trim()
+						/**/.substring(1);
 
 		assertTrue("Response body dient met juiste prolog te starten.",
 				body.startsWith(RESPONSEPROLOG));
 
-		assertXMLValid("Response body dient geldige XHTML te zijn.", body);
+		// assertXMLValid("Response body dient geldige XHTML te zijn.", body);
+
+		assertTrue("Response body dient geldige XHTML te zijn.", new Validator(
+				body).isValid());
 	}
 
 	/**
