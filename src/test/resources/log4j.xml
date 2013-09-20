@@ -10,11 +10,8 @@
 			<param name="ConversionPattern" value="CBSVWR TEST: %5p %d{HH:mm:ss} (%C#%M:%L) - %m%n" />
 		</layout>
 	</appender>
-	<logger name="org.eclipse.jetty">
-		<level value="info" />
-	</logger>
 	<root>
-		<level value ="debug" />
+		<level value="debug" />
 		<appender-ref ref="consoleAppender" />
 	</root>
 </log4j:configuration>
