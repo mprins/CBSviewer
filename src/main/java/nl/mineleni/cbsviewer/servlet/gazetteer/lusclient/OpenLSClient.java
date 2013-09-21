@@ -21,7 +21,6 @@ import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -31,6 +30,7 @@ import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.PoolingClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
@@ -50,7 +50,7 @@ public class OpenLSClient {
 			.getLogger(OpenLSClient.class);
 
 	/** de http client voor communicatie met de LUS. */
-	private final HttpClient client;
+	private final CloseableHttpClient client;
 
 	/** De open ls response parser. */
 	private final OpenLSResponseParser openLSResponseParser;
@@ -61,10 +61,10 @@ public class OpenLSClient {
 	 * {@code http.proxyHost} en {@code http.proxyPort}.
 	 */
 	public OpenLSClient() {
-		SchemeRegistry schemeRegistry = new SchemeRegistry();
+		final SchemeRegistry schemeRegistry = new SchemeRegistry();
 		schemeRegistry.register(new Scheme("http", 80, PlainSocketFactory
 				.getSocketFactory()));
-		PoolingClientConnectionManager cm = new PoolingClientConnectionManager(
+		final PoolingClientConnectionManager cm = new PoolingClientConnectionManager(
 				schemeRegistry);
 		cm.setMaxTotal(200);
 		cm.setDefaultMaxPerRoute(20);
@@ -79,8 +79,9 @@ public class OpenLSClient {
 		}
 		if ((null != pHost) && (pPort > 0)) {
 			LOGGER.info("Instellen van proxy config: " + pHost + ":" + pPort);
-			client.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY,
-					new HttpHost(pHost, pPort, "http"));
+			final HttpHost proxy = new HttpHost(pHost, pPort, "http");
+			this.client.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY,
+					proxy);
 		} else {
 			LOGGER.info("Er wordt geen proxy ingesteld.");
 		}
@@ -119,7 +120,7 @@ public class OpenLSClient {
 		LOGGER.debug("GETting OLS query:\n\t" + qs.toString());
 
 		try {
-			final HttpResponse getResp = client.execute(new HttpGet(qs
+			final HttpResponse getResp = this.client.execute(new HttpGet(qs
 					.toString()));
 			if (getResp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(

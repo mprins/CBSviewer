@@ -29,12 +29,12 @@ import nl.mineleni.cbsviewer.util.EncodingUtil;
 
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.params.ClientPNames;
 import org.apache.http.client.params.CookiePolicy;
 import org.apache.http.conn.params.ConnRoutePNames;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -113,7 +113,8 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	private transient boolean forceXmlResponse;
 
 	/** onze http client. */
-	private final transient HttpClient client = new DefaultHttpClient();
+	private final transient CloseableHttpClient client = HttpClients
+			.createSystem();
 
 	/**
 	 * Parse out the server name and check if the specified server name is in
@@ -142,7 +143,11 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 */
 	@Override
 	public void destroy() {
-		this.client.getConnectionManager().shutdown();
+		try {
+			this.client.close();
+		} catch (final IOException e) {
+			// ignore
+		}
 		super.destroy();
 	}
 
@@ -365,10 +370,11 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 		}
 
 		if ((null != this.getProxyHost()) && (this.getProxyPort() > 0)) {
-			this.client.getParams().setParameter(
-					ConnRoutePNames.DEFAULT_PROXY,
-					new HttpHost(this.getProxyHost(), this.getProxyPort(),
-							"http"));
+
+			final HttpHost proxy = new HttpHost(this.getProxyHost(),
+					this.getProxyPort(), "http");
+			this.client.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY,
+					proxy);
 		}
 
 		// voorgond feature info response type
@@ -382,5 +388,6 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 		this.client.getParams().setParameter("Referer", "/");
 		this.client.getParams().setParameter(ClientPNames.COOKIE_POLICY,
 				CookiePolicy.IGNORE_COOKIES);
+
 	}
 }
