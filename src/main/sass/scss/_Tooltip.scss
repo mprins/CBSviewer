@@ -1,6 +1,6 @@
 /* decorator voor een tooltip functie van focus-able elementen zoals a en button */
 .hasTooltip {
-	position:relative;
+	//zorgt voor vreemde plaatsing van buttons overview kaart... position:relative;
 	z-index: $z-zoekContainer + 100;
 	
 	& span {
