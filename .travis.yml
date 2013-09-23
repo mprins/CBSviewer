@@ -2,9 +2,7 @@ language: java
 before_install:
   - unset GEM_PATH
 before_script: 
-  - unset GEM_PATH
-  - mvn -Popenlayers
-script: mvn -X -Pjenkins verify
+  - mvn -e -Popenlayers
+script: mvn -e -Pjenkins verify
 jdk:
-#  - oraclejdk7
   - openjdk7
