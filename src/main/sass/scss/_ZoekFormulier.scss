@@ -52,6 +52,10 @@
 	border: 0px;
 }
 
+.zoekinput div {
+	display: inline;
+}
+
 /** @override jquery-ui */
 .ui-autocomplete-loading {
 	background: #fff url('../img/ui-anim_basic_16x16.gif') right center no-repeat;
