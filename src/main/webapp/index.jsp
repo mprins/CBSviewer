@@ -90,13 +90,13 @@
 				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a>
 				<a href="http://www.cbs.nl/nl-NL/menu/home/default.htm">cbs.nl</a>
 			</div>
-			<div id="mainMenu" class="mainMenu" tabindex="-1">
+			<div id="mainMenu" class="mainMenu">
 				<ul>
 					<li>
 						<c:url value="/index.jsp" var="indexLink">
 							<c:param name="coreonly" value="${param.coreonly}" />
 						</c:url>
-						<a href="${fn:escapeXml(indexLink)}"><fmt:message key="KEY_MENU_HOME" /></a></li>
+						<a href="${fn:escapeXml(indexLink)}" id="mainMenu_Home"><fmt:message key="KEY_MENU_HOME" /></a></li>
 					<li>
 						<c:url value="/about.jsp" var="aboutLink">
 							<c:param name="coreonly" value="${param.coreonly}" />
@@ -125,12 +125,11 @@
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
 		</div>
 
-		<div id="inhoud" tabindex="-1">
-			
+		<div id="inhoud">
 			<div class="pagetitle">
 				<h1 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h1>
-			</div>	
-			
+			</div>
+
 			<div id="coreContainer" class="kaartContainer">
 				<!-- hier komt de statische kaart -->
 				<c:if test="${not empty kaart}">
