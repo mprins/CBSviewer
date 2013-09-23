@@ -1,7 +1,10 @@
 language: java
-env: GEM_PATH=""
-before_script: mvn -Popenlayers
-script: mvn -Pjenkins verify
+before_install:
+  - unset GEM_PATH
+before_script: 
+  - unset GEM_PATH
+  - mvn -Popenlayers
+script: mvn -X -Pjenkins verify
 jdk:
 #  - oraclejdk7
   - openjdk7
