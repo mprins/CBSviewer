@@ -21,18 +21,15 @@ import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.config.CookieSpecs;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.conn.params.ConnRoutePNames;
-import org.apache.http.conn.scheme.PlainSocketFactory;
-import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.impl.conn.PoolingClientConnectionManager;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
@@ -51,9 +48,10 @@ public class OpenLSClient {
 
 	/** de http client voor communicatie met de LUS. */
 	private final CloseableHttpClient client;
-
 	/** De open ls response parser. */
 	private final OpenLSResponseParser openLSResponseParser;
+	/** http request configuratie. */
+	private RequestConfig requestConfig;
 
 	/**
 	 * Maakt een nieuwe instance van de LUS client. Stelt de http proxy in mits
@@ -61,15 +59,10 @@ public class OpenLSClient {
 	 * {@code http.proxyHost} en {@code http.proxyPort}.
 	 */
 	public OpenLSClient() {
-		final SchemeRegistry schemeRegistry = new SchemeRegistry();
-		schemeRegistry.register(new Scheme("http", 80, PlainSocketFactory
-				.getSocketFactory()));
-		final PoolingClientConnectionManager cm = new PoolingClientConnectionManager(
-				schemeRegistry);
-		cm.setMaxTotal(200);
-		cm.setDefaultMaxPerRoute(20);
+		client = HttpClients.createSystem();
+		requestConfig = RequestConfig.custom()
+				.setCookieSpec(CookieSpecs.IGNORE_COOKIES).build();
 
-		this.client = new DefaultHttpClient(cm);
 		final String pHost = System.getProperty("http.proxyHost");
 		int pPort = -1;
 		try {
@@ -80,8 +73,8 @@ public class OpenLSClient {
 		if ((null != pHost) && (pPort > 0)) {
 			LOGGER.info("Instellen van proxy config: " + pHost + ":" + pPort);
 			final HttpHost proxy = new HttpHost(pHost, pPort, "http");
-			this.client.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY,
-					proxy);
+			requestConfig = RequestConfig.copy(requestConfig).setProxy(proxy)
+					.build();
 		} else {
 			LOGGER.info("Er wordt geen proxy ingesteld.");
 		}
@@ -120,8 +113,9 @@ public class OpenLSClient {
 		LOGGER.debug("GETting OLS query:\n\t" + qs.toString());
 
 		try {
-			final HttpResponse getResp = this.client.execute(new HttpGet(qs
-					.toString()));
+			final HttpGet httpget = new HttpGet(qs.toString());
+			httpget.setConfig(requestConfig);
+			final HttpResponse getResp = this.client.execute(httpget);
 			if (getResp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(
 						getResp.getEntity()).trim();
@@ -160,6 +154,7 @@ public class OpenLSClient {
 					ContentType.TEXT_XML);
 			final HttpPost httppost = new HttpPost(url);
 			httppost.setEntity(str);
+			httppost.setConfig(this.requestConfig);
 			final HttpResponse resp = this.client.execute(httppost);
 			if (resp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(
@@ -206,6 +201,7 @@ public class OpenLSClient {
 								.replaceAll(APPEND_PROVINCIE, ""), "UTF-8")));
 			}
 			httppost.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
+			httppost.setConfig(this.requestConfig);
 
 			final HttpResponse resp = this.client.execute(httppost);
 			if (resp.getStatusLine().getStatusCode() == SC_OK) {
