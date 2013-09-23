@@ -1,4 +1,5 @@
 language: java
+env: GEM_PATH=""
 before_script: mvn -Popenlayers
 script: mvn -Pjenkins verify
 jdk:
