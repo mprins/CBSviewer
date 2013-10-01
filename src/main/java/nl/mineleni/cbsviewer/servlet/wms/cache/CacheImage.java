@@ -113,7 +113,7 @@ public class CacheImage implements CachableImage<BufferedImage> {
 	 * @param name
 	 *            the new file name
 	 */
-	public void setFileName(String name) {
+	public void setFileName(final String name) {
 		this.fName = name;
 	}
 }
