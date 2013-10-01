@@ -40,8 +40,8 @@ public final class SpatialUtil {
 	 * @return the bounding box {@code 2 x afstand} (dus straal {@code afstand})
 	 *         om het het coordinatenpaar {@code xcoord};{@code ycoord}.
 	 */
-	public static BoundingBox calcRDBBOX(double xcoord, double ycoord,
-			double afstand) {
+	public static BoundingBox calcRDBBOX(final double xcoord,
+			final double ycoord, final double afstand) {
 		try {
 			return new Envelope2D(CRS.decode("EPSG:28992"), (xcoord - afstand),
 					(ycoord - afstand), 2 * afstand, 2 * afstand);

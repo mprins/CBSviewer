@@ -86,7 +86,7 @@ public class LabelsBundle extends ResourceBundle {
 	}
 
 	@Override
-	protected Object handleGetObject(String key) {
+	protected Object handleGetObject(final String key) {
 		return this.resBundle.handleGetObject(key);
 	}
 }
