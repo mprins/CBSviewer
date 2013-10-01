@@ -34,7 +34,7 @@ public final class EncodingUtil {
 	 *            The UTF-8 encoded String to be decoded
 	 * @return the decoded String
 	 */
-	public static String decodeURIComponent(String s) {
+	public static String decodeURIComponent(final String s) {
 		if (s == null) {
 			return null;
 		}
@@ -57,7 +57,7 @@ public final class EncodingUtil {
 	 *            The String to be encoded
 	 * @return the encoded String
 	 */
-	public static String encodeURIComponent(String s) {
+	public static String encodeURIComponent(final String s) {
 		String result = null;
 		try {
 			result = URLEncoder.encode(s, "UTF-8").replaceAll("\\+", "%20")
