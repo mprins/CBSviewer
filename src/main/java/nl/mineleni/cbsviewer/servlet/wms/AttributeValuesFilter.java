@@ -70,7 +70,7 @@ public class AttributeValuesFilter {
 	 *            een te filteren waarde
 	 * @return de gefilterde input zoals in de filtermapping beschreven.
 	 */
-	public String filterValue(Object input) {
+	public String filterValue(final Object input) {
 		if (null != input) {
 			for (final AttributeValueFilter filter : this.filters) {
 				if (input.toString().equals(filter.getInputAttributeValue())) {
