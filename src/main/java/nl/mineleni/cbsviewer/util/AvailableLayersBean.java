@@ -67,6 +67,7 @@ public class AvailableLayersBean {
 	/**
 	 * accessor voor de lijst met layers.
 	 * 
+	 * @return geeft de lijst van LayerDescriptors voor de applicatie
 	 */
 	public List<LayerDescriptor> getLayers() {
 		return Collections.unmodifiableList(layers);
@@ -104,7 +105,7 @@ public class AvailableLayersBean {
 			}
 
 			@Override
-			public void transform(Object object) {
+			public void transform(final Object object) {
 				// null objecten niet serializeren.
 				return;
 			}
