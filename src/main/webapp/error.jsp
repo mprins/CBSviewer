@@ -31,12 +31,18 @@
 <title>Systeemfout</title>
 </head>
 <body>
+	<jsp:include page="WEB-INF/jsp/debug_include.jsp" />
 	<div class="page smallpopup">
 		<h1>Systeemfout</h1>
 
 		<p class="error">
 			<fmt:message key="KEY_ERROR_UITLEG" />
-			<br />
+		</p>
+		<ul>
+			<li><fmt:message key="KEY_ERROR_500_OPLOSSING1" /></li>
+			<li><fmt:message key="KEY_ERROR_500_OPLOSSING2" /></li>
+		</ul>
+		<p class="error">
 			<fmt:message key="KEY_ERROR_SYSTEEMMELDING">
 				<fmt:param value="${exception}" />
 			</fmt:message>
