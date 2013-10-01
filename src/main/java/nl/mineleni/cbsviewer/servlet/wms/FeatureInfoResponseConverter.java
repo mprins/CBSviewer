@@ -50,8 +50,8 @@ public final class FeatureInfoResponseConverter {
 	 */
 	public enum CONVERTER_TYPE {
 		GMLTYPE("application/vnd.ogc.gml"), HTMLTYPE("text/html"),
-		// XMLTYPE("application/vnd.ogc.wms_xml")
-		;
+		/* XMLTYPE("application/vnd.ogc.wms_xml") */;
+
 		private final String type;
 
 		CONVERTER_TYPE(final String type) {
@@ -224,12 +224,14 @@ public final class FeatureInfoResponseConverter {
 
 		if (iter.hasNext()) {
 			// tabel maken
-			sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\"><caption>");
+			sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\">");
+			sb.append("<caption>");
 			sb.append(RESOURCES.getString("KEY_INFO_TABEL_CAPTION"));
 			sb.append("</caption><thead><tr>");
 			for (final String n : fieldNames) {
-				sb.append("<th scope=\"col\">"
-						+ NAMESFILTER.filterValue(n, layer.getId()) + "</th>");
+				sb.append("<th scope=\"col\">");
+				sb.append(NAMESFILTER.filterValue(n, layer.getId()));
+				sb.append("</th>");
 			}
 			sb.append("</tr></thead><tbody>");
 			int i = 0;
@@ -239,11 +241,13 @@ public final class FeatureInfoResponseConverter {
 				final SimpleFeature f = iter.next();
 				for (final String n : fieldNames) {
 					if (VALUESFILTER.hasFilters()) {
-						sb.append("<td>"
-								+ VALUESFILTER.filterValue(f.getAttribute(n))
-								+ "</td>");
+						sb.append("<td>");
+						sb.append(VALUESFILTER.filterValue(f.getAttribute(n)));
+						sb.append("</td>");
 					} else {
-						sb.append("<td>" + f.getAttribute(n) + "</td>");
+						sb.append("<td>");
+						sb.append(f.getAttribute(n));
+						sb.append("</td>");
 					}
 				}
 				sb.append("</tr>");
