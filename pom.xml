@@ -880,6 +880,9 @@
 								<targetJdk>${jdk.version}</targetJdk>
 								<includeTests>false</includeTests>
 								<excludes />
+								<excludeRoots>
+									<excludeRoot>${basedir}/target/generated-sources/</excludeRoot>
+								</excludeRoots>
 								<includeXmlInSite>true</includeXmlInSite>
 								<includes>
 									<include>**/*.java</include>
