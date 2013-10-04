@@ -111,46 +111,46 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	private static final long serialVersionUID = 4958212343847516071L;
 
 	/** De achtergrond kaart WMS. */
-	private transient WebMapServer bgWMS = null;
+	private transient WebMapServer bgWMS;
 
 	/** cache voor legenda afbeeldingen. */
-	private transient Cache<String, CacheImage, BufferedImage> legendCache = null;
+	private transient Cache<String, CacheImage, BufferedImage> legendCache;
 
 	/** cache voor voorgrond WMS afbeeldingen. */
-	private transient Cache<BboxLayerCacheKey, CacheImage, BufferedImage> fgWMSCache = null;
+	private transient Cache<BboxLayerCacheKey, CacheImage, BufferedImage> fgWMSCache;
 
 	/** cache voor feature info. */
-	private transient Cache<BboxLayerCacheKey, CachableString, String> featInfoCache = null;
+	private transient Cache<BboxLayerCacheKey, CachableString, String> featInfoCache;
 
 	/** verzameling lagen voor de achtergrondkaart. */
-	private String[] bgWMSlayers = null;
+	private transient String[] bgWMSlayers;
 
 	/**
 	 * voorgrond wms request.
 	 * 
 	 * @todo refactor naar lokale variabele
 	 */
-	private transient GetMapRequest getMapRequest = null;
+	private transient GetMapRequest getMapRequest;
 
 	/** layers bean. */
 	private final transient AvailableLayersBean layers = new AvailableLayersBean();
 
 	/** cache voor achtergrond kaartjes. */
-	private transient WMSCache bgWMSCache = null;
+	private transient WMSCache bgWMSCache;
 	/** De achtergrond luchtfoto WMS. */
-	private transient WebMapServer lufoWMS = null;
+	private transient WebMapServer lufoWMS;
 
 	/** cache voor achtergrond kaartjes. */
-	private transient WMSCache bgWMSLuFoCache = null;
+	private transient WMSCache bgWMSLuFoCache;
 	/** verzameling lagen voor de achtergrondkaart. */
-	private String[] lufoWMSlayers = null;
+	private transient String[] lufoWMSlayers;
 
 	/**
 	 * de verzameling met (voorgrond) WMSsen die we benaderen. Het opstarten van
 	 * een WMS duurt lang vanwege de capabilities uitvraag en versie
 	 * onderhandeling.
 	 */
-	private transient Map<String, WebMapServer> wmsServersCache = null;
+	private transient Map<String, WebMapServer> wmsServersCache;
 
 	/*
 	 * (non-Javadoc)
@@ -160,17 +160,11 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	@Override
 	public void destroy() {
 		this.bgWMSCache.clear();
-		this.bgWMS = null;
 		this.bgWMSLuFoCache.clear();
-		this.lufoWMS = null;
 		this.wmsServersCache.clear();
 		this.legendCache.clear();
-		this.legendCache = null;
 		this.fgWMSCache.clear();
-		this.fgWMSCache = null;
 		this.featInfoCache.clear();
-		this.featInfoCache = null;
-		this.getMapRequest = null;
 		super.destroy();
 	}
 
@@ -204,11 +198,11 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		// logaritmisch lengte afronden
 		final int digits = (int) (Math.log(dist) / Math.log(10));
 		final double pow10 = Math.pow(10, digits);
-		final int rounded = (int) (dist / pow10);
+		final int iRounded = (int) (dist / pow10);
 		int barLen = 1;
-		if (rounded > 5) {
+		if (iRounded > 5) {
 			barLen = 5;
-		} else if (rounded > 2) {
+		} else if (iRounded > 2) {
 			barLen = 2;
 		}
 		dist = (int) (barLen * pow10);
@@ -777,13 +771,13 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					e);
 		}
 
-		this.legendCache = new Cache<String, CacheImage, BufferedImage>(
+		this.legendCache = new Cache<>(
 				NUMBER_CACHE_ELEMENTS);
 
-		this.featInfoCache = new Cache<BboxLayerCacheKey, CachableString, String>(
+		this.featInfoCache = new Cache<>(
 				NUMBER_CACHE_ELEMENTS);
 
-		this.fgWMSCache = new Cache<BboxLayerCacheKey, CacheImage, BufferedImage>(
+		this.fgWMSCache = new Cache<>(
 				NUMBER_CACHE_ELEMENTS);
 
 		// achtergrond kaart
