@@ -16,9 +16,6 @@ import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_YCOORD;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -88,20 +85,6 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 	protected int[] parseLocation(final HttpServletRequest request)
 			throws ServletException {
 		try {
-			@SuppressWarnings("unchecked")
-			final Enumeration<String> attr = request.getAttributeNames();
-			while (attr.hasMoreElements()) {
-				final String name = attr.nextElement();
-				LOGGER.debug("attribute: " + name + " value: "
-						+ request.getAttribute(name));
-			}
-			@SuppressWarnings("unchecked")
-			final Map<String, String[]> p = request.getParameterMap();
-			for (final Map.Entry<String, String[]> e : p.entrySet()) {
-				LOGGER.debug("parameter key: " + e.getKey() + " value: "
-						+ Arrays.toString(e.getValue()));
-			}
-
 			// request params uitlezen voor het zoeken
 			final NumberFormat nf = NumberFormat.getInstance();
 			final int xcoord = nf
@@ -122,14 +105,13 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 			request.setAttribute(REQ_PARAM_XCOORD.code, xcoord);
 			request.setAttribute(REQ_PARAM_YCOORD.code, ycoord);
 			request.setAttribute(REQ_PARAM_STRAAL.code, straal);
-
-			LOGGER.debug("request params:(" + xcoord + ";" + ycoord
-					+ ") straal:" + straal);
-
+                        if(LOGGER.isDebugEnabled()) {
+                            LOGGER.debug("request params:(" + xcoord + ";" 
+                                        + ycoord + ") straal:" + straal);
+                        }
 			return new int[] { xcoord, ycoord, straal };
 		} catch (final NumberFormatException | ParseException e) {
-			LOGGER.error(
-					"Een van de vereiste parameters kon niet geparsed worden als Integer.",
+			LOGGER.error("Een van de vereiste parameters kon niet geparsed worden als Integer.",
 					e);
 			throw new ServletException(e);
 		}
