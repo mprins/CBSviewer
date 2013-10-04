@@ -124,16 +124,16 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 *            the url to check
 	 * @return <code>true</code> if the name of the server is found in the list
 	 */
-	private boolean checkUrlAllowed(String serverUrl) {
-		serverUrl = serverUrl.toLowerCase().substring(
+	private boolean checkUrlAllowed(final String serverUrl) {
+		String sUrl = serverUrl.toLowerCase().substring(
 				serverUrl.indexOf("//") + 2);
 		if (serverUrl.contains("/")) {
-			serverUrl = serverUrl.substring(0, serverUrl.indexOf('/'));
+			sUrl = sUrl.substring(0, sUrl.indexOf('/'));
 		}
 		if (LOGGER.isDebugEnabled()) {
-			LOGGER.debug("test server = " + serverUrl);
+			LOGGER.debug("test server = " + sUrl);
 		}
-		return this.allowedHosts.contains(serverUrl);
+		return this.allowedHosts.contains(sUrl);
 	}
 
 	/*
@@ -382,7 +382,9 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 
 		// voorgond feature info response type
 		final String mType = config.getInitParameter("featureInfoType");
-		LOGGER.debug("voorgrond kaartlagen mimetype: " + mType);
+		if (LOGGER.isDebugEnabled()) {
+			LOGGER.debug("voorgrond kaartlagen mimetype: " + mType);
+		}
 		if ((mType != null) && (mType.length() > 0)) {
 			type = CONVERTER_TYPE.valueOf(mType);
 		}
