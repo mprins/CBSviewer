@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
 package nl.mineleni.cbsviewer.servlet.gazetteer.lusclient;
 
 import static org.junit.Assert.assertNotNull;
@@ -58,7 +64,7 @@ public class OpenLSClientIntegrationTest extends AbstractTestUtils {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	@Test
-	public void testDoPostOpenLSRequest() throws java.io.IOException {
+	public void testDoPostOpenLSRequest() throws IOException {
 		final String requestString = this
 				.readFileAsString("/samplerequests/samplerequest.xml");
 		final OpenLSRequestParser rp = new OpenLSRequestParser();
@@ -78,7 +84,7 @@ public class OpenLSClientIntegrationTest extends AbstractTestUtils {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	@Test
-	public void testDoPostOpenLSRequestFreeForm() throws java.io.IOException {
+	public void testDoPostOpenLSRequestFreeForm() throws IOException {
 		final String url = "http://www.openrouteservice.org/php/OpenLSLUS_Geocode.php";
 		final Map<String, String> openLSParams = new TreeMap<>();
 		openLSParams.put(StringConstants.OPENLS_REQ_PARAM_REQUEST.code,

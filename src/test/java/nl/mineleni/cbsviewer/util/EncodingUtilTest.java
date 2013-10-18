@@ -1,5 +1,8 @@
-/**
+/*
+ * Copyright (c) 2013-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
  */
 package nl.mineleni.cbsviewer.util;
 
@@ -14,39 +17,39 @@ import org.junit.Test;
  */
 public class EncodingUtilTest {
 
-    private final String s = "some quick test straing incl. url http://test.com/?value1=test&value2=zzzzz";
-    private final String sEncoded = "some%20quick%20test%20straing%20incl.%20url%20http%3A%2F%2Ftest.com%2F%3Fvalue1%3Dtest%26value2%3Dzzzzz";
+	private final String s = "some quick test straing incl. url http://test.com/?value1=test&value2=zzzzz";
+	private final String sEncoded = "some%20quick%20test%20straing%20incl.%20url%20http%3A%2F%2Ftest.com%2F%3Fvalue1%3Dtest%26value2%3Dzzzzz";
 
-    /**
-     * Test method for
-     * {@link nl.mineleni.cbsviewer.util.EncodingUtil#decodeURIComponent(java.lang.String)}
-     * .
-     */
-    @Test
-    public void testDecodeURIComponent() {
-        assertEquals(this.s, EncodingUtil.decodeURIComponent(this.sEncoded));
-    }
+	/**
+	 * Test method for
+	 * {@link nl.mineleni.cbsviewer.util.EncodingUtil#decodeURIComponent(java.lang.String)}
+	 * .
+	 */
+	@Test
+	public void testDecodeURIComponent() {
+		assertEquals(this.s, EncodingUtil.decodeURIComponent(this.sEncoded));
+	}
 
-    /**
-     * Test method for
-     * {@link nl.mineleni.cbsviewer.util.EncodingUtil#encodeURIComponent(java.lang.String)}
-     * .
-     */
-    @Test
-    public void testEncodeURIComponent() {
-        assertEquals(this.sEncoded, EncodingUtil.encodeURIComponent(this.s));
-    }
+	/**
+	 * Test method for
+	 * {@link nl.mineleni.cbsviewer.util.EncodingUtil#encodeURIComponent(java.lang.String)}
+	 * .
+	 */
+	@Test
+	public void testEncodeURIComponent() {
+		assertEquals(this.sEncoded, EncodingUtil.encodeURIComponent(this.s));
+	}
 
-    /**
-     * Test method for
-     * {@link nl.mineleni.cbsviewer.util.EncodingUtil#encodeURIComponent(java.lang.String)}
-     * and
-     * {@link nl.mineleni.cbsviewer.util.EncodingUtil#decodeURIComponent(java.lang.String)}
-     * .
-     */
-    @Test
-    public void testRoundTrip() {
-        assertEquals(this.s, EncodingUtil.decodeURIComponent(EncodingUtil
-                .encodeURIComponent(this.s)));
-    }
+	/**
+	 * Test method for
+	 * {@link nl.mineleni.cbsviewer.util.EncodingUtil#encodeURIComponent(java.lang.String)}
+	 * and
+	 * {@link nl.mineleni.cbsviewer.util.EncodingUtil#decodeURIComponent(java.lang.String)}
+	 * .
+	 */
+	@Test
+	public void testRoundTrip() {
+		assertEquals(this.s, EncodingUtil.decodeURIComponent(EncodingUtil
+				.encodeURIComponent(this.s)));
+	}
 }

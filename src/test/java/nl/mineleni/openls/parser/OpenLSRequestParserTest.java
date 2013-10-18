@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
 package nl.mineleni.openls.parser;
 
 import static org.junit.Assert.assertEquals;
@@ -40,7 +46,7 @@ public class OpenLSRequestParserTest extends AbstractTestUtils {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	@Test
-	public void testOpenLSRequestParser() throws java.io.IOException {
+	public void testOpenLSRequestParser() throws IOException {
 		final OpenLSRequestParser rp = new OpenLSRequestParser();
 		final File folder = new File("./target/test-classes/samplerequests/");
 		final List<File> fileList = new ArrayList<>();
@@ -73,7 +79,7 @@ public class OpenLSRequestParserTest extends AbstractTestUtils {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	@Test
-	public void testOpenLSRequestRoundtrip() throws java.io.IOException {
+	public void testOpenLSRequestRoundtrip() throws IOException {
 		final GeocodeRequest gcr = new GeocodeRequest();
 
 		final Address address = new Address();

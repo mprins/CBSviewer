@@ -23,8 +23,7 @@ public class DownloadJSPIntegrationTest extends JSPIntegrationTest {
 	@Override
 	@Test
 	public void testIfValidResponse() throws Exception {
-		response = client.execute(new HttpGet(
-				"http://localhost:8021/download.jsp"));
+		response = client.execute(new HttpGet(BASE_TEST_URL + "download.jsp"));
 		boilerplateValidationTests(response);
 	}
 }

@@ -12,6 +12,8 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
+import nl.mineleni.cbsviewer.IntegrationTestConstants;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -27,7 +29,7 @@ import org.junit.BeforeClass;
  * 
  * @author mprins
  */
-public abstract class JSPIntegrationTest {
+public abstract class JSPIntegrationTest implements IntegrationTestConstants {
 	/**
 	 * test client.
 	 */

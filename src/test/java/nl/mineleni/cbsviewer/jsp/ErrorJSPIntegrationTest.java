@@ -46,6 +46,7 @@ public class ErrorJSPIntegrationTest extends JSPIntegrationTest {
 		assertTrue("Response body dient met juiste prolog te starten.",
 				body.startsWith(RESPONSEPROLOG));
 
+		// werkt niet...:
 		// assertXMLValid("Response body dient geldige XHTML te zijn.", body);
 		assertTrue("Response body dient geldige XHTML te zijn.", new Validator(
 				body).isValid());
@@ -59,8 +60,7 @@ public class ErrorJSPIntegrationTest extends JSPIntegrationTest {
 	@Override
 	@Test
 	public void testIfValidResponse() throws Exception {
-		response = client
-				.execute(new HttpGet("http://localhost:8021/error.jsp"));
+		response = client.execute(new HttpGet(BASE_TEST_URL + "error.jsp"));
 		boilerplateValidationTests(response);
 	}
 }
