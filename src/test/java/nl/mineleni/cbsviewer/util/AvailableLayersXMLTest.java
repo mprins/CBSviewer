@@ -204,8 +204,11 @@ public class AvailableLayersXMLTest {
 		// final Source schema = new
 		// StreamSource(this.getClass().getClassLoader()
 		// .getResourceAsStream("AvailableLayers.xsd"));
-		final Source doc = new StreamSource(this.getClass().getClassLoader()
+		final Source doc = new StreamSource(Thread.currentThread()
+				.getContextClassLoader()
 				.getResourceAsStream("../classes/AvailableLayers.xml"));
+		// final Source doc = new StreamSource(new
+		// File("target/classes//AvailableLayers.xml"));
 		assertTrue(this.v.isInstanceValid(doc));
 	}
 

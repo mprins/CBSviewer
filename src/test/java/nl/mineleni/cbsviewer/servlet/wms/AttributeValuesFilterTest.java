@@ -40,7 +40,7 @@ public class AttributeValuesFilterTest {
 	public void setUp() throws Exception {
 		XMLUnit.setIgnoreWhitespace(true);
 		XMLUnit.setIgnoreComments(true);
-		filter = new AttributeValuesFilter();
+		this.filter = new AttributeValuesFilter();
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class AttributeValuesFilterTest {
 	 */
 	@Test
 	public void testHasFilters() {
-		assertTrue(filter.hasFilters());
+		assertTrue(this.filter.hasFilters());
 	}
 
 	/**
@@ -60,8 +60,8 @@ public class AttributeValuesFilterTest {
 	 */
 	@Test
 	public void testFilterValue() {
-		assertEquals("expected", filter.filterValue("expected"));
-		assertEquals("geheim", filter.filterValue(-99997));
+		assertEquals("expected", this.filter.filterValue("expected"));
+		assertEquals("geheim", this.filter.filterValue(-99997));
 	}
 
 	/**
@@ -122,7 +122,8 @@ public class AttributeValuesFilterTest {
 				.getResourceAsStream("AttributeValuesFilter.xsd"));
 		v.addSchemaSource(schema);
 		// deployment resource
-		final Source doc = new StreamSource(this.getClass().getClassLoader()
+		final Source doc = new StreamSource(Thread.currentThread()
+				.getContextClassLoader()
 				.getResourceAsStream("../classes/AttributeValuesFilter.xml"));
 		assertTrue(v.isInstanceValid(doc));
 
