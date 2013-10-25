@@ -78,9 +78,9 @@ div.olLayerDiv {
 }
 
 /* when replacing tiles, do not show tile and backbuffer at the same time */
-.olTileImage.olTileReplacing {
+.olTileReplacing {
 	display: none;
-}
+ }
 
 /* override any max-width image settings (e.g. bootstrap.css) */
 img.olTileImage {

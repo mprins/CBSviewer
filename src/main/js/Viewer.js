@@ -102,7 +102,7 @@ var Viewer = function() {
 		if (0.09 < alpha && alpha < 0.91) {
 			_opacity = alpha;
 			var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
-			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+			for (var lyr = 0; lyr < lyrs.length; lyr++) {
 				if (!lyrs[lyr].isBaseLayer) {
 					lyrs[lyr].setOpacity(_opacity);
 				}
@@ -155,7 +155,6 @@ var Viewer = function() {
 			jQuery.extend(true, this.config, {
 				map : {
 					controls : [],
-					tileManager : new OpenLayers.TileManager(),
 					theme : null
 				}
 			});
@@ -268,14 +267,14 @@ var Viewer = function() {
 				div : jQuery('#' + this.config.legendDiv)[0]
 			}));
 			_map.addControl(new OpenLayers.Control.KeyboardDefaults(
-				/* alleen actief als de kaart focus heeft */
-				//	{ observeElement : this.config.mapDiv }
+			/* alleen actief als de kaart focus heeft */
+			// { observeElement : this.config.mapDiv }
 			));
 			_map.addControl(new ZoomControl());
 			_map.addControl(new OpenLayers.Control.Navigation());
 			_map.addControl(new OpenLayers.Control.KeyboardClick(
-				/* alleen actief als de kaart focus heeft */
-				//	{ observeElement : this.config.mapDiv }
+			/* alleen actief als de kaart focus heeft */
+			// { observeElement : this.config.mapDiv }
 			));
 			_map.addControl(new WMSGetFeatureInfo({
 				eventListeners : {
@@ -346,14 +345,14 @@ var Viewer = function() {
 				singleTile : false,
 				opacity : _opacity
 			});
-			
+
 			if (wmsConfig.hasOwnProperty('zoom')) {
 				if (_map.getZoom() < parseInt(wmsConfig.zoom))
 					_map.zoomTo(wmsConfig.zoom);
 			}
-			
+
 			_map.addLayer(layer);
-			
+
 			var fInfoControl = _map.getControlsByClass('WMSGetFeatureInfo');
 			fInfoControl[0].url = wmsConfig.url;
 		},
@@ -366,7 +365,7 @@ var Viewer = function() {
 		 */
 		removeWMS : function(wmsLyrName) {
 			var lyrs = _map.getLayersByName(wmsLyrName);
-			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+			for (var lyr = 0; lyr < lyrs.length; lyr++) {
 				if (!lyrs[lyr].isBaseLayer) {
 					_map.removeLayer(lyrs[lyr]);
 					lyrs[lyr].destroy();
