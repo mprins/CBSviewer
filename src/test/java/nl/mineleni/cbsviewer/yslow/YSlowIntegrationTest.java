@@ -49,9 +49,9 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 	}
 
 	/**
-	 * Voorbereiding van phantomjs proces voor de testcases.
+	 * Voorbereiding van {@linkplain http://yslow.org/phantomjs/ phantomjs} 
+	 * proces voor de testcases.
 	 * 
-	 * @see http://yslow.org/phantomjs/
 	 * @throws Exception
 	 */
 	@Before
