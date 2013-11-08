@@ -51,6 +51,7 @@
 
 		<!-- Stack trace -->
 		<c:if test="${isDebugEnabled}">
+			<h2>Debugging informatie</h2>
 			<p>
 				<code>
 					<c:forEach items="${exception.stackTrace}" var="element">

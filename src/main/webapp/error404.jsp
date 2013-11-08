@@ -26,8 +26,6 @@
 			<fmt:message key="KEY_ERROR_404_TITEL" />
 		</h1>
 
-		
-
 		<p class="error">
 			<fmt:message key="KEY_ERROR_404_MELDING" />
 		</p>
