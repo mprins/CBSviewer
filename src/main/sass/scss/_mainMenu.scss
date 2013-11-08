@@ -17,20 +17,19 @@
 	border-left: solid 1px #ececec;
 	display: inline;
 	padding: 5px 5px 3px 6px;
-}
 
-.mainMenu ul li a {
-	color: #271d6c;
-	font-size: 16px;
-	text-decoration: none;
-}
-
-.mainMenu ul li:hover {
-	color: #271d6c;
-	background: #ececec;
-	cursor: pointer;
-}
-
-.mainMenu ul li a.active {
-	color: #005983;
+	&:hover {
+		color: #271d6c;
+		background: #ececec;
+		cursor: pointer;
+	}
+	
+	& a {
+		color: #271d6c;
+		font-size: 16px;
+		text-decoration: none;
+		&.active {
+			color: #005983;
+		}
+	}
 }
