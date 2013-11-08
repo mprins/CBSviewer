@@ -7,9 +7,8 @@
 		language="java" isThreadSafe="true" isErrorPage="true"
 		import="org.slf4j.Logger, org.slf4j.LoggerFactory" />
 	<jsp:output doctype-root-element="html"
-		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-		omit-xml-declaration="no" />
+		doctype-system="about:legacy-compat"
+		omit-xml-declaration="true" />
 
 	<fmt:setBundle basename="ErrorLabelsBundle" />
 

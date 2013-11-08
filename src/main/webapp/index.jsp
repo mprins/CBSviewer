@@ -8,9 +8,8 @@
 		trimDirectiveWhitespaces="false" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 	<jsp:output doctype-root-element="html"
-		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-		omit-xml-declaration="no" />
+		doctype-system="about:legacy-compat"
+		omit-xml-declaration="true" />
 
 	<fmt:setBundle basename="LabelsBundle" />
 
@@ -55,7 +54,7 @@
 </jsp:include>
 
 <c:if test="${param.coreonly!=true}">
-	<script type="text/javascript" charset="utf-8">
+	<script type="text/javascript">
 		document.documentElement.className += ' js';
 	</script>
 </c:if>

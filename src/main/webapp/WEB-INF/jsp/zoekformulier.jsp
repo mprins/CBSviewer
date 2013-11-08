@@ -21,7 +21,7 @@
 					onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};"
 					type="text" />
 				<input name="searchbutton" id="searchbutton" src="img/new/btn_header_search.gif"
-					accesskey="s" value="" type="image" alt="Zoek adres"/>
+					accesskey="s" type="image" alt="Zoek adres"/>
 
 				<c:if test="${request.straal != null}">
 					<input type="hidden" name="straal" value="${straal}" />
