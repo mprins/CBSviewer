@@ -50,7 +50,9 @@
 		<![CDATA[
 		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie-lte7.css" type="text/css" media="screen" /><![endif]-->
 		<!--[if IE 8]>    <link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />   <![endif]-->
+		<!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>          <![endif]-->
 		]]>
+
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
 	</jsp:text>
 </jsp:root>
