@@ -1,17 +1,17 @@
 /** resources voor sitemenu_include.jsp */
 
-.page .header .siteMenu {
+.siteMenu {
 	height: 23px;
 	width: 260px;
 	float: right;
 	margin: 7px 13px 0 0;
-}
-
-.page .header .siteMenu a {
-	margin: 5px;
-	display: block;
-	float: left;
-	color: #666666;
-	font-size: 13px;
-	text-decoration: none;
+	
+	& a {
+		margin: 5px;
+		display: block;
+		float: left;
+		color: #666666;
+		font-size: 13px;
+		text-decoration: none;
+	}
 }
