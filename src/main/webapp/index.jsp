@@ -85,11 +85,9 @@
 					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" title="CBS in uw buurt" width="192" height="59"/>
 				</a>
 			</div>
-			<div id="shortMenu" class="shortMenu">
-				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm"><fmt:message key="KEY_FOOTER_CONTACT" /></a> 
-				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a>
-				<a href="http://www.cbs.nl/nl-NL/menu/home/default.htm">cbs.nl</a>
-			</div>
+			
+			<jsp:include page="WEB-INF/jsp/sitemenu_include.jsp" />
+
 			<div id="mainMenu" class="mainMenu">
 				<ul>
 					<li>
