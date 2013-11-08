@@ -20,6 +20,7 @@
 </head>
 <body>
 	<jsp:include page="WEB-INF/jsp/debug_include.jsp" />
+	<jsp:include page="WEB-INF/jsp/sitemenu_include.jsp" />
 	<div class="page smallpopup">
 		<h1>
 			<fmt:message key="KEY_ERROR_404_TITEL" />

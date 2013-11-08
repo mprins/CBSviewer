@@ -85,43 +85,11 @@
 					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" title="CBS in uw buurt" width="192" height="59"/>
 				</a>
 			</div>
-			<div id="shortMenu" class="shortMenu">
-				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm"><fmt:message key="KEY_FOOTER_CONTACT" /></a> 
-				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a>
-				<a href="http://www.cbs.nl/nl-NL/menu/home/default.htm">cbs.nl</a>
-			</div>
-			<div id="mainMenu" class="mainMenu">
-				<ul>
-					<li>
-						<c:url value="/index.jsp" var="indexLink">
-							<c:param name="coreonly" value="${param.coreonly}" />
-						</c:url>
-						<a href="${fn:escapeXml(indexLink)}" id="mainMenu_Home"><fmt:message key="KEY_MENU_HOME" /></a></li>
-					<li>
-						<c:url value="/about.jsp" var="aboutLink">
-							<c:param name="coreonly" value="${param.coreonly}" />
-						</c:url>
-						<a class="fancybox fancybox.ajax" href="${fn:escapeXml(aboutLink)}"><fmt:message key="KEY_MENU_ABOUT" /></a>
-					</li>
-					<li>
-						<c:url value="/faq.jsp" var="faqLink">
-							<c:param name="coreonly" value="${param.coreonly}" />
-						</c:url>
-						<a class="fancybox fancybox.ajax" href="${fn:escapeXml(faqLink)}"><fmt:message key="KEY_MENU_HELP" /></a>
-					</li>
-					<li>
-						<c:url value="/download.jsp" var="downloadLink">
-							<c:param name="coreonly" value="${param.coreonly}" />
-						</c:url>
-						<a class="fancybox fancybox.ajax" href="${fn:escapeXml(downloadLink)}"><fmt:message key="KEY_MENU_DOWNLOAD" /></a>
-					</li>
-					<!-- div id downloadlink contains image -->
-					<!--c:if test="${not empty downloadLink}">
-						<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD"><fmt:param value="${mapname}" /></fmt:message>
-						<li><a href="${fn:escapeXml(downloadLink)}"><c:out value="${linkText}" /></a></li>
-					</c:if-->
-				</ul>
-			</div>
+			
+			<jsp:include page="WEB-INF/jsp/sitemenu_include.jsp" />
+
+			<jsp:include page="WEB-INF/jsp/mainmenu_include.jsp" />
+			
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
 		</div>
 
