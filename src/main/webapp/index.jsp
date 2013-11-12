@@ -74,7 +74,7 @@
 </c:if>
 
 	<div class="page">
-		<div class="header">
+		<header class="header">
 			<div class="h1">
 				<c:url value="/index.jsp" var="indexLink">
 					<c:param name="coreonly" value="${param.coreonly}" />
@@ -90,9 +90,9 @@
 			<jsp:include page="WEB-INF/jsp/mainmenu_include.jsp" />
 			
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
-		</div>
+		</header>
 
-		<div id="inhoud">
+		<main id="inhoud">
 			<div class="pagetitle">
 				<h1 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h1>
 			</div>
@@ -144,7 +144,7 @@
 				</li>
 			</ul>
 			<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
-		</div>
+		</main>
 
 		<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
 	</div>
