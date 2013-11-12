@@ -15,7 +15,7 @@
 		<a href="#adres" class="skipLink"><fmt:message key="KEY_ZOEKEN" /></a>
 		<!-- eerste link in menubalk -->
 		<a href="#mainMenu_Home" class="skipLink"><fmt:message key="KEY_MAINMENU" /></a>
-		<!-- todo: #inhoud is niet focusable want een dvi, evt. programmatisch ondervangen 
+		<!-- todo: #inhoud is niet focusable want een div, evt. programmatisch ondervangen 
 			door met javascript een tabIndex toe te wijzen:
 				document.getElementById('inhoud').tabIndex = -1;
 		-->
