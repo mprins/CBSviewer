@@ -9,7 +9,7 @@
 
 	<fmt:setBundle basename="LabelsBundle" />
 
-	<div id="mainMenu" class="mainMenu">
+	<nav id="mainMenu" class="mainMenu">
 		<ul>
 			<li>
 				<c:url value="/index.jsp" var="indexLink">
@@ -47,11 +47,15 @@
 			<!-- div id downloadlink contains image -->
 			<!--c:if test="${not empty downloadLink}">
 					<fmt:message var="linkText" key="KEY_LINK_DOWNLOAD">
-					<fmt:param value="${mapname}" /></fmt:message>
-					<li><a href="${fn:escapeXml(downloadLink)}">
-					<c:out value="${linkText}" /></a></li>
-			</c:if-->
+						<fmt:param value="${mapname}" />
+					</fmt:message>
+					<li>
+						<a href="${fn:escapeXml(downloadLink)}">
+							<c:out value="${linkText}" />
+						</a>
+					</li>
+			< / c:if-->
 		</ul>
-	</div>
+	</nav>
 
 </jsp:root>
