@@ -22,7 +22,7 @@
 <script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="lib/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="js/cbsviewer.js"></script>
-<script type="text/javascript" id="language" charset="utf-8">]]>
+<script type="text/javascript" id="language">]]>
 	</jsp:text>
 
 	<!-- hiermee maken we de resourcebundle beschikbaar in het javascript deel van de applicatie -->
