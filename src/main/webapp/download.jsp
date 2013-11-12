@@ -18,7 +18,7 @@
 <title><fmt:message key="KEY_PAG_TITEL" /></title>
 </head>
 <body>
-	<div class="page smallpopup">
+	<section class="page smallpopup">
 		<h1>
 			<fmt:message key="KEY_PAG_TITEL" />
 		</h1>
@@ -72,7 +72,7 @@
 			<td>9 MB</td>
 		  </tr>
 		</table>
-	</div>
+	</section>
 	<c:if test="${param.coreonly==true}">
 		<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
 	</c:if>
