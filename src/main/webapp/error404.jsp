@@ -19,8 +19,10 @@
 </head>
 <body>
 	<jsp:include page="WEB-INF/jsp/debug_include.jsp" />
-	<jsp:include page="WEB-INF/jsp/sitemenu_include.jsp" />
-	<div class="page smallpopup">
+	<header>
+		<jsp:include page="WEB-INF/jsp/sitemenu_include.jsp" />
+	</header>
+	<section class="page smallpopup">
 		<h1>
 			<fmt:message key="KEY_ERROR_404_TITEL" />
 		</h1>
@@ -33,7 +35,7 @@
 			<li><fmt:message key="KEY_ERROR_404_OPLOSSING2" /></li>
 			<li><fmt:message key="KEY_ERROR_404_OPLOSSING3" /></li>
 		</ul>
-	</div>
+	</section>
 </body>
 	</html>
 </jsp:root>

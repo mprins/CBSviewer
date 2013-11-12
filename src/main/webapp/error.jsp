@@ -31,8 +31,10 @@
 </head>
 <body>
 	<jsp:include page="WEB-INF/jsp/debug_include.jsp" />
-	<jsp:include page="WEB-INF/jsp/sitemenu_include.jsp" />
-	<div class="page smallpopup">
+	<header>
+		<jsp:include page="WEB-INF/jsp/sitemenu_include.jsp" />
+	</header>
+	<section class="page smallpopup">
 		<h1>Systeemfout</h1>
 
 		<p class="error">
@@ -60,7 +62,7 @@
 				</code>
 			</p>
 		</c:if>
-	</div>
+	</section>
 </body>
 	</html>
 </jsp:root>
