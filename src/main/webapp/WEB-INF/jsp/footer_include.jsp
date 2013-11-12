@@ -6,18 +6,12 @@
 
 	<fmt:setBundle basename="LabelsBundle" />
 	<!-- 
-	include bestand met de header tags, 
+	include bestand met de footer tags, 
 	let op dat dit bestand vanuit de root van de webapplicatie wordt ingevoegd  
 	 -->
 	<jsp:text>
-		<div id="footerWrapper">	
+		<footer id="footerWrapper">	
 			<span class="introduction"><fmt:message key="KEY_COPYRIGHT" /></span>
-			<!--ul>
-				<li><a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm"><fmt:message key="KEY_FOOTER_CONTACT" /></a></li>
-				<li><a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a></li-->
-				<!--li><a href="http://www.cbs.nl"><fmt:message key="KEY_FOOTER_SITEMAP" /></a></li-->
-				<!--li class="goTop"><a href="#top"><span><fmt:message key="KEY_FOOTER_LINKTOP" /></span></a></li-->
-			<!--/ul-->
-		</div>
+		</footer>
 	</jsp:text>
 </jsp:root>
