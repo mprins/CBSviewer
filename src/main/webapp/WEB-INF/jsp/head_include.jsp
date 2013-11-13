@@ -9,31 +9,31 @@
 	 -->
 	<jsp:text>
 		<meta charset='utf-8' />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="dns-prefetch" href="http://geodata.nationaalgeoregister.nl/" />
 		<link rel="dns-prefetch" href="http://geodata1.nationaalgeoregister.nl/" />
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<meta name="DCTERMS.type" scheme="OVERHEID.Informatietype" content="webpagina" />
-		<meta name="DCTERMS.language" title="XSD.language" content="nl-NL"/>
-		<meta name="DCTERMS.spatial" scheme="OVERHEID.Koninkrijksdeel" content="Nederland" />
-		<meta name="DCTERMS.temporal" scheme="DCTERMS.Period" content="start=2008-03-12;" />
-		<meta name="DCTERMS.format" scheme="DCTERMS.IMT" content="text/html" />
-		<meta name="DCTERMS.audience" scheme="OVERHEIDsc.doelgroep" content="particulier" />
-		<meta name="DCTERMS.identifier" scheme="DCTERMS.URI" content="http://www.cbs.nl/" />
-		<meta name="DCTERMS.creator" scheme="OVERHEID.DienstAgentschapInstellingOfProject" content="CBS" />
+		<meta name="description" content="Kaart applicatie" />
+		
+		<!-- Dublin Core metadata tags geven fouten in sommige validators.. -->
+		<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+		<meta name="DCTERMS.type" content="Text" />
+		<meta name="DCTERMS.language" title="XSD.language" content="nl-NL" />
+		<meta name="DCTERMS.coverage" content="Nederland" />
+		<meta name="DCTERMS.temporal" content="start=2008-03-12;" />
+		<meta name="DCTERMS.format" content="text/html" />
+		<meta name="DCTERMS.audience" content="particulier" />
+		<meta name="DCTERMS.identifier" content="http://www.cbs.nl/" />
+		<meta name="DCTERMS.creator" content="CBS" />
 		<meta name="DCTERMS.modified" title="XSD.dateTime" content="2012-09-10" />
 		<meta name="DCTERMS.title" content="Documenten en publicaties - CBS.nl" />
-		<meta name="OVERHEID.accessibility" scheme="OVERHEID.toegankelijkheid" content="WCAG 2.0 Conformance Level A" />
 		<meta name="DCTERMS.description" content="Kaart applicatie" />
-		<meta name="description" content="Kaart applicatie" />
-
-		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-		<meta name="DC.format"    scheme="DCTERMS.IMT"     content="text/html" />
-		<meta name="DC.language"  scheme="DCTERMS.RFC3066" content="nl-NL" />
-		<meta name="DC.creator"   scheme="OVERHEID.dienstAgentschapInstellingOfProject" content="CBS" />
-		<meta name="DC.publisher" scheme="OVERHEID.dienstAgentschapInstellingOfProject" content="CBS" />
+		<meta name="DCTERMS.format" content="text/html" />
+		<meta name="DCTERMS.language" content="nl-NL" />
+		<meta name="DCTERMS.creator" content="CBS" />
+		<meta name="DCTERMS.publisher" content="CBS" />
 
 		<link rel="stylesheet" href="http://fonts.cbs.nl/cbs_vooruwbedrijf.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.min.css" type="text/css" media="screen" />
