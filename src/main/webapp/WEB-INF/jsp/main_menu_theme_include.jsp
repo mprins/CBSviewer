@@ -352,8 +352,7 @@
 				</li>
 				<li id="thememenu2">
 					<a href="#thememenu2" id="thememenu2Header" class="accordionheader"><fmt:message key="KEY_THEME_SUBTHEME" /><span><fmt:message key="KEY_THEME_SUBTHEME_TOOLTIP" /></span></a>
-					<div id="thememenu2Content" class="menuAccordionContent">
-					</div>
+					<div id="thememenu2Content" class="menuAccordionContent"><!-- leeg --></div>
 				</li>
 			</ul>
 		</div>
