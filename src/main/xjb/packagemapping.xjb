@@ -2,12 +2,16 @@
 <jxb:bindings version="2.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb">
 	<jxb:bindings schemaLocation="../xsd/AttributeValuesFilter.xsd">
 		<jxb:schemaBindings>
-			<jxb:package name="nl.mineleni.cbsviewer.servlet.wms.xml" />
+			<jxb:package name="nl.mineleni.cbsviewer.servlet.wms.xml">
+				<jxb:javadoc>WMS attribuut filter package</jxb:javadoc>
+			</jxb:package>
 		</jxb:schemaBindings>
 	</jxb:bindings>
 	<jxb:bindings schemaLocation="../xsd/AvailableLayers.xsd">
 		<jxb:schemaBindings>
-			<jxb:package name="nl.mineleni.cbsviewer.util.xml" />
+			<jxb:package name="nl.mineleni.cbsviewer.util.xml">
+				<jxb:javadoc>WMS lagen package</jxb:javadoc>
+			</jxb:package>
 		</jxb:schemaBindings>
 	</jxb:bindings>
 </jxb:bindings>
