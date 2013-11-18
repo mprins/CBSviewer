@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
+ */
 package nl.mineleni.openls.databinding.gml;
 
 import nl.mineleni.openls.XmlNamespaceConstants;
@@ -66,7 +72,7 @@ public class Pos implements XmlNamespaceConstants {
 	private boolean hasXY;
 
 	/** The has dimension. */
-	private boolean hasDimension;
+	private final boolean hasDimension;
 
 	/**
 	 * Instantiates a new pos.
@@ -198,7 +204,7 @@ public class Pos implements XmlNamespaceConstants {
 	@Override
 	public String toXML() {
 		String xml = "<" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX
-				+ ":Pos";
+				+ ":pos";
 		if (this.hasDimension()) {
 			xml += " dimension=\"" + this.getDimension() + "\"";
 		}
@@ -206,7 +212,7 @@ public class Pos implements XmlNamespaceConstants {
 		if (this.hasXY()) {
 			xml += this.getXY();
 		}
-		xml += "</" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + ":Pos>";
+		xml += "</" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX + ":pos>";
 		return xml;
 	}
 }

@@ -15,7 +15,7 @@ import java.util.Map.Entry;
 
 import nl.mineleni.openls.databinding.openls.GeocodeRequest;
 import nl.mineleni.openls.databinding.openls.GeocodeResponse;
-import nl.mineleni.openls.parser.OpenLSResponseParser;
+import nl.mineleni.openls.parser.OpenLSGeocodeResponseParser;
 
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
@@ -49,7 +49,7 @@ public class OpenLSClient {
 	/** de http client voor communicatie met de LUS. */
 	private final CloseableHttpClient client;
 	/** De open ls response parser. */
-	private final OpenLSResponseParser openLSResponseParser;
+	private final OpenLSGeocodeResponseParser openLSResponseParser;
 	/** http request configuratie. */
 	private RequestConfig requestConfig;
 
@@ -78,7 +78,7 @@ public class OpenLSClient {
 		} else {
 			LOGGER.info("Er wordt geen proxy ingesteld.");
 		}
-		this.openLSResponseParser = new OpenLSResponseParser();
+		this.openLSResponseParser = new OpenLSGeocodeResponseParser();
 	}
 
 	/**

@@ -29,14 +29,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The Class OpenLSRequestParserTest.
+ * The Class OpenLSGeocodeRequestParserTest.
  * 
  * @since 1.7
  */
-public class OpenLSRequestParserTest extends AbstractTestUtils {
+public class OpenLSGeocodeRequestParserTest extends AbstractTestUtils {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(OpenLSRequestParserTest.class);
+			.getLogger(OpenLSGeocodeRequestParserTest.class);
 
 	/**
 	 * Test open ls request parser. Iterate through the sample openls request
@@ -47,20 +47,21 @@ public class OpenLSRequestParserTest extends AbstractTestUtils {
 	 */
 	@Test
 	public void testOpenLSRequestParser() throws IOException {
-		final OpenLSRequestParser rp = new OpenLSRequestParser();
-		final File folder = new File("./target/test-classes/samplerequests/");
+		final OpenLSGeocodeRequestParser rp = new OpenLSGeocodeRequestParser();
+		final File folder = new File(
+				"./target/test-classes/samplerequests/geocode/");
 		final List<File> fileList = new ArrayList<>();
 		this.listDirectoryFilenames(folder, fileList);
 		final java.util.Iterator<File> fileIt = fileList.iterator();
 		while (fileIt.hasNext()) {
-			final String fileName = "/samplerequests/"
+			final String fileName = "/samplerequests/geocode/"
 					+ fileIt.next().getName();
 			final String requestString = this.readFileAsString(fileName);
 			final GeocodeRequest gcrq = rp.parseOpenLSRequest(requestString);
 			if (gcrq != null) {
 				LOGGER.info(gcrq.toXML());
 			}
-			assertNotNull(gcrq);
+			assertNotNull("Parsing bestand: " + fileName, gcrq);
 		}
 	}
 
@@ -111,7 +112,7 @@ public class OpenLSRequestParserTest extends AbstractTestUtils {
 		// create xml from response object
 		final String gcrXML = gcr.toXML();
 
-		final OpenLSRequestParser rp = new OpenLSRequestParser();
+		final OpenLSGeocodeRequestParser rp = new OpenLSGeocodeRequestParser();
 		final GeocodeRequest newgcr = rp.parseOpenLSRequest(gcrXML);
 		final String newgcrXML = newgcr.toXML();
 

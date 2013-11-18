@@ -8,13 +8,7 @@ package nl.mineleni.openls.parser;
 
 import java.io.IOException;
 import java.io.StringReader;
-import java.util.Stack;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-
-import nl.mineleni.openls.XmlNamespaceConstants;
 import nl.mineleni.openls.databinding.openls.Address;
 import nl.mineleni.openls.databinding.openls.Building;
 import nl.mineleni.openls.databinding.openls.GeocodeRequest;
@@ -28,52 +22,17 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
 /**
- * The Class OpenLSRequestParser.
+ * The Class OpenLSGeocodeRequestParser.
  * 
  * @since 1.7
  */
-public class OpenLSRequestParser extends DefaultHandler {
+public class OpenLSGeocodeRequestParser extends AbstractOpenLSParser {
 
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(OpenLSRequestParser.class);
-
-	/** The e val buf. */
-	private StringBuffer eValBuf;
-
-	/** The obj stack. */
-	private final Stack<XmlNamespaceConstants> objStack = new Stack<>();
-
-	/** The parser. */
-	private SAXParser parser;
-
-	/**
-	 * Instantiates a new open ls request parser.
-	 */
-	public OpenLSRequestParser() {
-		final SAXParserFactory factory = SAXParserFactory.newInstance();
-		factory.setValidating(false);
-		try {
-			this.parser = factory.newSAXParser();
-		} catch (final ParserConfigurationException | SAXException e) {
-			LOGGER.error("Configureren of maken van de saxparser is mislukt: ",
-					e);
-		}
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.xml.sax.helpers.DefaultHandler#characters(char[], int, int)
-	 */
-	@Override
-	public void characters(final char[] ch, final int start, final int length)
-			throws SAXException {
-		this.eValBuf.append(ch, start, length);
-	}
+			.getLogger(OpenLSGeocodeRequestParser.class);
 
 	/*
 	 * (non-Javadoc)

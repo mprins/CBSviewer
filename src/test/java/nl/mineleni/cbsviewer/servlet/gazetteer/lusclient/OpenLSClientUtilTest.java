@@ -9,7 +9,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
 import nl.mineleni.openls.databinding.openls.GeocodeResponse;
-import nl.mineleni.openls.parser.OpenLSResponseParser;
+import nl.mineleni.openls.parser.OpenLSGeocodeResponseParser;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -32,13 +32,16 @@ public class OpenLSClientUtilTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		final OpenLSResponseParser rp = new OpenLSResponseParser();
+		final OpenLSGeocodeResponseParser rp = new OpenLSGeocodeResponseParser();
 		byte[] buf = new byte[1024];
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		int numRead;
 
-		InputStream in = this.getClass().getClassLoader()
-				.getResourceAsStream("sampleresponses/openls-pointlist.xml");
+		InputStream in = this
+				.getClass()
+				.getClassLoader()
+				.getResourceAsStream(
+						"sampleresponses/geocode/openls-pointlist.xml");
 		while ((numRead = in.read(buf)) > 0) {
 			bos.write(buf, 0, numRead);
 		}
@@ -51,7 +54,7 @@ public class OpenLSClientUtilTest {
 				.getClass()
 				.getClassLoader()
 				.getResourceAsStream(
-						"sampleresponses/jacobstraat200utrecht.xml");
+						"sampleresponses/geocode/jacobstraat200utrecht.xml");
 		while ((numRead = in.read(buf)) > 0) {
 			bos.write(buf, 0, numRead);
 		}
