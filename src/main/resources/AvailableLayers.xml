@@ -127,6 +127,16 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten100m_inwoners_2013</id>
+	  <name>Aantal inwoners 2013 - Vierkant 100m</name>
+	  <layers>inwoners_2013</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_inw2013</styles>
+	  <attributes>inw2013</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2012</id>
 		<name>Aantal inwoners 2012 - Vierkant 100m</name>
 		<layers>inwoners_2012</layers>
@@ -256,6 +266,15 @@
 		<aliases>Aantal</aliases>
 		<zoom>9</zoom>
 	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_inwoners_2013</id>
+	  <name>Aantal inwoners 2013 - Vierkant 500m</name>
+	  <layers>inwoners_2013</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.inwoners_2013</styles>
+	  <attributes>inw2013</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>		
 	<Layerdescriptor>
 		<id>vierkanten500m_inwoners_2012</id>
 		<name>Aantal inwoners 2012 - Vierkant 500m</name>
@@ -490,6 +509,44 @@
 		<zoom>8</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten100m_i2012_014</id>
+	  <name>Aantal personen 0 tot 15 jaar 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_tot_15_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_014</styles>
+	  <attributes>i2012_014</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2011_014</id>
+	  <name>Aantal personen 0 tot 15 jaar 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_tot_15_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_014</styles>
+	  <attributes>i2011_014</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_014</id>
+	  <name>Aantal personen 0 tot 15 jaar 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_tot_15_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_014</styles>
+	  <attributes>i2012_014</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_014</id>
+	  <name>Aantal personen 0 tot 15 jaar 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_tot_15_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_014</styles>
+	  <attributes>i2011_014</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
 		<id>gemeenten2012_perc_personen_15_tot_25_jaar</id>
 		<name>Percentage personen 15 tot 25 jaar - Gemeenten 2012</name>
 		<layers>gemeenten2012</layers>
@@ -606,6 +663,44 @@
 		<zoom>8</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten100m_i2012_1524</id>
+	  <name>Aantal personen 15 tot 25 jaar 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_15_tot_25_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_1524</styles>
+	  <attributes>i2012_1524</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2011_1524</id>
+	  <name>Aantal personen 15 tot 25 jaar 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_15_tot_25_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_1524</styles>
+	  <attributes>i2011_1524</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_1524</id>
+	  <name>Aantal personen 15 tot 24 jaar 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_15_tot_25_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_1524</styles>
+	  <attributes>i2012_1524</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_1524</id>
+	  <name>Aantal personen 15 tot 24 jaar 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_15_tot_25_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_1524</styles>
+	  <attributes>i2011_1524</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>	
+	<Layerdescriptor>
 		<id>gemeenten2012_perc_personen_25_tot_45_jaar</id>
 		<name>Percentage personen 25 tot 45 jaar - Gemeenten 2012</name>
 		<layers>gemeenten2012</layers>
@@ -721,6 +816,44 @@
 		<aliases>Buurt, Percentage</aliases>
 		<zoom>8</zoom>
 	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2012_2544</id>
+	  <name>Aantal personen 25 tot 45 jaar 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_25_tot_45_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_2544</styles>
+	  <attributes>i2012_2544</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2011_2544</id>
+	  <name>Aantal personen 25 tot 45 jaar 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_25_tot_45_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_2544</styles>
+	  <attributes>i2011_2544</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_2544</id>
+	  <name>Aantal personen 25 tot 45 jaar 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_25_tot_45_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_2544</styles>
+	  <attributes>i2012_2544</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_2544</id>
+	  <name>Aantal personen 25 tot 45 jaar 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_25_tot_45_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_2544</styles>
+	  <attributes>i2011_2544</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>gemeenten2012_perc_personen_45_tot_65_jaar</id>
 		<name>Percentage personen 45 tot 65 jaar - Gemeenten 2012</name>
@@ -847,24 +980,43 @@
 		<aliases>Kern naam, Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_i2011_4564</id>
-		<name>Aantal personen 45 tot 65 jaar - Vierkant 100m</name>
-		<layers>inwoners_2011_45_tot_65_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_i2011_4564</styles>
-		<attributes>i2011_4564</attributes>
-		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_i2012_4564</id>
+	  <name>Aantal personen 45 tot 65 jaar 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_45_tot_65_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_4564</styles>
+	  <attributes>i2012_4564</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_i2011_4564</id>
-		<name>Aantal personen 45 tot 65 jaar - Vierkant 500m</name>
-		<layers>inwoners_2011_45_tot_65_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.i2011_4564</styles>
-		<attributes>i2011_4564</attributes>
-		<aliases>Aantal</aliases>
+	  <id>vierkanten100m_i2011_4564</id>
+	  <name>Aantal personen 45 tot 65 jaar 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_45_tot_65_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_4564</styles>
+	  <attributes>i2011_4564</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
 	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_4564</id>
+	  <name>Aantal personen 45 tot 65 jaar 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_45_tot_65_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_4564</styles>
+	  <attributes>i2012_4564</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_4564</id>
+	  <name>Aantal personen 45 tot 65 jaar 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_45_tot_65_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_4564</styles>
+	  <attributes>i2011_4564</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>gemeenten2012_perc_personen_65_jaar_en_ouder</id>
 		<name>Percentage personen 65 jaar en ouder - Gemeenten 2012</name>
@@ -991,23 +1143,42 @@
 		<aliases>Kern naam, Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_i2011_65pl</id>
-		<name>Aantal personen 65 jaar en ouder - Vierkant 100m</name>
-		<layers>inwoners_2011_65_plus_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_i2011_65PL</styles>
-		<attributes>i2011_65pl</attributes>
-		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_i2012_65pl</id>
+	  <name>Aantal personen 65 jaar en ouder 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_65_plus_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_65pl</styles>
+	  <attributes>i2012_65pl</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_i2011_65pl</id>
-		<name>Aantal personen 65 jaar en ouder - Vierkant 500m</name>
-		<layers>inwoners_2011_65_plus_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.i2011_65pl</styles>
-		<attributes>i2011_65pl</attributes>
-		<aliases>Aantal</aliases>
+	  <id>vierkanten100m_i2011_65pl</id>
+	  <name>Aantal personen 65 jaar en ouder 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_65_plus_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_65PL</styles>
+	  <attributes>i2011_65pl</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_65pl</id>
+	  <name>Aantal personen 65 jaar en ouder 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_65_plus_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_65pl</styles>
+	  <attributes>i2012_65pl</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_65pl</id>
+	  <name>Aantal personen 65 jaar en ouder 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_65_plus_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_65pl</styles>
+	  <attributes>i2011_65pl</attributes>
+	  <aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -1529,23 +1700,42 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_autochtonen_2011</id>
-		<name>Percentage autochtonen 2011 - Vierkant 100m</name>
-		<layers>autochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_p_auto2011</styles>
-		<attributes>p_auto2011</attributes>
-		<aliases>Percentage</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_autochtonen_2012</id>
+	  <name>Percentage autochtonen 2012 - Vierkant 100m</name>
+	  <layers>autochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_auto2012</styles>
+	  <attributes>p_auto2012</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>9</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_autochtonen_2011</id>
-		<name>Percentage autochtonen 2011 - Vierkant 500m</name>
-		<layers>autochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.p_auto2011</styles>
-		<attributes>p_auto2011</attributes>
-		<aliases>Percentage</aliases>
+	  <id>vierkanten100m_autochtonen_2011</id>
+	  <name>Percentage autochtonen 2011 - Vierkant 100m</name>
+	  <layers>autochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_auto2011</styles>
+	  <attributes>p_auto2011</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_autochtonen_2012</id>
+	  <name>Percentage autochtonen 2012 - Vierkant 500m</name>
+	  <layers>autochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_auto2012</styles>
+	  <attributes>p_auto2012</attributes>
+	  <aliases>Categorie</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_autochtonen_2011</id>
+	  <name>Percentage autochtonen 2011 - Vierkant 500m</name>
+	  <layers>autochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_auto2011</styles>
+	  <attributes>p_auto2011</attributes>
+	  <aliases>Categorie</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_percentage_niet_westerse_allochtonen</id>
@@ -1673,23 +1863,42 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_niet_westers_allochtonen_2011</id>
-		<name>Percentage niet-westerse allochtonen 2011 - Vierkant 100m</name>
-		<layers>niet_westerse_allochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_p_nwal2011</styles>
-		<attributes>p_nwal2011</attributes>
-		<aliases>Percentage</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_niet_westers_allochtonen_2012</id>
+	  <name>Percentage niet-westerse allochtonen 2012 - Vierkant 100m</name>
+	  <layers>niet_westerse_allochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_nwal2012</styles>
+	  <attributes>p_nwal2012</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>9</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_niet_westers_allochtonen_2011</id>
-		<name>Percentage niet-westerse allochtonen 2011 - Vierkant 500m</name>
-		<layers>niet_westerse_allochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.p_nwal2011</styles>
-		<attributes>p_nwal2011</attributes>
-		<aliases>Percentage</aliases>
+	  <id>vierkanten100m_niet_westers_allochtonen_2011</id>
+	  <name>Percentage niet-westerse allochtonen 2011 - Vierkant 100m</name>
+	  <layers>niet_westerse_allochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_nwal2011</styles>
+	  <attributes>p_nwal2011</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_niet_westers_allochtonen_2012</id>
+	  <name>Percentage niet-westerse allochtonen 2012 - Vierkant 500m</name>
+	  <layers>niet_westerse_allochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_nwal2012</styles>
+	  <attributes>p_nwal2012</attributes>
+	  <aliases>Categorie</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_niet_westers_allochtonen_2011</id>
+	  <name>Percentage niet-westerse allochtonen 2011 - Vierkant 500m</name>
+	  <layers>niet_westerse_allochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_nwal2011</styles>
+	  <attributes>p_nwal2011</attributes>
+	  <aliases>Categorie</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_percentage_westerse_allochtonen</id>
@@ -1817,23 +2026,42 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_westers_allochtonen_2011</id>
-		<name>Percentage westerse allochtonen 2011 - Vierkant 100m</name>
-		<layers>westerse_allochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_p_wal2011</styles>
-		<attributes>p_wal2011</attributes>
-		<aliases>Percentage</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_westers_allochtonen_2012</id>
+	  <name>Percentage westerse allochtonen 2012 - Vierkant 100m</name>
+	  <layers>westerse_allochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_wal2012</styles>
+	  <attributes>p_wal2012</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>9</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_westers_allochtonen_2011</id>
-		<name>Percentage westerse allochtonen 2011 - Vierkant 500m</name>
-		<layers>westerse_allochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.p_wal2011</styles>
-		<attributes>p_wal2011</attributes>
-		<aliases>Percentage</aliases>
+	  <id>vierkanten100m_westers_allochtonen_2011</id>
+	  <name>Percentage westerse allochtonen 2011 - Vierkant 100m</name>
+	  <layers>westerse_allochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_wal2011</styles>
+	  <attributes>p_wal2011</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_westers_allochtonen_2012</id>
+	  <name>Percentage westerse allochtonen 2012 - Vierkant 500m</name>
+	  <layers>westerse_allochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_wal2012</styles>
+	  <attributes>p_wal2012</attributes>
+	  <aliases>Categorie</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_westers_allochtonen_2011</id>
+	  <name>Percentage westerse allochtonen 2011 - Vierkant 500m</name>
+	  <layers>westerse_allochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_wal2011</styles>
+	  <attributes>p_wal2011</attributes>
+	  <aliases>Categorie</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_aantal_inkomensontvangers</id>
@@ -2338,6 +2566,16 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten100m_woningen_2012</id>
+	  <name>Woningvoorraad 2012 - Vierkant 100m</name>
+	  <layers>woningen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_won2012</styles>
+	  <attributes>won2012</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2011</id>
 		<name>Woningvoorraad 2011 - Vierkant 100m</name>
 		<layers>woningen_2011</layers>
@@ -2456,6 +2694,15 @@
 		<attributes>won2000</attributes>
 		<aliases>Aantal</aliases>
 		<zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_woningen_2012</id>
+	  <name>Woningvoorraad 2012 - Vierkant 500m</name>
+	  <layers>woningen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.won2012</styles>
+	  <attributes>won2012</attributes>
+	  <aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten500m_woningen_2011</id>
@@ -2662,6 +2909,16 @@
 		<aliases>Kern naam, x 1 000 euro</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten100m_gem_woz_waarde_woningen_2012</id>
+	  <name>Gemiddelde WOZ-waarde woning 2012 (Euro) - Vierkant 100m</name>
+	  <layers>gem_woz_waarde_woningen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_wozwon2012</styles>
+	  <attributes>wozwon2012</attributes>
+	  <aliases>x 1 000 euro</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
 		<id>vierkanten100m_gem_woz_waarde_woningen_2011</id>
 		<name>Gemiddelde WOZ-waarde woning 2011 (Euro) - Vierkant 100m</name>
 		<layers>gem_woz_waarde_woningen_2011</layers>
@@ -2670,6 +2927,15 @@
 		<attributes>wozwon2011</attributes>
 		<aliases>x 1 000 euro</aliases>
 		<zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_gem_woz_waarde_woningen_2012</id>
+	  <name>Gemiddelde WOZ-waarde woning 2012 (Euro) - Vierkant 500m</name>
+	  <layers>gem_woz_waarde_woningen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.wozwon2012</styles>
+	  <attributes>wozwon2012</attributes>
+	  <aliases>x 1 000 euro</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten500m_gem_woz_waarde_woningen_2011</id>
@@ -3708,6 +3974,15 @@
 		<aliases>Kern naam, OAD</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten500m_OAD2012</id>
+	  <name>Omgevingsadressendichtheid 2012 - Vierkant 500m</name>
+	  <layers>omgevings_adres_dichtheid_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.oad2012</styles>
+	  <attributes>oad2012</attributes>
+	  <aliases>Adressen per km2</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
 		<id>vierkanten500m_OAD2011</id>
 		<name>Omgevingsadressendichtheid 2011 - Vierkant 500m</name>
 		<layers>omgevings_adres_dichtheid_2011</layers>
@@ -3853,25 +4128,6 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_i2011_2044</id>
-		<name>Aantal personen 20 tot 45 jaar - Vierkant 100m</name>
-		<layers>inwoners_2011_20_tot_45_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_i2011_2044</styles>
-		<attributes>i2011_2044</attributes>
-		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
-	</Layerdescriptor>
-	<Layerdescriptor>
-		<id>vierkanten500m_i2011_2044</id>
-		<name>Aantal personen 20 tot 45 jaar - Vierkant 500m</name>
-		<layers>inwoners_2011_20_tot_45_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.i2011_2044</styles>
-		<attributes>i2011_2044</attributes>
-		<aliases>Aantal</aliases>
-	</Layerdescriptor>
-	<Layerdescriptor>
 		<id>bevolkingskern2008_saldo_binnenlandse_migratie</id>
 		<name>Saldo binnenlandse migratie - Bevolkingskern 2008</name>
 		<layers>cbsbevolkingskernen2008</layers>
@@ -4015,6 +4271,44 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten100m_mannen_2012</id>
+	  <name>Aantal mannen 2012 - Vierkant 100m</name>
+	  <layers>mannen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_man_2012</styles>
+	  <attributes>man_2012</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_mannen_2011</id>
+	  <name>Aantal mannen 2011 - Vierkant 100m</name>
+	  <layers>mannen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_man_2011</styles>
+	  <attributes>man_2011</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_mannen_2012</id>
+	  <name>Aantal mannen 2012 - Vierkant 500m</name>
+	  <layers>mannen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.man_2012</styles>
+	  <attributes>man_2012</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_mannen_2011</id>
+	  <name>Aantal mannen 2011 - Vierkant 500m</name>
+	  <layers>mannen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.man_2011</styles>
+	  <attributes>man_2011</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
 		<id>gemeenten2012_aantal_vrouwen</id>
 		<name>Aantal vrouwen - Gemeenten 2012</name>
 		<layers>gemeenten2012</layers>
@@ -4138,6 +4432,44 @@
 		<styles>bevolkingskern_aantal_vrouwen_2008</styles>
 		<attributes>kern_naam, bev08_vrw</attributes>
 		<aliases>Kern naam, Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_vrouwen_2012</id>
+	  <name>Aantal vrouwen 2012 - Vierkant 100m</name>
+	  <layers>vrouwen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_vrouw_2012</styles>
+	  <attributes>vrouw_2012</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_vrouwen_2011</id>
+	  <name>Aantal vrouwen 2011 - Vierkant 100m</name>
+	  <layers>vrouwen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_vrouw_2011</styles>
+	  <attributes>vrouw_2011</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>9</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_vrouwen_2012</id>
+	  <name>Aantal vrouwen 2012 - Vierkant 500m</name>
+	  <layers>vrouwen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.vrouw_2012</styles>
+	  <attributes>vrouw_2012</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_vrouwen_2011</id>
+	  <name>Aantal vrouwen 2011 - Vierkant 500m</name>
+	  <layers>vrouwen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.vrouw_2011</styles>
+	  <attributes>vrouw_2011</attributes>
+	  <aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_aantal_huishoudens</id>
@@ -5943,24 +6275,6 @@
 		<attributes>buurtnaam, motortweewielers_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
 		<zoom>8</zoom>
-	</Layerdescriptor>
-	<Layerdescriptor>
-		<id>bevolkingskern2008_oppervlakte_land</id>
-		<name>Oppervlakte land in ha - Bevolkingskern 2008</name>
-		<layers>cbsbevolkingskernen2008</layers>
-		<url>http://geodata.nationaalgeoregister.nl/bevolkingskernen2008/wms</url>
-		<styles>bevolkingskern_oppervlakte_land</styles>
-		<attributes>kern_naam, land08n</attributes>
-		<aliases>Kern naam, Hectaren</aliases>
-	</Layerdescriptor>
-	<Layerdescriptor>
-		<id>bevolkingskern2008_oppervlakte_water</id>
-		<name>Oppervlakte water in ha - Bevolkingskern 2008</name>
-		<layers>cbsbevolkingskernen2008</layers>
-		<url>http://geodata.nationaalgeoregister.nl/bevolkingskernen2008/wms</url>
-		<styles>bevolkingskern_oppervlakte_water</styles>
-		<attributes>kern_naam, water08n</attributes>
-		<aliases>Kern naam, Hectaren</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_percentage_gewassenbedrijven</id>

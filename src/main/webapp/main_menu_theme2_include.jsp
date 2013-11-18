@@ -50,6 +50,8 @@
 						<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_aantal_mannen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_aantal_mannen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_aantal_mannen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_aantal_mannen')}">2009</a></li>
 						<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_aantal_mannen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_aantal_mannen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_aantal_mannen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_aantal_mannen')}">2009</a></li>
 						<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_mannen_2008')}">2008</a></li>
+						<li>100m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_mannen_2012')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_mannen_2011')}">2011</a></li>
+						<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_mannen_2012')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_mannen_2011')}">2011</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Vrouwen<span><fmt:message key="KEY_TOOLTIP14" /></span></a>
@@ -58,6 +60,8 @@
 						<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_aantal_vrouwen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_aantal_vrouwen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_aantal_vrouwen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_aantal_vrouwen')}">2009</a></li>
 						<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_aantal_vrouwen')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_aantal_vrouwen')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_aantal_vrouwen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_aantal_vrouwen')}">2009</a></li>
 						<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_vrouwen_2008')}">2008</a></li>													
+						<li>100m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_vrouwen_2012')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_vrouwen_2011')}">2011</a></li>
+						<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_vrouwen_2012')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_vrouwen_2011')}">2011</a></li>
 					</ul>
 				</li>
 				
@@ -223,18 +227,6 @@
 						<li>Gemeente<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2012_aantal_motortweewielers')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2011_aantal_motortweewielers')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_aantal_motortweewielers')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_aantal_motortweewielers')}">2009</a></li>
 						<li>Wijk<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2012_aantal_motortweewielers')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2011_aantal_motortweewielers')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_aantal_motortweewielers')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_aantal_motortweewielers')}">2009</a></li>
 						<li>Buurt<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2012_aantal_motortweewielers')}">2012</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2011_aantal_motortweewielers')}">2011</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_aantal_motortweewielers')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_aantal_motortweewielers')}">2009</a></li>
-					</ul>
-				</li>
-
-				<li class="menuTitle">Oppervlakte</li>
-				<li><a href="#">Oppervlakte land<span><fmt:message key="KEY_TOOLTIP52" /></span></a>
-					<ul class="submenu">
-						<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_oppervlakte_land')}">2008</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Oppervlakte water<span><fmt:message key="KEY_TOOLTIP53" /></span></a>
-					<ul class="submenu">
-						<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_oppervlakte_water')}">2008</a></li>
 					</ul>
 				</li>
 		</ul>
