@@ -111,7 +111,7 @@
 		<!-- this can be any other OL build compressor or none -->
 		<openlayers.compress.build>closure</openlayers.compress.build>
 		<!-- Jetty 7 is J5EE, 2.5 servlet api, 1.2 JSP api -->
-		<jetty.version>7.6.13.v20130916</jetty.version>
+		<jetty.version>7.6.14.v20131031</jetty.version>
 		<!-- let op in een aantal integratie tests is deze poort hardcoded -->
 		<jetty.port>8021</jetty.port>
 		<jetty.stopPort>8007</jetty.stopPort>
