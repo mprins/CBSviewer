@@ -778,7 +778,7 @@
 								<debug>${debug}</debug>
 								<stylesheet>java</stylesheet>
 								<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -inferdep -useimports</additionalparam>
+								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -useimports</additionalparam>
 								<docletArtifact>
 									<groupId>org.umlgraph</groupId>
 									<artifactId>umlgraph</artifactId>
