@@ -428,6 +428,7 @@
 				<configuration>
 					<verbose>${debug}</verbose>
 					<includeSchemasOutputPath>.</includeSchemasOutputPath>
+					<npa>true</npa>
 				</configuration>
 			</plugin>
 			<plugin>
