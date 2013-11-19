@@ -67,7 +67,7 @@ public class OpenLSClientIntegrationTest extends AbstractTestUtils {
 	@Test
 	public void testDoPostOpenLSRequest() throws IOException {
 		final String requestString = this
-				.readFileAsString("/samplerequests/samplerequest.xml");
+				.readFileAsString("/samplerequests/geocode/samplerequest.xml");
 		final OpenLSGeocodeRequestParser rp = new OpenLSGeocodeRequestParser();
 		final GeocodeRequest gcreq = rp.parseOpenLSRequest(requestString);
 		final GeocodeResponse gcr = this.openLSClient.doPostOpenLSRequest(
