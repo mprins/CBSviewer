@@ -69,7 +69,8 @@ public class ReverseGeocodePreference implements XmlNamespaceConstants {
 	/**
 	 * set gewenste preference.
 	 * 
-	 * @param pref
+	 * @param preference
+	 *            de preference
 	 */
 	public void setPreference(String preference) {
 		this.preference = preference;
