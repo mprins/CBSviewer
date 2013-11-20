@@ -6,6 +6,7 @@
  */
 package nl.mineleni.cbsviewer.servlet.gazetteer.lusclient;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -17,10 +18,10 @@ import nl.mineleni.cbsviewer.util.StringConstants;
 import nl.mineleni.openls.AbstractTestUtils;
 import nl.mineleni.openls.databinding.openls.GeocodeRequest;
 import nl.mineleni.openls.databinding.openls.GeocodeResponse;
+import nl.mineleni.openls.databinding.openls.ReverseGeocodeResponse;
 import nl.mineleni.openls.parser.OpenLSGeocodeRequestParser;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -106,22 +107,19 @@ public class OpenLSClientIntegrationTest extends AbstractTestUtils {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	@Test
-	@Ignore
 	public void testDoPostReverseOpenLSRequestFreeForm()
 			throws java.io.IOException {
 		final String url = "http://openrouteservice.org/php/OpenLSLUS_Geocode.php";
 		final Map<String, String> openLSParams = new TreeMap<>();
-		// openLSParams.put(StringConstants.OPENLS_REQ_PARAM_REQUEST.code,
-		// StringConstants.OPENLS_REQ_VALUE_GEOCODE.code);
-		// openLSParams.put("_", "");
 		openLSParams.put("Lon", "8.6935537939344");
 		openLSParams.put("Lat", "49.409919381219");
-		openLSParams.put("MaxResponse", "3");
-		// final ReverseGeocodeResponse gcr = this.openLSClient
-		// .doPostOpenLSReverseGeocodeRequest(url, openLSParams);
-		// assertNotNull(gcr);
-		// assertNotNull(gcr.getReverseGeocodedLocation());
-		// assertEquals("Am Erlenbach", gcr.getReverseGeocodedLocation()
-		// .getAddress().getStreetAddress().getStreet().getStreet());
+		openLSParams.put("MaxResponse", "1");
+
+		final ReverseGeocodeResponse gcr = this.openLSClient
+				.doPostOpenLSReverseGeocodeRequest(url, openLSParams);
+		assertNotNull(gcr);
+		assertNotNull(gcr.getReverseGeocodedLocation());
+		assertEquals("Am Erlenbach", gcr.getReverseGeocodedLocation()
+				.getAddress().getStreetAddress().getStreet().getStreet());
 	}
 }
