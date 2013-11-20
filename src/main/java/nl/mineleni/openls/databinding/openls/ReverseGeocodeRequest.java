@@ -99,7 +99,9 @@ public class ReverseGeocodeRequest implements XmlNamespaceConstants {
 				+ XmlNamespaceConstants.OPENLS_NAMESPACE_SCHEMALOCATION + ">");
 
 		sb.append(position.toXML());
-		sb.append(reverseGeocodePreference.toXML());
+		if (null != reverseGeocodePreference) {
+			sb.append(reverseGeocodePreference.toXML());
+		}
 
 		sb.append("</" + XmlNamespaceConstants.OPENLS_NAMESPACE_PREFIX
 				+ ":ReverseGeocodeRequest>");
