@@ -72,7 +72,7 @@ public class Pos implements XmlNamespaceConstants {
 	private boolean hasXY;
 
 	/** The has dimension. */
-	private final boolean hasDimension;
+	private boolean hasDimension;
 
 	/**
 	 * Instantiates a new pos.
@@ -175,6 +175,7 @@ public class Pos implements XmlNamespaceConstants {
 	 *            the new dimension
 	 */
 	public void setDimension(int dimension) {
+		this.hasDimension = true;
 		this.dimension = dimension;
 	}
 
