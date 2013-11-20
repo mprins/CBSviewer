@@ -135,8 +135,8 @@ public class OpenLSGeocodeResponseParserTest extends AbstractTestUtils {
 		final GeocodeResponse newgcr = rp.parseOpenLSResponse(gcrXML);
 		final String newgcrXML = newgcr.toXML();
 
-		LOGGER.info(gcrXML);
-		LOGGER.info(newgcrXML);
+		LOGGER.debug(gcrXML);
+		LOGGER.debug(newgcrXML);
 
 		assertEquals(gcrXML, newgcrXML);
 	}
