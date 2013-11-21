@@ -817,11 +817,26 @@
 									</tag>
 									<tag>
 										<name>opt</name>
-										<placement>o</placement>
-										<head>opt:</head>
+										<placement>X</placement>
 									</tag>
 									<tag>
 										<name>composed</name>
+										<placement>X</placement>
+									</tag>
+									<tag>
+										<name>has</name>
+										<placement>X</placement>
+									</tag>
+									<tag>
+										<name>depend</name>
+										<placement>X</placement>
+									</tag>
+									<tag>
+										<name>assoc</name>
+										<placement>X</placement>
+									</tag>
+									<tag>
+										<name>extends</name>
 										<placement>X</placement>
 									</tag>
 								</tags>

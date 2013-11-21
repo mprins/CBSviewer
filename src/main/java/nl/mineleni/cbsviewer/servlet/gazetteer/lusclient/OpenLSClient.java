@@ -56,8 +56,10 @@ public class OpenLSClient {
 
 	/** de http client voor communicatie met de LUS. */
 	private final CloseableHttpClient client;
+
 	/** De open ls response parser. */
 	private final OpenLSGeocodeResponseParser openLSResponseParser;
+
 	/** http request configuratie. */
 	private RequestConfig requestConfig;
 

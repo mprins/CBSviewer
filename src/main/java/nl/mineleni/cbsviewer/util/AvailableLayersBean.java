@@ -30,6 +30,9 @@ import flexjson.transformer.AbstractTransformer;
  * 
  * @author mprins
  * @since 1.6
+ *
+ * @composed 1 - 1..* LayerDescriptor
+ * @has LayersList
  */
 public class AvailableLayersBean {
 
@@ -160,7 +163,7 @@ public class AvailableLayersBean {
 	}
 
 	/**
-	 * geeft de eerste layerdescriptor met de gevraagde naam, url.
+	 * geeft de eerste layerdescriptor met de gevraagde naam, url en styles.
 	 * 
 	 * @param queryLyrName
 	 *            de naam van de wms laag

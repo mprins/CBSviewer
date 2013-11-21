@@ -34,6 +34,7 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * 
  * @author mprins
  * @since 1.7
+ * @composed 1 - 0..* Pos
  */
 public class Point implements XmlNamespaceConstants {
 
@@ -42,7 +43,7 @@ public class Point implements XmlNamespaceConstants {
 	 */
 	private static final long serialVersionUID = -163863783181316506L;
 
-	/** The pos. */
+	/** position list. */
 	private final Vector<Pos> pos = new Vector<>();;
 
 	/** The srs name. */

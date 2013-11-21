@@ -25,6 +25,8 @@ import org.slf4j.LoggerFactory;
  * 
  * @author prinsmc
  * 
+ * @composed 1 - 0..* AttributeValueFilter
+ * @has FilterList
  */
 public class AttributeValuesFilter {
 
