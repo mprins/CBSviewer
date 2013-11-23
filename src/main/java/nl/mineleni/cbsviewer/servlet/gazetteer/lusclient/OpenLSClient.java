@@ -72,8 +72,8 @@ public class OpenLSClient {
 	 * {@code http.proxyHost} en {@code http.proxyPort}.
 	 */
 	public OpenLSClient() {
-		client = HttpClients.createSystem();
-		requestConfig = RequestConfig.custom()
+		this.client = HttpClients.createSystem();
+		this.requestConfig = RequestConfig.custom()
 				.setCookieSpec(CookieSpecs.IGNORE_COOKIES).build();
 
 		final String pHost = System.getProperty("http.proxyHost");
@@ -86,8 +86,8 @@ public class OpenLSClient {
 		if ((null != pHost) && (pPort > 0)) {
 			LOGGER.info("Instellen van proxy config: " + pHost + ":" + pPort);
 			final HttpHost proxy = new HttpHost(pHost, pPort, "http");
-			requestConfig = RequestConfig.copy(requestConfig).setProxy(proxy)
-					.build();
+			this.requestConfig = RequestConfig.copy(this.requestConfig)
+					.setProxy(proxy).build();
 		} else {
 			LOGGER.info("Er wordt geen proxy ingesteld.");
 		}
@@ -128,11 +128,11 @@ public class OpenLSClient {
 
 		try {
 			final HttpGet httpget = new HttpGet(qs.toString());
-			httpget.setConfig(requestConfig);
+			httpget.setConfig(this.requestConfig);
 			final HttpResponse getResp = this.client.execute(httpget);
 			if (getResp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(
-						getResp.getEntity()).trim();
+						getResp.getEntity(), "UTF-8").trim();
 				return this.openLSResponseParser
 						.parseOpenLSResponse(responseBody);
 			} else {
@@ -172,7 +172,7 @@ public class OpenLSClient {
 			final HttpResponse resp = this.client.execute(httppost);
 			if (resp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(
-						resp.getEntity()).trim();
+						resp.getEntity(), "UTF-8").trim();
 				return this.openLSResponseParser
 						.parseOpenLSResponse(responseBody);
 			} else {
@@ -220,7 +220,7 @@ public class OpenLSClient {
 			final HttpResponse resp = this.client.execute(httppost);
 			if (resp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(
-						resp.getEntity()).trim();
+						resp.getEntity(), "UTF-8").trim();
 				return this.openLSResponseParser
 						.parseOpenLSResponse(responseBody);
 			} else {
@@ -267,7 +267,7 @@ public class OpenLSClient {
 			final HttpResponse resp = this.client.execute(httppost);
 			if (resp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(
-						resp.getEntity()).trim();
+						resp.getEntity(), "UTF-8").trim();
 				return this.openLSReverseResponseParser
 						.parseOpenLSReverseGeocodeResponse(responseBody);
 			} else {

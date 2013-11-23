@@ -6,8 +6,11 @@
  */
 package nl.mineleni.cbsviewer.servlet.gazetteer.lusclient;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.equalToIgnoringCase;
+import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
@@ -101,14 +104,13 @@ public class OpenLSClientIntegrationTest extends AbstractTestUtils {
 
 	/**
 	 * Test open ls free form post such as openrouteservice.org. Test methode
-	 * voor {@link OpenLSClient#doPostOpenLSRequest(String, Map) }
+	 * voor {@link OpenLSClient#doPostOpenLSReverseGeocodeRequest(String, Map) }
 	 * 
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
 	@Test
-	public void testDoPostReverseOpenLSRequestFreeForm()
-			throws java.io.IOException {
+	public void testDoPostReverseOpenLSRequestFreeForm() throws IOException {
 		final String url = "http://openrouteservice.org/php/OpenLSLUS_Geocode.php";
 		final Map<String, String> openLSParams = new TreeMap<>();
 		openLSParams.put("Lon", "8.6935537939344");
@@ -119,7 +121,15 @@ public class OpenLSClientIntegrationTest extends AbstractTestUtils {
 				.doPostOpenLSReverseGeocodeRequest(url, openLSParams);
 		assertNotNull(gcr);
 		assertNotNull(gcr.getReverseGeocodedLocation());
-		assertEquals("Am Erlenbach", gcr.getReverseGeocodedLocation()
-				.getAddress().getStreetAddress().getStreet().getStreet());
+		assertThat(gcr.getReverseGeocodedLocation().getAddress()
+				.getCountryCode(), equalToIgnoringCase("de"));
+		assertThat(gcr.getReverseGeocodedLocation().getAddress()
+				.getPlaceByType("Municipality"), equalTo("Heidelberg"));
+		assertThat(gcr.getReverseGeocodedLocation().getAddress()
+				.getPlaceByType("CountrySubdivision"),
+				equalTo("Baden-Württemberg"));
+		assertThat(gcr.getReverseGeocodedLocation().getSearchCentreDistance()
+				.getValue(), greaterThan(0d));
+
 	}
 }

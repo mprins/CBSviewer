@@ -158,7 +158,9 @@ public class OpenLSReverseGeocodeResponseParser extends AbstractOpenLSParser {
 			final String data) {
 		this.objStack.clear();
 		try {
-			this.parser.parse(new InputSource(new StringReader(data)), this);
+			final InputSource input = new InputSource(new StringReader(data));
+			input.setEncoding("UTF-8");
+			this.parser.parse(input, this);
 		} catch (final SAXException | IOException e) {
 			LOGGER.error("OpenLS response XML verwerken is mislukt: " + data
 					+ ": ", e);
