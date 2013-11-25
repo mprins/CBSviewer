@@ -12,6 +12,9 @@
 	<fmt:message key="KEY_ADRESZOEKEN_PLACEHOLDER" 
 	var="key_adreszoeken_placeholder" />
 	
+	<fmt:message key="KEY_ADRESZOEKEN_SUBMIT" 
+	var="key_adreszoeken_submit" />
+	
 	<div id="zoekContainer">
 
 		<form method="get" action="adres" id="zoekFormulier" class="zoekinput">
