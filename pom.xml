@@ -89,7 +89,7 @@
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>10.1</geotools.version>
+		<geotools.version>10.2</geotools.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
@@ -111,7 +111,7 @@
 		<!-- this can be any other OL build compressor or none -->
 		<openlayers.compress.build>closure</openlayers.compress.build>
 		<!-- Jetty 7 is J5EE, 2.5 servlet api, 1.2 JSP api -->
-		<jetty.version>7.6.13.v20130916</jetty.version>
+		<jetty.version>7.6.14.v20131031</jetty.version>
 		<!-- let op in een aantal integratie tests is deze poort hardcoded -->
 		<jetty.port>8021</jetty.port>
 		<jetty.stopPort>8007</jetty.stopPort>
@@ -244,7 +244,7 @@
 										<setproxy proxyhost="${http.proxyHost}" 
 												  proxyport="${http.proxyPort}" />
 										<mkdir dir="${basedir}/cache" />
-										<get src="https://closure-compiler.googlecode.com/files/compiler-latest.zip" 
+										<get src="https://dl.google.com/closure-compiler/compiler-latest.zip" 
 											 dest="${basedir}/cache/" 
 											 usetimestamp="true" />
 										<unzip src="${basedir}/cache/compiler-latest.zip" 
@@ -338,7 +338,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.1</version>
+				<version>2.4.2</version>
 				<configuration>
 					<pushChanges>false</pushChanges>
 				</configuration>
@@ -428,6 +428,7 @@
 				<configuration>
 					<verbose>${debug}</verbose>
 					<includeSchemasOutputPath>.</includeSchemasOutputPath>
+					<npa>true</npa>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -589,7 +590,7 @@
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>yuicompressor-maven-plugin</artifactId>
-				<version>1.3.2</version>
+				<version>1.3.3</version>
 				<executions>
 					<execution>
 						<phase>process-classes</phase>
@@ -669,7 +670,7 @@
 			<plugin>
 				<groupId>com.github.timurstrekalov</groupId>
 				<artifactId>saga-maven-plugin</artifactId>
-				<version>1.5.1</version>
+				<version>1.5.2</version>
 				<executions>
 					<execution>
 						<goals>
@@ -722,7 +723,7 @@
 					<dependency>
 						<groupId>org.apache.maven.doxia</groupId>
 						<artifactId>doxia-module-markdown</artifactId>
-						<version>1.4</version>
+						<version>1.5</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -735,7 +736,7 @@
 						<plugin>
 							<groupId>org.owasp</groupId>
 							<artifactId>dependency-check-maven</artifactId>
-							<version>1.0.4</version>
+							<version>1.0.5</version>
 							<configuration>
 								<externalReport>false</externalReport>
 								<proxyUrl>${http.proxyHost}</proxyUrl>
@@ -778,7 +779,7 @@
 								<debug>${debug}</debug>
 								<stylesheet>java</stylesheet>
 								<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -inferdep -useimports</additionalparam>
+								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -useimports</additionalparam>
 								<docletArtifact>
 									<groupId>org.umlgraph</groupId>
 									<artifactId>umlgraph</artifactId>
@@ -816,11 +817,26 @@
 									</tag>
 									<tag>
 										<name>opt</name>
-										<placement>o</placement>
-										<head>opt:</head>
+										<placement>X</placement>
 									</tag>
 									<tag>
 										<name>composed</name>
+										<placement>X</placement>
+									</tag>
+									<tag>
+										<name>has</name>
+										<placement>X</placement>
+									</tag>
+									<tag>
+										<name>depend</name>
+										<placement>X</placement>
+									</tag>
+									<tag>
+										<name>assoc</name>
+										<placement>X</placement>
+									</tag>
+									<tag>
+										<name>extends</name>
 										<placement>X</placement>
 									</tag>
 								</tags>
@@ -892,7 +908,6 @@
 								<includeOpenIssues>false</includeOpenIssues>
 								<onlyMilestoneIssues>false</onlyMilestoneIssues>
 								<onlyCurrentVersion>false</onlyCurrentVersion>
-								<!-- <columnNames></columnNames> -->
 								<sortColumnNames>Fix Version DESC,Key DESC</sortColumnNames>
 							</configuration>
 							<reportSets>
@@ -906,7 +921,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-checkstyle-plugin</artifactId>
-							<version>2.10</version>
+							<version>2.11</version>
 							<configuration>
 								<configLocation>${basedir}/checkstyle-ruleset.xml</configLocation>
 								<suppressionsLocation>${basedir}/checkstyle-suppressions.xml</suppressionsLocation>

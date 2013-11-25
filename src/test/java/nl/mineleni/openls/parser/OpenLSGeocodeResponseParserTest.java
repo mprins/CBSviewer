@@ -16,9 +16,13 @@ import java.util.List;
 
 import nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtil;
 import nl.mineleni.openls.AbstractTestUtils;
+import nl.mineleni.openls.databinding.gml.Point;
+import nl.mineleni.openls.databinding.gml.Pos;
 import nl.mineleni.openls.databinding.openls.Address;
 import nl.mineleni.openls.databinding.openls.Building;
-import nl.mineleni.openls.databinding.openls.GeocodeRequest;
+import nl.mineleni.openls.databinding.openls.GeocodeResponse;
+import nl.mineleni.openls.databinding.openls.GeocodeResponseList;
+import nl.mineleni.openls.databinding.openls.GeocodedAddress;
 import nl.mineleni.openls.databinding.openls.Place;
 import nl.mineleni.openls.databinding.openls.PostalCode;
 import nl.mineleni.openls.databinding.openls.Street;
@@ -29,49 +33,50 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The Class OpenLSRequestParserTest.
+ * The Class OpenLSGeocodeResponseParserTest.
  * 
  * @since 1.7
  */
-public class OpenLSRequestParserTest extends AbstractTestUtils {
+public class OpenLSGeocodeResponseParserTest extends AbstractTestUtils {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(OpenLSRequestParserTest.class);
+			.getLogger(OpenLSGeocodeResponseParserTest.class);
 
 	/**
-	 * Test open ls request parser. Iterate through the sample openls request
-	 * files and try to extract a GeocodeRequest from them.
+	 * Test open ls request parser. Iterate through the sample openls response
+	 * files and try to extract a GeocodeResponse from them.
 	 * 
-	 * @throws IOException
+	 * @throws java.io.IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
 	@Test
-	public void testOpenLSRequestParser() throws IOException {
-		final OpenLSRequestParser rp = new OpenLSRequestParser();
-		final File folder = new File("./target/test-classes/samplerequests/");
+	public void testOpenLSResponseParser() throws IOException {
+		final OpenLSGeocodeResponseParser rp = new OpenLSGeocodeResponseParser();
+		final File folder = new File(
+				"./target/test-classes/sampleresponses/geocode/");
 		final List<File> fileList = new ArrayList<>();
 		this.listDirectoryFilenames(folder, fileList);
 		final java.util.Iterator<File> fileIt = fileList.iterator();
 		while (fileIt.hasNext()) {
-			final String fileName = "/samplerequests/"
+			final String fileName = "/sampleresponses/geocode/"
 					+ fileIt.next().getName();
-			final String requestString = this.readFileAsString(fileName);
-			final GeocodeRequest gcrq = rp.parseOpenLSRequest(requestString);
-			if (gcrq != null) {
-				LOGGER.info(gcrq.toXML());
+			final String responseString = this.readFileAsString(fileName);
+			final GeocodeResponse gcr = rp.parseOpenLSResponse(responseString);
+			if (gcr != null) {
+				LOGGER.info(gcr.toXML());
 			}
-			assertNotNull(gcrq);
+			assertNotNull("Parsing bestand: " + fileName, gcr);
 		}
 	}
 
 	/**
-	 * Test open ls request roundtrip.
+	 * Test open ls response roundtrip.
 	 * <ol>
-	 * <li>create an openls request</li>
+	 * <li>create an openls response</li>
 	 * <li>serialize it to xml string</li>
-	 * <li>use the request parser to deserialize the xml to a new openls request
-	 * object</li>
-	 * <li>serialize the new openls request object to xml string</li>
+	 * <li>use the response parser to deserialize the xml to a new openls</li>
+	 * response object</li>
+	 * <li>serialize the new openls object to xml string</li>
 	 * <li>check if the first xml string is the same as the second xml string</li>
 	 * </ol>
 	 * 
@@ -79,8 +84,13 @@ public class OpenLSRequestParserTest extends AbstractTestUtils {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	@Test
-	public void testOpenLSRequestRoundtrip() throws IOException {
-		final GeocodeRequest gcr = new GeocodeRequest();
+	public void testOpenLSResponseRoundtrip() throws IOException {
+		final GeocodeResponse gcr = new GeocodeResponse();
+
+		final GeocodeResponseList gcrl = new GeocodeResponseList();
+		gcrl.setNumberOfGeocodedAddresses(1);
+
+		final GeocodedAddress gca = new GeocodedAddress();
 
 		final Address address = new Address();
 
@@ -99,24 +109,34 @@ public class OpenLSRequestParserTest extends AbstractTestUtils {
 		final Street street = new Street();
 		street.setStreet("Kosterijland 78");
 
+		final Point point = new Point();
+		point.setSrsName("EPSG:28992");
+
+		final Pos pos = new Pos();
+		pos.setX(new Double(1234));
+		pos.setY(new Double(5678));
+
+		point.addPos(pos);
 		sa.setStreet(street);
 		sa.setBuilding(building);
 		address.setPostalCode(pc);
 		address.setCountryCode("NL");
 		address.addPlace(p);
 		address.setStreetAddress(sa);
-
-		gcr.addAddress(address);
+		gca.setAddress(address);
+		gca.setPoint(point);
+		gcrl.addGeocodedAddress(gca);
+		gcr.addGeocodeResponseList(gcrl);
 
 		// create xml from response object
 		final String gcrXML = gcr.toXML();
 
-		final OpenLSRequestParser rp = new OpenLSRequestParser();
-		final GeocodeRequest newgcr = rp.parseOpenLSRequest(gcrXML);
+		final OpenLSGeocodeResponseParser rp = new OpenLSGeocodeResponseParser();
+		final GeocodeResponse newgcr = rp.parseOpenLSResponse(gcrXML);
 		final String newgcrXML = newgcr.toXML();
 
-		LOGGER.info(gcrXML);
-		LOGGER.info(newgcrXML);
+		LOGGER.debug(gcrXML);
+		LOGGER.debug(newgcrXML);
 
 		assertEquals(gcrXML, newgcrXML);
 	}

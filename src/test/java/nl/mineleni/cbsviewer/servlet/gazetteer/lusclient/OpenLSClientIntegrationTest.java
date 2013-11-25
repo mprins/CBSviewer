@@ -6,7 +6,11 @@
  */
 package nl.mineleni.cbsviewer.servlet.gazetteer.lusclient;
 
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.equalToIgnoringCase;
+import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
@@ -17,7 +21,8 @@ import nl.mineleni.cbsviewer.util.StringConstants;
 import nl.mineleni.openls.AbstractTestUtils;
 import nl.mineleni.openls.databinding.openls.GeocodeRequest;
 import nl.mineleni.openls.databinding.openls.GeocodeResponse;
-import nl.mineleni.openls.parser.OpenLSRequestParser;
+import nl.mineleni.openls.databinding.openls.ReverseGeocodeResponse;
+import nl.mineleni.openls.parser.OpenLSGeocodeRequestParser;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -66,8 +71,8 @@ public class OpenLSClientIntegrationTest extends AbstractTestUtils {
 	@Test
 	public void testDoPostOpenLSRequest() throws IOException {
 		final String requestString = this
-				.readFileAsString("/samplerequests/samplerequest.xml");
-		final OpenLSRequestParser rp = new OpenLSRequestParser();
+				.readFileAsString("/samplerequests/geocode/samplerequest.xml");
+		final OpenLSGeocodeRequestParser rp = new OpenLSGeocodeRequestParser();
 		final GeocodeRequest gcreq = rp.parseOpenLSRequest(requestString);
 		final GeocodeResponse gcr = this.openLSClient.doPostOpenLSRequest(
 				"http://geodata.nationaalgeoregister.nl/geocoder/Geocoder",
@@ -97,4 +102,34 @@ public class OpenLSClientIntegrationTest extends AbstractTestUtils {
 		assertTrue(gcr.getGeocodeResponseListSize() > 0);
 	}
 
+	/**
+	 * Test open ls free form post such as openrouteservice.org. Test methode
+	 * voor {@link OpenLSClient#doPostOpenLSReverseGeocodeRequest(String, Map) }
+	 * 
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 */
+	@Test
+	public void testDoPostReverseOpenLSRequestFreeForm() throws IOException {
+		final String url = "http://openrouteservice.org/php/OpenLSLUS_Geocode.php";
+		final Map<String, String> openLSParams = new TreeMap<>();
+		openLSParams.put("Lon", "8.6935537939344");
+		openLSParams.put("Lat", "49.409919381219");
+		openLSParams.put("MaxResponse", "1");
+
+		final ReverseGeocodeResponse gcr = this.openLSClient
+				.doPostOpenLSReverseGeocodeRequest(url, openLSParams);
+		assertNotNull(gcr);
+		assertNotNull(gcr.getReverseGeocodedLocation());
+		assertThat(gcr.getReverseGeocodedLocation().getAddress()
+				.getCountryCode(), equalToIgnoringCase("de"));
+		assertThat(gcr.getReverseGeocodedLocation().getAddress()
+				.getPlaceByType("Municipality"), equalTo("Heidelberg"));
+		assertThat(gcr.getReverseGeocodedLocation().getAddress()
+				.getPlaceByType("CountrySubdivision"),
+				equalTo("Baden-Württemberg"));
+		assertThat(gcr.getReverseGeocodedLocation().getSearchCentreDistance()
+				.getValue(), greaterThan(0d));
+
+	}
 }

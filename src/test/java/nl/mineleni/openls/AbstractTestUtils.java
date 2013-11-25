@@ -1,8 +1,5 @@
-/*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+/**
  * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
  */
 package nl.mineleni.openls;
 
@@ -51,7 +48,8 @@ public class AbstractTestUtils {
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	protected String readFileAsString(final String filePath) throws IOException {
+	protected String readFileAsString(final String filePath)
+			throws java.io.IOException {
 		final URL url = this.getClass().getResource(filePath);
 		final File file = new File(url.getFile());
 		final byte[] buffer = new byte[(int) file.length()];

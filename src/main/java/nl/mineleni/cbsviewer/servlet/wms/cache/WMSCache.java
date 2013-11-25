@@ -44,7 +44,7 @@ public class WMSCache extends Cache<BoundingBox, CacheImage, BufferedImage> {
 	 *            the seconds to live
 	 * @throws IOException
 	 *             als de gevraagde directory niet schrijfbaar is.
-	 * @see WMSCache#WMSCache(String)
+	 * @see WMSCache#WMSCache(String, int)
 	 */
 	public WMSCache(final Map<BoundingBox, BufferedImage> cacheData,
 			final String cacheDir, final int maxSize, final int secondsToLive)
@@ -104,8 +104,9 @@ public class WMSCache extends Cache<BoundingBox, CacheImage, BufferedImage> {
 	 *            het object dat wordt opgeslagen in de cache
 	 * @param secondsToLive
 	 *            the seconds to live
-	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.Caching#put(org.opengis.geometry.BoundingBox
-	 *      , java.lang.String)
+	 * 
+	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.Caching#put(Object,
+	 *      Cachable)
 	 */
 	public void put(final BoundingBox bbox, final BufferedImage cacheValue,
 			final long secondsToLive) {

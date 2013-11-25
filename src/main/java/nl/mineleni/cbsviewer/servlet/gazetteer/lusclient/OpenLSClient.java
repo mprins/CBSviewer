@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
 package nl.mineleni.cbsviewer.servlet.gazetteer.lusclient;
 
 import static javax.servlet.http.HttpServletResponse.SC_OK;
@@ -15,7 +21,9 @@ import java.util.Map.Entry;
 
 import nl.mineleni.openls.databinding.openls.GeocodeRequest;
 import nl.mineleni.openls.databinding.openls.GeocodeResponse;
-import nl.mineleni.openls.parser.OpenLSResponseParser;
+import nl.mineleni.openls.databinding.openls.ReverseGeocodeResponse;
+import nl.mineleni.openls.parser.OpenLSGeocodeResponseParser;
+import nl.mineleni.openls.parser.OpenLSReverseGeocodeResponseParser;
 
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
@@ -48,10 +56,15 @@ public class OpenLSClient {
 
 	/** de http client voor communicatie met de LUS. */
 	private final CloseableHttpClient client;
+
 	/** De open ls response parser. */
-	private final OpenLSResponseParser openLSResponseParser;
+	private final OpenLSGeocodeResponseParser openLSResponseParser;
+
 	/** http request configuratie. */
 	private RequestConfig requestConfig;
+
+	/** De open ls response parser. */
+	private final OpenLSReverseGeocodeResponseParser openLSReverseResponseParser;
 
 	/**
 	 * Maakt een nieuwe instance van de LUS client. Stelt de http proxy in mits
@@ -59,8 +72,8 @@ public class OpenLSClient {
 	 * {@code http.proxyHost} en {@code http.proxyPort}.
 	 */
 	public OpenLSClient() {
-		client = HttpClients.createSystem();
-		requestConfig = RequestConfig.custom()
+		this.client = HttpClients.createSystem();
+		this.requestConfig = RequestConfig.custom()
 				.setCookieSpec(CookieSpecs.IGNORE_COOKIES).build();
 
 		final String pHost = System.getProperty("http.proxyHost");
@@ -73,12 +86,13 @@ public class OpenLSClient {
 		if ((null != pHost) && (pPort > 0)) {
 			LOGGER.info("Instellen van proxy config: " + pHost + ":" + pPort);
 			final HttpHost proxy = new HttpHost(pHost, pPort, "http");
-			requestConfig = RequestConfig.copy(requestConfig).setProxy(proxy)
-					.build();
+			this.requestConfig = RequestConfig.copy(this.requestConfig)
+					.setProxy(proxy).build();
 		} else {
 			LOGGER.info("Er wordt geen proxy ingesteld.");
 		}
-		this.openLSResponseParser = new OpenLSResponseParser();
+		this.openLSResponseParser = new OpenLSGeocodeResponseParser();
+		this.openLSReverseResponseParser = new OpenLSReverseGeocodeResponseParser();
 	}
 
 	/**
@@ -114,11 +128,11 @@ public class OpenLSClient {
 
 		try {
 			final HttpGet httpget = new HttpGet(qs.toString());
-			httpget.setConfig(requestConfig);
+			httpget.setConfig(this.requestConfig);
 			final HttpResponse getResp = this.client.execute(httpget);
 			if (getResp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(
-						getResp.getEntity()).trim();
+						getResp.getEntity(), "UTF-8").trim();
 				return this.openLSResponseParser
 						.parseOpenLSResponse(responseBody);
 			} else {
@@ -158,7 +172,7 @@ public class OpenLSClient {
 			final HttpResponse resp = this.client.execute(httppost);
 			if (resp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(
-						resp.getEntity()).trim();
+						resp.getEntity(), "UTF-8").trim();
 				return this.openLSResponseParser
 						.parseOpenLSResponse(responseBody);
 			} else {
@@ -206,9 +220,56 @@ public class OpenLSClient {
 			final HttpResponse resp = this.client.execute(httppost);
 			if (resp.getStatusLine().getStatusCode() == SC_OK) {
 				final String responseBody = EntityUtils.toString(
-						resp.getEntity()).trim();
+						resp.getEntity(), "UTF-8").trim();
 				return this.openLSResponseParser
 						.parseOpenLSResponse(responseBody);
+			} else {
+				LOGGER.error("OpenLS server get error response: "
+						+ resp.getStatusLine());
+			}
+
+		} catch (final UnsupportedEncodingException e) {
+			LOGGER.error("De gebruikte Java VM ondersteunt geen UTF-8 encoding: "
+					+ e);
+		} catch (final ClientProtocolException e) {
+			LOGGER.error(
+					"Versturen post request naar OpenLS server is mislukt: ", e);
+
+		} catch (final IOException e) {
+			LOGGER.error(
+					"Ontvangen get response van OpenLS server is mislukt: ", e);
+		}
+		return null;
+	}
+
+	/**
+	 * post a freeform open ls request. eg. to openrouteservice.org.
+	 * 
+	 * @param url
+	 *            the url
+	 * @param getParams
+	 *            the post params
+	 * @return the geocode response, will be null if something went wrong in the
+	 *         process of getting an openls response and parsing it
+	 */
+	public ReverseGeocodeResponse doPostOpenLSReverseGeocodeRequest(
+			final String url, final Map<String, String> getParams) {
+		final HttpPost httppost = new HttpPost(url);
+		try {
+			final List<NameValuePair> nvps = new ArrayList<>();
+			for (final Entry<String, String> getParam : getParams.entrySet()) {
+				nvps.add(new BasicNameValuePair(URLEncoder.encode(
+						getParam.getKey(), "UTF-8"), URLEncoder.encode(
+						(getParam.getValue()), "UTF-8")));
+			}
+			httppost.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
+
+			final HttpResponse resp = this.client.execute(httppost);
+			if (resp.getStatusLine().getStatusCode() == SC_OK) {
+				final String responseBody = EntityUtils.toString(
+						resp.getEntity(), "UTF-8").trim();
+				return this.openLSReverseResponseParser
+						.parseOpenLSReverseGeocodeResponse(responseBody);
 			} else {
 				LOGGER.error("OpenLS server get error response: "
 						+ resp.getStatusLine());

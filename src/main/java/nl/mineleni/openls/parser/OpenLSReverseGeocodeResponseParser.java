@@ -1,29 +1,17 @@
-/*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
- */
 package nl.mineleni.openls.parser;
 
 import java.io.IOException;
 import java.io.StringReader;
-import java.util.Stack;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-
-import nl.mineleni.openls.XmlNamespaceConstants;
 import nl.mineleni.openls.databinding.gml.Point;
 import nl.mineleni.openls.databinding.gml.Pos;
 import nl.mineleni.openls.databinding.openls.Address;
 import nl.mineleni.openls.databinding.openls.Building;
-import nl.mineleni.openls.databinding.openls.GeocodeResponse;
-import nl.mineleni.openls.databinding.openls.GeocodeResponseList;
-import nl.mineleni.openls.databinding.openls.GeocodedAddress;
 import nl.mineleni.openls.databinding.openls.Place;
 import nl.mineleni.openls.databinding.openls.PostalCode;
+import nl.mineleni.openls.databinding.openls.ReverseGeocodeResponse;
+import nl.mineleni.openls.databinding.openls.ReverseGeocodedLocation;
+import nl.mineleni.openls.databinding.openls.SearchCentreDistance;
 import nl.mineleni.openls.databinding.openls.Street;
 import nl.mineleni.openls.databinding.openls.StreetAddress;
 
@@ -32,52 +20,11 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
-/**
- * The Class OpenLSResponseParser.
- * 
- * @since 1.7
- */
-public class OpenLSResponseParser extends DefaultHandler {
-
+public class OpenLSReverseGeocodeResponseParser extends AbstractOpenLSParser {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(OpenLSResponseParser.class);
-
-	/** The e val buf. */
-	private StringBuffer eValBuf;
-
-	/** object stack. */
-	private final Stack<XmlNamespaceConstants> objStack = new Stack<>();
-
-	/** SAX parser. */
-	private SAXParser parser;
-
-	/**
-	 * Instantiates a new open ls response parser.
-	 */
-	public OpenLSResponseParser() {
-		final SAXParserFactory factory = SAXParserFactory.newInstance();
-		factory.setValidating(false);
-		try {
-			this.parser = factory.newSAXParser();
-		} catch (final ParserConfigurationException | SAXException e) {
-			LOGGER.error("Configureren of maken van de saxparser is mislukt: ",
-					e);
-		}
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.xml.sax.helpers.DefaultHandler#characters(char[], int, int)
-	 */
-	@Override
-	public void characters(final char[] ch, final int start, final int length)
-			throws SAXException {
-		this.eValBuf.append(ch, start, length);
-	}
+			.getLogger(OpenLSReverseGeocodeResponseParser.class);
 
 	/*
 	 * (non-Javadoc)
@@ -95,30 +42,25 @@ public class OpenLSResponseParser extends DefaultHandler {
 		} else {
 			eName = nsName[0];
 		}
+
 		switch (eName.toLowerCase()) {
-		case "geocoderesponselist":
-			final GeocodeResponseList gcResList = (GeocodeResponseList) (this.objStack
-					.pop());
-			if (this.objStack.peek().getClass() == new GeocodeResponse()
-					.getClass()) {
-				((GeocodeResponse) (this.objStack.peek()))
-						.addGeocodeResponseList(gcResList);
-			}
+		case "reversegeocoderesponse":
 			break;
-		case "geocodedaddress":
-			final GeocodedAddress gcaddress = (GeocodedAddress) (this.objStack
-					.pop());
-			if (this.objStack.peek().getClass() == new GeocodeResponseList()
+		case "reversegeocodedlocation":
+			final ReverseGeocodedLocation loc = (ReverseGeocodedLocation) this.objStack
+					.pop();
+			if (this.objStack.peek().getClass() == new ReverseGeocodeResponse()
 					.getClass()) {
-				((GeocodeResponseList) (this.objStack.peek()))
-						.addGeocodedAddress(gcaddress);
+				((ReverseGeocodeResponse) (this.objStack.peek()))
+						.setReverseGeocodedLocation(loc);
 			}
 			break;
 		case "point":
 			final Point point = (Point) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new GeocodedAddress()
+			if (this.objStack.peek().getClass() == new ReverseGeocodedLocation()
 					.getClass()) {
-				((GeocodedAddress) (this.objStack.peek())).setPoint(point);
+				((ReverseGeocodedLocation) (this.objStack.peek()))
+						.setPoint(point);
 			}
 			break;
 		case "pos":
@@ -130,9 +72,10 @@ public class OpenLSResponseParser extends DefaultHandler {
 			break;
 		case "address":
 			final Address address = (Address) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new GeocodedAddress()
+			if (this.objStack.peek().getClass() == new ReverseGeocodedLocation()
 					.getClass()) {
-				((GeocodedAddress) (this.objStack.peek())).setAddress(address);
+				((ReverseGeocodedLocation) (this.objStack.peek()))
+						.setAddress(address);
 			}
 			break;
 		case "streetaddress":
@@ -172,43 +115,57 @@ public class OpenLSResponseParser extends DefaultHandler {
 				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
 			break;
+		case "searchcentredistance":
+			final SearchCentreDistance dist = (SearchCentreDistance) (this.objStack
+					.pop());
+			if (this.objStack.peek().getClass() == new ReverseGeocodedLocation()
+					.getClass()) {
+				((ReverseGeocodedLocation) (this.objStack.peek()))
+						.setSearchCentreDistance(dist);
+			}
+			break;
 		default:
-			return;
+			break;
 		}
 	}
 
 	/**
-	 * Gets the geocode response.
+	 * Gets the reverse geocode response.
 	 * 
-	 * @return the geocode response
+	 * @return the reverse geocode response
 	 */
-	public GeocodeResponse getGeocodeResponse() {
-		GeocodeResponse geocodeResponse = null;
+	public ReverseGeocodeResponse getReverseGeocodeResponse() {
+		ReverseGeocodeResponse geocodeResponse = null;
 		if ((this.objStack.firstElement() != null)
-				&& (this.objStack.firstElement().getClass() == new GeocodeResponse()
+				&& (this.objStack.firstElement().getClass() == new ReverseGeocodeResponse()
 						.getClass())) {
-			geocodeResponse = (GeocodeResponse) this.objStack.firstElement();
+			geocodeResponse = (ReverseGeocodeResponse) this.objStack
+					.firstElement();
 		}
+		// LOGGER.debug(geocodeResponse.toXML());
 		return geocodeResponse;
 	}
 
 	/**
-	 * Parses the open ls response.
+	 * Parses the open ls reverse geocode response.
 	 * 
 	 * @param data
 	 *            the data which is an OpenLS response xml document
 	 * @return the geocode response object, will return null if parsing the data
 	 *         failed
 	 */
-	public GeocodeResponse parseOpenLSResponse(final String data) {
+	public ReverseGeocodeResponse parseOpenLSReverseGeocodeResponse(
+			final String data) {
 		this.objStack.clear();
 		try {
-			this.parser.parse(new InputSource(new StringReader(data)), this);
+			final InputSource input = new InputSource(new StringReader(data));
+			input.setEncoding("UTF-8");
+			this.parser.parse(input, this);
 		} catch (final SAXException | IOException e) {
 			LOGGER.error("OpenLS response XML verwerken is mislukt: " + data
 					+ ": ", e);
 		}
-		return this.getGeocodeResponse();
+		return this.getReverseGeocodeResponse();
 	}
 
 	/*
@@ -227,28 +184,16 @@ public class OpenLSResponseParser extends DefaultHandler {
 		if (nsName.length > 1) {
 			eName = nsName[1];
 		}
+
 		switch (eName.toLowerCase()) {
-		case "geocoderesponse":
-			this.objStack.push(new GeocodeResponse());
+		case "reversegeocoderesponse":
+			this.objStack.push(new ReverseGeocodeResponse());
 			break;
-		case "geocoderesponselist":
-			final GeocodeResponseList gcResList = new GeocodeResponseList();
-			this.objStack.push(gcResList);
-			for (int i = 0; i < attributes.getLength(); i++) {
-				final String key = attributes.getQName(i);
-				final String value = attributes.getValue(i);
-				if (key.equalsIgnoreCase("numberOfGeocodedAddresses")) {
-					final int val = Integer.parseInt(value);
-					gcResList.setNumberOfGeocodedAddresses(val);
-				}
-			}
-			break;
-		case "geocodedaddress":
-			this.objStack.push(new GeocodedAddress());
+		case "reversegeocodedlocation":
+			this.objStack.push(new ReverseGeocodedLocation());
 			break;
 		case "point":
 			final Point point = new Point();
-			this.objStack.push(point);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
@@ -256,10 +201,10 @@ public class OpenLSResponseParser extends DefaultHandler {
 					point.setSrsName(value);
 				}
 			}
+			this.objStack.push(point);
 			break;
 		case "pos":
 			final Pos pos = new Pos();
-			this.objStack.push(pos);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
@@ -267,38 +212,29 @@ public class OpenLSResponseParser extends DefaultHandler {
 					pos.setDimension(Integer.parseInt(value));
 				}
 			}
+			this.objStack.push(pos);
 			break;
 		case "address":
-			final Address address = new Address();
-			this.objStack.push(address);
+			final Address addr = new Address();
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase("countryCode")) {
-					address.setCountryCode(value);
+					addr.setCountryCode(value);
 				}
 			}
+			this.objStack.push(addr);
 			break;
 		case "streetaddress":
-			this.objStack.push(new StreetAddress());
-			break;
-		case "building":
-			final Building building = new Building();
-			this.objStack.push(building);
-			for (int i = 0; i < attributes.getLength(); i++) {
-				final String key = attributes.getQName(i);
-				final String value = attributes.getValue(i);
-				if (key.equalsIgnoreCase("number")) {
-					building.setNumber(value);
-				}
-			}
+			final StreetAddress strAddr = new StreetAddress();
+			this.objStack.push(strAddr);
 			break;
 		case "street":
-			this.objStack.push(new Street());
+			final Street street = new Street();
+			this.objStack.push(street);
 			break;
 		case "place":
 			final Place place = new Place();
-			this.objStack.push(place);
 			for (int i = 0; i < attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
@@ -306,12 +242,29 @@ public class OpenLSResponseParser extends DefaultHandler {
 					place.setType(value);
 				}
 			}
+			this.objStack.push(place);
 			break;
-		case "postalcode":
-			this.objStack.push(new PostalCode());
+		case "searchcentredistance":
+			final SearchCentreDistance dist = new SearchCentreDistance();
+			this.objStack.push(dist);
+			for (int i = 0; i < attributes.getLength(); i++) {
+				final String key = attributes.getQName(i);
+				final String value = attributes.getValue(i);
+				if (key.equalsIgnoreCase("uom")) {
+					dist.setUom(value);
+				}
+				if (key.equalsIgnoreCase("value")) {
+					dist.setValue(Double.parseDouble(value));
+				}
+				if (key.equalsIgnoreCase("accuracy")) {
+					dist.setAccuracy(Double.parseDouble(value));
+				}
+			}
 			break;
 		default:
-			return;
+			LOGGER.warn("Onbekend element '" + eName + "' wordt genegeerd.");
+			break;
 		}
 	}
+
 }

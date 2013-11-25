@@ -45,7 +45,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_inwoners</styles>
 		<attributes>gemeentenaam, aantal_inwoners</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_aantal_inwoners</id>
@@ -55,7 +55,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_inwoners</styles>
 		<attributes>gemeentenaam, aantal_inwoners</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_inwoners</id>
@@ -65,7 +65,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_inwoners</styles>
 		<attributes>gemeentenaam, aantal_inwoners</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_inwoners</id>
@@ -75,7 +75,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_inwoners</styles>
 		<attributes>gemeentenaam, aantal_inwoners</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_aantal_inwoners</id>
@@ -85,7 +85,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_inwoners</styles>
 		<attributes>buurtnaam, aantal_inwoners</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_inwoners</id>
@@ -95,7 +95,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_inwoners</styles>
 		<attributes>buurtnaam, aantal_inwoners</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_inwoners</id>
@@ -105,7 +105,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_inwoners</styles>
 		<attributes>buurtnaam, aantal_inwoners</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_inwoners</id>
@@ -115,7 +115,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_inwoners</styles>
 		<attributes>buurtnaam, aantal_inwoners</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_inwoners</id>
@@ -127,6 +127,16 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten100m_inwoners_2013</id>
+	  <name>Aantal inwoners 2013 - Vierkant 100m</name>
+	  <layers>inwoners_2013</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_inw2013</styles>
+	  <attributes>inw2013</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2012</id>
 		<name>Aantal inwoners 2012 - Vierkant 100m</name>
 		<layers>inwoners_2012</layers>
@@ -134,7 +144,7 @@
 		<styles>cbsvierkanten100m_inw2012</styles>
 		<attributes>inw2012</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2011</id>
@@ -144,7 +154,7 @@
 		<styles>cbsvierkanten100m_inw2011</styles>
 		<attributes>inw2011</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2010</id>
@@ -154,7 +164,7 @@
 		<styles>cbsvierkanten100m.inw2010</styles>
 		<attributes>inw2010</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2009</id>
@@ -164,7 +174,7 @@
 		<styles>cbsvierkanten100m_inw2009</styles>
 		<attributes>inw2009</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2008</id>
@@ -174,7 +184,7 @@
 		<styles>cbsvierkanten100m_inw2008</styles>
 		<attributes>inw2008</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2007</id>
@@ -184,7 +194,7 @@
 		<styles>cbsvierkanten100m_inw2007</styles>
 		<attributes>inw2007</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2006</id>
@@ -194,7 +204,7 @@
 		<styles>cbsvierkanten100m_inw2006</styles>
 		<attributes>inw2006</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2005</id>
@@ -204,7 +214,7 @@
 		<styles>cbsvierkanten100m_inw2005</styles>
 		<attributes>inw2005</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2004</id>
@@ -214,7 +224,7 @@
 		<styles>cbsvierkanten100m_inw2004</styles>
 		<attributes>inw2004</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2003</id>
@@ -224,7 +234,7 @@
 		<styles>cbsvierkanten100m_inw2003</styles>
 		<attributes>inw2003</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2002</id>
@@ -234,7 +244,7 @@
 		<styles>cbsvierkanten100m_inw2002</styles>
 		<attributes>inw2002</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2001</id>
@@ -244,7 +254,7 @@
 		<styles>cbsvierkanten100m_inw2001</styles>
 		<attributes>inw2001</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_inwoners_2000</id>
@@ -254,8 +264,17 @@
 		<styles>cbsvierkanten100m_inw2000</styles>
 		<attributes>inw2000</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_inwoners_2013</id>
+	  <name>Aantal inwoners 2013 - Vierkant 500m</name>
+	  <layers>inwoners_2013</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.inwoners_2013</styles>
+	  <attributes>inw2013</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>		
 	<Layerdescriptor>
 		<id>vierkanten500m_inwoners_2012</id>
 		<name>Aantal inwoners 2012 - Vierkant 500m</name>
@@ -417,7 +436,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_tot_15_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_0_tot_15_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_perc_personen_tot_15_jaar</id>
@@ -427,7 +446,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_tot_15_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_0_tot_15_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_perc_personen_tot_15_jaar</id>
@@ -437,7 +456,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_tot_15_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_0_tot_15_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_perc_personen_tot_15_jaar</id>
@@ -447,7 +466,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_tot_15_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_0_tot_15_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_perc_personen_tot_15_jaar</id>
@@ -457,7 +476,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_tot_15_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_0_tot_15_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_perc_personen_tot_15_jaar</id>
@@ -467,7 +486,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_tot_15_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_0_tot_15_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_perc_personen_tot_15_jaar</id>
@@ -477,7 +496,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_tot_15_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_0_tot_15_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_perc_personen_tot_15_jaar</id>
@@ -487,7 +506,45 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_tot_15_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_0_tot_15_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2012_014</id>
+	  <name>Aantal personen 0 tot 15 jaar 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_tot_15_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_014</styles>
+	  <attributes>i2012_014</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2011_014</id>
+	  <name>Aantal personen 0 tot 15 jaar 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_tot_15_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_014</styles>
+	  <attributes>i2011_014</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_014</id>
+	  <name>Aantal personen 0 tot 15 jaar 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_tot_15_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_014</styles>
+	  <attributes>i2012_014</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_014</id>
+	  <name>Aantal personen 0 tot 15 jaar 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_tot_15_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_014</styles>
+	  <attributes>i2011_014</attributes>
+	  <aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_perc_personen_15_tot_25_jaar</id>
@@ -533,7 +590,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_15_tot_25_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_15_tot_25_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_perc_personen_15_tot_25_jaar</id>
@@ -543,7 +600,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_15_tot_25_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_15_tot_25_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_perc_personen_15_tot_25_jaar</id>
@@ -553,7 +610,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_15_tot_25_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_15_tot_25_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_perc_personen_15_tot_25_jaar</id>
@@ -563,7 +620,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_15_tot_25_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_15_tot_25_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_perc_personen_15_tot_25_jaar</id>
@@ -573,7 +630,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_15_tot_25_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_15_tot_25_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_perc_personen_15_tot_25_jaar</id>
@@ -583,7 +640,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_15_tot_25_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_15_tot_25_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_perc_personen_15_tot_25_jaar</id>
@@ -593,7 +650,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_15_tot_25_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_15_tot_25_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_perc_personen_15_tot_25_jaar</id>
@@ -603,8 +660,46 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_15_tot_25_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_15_tot_25_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2012_1524</id>
+	  <name>Aantal personen 15 tot 25 jaar 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_15_tot_25_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_1524</styles>
+	  <attributes>i2012_1524</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2011_1524</id>
+	  <name>Aantal personen 15 tot 25 jaar 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_15_tot_25_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_1524</styles>
+	  <attributes>i2011_1524</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_1524</id>
+	  <name>Aantal personen 15 tot 24 jaar 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_15_tot_25_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_1524</styles>
+	  <attributes>i2012_1524</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_1524</id>
+	  <name>Aantal personen 15 tot 24 jaar 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_15_tot_25_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_1524</styles>
+	  <attributes>i2011_1524</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>gemeenten2012_perc_personen_25_tot_45_jaar</id>
 		<name>Percentage personen 25 tot 45 jaar - Gemeenten 2012</name>
@@ -649,7 +744,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_25_tot_45_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_25_tot_45_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_perc_personen_25_tot_45_jaar</id>
@@ -659,7 +754,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_25_tot_45_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_25_tot_45_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_perc_personen_25_tot_45_jaar</id>
@@ -669,7 +764,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_25_tot_45_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_25_tot_45_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_perc_personen_25_tot_45_jaar</id>
@@ -679,7 +774,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_25_tot_45_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_25_tot_45_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_perc_personen_25_tot_45_jaar</id>
@@ -689,7 +784,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_25_tot_45_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_25_tot_45_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_perc_personen_25_tot_45_jaar</id>
@@ -699,7 +794,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_25_tot_45_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_25_tot_45_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_perc_personen_25_tot_45_jaar</id>
@@ -709,7 +804,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_25_tot_45_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_25_tot_45_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_perc_personen_25_tot_45_jaar</id>
@@ -719,8 +814,46 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_25_tot_45_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_25_tot_45_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2012_2544</id>
+	  <name>Aantal personen 25 tot 45 jaar 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_25_tot_45_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_2544</styles>
+	  <attributes>i2012_2544</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_i2011_2544</id>
+	  <name>Aantal personen 25 tot 45 jaar 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_25_tot_45_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_2544</styles>
+	  <attributes>i2011_2544</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_2544</id>
+	  <name>Aantal personen 25 tot 45 jaar 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_25_tot_45_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_2544</styles>
+	  <attributes>i2012_2544</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_2544</id>
+	  <name>Aantal personen 25 tot 45 jaar 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_25_tot_45_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_2544</styles>
+	  <attributes>i2011_2544</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>gemeenten2012_perc_personen_45_tot_65_jaar</id>
 		<name>Percentage personen 45 tot 65 jaar - Gemeenten 2012</name>
@@ -765,7 +898,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_45_tot_65_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_45_tot_65_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_perc_personen_45_tot_65_jaar</id>
@@ -775,7 +908,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_45_tot_65_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_45_tot_65_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_perc_personen_45_tot_65_jaar</id>
@@ -785,7 +918,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_45_tot_65_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_45_tot_65_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_perc_personen_45_tot_65_jaar</id>
@@ -795,7 +928,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_45_tot_65_jaar</styles>
 		<attributes>gemeentenaam, percentage_personen_45_tot_65_jaar</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_perc_personen_45_tot_65_jaar</id>
@@ -805,7 +938,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_45_tot_65_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_45_tot_65_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_perc_personen_45_tot_65_jaar</id>
@@ -815,7 +948,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_45_tot_65_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_45_tot_65_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_perc_personen_45_tot_65_jaar</id>
@@ -825,7 +958,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_45_tot_65_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_45_tot_65_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_perc_personen_45_tot_65_jaar</id>
@@ -835,7 +968,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_45_tot_65_jaar</styles>
 		<attributes>buurtnaam, percentage_personen_45_tot_65_jaar</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_inwoners_45_tot_65_jaar</id>
@@ -847,24 +980,43 @@
 		<aliases>Kern naam, Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_i2011_4564</id>
-		<name>Aantal personen 45 tot 65 jaar - Vierkant 100m</name>
-		<layers>inwoners_2011_45_tot_65_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_i2011_4564</styles>
-		<attributes>i2011_4564</attributes>
-		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_i2012_4564</id>
+	  <name>Aantal personen 45 tot 65 jaar 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_45_tot_65_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_4564</styles>
+	  <attributes>i2012_4564</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_i2011_4564</id>
-		<name>Aantal personen 45 tot 65 jaar - Vierkant 500m</name>
-		<layers>inwoners_2011_45_tot_65_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.i2011_4564</styles>
-		<attributes>i2011_4564</attributes>
-		<aliases>Aantal</aliases>
+	  <id>vierkanten100m_i2011_4564</id>
+	  <name>Aantal personen 45 tot 65 jaar 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_45_tot_65_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_4564</styles>
+	  <attributes>i2011_4564</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
 	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_4564</id>
+	  <name>Aantal personen 45 tot 65 jaar 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_45_tot_65_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_4564</styles>
+	  <attributes>i2012_4564</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_4564</id>
+	  <name>Aantal personen 45 tot 65 jaar 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_45_tot_65_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_4564</styles>
+	  <attributes>i2011_4564</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>	
 	<Layerdescriptor>
 		<id>gemeenten2012_perc_personen_65_jaar_en_ouder</id>
 		<name>Percentage personen 65 jaar en ouder - Gemeenten 2012</name>
@@ -909,7 +1061,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_65_jaar_en_ouder</styles>
 		<attributes>gemeentenaam, percentage_personen_65_jaar_en_ouder</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_perc_personen_65_jaar_en_ouder</id>
@@ -919,7 +1071,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_65_jaar_en_ouder</styles>
 		<attributes>gemeentenaam, percentage_personen_65_jaar_en_ouder</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_perc_personen_65_jaar_en_ouder</id>
@@ -929,7 +1081,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_65_jaar_en_ouder</styles>
 		<attributes>gemeentenaam, percentage_personen_65_jaar_en_ouder</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_perc_personen_65_jaar_en_ouder</id>
@@ -939,7 +1091,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_personen_65_jaar_en_ouder</styles>
 		<attributes>gemeentenaam, percentage_personen_65_jaar_en_ouder</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_perc_personen_65_jaar_en_ouder</id>
@@ -949,7 +1101,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_65_jaar_en_ouder</styles>
 		<attributes>buurtnaam, percentage_personen_65_jaar_en_ouder</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_perc_personen_65_jaar_en_ouder</id>
@@ -959,7 +1111,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_65_jaar_en_ouder</styles>
 		<attributes>buurtnaam, percentage_personen_65_jaar_en_ouder</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_perc_personen_65_jaar_en_ouder</id>
@@ -969,7 +1121,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_65_jaar_en_ouder</styles>
 		<attributes>buurtnaam, percentage_personen_65_jaar_en_ouder</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_perc_personen_65_jaar_en_ouder</id>
@@ -979,7 +1131,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_personen_65_jaar_en_ouder</styles>
 		<attributes>buurtnaam, percentage_personen_65_jaar_en_ouder</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_inwoners_65_jaar_en_ouder</id>
@@ -991,23 +1143,42 @@
 		<aliases>Kern naam, Percentage</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_i2011_65pl</id>
-		<name>Aantal personen 65 jaar en ouder - Vierkant 100m</name>
-		<layers>inwoners_2011_65_plus_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_i2011_65PL</styles>
-		<attributes>i2011_65pl</attributes>
-		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_i2012_65pl</id>
+	  <name>Aantal personen 65 jaar en ouder 2012 - Vierkant 100m</name>
+	  <layers>inwoners_2012_65_plus_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2012_65pl</styles>
+	  <attributes>i2012_65pl</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_i2011_65pl</id>
-		<name>Aantal personen 65 jaar en ouder - Vierkant 500m</name>
-		<layers>inwoners_2011_65_plus_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.i2011_65pl</styles>
-		<attributes>i2011_65pl</attributes>
-		<aliases>Aantal</aliases>
+	  <id>vierkanten100m_i2011_65pl</id>
+	  <name>Aantal personen 65 jaar en ouder 2011 - Vierkant 100m</name>
+	  <layers>inwoners_2011_65_plus_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_i2011_65PL</styles>
+	  <attributes>i2011_65pl</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2012_65pl</id>
+	  <name>Aantal personen 65 jaar en ouder 2012 - Vierkant 500m</name>
+	  <layers>inwoners_2012_65_plus_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2012_65pl</styles>
+	  <attributes>i2012_65pl</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_i2011_65pl</id>
+	  <name>Aantal personen 65 jaar en ouder 2011 - Vierkant 500m</name>
+	  <layers>inwoners_2011_65_plus_jaar</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.i2011_65pl</styles>
+	  <attributes>i2011_65pl</attributes>
+	  <aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -1053,7 +1224,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
 		<attributes>gemeentenaam, bevolkingsdichtheid_inwoners_per_km2</attributes>
 		<aliases>Gemeente, Inwoners per km2</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -1063,7 +1234,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
 		<attributes>gemeentenaam, bevolkingsdichtheid_inwoners_per_km2</attributes>
 		<aliases>Gemeente, Inwoners per km2</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -1073,7 +1244,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
 		<attributes>gemeentenaam, bevolkingsdichtheid_inwoners_per_km2</attributes>
 		<aliases>Gemeente, Inwoners per km2</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -1083,7 +1254,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
 		<attributes>gemeentenaam, bevolkingsdichtheid_inwoners_per_km2</attributes>
 		<aliases>Gemeente, Inwoners per km2</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -1093,7 +1264,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
 		<attributes>buurtnaam, bevolkingsdichtheid_inwoners_per_km2</attributes>
 		<aliases>Buurt, Inwoners per km2</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -1103,7 +1274,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
 		<attributes>buurtnaam, bevolkingsdichtheid_inwoners_per_km2</attributes>
 		<aliases>Buurt, Inwoners per km2</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -1113,7 +1284,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
 		<attributes>buurtnaam, bevolkingsdichtheid_inwoners_per_km2</attributes>
 		<aliases>Buurt, Inwoners per km2</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_bevolkingsdichtheid_inwoners_per_km2</id>
@@ -1123,7 +1294,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_bevolkingsdichtheid_inwoners_per_km2</styles>
 		<attributes>buurtnaam, bevolkingsdichtheid_inwoners_per_km2</attributes>
 		<aliases>Buurt, Inwoners per km2</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_toename_inwoners_2000_2010</id>
@@ -1133,7 +1304,7 @@
 		<styles>cbsvierkanten100m_tinw_10_00</styles>
 		<attributes>tinw_10_00</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten500m_toename_inwoners_2000_2010</id>
@@ -1188,7 +1359,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_eenpersoonshuishoudens</styles>
 		<attributes>gemeentenaam, percentage_eenpersoonshuishoudens</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_percentage_eenpersoonshuishoudens</id>
@@ -1198,7 +1369,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_eenpersoonshuishoudens</styles>
 		<attributes>gemeentenaam, percentage_eenpersoonshuishoudens</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_eenpersoonshuishoudens</id>
@@ -1208,7 +1379,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_eenpersoonshuishoudens</styles>
 		<attributes>gemeentenaam, percentage_eenpersoonshuishoudens</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_eenpersoonshuishoudens</id>
@@ -1218,7 +1389,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_eenpersoonshuishoudens</styles>
 		<attributes>gemeentenaam, percentage_eenpersoonshuishoudens</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_percentage_eenpersoonshuishoudens</id>
@@ -1228,7 +1399,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_eenpersoonshuishoudens</styles>
 		<attributes>buurtnaam, percentage_eenpersoonshuishoudens</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_eenpersoonshuishoudens</id>
@@ -1238,7 +1409,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_eenpersoonshuishoudens</styles>
 		<attributes>buurtnaam, percentage_eenpersoonshuishoudens</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_eenpersoonshuishoudens</id>
@@ -1248,7 +1419,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_eenpersoonshuishoudens</styles>
 		<attributes>buurtnaam, percentage_eenpersoonshuishoudens</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_eenpersoonshuishoudens</id>
@@ -1258,7 +1429,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_eenpersoonshuishoudens</styles>
 		<attributes>buurtnaam, percentage_eenpersoonshuishoudens</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_inw_in_eenpersoonshuish</id>
@@ -1313,7 +1484,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huishoudens_zonder_kinderen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_zonder_kinderen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_percentage_huishoudens_zonder_kinderen</id>
@@ -1323,7 +1494,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huishoudens_zonder_kinderen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_zonder_kinderen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_huishoudens_zonder_kinderen</id>
@@ -1333,7 +1504,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huishoudens_zonder_kinderen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_zonder_kinderen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_huishoudens_zonder_kinderen</id>
@@ -1343,7 +1514,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huishoudens_zonder_kinderen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_zonder_kinderen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_percentage_huishoudens_zonder_kinderen</id>
@@ -1353,7 +1524,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huishoudens_zonder_kinderen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_zonder_kinderen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_huishoudens_zonder_kinderen</id>
@@ -1363,7 +1534,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huishoudens_zonder_kinderen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_zonder_kinderen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_huishoudens_zonder_kinderen</id>
@@ -1373,7 +1544,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huishoudens_zonder_kinderen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_zonder_kinderen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_huishoudens_zonder_kinderen</id>
@@ -1383,7 +1554,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huishoudens_zonder_kinderen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_zonder_kinderen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_inw_in_meerpers_huish_zonder_kin</id>
@@ -1438,7 +1609,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huishoudens_met_kinderen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_met_kinderen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_huishoudens_met_kinderen</id>
@@ -1448,7 +1619,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huishoudens_met_kinderen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_met_kinderen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_huishoudens_met_kinderen</id>
@@ -1458,7 +1629,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huishoudens_met_kinderen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_met_kinderen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_huishoudens_met_kinderen</id>
@@ -1468,7 +1639,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huishoudens_met_kinderen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_met_kinderen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_huishoudens_met_kinderen</id>
@@ -1478,7 +1649,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huishoudens_met_kinderen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_met_kinderen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_huishoudens_met_kinderen</id>
@@ -1488,7 +1659,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huishoudens_met_kinderen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_met_kinderen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_huishoudens_met_kinderen</id>
@@ -1498,7 +1669,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huishoudens_met_kinderen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_met_kinderen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_huishoudens_met_kinderen</id>
@@ -1508,7 +1679,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huishoudens_met_kinderen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_met_kinderen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_inw_in_meerpers_huish_met_kind</id>
@@ -1529,23 +1700,42 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_autochtonen_2011</id>
-		<name>Percentage autochtonen 2011 - Vierkant 100m</name>
-		<layers>autochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_p_auto2011</styles>
-		<attributes>p_auto2011</attributes>
-		<aliases>Percentage</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_autochtonen_2012</id>
+	  <name>Percentage autochtonen 2012 - Vierkant 100m</name>
+	  <layers>autochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_auto2012</styles>
+	  <attributes>p_auto2012</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_autochtonen_2011</id>
-		<name>Percentage autochtonen 2011 - Vierkant 500m</name>
-		<layers>autochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.p_auto2011</styles>
-		<attributes>p_auto2011</attributes>
-		<aliases>Percentage</aliases>
+	  <id>vierkanten100m_autochtonen_2011</id>
+	  <name>Percentage autochtonen 2011 - Vierkant 100m</name>
+	  <layers>autochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_auto2011</styles>
+	  <attributes>p_auto2011</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_autochtonen_2012</id>
+	  <name>Percentage autochtonen 2012 - Vierkant 500m</name>
+	  <layers>autochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_auto2012</styles>
+	  <attributes>p_auto2012</attributes>
+	  <aliases>Categorie</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_autochtonen_2011</id>
+	  <name>Percentage autochtonen 2011 - Vierkant 500m</name>
+	  <layers>autochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_auto2011</styles>
+	  <attributes>p_auto2011</attributes>
+	  <aliases>Categorie</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_percentage_niet_westerse_allochtonen</id>
@@ -1591,7 +1781,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_niet_westerse_allochtonen</styles>
 		<attributes>gemeentenaam, percentage_niet_westerse_allochtonen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_percentage_niet_westerse_allochtonen</id>
@@ -1601,7 +1791,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_niet_westerse_allochtonen</styles>
 		<attributes>gemeentenaam, percentage_niet_westerse_allochtonen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_niet_westerse_allochtonen</id>
@@ -1611,7 +1801,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_niet_westerse_allochtonen</styles>
 		<attributes>gemeentenaam, percentage_niet_westerse_allochtonen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_niet_westerse_allochtonen</id>
@@ -1621,7 +1811,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_niet_westerse_allochtonen</styles>
 		<attributes>gemeentenaam, percentage_niet_westerse_allochtonen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_percentage_niet_westerse_allochtonen</id>
@@ -1631,7 +1821,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_niet_westerse_allochtonen</styles>
 		<attributes>buurtnaam, percentage_niet_westerse_allochtonen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_niet_westerse_allochtonen</id>
@@ -1641,7 +1831,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_niet_westerse_allochtonen</styles>
 		<attributes>buurtnaam, percentage_niet_westerse_allochtonen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_niet_westerse_allochtonen</id>
@@ -1651,7 +1841,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_niet_westerse_allochtonen</styles>
 		<attributes>buurtnaam, percentage_niet_westerse_allochtonen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_niet_westerse_allochtonen</id>
@@ -1661,7 +1851,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_niet_westerse_allochtonen</styles>
 		<attributes>buurtnaam, percentage_niet_westerse_allochtonen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_niet_westerse_allochtonen</id>
@@ -1673,23 +1863,42 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_niet_westers_allochtonen_2011</id>
-		<name>Percentage niet-westerse allochtonen 2011 - Vierkant 100m</name>
-		<layers>niet_westerse_allochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_p_nwal2011</styles>
-		<attributes>p_nwal2011</attributes>
-		<aliases>Percentage</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_niet_westers_allochtonen_2012</id>
+	  <name>Percentage niet-westerse allochtonen 2012 - Vierkant 100m</name>
+	  <layers>niet_westerse_allochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_nwal2012</styles>
+	  <attributes>p_nwal2012</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_niet_westers_allochtonen_2011</id>
-		<name>Percentage niet-westerse allochtonen 2011 - Vierkant 500m</name>
-		<layers>niet_westerse_allochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.p_nwal2011</styles>
-		<attributes>p_nwal2011</attributes>
-		<aliases>Percentage</aliases>
+	  <id>vierkanten100m_niet_westers_allochtonen_2011</id>
+	  <name>Percentage niet-westerse allochtonen 2011 - Vierkant 100m</name>
+	  <layers>niet_westerse_allochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_nwal2011</styles>
+	  <attributes>p_nwal2011</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_niet_westers_allochtonen_2012</id>
+	  <name>Percentage niet-westerse allochtonen 2012 - Vierkant 500m</name>
+	  <layers>niet_westerse_allochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_nwal2012</styles>
+	  <attributes>p_nwal2012</attributes>
+	  <aliases>Categorie</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_niet_westers_allochtonen_2011</id>
+	  <name>Percentage niet-westerse allochtonen 2011 - Vierkant 500m</name>
+	  <layers>niet_westerse_allochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_nwal2011</styles>
+	  <attributes>p_nwal2011</attributes>
+	  <aliases>Categorie</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_percentage_westerse_allochtonen</id>
@@ -1735,7 +1944,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_westerse_allochtonen</styles>
 		<attributes>gemeentenaam, percentage_westerse_allochtonen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_percentage_westerse_allochtonen</id>
@@ -1745,7 +1954,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_westerse_allochtonen</styles>
 		<attributes>gemeentenaam, percentage_westerse_allochtonen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_westerse_allochtonen</id>
@@ -1755,7 +1964,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_westerse_allochtonen</styles>
 		<attributes>gemeentenaam, percentage_westerse_allochtonen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_westerse_allochtonen</id>
@@ -1765,7 +1974,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_westerse_allochtonen</styles>
 		<attributes>gemeentenaam, percentage_westerse_allochtonen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_percentage_westerse_allochtonen</id>
@@ -1775,7 +1984,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_westerse_allochtonen</styles>
 		<attributes>buurtnaam, percentage_westerse_allochtonen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_westerse_allochtonen</id>
@@ -1785,7 +1994,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_westerse_allochtonen</styles>
 		<attributes>buurtnaam, percentage_westerse_allochtonen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_westerse_allochtonen</id>
@@ -1795,7 +2004,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_westerse_allochtonen</styles>
 		<attributes>buurtnaam, percentage_westerse_allochtonen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_westerse_allochtonen</id>
@@ -1805,7 +2014,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_westerse_allochtonen</styles>
 		<attributes>buurtnaam, percentage_westerse_allochtonen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_westerse_allochtonen</id>
@@ -1817,23 +2026,42 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten100m_westers_allochtonen_2011</id>
-		<name>Percentage westerse allochtonen 2011 - Vierkant 100m</name>
-		<layers>westerse_allochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_p_wal2011</styles>
-		<attributes>p_wal2011</attributes>
-		<aliases>Percentage</aliases>
-		<zoom>9</zoom>
+	  <id>vierkanten100m_westers_allochtonen_2012</id>
+	  <name>Percentage westerse allochtonen 2012 - Vierkant 100m</name>
+	  <layers>westerse_allochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_wal2012</styles>
+	  <attributes>p_wal2012</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_westers_allochtonen_2011</id>
-		<name>Percentage westerse allochtonen 2011 - Vierkant 500m</name>
-		<layers>westerse_allochtonen_2011</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.p_wal2011</styles>
-		<attributes>p_wal2011</attributes>
-		<aliases>Percentage</aliases>
+	  <id>vierkanten100m_westers_allochtonen_2011</id>
+	  <name>Percentage westerse allochtonen 2011 - Vierkant 100m</name>
+	  <layers>westerse_allochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_p_wal2011</styles>
+	  <attributes>p_wal2011</attributes>
+	  <aliases>Categorie</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_westers_allochtonen_2012</id>
+	  <name>Percentage westerse allochtonen 2012 - Vierkant 500m</name>
+	  <layers>westerse_allochtonen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_wal2012</styles>
+	  <attributes>p_wal2012</attributes>
+	  <aliases>Categorie</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_westers_allochtonen_2011</id>
+	  <name>Percentage westerse allochtonen 2011 - Vierkant 500m</name>
+	  <layers>westerse_allochtonen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.p_wal2011</styles>
+	  <attributes>p_wal2011</attributes>
+	  <aliases>Categorie</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_aantal_inkomensontvangers</id>
@@ -1861,7 +2089,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_inkomensontvangers</styles>
 		<attributes>gemeentenaam, aantal_inkomensontvangers</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_inkomensontvangers</id>
@@ -1871,7 +2099,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_inkomensontvangers</styles>
 		<attributes>gemeentenaam, aantal_inkomensontvangers</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_inkomensontvangers</id>
@@ -1881,7 +2109,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_inkomensontvangers</styles>
 		<attributes>buurtnaam, aantal_inkomensontvangers</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_inkomensontvangers</id>
@@ -1891,7 +2119,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_inkomensontvangers</styles>
 		<attributes>buurtnaam, aantal_inkomensontvangers</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_gemiddeld_inkomen_inkomensontvanger</id>
@@ -1919,7 +2147,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_inkomen_inkomensontvanger</styles>
 		<attributes>gemeentenaam, gemiddeld_inkomen_per_inkomensontvanger</attributes>
 		<aliases>Gemeente, x 1 000 euro</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddeld_inkomen_inkomensontvanger</id>
@@ -1929,7 +2157,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_inkomen_inkomensontvanger</styles>
 		<attributes>gemeentenaam, gemiddeld_inkomen_per_inkomensontvanger</attributes>
 		<aliases>Gemeente, x 1 000 euro</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddeld_inkomen_inkomensontvanger</id>
@@ -1939,7 +2167,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_inkomen_inkomensontvanger</styles>
 		<attributes>buurtnaam, gemiddeld_inkomen_per_inkomensontvanger</attributes>
 		<aliases>Buurt, x 1 000 euro</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddeld_inkomen_inkomensontvanger</id>
@@ -1949,7 +2177,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_inkomen_inkomensontvanger</styles>
 		<attributes>buurtnaam, gemiddeld_inkomen_per_inkomensontvanger</attributes>
 		<aliases>Buurt, x 1 000 euro</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_percentage_personen_met_laag_inkomen</id>
@@ -1977,7 +2205,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_personen_met_laag_inkomen</styles>
 		<attributes>gemeentenaam, percentage_personen_met_laag_inkomen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_personen_met_laag_inkomen</id>
@@ -1987,7 +2215,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_personen_met_laag_inkomen</styles>
 		<attributes>gemeentenaam, percentage_personen_met_laag_inkomen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_personen_met_laag_inkomen</id>
@@ -1997,7 +2225,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_personen_met_laag_inkomen</styles>
 		<attributes>buurtnaam, percentage_personen_met_laag_inkomen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_personen_met_laag_inkomen</id>
@@ -2007,7 +2235,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_personen_met_laag_inkomen</styles>
 		<attributes>buurtnaam, percentage_personen_met_laag_inkomen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_percentage_personen_met_hoog_inkomen</id>
@@ -2035,7 +2263,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_personen_met_hoog_inkomen</styles>
 		<attributes>gemeentenaam, percentage_personen_met_hoog_inkomen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_personen_met_hoog_inkomen</id>
@@ -2045,7 +2273,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_personen_met_hoog_inkomen</styles>
 		<attributes>gemeentenaam, percentage_personen_met_hoog_inkomen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_personen_met_hoog_inkomen</id>
@@ -2055,7 +2283,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_personen_met_hoog_inkomen</styles>
 		<attributes>buurtnaam, percentage_personen_met_hoog_inkomen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_personen_met_hoog_inkomen</id>
@@ -2065,7 +2293,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_personen_met_hoog_inkomen</styles>
 		<attributes>buurtnaam, percentage_personen_met_hoog_inkomen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_perc_huish_met_laag_inkomen</id>
@@ -2093,7 +2321,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_huish_met_laag_inkomen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_met_laag_inkomen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_perc_huish_met_laag_inkomen</id>
@@ -2103,7 +2331,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_huish_met_laag_inkomen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_met_laag_inkomen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_perc_huish_met_laag_inkomen</id>
@@ -2113,7 +2341,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_huish_met_laag_inkomen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_met_laag_inkomen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_perc_huish_met_laag_inkomen</id>
@@ -2123,7 +2351,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_huish_met_laag_inkomen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_met_laag_inkomen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_perc_huish_met_hoog_inkomen</id>
@@ -2151,7 +2379,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_huish_met_hoog_inkomen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_met_hoog_inkomen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_perc_huish_met_hoog_inkomen</id>
@@ -2161,7 +2389,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_huish_met_hoog_inkomen</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_met_hoog_inkomen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_perc_huish_met_hoog_inkomen</id>
@@ -2171,7 +2399,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_huish_met_hoog_inkomen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_met_hoog_inkomen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_perc_huish_met_hoog_inkomen</id>
@@ -2181,7 +2409,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_huish_met_hoog_inkomen</styles>
 		<attributes>buurtnaam, percentage_huishoudens_met_hoog_inkomen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_percentage_huish_onder_rond_sociaal_min</id>
@@ -2209,7 +2437,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huish_onder_rond_sociaal_min</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_onder_of_rond_sociaal_minimum</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_huish_onder_rond_sociaal_min</id>
@@ -2219,7 +2447,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huish_onder_rond_sociaal_min</styles>
 		<attributes>gemeentenaam, percentage_huishoudens_onder_of_rond_sociaal_minimum</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_huish_onder_rond_sociaal_min</id>
@@ -2229,7 +2457,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huish_onder_rond_sociaal_min</styles>
 		<attributes>buurtnaam, percentage_huishoudens_onder_of_rond_sociaal_minimum</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_huish_onder_rond_sociaal_min</id>
@@ -2239,7 +2467,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huish_onder_rond_sociaal_min</styles>
 		<attributes>buurtnaam, percentage_huishoudens_onder_of_rond_sociaal_minimum</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_aantal_woningen</id>
@@ -2276,7 +2504,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_woningen</styles>
 		<attributes>gemeentenaam, woningvoorraad</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_woningen</id>
@@ -2286,7 +2514,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_woningen</styles>
 		<attributes>gemeentenaam, woningvoorraad</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_woningen</id>
@@ -2296,7 +2524,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_woningen</styles>
 		<attributes>gemeentenaam, woningvoorraad</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_woningen</id>
@@ -2306,7 +2534,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_woningen</styles>
 		<attributes>buurtnaam, woningvoorraad</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_woningen</id>
@@ -2316,7 +2544,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_woningen</styles>
 		<attributes>buurtnaam, woningvoorraad</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_woningen</id>
@@ -2326,7 +2554,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_woningen</styles>
 		<attributes>buurtnaam, woningvoorraad</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_woningen</id>
@@ -2338,6 +2566,16 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten100m_woningen_2012</id>
+	  <name>Woningvoorraad 2012 - Vierkant 100m</name>
+	  <layers>woningen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_won2012</styles>
+	  <attributes>won2012</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2011</id>
 		<name>Woningvoorraad 2011 - Vierkant 100m</name>
 		<layers>woningen_2011</layers>
@@ -2345,7 +2583,7 @@
 		<styles>cbsvierkanten100m_won2011</styles>
 		<attributes>won2011</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2010</id>
@@ -2355,7 +2593,7 @@
 		<styles>cbsvierkanten100m_won2010</styles>
 		<attributes>won2010</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2009</id>
@@ -2365,7 +2603,7 @@
 		<styles>cbsvierkanten100m_won2009</styles>
 		<attributes>won2009</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2008</id>
@@ -2375,7 +2613,7 @@
 		<styles>cbsvierkanten100m_won2008</styles>
 		<attributes>won2008</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2007</id>
@@ -2385,7 +2623,7 @@
 		<styles>cbsvierkanten100m_won2007</styles>
 		<attributes>won2007</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2006</id>
@@ -2395,7 +2633,7 @@
 		<styles>cbsvierkanten100m_won2006</styles>
 		<attributes>won2006</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2005</id>
@@ -2405,7 +2643,7 @@
 		<styles>cbsvierkanten100m_won2005</styles>
 		<attributes>won2005</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2004</id>
@@ -2415,7 +2653,7 @@
 		<styles>cbsvierkanten100m_won2004</styles>
 		<attributes>won2004</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2003</id>
@@ -2425,7 +2663,7 @@
 		<styles>cbsvierkanten100m_won2003</styles>
 		<attributes>won2003</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2002</id>
@@ -2435,7 +2673,7 @@
 		<styles>cbsvierkanten100m_won2002</styles>
 		<attributes>won2002</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2001</id>
@@ -2445,7 +2683,7 @@
 		<styles>cbsvierkanten100m_won2001</styles>
 		<attributes>won2001</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten100m_woningen_2000</id>
@@ -2455,7 +2693,16 @@
 		<styles>cbsvierkanten100m_won2000</styles>
 		<attributes>won2000</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_woningen_2012</id>
+	  <name>Woningvoorraad 2012 - Vierkant 500m</name>
+	  <layers>woningen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.won2012</styles>
+	  <attributes>won2012</attributes>
+	  <aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten500m_woningen_2011</id>
@@ -2600,7 +2847,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_WOZwoningwaarde</styles>
 		<attributes>gemeentenaam, gemiddelde_woningwaarde</attributes>
 		<aliases>Gemeente, x 1 000 euro</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_WOZwoningwaarde</id>
@@ -2610,7 +2857,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_WOZwoningwaarde</styles>
 		<attributes>gemeentenaam, gemiddelde_woningwaarde</attributes>
 		<aliases>Gemeente, x 1 000 euro</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_WOZwoningwaarde</id>
@@ -2620,7 +2867,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_WOZwoningwaarde</styles>
 		<attributes>gemeentenaam, gemiddelde_woningwaarde</attributes>
 		<aliases>Gemeente, x 1 000 euro</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_WOZwoningwaarde</id>
@@ -2630,7 +2877,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_WOZwoningwaarde</styles>
 		<attributes>buurtnaam, gemiddelde_woningwaarde</attributes>
 		<aliases>Buurt, x 1 000 euro</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_WOZwoningwaarde</id>
@@ -2640,7 +2887,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_WOZwoningwaarde</styles>
 		<attributes>buurtnaam, gemiddelde_woningwaarde</attributes>
 		<aliases>Buurt, x 1 000 euro</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_WOZwoningwaarde</id>
@@ -2650,7 +2897,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_WOZwoningwaarde</styles>
 		<attributes>buurtnaam, gemiddelde_woningwaarde</attributes>
 		<aliases>Buurt, x 1 000 euro</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_gemiddelde_WOZwoningwaarde</id>
@@ -2662,6 +2909,16 @@
 		<aliases>Kern naam, x 1 000 euro</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
+	  <id>vierkanten100m_gem_woz_waarde_woningen_2012</id>
+	  <name>Gemiddelde WOZ-waarde woning 2012 (Euro) - Vierkant 100m</name>
+	  <layers>gem_woz_waarde_woningen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_wozwon2012</styles>
+	  <attributes>wozwon2012</attributes>
+	  <aliases>x 1 000 euro</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
 		<id>vierkanten100m_gem_woz_waarde_woningen_2011</id>
 		<name>Gemiddelde WOZ-waarde woning 2011 (Euro) - Vierkant 100m</name>
 		<layers>gem_woz_waarde_woningen_2011</layers>
@@ -2669,7 +2926,16 @@
 		<styles>cbsvierkanten100m_wozwon2011</styles>
 		<attributes>wozwon2011</attributes>
 		<aliases>x 1 000 euro</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_gem_woz_waarde_woningen_2012</id>
+	  <name>Gemiddelde WOZ-waarde woning 2012 (Euro) - Vierkant 500m</name>
+	  <layers>gem_woz_waarde_woningen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.wozwon2012</styles>
+	  <attributes>wozwon2012</attributes>
+	  <aliases>x 1 000 euro</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten500m_gem_woz_waarde_woningen_2011</id>
@@ -2715,7 +2981,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_agrarische_bedrijven</styles>
 		<attributes>gemeentenaam, aantal_agrarische_bedrijven</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_agragrische_bedrijven</id>
@@ -2725,7 +2991,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_agrarische_bedrijven</styles>
 		<attributes>gemeentenaam, aantal_agrarische_bedrijven</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_agragrische_bedrijven</id>
@@ -2735,7 +3001,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_agrarische_bedrijven</styles>
 		<attributes>gemeentenaam, aantal_agrarische_bedrijven</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_agragrische_bedrijven</id>
@@ -2745,7 +3011,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_agrarische_bedrijven</styles>
 		<attributes>buurtnaam, aantal_agrarische_bedrijven</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_agragrische_bedrijven</id>
@@ -2755,7 +3021,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_agrarische_bedrijven</styles>
 		<attributes>buurtnaam, aantal_agrarische_bedrijven</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_agragrische_bedrijven</id>
@@ -2765,7 +3031,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_agrarische_bedrijven</styles>
 		<attributes>buurtnaam, aantal_agrarische_bedrijven</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_percentage_industrie</id>
@@ -2793,7 +3059,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_industrie</styles>
 		<attributes>gemeentenaam, percentage_industrie</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_industrie</id>
@@ -2803,7 +3069,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_industrie</styles>
 		<attributes>gemeentenaam, percentage_industrie</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_industrie</id>
@@ -2813,7 +3079,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_industrie</styles>
 		<attributes>buurtnaam, percentage_industrie</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_industrie</id>
@@ -2823,7 +3089,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_industrie</styles>
 		<attributes>buurtnaam, percentage_industrie</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_percentage_commerciele_dienstverlening</id>
@@ -2851,7 +3117,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_commerciele_dienstverlening</styles>
 		<attributes>gemeentenaam, percentage_commerciele_dienstverlening</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_commerciele_dienstverlening</id>
@@ -2861,7 +3127,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_commerciele_dienstverlening</styles>
 		<attributes>gemeentenaam, percentage_commerciele_dienstverlening</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_commerciele_dienstverlening</id>
@@ -2871,7 +3137,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_commerciele_dienstverlening</styles>
 		<attributes>buurtnaam, percentage_commerciele_dienstverlening</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_commerciele_dienstverlening</id>
@@ -2881,7 +3147,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_commerciele_dienstverlening</styles>
 		<attributes>buurtnaam, percentage_commerciele_dienstverlening</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_percentage_niet_commerciele_dienstverlening</id>
@@ -2909,7 +3175,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_niet_commerciele_dienstverlening</styles>
 		<attributes>gemeentenaam, percentage_niet_commerciele_dienstverlening</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_niet_commerciele_dienstverlening</id>
@@ -2919,7 +3185,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_niet_commerciele_dienstverlening</styles>
 		<attributes>gemeentenaam, percentage_niet_commerciele_dienstverlening</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_niet_commerciele_dienstverlening</id>
@@ -2929,7 +3195,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_niet_commerciele_dienstverlening</styles>
 		<attributes>buurtnaam, percentage_niet_commerciele_dienstverlening</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_niet_commerciele_dienstverlening</id>
@@ -2939,7 +3205,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_niet_commerciele_dienstverlening</styles>
 		<attributes>buurtnaam, percentage_niet_commerciele_dienstverlening</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_gemiddelde_afstand_tot_huisartspraktijk</id>
@@ -2958,7 +3224,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_huisartspraktijk</styles>
 		<attributes>gemeentenaam, huisartsenpraktijk_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_huisartspraktijk</id>
@@ -2968,7 +3234,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_huisartspraktijk</styles>
 		<attributes>buurtnaam, huisartsenpraktijk_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_gemiddelde_afstand_tot_huisartspraktijk</id>
@@ -3023,7 +3289,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</styles>
 		<attributes>gemeentenaam, ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</id>
@@ -3033,7 +3299,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</styles>
 		<attributes>gemeentenaam, ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</id>
@@ -3043,7 +3309,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</styles>
 		<attributes>gemeentenaam, ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</id>
@@ -3053,7 +3319,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</styles>
 		<attributes>buurtnaam, ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</id>
@@ -3063,7 +3329,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</styles>
 		<attributes>buurtnaam, ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</id>
@@ -3073,7 +3339,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_ziekenhuis_excl_buitenpoli</styles>
 		<attributes>buurtnaam, ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_gemiddelde_afstand_tot_ziekenhuis_excl_</id>
@@ -3119,7 +3385,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_kinderdagverblijf</styles>
 		<attributes>gemeentenaam, kinderdagverblijf_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_afstand_tot_kinderdagverblijf</id>
@@ -3129,7 +3395,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_kinderdagverblijf</styles>
 		<attributes>gemeentenaam, kinderdagverblijf_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_afstand_tot_kinderdagverblijf</id>
@@ -3139,7 +3405,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_kinderdagverblijf</styles>
 		<attributes>gemeentenaam, kinderdagverblijf_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_afstand_tot_kinderdagverblijf</id>
@@ -3149,7 +3415,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_kinderdagverblijf</styles>
 		<attributes>buurtnaam, kinderdagverblijf_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_afstand_tot_kinderdagverblijf</id>
@@ -3159,7 +3425,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_kinderdagverblijf</styles>
 		<attributes>buurtnaam, kinderdagverblijf_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_afstand_tot_kinderdagverblijf</id>
@@ -3169,7 +3435,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_kinderdagverblijf</styles>
 		<attributes>buurtnaam, kinderdagverblijf_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_gemiddelde_afstand_tot_kinderdagverblij</id>
@@ -3224,7 +3490,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_basisonderwijs</styles>
 		<attributes>gemeentenaam, basisonderwijs_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_afstand_tot_basisonderwijs</id>
@@ -3234,7 +3500,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_basisonderwijs</styles>
 		<attributes>gemeentenaam, basisonderwijs_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_afstand_tot_basisonderwijs</id>
@@ -3244,7 +3510,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_basisonderwijs</styles>
 		<attributes>gemeentenaam, basisonderwijs_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_afstand_tot_basisonderwijs</id>
@@ -3254,7 +3520,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_basisonderwijs</styles>
 		<attributes>buurtnaam, basisonderwijs_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_basisonderwijs</id>
@@ -3264,7 +3530,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_basisonderwijs</styles>
 		<attributes>buurtnaam, basisonderwijs_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_basisonderwijs</id>
@@ -3274,7 +3540,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_basisonderwijs</styles>
 		<attributes>buurtnaam, basisonderwijs_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_gemiddelde_afstand_tot_basisschool</id>
@@ -3320,7 +3586,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_VMBO_school</styles>
 		<attributes>gemeentenaam, vmbo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_afstand_tot_VMBO_school</id>
@@ -3330,7 +3596,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_VMBO_school</styles>
 		<attributes>gemeentenaam, vmbo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_afstand_tot_VMBO_school</id>
@@ -3340,7 +3606,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_VMBO_school</styles>
 		<attributes>gemeentenaam, vmbo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_afstand_tot_VMBO_school</id>
@@ -3350,7 +3616,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_VMBO_school</styles>
 		<attributes>buurtnaam, vmbo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_VMBO_school</id>
@@ -3360,7 +3626,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_VMBO_school</styles>
 		<attributes>buurtnaam, vmbo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_VMBO_school</id>
@@ -3370,7 +3636,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_VMBO_school</styles>
 		<attributes>buurtnaam, vmbo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_gemiddelde_afstand_tot_VMBO</id>
@@ -3416,7 +3682,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_HAVO_VWO_school</styles>
 		<attributes>gemeentenaam, havo_vwo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_afstand_tot_HAVO_VWO_school</id>
@@ -3426,7 +3692,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_HAVO_VWO_school</styles>
 		<attributes>gemeentenaam, havo_vwo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_afstand_tot_HAVO_VWO_school</id>
@@ -3436,7 +3702,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_HAVO_VWO_school</styles>
 		<attributes>gemeentenaam, havo_vwo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_afstand_tot_HAVO_VWO_school</id>
@@ -3446,7 +3712,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_HAVO_VWO_school</styles>
 		<attributes>buurtnaam, havo_vwo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_HAVO_VWO_school</id>
@@ -3456,7 +3722,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_HAVO_VWO_school</styles>
 		<attributes>buurtnaam, havo_vwo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_HAVO_VWO_school</id>
@@ -3466,7 +3732,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_HAVO_VWO_school</styles>
 		<attributes>buurtnaam, havo_vwo_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_gemiddelde_afstand_tot_HAVO_VWO</id>
@@ -3512,7 +3778,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_grote_supermarkt</styles>
 		<attributes>gemeentenaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_afstand_tot_grote_supermarkt</id>
@@ -3522,7 +3788,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_grote_supermarkt</styles>
 		<attributes>gemeentenaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_afstand_tot_grote_supermarkt</id>
@@ -3532,7 +3798,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_grote_supermarkt</styles>
 		<attributes>gemeentenaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_afstand_tot_grote_supermarkt</id>
@@ -3542,7 +3808,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_grote_supermarkt</styles>
 		<attributes>buurtnaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_grote_supermarkt</id>
@@ -3552,7 +3818,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_grote_supermarkt</styles>
 		<attributes>buurtnaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_grote_supermarkt</id>
@@ -3562,7 +3828,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_grote_supermarkt</styles>
 		<attributes>buurtnaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_gemiddelde_afstand_tot_grote_supermarkt</id>
@@ -3626,7 +3892,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
 		<aliases>Gemeente, OAD</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_omgevingsadressendichtheid</id>
@@ -3636,7 +3902,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
 		<aliases>Gemeente, OAD</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_omgevingsadressendichtheid</id>
@@ -3646,7 +3912,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
 		<aliases>Gemeente, OAD</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_omgevingsadressendichtheid</id>
@@ -3656,7 +3922,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>gemeentenaam, omgevingsadressendichtheid</attributes>
 		<aliases>Gemeente, OAD</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_omgevingsadressendichtheid</id>
@@ -3666,7 +3932,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>buurtnaam, omgevingsadressendichtheid</attributes>
 		<aliases>Buurt, OAD</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_omgevingsadressendichtheid</id>
@@ -3676,7 +3942,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>buurtnaam, omgevingsadressendichtheid</attributes>
 		<aliases>Buurt, OAD</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_omgevingsadressendichtheid</id>
@@ -3686,7 +3952,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>buurtnaam, omgevingsadressendichtheid</attributes>
 		<aliases>Buurt, OAD</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_omgevingsadressendichtheid</id>
@@ -3696,7 +3962,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>buurtnaam, omgevingsadressendichtheid</attributes>
 		<aliases>Buurt, OAD</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_omgevingsadressendichtheid_adres_km2</id>
@@ -3706,6 +3972,15 @@
 		<styles>bevolkingskern_omgevingsadressendichtheid_adres_km2</styles>
 		<attributes>kern_naam, oad</attributes>
 		<aliases>Kern naam, OAD</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_OAD2012</id>
+	  <name>Omgevingsadressendichtheid 2012 - Vierkant 500m</name>
+	  <layers>omgevings_adres_dichtheid_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.oad2012</styles>
+	  <attributes>oad2012</attributes>
+	  <aliases>Adressen per km2</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten500m_OAD2011</id>
@@ -3832,7 +4107,7 @@
 		<styles>cbsvierkanten100m_i2011_019</styles>
 		<attributes>i2011_019</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>vierkanten500m_i2011_019</id>
@@ -3851,25 +4126,6 @@
 		<styles>bevolkingskern_aantal_inwoners_20_tot_45_jaar</styles>
 		<attributes>kern_naam, bev_t20_44</attributes>
 		<aliases>Kern naam, Aantal</aliases>
-	</Layerdescriptor>
-	<Layerdescriptor>
-		<id>vierkanten100m_i2011_2044</id>
-		<name>Aantal personen 20 tot 45 jaar - Vierkant 100m</name>
-		<layers>inwoners_2011_20_tot_45_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
-		<styles>cbsvierkanten100m_i2011_2044</styles>
-		<attributes>i2011_2044</attributes>
-		<aliases>Aantal</aliases>
-		<zoom>9</zoom>
-	</Layerdescriptor>
-	<Layerdescriptor>
-		<id>vierkanten500m_i2011_2044</id>
-		<name>Aantal personen 20 tot 45 jaar - Vierkant 500m</name>
-		<layers>inwoners_2011_20_tot_45_jaar</layers>
-		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
-		<styles>cbsvierkanten500m.i2011_2044</styles>
-		<attributes>i2011_2044</attributes>
-		<aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_saldo_binnenlandse_migratie</id>
@@ -3933,7 +4189,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_mannen</styles>
 		<attributes>gemeentenaam, mannen</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_aantal_mannen</id>
@@ -3943,7 +4199,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_mannen</styles>
 		<attributes>gemeentenaam, mannen</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_mannen</id>
@@ -3953,7 +4209,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_mannen</styles>
 		<attributes>gemeentenaam, mannen</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_mannen</id>
@@ -3963,7 +4219,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_mannen</styles>
 		<attributes>mannen</attributes>
 		<aliases>Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_aantal_mannen</id>
@@ -3973,7 +4229,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_mannen</styles>
 		<attributes>buurtnaam, mannen</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_mannen</id>
@@ -3983,7 +4239,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_mannen</styles>
 		<attributes>buurtnaam, mannen</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_mannen</id>
@@ -3993,7 +4249,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_mannen</styles>
 		<attributes>buurtnaam, mannen</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_mannen</id>
@@ -4003,7 +4259,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_mannen</styles>
 		<attributes>buurtnaam, mannen</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_mannen_2008</id>
@@ -4013,6 +4269,44 @@
 		<styles>bevolkingskern_aantal_mannen_2008</styles>
 		<attributes>kern_naam, bev08_man</attributes>
 		<aliases>Kern naam, Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_mannen_2012</id>
+	  <name>Aantal mannen 2012 - Vierkant 100m</name>
+	  <layers>mannen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_man_2012</styles>
+	  <attributes>man_2012</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_mannen_2011</id>
+	  <name>Aantal mannen 2011 - Vierkant 100m</name>
+	  <layers>mannen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_man_2011</styles>
+	  <attributes>man_2011</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_mannen_2012</id>
+	  <name>Aantal mannen 2012 - Vierkant 500m</name>
+	  <layers>mannen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.man_2012</styles>
+	  <attributes>man_2012</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_mannen_2011</id>
+	  <name>Aantal mannen 2011 - Vierkant 500m</name>
+	  <layers>mannen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.man_2011</styles>
+	  <attributes>man_2011</attributes>
+	  <aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_aantal_vrouwen</id>
@@ -4058,7 +4352,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_vrouwen</styles>
 		<attributes>gemeentenaam, vrouwen</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_aantal_vrouwen</id>
@@ -4068,7 +4362,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_vrouwen</styles>
 		<attributes>gemeentenaam, vrouwen</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_vrouwen</id>
@@ -4078,7 +4372,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_vrouwen</styles>
 		<attributes>gemeentenaam, vrouwen</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_vrouwen</id>
@@ -4088,7 +4382,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_vrouwen</styles>
 		<attributes>gemeentenaam, vrouwen</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_aantal_vrouwen</id>
@@ -4098,7 +4392,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_vrouwen</styles>
 		<attributes>buurtnaam, vrouwen</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_vrouwen</id>
@@ -4108,7 +4402,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_vrouwen</styles>
 		<attributes>buurtnaam, vrouwen</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_vrouwen</id>
@@ -4118,7 +4412,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_vrouwen</styles>
 		<attributes>buurtnaam, vrouwen</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_vrouwen</id>
@@ -4128,7 +4422,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_vrouwen</styles>
 		<attributes>buurtnaam, vrouwen</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_vrouwen_2008</id>
@@ -4138,6 +4432,44 @@
 		<styles>bevolkingskern_aantal_vrouwen_2008</styles>
 		<attributes>kern_naam, bev08_vrw</attributes>
 		<aliases>Kern naam, Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_vrouwen_2012</id>
+	  <name>Aantal vrouwen 2012 - Vierkant 100m</name>
+	  <layers>vrouwen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_vrouw_2012</styles>
+	  <attributes>vrouw_2012</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten100m_vrouwen_2011</id>
+	  <name>Aantal vrouwen 2011 - Vierkant 100m</name>
+	  <layers>vrouwen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
+	  <styles>cbsvierkanten100m_vrouw_2011</styles>
+	  <attributes>vrouw_2011</attributes>
+	  <aliases>Aantal</aliases>
+	  <zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_vrouwen_2012</id>
+	  <name>Aantal vrouwen 2012 - Vierkant 500m</name>
+	  <layers>vrouwen_2012</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.vrouw_2012</styles>
+	  <attributes>vrouw_2012</attributes>
+	  <aliases>Aantal</aliases>
+	</Layerdescriptor>
+	<Layerdescriptor>
+	  <id>vierkanten500m_vrouwen_2011</id>
+	  <name>Aantal vrouwen 2011 - Vierkant 500m</name>
+	  <layers>vrouwen_2011</layers>
+	  <url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
+	  <styles>cbsvierkanten500m.vrouw_2011</styles>
+	  <attributes>vrouw_2011</attributes>
+	  <aliases>Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_aantal_huishoudens</id>
@@ -4183,7 +4515,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_huishoudens</styles>
 		<attributes>gemeentenaam, aantal_huishoudens</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_aantal_huishoudens</id>
@@ -4193,7 +4525,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_huishoudens</styles>
 		<attributes>gemeentenaam, aantal_huishoudens</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_huishoudens</id>
@@ -4203,7 +4535,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_huishoudens</styles>
 		<attributes>gemeentenaam, aantal_huishoudens</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_huishoudens</id>
@@ -4213,7 +4545,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_huishoudens</styles>
 		<attributes>gemeentenaam, aantal_huishoudens</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_aantal_huishoudens</id>
@@ -4223,7 +4555,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_huishoudens</styles>
 		<attributes>buurtnaam, aantal_huishoudens</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_huishoudens</id>
@@ -4233,7 +4565,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_huishoudens</styles>
 		<attributes>buurtnaam, aantal_huishoudens</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_huishoudens</id>
@@ -4243,7 +4575,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_huishoudens</styles>
 		<attributes>buurtnaam, aantal_huishoudens</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_huishoudens</id>
@@ -4253,7 +4585,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_huishoudens</styles>
 		<attributes>buurtnaam, aantal_huishoudens</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_percentage_ongehuwden</id>
@@ -4299,7 +4631,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_ongehuwden</styles>
 		<attributes>gemeentenaam, percentage_ongehuwd</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_percentage_ongehuwden</id>
@@ -4309,7 +4641,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_ongehuwden</styles>
 		<attributes>gemeentenaam, percentage_ongehuwd</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_ongehuwden</id>
@@ -4319,7 +4651,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_ongehuwden</styles>
 		<attributes>gemeentenaam, percentage_ongehuwd</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_ongehuwden</id>
@@ -4329,7 +4661,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_ongehuwden</styles>
 		<attributes>gemeentenaam, percentage_ongehuwd</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_percentage_ongehuwden</id>
@@ -4339,7 +4671,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_ongehuwden</styles>
 		<attributes>buurtnaam, percentage_ongehuwd</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_ongehuwden</id>
@@ -4349,7 +4681,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_ongehuwden</styles>
 		<attributes>buurtnaam, percentage_ongehuwd</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_ongehuwden</id>
@@ -4359,7 +4691,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_ongehuwden</styles>
 		<attributes>buurtnaam, percentage_ongehuwd</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_ongehuwden</id>
@@ -4369,7 +4701,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_ongehuwden</styles>
 		<attributes>buurtnaam, percentage_ongehuwd</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_percentage_gehuwden</id>
@@ -4415,7 +4747,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gehuwden</styles>
 		<attributes>gemeentenaam, percentage_gehuwd</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_percentage_gehuwden</id>
@@ -4425,7 +4757,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gehuwden</styles>
 		<attributes>gemeentenaam, percentage_gehuwd</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_gehuwden</id>
@@ -4435,7 +4767,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gehuwden</styles>
 		<attributes>gemeentenaam, percentage_gehuwd</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_gehuwden</id>
@@ -4445,7 +4777,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gehuwden</styles>
 		<attributes>gemeentenaam, percentage_gehuwd</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_percentage_gehuwden</id>
@@ -4455,7 +4787,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gehuwden</styles>
 		<attributes>buurtnaam, percentage_gehuwd</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_gehuwden</id>
@@ -4465,7 +4797,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gehuwden</styles>
 		<attributes>buurtnaam, percentage_gehuwd</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_gehuwden</id>
@@ -4475,7 +4807,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gehuwden</styles>
 		<attributes>buurtnaam, percentage_gehuwd</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_gehuwden</id>
@@ -4485,7 +4817,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gehuwden</styles>
 		<attributes>buurtnaam, percentage_gehuwd</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_percentage_gescheiden</id>
@@ -4531,7 +4863,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gescheiden</styles>
 		<attributes>gemeentenaam, percentage_gescheid</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_percentage_gescheiden</id>
@@ -4541,7 +4873,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gescheiden</styles>
 		<attributes>gemeentenaam, percentage_gescheid</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_gescheiden</id>
@@ -4551,7 +4883,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gescheiden</styles>
 		<attributes>gemeentenaam, percentage_gescheid</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_gescheiden</id>
@@ -4561,7 +4893,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gescheiden</styles>
 		<attributes>gemeentenaam, percentage_gescheid</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_percentage_gescheiden</id>
@@ -4571,7 +4903,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gescheiden</styles>
 		<attributes>buurtnaam, percentage_gescheid</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_gescheiden</id>
@@ -4581,7 +4913,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gescheiden</styles>
 		<attributes>buurtnaam, percentage_gescheid</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_gescheiden</id>
@@ -4591,7 +4923,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gescheiden</styles>
 		<attributes>buurtnaam, percentage_gescheid</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_gescheiden</id>
@@ -4601,7 +4933,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gescheiden</styles>
 		<attributes>buurtnaam, percentage_gescheid</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_gemiddelde_huishoudgrootte</id>
@@ -4647,7 +4979,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_huishoudgrootte</styles>
 		<attributes>gemeentenaam, gemiddelde_huishoudsgrootte</attributes>
 		<aliases>Gemeente, Personen per huishouden</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_gemiddelde_huishoudgrootte</id>
@@ -4657,7 +4989,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_huishoudgrootte</styles>
 		<attributes>gemeentenaam, gemiddelde_huishoudsgrootte</attributes>
 		<aliases>Gemeente, Personen per huishouden</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_huishoudgrootte</id>
@@ -4667,7 +4999,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_huishoudgrootte</styles>
 		<attributes>gemeentenaam, gemiddelde_huishoudsgrootte</attributes>
 		<aliases>Gemeente, Personen per huishouden</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_huishoudgrootte</id>
@@ -4677,7 +5009,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_huishoudgrootte</styles>
 		<attributes>gemeentenaam, gemiddelde_huishoudsgrootte</attributes>
 		<aliases>Gemeente, Personen per huishouden</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_gemiddelde_huishoudgrootte</id>
@@ -4687,7 +5019,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_huishoudgrootte</styles>
 		<attributes>buurtnaam, gemiddelde_huishoudsgrootte</attributes>
 		<aliases>Buurt, Personen per huishouden</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_huishoudgrootte</id>
@@ -4697,7 +5029,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_huishoudgrootte</styles>
 		<attributes>buurtnaam, gemiddelde_huishoudsgrootte</attributes>
 		<aliases>Buurt, Personen per huishouden</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_huishoudgrootte</id>
@@ -4707,7 +5039,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_huishoudgrootte</styles>
 		<attributes>buurtnaam, gemiddelde_huishoudsgrootte</attributes>
 		<aliases>Buurt, Personen per huishouden</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_huishoudgrootte</id>
@@ -4717,7 +5049,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_huishoudgrootte</styles>
 		<attributes>buurtnaam, gemiddelde_huishoudsgrootte</attributes>
 		<aliases>Buurt, Personen per huishouden</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_gemiddeld_inkomen_inwoner</id>
@@ -4745,7 +5077,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_inkomen_inwoner</styles>
 		<attributes>gemeentenaam, gemiddeld_inkomen_per_inwoner</attributes>
 		<aliases>Gemeente, x 1 000 euro</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddeld_inkomen_inwoner</id>
@@ -4755,7 +5087,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_inkomen_inwoner</styles>
 		<attributes>gemeentenaam, gemiddeld_inkomen_per_inwoner</attributes>
 		<aliases>Gemeente, x 1 000 euro</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddeld_inkomen_inwoner</id>
@@ -4765,7 +5097,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_inkomen_inwoner</styles>
 		<attributes>buurtnaam, gemiddeld_inkomen_per_inwoner</attributes>
 		<aliases>Buurt, x 1 000 euro</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddeld_inkomen_inwoner</id>
@@ -4775,7 +5107,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_inkomen_inwoner</styles>
 		<attributes>buurtnaam, gemiddeld_inkomen_per_inwoner</attributes>
 		<aliases>Buurt, x 1 000 euro</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_percentage_niet_actieven</id>
@@ -4803,7 +5135,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_niet_actieven</styles>
 		<attributes>gemeentenaam, percentage_niet_actieven_2</attributes>
 		<aliases>Gemeente, Percentage 15 tot 65 jaar</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_niet_actieven</id>
@@ -4813,7 +5145,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_niet_actieven</styles>
 		<attributes>gemeentenaam, percentage_niet_actieven_2</attributes>
 		<aliases>Gemeente, Percentage 15 tot 65 jaar</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_niet_actieven</id>
@@ -4823,7 +5155,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_niet_actieven</styles>
 		<attributes>buurtnaam, percentage_niet_actieven_2</attributes>
 		<aliases>Buurt, Percentage 15 tot 65 jaar</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_niet_actieven</id>
@@ -4833,7 +5165,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_niet_actieven</styles>
 		<attributes>buurtnaam, percentage_niet_actieven_2</attributes>
 		<aliases>Buurt, Percentage 15 tot 65 jaar</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_perc_arbeidsongeschiktheiduitkeringen_15_tot_65</id>
@@ -4861,7 +5193,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_arbeidsongeschiktheiduitkeringen_15_tot_65</styles>
 		<attributes>gemeentenaam, percentage_ao_uitkeringen_relatief</attributes>
 		<aliases>Gemeente, Percentage 15 tot 65 jaar</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_perc_arbeidsongeschiktheiduitkeringen_15_tot_65</id>
@@ -4871,7 +5203,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_perc_arbeidsongeschiktheiduitkeringen_15_tot_65</styles>
 		<attributes>gemeentenaam, percentage_ao_uitkeringen_relatief</attributes>
 		<aliases>Gemeente, Percentage 15 tot 65 jaar</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_perc_arbeidsongeschiktheiduitkeringen_15_tot_65</id>
@@ -4881,7 +5213,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_arbeidsongeschiktheiduitkeringen_15_tot_65</styles>
 		<attributes>buurtnaam, percentage_ao_uitkeringen_relatief</attributes>
 		<aliases>Buurt, Percentage 15 tot 65 jaar</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_perc_arbeidsongeschiktheiduitkeringen_15_tot_65</id>
@@ -4891,7 +5223,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_perc_arbeidsongeschiktheiduitkeringen_15_tot_65</styles>
 		<attributes>buurtnaam, percentage_ao_uitkeringen_relatief</attributes>
 		<aliases>Buurt, Percentage 15 tot 65 jaar</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2009_percentage_ww_uitkeringen_15_tot_65</id>
@@ -4910,7 +5242,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_ww_uitkeringen_15_tot_65</styles>
 		<attributes>gemeentenaam, percentage_ww_uitkeringen_relatief</attributes>
 		<aliases>Gemeente, Percentage 15 tot 65 jaar</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_ww_uitkeringen_15_tot_65</id>
@@ -4920,7 +5252,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_ww_uitkeringen_15_tot_65</styles>
 		<attributes>buurtnaam, percentage_ww_uitkeringen_relatief</attributes>
 		<aliases>Buurt, Percentage 15 tot 65 jaar</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_percentage_huurwoningen</id>
@@ -4957,7 +5289,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huurwoningen</styles>
 		<attributes>gemeentenaam, percentage_huurwoningen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_huurwoningen</id>
@@ -4967,7 +5299,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huurwoningen</styles>
 		<attributes>gemeentenaam, percentage_huurwoningen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_huurwoningen</id>
@@ -4977,7 +5309,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_huurwoningen</styles>
 		<attributes>gemeentenaam, percentage_huurwoningen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_huurwoningen</id>
@@ -4987,7 +5319,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huurwoningen</styles>
 		<attributes>buurtnaam, percentage_huurwoningen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_huurwoningen</id>
@@ -4997,7 +5329,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huurwoningen</styles>
 		<attributes>buurtnaam, percentage_huurwoningen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_huurwoningen</id>
@@ -5007,7 +5339,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_huurwoningen</styles>
 		<attributes>buurtnaam, percentage_huurwoningen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_percentage_huurwoningen</id>
@@ -5053,7 +5385,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_koopwoningen</styles>
 		<attributes>gemeentenaam, percentage_koopwoningen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_koopwoningen</id>
@@ -5063,7 +5395,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_koopwoningen</styles>
 		<attributes>gemeentenaam, percentage_koopwoningen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_koopwoningen</id>
@@ -5073,7 +5405,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_koopwoningen</styles>
 		<attributes>gemeentenaam, percentage_koopwoningen</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_koopwoningen</id>
@@ -5083,7 +5415,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_koopwoningen</styles>
 		<attributes>buurtnaam, percentage_koopwoningen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_koopwoningen</id>
@@ -5093,7 +5425,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_koopwoningen</styles>
 		<attributes>buurtnaam, percentage_koopwoningen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_koopwoningen</id>
@@ -5103,7 +5435,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_koopwoningen</styles>
 		<attributes>buurtnaam, percentage_koopwoningen</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_percentage_koopwoningen</id>
@@ -5149,7 +5481,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_bouwjaarklasse_tot_2000</styles>
 		<attributes>gemeentenaam, percentage_bouwjaarklasse_tot_2000</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_bouwjaarklasse_tot_2000</id>
@@ -5159,7 +5491,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_bouwjaarklasse_tot_2000</styles>
 		<attributes>gemeentenaam, percentage_bouwjaarklasse_tot_2000</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_bouwjaarklasse_tot_2000</id>
@@ -5169,7 +5501,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_bouwjaarklasse_tot_2000</styles>
 		<attributes>gemeentenaam, percentage_bouwjaarklasse_tot_2000</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_bouwjaarklasse_tot_2000</id>
@@ -5179,7 +5511,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_bouwjaarklasse_tot_2000</styles>
 		<attributes>buurtnaam, percentage_bouwjaarklasse_tot_2000</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_bouwjaarklasse_tot_2000</id>
@@ -5189,7 +5521,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_bouwjaarklasse_tot_2000</styles>
 		<attributes>buurtnaam, percentage_bouwjaarklasse_tot_2000</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_bouwjaarklasse_tot_2000</id>
@@ -5199,7 +5531,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_bouwjaarklasse_tot_2000</styles>
 		<attributes>buurtnaam, percentage_bouwjaarklasse_tot_2000</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_percentage_bouwjaarklasse_vanaf_2000</id>
@@ -5236,7 +5568,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_bouwjaarklasse_vanaf_2000</styles>
 		<attributes>gemeentenaam, percentage_bouwjaarklasse_vanaf_2000</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_bouwjaarklasse_vanaf_2000</id>
@@ -5246,7 +5578,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_bouwjaarklasse_vanaf_2000</styles>
 		<attributes>gemeentenaam, percentage_bouwjaarklasse_vanaf_2000</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_bouwjaarklasse_vanaf_2000</id>
@@ -5256,7 +5588,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_bouwjaarklasse_vanaf_2000</styles>
 		<attributes>gemeentenaam, percentage_bouwjaarklasse_vanaf_2000</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_bouwjaarklasse_vanaf_2000</id>
@@ -5266,7 +5598,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_bouwjaarklasse_vanaf_2000</styles>
 		<attributes>buurtnaam, percentage_bouwjaarklasse_vanaf_2000</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_bouwjaarklasse_vanaf_2000</id>
@@ -5276,7 +5608,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_bouwjaarklasse_vanaf_2000</styles>
 		<attributes>buurtnaam, percentage_bouwjaarklasse_vanaf_2000</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_bouwjaarklasse_vanaf_2000</id>
@@ -5286,7 +5618,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_bouwjaarklasse_vanaf_2000</styles>
 		<attributes>buurtnaam, percentage_bouwjaarklasse_vanaf_2000</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bevolkingskern2008_aantal_wooneenheden</id>
@@ -5332,7 +5664,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_gasverbruik_particuliere_woning</styles>
 		<attributes>gemeentenaam, gemiddeld_gasverbruik_totaal</attributes>
 		<aliases>Gemeente, Kubieke meter</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddeld_gasverbruik_particuliere_woning</id>
@@ -5342,7 +5674,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_gasverbruik_particuliere_woning</styles>
 		<attributes>gemeentenaam, gemiddeld_gasverbruik_totaal</attributes>
 		<aliases>Gemeente, Kubieke meter</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddeld_gasverbruik_particuliere_woning</id>
@@ -5352,7 +5684,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_gasverbruik_particuliere_woning</styles>
 		<attributes>buurtnaam, gemiddeld_gasverbruik_totaal</attributes>
 		<aliases>Buurt, Kubieke meter</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddeld_gasverbruik_particuliere_woning</id>
@@ -5362,7 +5694,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_gasverbruik_particuliere_woning</styles>
 		<attributes>buurtnaam, gemiddeld_gasverbruik_totaal</attributes>
 		<aliases>Buurt, Kubieke meter</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_aandeel_stadsverwarming</id>
@@ -5390,7 +5722,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_aandeel_stadsverwarming</styles>
 		<attributes>gemeentenaam, aandeel_stadsverwarming</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aandeel_stadsverwarming</id>
@@ -5400,7 +5732,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_aandeel_stadsverwarming</styles>
 		<attributes>gemeentenaam, aandeel_stadsverwarming</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aandeel_stadsverwarming</id>
@@ -5410,7 +5742,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_aandeel_stadsverwarming</styles>
 		<attributes>buurtnaam, aandeel_stadsverwarming</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aandeel_stadsverwarming</id>
@@ -5420,7 +5752,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_aandeel_stadsverwarming</styles>
 		<attributes>buurtnaam, aandeel_stadsverwarming</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2010_gemiddeld_elektricteitsverbruik_totaal</id>
@@ -5448,7 +5780,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_elektricteitsverbruik_totaal</styles>
 		<attributes>gemeentenaam, gemiddeld_electriciteitsverbruik_totaal</attributes>
 		<aliases>Gemeente, kWh</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddeld_elektricteitsverbruik_totaal</id>
@@ -5458,7 +5790,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_elektricteitsverbruik_totaal</styles>
 		<attributes>gemeentenaam, gemiddeld_electriciteitsverbruik_totaal</attributes>
 		<aliases>Gemeente, kWh</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddeld_elektricteitsverbruik_totaal</id>
@@ -5468,7 +5800,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_elektricteitsverbruik_totaal</styles>
 		<attributes>buurtnaam, gemiddeld_electriciteitsverbruik_totaal</attributes>
 		<aliases>Buurt, kWh</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddeld_elektricteitsverbruik_totaal</id>
@@ -5478,7 +5810,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_elektricteitsverbruik_totaal</styles>
 		<attributes>buurtnaam, gemiddeld_electriciteitsverbruik_totaal</attributes>
 		<aliases>Buurt, kWh</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_aantal_personenautos</id>
@@ -5524,7 +5856,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_personenautos</styles>
 		<attributes>gemeentenaam, personenautos_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_aantal_personenautos</id>
@@ -5534,7 +5866,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_personenautos</styles>
 		<attributes>gemeentenaam, personenautos_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_personenautos</id>
@@ -5544,7 +5876,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_personenautos</styles>
 		<attributes>gemeentenaam, personenautos_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_personenautos</id>
@@ -5554,7 +5886,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_personenautos</styles>
 		<attributes>gemeentenaam, personenautos_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_aantal_personenautos</id>
@@ -5564,7 +5896,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_personenautos</styles>
 		<attributes>buurtnaam, personenautos_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_personenautos</id>
@@ -5574,7 +5906,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_personenautos</styles>
 		<attributes>buurtnaam, personenautos_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_personenautos</id>
@@ -5584,7 +5916,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_personenautos</styles>
 		<attributes>buurtnaam, personenautos_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_personenautos</id>
@@ -5594,7 +5926,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_personenautos</styles>
 		<attributes>buurtnaam, personenautos_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_gemiddeld_aantal_autos_per_huishouden</id>
@@ -5640,7 +5972,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden</styles>
 		<attributes>gemeentenaam, personenautos_per_huishouden</attributes>
 		<aliases>Gemeente, Per huishouden</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_gemiddeld_aantal_autos_per_huishouden</id>
@@ -5650,7 +5982,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden</styles>
 		<attributes>gemeentenaam, personenautos_per_huishouden</attributes>
 		<aliases>Gemeente, Per huishouden</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddeld_aantal_autos_per_huishouden</id>
@@ -5660,7 +5992,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden</styles>
 		<attributes>gemeentenaam, personenautos_per_huishouden</attributes>
 		<aliases>Gemeente, Per huishouden</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddeld_aantal_autos_per_huishouden</id>
@@ -5670,7 +6002,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden</styles>
 		<attributes>gemeentenaam, personenautos_per_huishouden</attributes>
 		<aliases>Gemeente, Per huishouden</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_gemiddeld_aantal_autos_per_huishouden</id>
@@ -5680,7 +6012,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden</styles>
 		<attributes>buurtnaam, personenautos_per_huishouden</attributes>
 		<aliases>Buurt, Per huishouden</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddeld_aantal_autos_per_huishouden</id>
@@ -5690,7 +6022,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden</styles>
 		<attributes>buurtnaam, personenautos_per_huishouden</attributes>
 		<aliases>Buurt, Per huishouden</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddeld_aantal_autos_per_huishouden</id>
@@ -5700,7 +6032,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden</styles>
 		<attributes>buurtnaam, personenautos_per_huishouden</attributes>
 		<aliases>Buurt, Per huishouden</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddeld_aantal_autos_per_huishouden</id>
@@ -5710,7 +6042,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden</styles>
 		<attributes>buurtnaam, personenautos_per_huishouden</attributes>
 		<aliases>Buurt, Per huishouden</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_aantal_bedrijfsmotorvoertuigen</id>
@@ -5756,7 +6088,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_bedrijfsmotorvoertuigen</styles>
 		<attributes>gemeentenaam, bedrijfsmotorvoertuigen_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_aantal_bedrijfsmotorvoertuigen</id>
@@ -5766,7 +6098,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_bedrijfsmotorvoertuigen</styles>
 		<attributes>gemeentenaam, bedrijfsmotorvoertuigen_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_bedrijfsmotorvoertuigen</id>
@@ -5776,7 +6108,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_bedrijfsmotorvoertuigen</styles>
 		<attributes>gemeentenaam, bedrijfsmotorvoertuigen_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_bedrijfsmotorvoertuigen</id>
@@ -5786,7 +6118,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_bedrijfsmotorvoertuigen</styles>
 		<attributes>gemeentenaam, bedrijfsmotorvoertuigen_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_aantal_bedrijfsmotorvoertuigen</id>
@@ -5796,7 +6128,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_bedrijfsmotorvoertuigen</styles>
 		<attributes>buurtnaam, bedrijfsmotorvoertuigen_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_bedrijfsmotorvoertuigen</id>
@@ -5806,7 +6138,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_bedrijfsmotorvoertuigen</styles>
 		<attributes>buurtnaam, bedrijfsmotorvoertuigen_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_bedrijfsmotorvoertuigen</id>
@@ -5816,7 +6148,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_bedrijfsmotorvoertuigen</styles>
 		<attributes>buurtnaam, bedrijfsmotorvoertuigen_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_bedrijfsmotorvoertuigen</id>
@@ -5826,7 +6158,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_bedrijfsmotorvoertuigen</styles>
 		<attributes>buurtnaam, bedrijfsmotorvoertuigen_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_aantal_motortweewielers</id>
@@ -5872,7 +6204,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_motortweewielers</styles>
 		<attributes>gemeentenaam, motortweewielers_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2011_aantal_motortweewielers</id>
@@ -5882,7 +6214,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_motortweewielers</styles>
 		<attributes>gemeentenaam, motortweewielers_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_motortweewielers</id>
@@ -5892,7 +6224,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_motortweewielers</styles>
 		<attributes>gemeentenaam, motortweewielers_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_motortweewielers</id>
@@ -5902,7 +6234,7 @@
 		<styles>wijkenbuurten_thema_wijken_wijk_aantal_motortweewielers</styles>
 		<attributes>gemeentenaam, motortweewielers_totaal</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2012_aantal_motortweewielers</id>
@@ -5912,7 +6244,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_motortweewielers</styles>
 		<attributes>buurtnaam, motortweewielers_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_motortweewielers</id>
@@ -5922,7 +6254,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_motortweewielers</styles>
 		<attributes>buurtnaam, motortweewielers_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_motortweewielers</id>
@@ -5932,7 +6264,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_motortweewielers</styles>
 		<attributes>buurtnaam, motortweewielers_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_motortweewielers</id>
@@ -5942,25 +6274,7 @@
 		<styles>wijkenbuurten_thema_buurten_buurt_aantal_motortweewielers</styles>
 		<attributes>buurtnaam, motortweewielers_totaal</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
-	</Layerdescriptor>
-	<Layerdescriptor>
-		<id>bevolkingskern2008_oppervlakte_land</id>
-		<name>Oppervlakte land in ha - Bevolkingskern 2008</name>
-		<layers>cbsbevolkingskernen2008</layers>
-		<url>http://geodata.nationaalgeoregister.nl/bevolkingskernen2008/wms</url>
-		<styles>bevolkingskern_oppervlakte_land</styles>
-		<attributes>kern_naam, land08n</attributes>
-		<aliases>Kern naam, Hectaren</aliases>
-	</Layerdescriptor>
-	<Layerdescriptor>
-		<id>bevolkingskern2008_oppervlakte_water</id>
-		<name>Oppervlakte water in ha - Bevolkingskern 2008</name>
-		<layers>cbsbevolkingskernen2008</layers>
-		<url>http://geodata.nationaalgeoregister.nl/bevolkingskernen2008/wms</url>
-		<styles>bevolkingskern_oppervlakte_water</styles>
-		<attributes>kern_naam, water08n</attributes>
-		<aliases>Kern naam, Hectaren</aliases>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_percentage_gewassenbedrijven</id>
@@ -5997,7 +6311,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gewassenbedrijven</styles>
 		<attributes>gemeentenaam, percentage_gewassenbedrijven</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_gewassenbedrijven</id>
@@ -6007,7 +6321,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gewassenbedrijven</styles>
 		<attributes>gemeentenaam, percentage_gewassenbedrijven</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_gewassenbedrijven</id>
@@ -6017,7 +6331,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_gewassenbedrijven</styles>
 		<attributes>gemeentenaam, percentage_gewassenbedrijven</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_gewassenbedrijven</id>
@@ -6027,7 +6341,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gewassenbedrijven</styles>
 		<attributes>buurtnaam, percentage_gewassenbedrijven</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_gewassenbedrijven</id>
@@ -6037,7 +6351,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gewassenbedrijven</styles>
 		<attributes>buurtnaam, percentage_gewassenbedrijven</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_gewassenbedrijven</id>
@@ -6047,7 +6361,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_gewassenbedrijven</styles>
 		<attributes>buurtnaam, percentage_gewassenbedrijven</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_percentage_veeteeltbedrijven</id>
@@ -6084,7 +6398,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_veeteeltbedrijven</styles>
 		<attributes>gemeentenaam, percentage_veeteeltbedrijven</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_veeteeltbedrijven</id>
@@ -6094,7 +6408,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_veeteeltbedrijven</styles>
 		<attributes>gemeentenaam, percentage_veeteeltbedrijven</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_veeteeltbedrijven</id>
@@ -6104,7 +6418,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_veeteeltbedrijven</styles>
 		<attributes>gemeentenaam, percentage_veeteeltbedrijven</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_veeteeltbedrijven</id>
@@ -6114,7 +6428,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_veeteeltbedrijven</styles>
 		<attributes>buurtnaam, percentage_veeteeltbedrijven</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_veeteeltbedrijven</id>
@@ -6124,7 +6438,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_veeteeltbedrijven</styles>
 		<attributes>buurtnaam, percentage_veeteeltbedrijven</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_veeteeltbedrijven</id>
@@ -6134,7 +6448,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_veeteeltbedrijven</styles>
 		<attributes>buurtnaam, percentage_veeteeltbedrijven</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_percentage_combinatiebedrijven</id>
@@ -6171,7 +6485,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_combinatiebedrijven</styles>
 		<attributes>gemeentenaam, percentage_combinatiebedrijven</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_percentage_combinatiebedrijven</id>
@@ -6181,7 +6495,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_combinatiebedrijven</styles>
 		<attributes>gemeentenaam, percentage_combinatiebedrijven</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_percentage_combinatiebedrijven</id>
@@ -6191,7 +6505,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_percentage_combinatiebedrijven</styles>
 		<attributes>gemeentenaam, percentage_combinatiebedrijven</attributes>
 		<aliases>Gemeente, Percentage</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_percentage_combinatiebedrijven</id>
@@ -6201,7 +6515,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_combinatiebedrijven</styles>
 		<attributes>buurtnaam, percentage_combinatiebedrijven</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_percentage_combinatiebedrijven</id>
@@ -6211,7 +6525,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_combinatiebedrijven</styles>
 		<attributes>buurtnaam, percentage_combinatiebedrijven</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_percentage_combinatiebedrijven</id>
@@ -6221,7 +6535,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_percentage_combinatiebedrijven</styles>
 		<attributes>buurtnaam, percentage_combinatiebedrijven</attributes>
 		<aliases>Buurt, Percentage</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_gemiddelde_afstand_tot_restaurant</id>
@@ -6258,7 +6572,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_restaurant</styles>
 		<attributes>gemeentenaam, restaurant_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_afstand_tot_restaurant</id>
@@ -6268,7 +6582,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_restaurant</styles>
 		<attributes>gemeentenaam, restaurant_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_afstand_tot_restaurant</id>
@@ -6278,7 +6592,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_restaurant</styles>
 		<attributes>gemeentenaam, restaurant_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_afstand_tot_restaurant</id>
@@ -6288,7 +6602,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_restaurant</styles>
 		<attributes>buurtnaam, restaurant_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_restaurant</id>
@@ -6298,7 +6612,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_restaurant</styles>
 		<attributes>buurtnaam, restaurant_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_restaurant</id>
@@ -6308,7 +6622,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_restaurant</styles>
 		<attributes>buurtnaam, restaurant_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2009_gemiddelde_afstand_tot_bibliotheek</id>
@@ -6327,7 +6641,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_bibliotheek</styles>
 		<attributes>gemeentenaam, bibliotheek_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_bibliotheek</id>
@@ -6337,7 +6651,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_bibliotheek</styles>
 		<attributes>buurtnaam, bibliotheek_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_gemiddelde_afstand_tot_zwembad</id>
@@ -6374,7 +6688,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_zwembad</styles>
 		<attributes>gemeentenaam, zwembad_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_afstand_tot_zwembad</id>
@@ -6384,7 +6698,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_zwembad</styles>
 		<attributes>gemeentenaam, zwembad_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_afstand_tot_zwembad</id>
@@ -6394,7 +6708,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_zwembad</styles>
 		<attributes>gemeentenaam, zwembad_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_afstand_tot_zwembad</id>
@@ -6404,7 +6718,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_zwembad</styles>
 		<attributes>buurtnaam, zwembad_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_zwembad</id>
@@ -6414,7 +6728,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_zwembad</styles>
 		<attributes>buurtnaam, zwembad_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_zwembad</id>
@@ -6424,7 +6738,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_zwembad</styles>
 		<attributes>buurtnaam, zwembad_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_gemiddelde_afstand_tot_bioscoop</id>
@@ -6461,7 +6775,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_bioscoop</styles>
 		<attributes>gemeentenaam, bioscoop_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_afstand_tot_bioscoop</id>
@@ -6471,7 +6785,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_bioscoop</styles>
 		<attributes>gemeentenaam, bioscoop_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_afstand_tot_bioscoop</id>
@@ -6481,7 +6795,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_bioscoop</styles>
 		<attributes>gemeentenaam, bioscoop_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_afstand_tot_bioscoop</id>
@@ -6491,7 +6805,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_bioscoop</styles>
 		<attributes>buurtnaam, bioscoop_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_bioscoop</id>
@@ -6501,7 +6815,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_bioscoop</styles>
 		<attributes>buurtnaam, bioscoop_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_bioscoop</id>
@@ -6511,7 +6825,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_bioscoop</styles>
 		<attributes>buurtnaam, bioscoop_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_gemiddelde_afstand_tot_treinstation</id>
@@ -6548,7 +6862,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_treinstation</styles>
 		<attributes>gemeentenaam, treinstation_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddelde_afstand_tot_treinstation</id>
@@ -6558,7 +6872,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_treinstation</styles>
 		<attributes>gemeentenaam, treinstation_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddelde_afstand_tot_treinstation</id>
@@ -6568,7 +6882,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddelde_afstand_tot_treinstation</styles>
 		<attributes>gemeentenaam, treinstation_gemiddelde_afstand_in_km</attributes>
 		<aliases>Gemeente, Afstand (km)</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddelde_afstand_tot_treinstation</id>
@@ -6578,7 +6892,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_treinstation</styles>
 		<attributes>buurtnaam, treinstation_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddelde_afstand_tot_treinstation</id>
@@ -6588,7 +6902,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_treinstation</styles>
 		<attributes>buurtnaam, treinstation_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddelde_afstand_tot_treinstation</id>
@@ -6598,7 +6912,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddelde_afstand_tot_treinstation</styles>
 		<attributes>buurtnaam, treinstation_gemiddelde_afstand_in_km</attributes>
 		<aliases>Buurt, Afstand (km)</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_aantal_kinderdagverblijven_binnen_3_km</id>
@@ -6635,7 +6949,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_kinderdagverblijven_binnen_3_km</styles>
 		<attributes>gemeentenaam, kinderdagverblijf_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_kinderdagverblijven_binnen_3_km</id>
@@ -6645,7 +6959,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_kinderdagverblijven_binnen_3_km</styles>
 		<attributes>gemeentenaam, kinderdagverblijf_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_kinderdagverblijven_binnen_3_km</id>
@@ -6655,7 +6969,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_kinderdagverblijven_binnen_3_km</styles>
 		<attributes>gemeentenaam, kinderdagverblijf_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_kinderdagverblijven_binnen_3_km</id>
@@ -6665,7 +6979,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_kinderdagverblijven_binnen_3_km</styles>
 		<attributes>buurtnaam, kinderdagverblijf_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_kinderdagverblijven_binnen_3_km</id>
@@ -6675,7 +6989,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_kinderdagverblijven_binnen_3_km</styles>
 		<attributes>buurtnaam, kinderdagverblijf_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_kinderdagverblijven_binnen_3_km</id>
@@ -6685,7 +6999,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_kinderdagverblijven_binnen_3_km</styles>
 		<attributes>buurtnaam, kinderdagverblijf_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_gemiddeld_aantal_basisscholen_binnen_3_km</id>
@@ -6722,7 +7036,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_basisscholen_binnen_3_km</styles>
 		<attributes>gemeentenaam, basisonderwijs_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddeld_aantal_basisscholen_binnen_3_km</id>
@@ -6732,7 +7046,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_basisscholen_binnen_3_km</styles>
 		<attributes>gemeentenaam, basisonderwijs_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddeld_aantal_basisscholen_binnen_3_km</id>
@@ -6742,7 +7056,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_basisscholen_binnen_3_km</styles>
 		<attributes>gemeentenaam, basisonderwijs_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddeld_aantal_basisscholen_binnen_3_km</id>
@@ -6752,7 +7066,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_basisscholen_binnen_3_km</styles>
 		<attributes>buurtnaam, basisonderwijs_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddeld_aantal_basisscholen_binnen_3_km</id>
@@ -6762,7 +7076,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_basisscholen_binnen_3_km</styles>
 		<attributes>buurtnaam, basisonderwijs_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddeld_aantal_basisscholen_binnen_3_km</id>
@@ -6772,7 +7086,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_basisscholen_binnen_3_km</styles>
 		<attributes>buurtnaam, basisonderwijs_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_gemiddeld_aantal_grote_supermarkten_binnen_3_km</id>
@@ -6809,7 +7123,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_grote_supermarkten_binnen_3_km</styles>
 		<attributes>gemeentenaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddeld_aantal_grote_supermarkten_binnen_3_km</id>
@@ -6819,7 +7133,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_grote_supermarkten_binnen_3_km</styles>
 		<attributes>gemeentenaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddeld_aantal_grote_supermarkten_binnen_3_km</id>
@@ -6829,7 +7143,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_grote_supermarkten_binnen_3_km</styles>
 		<attributes>gemeentenaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddeld_aantal_grote_supermarkten_binnen_3_km</id>
@@ -6839,7 +7153,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_grote_supermarkten_binnen_3_km</styles>
 		<attributes>buurtnaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddeld_aantal_grote_supermarkten_binnen_3_km</id>
@@ -6849,7 +7163,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_grote_supermarkten_binnen_3_km</styles>
 		<attributes>buurtnaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddeld_aantal_grote_supermarkten_binnen_3_km</id>
@@ -6859,7 +7173,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_grote_supermarkten_binnen_3_km</styles>
 		<attributes>buurtnaam, grote_supermarkt_aantal_binnen_3_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_gemiddeld_aantal_VMBO_scholen_binnen_5_km</id>
@@ -6896,7 +7210,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_VMBO_scholen_binnen_5_km</styles>
 		<attributes>gemeentenaam, vmbo_aantal_binnen_5_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_gemiddeld_aantal_VMBO_scholen_binnen_5_km</id>
@@ -6906,7 +7220,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_VMBO_scholen_binnen_5_km</styles>
 		<attributes>gemeentenaam, vmbo_aantal_binnen_5_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_gemiddeld_aantal_VMBO_scholen_binnen_5_km</id>
@@ -6916,7 +7230,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_VMBO_scholen_binnen_5_km</styles>
 		<attributes>gemeentenaam, vmbo_aantal_binnen_5_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_gemiddeld_aantal_VMBO_scholen_binnen_5_km</id>
@@ -6926,7 +7240,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_VMBO_scholen_binnen_5_km</styles>
 		<attributes>buurtnaam, vmbo_aantal_binnen_5_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_gemiddeld_aantal_VMBO_scholen_binnen_5_km</id>
@@ -6936,7 +7250,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_VMBO_scholen_binnen_5_km</styles>
 		<attributes>buurtnaam, vmbo_aantal_binnen_5_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_gemiddeld_aantal_VMBO_scholen_binnen_5_km</id>
@@ -6946,7 +7260,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_VMBO_scholen_binnen_5_km</styles>
 		<attributes>buurtnaam, vmbo_aantal_binnen_5_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2011_aantal_HAVO_VWO_scholen_binnen_5_km</id>
@@ -6983,7 +7297,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_HAVO_VWO_scholen_binnen_5_km</styles>
 		<attributes>gemeentenaam, havo_vwo_aantal_binnen_5_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2010_aantal_HAVO_VWO_scholen_binnen_5_km</id>
@@ -6993,7 +7307,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_HAVO_VWO_scholen_binnen_5_km</styles>
 		<attributes>gemeentenaam, havo_vwo_aantal_binnen_5_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_aantal_HAVO_VWO_scholen_binnen_5_km</id>
@@ -7003,7 +7317,7 @@
 		<styles>wijkenbuurten_thema_wijken_gemeentewijkbuurt_gemiddeld_aantal_HAVO_VWO_scholen_binnen_5_km</styles>
 		<attributes>gemeentenaam, havo_vwo_aantal_binnen_5_km</attributes>
 		<aliases>Gemeente, Aantal</aliases>
-		<zoom>6</zoom>
+		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2011_aantal_HAVO_VWO_scholen_binnen_5_km</id>
@@ -7013,7 +7327,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_HAVO_VWO_scholen_binnen_5_km</styles>
 		<attributes>buurtnaam, havo_vwo_aantal_binnen_5_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2010_aantal_HAVO_VWO_scholen_binnen_5_km</id>
@@ -7023,7 +7337,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_HAVO_VWO_scholen_binnen_5_km</styles>
 		<attributes>buurtnaam, havo_vwo_aantal_binnen_5_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>buurten2009_aantal_HAVO_VWO_scholen_binnen_5_km</id>
@@ -7033,7 +7347,7 @@
 		<styles>wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_HAVO_VWO_scholen_binnen_5_km</styles>
 		<attributes>buurtnaam, havo_vwo_aantal_binnen_5_km</attributes>
 		<aliases>Buurt, Aantal</aliases>
-		<zoom>8</zoom>
+		<zoom>6</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bodemgebruik2008</id>

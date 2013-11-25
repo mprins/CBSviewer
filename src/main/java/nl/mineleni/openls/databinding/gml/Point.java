@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
+ */
 package nl.mineleni.openls.databinding.gml;
 
 import java.util.Vector;
@@ -28,6 +34,7 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * 
  * @author mprins
  * @since 1.7
+ * @composed 1 - 0..* Pos
  */
 public class Point implements XmlNamespaceConstants {
 
@@ -36,7 +43,7 @@ public class Point implements XmlNamespaceConstants {
 	 */
 	private static final long serialVersionUID = -163863783181316506L;
 
-	/** The pos. */
+	/** position list. */
 	private final Vector<Pos> pos = new Vector<>();;
 
 	/** The srs name. */
