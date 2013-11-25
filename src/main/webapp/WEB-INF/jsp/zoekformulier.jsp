@@ -9,6 +9,9 @@
 
 	<fmt:setBundle basename="LabelsBundle" />
 	
+	<fmt:message key="KEY_ADRESZOEKEN_PLACEHOLDER" 
+	var="key_adreszoeken_placeholder" />
+	
 	<div id="zoekContainer">
 
 		<form method="get" action="adres" id="zoekFormulier" class="zoekinput">
@@ -17,11 +20,10 @@
 				<input name="adres" id="adres" accesskey="8"
 					onkeypress="if (event.keyCode==13){document.getElementById('searchbutton').click();return false}"
 					value="${param.adres}"
-					onblur="if(this.value==''){this.value='Vul een adres, postcode of woonplaats in';}"
-					onfocus="if(this.value=='Vul een adres, postcode of woonplaats in'){this.value=''}else{this.select()};"
+					placeholder="${key_adreszoeken_placeholder}"					
 					type="text" />
 				<input name="searchbutton" id="searchbutton" src="img/new/btn_header_search.gif"
-					accesskey="s" value="" type="image" alt="Zoek adres"/>
+					accesskey="s" value="" type="image" alt="${key_adreszoeken_submit}"/>
 
 				<c:if test="${request.straal != null}">
 					<input type="hidden" name="straal" value="${straal}" />
