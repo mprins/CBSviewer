@@ -8,9 +8,8 @@
 		trimDirectiveWhitespaces="false" language="java" isThreadSafe="false"
 		isErrorPage="false" />
 	<jsp:output doctype-root-element="html"
-		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-		omit-xml-declaration="no" />
+		doctype-system="about:legacy-compat"
+		omit-xml-declaration="true" />
 
 	<fmt:setBundle basename="LabelsBundle" />
 
@@ -55,7 +54,7 @@
 </jsp:include>
 
 <c:if test="${param.coreonly!=true}">
-	<script type="text/javascript" charset="utf-8">
+	<script type="text/javascript">
 		document.documentElement.className += ' js';
 	</script>
 </c:if>
@@ -75,7 +74,7 @@
 </c:if>
 
 	<div class="page">
-		<div class="header">
+		<header class="header">
 			<div class="h1">
 				<c:url value="/index.jsp" var="indexLink">
 					<c:param name="coreonly" value="${param.coreonly}" />
@@ -91,9 +90,9 @@
 			<jsp:include page="WEB-INF/jsp/mainmenu_include.jsp" />
 			
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
-		</div>
+		</header>
 
-		<div id="inhoud">
+		<main id="inhoud">
 			<div class="pagetitle">
 				<h1 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h1>
 			</div>
@@ -145,7 +144,7 @@
 				</li>
 			</ul>
 			<jsp:include page="WEB-INF/jsp/main_menu_include.jsp" />
-		</div>
+		</main>
 
 		<jsp:include page="WEB-INF/jsp/footer_include.jsp" />
 	</div>

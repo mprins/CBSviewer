@@ -29,7 +29,7 @@
 						<a href="#layermenu"><fmt:message key="KEY_FILTER_LAYER" /><span><fmt:message key="KEY_FILTER_LAYER_TOOLTIP" /></span></a>
 						<jsp:include page="main_menu_layer_include.jsp"/>
 					</li-->
-					<li id="infobox"></li>
+					<li id="infobox"><!-- leeg --></li>
 				</ol>
 				<a href="#closemega" class="closeMega">Sluit</a>
 			</div>

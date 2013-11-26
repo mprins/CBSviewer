@@ -15,7 +15,7 @@
 		var="key_site_home_url" />
 
 
-	<div id="siteMenu" class="siteMenu">
+	<nav id="siteMenu" class="siteMenu">
 		<a href="${key_site_contact_url}">
 			<fmt:message key="KEY_SITE_CONTACT" />
 		</a>
@@ -25,5 +25,5 @@
 		<a href="${key_site_home_url}">
 			<fmt:message key="KEY_SITE_HOME" />
 		</a>
-	</div>
+	</nav>
 </jsp:root>

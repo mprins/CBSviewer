@@ -12,7 +12,7 @@
 	<fmt:message key="RIA_LINK_TEXT" var="text" />
 	<jsp:text>
 		<!-- let op de formatting/regeleinden hier! er zitten een truukje in, het moet 1 regel zijn -->
-		<![CDATA[<script type="text/javascript" id="language" charset="utf-8">/* <![CDATA[ */var RIA_LINK_TEXT="${text}";/* ]]]><![CDATA[]> */</script>]]>
+		<![CDATA[<script type="text/javascript" id="language">/* <![CDATA[ */var RIA_LINK_TEXT="${text}";/* ]]]><![CDATA[]> */</script>]]>
 	</jsp:text>
 	<jsp:text>
 		<![CDATA[<script type="text/javascript" charset="utf-8" src="js/coreonly_script.js"></script>]]>

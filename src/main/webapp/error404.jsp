@@ -6,9 +6,8 @@
 		pageEncoding="UTF-8" session="false" trimDirectiveWhitespaces="false"
 		language="java" isThreadSafe="true" isErrorPage="true" />
 	<jsp:output doctype-root-element="html"
-		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-		omit-xml-declaration="no" />
+		doctype-system="about:legacy-compat"
+		omit-xml-declaration="true" />
 
 	<fmt:setBundle basename="ErrorLabelsBundle" />
 
@@ -20,8 +19,10 @@
 </head>
 <body>
 	<jsp:include page="WEB-INF/jsp/debug_include.jsp" />
-	<jsp:include page="WEB-INF/jsp/sitemenu_include.jsp" />
-	<div class="page smallpopup">
+	<header>
+		<jsp:include page="WEB-INF/jsp/sitemenu_include.jsp" />
+	</header>
+	<section class="page smallpopup">
 		<h1>
 			<fmt:message key="KEY_ERROR_404_TITEL" />
 		</h1>
@@ -34,7 +35,7 @@
 			<li><fmt:message key="KEY_ERROR_404_OPLOSSING2" /></li>
 			<li><fmt:message key="KEY_ERROR_404_OPLOSSING3" /></li>
 		</ul>
-	</div>
+	</section>
 </body>
 	</html>
 </jsp:root>
