@@ -16,6 +16,9 @@
 		<param name="port" value="4445" />
 		<param name="locationInfo" value="true" />
 	</appender>
+	<logger name="org.apache.http">
+		<level value="warn" />
+	</logger>
 	<root>
 		<level value="debug" />
 		<!-- appender-ref ref="ganymedeAppender" / -->
