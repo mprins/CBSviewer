@@ -114,7 +114,8 @@ public abstract class JSPIntegrationTest extends IntegrationTestConstants {
 				EntityUtils.toByteArray(validatorresponse.getEntity()), "UTF-8");
 		LOGGER.debug("validator body:\n" + validatorbody);
 		// controle op succes paragraaf in valadator response
-		assertTrue(validatorbody.contains("<p class=\"success\">"));
+		assertTrue("(X)HTML is niet geldig.",
+				validatorbody.contains("<p class=\"success\">"));
 	}
 
 	/**
