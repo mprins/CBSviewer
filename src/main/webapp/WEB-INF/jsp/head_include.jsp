@@ -10,7 +10,7 @@
 	<jsp:text>
 		<meta charset='utf-8' />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<!-- niet geldig icm bovenstaande meta/charset tag meta http-equiv="content-type" content="text/html; charset=utf-8" / -->
 		<link rel="dns-prefetch" href="http://geodata.nationaalgeoregister.nl/" />
 		<link rel="dns-prefetch" href="http://geodata1.nationaalgeoregister.nl/" />
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
