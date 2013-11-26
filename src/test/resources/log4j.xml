@@ -10,8 +10,15 @@
 			<param name="ConversionPattern" value="CBSVWR TEST: %5p %d{HH:mm:ss} (%C#%M:%L) - %m%n" />
 		</layout>
 	</appender>
+	<appender name="ganymedeAppender" class="org.apache.log4j.net.SocketAppender">
+		<!-- zie: http://ganymede.sourceforge.net/ -->
+		<param name="remoteHost" value="localhost" />
+		<param name="port" value="4445" />
+		<param name="locationInfo" value="true" />
+	</appender>
 	<root>
 		<level value="debug" />
+		<!-- appender-ref ref="ganymedeAppender" / -->
 		<appender-ref ref="consoleAppender" />
 	</root>
 </log4j:configuration>
