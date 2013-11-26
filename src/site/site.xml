@@ -56,9 +56,9 @@
 			<item name="Juicy Studio CSS Analyser"
 				href="http://juicystudio.com/services/csstest.php" />
 			<item name="XHTML validatie"
-				href="http://validator.w3.org/check?uri=http%3A%2F%2Fgisdemo.agro.nl%2Fcbsviewer%2F&charset=%28detect+automatically%29&doctype=Inline&group=0" />
+				href="http://validator.w3.org/check?uri=http%3A%2F%2Fgisdemo.agro.nl%2Fcbsviewer%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0" />
 			<item name="(X)HTML 5 validatie"
-				href="http://html5.validator.nu/?doc=http%3A%2F%2Fgisdemo.agro.nl%2Fcbsviewer%2F&showimagereport=yes&showsource=yes" />
+				href="http://html5.validator.nu/?doc=http%3A%2F%2Fgisdemo.agro.nl%2Fcbsviewer%2F&amp;showimagereport=yes&amp;showsource=yes" />
 			<item name="WebAIM WCAG2 scan RIA"
 				href="http://wave.webaim.org/report#/http%3A%2F%2Fgisdemo.agro.nl%2Fcbsviewer%2F" />
 			<item name="WebAIM WCAG2 scan CORE"
