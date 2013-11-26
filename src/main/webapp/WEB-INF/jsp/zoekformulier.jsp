@@ -26,7 +26,7 @@
 					placeholder="${key_adreszoeken_placeholder}"					
 					type="text" />
 				<input name="searchbutton" id="searchbutton" src="img/new/btn_header_search.gif"
-					accesskey="s" value="" type="image" alt="${key_adreszoeken_submit}"/>
+					accesskey="s" type="image" alt="${key_adreszoeken_submit}"/>
 
 				<c:if test="${request.straal != null}">
 					<input type="hidden" name="straal" value="${straal}" />
