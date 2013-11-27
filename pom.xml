@@ -504,6 +504,7 @@
 						<jetty.port>${jetty.port}</jetty.port>
 					</systemPropertyVariables>
 					<argLine>-XX:-UseSplitVerifier</argLine>
+					<trimStackTrace>false</trimStackTrace>
 				</configuration>
 				<executions>
 					<execution>
