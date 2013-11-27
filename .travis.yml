@@ -6,3 +6,4 @@ before_script:
 script: mvn -e -Pjenkins verify
 jdk:
   - openjdk7
+  - oraclejdk8
