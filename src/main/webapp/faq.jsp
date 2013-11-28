@@ -38,9 +38,13 @@
 		<h3><fmt:message key="KEY_CONTENT_H3_5" /></h3>
 		<p><fmt:message key="KEY_CONTENT_P5" /></p>
 
+		<BR />
+		
 		<h3><fmt:message key="KEY_CONTENT_H3_6" /></h3>
 		<p><fmt:message key="KEY_CONTENT_P6" /></p>
 
+		<BR />
+		
 		<h3><fmt:message key="KEY_CONTENT_H3_7" /></h3>
 		<p><fmt:message key="KEY_CONTENT_P7" /></p>
 	</section>

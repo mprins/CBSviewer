@@ -193,6 +193,7 @@
 									<li>Gemeente<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_perc_huish_met_laag_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_perc_huish_met_laag_inkomen')}">2009</a></li>
 									<li>Wijk<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_perc_huish_met_laag_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_perc_huish_met_laag_inkomen')}">2009</a></li>
 									<li>Buurt<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_perc_huish_met_laag_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_perc_huish_met_laag_inkomen')}">2009</a></li>
+									<li>500m vierkant<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_perc_huish_met_laag_inkomen_2010')}">2010</a></li>
 								</ul>
 							</li>	
 							<li><a href="#">Huishoudens met hoog inkomen<span><fmt:message key="KEY_TOOLTIP31" /></span></a>
@@ -200,6 +201,7 @@
 									<li>Gemeente<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2010_perc_huish_met_hoog_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'gemeenten2009_perc_huish_met_hoog_inkomen')}">2009</a></li>
 									<li>Wijk<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_perc_huish_met_hoog_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_perc_huish_met_hoog_inkomen')}">2009</a></li>
 									<li>Buurt<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_perc_huish_met_hoog_inkomen')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_perc_huish_met_hoog_inkomen')}">2009</a></li>
+									<li>500m vierkant<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_perc_huish_met_hoog_inkomen_2010')}">2010</a></li>
 								</ul>
 							</li>	
 							<li><a href="#">Huishoudens rond of onder sociaal minimum<span><fmt:message key="KEY_TOOLTIP32" /></span></a>
@@ -208,7 +210,7 @@
 									<li>Wijk<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2010_percentage_huish_onder_rond_sociaal_min')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'wijken2009_percentage_huish_onder_rond_sociaal_min')}">2009</a></li>
 									<li>Buurt<br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2010_percentage_huish_onder_rond_sociaal_min')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'buurten2009_percentage_huish_onder_rond_sociaal_min')}">2009</a></li>
 								</ul>
-							</li>														
+							</li>
 
 							<li class="menuTitle">Wonen</li>
 							<li><a href="#">Woningen<span><fmt:message key="KEY_TOOLTIP37" /></span></a>
@@ -356,9 +358,9 @@
 				</li>
 				<li id="thememenu2">
 					<a href="#thememenu2" id="thememenu2Header" class="accordionheader"><fmt:message key="KEY_THEME_SUBTHEME" /><span><fmt:message key="KEY_THEME_SUBTHEME_TOOLTIP" /></span></a>
-					<div id="thememenu2Content" class="menuAccordionContent">
-					<!-- een div is een non-void, sommige servlet engines maken van deze div een void element (../>); dit commentaar blok zorgt ervoor dat dat niet gebeurt -->
-					</div>
+				<div id="thememenu2Content" class="menuAccordionContent">
+				<!-- een div is een non-void, sommige servlet engines maken van deze div een void element (../>); dit commentaar blok zorgt ervoor dat dat niet gebeurt -->
+				</div>
 				</li>
 			</ul>
 		</div>

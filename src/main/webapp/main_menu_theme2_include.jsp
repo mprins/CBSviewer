@@ -23,15 +23,11 @@
 				<li><a href="#">Inwoners 0 tot 20 jaar<span><fmt:message key="KEY_TOOLTIP9" /></span></a>
 					<ul class="submenu">
 						<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_inwoners_tot_20_jaar')}">2008</a></li>
-						<li>100m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_i2011_019')}">2011</a></li>
-						<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_i2011_019')}">2011</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Inwoners 20 tot 45 jaar<span><fmt:message key="KEY_TOOLTIP10" /></span></a>
 					<ul class="submenu">
 						<li>Bevolkingskernen<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bevolkingskern2008_aantal_inwoners_20_tot_45_jaar')}">2008</a></li>
-						<li>100m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten100m_i2011_2044')}">2011</a></li>
-						<li>500m vierkant<br/><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'vierkanten500m_i2011_2044')}">2011</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Binnenlandse migratie<span><fmt:message key="KEY_TOOLTIP11" /></span></a>
