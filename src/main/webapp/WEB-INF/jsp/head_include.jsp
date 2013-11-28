@@ -34,7 +34,7 @@
 		<meta name="DCTERMS.creator" content="CBS" />
 		<meta name="DCTERMS.publisher" content="CBS" />
 
-		<link rel="stylesheet" href="http://fonts.cbs.nl/cbs_vooruwbedrijf.css" type="text/css" media="all" />
+		<!-- todo, if required: CBS fonts can not be hosted on Github, place font css, eot, woff, truetype and svg later on -->
 		<link rel="stylesheet" href="css/no-theme/jquery-ui-1.10.3.custom.min.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/no-theme/jquery.fancybox.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/compiled.css" type="text/css" media="screen" />
