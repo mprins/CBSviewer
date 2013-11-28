@@ -2,7 +2,7 @@
 <Layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd">
 	<Layerdescriptor>
-		<id>gemeenten2012_aantal_inwoners</id>;
+		<id>gemeenten2012_aantal_inwoners</id>
 		<name>Aantal inwoners - Gemeenten 2012</name>
 		<layers>gemeenten2012</layers>
 		<url>http://geodata.nationaalgeoregister.nl/wijkenbuurten2012/wms</url>
