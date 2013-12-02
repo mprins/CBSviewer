@@ -73,7 +73,7 @@
 				Inselpunkte,Kueste,Insel,Wasserbecken,Kanal,Baeche,Fluesse,Wasser,Gebaeude,Fussgaengerzone,Wiese,Wald,
 				Naherholungsgebiet,Park,unkultiviertes_Land,Gruenflaeche,Bauland,Industriegebiet,Landwirtschaft,Grenzen</param-value>
 		</init-param>
-		
+		-->
 		<!-- Alternatieve basemap van Demis die meer overeenkomt met de brtachtgrondkaart -->
 		<!--init-param>
 			<description>WMS capabilities url van achtergrond (topografie) kaart</description>
