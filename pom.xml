@@ -108,7 +108,7 @@
 		-->
 		<openlayers.checkout.versiontype>branch</openlayers.checkout.versiontype>
 		<openlayers.checkout.version>master</openlayers.checkout.version>
-		<!-- this can be any other OL build compressor or none -->
+		<!-- this can be any other OL build compressor or 'none' -->
 		<openlayers.compress.build>closure</openlayers.compress.build>
 		<!-- Jetty 7 is J5EE, 2.5 servlet api, 1.2 JSP api -->
 		<jetty.version>7.6.14.v20131031</jetty.version>
@@ -711,7 +711,7 @@
 						<category>webapp</category>
 						<programmingLanguage>JavaScript</programmingLanguage>
 						<programmingLanguage>Java</programmingLanguage>
-						<downloadPage />
+						<downloadPage>https://github.com/MinELenI/CBSviewer/releases</downloadPage>
 						<mailingList />
 					</doapOptions>
 				</configuration>
@@ -737,7 +737,7 @@
 						<plugin>
 							<groupId>org.owasp</groupId>
 							<artifactId>dependency-check-maven</artifactId>
-							<version>1.0.5</version>
+							<version>1.0.7</version>
 							<configuration>
 								<externalReport>false</externalReport>
 								<proxyUrl>${http.proxyHost}</proxyUrl>
@@ -1177,7 +1177,7 @@
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
-			<version>1.7.2</version>
+			<version>1.7.3</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
