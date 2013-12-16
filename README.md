@@ -9,6 +9,8 @@ documentation is available at: http://mineleni.github.io/CBSviewer/
 
 [![Jenkins Build Status](http://gisdemo.agro.nl/jenkins/job/CBS-viewer/badge/icon)](http://gisdemo.agro.nl/jenkins/job/CBS-viewer/)
 
+[![Coverage Status](https://coveralls.io/repos/MinELenI/CBSviewer/badge.png)](https://coveralls.io/r/MinELenI/CBSviewer)
+
 ![logo](http://staff.washington.edu/tft/a11ylogo/images/a11ylogo150.png)
 
 
