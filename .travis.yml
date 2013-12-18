@@ -4,6 +4,8 @@ before_install:
 before_script: 
   - mvn -e -Popenlayers
 script: mvn -e -Pjenkins verify
+after_success:
+  - mvn -e -Pjenkins clean cobertura:cobertura coveralls:cobertura
 jdk:
   - openjdk7
   - oraclejdk8
