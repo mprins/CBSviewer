@@ -97,5 +97,7 @@
 			img="https://secure.travis-ci.org/MinELenI/CBSviewer.png" />
 		<logo name="Jenkins build status" href="http://gisdemo.agro.nl/jenkins/job/CBS-viewer/" 
 			img="http://gisdemo.agro.nl/jenkins/job/CBS-viewer/badge/icon" />
+		<logo name="Coverage Status" href="https://coveralls.io/r/MinELenI/CBSviewer?branch=master"
+			img="https://coveralls.io/repos/MinELenI/CBSviewer/badge.png?branch=master"/>
 	</poweredBy>
 </project>

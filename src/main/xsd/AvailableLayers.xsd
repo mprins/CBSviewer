@@ -107,7 +107,7 @@
 						als een (WMS) laag wordt geladen (bij te drukke kaarten).
 					</xsd:documentation>
 				</xsd:annotation>
-			</xsd:element>			
+			</xsd:element>
 			<xsd:element name="link" type="xsd:anyURI" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
@@ -126,7 +126,15 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element type="xsd:anyURI" name="moreinfo" minOccurs="0" 
+				maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						De (optionele) url voor meer informatie over deze
+						service, bijvoorbeeld achtergrond info.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	
 </xsd:schema>

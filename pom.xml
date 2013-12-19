@@ -115,6 +115,7 @@
 		<!-- let op in een aantal integratie tests is deze poort hardcoded -->
 		<jetty.port>8021</jetty.port>
 		<jetty.stopPort>8007</jetty.stopPort>
+		<repo_token />
 	</properties>
 	<profiles>
 		<profile>
