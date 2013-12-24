@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/MinELenI/CBSviewer.png?label=ready)](https://waffle.io/MinELenI/CBSviewer)  
 # CBSviewer
 
 Webrichtlijnen (WCAG 2.0) compliant webmapping applicatie.
