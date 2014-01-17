@@ -20,13 +20,10 @@
 		<form method="get" action="adres" id="zoekFormulier" class="zoekinput">
 			<div>
 				<label for="adres"><fmt:message key="KEY_ADRESZOEKEN_TITEL" /></label>
-				<input name="adres" id="adres" accesskey="8"
-					onkeypress="if (event.keyCode==13){document.getElementById('searchbutton').click();return false}"
-					value="${param.adres}"
-					placeholder="${key_adreszoeken_placeholder}"					
-					type="text" />
-				<input name="searchbutton" id="searchbutton" src="img/new/btn_header_search.gif"
-					accesskey="s" type="image" alt="${key_adreszoeken_submit}"/>
+				<input name="adres" id="adres" value="${param.adres}" 
+					placeholder="${key_adreszoeken_placeholder}" type="text" />
+				<input id="searchbutton" name="searchbutton" type="image" 
+					src="img/new/btn_header_search.gif" alt="${key_adreszoeken_submit}"/>
 
 				<c:if test="${request.straal != null}">
 					<input type="hidden" name="straal" value="${straal}" />

@@ -22,11 +22,16 @@ var ZoekFormulier = {
 	 * @constructor
 	 */
 	init : function(viewer) {
-		// de zoekknop, method en action van formulier verwijderen, die hebben geen funtie meer in de RIA
+		// de zoekknop, method en action van formulier verwijderen, die hebben geen functie meer in de RIA
 		jQuery('input:image').attr("disabled", true);
 		jQuery('#zoekFormulier').removeAttr('action');
 		jQuery('#zoekFormulier').removeAttr('method');
-
+		jQuery('#adres').keypress(function (e){
+			if (e.which == 13){
+				jQuery('#searchbutton').focus().click();
+				return false;
+			}
+		});
 		// verborgen velden instellen voor RIA functies
 		jQuery('#zoekFormulier').find('input[name="coreonly"]').val('false');
 		jQuery('#zoekFormulier').find('input[name="forward"]').val('false');
