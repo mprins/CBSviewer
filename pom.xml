@@ -344,7 +344,7 @@
 							<jsTestSrcDir>src/test/js/jasmine</jsTestSrcDir>
 							<debug>${debug}</debug>
 							<preloadSources>
-								<source>/src/main/webapp/lib/jquery-1.10.2.min.js</source>
+								<source>/src/main/webapp/lib/jquery-1.11.0-rc1.js</source>
 								<source>/src/main/webapp/lib/jquery-ui-1.10.3.custom.min.js</source>
 								<source>/src/test/js/lib/OpenLayers-test.js</source>
 								<source>/src/test/js/lib/jasmin_util.js</source>
@@ -683,7 +683,7 @@
 					<keepServerAlive>true</keepServerAlive>
 					<debug>${debug}</debug>
 					<preloadSources>
-						<source>/src/main/webapp/lib/jquery-1.10.2.min.js</source>
+						<source>/src/main/webapp/lib/jquery-1.11.0-rc1.js</source>
 						<source>/src/main/webapp/lib/jquery-ui-1.10.3.custom.min.js</source>
 						<source>/src/test/js/lib/OpenLayers-test.js</source>
 						<source>/src/test/js/lib/jasmin_util.js</source>
