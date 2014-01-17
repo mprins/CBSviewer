@@ -326,41 +326,6 @@ html.js #coreContainer p {
 	outline-style: solid;
 }
 
-.kaartnavi {
-	position: absolute;
-	height:480px;
-	padding-top:30px;
-	overflow-y:auto;
-	display: inline;
-	margin-left: 1em;
-}
-
-.kaartnavi fieldset {
-	border: 1px solid #dcdcdc;
-	padding: 2px;
-	border-radius: 6px;
-}
-
-.kaartnavi button {
-	border: 1px solid #dcdcdc;
-	cursor: pointer;
-	background-color: #ededed;
-	padding: 0 10px;
-	line-height: 2;
-	min-height: 2em;
-	color: #000;
-	display: block;
-	border-radius: 6px;
-	font-weight: bold;
-	text-shadow: 1px 1px 0px #fff;
-	box-shadow: inset 0 1px 0 0 #fff;
-}
-
-.kaartnavi button:hover {
-	box-shadow: inset 0 1px 0 0 #aaa;
-	border: 1px solid #555;
-}
-
 .redcolor {
 	color: red;
 }
