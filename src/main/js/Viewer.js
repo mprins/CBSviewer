@@ -171,14 +171,14 @@ var Viewer = function() {
 
 			// toggle knop voor omschakelen basemap
 			var aToggle = '<a class="lufo hasTooltip" href="#" id="toggleBaseMap" onclick="Viewer.toggleBaseMap();">'
-					+ '<span>' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>'
+					+ '<span role="tooltip">' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>'
 					+ OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO') + '</a>';
 			jQuery('#' + config.mapDiv).prepend(aToggle);
 
 			if (this.config.toggleSize) {
 				// toggle knop voor vergroten/verkleinen van de kaart
 				var aToggleMapSize = '<a class="max hasTooltip" href="#" id="toggleSize" onclick="Viewer.toggleFullSize();">'
-						+ '<span>' + OpenLayers.i18n('KEY_TOGGLE_SIZE') + '</span></a>';
+						+ '<span role="tooltip">' + OpenLayers.i18n('KEY_TOGGLE_SIZE') + '</span></a>';
 				jQuery('#' + config.mapDiv).prepend(aToggleMapSize);
 			}
 			if (this.config.fullSize) {
@@ -214,7 +214,7 @@ var Viewer = function() {
 				// instellen initiele waarde voor slider GUI
 				jQuery('#transparantie').find('a:first').addClass('hasTooltip');
 				jQuery('#transparantie').find('a:first').text((_opacity * 100));
-				jQuery('#transparantie').find('a:first').append('<span>' + OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+				jQuery('#transparantie').find('a:first').append('<span role="tooltip">' + OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
 					'0' : (100 - (_opacity * 100))
 				}) + '</span>');
 			}
