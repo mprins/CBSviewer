@@ -90,6 +90,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<geotools.version>10.4</geotools.version>
+		<httpcomponents.version>4.3.2</httpcomponents.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
@@ -1144,12 +1145,12 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.3.1</version>
+			<version>${httpcomponents.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
-			<version>4.3.1</version>
+			<version>${httpcomponents.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
