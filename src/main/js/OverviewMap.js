@@ -87,7 +87,7 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 
 		// maximize button
 		var btn = document.createElement("button");
-		btn.innerHTML = '<span>'+OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_ON')+'</span><img src="img/maximize.png" alt="tonen"/>';
+		btn.innerHTML = '<span role="tooltip">'+OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_ON')+'</span><img src="img/maximize.png" alt="tonen"/>';
 		btn.name = 'tonen';
 		this.maximizeDiv = btn;
 		this.maximizeDiv.style.display = 'none';
@@ -96,7 +96,7 @@ OverviewMap = OpenLayers.Class(OpenLayers.Control.OverviewMap, {
 
 		// minimize button
 		btn = document.createElement("button");
-		btn.innerHTML = '<span>'+OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_OFF')+'</span><img src="img/minimize.png" alt="verbergen"/>';
+		btn.innerHTML = '<span role="tooltip">'+OpenLayers.i18n('KEY_TOGGLE_OVERVIEW_OFF')+'</span><img src="img/minimize.png" alt="verbergen"/>';
 		btn.name = 'verbergen';
 		this.minimizeDiv = btn;
 		this.minimizeDiv.style.display = 'none';
