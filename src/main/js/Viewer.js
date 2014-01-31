@@ -290,7 +290,8 @@ var Viewer = function() {
 				mapOptions : {
 					maxExtent : this.config.map.restrictedExtent,
 					resolutions : this.config.map.resolutions,
-					projection : this.config.map.projection
+					projection : this.config.map.projection,
+					theme : null
 				}
 			}));
 		},
