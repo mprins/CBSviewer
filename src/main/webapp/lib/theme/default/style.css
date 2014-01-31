@@ -1,1 +1,0 @@
-/* OpenLayers doet altijd een request voor de default style, geen idee of dit een bug of een feature is. Aangezien we dit betsand niet hebben, een lege geven, de browser heeft immers al een socket geopend, en een lege css is altijd minder dan de 404 pagina die nu wordt gegenereerd */
