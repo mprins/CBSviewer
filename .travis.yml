@@ -3,7 +3,7 @@ before_install:
   - unset GEM_PATH
 before_script: 
   - mvn -e -Popenlayers
-script: mvn -e -Pjenkins verify
+# script: mvn -e -Pjenkins verify
 after_success:
   - mvn -e -Pjenkins cobertura:cobertura coveralls:cobertura
 jdk:
@@ -12,3 +12,51 @@ jdk:
 cache:
   directories:
   - cache
+
+env:
+  global:
+    # Your normal Travis CI build command
+    # Normally this would be in the script: tag of .travis.yml, instead place it here
+    - STANDARD_BUILD_COMMAND="mvn -e -Pjenkins verify"
+
+    # -- BEGIN Coverity Scan ENV
+
+    # Pre-configuration steps that should not be analyzed
+    # i.e. "./configure"
+    - COVERITY_SCAN_BUILD_COMMAND_PREPEND=""
+
+    # The build command with all of the arguments that you would apply to a manual `cov-build`
+    # Usually this is the same as STANDARD_BUILD_COMMAND, exluding the automated test arguments
+    #
+    # Examples:
+    # make -j4
+    # mvn -f pom.xml
+    # ant -buildfile test.xml
+    - COVERITY_SCAN_BUILD_COMMAND="mvn -e -Pjenkins verify"
+
+    - PROJECT_NAME="MinELenI/CBSviewer"
+
+    # Email address for notifications related to this build
+    - OWNER_EMAIL="mprins@users.sf.net"
+
+    # Regular expression selects on which branches to run analysis
+    # Be aware of quotas. Do not run on every branch/commit
+    - COVERITY_SCAN_BRANCH_PATTERN="coverity_scan"
+
+    # COVERITY_SCAN_TOKEN via "travis encrypt" using the repo's public key
+    - secure: "m3nonqJtEg3+1Z+4UcAMeiqrxwc/YLWnZgIvE0C9JrE1Iv4TSACPVop7YzG31b+H4w2UjRGPCVxHgcJ2t9vfkSGTnLxFSQ7o0kz8uBMsqMBO8wKB2d0JVAX3bb5LVtYS2oFeRp5BRbqkZI7BN2iq5GKKbTTx+qVMTt7Yw4wWutA="
+
+    - COVERITY_SCAN_BUILD_URL="https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh"
+    - COVERITY_SCAN_BUILD="curl -s $COVERITY_SCAN_BUILD_URL | bash"
+
+    # -- END Coverity Scan ENV
+
+  # Note: Your build matrix configuration may vary. Consult Travis CI Docs for more information
+  # http://docs.travis-ci.com/user/build-configuration/#The-Build-Matrix
+  matrix:
+    - COVERITY_SCAN=0
+    - COVERITY_SCAN=1
+
+script:
+  # Move your original Travis CI build command to STANDARD_BUILD_COMMAND, above
+  - if [ "${COVERITY_SCAN}" = '1' ]; then eval "$COVERITY_SCAN_BUILD"; else eval "$STANDARD_BUILD_COMMAND"; fi
