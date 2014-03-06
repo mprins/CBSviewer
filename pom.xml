@@ -90,7 +90,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<geotools.version>10.5</geotools.version>
-		<httpcomponents.version>4.3.2</httpcomponents.version>
+		<httpcomponents.version>4.3.3</httpcomponents.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
@@ -311,7 +311,7 @@
 					<plugin>
 						<groupId>org.eluder.coveralls</groupId>
 						<artifactId>coveralls-maven-plugin</artifactId>
-						<version>2.1.0</version>
+						<version>2.2.0</version>
 						<configuration>
 							<repoToken>${repo_token}</repoToken>
 							<sourceDirectories>
@@ -364,7 +364,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.2</version>
+				<version>2.5</version>
 				<configuration>
 					<pushChanges>false</pushChanges>
 				</configuration>
@@ -763,7 +763,7 @@
 						<plugin>
 							<groupId>org.owasp</groupId>
 							<artifactId>dependency-check-maven</artifactId>
-							<version>1.1.1</version>
+							<version>1.1.2</version>
 							<configuration>
 								<externalReport>false</externalReport>
 								<proxyUrl>${http.proxyHost}</proxyUrl>
@@ -1029,7 +1029,7 @@
 						<plugin>
 							<groupId>com.github.phasebash</groupId>
 							<artifactId>jsdoc3-maven-plugin</artifactId>
-							<version>1.0.5</version>
+							<version>1.0.7</version>
 							<configuration>
 								<recursive>false</recursive>
 								<directoryRoots>
