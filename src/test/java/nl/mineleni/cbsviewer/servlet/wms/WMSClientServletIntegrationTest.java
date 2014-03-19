@@ -103,7 +103,8 @@ public class WMSClientServletIntegrationTest {
 				this.will(returnValue("Grenzen"));
 				this.oneOf(WMSClientServletIntegrationTest.this.servletConfig)
 						.getInitParameter("lufoCapabilitiesURL");
-				this.will(returnValue("http://gisdemo2.agro.nl/arcgis/services/Luchtfoto2010/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS"));
+				// this.will(returnValue("http://gisdemo2.agro.nl/arcgis/services/Luchtfoto2010/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS"));
+				this.will(returnValue("http://geodata1.nationaalgeoregister.nl/luchtfoto/wms?request=GetCapabilities"));
 				this.oneOf(WMSClientServletIntegrationTest.this.servletConfig)
 						.getInitParameter("lufoWMSlayers");
 				this.will(returnValue(""));
