@@ -22,9 +22,9 @@ import nl.mineleni.cbsviewer.util.xml.LayerDescriptor;
 
 import org.geotools.GML;
 import org.geotools.GML.Version;
+import org.geotools.data.simple.SimpleFeatureCollection;
 import org.geotools.data.simple.SimpleFeatureIterator;
 import org.geotools.feature.DefaultFeatureCollection;
-import org.geotools.feature.FeatureIterator;
 import org.geotools.feature.simple.SimpleFeatureBuilder;
 import org.geotools.feature.simple.SimpleFeatureTypeBuilder;
 import org.jsoup.Jsoup;
@@ -32,6 +32,7 @@ import org.jsoup.nodes.Element;
 import org.opengis.feature.simple.SimpleFeature;
 import org.opengis.feature.simple.SimpleFeatureType;
 import org.opengis.geometry.primitive.Point;
+import org.opengis.referencing.crs.CoordinateReferenceSystem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
@@ -42,7 +43,7 @@ import org.xml.sax.SAXException;
  * 
  * @author mprins
  * @since 1.7
- *
+ * 
  * @has AttributesNamesFilter
  * @has AttributeValuesFilter
  */
@@ -57,7 +58,8 @@ public final class FeatureInfoResponseConverter {
 		GMLTYPE("application/vnd.ogc.gml"),
 		/** The htmltype. */
 		HTMLTYPE("text/html")
-		/** xml type., XMLTYPE("application/vnd.ogc.wms_xml") */;
+		/** xml type., XMLTYPE("application/vnd.ogc.wms_xml") */
+		;
 
 		/** het conversie type. */
 		private final String type;
@@ -133,15 +135,17 @@ public final class FeatureInfoResponseConverter {
 				"internal");
 		final SimpleFeatureTypeBuilder b = new SimpleFeatureTypeBuilder();
 
-		// 1e rij zijn headers, andere rijen zijn data, geheekl converteren naar
+		// 1e rij zijn headers, andere rijen zijn data, geheel converteren naar
 		// een SimpleFeatureCollection
 		final Element headers = table.select("tr:first-child").first();
 		final Iterator<Element> iterTHs = headers.select("th").iterator();
 		while (iterTHs.hasNext()) {
 			b.add(iterTHs.next().text(), String.class);
 		}
+		b.setDefaultGeometry("point");
 		b.setCRS(null);
-		b.add("point", Point.class);
+		b.nillable(true).add("point", Point.class,
+				(CoordinateReferenceSystem) null);
 		b.setName("tablerow");
 		final SimpleFeatureType type = b.buildFeatureType();
 		final SimpleFeatureBuilder builder = new SimpleFeatureBuilder(type);
@@ -149,14 +153,16 @@ public final class FeatureInfoResponseConverter {
 				.iterator();
 		while (rows.hasNext()) {
 			final Iterator<Element> iterTH = headers.select("th").iterator();
-			final Iterator<Element> iterTDs = rows.next().select("td").iterator();
+			final Iterator<Element> iterTDs = rows.next().select("td")
+					.iterator();
 			final SimpleFeature f = builder.buildFeature(null);
 			while (iterTDs.hasNext()) {
 				f.setAttribute(iterTH.next().text(), iterTDs.next().text());
 			}
+			f.setDefaultGeometry(null);
 			featureCollection.add(f);
 		}
-		return featureCollectionConverter(featureCollection.features(), layer);
+		return featureCollectionConverter(featureCollection, layer);
 	}
 
 	/**
@@ -172,12 +178,10 @@ public final class FeatureInfoResponseConverter {
 	 */
 	private static String convertGML(final InputStream gmlStream,
 			final LayerDescriptor layer) throws IOException {
-
 		try {
 			final GML gml = new GML(Version.WFS1_0);
-			final SimpleFeatureIterator iter = gml
-					.decodeFeatureIterator(gmlStream);
-			return featureCollectionConverter(iter, layer);
+			return featureCollectionConverter(
+					gml.decodeFeatureCollection(gmlStream), layer);
 		} catch (ParserConfigurationException | SAXException e) {
 			LOGGER.error("Fout tijdens parsen van GML. ", e);
 			return "";
@@ -246,19 +250,19 @@ public final class FeatureInfoResponseConverter {
 	/**
 	 * Feature collection converter.
 	 * 
-	 * @param iter
+	 * @param features
 	 *            verzameling features die wordt omgezet
 	 * @param layer
 	 *            De laag waarvoor deze functie wordt uitgevoerd
 	 * @return the string
 	 */
 	private static String featureCollectionConverter(
-			final FeatureIterator<SimpleFeature> iter,
-			final LayerDescriptor layer) {
+			final SimpleFeatureCollection features, final LayerDescriptor layer) {
+
 		final StringBuilder sb = new StringBuilder();
 		final String[] fieldNames = layer.getAttributes().split(",\\s*");
 
-		if (iter.hasNext()) {
+		if (features != null && features.size() > 0) {
 			// tabel maken
 			sb.append("<table id=\"attribuutTabel\" class=\"attribuutTabel\">");
 			sb.append("<caption>");
@@ -271,25 +275,27 @@ public final class FeatureInfoResponseConverter {
 			}
 			sb.append("</tr></thead><tbody>");
 			int i = 0;
+			SimpleFeatureIterator iter = features.features();
 			while (iter.hasNext()) {
-				sb.append("<tr class=\"" + (((i++ % 2) == 0) ? "odd" : "even")
-						+ "\">");
+				sb.append("<tr class=\"")
+						.append(((i++ % 2) == 0) ? "odd" : "even")
+						.append("\">");
 				final SimpleFeature f = iter.next();
 				for (final String n : fieldNames) {
 					if (VALUESFILTER.hasFilters()) {
-						sb.append("<td>");
-						sb.append(VALUESFILTER.filterValue(f.getAttribute(n)));
-						sb.append("</td>");
+						sb.append("<td>")
+								.append(VALUESFILTER.filterValue(f
+										.getAttribute(n))).append("</td>");
 					} else {
-						sb.append("<td>");
-						sb.append(f.getAttribute(n));
-						sb.append("</td>");
+						sb.append("<td>").append(f.getAttribute(n))
+								.append("</td>");
 					}
 				}
 				sb.append("</tr>");
 			}
 			sb.append("</tbody></table>");
 			iter.close();
+			iter = null;
 			LOGGER.debug("Gemaakte HTML tabel: " + sb);
 			return sb.toString();
 		} else {
