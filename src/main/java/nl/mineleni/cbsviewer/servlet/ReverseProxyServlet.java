@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -179,17 +179,19 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 							+ ERR_MSG_FORBIDDEN);
 					response.flushBuffer();
 				} else {
-					if (LOGGER.isDebugEnabled()) {
-						LOGGER.debug("proxy GET param:" + serverUrl);
-					}
 					// intercept and modify request
 					if (serverUrl.contains("GetFeatureInfo")) {
 						serverUrl = serverUrl.replace("text%2Fhtml",
+								URLEncoder.encode(type.toString(), "UTF-8"));
+						serverUrl = serverUrl.replace("text/html",
 								URLEncoder.encode(type.toString(), "UTF-8"));
 						if (LOGGER.isDebugEnabled()) {
 							LOGGER.debug("proxy GetFeatureInfo GET param: "
 									+ serverUrl);
 						}
+					}
+					if (LOGGER.isDebugEnabled()) {
+						LOGGER.debug("Execute proxy GET param:" + serverUrl);
 					}
 					final HttpGet httpget = new HttpGet(serverUrl);
 					httpget.setConfig(requestConfig);
@@ -254,6 +256,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 						response.sendError(get.getStatusLine().getStatusCode(),
 								get.getStatusLine().toString());
 					}
+					httpget.reset();
 				}
 			} else {
 				throw new ServletException("Only HTTP(S) protocol is supported");
