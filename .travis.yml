@@ -4,7 +4,7 @@ before_install:
 install:
   - mvn -Djavax.xml.accessExternalSchema=file install -DskipTests=true -B -V
 before_script: 
-  - mvn -e -Djavax.xml.accessExternalSchema=file -Popenlayers compile
+  - mvn -e -Djavax.xml.accessExternalSchema=file -Popenlayers
 script: mvn -e -Pjenkins -Djavax.xml.accessExternalSchema=file verify
 after_success:
   - mvn -e -Djavax.xml.accessExternalSchema=file -Pjenkins cobertura:cobertura coveralls:cobertura
