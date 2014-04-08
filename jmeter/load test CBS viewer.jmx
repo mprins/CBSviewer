@@ -265,12 +265,12 @@ bboxSize:		afmeting van zoom box (meter)
             <stringProp name="TestPlan.comments">lijst met te testen adressen en coordinaten</stringProp>
             <stringProp name="delimiter">;</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="filename">./adressen.csv</stringProp>
+            <stringProp name="filename">./BAG_150.csv</stringProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">false</boolProp>
             <stringProp name="shareMode">shareMode.thread</stringProp>
             <boolProp name="stopThread">false</boolProp>
-            <stringProp name="variableNames">postcode,huisnummer,x-coord,y-coord</stringProp>
+            <stringProp name="variableNames">huisnummer,postcode,x-coord,y-coord</stringProp>
           </CSVDataSet>
           <hashTree/>
           <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
