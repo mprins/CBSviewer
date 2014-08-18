@@ -1238,14 +1238,14 @@
 			</releases>
 		</repository>
 		<repository>
-			<id>opengeo</id>
-			<name>OpenGeo Repository</name>
-			<url>http://repo.opengeo.org/</url>
+			<id>geotools</id>
+			<name>Geotools Repository</name>
+			<url>http://repo.boundlessgeo.com/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
 			<releases>
-				<enabled>false</enabled>
+				<enabled>true</enabled>
 			</releases>
 		</repository>
 	</repositories>
