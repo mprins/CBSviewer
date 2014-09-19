@@ -27,6 +27,11 @@
 			<param-name>allowed_hosts</param-name>
 			<param-value>geodata.nationaalgeoregister.nl</param-value>
 		</init-param>
+		<init-param>
+			<description>FeatureInfo mime type</description>
+			<param-name>featureInfoType</param-name>
+			<param-value>GMLTYPE</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
@@ -101,6 +106,11 @@
 				Indien leeg dan worden alle lagen uit het capabilities document gebruikt.</description>
 			<param-name>lufoWMSlayers</param-name>
 			<param-value />
+		</init-param>
+		<init-param>
+			<description>FeatureInfo mime type</description>
+			<param-name>featureInfoType</param-name>
+			<param-value>GMLTYPE</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
