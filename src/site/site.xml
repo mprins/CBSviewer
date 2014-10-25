@@ -91,13 +91,15 @@
 		<logo name="Github" href="https://github.com/MinELenI/CBSviewer"
 			img="images/github.png" />
 		<logo name="Geotools" href="http://www.geotools.org/" img="images/geotools.png" />
-		<logo name="OpenLayers" href="http://openlayers.org/" img="images/openlayers.png" />
+		<logo name="OpenLayers" href="http://openlayers.org/two/" img="images/openlayers.png" />
 		<logo name="Accessibility" href="http://staff.washington.edu/tft/a11ylogo/" img="images/a11ylogo150.png" />
-		<logo name="Travis build status" href="http://travis-ci.org/MinELenI/CBSviewer/" 
-			img="https://secure.travis-ci.org/MinELenI/CBSviewer.png" />
-		<logo name="Jenkins build status" href="http://gisdemo.agro.nl/jenkins/job/CBS-viewer/" 
-			img="http://gisdemo.agro.nl/jenkins/job/CBS-viewer/badge/icon" />
+		<logo name="Travis build status (master branch)" href="http://travis-ci.org/MinELenI/CBSviewer/" 
+			img="https://travis-ci.org/MinELenI/CBSviewer.svg?branch=master" />
+		<!-- logo name="Jenkins build status" href="http://gisdemo.agro.nl/jenkins/job/CBS-viewer/" 
+			img="http://gisdemo.agro.nl/jenkins/job/CBS-viewer/badge/icon" / -->
 		<logo name="Coverage Status" href="https://coveralls.io/r/MinELenI/CBSviewer?branch=master"
-			img="https://coveralls.io/repos/MinELenI/CBSviewer/badge.png?branch=master"/>
+			img="https://coveralls.io/repos/MinELenI/CBSviewer/badge.png?branch=master" />
+		<logo name="Coverity scan build status" href="https://scan.coverity.com/projects/1321"
+			img="https://scan.coverity.com/projects/1321/badge.svg" />
 	</poweredBy>
 </project>
