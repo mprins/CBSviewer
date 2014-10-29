@@ -62,6 +62,17 @@ mvn -Popenlayers,developer
     
   Deze tools dienen in het pad te worden opgenomen zodat ze vanuit de werkdirectory opgestart kunnen worden.
   
+** Java 8
+
+  Vanwege een aangescherpt beveiligingsmodel in Java 8 mislukt het genereren van de XML bindings met JAXB, om dit te 
+  omzeilen gebruik je een extra commandoregel/omgevings parameter:
+  
++----+
+-Djavax.xml.accessExternalSchema=file 
++----+
+
+  Let op: de closure compiler die wordt gebruikt voor het bouwen van OpenLayers werkt niet met Java 8.
+  
 ** {code conventies en formatting}
 
   Voor formatting van de Javascript code wordt het Eclipse profiel gebruikt zoals dat te vinden is in de <<<ide/>>> directory.
@@ -137,6 +148,3 @@ mvn site-deploy -Dgithub.username=<login> -Dgithub.password=<passwd>
   * {{{http://help.github.com/}Algemene GitHub documentatie}}
   
   * {{{http://help.github.com/send-pull-requests/}GitHub pull request documentatie}}
-  
-  * 
- 
