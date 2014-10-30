@@ -7,56 +7,56 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * 
  * <pre>
  * 
- * &lt;complexType name="StreetNameType">
- *   &lt;annotation>
- *     &lt;documentation>The data elements that make up the name of a
+ * &lt;complexType name="StreetNameType"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;The data elements that make up the name of a
  *     street. There are two valid methods for encoding this
  *     information: 1). Use the structured elements and attributes.
  *     2). The element value may contain a simplified string (e.g.
  *     West 83rd. Street). An example: 
- *     &lt;Street directionalPrefix="W" officialName="83RD" typeSuffix="ST" />
- *     &lt;/documentation>
- *   &lt;/annotation>
- *   &lt;simpleContent>
- *     &lt;extension base="string">
- *       &lt;attribute name="directionalPrefix" type="string" use="optional">
- *         &lt;annotation>
- *           &lt;documentation>The direction for a street (e.g., North),
- *           placed before the official name.&lt;/documentation>
- *         &lt;/annotation>
- *       &lt;/attribute>
- *       &lt;attribute name="typePrefix" type="string" use="optional">
- *         &lt;annotation>
- *           &lt;documentation>The street type (e.g., Rd or Ave)
- *           specified before the official name&lt;/documentation>
- *         &lt;/annotation>
- *       &lt;/attribute>
- *       &lt;attribute name="officialName" type="string" use="optional">
- *         &lt;annotation>
- *           &lt;documentation>The name for a street (e.g., Main).&lt;/documentation>
- *         &lt;/annotation>
- *       &lt;/attribute>
- *       &lt;attribute name="typeSuffix" type="string" use="optional">
- *         &lt;annotation>
- *           &lt;documentation>The street type (e.g., Rd or Ave)
- *           specified after the official name&lt;/documentation>
- *         &lt;/annotation>
- *       &lt;/attribute>
- *       &lt;attribute name="directionalSuffix" type="string" use="optional">
- *         &lt;annotation>
- *           &lt;documentation>The direction for a street (e.g., North),
- *           placed after the official name.&lt;/documentation>
- *         &lt;/annotation>
- *       &lt;/attribute>
- *       &lt;attribute name="muniOctant" type="gml:CompassPointEnumeration" use="optional" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
- * &lt;element name="Street" type="xls:StreetNameType">
- *   &lt;annotation>
- *     &lt;documentation>Structured Street Name.&lt;/documentation>
- *   &lt;/annotation>
- * &lt;/element>
+ *     &lt;Street directionalPrefix="W" officialName="83RD" typeSuffix="ST" /&gt;
+ *     &lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="string"&gt;
+ *       &lt;attribute name="directionalPrefix" type="string" use="optional"&gt;
+ *         &lt;annotation&gt;
+ *           &lt;documentation&gt;The direction for a street (e.g., North),
+ *           placed before the official name.&lt;/documentation&gt;
+ *         &lt;/annotation&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="typePrefix" type="string" use="optional"&gt;
+ *         &lt;annotation&gt;
+ *           &lt;documentation&gt;The street type (e.g., Rd or Ave)
+ *           specified before the official name&lt;/documentation&gt;
+ *         &lt;/annotation&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="officialName" type="string" use="optional"&gt;
+ *         &lt;annotation&gt;
+ *           &lt;documentation&gt;The name for a street (e.g., Main).&lt;/documentation&gt;
+ *         &lt;/annotation&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="typeSuffix" type="string" use="optional"&gt;
+ *         &lt;annotation&gt;
+ *           &lt;documentation&gt;The street type (e.g., Rd or Ave)
+ *           specified after the official name&lt;/documentation&gt;
+ *         &lt;/annotation&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="directionalSuffix" type="string" use="optional"&gt;
+ *         &lt;annotation&gt;
+ *           &lt;documentation&gt;The direction for a street (e.g., North),
+ *           placed after the official name.&lt;/documentation&gt;
+ *         &lt;/annotation&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="muniOctant" type="gml:CompassPointEnumeration" use="optional" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
+ * &lt;element name="Street" type="xls:StreetNameType"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;Structured Street Name.&lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ * &lt;/element&gt;
  * 
  * </pre>
  * 

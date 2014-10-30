@@ -10,19 +10,19 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * 
  * <pre>
  * 
- *  &lt;complexType name="GeocodeResponseType">
- *   &lt;annotation>
- *     &lt;documentation>GeocodeResponse. The addresses returned will be normalized 
- *     Address ADTs as a result of any parsing by the geocoder, etc.&lt;/documentation>
- *   &lt;/annotation>
- *   &lt;complexContent>
- *     &lt;extension base="xls:AbstractResponseParametersType">
- *       &lt;sequence>
- *         &lt;element ref="xls:GeocodeResponseList" maxOccurs="unbounded" />
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ *  &lt;complexType name="GeocodeResponseType"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;GeocodeResponse. The addresses returned will be normalized 
+ *     Address ADTs as a result of any parsing by the geocoder, etc.&lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="xls:AbstractResponseParametersType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="xls:GeocodeResponseList" maxOccurs="unbounded" /&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * 
  * </pre>
  * 

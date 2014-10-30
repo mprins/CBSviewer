@@ -153,8 +153,8 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 
 	/**
 	 * Process the HTTP Get request. Voor een Openlayers proxy wordt de url dan
-	 * iets van: <br/>
-	 * <code>WMSproxy/proxy?</code> <br/>
+	 * iets van: <br>
+	 * <code>WMSproxy/proxy?</code> <br>
 	 * waarin WMSproxy de naam van de webapp is en proxy de servlet mapping.
 	 * 
 	 * @param request

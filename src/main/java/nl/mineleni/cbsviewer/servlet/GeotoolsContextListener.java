@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -28,7 +28,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Application Lifecycle Listener implementation class GeotoolsContextListener.
- * Initialize & cleanup van Geotools therads en lookups
+ * Initialize &amp; cleanup van Geotools threads en lookups.
  * 
  * @author Mark
  */

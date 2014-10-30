@@ -7,23 +7,23 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * 
  * <pre>
  * 
- * &lt;element name="PostalCode" type="xls:PostalCodeType">
- *   &lt;annotation>
- *     &lt;documentation>A zipcode or international postal code as
- *     defined by the governing postal authority.&lt;/documentation>
- *   &lt;/annotation>
- * &lt;/element>
- * &lt;simpleType name="PostalCodeType">
- *   &lt;annotation>
- *     &lt;documentation>The AbstractPostalCodeType is an abstract type
+ * &lt;element name="PostalCode" type="xls:PostalCodeType"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;A zipcode or international postal code as
+ *     defined by the governing postal authority.&lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ * &lt;/element&gt;
+ * &lt;simpleType name="PostalCodeType"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;The AbstractPostalCodeType is an abstract type
  *     for postal code within an AddressType. We do this because the
  *     components of a postal code vary greatly throughout the world.
  *     So that the schema can accommodate this variation we create
  *     derived types such as the USZipCodeType which has the
- *     components for a US zipcode&lt;/documentation>
- *   &lt;/annotation>
- *   &lt;restriction base="string" />
- * &lt;/simpleType>
+ *     components for a US zipcode&lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ *   &lt;restriction base="string" /&gt;
+ * &lt;/simpleType&gt;
  * 
  * </pre>
  * 

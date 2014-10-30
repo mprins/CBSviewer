@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -13,23 +13,23 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>
- * &lt;simpleType name="ReverseGeocodePreferenceType">
- * &lt;annotation>
- * 	&lt;documentation>Defines a Preference for Reverse Geocode response.&lt;/documentation>
- * &lt;/annotation>
- * &lt;restriction base="string">
- * &lt;enumeration value="StreetAddress"/>
- * &lt;enumeration value="IntersectionAddress"/>
- * &lt;/restriction>
- * &lt;/simpleType>
- * &lt;element name="ReverseGeocodePreference" type="xls:ReverseGeocodePreferenceType">
- * &lt;annotation>
- * 	&lt;documentation>Describes the preference for what the Reverse Geocoder service should return: 
+ * &lt;simpleType name="ReverseGeocodePreferenceType"&gt;
+ * &lt;annotation&gt;
+ * 	&lt;documentation&gt;Defines a Preference for Reverse Geocode response.&lt;/documentation&gt;
+ * &lt;/annotation&gt;
+ * &lt;restriction base="string"&gt;
+ * &lt;enumeration value="StreetAddress"/&gt;
+ * &lt;enumeration value="IntersectionAddress"/&gt;
+ * &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * &lt;element name="ReverseGeocodePreference" type="xls:ReverseGeocodePreferenceType"&gt;
+ * &lt;annotation&gt;
+ * 	&lt;documentation&gt;Describes the preference for what the Reverse Geocoder service should return: 
  * 	StreetAddress, IntersectionAddress, or PositionOfInterest (Place and/or PostalCode). 
  * 	If not specified, then the service will return the nearest StreetAddress. .
- * 	&lt;/documentation>
- * &lt;/annotation>
- * &lt;/element>
+ * 	&lt;/documentation&gt;
+ * &lt;/annotation&gt;
+ * &lt;/element&gt;
  * </pre>
  * 
  * @author prinsmc

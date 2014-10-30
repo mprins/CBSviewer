@@ -10,24 +10,24 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * <pre>
  * 
  * &lt;element name="Building" type="xls:BuildingLocatorType" 
- * 		substitutionGroup="xls:_StreetLocation">
- *   &lt;annotation>
- *     &lt;documentation>An addressable place; normally a location on a street: number, 
- *     subdivision name and/or building name.&lt;/documentation>
- *   &lt;/annotation>
- * &lt;/element>
- * &lt;complexType name="BuildingLocatorType">
- *   &lt;annotation>
- *     &lt;documentation>A type of AbstractStreetLocatorType&lt;/documentation>
- *   &lt;/annotation>
- *   &lt;complexContent>
- *     &lt;extension base="xls:AbstractStreetLocatorType">
- *       &lt;attribute name="number" type="string" use="optional" />
- *       &lt;attribute name="subdivision" type="string" use="optional" />
- *       &lt;attribute name="buildingName" type="string" use="optional" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * 		substitutionGroup="xls:_StreetLocation"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;An addressable place; normally a location on a street: number, 
+ *     subdivision name and/or building name.&lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ * &lt;/element&gt;
+ * &lt;complexType name="BuildingLocatorType"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;A type of AbstractStreetLocatorType&lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="xls:AbstractStreetLocatorType"&gt;
+ *       &lt;attribute name="number" type="string" use="optional" /&gt;
+ *       &lt;attribute name="subdivision" type="string" use="optional" /&gt;
+ *       &lt;attribute name="buildingName" type="string" use="optional" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * 
  * </pre>
  * 

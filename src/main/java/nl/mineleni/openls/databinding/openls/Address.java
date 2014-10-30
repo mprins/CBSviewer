@@ -13,27 +13,27 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * 
  * <pre>
  * 
- * &lt;complexType name="AddressType">
- *   &lt;annotation>
- *     &lt;documentation>Defines an address&lt;/documentation>
- *   &lt;/annotation>
- *   &lt;complexContent>
- *     &lt;extension base="xls:AbstractAddressType">
- *       &lt;choice>
- *         &lt;element name="freeFormAddress" type="string">
- *           &lt;annotation>
- *             &lt;documentation>An unstructured free form address.&lt;/documentation>
- *           &lt;/annotation>
- *         &lt;/element>
- *         &lt;sequence>
- *           &lt;element ref="xls:StreetAddress" />
- *           &lt;element ref="xls:Place" minOccurs="0" maxOccurs="unbounded" />
- *           &lt;element ref="xls:PostalCode" minOccurs="0" />
- *         &lt;/sequence>
- *       &lt;/choice>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="AddressType"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;Defines an address&lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="xls:AbstractAddressType"&gt;
+ *       &lt;choice&gt;
+ *         &lt;element name="freeFormAddress" type="string"&gt;
+ *           &lt;annotation&gt;
+ *             &lt;documentation&gt;An unstructured free form address.&lt;/documentation&gt;
+ *           &lt;/annotation&gt;
+ *         &lt;/element&gt;
+ *         &lt;sequence&gt;
+ *           &lt;element ref="xls:StreetAddress" /&gt;
+ *           &lt;element ref="xls:Place" minOccurs="0" maxOccurs="unbounded" /&gt;
+ *           &lt;element ref="xls:PostalCode" minOccurs="0" /&gt;
+ *         &lt;/sequence&gt;
+ *       &lt;/choice&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * 
  * </pre>
  * 

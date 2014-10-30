@@ -10,22 +10,22 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * 
  * <pre>
  * 
- *  &lt;complexType name="GeocodeResponseListType">
- *   &lt;sequence>
- *     &lt;element name="GeocodedAddress" type="xls:GeocodedAddressType" maxOccurs="unbounded">
- *       &lt;annotation>
- *         &lt;documentation>The list of 1-n addresses that are returned for each Address 
- *         request, sorted by Accuracy.&lt;/documentation>
- *       &lt;/annotation>
- *     &lt;/element>
- *   &lt;/sequence>
- *   &lt;attribute name="numberOfGeocodedAddresses" type="nonNegativeInteger" use="required">
- *     &lt;annotation>
- *       <documentation>This is the number of responses generated per the different requests. 
- *       Within each geocoded address it's possible to have multiple candidates.&lt;/documentation>
- *     &lt;/annotation>
- *   &lt;/attribute>
- * &lt;/complexType>
+ *  &lt;complexType name="GeocodeResponseListType"&gt;
+ *   &lt;sequence&gt;
+ *     &lt;element name="GeocodedAddress" type="xls:GeocodedAddressType" maxOccurs="unbounded"&gt;
+ *       &lt;annotation&gt;
+ *         &lt;documentation&gt;The list of 1-n addresses that are returned for each Address 
+ *         request, sorted by Accuracy.&lt;/documentation&gt;
+ *       &lt;/annotation&gt;
+ *     &lt;/element&gt;
+ *   &lt;/sequence&gt;
+ *   &lt;attribute name="numberOfGeocodedAddresses" type="nonNegativeInteger" use="required"&gt;
+ *     &lt;annotation&gt;
+ *       &lt;documentation&gt;This is the number of responses generated per the different requests. 
+ *       Within each geocoded address it's possible to have multiple candidates.&lt;/documentation&gt;
+ *     &lt;/annotation&gt;
+ *   &lt;/attribute&gt;
+ * &lt;/complexType&gt;
  * 
  * </pre>
  * 

@@ -13,25 +13,25 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * http://schemas.opengis.net/ols/1.2.0/LocationUtilityService.xsd
  * 
  * <pre>
- * &lt;element name="ReverseGeocodeRequest" type="xls:ReverseGeocodeRequestType" substitutionGroup="xls:_RequestParameters">
- * 	&lt;annotation>
- * 		&lt;documentation>Reverse Geocode Service Request</documentation>
- * 	&lt;/annotation>
- * &lt;/element>
+ * &lt;element name="ReverseGeocodeRequest" type="xls:ReverseGeocodeRequestType" substitutionGroup="xls:_RequestParameters"&gt;
+ * 	&lt;annotation&gt;
+ * 		&lt;documentation&gt;Reverse Geocode Service Request&lt;/documentation&gt;
+ * 	&lt;/annotation&gt;
+ * &lt;/element&gt;
  * 
- * &lt;complexType name="ReverseGeocodeRequestType">
- * 	&lt;annotation>
- * 		&lt;documentation>Reverse Geocode Request.&lt;/documentation>
- * 	&lt;/annotation>
- * 	&lt;complexContent>
- * 	&lt;extension base="xls:AbstractRequestParametersType">
- * 	&lt;sequence>
- * 		&lt;element ref="xls:Position"/>
- * 		&lt;element ref="xls:ReverseGeocodePreference" minOccurs="0" maxOccurs="unbounded"/>
- * 	&lt;/sequence>
- * 	&lt;/extension>
- * 	&lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ReverseGeocodeRequestType"&gt;
+ * 	&lt;annotation&gt;
+ * 		&lt;documentation&gt;Reverse Geocode Request.&lt;/documentation&gt;
+ * 	&lt;/annotation&gt;
+ * 	&lt;complexContent&gt;
+ * 	&lt;extension base="xls:AbstractRequestParametersType"&gt;
+ * 	&lt;sequence&gt;
+ * 		&lt;element ref="xls:Position"/&gt;
+ * 		&lt;element ref="xls:ReverseGeocodePreference" minOccurs="0" maxOccurs="unbounded"/&gt;
+ * 	&lt;/sequence&gt;
+ * 	&lt;/extension&gt;
+ * 	&lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * 
  * </pre>
  * 
@@ -81,7 +81,7 @@ public class ReverseGeocodeRequest implements XmlNamespaceConstants {
 	/**
 	 * set de positie voor dit verzoek.
 	 * 
-	 * @param position
+	 * @param position positie
 	 */
 	public void setPosition(Position position) {
 		this.position = position;

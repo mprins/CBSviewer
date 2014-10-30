@@ -33,10 +33,10 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(AbstractBaseServlet.class);
-	/** proxyserver address for the this service. {@value} */
+	/** proxyserver address for the this service. */
 	private transient String proxyHost;
 
-	/** proxyserver port for the this service. {@value} */
+	/** proxyserver port for the this service. */
 	private transient int proxyPort = -1;
 
 	/** user id voor bijv. authenticatie. @see #USER_ID */

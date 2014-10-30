@@ -7,26 +7,26 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * 
  * <pre>
  * 
- *  &lt;element name="Place" type="xls:NamedPlaceType">
- *   &lt;annotation>
- *     &lt;documentation>Place represents a hierarchical set of
+ *  &lt;element name="Place" type="xls:NamedPlaceType"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;Place represents a hierarchical set of
  *     geographic regions/placenames: country subdivision, country
  *     secondary subdivision, municipality, and municipality
- *     subdivision.&lt;/documentation>
- *   &lt;/annotation>
- * &lt;/element>
- * &lt;complexType name="NamedPlaceType">
- *   &lt;annotation>
- *     &lt;documentation>The NamedPlaceType defines a named place within
+ *     subdivision.&lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ * &lt;/element&gt;
+ * &lt;complexType name="NamedPlaceType"&gt;
+ *   &lt;annotation&gt;
+ *     &lt;documentation&gt;The NamedPlaceType defines a named place within
  *     an AddressType. A named place has a classification (such as
- *     country, country subdivision, or municipality).&lt;/documentation>
- *   &lt;/annotation>
- *   &lt;simpleContent>
- *     &lt;extension base="string">
- *       &lt;attribute name="type" type="xls:NamedPlaceClassification" use="required" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ *     country, country subdivision, or municipality).&lt;/documentation&gt;
+ *   &lt;/annotation&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="string"&gt;
+ *       &lt;attribute name="type" type="xls:NamedPlaceClassification" use="required" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * 
  * </pre>
  * 

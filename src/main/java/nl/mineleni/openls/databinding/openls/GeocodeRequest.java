@@ -11,30 +11,30 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * <pre>
  * 
  * &lt;element name="GeocodeRequest" type="xls:GeocodeRequestType" 
- * 		substitutionGroup="xls:_RequestParameters"> 
- *  &lt;annotation>
- *      &lt;documentation>Geocode Service Request&lt;/documentation> 
- *  &lt;/annotation>
- * &lt;/element> 
+ * 		substitutionGroup="xls:_RequestParameters"&gt; 
+ *  &lt;annotation&gt;
+ *      &lt;documentation&gt;Geocode Service Request&lt;/documentation&gt; 
+ *  &lt;/annotation&gt;
+ * &lt;/element&gt; 
  * 
- * &lt;complexType name="GeocodeRequestType"> 
- * &lt;annotation>
- *      &lt;documentation>Geocode Request.&lt;/documentation> 
- * &lt;/annotation>
- * &lt;complexContent> 
- *  &lt;extension base="xls:AbstractRequestParametersType">
- *  &lt;sequence> 
- *      &lt;element ref="xls:Address" maxOccurs="unbounded"/> 
- *  &lt;/sequence>
- *  &lt;attribute name="returnFreeForm" type="boolean" use="optional" default="false"> 
- *      &lt;annotation> 
- *          &lt;documentation>Used to request freeform addresses in the response, as 
- *          opposed to structured adddresses&lt;/documentation> 
- *      &lt;/annotation> 
- *  &lt;/attribute> 
- * &lt;/extension>
- * &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="GeocodeRequestType"&gt; 
+ * &lt;annotation&gt;
+ *      &lt;documentation&gt;Geocode Request.&lt;/documentation&gt; 
+ * &lt;/annotation&gt;
+ * &lt;complexContent&gt; 
+ *  &lt;extension base="xls:AbstractRequestParametersType"&gt;
+ *  &lt;sequence&gt; 
+ *      &lt;element ref="xls:Address" maxOccurs="unbounded"/&gt; 
+ *  &lt;/sequence&gt;
+ *  &lt;attribute name="returnFreeForm" type="boolean" use="optional" default="false"&gt; 
+ *      &lt;annotation&gt; 
+ *          &lt;documentation&gt;Used to request freeform addresses in the response, as 
+ *          opposed to structured adddresses&lt;/documentation&gt; 
+ *      &lt;/annotation&gt; 
+ *  &lt;/attribute&gt; 
+ * &lt;/extension&gt;
+ * &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * 
  * </pre>
  * 

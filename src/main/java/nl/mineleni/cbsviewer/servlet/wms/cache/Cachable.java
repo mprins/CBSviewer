@@ -12,7 +12,7 @@ package nl.mineleni.cbsviewer.servlet.wms.cache;
  * @author prinsmc
  * 
  * @param <T>
- *            type cacheble object
+ *            type cachable object
  */
 public interface Cachable<T> {
 	/**
@@ -25,7 +25,7 @@ public interface Cachable<T> {
 	/**
 	 * Haalt het opgeslagen item {@code <T>} op.
 	 * 
-	 * @return item <T>
+	 * @return item van type {@code <T>}
 	 */
 	T getItem();
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.

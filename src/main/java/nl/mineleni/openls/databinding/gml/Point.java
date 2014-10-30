@@ -17,18 +17,18 @@ import nl.mineleni.openls.XmlNamespaceConstants;
  * 
  * <pre>
  * 
- * &lt;complexType name="PointType">
- *   &lt;complexContent>
- *     &lt;extension base="gml:AbstractGeometricPrimitiveType">
- *       &lt;sequence>
- *         &lt;choice>
- *           &lt;element ref="gml:pos" />
- *           &lt;element ref="gml:coordinates" />
- *         &lt;/choice>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="PointType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="gml:AbstractGeometricPrimitiveType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;choice&gt;
+ *           &lt;element ref="gml:pos" /&gt;
+ *           &lt;element ref="gml:coordinates" /&gt;
+ *         &lt;/choice&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * 
  * </pre>
  * 
