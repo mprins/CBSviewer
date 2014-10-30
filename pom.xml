@@ -89,7 +89,7 @@
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>12.0</geotools.version>
+		<geotools.version>12.0.1</geotools.version>
 		<httpcomponents.version>4.3.3</httpcomponents.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
@@ -765,9 +765,6 @@
 							<artifactId>dependency-check-maven</artifactId>
 							<version>1.2.5</version>
 							<configuration>
-								<externalReport>false</externalReport>
-								<proxyUrl>${http.proxyHost}</proxyUrl>
-								<proxyPort>${http.proxyPort}</proxyPort>
 								<name>OWASP Dependency Check</name>
 							</configuration>
 						</plugin>
@@ -992,6 +989,13 @@
 							<groupId>org.codehaus.mojo</groupId>
 							<artifactId>cobertura-maven-plugin</artifactId>
 							<version>2.6</version>
+							<configuration>
+								<instrumentation>
+									<ignores>
+										<ignore>nl.mineleni.cbsviewer.util.xml.*</ignore>
+									</ignores>
+								</instrumentation>
+							</configuration>
 						</plugin>
 						<plugin>
 							<groupId>org.codehaus.mojo</groupId>
@@ -999,7 +1003,7 @@
 							<version>3.0.0</version>
 							<configuration>
 								<effort>Default</effort>
-								<threshold>Normal</threshold>
+								<threshold>Default</threshold>
 								<xmlOutput>true</xmlOutput>
 								<onlyAnalyze>nl.mineleni.*</onlyAnalyze>
 							</configuration>
@@ -1031,13 +1035,14 @@
 							<artifactId>jsdoc3-maven-plugin</artifactId>
 							<version>1.1.0</version>
 							<configuration>
-								<recursive>false</recursive>
+								<recursive>true</recursive>
 								<directoryRoots>
 									<directoryRoot>${basedir}/src/main/js</directoryRoot>
 								</directoryRoots>
 								<sourceFiles>
 									<sourceFile>${basedir}/src/main/webapp/js/config.js</sourceFile>
 								</sourceFiles>
+								<includePrivate>true</includePrivate>
 							</configuration>
 						</plugin>
 					</reportPlugins>
