@@ -13,10 +13,11 @@
 		height: 1px;
 		width: 1px;
 		overflow: hidden;
+		opacity: 0;
 	}
 	
-	&:hover span {
-	/* &:focus span { focus is a not working properly in some browsers */
+	&:hover span, 
+	&:focus span {
 		clip: auto;
 		padding: 2px;
 		/* border: $ControlBorder; */
@@ -34,5 +35,7 @@
 		/* @include box-shadow(2px 2px 2px $ControlBorderColour); */
 		font-size: 12px;
 		font-weight: normal;
+		opacity: 1;
+		@include single-transition(opacity 0.5s ease-in 0.1s);
 	}
 }
