@@ -53,8 +53,6 @@ mvn -Popenlayers,developer
   De OpenLayers build configuratie is vastgelegd in het bestand <<</OL-build.cfg>>>.
   
   Naast een Maven installatie zijn de volgende tools nodig:
-  
-    [PhantomJS] te verkrijgen via {{http://phantomjs.org/download.html}}
     
     [Graphviz] te verkrijgen via {{http://www.graphviz.org/Download.php}}
     
@@ -70,8 +68,6 @@ mvn -Popenlayers,developer
 +----+
 -Djavax.xml.accessExternalSchema=file 
 +----+
-
-  Let op: de closure compiler die wordt gebruikt voor het bouwen van OpenLayers werkt niet met Java 8.
   
 ** {code conventies en formatting}
 
