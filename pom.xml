@@ -93,6 +93,7 @@
 		<httpcomponents.version>4.3.3</httpcomponents.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
+		<phantomjs.version>1.9.8</phantomjs.version>
 		<github.username />
 		<github.password />
 		<skipTests>false</skipTests>
@@ -340,7 +341,6 @@
 							</execution>
 						</executions>
 						<configuration>
-							<browserVersion>CHROME</browserVersion>
 							<jsSrcDir>src/main/js</jsSrcDir>
 							<jsTestSrcDir>src/test/js/jasmine</jsTestSrcDir>
 							<debug>${debug}</debug>
@@ -361,6 +361,23 @@
 		<finalName>${proj.finalname}</finalName>
 		<defaultGoal>install</defaultGoal>
 		<plugins>
+			<plugin>
+				<groupId>com.github.klieber</groupId>
+				<artifactId>phantomjs-maven-plugin</artifactId>
+				<version>0.4</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>install</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<checkSystemPath>true</checkSystemPath>
+					<version>${phantomjs.version}</version>
+					<outputDirectory>${basedir}/cache</outputDirectory>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
@@ -678,7 +695,6 @@
 					</execution>
 				</executions>
 				<configuration>
-					<browserVersion>CHROME</browserVersion>
 					<jsSrcDir>src/main/js</jsSrcDir>
 					<jsTestSrcDir>src/test/js/jasmine</jsTestSrcDir>
 					<keepServerAlive>true</keepServerAlive>
@@ -691,6 +707,12 @@
 						<source>/src/main/webapp/js/config.js</source>
 					</preloadSources>
 					<webDriverClassName>org.openqa.selenium.phantomjs.PhantomJSDriver</webDriverClassName>
+					<webDriverCapabilities>
+						<capability>
+							<name>phantomjs.binary.path</name>
+							<value>${phantomjs.binary}</value>
+						</capability>
+					</webDriverCapabilities>
 					<skipTests>${skipTests}</skipTests>
 				</configuration>
 			</plugin>
@@ -804,6 +826,7 @@
 								<stylesheet>java</stylesheet>
 								<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
 								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -useimports</additionalparam>
+								<additionalparam>-Xdoclint:none</additionalparam>
 								<docletArtifact>
 									<groupId>org.umlgraph</groupId>
 									<artifactId>umlgraph</artifactId>
