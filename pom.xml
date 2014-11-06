@@ -91,6 +91,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<geotools.version>12.0.1</geotools.version>
 		<httpcomponents.version>4.3.3</httpcomponents.version>
+		<jaxb.version>2.2.12</jaxb.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<phantomjs.version>1.9.8</phantomjs.version>
@@ -172,7 +173,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-scm-plugin</artifactId>
-						<version>1.9.1</version>
+						<version>1.9.2</version>
 						<executions>
 							<execution>
 								<id>getOpenLayers</id>
@@ -312,7 +313,7 @@
 					<plugin>
 						<groupId>org.eluder.coveralls</groupId>
 						<artifactId>coveralls-maven-plugin</artifactId>
-						<version>2.2.0</version>
+						<version>3.0.1</version>
 						<configuration>
 							<repoToken>${repo_token}</repoToken>
 							<sourceDirectories>
@@ -381,7 +382,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5</version>
+				<version>2.5.1</version>
 				<configuration>
 					<pushChanges>false</pushChanges>
 				</configuration>
@@ -389,7 +390,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.6</version>
+				<version>2.7</version>
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
@@ -473,11 +474,20 @@
 					<includeSchemasOutputPath>.</includeSchemasOutputPath>
 					<npa>true</npa>
 				</configuration>
+				<!-- 
+				<dependencies>
+					<dependency>
+						<groupId>com.sun.xml.bind</groupId>
+						<artifactId>jaxb-xjc</artifactId>
+						<version>${jaxb.version}</version>
+					</dependency>
+				</dependencies>
+				-->
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.2</version>
 				<configuration>
 					<debug>${debug}</debug>
 					<optimize>!${debug}</optimize>
@@ -523,7 +533,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.17</version>
+				<version>2.18</version>
 				<configuration>
 					<excludes>
 						<exclude>**/*IntegrationTest.java</exclude>
@@ -537,7 +547,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>2.17</version>
+				<version>2.18</version>
 				<configuration>
 					<includes>
 						<include>**/*IntegrationTest.java</include>
@@ -609,7 +619,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.5</version>
 				<configuration>
 					<!-- niet kopieren -->
 					<warSourceExcludes>**/css/*.css,**/js/*.js,**/lib/theme/default/style.css,**/jquery.fancybox.css,**/jquery.layout.js</warSourceExcludes>
@@ -634,7 +644,7 @@
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>yuicompressor-maven-plugin</artifactId>
-				<version>1.4.0</version>
+				<version>1.5.0</version>
 				<executions>
 					<execution>
 						<phase>process-classes</phase>
@@ -793,7 +803,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-jxr-plugin</artifactId>
-							<version>2.4</version>
+							<version>2.5</version>
 							<configuration>
 								<linkJavadoc>true</linkJavadoc>
 								<javadocDir>${basedir}/target/site/apidocs</javadocDir>
@@ -820,7 +830,15 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-javadoc-plugin</artifactId>
-							<version>2.9.1</version>
+							<version>2.10.1</version>
+							<reportSets>
+								<reportSet>
+									<reports>
+										<report>javadoc-no-fork</report>
+										<report>test-javadoc-no-fork</report>
+									</reports>
+								</reportSet>
+							</reportSets>
 							<configuration>
 								<debug>${debug}</debug>
 								<stylesheet>java</stylesheet>
@@ -841,7 +859,7 @@
 									<link>http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs</link>
 									<link>http://docs.geotools.org/latest/javadocs</link>
 									<link>http://flexjson.sourceforge.net/javadoc</link>
-									<link>http://jaxb.java.net/nonav/2.2.11/docs/api</link>
+									<link>http://jaxb.java.net/nonav/${jaxb.version}/docs/api</link>
 								</links>
 								<author>true</author>
 								<defaultAuthor />
@@ -892,7 +910,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-surefire-report-plugin</artifactId>
-							<version>2.17</version>
+							<version>2.18</version>
 							<configuration>
 								<outputName>surefire-report</outputName>
 								<linkXRef>true</linkXRef>
@@ -906,7 +924,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-surefire-report-plugin</artifactId>
-							<version>2.17</version>
+							<version>2.18</version>
 							<configuration>
 								<outputName>failsafe-report</outputName>
 								<linkXRef>true</linkXRef>
@@ -949,7 +967,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-changes-plugin</artifactId>
-							<version>2.10</version>
+							<version>2.11</version>
 							<configuration>
 								<publishDateLocale>nl</publishDateLocale>
 								<includeOpenIssues>false</includeOpenIssues>
@@ -968,7 +986,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-checkstyle-plugin</artifactId>
-							<version>2.12.1</version>
+							<version>2.13</version>
 							<configuration>
 								<configLocation>${basedir}/checkstyle-ruleset.xml</configLocation>
 								<suppressionsLocation>${basedir}/checkstyle-suppressions.xml</suppressionsLocation>
@@ -1093,7 +1111,7 @@
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
-				<version>0.10</version>
+				<version>[0.10,0.11-SNAPSHOT)</version>
 				<configuration>
 					<message>site update voor versie ${project.version} (rev. ${buildNumber})</message>
 					<password>${github.password}</password>
@@ -1162,6 +1180,19 @@
 										<ignore />
 									</action>
 								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.github.klieber</groupId>
+										<artifactId>phantomjs-maven-plugin</artifactId>
+										<versionRange>[0.4,)</versionRange>
+										<goals>
+											<goal>install</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
@@ -1221,17 +1252,17 @@
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
-			<version>2.2.11</version>
+			<version>${jaxb.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>net.sf.flexjson</groupId>
 			<artifactId>flexjson</artifactId>
-			<version>3.2</version>
+			<version>3.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
-			<version>1.7.3</version>
+			<version>1.8.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
