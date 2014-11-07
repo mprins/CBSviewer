@@ -90,7 +90,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<geotools.version>12.0.1</geotools.version>
-		<httpcomponents.version>4.3.3</httpcomponents.version>
+		<httpcomponents.version>4.3.4</httpcomponents.version>
 		<jaxb.version>2.2.12</jaxb.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>

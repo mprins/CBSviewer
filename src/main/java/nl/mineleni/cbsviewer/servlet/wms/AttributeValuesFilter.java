@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
+ *
+ * Gepubliceerd onder de BSD 2-clause licentie,
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms;
@@ -22,11 +22,11 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Verzorgt de filterconfiguratie van attribuut waarden.
- * 
+ *
  * @author prinsmc
- * 
+ *
  * @composed 1 - 0..* AttributeValueFilter
- * @has FilterList
+ * @depend - attributeValueFilters - FilterList
  */
 public class AttributeValuesFilter {
 
@@ -54,7 +54,7 @@ public class AttributeValuesFilter {
 					.getResource("AttributeValuesFilter.xml").getFile());
 			@SuppressWarnings("unchecked")
 			final JAXBElement<FilterList> element = (JAXBElement<FilterList>) u
-					.unmarshal(f);
+			.unmarshal(f);
 			final FilterList fList = element.getValue();
 			this.filters = fList.getFilter();
 			this.hasFilters = (!this.filters.isEmpty());
@@ -67,7 +67,7 @@ public class AttributeValuesFilter {
 
 	/**
 	 * Filtert de input.
-	 * 
+	 *
 	 * @param input
 	 *            een te filteren waarde
 	 * @return de gefilterde input zoals in de filtermapping beschreven.
@@ -86,7 +86,7 @@ public class AttributeValuesFilter {
 
 	/**
 	 * Geeft aan of het filter inhoud heeft.
-	 * 
+	 *
 	 * @return {@code true} als het filter inhoud heeft
 	 */
 	public boolean hasFilters() {
