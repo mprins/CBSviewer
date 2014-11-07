@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -214,9 +214,10 @@ var Viewer = function() {
 				// instellen initiele waarde voor slider GUI
 				jQuery('#transparantie').find('a:first').addClass('hasTooltip');
 				jQuery('#transparantie').find('a:first').text((_opacity * 100));
-				jQuery('#transparantie').find('a:first').append('<span role="tooltip">' + OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
-					'0' : (100 - (_opacity * 100))
-				}) + '</span>');
+				jQuery('#transparantie').find('a:first').append(
+						'<span role="tooltip">' + OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+							'0' : (100 - (_opacity * 100))
+						}) + '</span>');
 			}
 		},
 
@@ -248,7 +249,11 @@ var Viewer = function() {
 		zoomTo : function(x, y, radius, withFeatureInfo) {
 			var lonlat = new OpenLayers.LonLat(x, y);
 			_map.panTo(lonlat);
-			_map.zoomTo(_map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius)));
+			setCookie(COOKIE.x, x);
+			setCookie(COOKIE.y, y);
+			var zoom = _map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius));
+			_map.zoomTo(zoom);
+			setCookie(COOKIE.zoom, zoom);
 
 			if (withFeatureInfo) {
 				// met een zoomend werkt het soms raar, maar met wachten op
@@ -325,7 +330,8 @@ var Viewer = function() {
 		 * @param {object}
 		 *            wmsConfig Een object met WMS parameters. <code>
 		 * {
-		 * 'name' : 'cbs_inwoners_2010_per_hectare',
+		 * 'id' : 'cbs_inwoners_2010_per_hectare',
+		 * 'name': 'Inwoners 2010 per hectare'
 		 * 'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten100m2010/ows',
 		 * 'layers' : 'cbsvierkanten100m2010:cbs_inwoners_2000_per_hectare',
 		 * 'styles' : 'cbsvierkant100m_inwoners_2000'
@@ -352,6 +358,7 @@ var Viewer = function() {
 					_map.zoomTo(wmsConfig.zoom);
 			}
 
+			setCookie(COOKIE.mapId, wmsConfig.id);
 			_map.addLayer(layer);
 
 			var fInfoControl = _map.getControlsByClass('WMSGetFeatureInfo');
@@ -398,6 +405,8 @@ var Viewer = function() {
 					lyrs[lyr].destroy();
 				}
 			}
+			
+			eraseCookie(COOKIE.mapId);
 		},
 
 		/**
@@ -459,9 +468,11 @@ var Viewer = function() {
 			if (topo.getVisibility()) {
 				_map.setBaseLayer(lufo);
 				jQuery('#toggleBaseMap').text(OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TOPO'));
+				setCookie(COOKIE.baselyr, 'lufo');
 			} else {
 				_map.setBaseLayer(topo);
 				jQuery('#toggleBaseMap').text(OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO'));
+				setCookie(COOKIE.baselyr, 'topo');
 			}
 			jQuery('#toggleBaseMap').append('<span>' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>');
 			jQuery('#toggleBaseMap').toggleClass('lufo topo');

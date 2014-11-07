@@ -17,12 +17,14 @@ describe(
 					'Na het initialiseren van Viewer',
 					function() {
 						var _wms = {
+							'id': 'autochtonen_2011',
 							'name' : 'autochtonen_2011',
 							'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms',
 							'layers' : 'autochtonen_2011',
 							'styles' : 'cbsvierkanten500m.p_auto2011'
 						};
 						var _wms2 = {
+							'id':'wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen',
 							'name' : 'wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen',
 							'url' : 'http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms',
 							'layers' : 'cbs_buurten_2011',
@@ -55,12 +57,14 @@ describe(
 						it('De kaart moet 3 lagen hebben na toevoegen van 1 WMS', function() {
 							Viewer.loadWMS(_wms);
 							expect(Viewer.getMap().layers.length).toBe(3);
+							expect(getCookie(COOKIE.mapId)).toEqual(_wms.id);
 						});
 
 						it('De kaart moet 3 lagen hebben na toevoegen van 2 WMS', function() {
 							Viewer.loadWMS(_wms);
 							Viewer.loadWMS(_wms2);
 							expect(Viewer.getMap().layers.length).toBe(3);
+							expect(getCookie(COOKIE.mapId)).toEqual(_wms2.id);
 						});
 
 						it('De kaart moet 2 lagen hebben na toevoegen en verwijderen van 1 WMS', function() {
@@ -78,6 +82,7 @@ describe(
 									var lyrs = Viewer.getMap().layers;
 									expect(lyrs.length).toBe(2);
 									expect(lyrs[0]).toBeInstanceOf(OpenLayers.Layer.WMTS);
+									expect(getCookie(COOKIE.mapId)).toBeNull();
 								});
 
 						it('Na destroy is de kaart null', function() {
