@@ -172,7 +172,7 @@ var Viewer = function() {
 			// toggle knop voor omschakelen basemap
 			var aToggle = '<a class="lufo hasTooltip" href="#" id="toggleBaseMap" onclick="Viewer.toggleBaseMap();">'
 					+ '<span role="tooltip">' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>';
-			aToggle += _map.baseLayer.name === 'topo' ? OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO') : OpenLayers
+			aToggle += _map.baseLayer.name === 'topografie' ? OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO') : OpenLayers
 					.i18n('KEY_TOGGLE_BASEMAP_TOPO');
 			aToggle += '</a>';
 			jQuery('#' + config.mapDiv).prepend(aToggle);
@@ -465,8 +465,8 @@ var Viewer = function() {
 		 * Toggle basemap.
 		 */
 		toggleBaseMap : function() {
-			var topo = _map.getLayersByName('topo')[0];
-			var lufo = _map.getLayersByName('lufo')[0];
+			var topo = _map.getLayersByName('topografie')[0];
+			var lufo = _map.getLayersByName('luchtfoto')[0];
 			if (topo.getVisibility()) {
 				_map.setBaseLayer(lufo);
 				jQuery('#toggleBaseMap').text(OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TOPO'));
@@ -488,11 +488,11 @@ var Viewer = function() {
 		addBaseMap : function() {
 			// topo
 			_map.addLayer(new OpenLayers.Layer.WMTS(jQuery.extend(true, this.config.map.topoWMTS, {
-				name : 'topo'
+				name : 'topografie'
 			})));
 			// luchtfoto
 			_map.addLayer(new OpenLayers.Layer.WMTS(jQuery.extend(true, this.config.map.aerialWMTS, {
-				name : 'lufo'
+				name : 'luchtfoto'
 			})));
 
 			if (getCookie(COOKIE.baselyr)) {

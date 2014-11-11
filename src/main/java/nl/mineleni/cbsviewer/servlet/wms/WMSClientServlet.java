@@ -37,6 +37,7 @@ import javax.imageio.ImageIO;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -197,7 +198,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		// max lengte in px van schaalbalk
 		int barLength = MAP_DIMENSION / 2;
 		// crs units
-		int dist = (int) (barLength * scale); 
+		int dist = (int) (barLength * scale);
 		// logaritmisch lengte afronden
 		final int digits = (int) (Math.log(dist) / Math.log(10));
 		final double pow10 = Math.pow(10, digits);
@@ -251,11 +252,16 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 *             de achtergrondgrond WMS service
 	 */
 	private BufferedImage getBackGroundMap(final BoundingBox bbox,
-			final String baseMapType) throws ServletException {
+			final String baseMapType, HttpServletResponse response)
+			throws ServletException {
 
 		GetMapRequest map;
+
 		switch (baseMapType.toLowerCase()) {
 		case "luchtfoto":
+			Cookie cookie = new Cookie("baselyr", "luchtfoto");
+			cookie.setMaxAge(90 * 24 * 60 * 60);
+			response.addCookie(cookie);
 			if (this.bgWMSLuFoCache.containsKey(bbox)) {
 				// ophalen uit cache
 				LOGGER.debug("Achtergrond " + baseMapType
@@ -280,6 +286,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		case "topografie":
 			// implicit fall thru naar default
 		default:
+			cookie = new Cookie("baselyr", "topografie");
+			cookie.setMaxAge(90 * 24 * 60 * 60);
+			response.addCookie(cookie);
 			if (this.bgWMSCache.containsKey(bbox)) {
 				// ophalen uit cache
 				LOGGER.debug("Achtergrond " + baseMapType
@@ -312,8 +321,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		LOGGER.debug("Achtergrond WMS url is: " + map.getFinalURL());
 
 		try {
-			final GetMapResponse response = this.bgWMS.issueRequest(map);
-			final BufferedImage image = ImageIO.read(response.getInputStream());
+			final GetMapResponse mapResponse = this.bgWMS.issueRequest(map);
+			final BufferedImage image = ImageIO.read(mapResponse
+					.getInputStream());
 			switch (baseMapType.toLowerCase()) {
 			case "luchtfoto":
 				this.bgWMSLuFoCache.put(bbox, image, SECONDS_TO_CACHE_ELEMENTS);
@@ -774,14 +784,11 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					e);
 		}
 
-		this.legendCache = new Cache<>(
-				NUMBER_CACHE_ELEMENTS);
+		this.legendCache = new Cache<>(NUMBER_CACHE_ELEMENTS);
 
-		this.featInfoCache = new Cache<>(
-				NUMBER_CACHE_ELEMENTS);
+		this.featInfoCache = new Cache<>(NUMBER_CACHE_ELEMENTS);
 
-		this.fgWMSCache = new Cache<>(
-				NUMBER_CACHE_ELEMENTS);
+		this.fgWMSCache = new Cache<>(NUMBER_CACHE_ELEMENTS);
 
 		// achtergrond kaart
 		final String bgCapabilitiesURL = config
@@ -873,12 +880,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(trans)) {
 			// CHECKSTYLE.OFF: MagicNumber - default alpha transparantie is 80%
 			try {
-
 				alpha = 1 - (Float.parseFloat(trans) / 100);
 				if ((0 > alpha) && (alpha > 1)) {
 					alpha = 0.8f;
 				}
-
 			} catch (final NumberFormatException n) {
 				alpha = 0.8f;
 			}
@@ -891,11 +896,15 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(mType)) {
 			basemaptype = mType;
 		}
-		final BufferedImage bg = this.getBackGroundMap(bbox, basemaptype);
+		final BufferedImage bg = this.getBackGroundMap(bbox, basemaptype,
+				response);
 
 		BufferedImage fg = null;
 		final String mapId = request.getParameter(REQ_PARAM_MAPID.code);
 		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(mapId)) {
+			Cookie cookie = new Cookie("mapId", mapId);
+			cookie.setMaxAge(90 * 24 * 60 * 60);
+			response.addCookie(cookie);
 			final LayerDescriptor layer = this.layers.getLayerByID(mapId);
 			request.setAttribute("mapname", layer.getName());
 			LOGGER.debug("LayerDescriptor::Name is: " + layer.getName());
