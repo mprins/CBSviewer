@@ -171,8 +171,10 @@ var Viewer = function() {
 
 			// toggle knop voor omschakelen basemap
 			var aToggle = '<a class="lufo hasTooltip" href="#" id="toggleBaseMap" onclick="Viewer.toggleBaseMap();">'
-					+ '<span role="tooltip">' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>'
-					+ OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO') + '</a>';
+					+ '<span role="tooltip">' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>';
+			aToggle += _map.baseLayer.name === 'topo' ? OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO') : OpenLayers
+					.i18n('KEY_TOGGLE_BASEMAP_TOPO');
+			aToggle += '</a>';
 			jQuery('#' + config.mapDiv).prepend(aToggle);
 
 			if (this.config.toggleSize) {
@@ -405,7 +407,7 @@ var Viewer = function() {
 					lyrs[lyr].destroy();
 				}
 			}
-			
+
 			eraseCookie(COOKIE.mapId);
 		},
 
@@ -492,6 +494,10 @@ var Viewer = function() {
 			_map.addLayer(new OpenLayers.Layer.WMTS(jQuery.extend(true, this.config.map.aerialWMTS, {
 				name : 'lufo'
 			})));
+
+			if (getCookie(COOKIE.baselyr)) {
+				_map.setBaseLayer(_map.getLayersByName(getCookie(COOKIE.baselyr))[0]);
+			}
 		}
 	};
 }();

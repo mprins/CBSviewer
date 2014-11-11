@@ -27,7 +27,7 @@ COOKIE.baselyr = 'baselyr', COOKIE.x = 'x', COOKIE.y = 'y', COOKIE.zoom = 'zoom'
 function setCookie(key, value) {
 	var expires = new Date();
 	expires.setTime(expires.getTime() + (90 * 24 * 60 * 60 * 1000));
-	document.cookie = key + '=' + escape(value) + ';path=/;expires=' + expires.toUTCString();
+	document.cookie = key + '=' + encodeURIComponent(value) + ';path=/;expires=' + expires.toUTCString();
 }
 
 /**
@@ -40,7 +40,7 @@ function setCookie(key, value) {
  */
 function getCookie(key) {
 	var value = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
-	return value ? value[2] : null;
+	return value ? decodeURIComponent(value[2]) : null;
 }
 
 /**
