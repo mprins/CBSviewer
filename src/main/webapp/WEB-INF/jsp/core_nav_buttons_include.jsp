@@ -34,10 +34,18 @@
 			<fmt:message key="KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />
 		</c:when>
 		<c:otherwise>
+			<!-- default is lufo -->
 			<c:set var="wisselachtergrond" value="luchtfoto" />
 			<fmt:message key="KEY_TOGGLE_BASEMAP_LUFO" var="wisselachtergrondBtn" />
+			
+			<!-- uit cookie halen als die bestaat en ongelijk aan topografie -->
+			<c:if test="${cookie['baselyr'].value != 'topografie'}">
+				<c:set var="wisselachtergrond" value="topografie" />
+				<fmt:message key="KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />
+			</c:if>
 		</c:otherwise>
 	</c:choose>
+	
 	<c:choose>
 		<c:when test="${empty param.doorzicht}">
 			<!-- 20% doorzichtig (.8 alpha) is de default -->
@@ -47,6 +55,7 @@
 			<c:set var="doorzicht" value="${param.doorzicht}" />
 		</c:otherwise>
 	</c:choose>
+	
 	<!--  de te gebruiken HTTP methode (post|get) voor de formulieren -->
 	<c:set var="formMethod" value="get" />
 

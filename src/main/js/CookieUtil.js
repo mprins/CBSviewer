@@ -11,12 +11,6 @@
  */
 
 /**
- * key names.
- */
-var COOKIE = {};
-COOKIE.baselyr = 'baselyr', COOKIE.x = 'x', COOKIE.y = 'y', COOKIE.zoom = 'zoom', COOKIE.mapId = 'mapId';
-
-/**
  * Sla een waarde op in een cookie met een verval tijd van 90 dagen.
  * 
  * @param key
@@ -53,7 +47,6 @@ function eraseCookie(key) {
 	date = new Date();
 	date.setDate(date.getDate() - 1);
 	document.cookie = key + '=;path=/;expires=' + date.toUTCString();
-
 }
 
 /**

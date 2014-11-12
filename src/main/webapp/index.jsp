@@ -5,9 +5,11 @@
 	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false" trimDirectiveWhitespaces="false"
-		language="java" isThreadSafe="false" isErrorPage="false" />
+		language="java" isThreadSafe="false" isErrorPage="false" 
+		import="nl.mineleni.cbsviewer.util.CookieNamesConstants"/>
 	<jsp:output doctype-root-element="html"
 		doctype-system="about:legacy-compat" omit-xml-declaration="true" />
+
 
 	<fmt:setBundle basename="LabelsBundle" />
 
@@ -39,9 +41,13 @@
 <c:if test="${empty param.mapid}">
 	<!-- default thema kaartlaag -->
 	<c:set value="gemeenten2012_bevolkingsdichtheid_inwoners_per_km2" var="mapid" />
-	<c:if test='${not empty cookie["mapId"].value }'>
-		<c:set value='${cookie["mapId"].value}' var="mapid" />
+	<c:if test='${not empty cookie["mapid"].value }'>
+		<c:set value='${cookie["mapid"].value}' var="mapid" />
 	</c:if>
+</c:if>
+
+<c:if test="${not empty param.mapid}">
+	<c:set value="${param.mapid}" var="mapid" />
 </c:if>
 
 <c:if test="${empty param.achtergrond}">
@@ -50,9 +56,6 @@
 	</c:if>
 </c:if>
 
-<c:if test="${not empty param.mapid}">
-	<c:set value="${param.mapid}" var="mapid" />
-</c:if>
 
 <jsp:include page="kaart">
 	<jsp:param value="${mapid}" name="mapid" />

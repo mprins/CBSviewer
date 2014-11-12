@@ -191,8 +191,7 @@ var Viewer = function() {
 				if (_resizeTimeOut) {
 					clearTimeout(_resizeTimeOut);
 				}
-				// 200 is time in miliseconds
-				_resizeTimeOut = setTimeout(_resize, 200);
+				_resizeTimeOut = setTimeout(_resize, 200 /* milliseconds */);
 			});
 
 			if (this.config.fgAlphaSlider) {
@@ -360,7 +359,7 @@ var Viewer = function() {
 					_map.zoomTo(wmsConfig.zoom);
 			}
 
-			setCookie(COOKIE.mapId, wmsConfig.id);
+			setCookie(COOKIE.mapid, wmsConfig.id);
 			_map.addLayer(layer);
 
 			var fInfoControl = _map.getControlsByClass('WMSGetFeatureInfo');
@@ -408,7 +407,7 @@ var Viewer = function() {
 				}
 			}
 
-			eraseCookie(COOKIE.mapId);
+			eraseCookie(COOKIE.mapid);
 		},
 
 		/**
@@ -470,11 +469,11 @@ var Viewer = function() {
 			if (topo.getVisibility()) {
 				_map.setBaseLayer(lufo);
 				jQuery('#toggleBaseMap').text(OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TOPO'));
-				setCookie(COOKIE.baselyr, 'lufo');
+				setCookie(COOKIE.baselyr, 'luchtfoto');
 			} else {
 				_map.setBaseLayer(topo);
 				jQuery('#toggleBaseMap').text(OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO'));
-				setCookie(COOKIE.baselyr, 'topo');
+				setCookie(COOKIE.baselyr, 'topografie');
 			}
 			jQuery('#toggleBaseMap').append('<span>' + OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '</span>');
 			jQuery('#toggleBaseMap').toggleClass('lufo topo');

@@ -57,14 +57,14 @@ describe(
 						it('De kaart moet 3 lagen hebben na toevoegen van 1 WMS', function() {
 							Viewer.loadWMS(_wms);
 							expect(Viewer.getMap().layers.length).toBe(3);
-							expect(getCookie(COOKIE.mapId)).toEqual(_wms.id);
+							expect(getCookie(COOKIE.mapid)).toEqual(_wms.id);
 						});
 
 						it('De kaart moet 3 lagen hebben na toevoegen van 2 WMS', function() {
 							Viewer.loadWMS(_wms);
 							Viewer.loadWMS(_wms2);
 							expect(Viewer.getMap().layers.length).toBe(3);
-							expect(getCookie(COOKIE.mapId)).toEqual(_wms2.id);
+							expect(getCookie(COOKIE.mapid)).toEqual(_wms2.id);
 						});
 
 						it('De kaart moet 2 lagen hebben na toevoegen en verwijderen van 1 WMS', function() {
@@ -82,7 +82,7 @@ describe(
 									var lyrs = Viewer.getMap().layers;
 									expect(lyrs.length).toBe(2);
 									expect(lyrs[0]).toBeInstanceOf(OpenLayers.Layer.WMTS);
-									expect(getCookie(COOKIE.mapId)).toBeNull();
+									expect(getCookie(COOKIE.mapid)).toBeNull();
 								});
 
 						it('Na destroy is de kaart null', function() {

@@ -14,8 +14,8 @@ jQuery(document)
 		// create map
 		Viewer.init(config);
 
-		if (getCookie(COOKIE.mapId)){
-			config.defaultMapId = getCookie(COOKIE.mapId);
+		if (getCookie(COOKIE.mapid)){
+			config.defaultMapId = getCookie(COOKIE.mapid);
 		}
 
 		var maps = jQuery.grep(_layers, function(n, i) {
