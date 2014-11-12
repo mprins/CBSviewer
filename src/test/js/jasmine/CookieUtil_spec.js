@@ -1,3 +1,6 @@
+// dit wordt normaal in een java bean gegenereerd
+/* <![CDATA[ */ var COOKIE = {};COOKIE.baselyr='baselyr',COOKIE.mapid='mapid',COOKIE.x='x',COOKIE.y='y',COOKIE.z='z'; /* ]]> */
+
 /**
  * Jasmine Unit tests voor CookieUtil.
  * 

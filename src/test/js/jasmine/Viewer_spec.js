@@ -44,6 +44,7 @@ describe(
 						afterEach(function() {
 							Viewer.destroy();
 							document.body.removeChild(mapDiv);
+							eraseCookies();
 						});
 
 						it('De kaart moet een OpenLayers.Map instance zijn', function() {
@@ -124,15 +125,15 @@ describe(
 								});
 						*/
 						
-						it('na schakelen basemap is de actieve basemap lufo', function() {
+						it('na schakelen basemap is de actieve basemap luchtfoto', function() {
 							Viewer.toggleBaseMap();
-							expect(Viewer.getMap().baseLayer.name).toEqual('lufo');
+							expect(Viewer.getMap().baseLayer.name).toEqual('luchtfoto');
 						});
 
-						it('na twee keer schakelen basemap is de actieve basemap topo', function() {
+						it('na twee keer schakelen basemap is de actieve basemap topografie', function() {
 							Viewer.toggleBaseMap();
 							Viewer.toggleBaseMap();
-							expect(Viewer.getMap().baseLayer.name).toEqual('topo');
+							expect(Viewer.getMap().baseLayer.name).toEqual('topografie');
 						});
 
 						it('printpreview kaart afmeting is gelijk aan config.', function() {
