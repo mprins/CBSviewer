@@ -20,11 +20,11 @@ public enum CookieNamesConstants {
 	/** map id. */
 	COOKIE_mapid("mapid"),
 	/** x coordinate. */
-	COOKIE_x("x"),
+	COOKIE_X("x"),
 	/** y coordinate. */
-	COOKIE_y("y"),
+	COOKIE_Y("y"),
 	/** zoom level. */
-	COOKIE_z("z");
+	COOKIE_S("s");
 
 	/** De code (waarde) van dit object. */
 	public final String value;

@@ -133,6 +133,18 @@ var Viewer = function() {
 	}
 
 	/**
+	 * Update position cookies.
+	 * 
+	 * @private
+	 */
+	function _updateCookies() {
+		var _ext = _map.getExtent();
+		setCookie(COOKIE.X, Math.floor(_ext.getCenterLonLat().lon));
+		setCookie(COOKIE.Y, Math.floor(_ext.getCenterLonLat().lat));
+		setCookie(COOKIE.S, Math.floor(_ext.getWidth()));
+	}
+
+	/**
 	 * Publieke interface van deze klasse.
 	 * 
 	 * @return {Viewer} publieke methodes
@@ -168,6 +180,8 @@ var Viewer = function() {
 			this.addBaseMap();
 			this.addControls();
 			_map.zoomTo(this.config.map.initialZoom);
+
+			_map.events.register('moveend', _map, _updateCookies);
 
 			// toggle knop voor omschakelen basemap
 			var aToggle = '<a class="lufo hasTooltip" href="#" id="toggleBaseMap" onclick="Viewer.toggleBaseMap();">'
@@ -248,18 +262,13 @@ var Viewer = function() {
 		 *            uitvoeren van de zoom en pan actie.
 		 */
 		zoomTo : function(x, y, radius, withFeatureInfo) {
-			var lonlat = new OpenLayers.LonLat(x, y);
-			_map.panTo(lonlat);
-			setCookie(COOKIE.x, x);
-			setCookie(COOKIE.y, y);
-			var zoom = _map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius));
-			_map.zoomTo(zoom);
-			setCookie(COOKIE.zoom, zoom);
+			var b = new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius);
+			_map.zoomToExtent(b, true);
 
 			if (withFeatureInfo) {
 				// met een zoomend werkt het soms raar, maar met wachten op
 				// loadend van het eerste wms thema gaat het vaker mis
-				_map.events.register('zoomend', _map, _afterZoomTo(lonlat));
+				_map.events.register('zoomend', _map, _afterZoomTo(new OpenLayers.LonLat(x, y)));
 			}
 		},
 
