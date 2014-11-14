@@ -13,7 +13,7 @@
 		height: 1px;
 		width: 1px;
 		overflow: hidden;
-		will-change: opacity;
+		will-change: opacity, clip;
 		opacity: 0;
 	}
 	
