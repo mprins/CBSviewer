@@ -162,7 +162,9 @@ public class OpenLSClient {
 	 */
 	public GeocodeResponse doPostOpenLSRequest(final String url,
 			final GeocodeRequest request) {
-		LOGGER.debug("POSTting OLS query:\n\t" + request.toXML());
+		if (LOGGER.isDebugEnabled()) {
+			LOGGER.debug("POSTting OLS query:\n\t" + request.toXML());
+		}
 		try {
 			final StringEntity str = new StringEntity(request.toXML(),
 					ContentType.TEXT_XML);
@@ -227,7 +229,6 @@ public class OpenLSClient {
 				LOGGER.error("OpenLS server get error response: "
 						+ resp.getStatusLine());
 			}
-
 		} catch (final UnsupportedEncodingException e) {
 			LOGGER.error("De gebruikte Java VM ondersteunt geen UTF-8 encoding: "
 					+ e);
@@ -260,7 +261,7 @@ public class OpenLSClient {
 			for (final Entry<String, String> getParam : getParams.entrySet()) {
 				nvps.add(new BasicNameValuePair(URLEncoder.encode(
 						getParam.getKey(), "UTF-8"), URLEncoder.encode(
-						(getParam.getValue()), "UTF-8")));
+						getParam.getValue(), "UTF-8")));
 			}
 			httppost.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
 
