@@ -27,7 +27,7 @@ public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 	 * @param point
 	 *            the point to set
 	 */
-	public void setPoint(Point point) {
+	public void setPoint(final Point point) {
 		this.point = point;
 	}
 
@@ -42,7 +42,7 @@ public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 	 * @param address
 	 *            the address to set
 	 */
-	public void setAddress(Address address) {
+	public void setAddress(final Address address) {
 		this.address = address;
 	}
 
@@ -58,7 +58,7 @@ public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 	 *            the searchCentreDistance to set
 	 */
 	public void setSearchCentreDistance(
-			SearchCentreDistance searchCentreDistance) {
+			final SearchCentreDistance searchCentreDistance) {
 		this.searchCentreDistance = searchCentreDistance;
 	}
 

@@ -64,7 +64,7 @@ public class Place implements XmlNamespaceConstants {
 	 * @param type
 	 *            the new type
 	 */
-	public void setType(String type) {
+	public void setType(final String type) {
 		this.hasType = true;
 		this.type = type;
 	}
@@ -93,7 +93,7 @@ public class Place implements XmlNamespaceConstants {
 	 * @param place
 	 *            the new place
 	 */
-	public void setPlace(String place) {
+	public void setPlace(final String place) {
 		this.hasPlace = true;
 		this.place = place;
 	}

@@ -67,7 +67,7 @@ public class ReverseGeocodeRequest implements XmlNamespaceConstants {
 	 *            the reverseGeocodePreference to set
 	 */
 	public void setReverseGeocodePreference(
-			ReverseGeocodePreference reverseGeocodePreference) {
+			final ReverseGeocodePreference reverseGeocodePreference) {
 		this.reverseGeocodePreference = reverseGeocodePreference;
 	}
 
@@ -81,9 +81,10 @@ public class ReverseGeocodeRequest implements XmlNamespaceConstants {
 	/**
 	 * set de positie voor dit verzoek.
 	 * 
-	 * @param position positie
+	 * @param position
+	 *            positie
 	 */
-	public void setPosition(Position position) {
+	public void setPosition(final Position position) {
 		this.position = position;
 	}
 

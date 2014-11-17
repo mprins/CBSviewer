@@ -54,7 +54,7 @@ public class PostalCode implements XmlNamespaceConstants {
 	 * @param postalCode
 	 *            the new postal code
 	 */
-	public void setPostalCode(String postalCode) {
+	public void setPostalCode(final String postalCode) {
 		this.hasPostalCode = true;
 		this.postalCode = postalCode;
 	}

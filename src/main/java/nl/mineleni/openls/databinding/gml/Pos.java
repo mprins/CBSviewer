@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -90,7 +90,7 @@ public class Pos implements XmlNamespaceConstants {
 	 * @param xy
 	 *            the new xy
 	 */
-	public void setXY(String xy) {
+	public void setXY(final String xy) {
 		try {
 			final String[] xySplit = xy.split(" ");
 			if (xySplit.length == 2) {
@@ -110,7 +110,7 @@ public class Pos implements XmlNamespaceConstants {
 	 * @param x
 	 *            the new x
 	 */
-	public void setX(Double x) {
+	public void setX(final Double x) {
 		this.hasX = true;
 		if (this.hasY) {
 			this.hasXY = true;
@@ -133,7 +133,7 @@ public class Pos implements XmlNamespaceConstants {
 	 * @param y
 	 *            the new y
 	 */
-	public void setY(Double y) {
+	public void setY(final Double y) {
 		this.hasY = true;
 		if (this.hasX) {
 			this.hasXY = true;
@@ -174,7 +174,7 @@ public class Pos implements XmlNamespaceConstants {
 	 * @param dimension
 	 *            the new dimension
 	 */
-	public void setDimension(int dimension) {
+	public void setDimension(final int dimension) {
 		this.hasDimension = true;
 		this.dimension = dimension;
 	}

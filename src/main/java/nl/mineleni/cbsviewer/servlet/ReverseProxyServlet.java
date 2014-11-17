@@ -71,15 +71,14 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	/** Allowed hosts config optie. {@value} */
 	public static final String ALLOWED_HOSTS = "allowed_hosts";
 
-	/** Melding als proxy wordt geweigerd. {@value} */
-	private static final String ERR_MSG_FORBIDDEN = " is niet in de lijst met toegestane servers opgenomen.";
+	/** Forceer xml output optie sleutel. {@value} */
+	public static final String FORCE_XML_MIME = "force_xml_mime";
 
 	/** Foutmelding in geval van missende 'allowed_hosts' optie. {@value} */
 	public static final String ERR_MSG_MISSING_CONFIG = "De \'allowed_hosts\' parameter ontbreekt in servletconfig.";
 
-	// CHECKSTYLE.ON:
-	/** Forceer xml output optie sleutel. {@value} */
-	public static final String FORCE_XML_MIME = "force_xml_mime";
+	/** Melding als proxy wordt geweigerd. {@value} */
+	private static final String ERR_MSG_FORBIDDEN = " is niet in de lijst met toegestane servers opgenomen.";
 
 	/** log4j logger. */
 	private static final Logger LOGGER = LoggerFactory
@@ -99,6 +98,10 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 * @see #ALLOWED_HOSTS
 	 */
 	private final transient Set<String> allowedHosts = new HashSet<>();
+
+	/** layers bean. */
+	private final transient AvailableLayersBean layers = new AvailableLayersBean();
+
 	/** onze http client. */
 	private transient CloseableHttpClient client;
 
@@ -111,9 +114,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 */
 	private transient boolean forceXmlResponse;
 
-	/** layers bean. */
-	private final transient AvailableLayersBean layers = new AvailableLayersBean();
-
+	/** HTTP client request config. */
 	private transient RequestConfig requestConfig;
 
 	/**
@@ -146,7 +147,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 		try {
 			this.client.close();
 		} catch (final IOException e) {
-			// ignore
+			LOGGER.error("Fout tijdens servlet destroy.", e);
 		}
 		super.destroy();
 	}

@@ -26,7 +26,7 @@ public class ReverseGeocodeResponse implements XmlNamespaceConstants {
 	 *            the reverseGeocodedLocation to set
 	 */
 	public void setReverseGeocodedLocation(
-			ReverseGeocodedLocation reverseGeocodedLocation) {
+			final ReverseGeocodedLocation reverseGeocodedLocation) {
 		this.reverseGeocodedLocation = reverseGeocodedLocation;
 	}
 

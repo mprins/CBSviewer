@@ -86,7 +86,7 @@ public class Street implements XmlNamespaceConstants {
 	 * @param street
 	 *            the new street
 	 */
-	public void setStreet(String street) {
+	public void setStreet(final String street) {
 		this.hasStreet = true;
 		this.street = street;
 	}

@@ -74,7 +74,7 @@ public class StreetAddress implements XmlNamespaceConstants {
 	 * @param building
 	 *            the new building
 	 */
-	public void setBuilding(Building building) {
+	public void setBuilding(final Building building) {
 		this.hasBuilding = true;
 		this.building = building;
 	}
@@ -103,7 +103,7 @@ public class StreetAddress implements XmlNamespaceConstants {
 	 * @param street
 	 *            the new street
 	 */
-	public void setStreet(Street street) {
+	public void setStreet(final Street street) {
 		this.hasStreet = true;
 		this.street = street;
 	}

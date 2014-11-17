@@ -49,7 +49,7 @@ public class GeocodeResponseList implements XmlNamespaceConstants {
 	 * @param val
 	 *            the val
 	 */
-	public void addGeocodedAddress(GeocodedAddress val) {
+	public void addGeocodedAddress(final GeocodedAddress val) {
 		this.geocodedAddress.add(val);
 	}
 
@@ -60,7 +60,7 @@ public class GeocodeResponseList implements XmlNamespaceConstants {
 	 *            the i
 	 * @return the geocoded address at
 	 */
-	public GeocodedAddress getGeocodedAddressAt(int i) {
+	public GeocodedAddress getGeocodedAddressAt(final int i) {
 		return this.geocodedAddress.get(i);
 	}
 
@@ -79,7 +79,7 @@ public class GeocodeResponseList implements XmlNamespaceConstants {
 	 * @param val
 	 *            the new number of geocoded addresses
 	 */
-	public void setNumberOfGeocodedAddresses(int val) {
+	public void setNumberOfGeocodedAddresses(final int val) {
 		this.numberOfGeocodedAddresses = val;
 	}
 

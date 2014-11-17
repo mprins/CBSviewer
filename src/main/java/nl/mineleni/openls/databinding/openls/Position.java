@@ -15,6 +15,8 @@ public class Position implements XmlNamespaceConstants {
 	 * serialization id.
 	 */
 	private static final long serialVersionUID = 3277635883084761942L;
+
+	/** point dat deze positie beschrijft. */
 	private Point point;
 
 	/**
@@ -28,7 +30,7 @@ public class Position implements XmlNamespaceConstants {
 	 * @param point
 	 *            the point to set
 	 */
-	public void setPoint(Point point) {
+	public void setPoint(final Point point) {
 		this.point = point;
 	}
 

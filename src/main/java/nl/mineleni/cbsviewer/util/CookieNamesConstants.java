@@ -32,19 +32,19 @@ public enum CookieNamesConstants {
 	/**
 	 * Maakt een nieuw object aan met de gegeven code waarde.
 	 *
-	 * @param code
+	 * @param value
 	 *            de code voor dit object
 	 * @see #value
 	 */
-	CookieNamesConstants(final String code) {
-		this.value = code;
+	CookieNamesConstants(final String value) {
+		this.value = value;
 	}
 
 	/**
-	 * Geeft de waarde van dit object terug. Analoog van {@link #code}
+	 * Geeft de waarde van dit object terug. Analoog van {@link #value}
 	 *
 	 * @return de code
-	 * @see #code
+	 * @see #value
 	 * @see java.lang.Enum#toString()
 	 */
 	@Override

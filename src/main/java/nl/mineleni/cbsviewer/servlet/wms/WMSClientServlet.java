@@ -106,6 +106,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 */
 	private static final int MAP_DIMENSION_MIDDLE = MAP_DIMENSION / 2;
 
+	/** maximum aantal features voor feauture infor request. */
+	private static final int MAX_FEATURE_COUNT = 10;
+
 	/** time-to-live voor cache elementen. {@value} seconden. */
 	private static final long SECONDS_TO_CACHE_ELEMENTS = 60 * 60/* 1 uur */;
 
@@ -430,7 +433,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				}
 			}
 			getFeatureInfoRequest.setQueryLayers(queryLayers);
-			getFeatureInfoRequest.setFeatureCount(10);
+			getFeatureInfoRequest.setFeatureCount(MAX_FEATURE_COUNT);
 			getFeatureInfoRequest.setQueryPoint(MAP_DIMENSION_MIDDLE,
 					MAP_DIMENSION_MIDDLE);
 			getFeatureInfoRequest.setInfoFormat(type.toString());
@@ -694,7 +697,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	private File getMap(final BufferedImage imageVoorgrond,
-			final BufferedImage imageAchtergrond, float alpha)
+			final BufferedImage imageAchtergrond, final float alpha)
 			throws IOException {
 
 		final BufferedImage composite = new BufferedImage(MAP_DIMENSION,

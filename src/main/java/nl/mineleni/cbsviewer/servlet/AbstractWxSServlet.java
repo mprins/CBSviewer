@@ -113,13 +113,13 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 			request.setAttribute(REQ_PARAM_YCOORD.code, ycoord);
 			request.setAttribute(REQ_PARAM_STRAAL.code, straal);
 			if (LOGGER.isDebugEnabled()) {
-				LOGGER.debug("request params:(" + xcoord + ";" + ycoord
+				LOGGER.debug("Locatie request params:(" + xcoord + ";" + ycoord
 						+ ") straal:" + straal);
 			}
 			return new int[] { xcoord, ycoord, straal };
 		} catch (final NumberFormatException | ParseException e) {
 			LOGGER.error(
-					"Een van de vereiste parameters kon niet geparsed worden als Integer.",
+					"Een van de vereiste locatie parameters kon niet geparsed worden als Integer.",
 					e);
 			throw new ServletException(e);
 		}

@@ -16,6 +16,8 @@ public class SearchCentreDistance implements XmlNamespaceConstants {
 	private double accuracy = Double.NaN;
 
 	/**
+	 * Units of Measure accessor.
+	 * 
 	 * @return the uom
 	 */
 	public String getUom() {
@@ -23,14 +25,18 @@ public class SearchCentreDistance implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Units of Measure setter.
+	 * 
 	 * @param uom
 	 *            the uom to set
 	 */
-	public void setUom(String uom) {
+	public void setUom(final String uom) {
 		this.uom = uom;
 	}
 
 	/**
+	 * value accessor.
+	 * 
 	 * @return the value
 	 */
 	public double getValue() {
@@ -38,14 +44,18 @@ public class SearchCentreDistance implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * value setter.
+	 * 
 	 * @param value
 	 *            the value to set
 	 */
-	public void setValue(double value) {
+	public void setValue(final double value) {
 		this.value = value;
 	}
 
 	/**
+	 * Accuracy accessor.
+	 * 
 	 * @return the accuracy
 	 */
 	public double getAccuracy() {
@@ -53,10 +63,12 @@ public class SearchCentreDistance implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Accuracy setter.
+	 * 
 	 * @param accuracy
 	 *            the accuracy to set
 	 */
-	public void setAccuracy(double accuracy) {
+	public void setAccuracy(final double accuracy) {
 		this.accuracy = accuracy;
 	}
 

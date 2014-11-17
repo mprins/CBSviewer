@@ -44,7 +44,7 @@ public class GeocodeResponse implements XmlNamespaceConstants {
 	 * @param val
 	 *            the val
 	 */
-	public void addGeocodeResponseList(GeocodeResponseList val) {
+	public void addGeocodeResponseList(final GeocodeResponseList val) {
 		this.geocodeResponseList.add(val);
 	}
 
@@ -55,7 +55,7 @@ public class GeocodeResponse implements XmlNamespaceConstants {
 	 *            the i
 	 * @return the geocode response list at
 	 */
-	public GeocodeResponseList getGeocodeResponseListAt(int i) {
+	public GeocodeResponseList getGeocodeResponseListAt(final int i) {
 		return this.geocodeResponseList.get(i);
 	}
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -65,7 +65,7 @@ public class Point implements XmlNamespaceConstants {
 	 * @param p
 	 *            the p
 	 */
-	public void addPos(Pos p) {
+	public void addPos(final Pos p) {
 		this.pos.add(p);
 	}
 
@@ -76,7 +76,7 @@ public class Point implements XmlNamespaceConstants {
 	 *            the i
 	 * @return the pos at
 	 */
-	public Pos getPosAt(int i) {
+	public Pos getPosAt(final int i) {
 		return this.pos.get(i);
 	}
 
@@ -95,7 +95,7 @@ public class Point implements XmlNamespaceConstants {
 	 * @param srsName
 	 *            the new srs name
 	 */
-	public void setSrsName(String srsName) {
+	public void setSrsName(final String srsName) {
 		this.hasSrsName = true;
 		this.srsName = srsName;
 	}

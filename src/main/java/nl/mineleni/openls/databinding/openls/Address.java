@@ -89,8 +89,8 @@ public class Address implements XmlNamespaceConstants {
 	 * @param postalCode
 	 *            the postal code
 	 */
-	public Address(String countryCode, StreetAddress streetAddress,
-			PostalCode postalCode) {
+	public Address(final String countryCode, final StreetAddress streetAddress,
+			final PostalCode postalCode) {
 		this.hasCountryCode = true;
 		this.countryCode = countryCode;
 		this.hasStreetAddress = true;
@@ -105,7 +105,7 @@ public class Address implements XmlNamespaceConstants {
 	 * @param countryCode
 	 *            the new country code
 	 */
-	public void setCountryCode(String countryCode) {
+	public void setCountryCode(final String countryCode) {
 		this.hasCountryCode = true;
 		this.countryCode = countryCode;
 	}
@@ -134,7 +134,7 @@ public class Address implements XmlNamespaceConstants {
 	 * @param streetAddress
 	 *            the new street address
 	 */
-	public void setStreetAddress(StreetAddress streetAddress) {
+	public void setStreetAddress(final StreetAddress streetAddress) {
 		this.hasStreetAddress = true;
 		this.streetAddress = streetAddress;
 	}
@@ -163,7 +163,7 @@ public class Address implements XmlNamespaceConstants {
 	 * @param postalCode
 	 *            the new postal code
 	 */
-	public void setPostalCode(PostalCode postalCode) {
+	public void setPostalCode(final PostalCode postalCode) {
 		this.hasPostalCode = true;
 		this.postalCode = postalCode;
 	}
@@ -192,7 +192,7 @@ public class Address implements XmlNamespaceConstants {
 	 * @param val
 	 *            the val
 	 */
-	public void addPlace(Place val) {
+	public void addPlace(final Place val) {
 		this.place.add(val);
 		if (!val.getType().equals("")) {
 			this.placeMap.put(val.getType(), val.getPlace());
@@ -206,7 +206,7 @@ public class Address implements XmlNamespaceConstants {
 	 *            the i
 	 * @return the place at
 	 */
-	public Place getPlaceAt(int i) {
+	public Place getPlaceAt(final int i) {
 		return this.place.get(i);
 	}
 
@@ -226,7 +226,7 @@ public class Address implements XmlNamespaceConstants {
 	 *            the type
 	 * @return the place by type
 	 */
-	public String getPlaceByType(String type) {
+	public String getPlaceByType(final String type) {
 		return this.placeMap.get(type);
 	}
 
@@ -237,7 +237,7 @@ public class Address implements XmlNamespaceConstants {
 	 *            the type
 	 * @return true, if successful
 	 */
-	public boolean hasPlaceType(String type) {
+	public boolean hasPlaceType(final String type) {
 		return (this.placeMap.get(type) != null);
 	}
 

@@ -74,7 +74,7 @@ public class Building implements XmlNamespaceConstants {
 	 * @param number
 	 *            the new number
 	 */
-	public void setNumber(String number) {
+	public void setNumber(final String number) {
 		this.hasNumber = true;
 		this.number = number;
 	}
@@ -103,7 +103,7 @@ public class Building implements XmlNamespaceConstants {
 	 * @param subdivision
 	 *            the new subdivision
 	 */
-	public void setSubdivision(String subdivision) {
+	public void setSubdivision(final String subdivision) {
 		this.hasSubdivision = true;
 		this.subdivision = subdivision;
 	}
@@ -132,7 +132,7 @@ public class Building implements XmlNamespaceConstants {
 	 * @param buildingName
 	 *            the new building name
 	 */
-	public void setBuildingName(String buildingName) {
+	public void setBuildingName(final String buildingName) {
 		this.hasBuildingName = true;
 		this.buildingName = buildingName;
 	}

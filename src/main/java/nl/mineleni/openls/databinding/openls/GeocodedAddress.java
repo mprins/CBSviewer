@@ -53,7 +53,7 @@ public class GeocodedAddress implements XmlNamespaceConstants {
 	 * @param point
 	 *            the new point
 	 */
-	public void setPoint(Point point) {
+	public void setPoint(final Point point) {
 		this.hasPoint = true;
 		this.point = point;
 	}
@@ -82,7 +82,7 @@ public class GeocodedAddress implements XmlNamespaceConstants {
 	 * @param address
 	 *            the new address
 	 */
-	public void setAddress(Address address) {
+	public void setAddress(final Address address) {
 		this.hasAddress = true;
 		this.address = address;
 	}
