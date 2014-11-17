@@ -20,13 +20,26 @@
 <c:if test="${not empty xcoord}">
 	<c:set value="${xcoord}" var="xcoord" />
 </c:if>
-
 <c:if test="${not empty ycoord}">
 	<c:set value="${ycoord}" var="ycoord" />
 </c:if>
 <c:if test="!${not empty straal}">
 	<c:set value="${straal}" var="straal" />
 </c:if>
+
+<c:if test="${empty param.xcoord}">
+	<!-- TODO cookie namen uit enum halen -->
+	<c:set value='${cookie["x"].value}' var="xcoord" />
+</c:if>
+<c:if test="${empty param.ycoord}">
+	<!-- TODO cookie namen uit enum halen -->
+	<c:set value='${cookie["y"].value}' var="ycoord" />
+</c:if>
+<c:if test="${empty param.straal}">
+	<!-- TODO cookie namen uit enum halen -->
+	<c:set value='${cookie["s"].value}' var="straal" />
+</c:if>
+
 <!-- meer adressen -->
 <c:if test="${not empty param.xcoord}">
 	<c:set value="${param.xcoord}" var="xcoord" />
@@ -41,7 +54,9 @@
 <c:if test="${empty param.mapid}">
 	<!-- default thema kaartlaag -->
 	<c:set value="gemeenten2012_bevolkingsdichtheid_inwoners_per_km2" var="mapid" />
+	<!-- TODO cookie namen uit enum halen -->
 	<c:if test='${not empty cookie["mapid"].value }'>
+		<!-- TODO cookie namen uit enum halen -->
 		<c:set value='${cookie["mapid"].value}' var="mapid" />
 	</c:if>
 </c:if>
@@ -49,11 +64,18 @@
 <c:if test="${not empty param.mapid}">
 	<c:set value="${param.mapid}" var="mapid" />
 </c:if>
+<!-- TODO cookie namen uit enum halen -->
 
-<c:if test="${empty param.achtergrond}">
+<c:if test="${(empty achtergrond) }">
+<!--
+or (empty param.achtergrond)  -->
+	<c:set value="topografie" var="achtergrond" /> 
 	<c:if test='${not empty cookie["baselyr"].value }'>
 		<c:set value='${cookie["baselyr"].value}' var="achtergrond" />
 	</c:if>
+</c:if>
+<c:if test="${!empty param.achtergrond}">
+	<c:set value="${param.achtergrond}" var="achtergrond" /> 
 </c:if>
 
 

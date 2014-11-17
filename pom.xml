@@ -796,7 +796,7 @@
 						<plugin>
 							<groupId>org.owasp</groupId>
 							<artifactId>dependency-check-maven</artifactId>
-							<version>1.2.5</version>
+							<version>1.2.6</version>
 							<configuration>
 								<name>OWASP Dependency Check</name>
 							</configuration>

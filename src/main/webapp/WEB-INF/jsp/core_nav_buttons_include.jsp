@@ -23,29 +23,23 @@
 	<c:set var="naarBoven" value="${ycoord+zoomin}" />
 	<c:set var="naarBeneden" value="${ycoord-zoomin}" />
 
-	<!-- toggle achtergrondkaart -->
 	<c:choose>
-		<c:when test="${param.achtergrond == 'topografie'}">
+		<c:when test="${achtergrond == 'topografie'}">
 			<c:set var="wisselachtergrond" value="luchtfoto" />
 			<fmt:message key="KEY_TOGGLE_BASEMAP_LUFO" var="wisselachtergrondBtn" />
 		</c:when>
-		<c:when test="${param.achtergrond == 'luchtfoto'}">
+		<c:when test="${achtergrond == 'luchtfoto'}">
 			<c:set var="wisselachtergrond" value="topografie" />
 			<fmt:message key="KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />
 		</c:when>
+		<!-- default is topografie, dus wissel is luchtfoto -->
 		<c:otherwise>
-			<!-- default is lufo -->
 			<c:set var="wisselachtergrond" value="luchtfoto" />
+			<c:set var="achtergrond" value="topografie" />
 			<fmt:message key="KEY_TOGGLE_BASEMAP_LUFO" var="wisselachtergrondBtn" />
-			
-			<!-- uit cookie halen als die bestaat en ongelijk aan topografie -->
-			<c:if test="${cookie['baselyr'].value != 'topografie'}">
-				<c:set var="wisselachtergrond" value="topografie" />
-				<fmt:message key="KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />
-			</c:if>
 		</c:otherwise>
 	</c:choose>
-	
+
 	<c:choose>
 		<c:when test="${empty param.doorzicht}">
 			<!-- 20% doorzichtig (.8 alpha) is de default -->
@@ -55,7 +49,7 @@
 			<c:set var="doorzicht" value="${param.doorzicht}" />
 		</c:otherwise>
 	</c:choose>
-	
+
 	<!--  de te gebruiken HTTP methode (post|get) voor de formulieren -->
 	<c:set var="formMethod" value="get" />
 
@@ -90,7 +84,7 @@
 				<input type="hidden" name="straal" value="${straal}" /> <input
 					type="hidden" name="xcoord" value="${xcoord}" /> <input
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
-					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
+					type="hidden" name="achtergrond" value="${achtergrond}" /> <input
 					type="hidden" name="mapid" value="${mapid}" /> <input
 					type="hidden" name="gevonden" value="${param.gevonden}" /><input
 					type="hidden" name="doorzicht" value="${doorzicht}" />
@@ -131,7 +125,7 @@
 				<input type="hidden" name="straal" value="${straal}" /> <input
 					type="hidden" name="xcoord" value="${xcoord}" /> <input
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
-					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
+					type="hidden" name="achtergrond" value="${achtergrond}" /> <input
 					type="hidden" name="mapid" value="${mapid}" /> <input
 					type="hidden" name="doorzicht" value="${doorzicht}" />
 			</p>
@@ -156,9 +150,10 @@
 				<!-- defaults -->
 				<input type="hidden" name="straal" value="${straal}" /> <input
 					type="hidden" name="xcoord" value="${xcoord}" /> <input
-					type="hidden" name="ycoord" value="${ycoord}" /> <input
-					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
-					type="hidden" name="mapid" value="${mapid}" /> <input
+					type="hidden" name="ycoord" value="${ycoord}" />
+				<!-- 
+					input type="hidden" name="achtergrond" value="${param.achtergrond}" / -->
+				<input type="hidden" name="mapid" value="${mapid}" /> <input
 					type="hidden" name="gevonden" value="${param.gevonden}" /><input
 					type="hidden" name="doorzicht" value="${doorzicht}" />
 			</p>
