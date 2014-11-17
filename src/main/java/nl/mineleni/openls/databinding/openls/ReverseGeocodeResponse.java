@@ -8,13 +8,20 @@ package nl.mineleni.openls.databinding.openls;
 
 import nl.mineleni.openls.XmlNamespaceConstants;
 
+/**
+ * The Class ReverseGeocodeResponse.
+ */
 public class ReverseGeocodeResponse implements XmlNamespaceConstants {
 
 	/** serialization id. */
 	private static final long serialVersionUID = 8302539704859544403L;
+
+	/** de teruggerekende locatie. */
 	private ReverseGeocodedLocation reverseGeocodedLocation;
 
 	/**
+	 * Gets the de teruggerekende locatie.
+	 *
 	 * @return the reverseGeocodedLocation
 	 */
 	public ReverseGeocodedLocation getReverseGeocodedLocation() {
@@ -22,6 +29,8 @@ public class ReverseGeocodeResponse implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Sets the de teruggerekende locatie.
+	 *
 	 * @param reverseGeocodedLocation
 	 *            the reverseGeocodedLocation to set
 	 */
@@ -30,6 +39,11 @@ public class ReverseGeocodeResponse implements XmlNamespaceConstants {
 		this.reverseGeocodedLocation = reverseGeocodedLocation;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
 	@Override
 	public String toXML() {
 		final StringBuilder sb = new StringBuilder("<"

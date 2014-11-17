@@ -41,18 +41,39 @@ public class ReverseGeocodePreference implements XmlNamespaceConstants {
 	 * serialization id.
 	 */
 	private static final long serialVersionUID = -7570918027344077813L;
-
+	/** geocodeer voorkeur. */
 	private String preference;
 
+	/**
+	 * The Enum PREFERENCE.
+	 */
 	public enum PREFERENCE {
-		StreetAddress("StreetAddress"), IntersectionAddress(
-				"IntersectionAddress"), PositionOfInterest("PositionOfInterest");
+
+		/** The Street address. */
+		StreetAddress("StreetAddress"),
+		/** The Intersection address. */
+		IntersectionAddress("IntersectionAddress"),
+		/** The Position of interest. */
+		PositionOfInterest("PositionOfInterest");
+
+		/** The preference. */
 		public final String preference;
 
+		/**
+		 * Instantiates a new preference.
+		 *
+		 * @param preference
+		 *            the preference
+		 */
 		PREFERENCE(final String preference) {
 			this.preference = preference;
 		}
 
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see java.lang.Enum#toString()
+		 */
 		@Override
 		public String toString() {
 			return this.preference;
@@ -60,6 +81,8 @@ public class ReverseGeocodePreference implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Gets the geocodeer voorkeur.
+	 *
 	 * @return the preference
 	 */
 	public String getPreference() {
@@ -76,6 +99,11 @@ public class ReverseGeocodePreference implements XmlNamespaceConstants {
 		this.preference = preference;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
 	@Override
 	public String toXML() {
 		if (this.preference != null) {

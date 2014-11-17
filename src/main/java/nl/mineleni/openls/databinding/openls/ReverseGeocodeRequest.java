@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -56,6 +56,8 @@ public class ReverseGeocodeRequest implements XmlNamespaceConstants {
 	private Position position;
 
 	/**
+	 * Gets the reverse geocoding voorkeur.
+	 *
 	 * @return the reverseGeocodePreference
 	 */
 	public ReverseGeocodePreference getReverseGeocodePreference() {
@@ -63,6 +65,8 @@ public class ReverseGeocodeRequest implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Sets the reverse geocoding voorkeur.
+	 *
 	 * @param reverseGeocodePreference
 	 *            the reverseGeocodePreference to set
 	 */
@@ -72,6 +76,8 @@ public class ReverseGeocodeRequest implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Gets the reverse geocoding positie.
+	 *
 	 * @return the position
 	 */
 	public Position getPosition() {
@@ -88,6 +94,11 @@ public class ReverseGeocodeRequest implements XmlNamespaceConstants {
 		this.position = position;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
 	@Override
 	public String toXML() {
 		final StringBuilder sb = new StringBuilder("<"

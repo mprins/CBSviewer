@@ -9,14 +9,22 @@ package nl.mineleni.openls.databinding.openls;
 import nl.mineleni.openls.XmlNamespaceConstants;
 import nl.mineleni.openls.databinding.gml.Point;
 
+/**
+ * The Class ReverseGeocodedLocation.
+ */
 public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 	/** serialization id. */
 	private static final long serialVersionUID = 3193746470316264818L;
+	/** te coderen punt. */
 	private Point point;
+	/** resultaat adres. */
 	private Address address;
+	/** zoek afstand. */
 	private SearchCentreDistance searchCentreDistance;
 
 	/**
+	 * Gets the te coderen punt.
+	 *
 	 * @return the point
 	 */
 	public Point getPoint() {
@@ -24,6 +32,8 @@ public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Sets the te coderen punt.
+	 *
 	 * @param point
 	 *            the point to set
 	 */
@@ -32,6 +42,8 @@ public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Gets the resultaat adres.
+	 *
 	 * @return the address
 	 */
 	public Address getAddress() {
@@ -39,6 +51,8 @@ public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Sets the resultaat adres.
+	 *
 	 * @param address
 	 *            the address to set
 	 */
@@ -47,6 +61,8 @@ public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Gets the zoek afstand.
+	 *
 	 * @return the searchCentreDistance
 	 */
 	public SearchCentreDistance getSearchCentreDistance() {
@@ -54,6 +70,8 @@ public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Sets the zoek afstand.
+	 *
 	 * @param searchCentreDistance
 	 *            the searchCentreDistance to set
 	 */
@@ -62,6 +80,11 @@ public class ReverseGeocodedLocation implements XmlNamespaceConstants {
 		this.searchCentreDistance = searchCentreDistance;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
 	@Override
 	public String toXML() {
 		StringBuilder sb = new StringBuilder("<");

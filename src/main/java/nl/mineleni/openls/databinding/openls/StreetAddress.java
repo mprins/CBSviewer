@@ -57,7 +57,7 @@ public class StreetAddress implements XmlNamespaceConstants {
 	/** The has building. */
 	private boolean hasBuilding;
 
-	/** The has street. */
+	/** If this address has a street. */
 	private boolean hasStreet;
 
 	/**

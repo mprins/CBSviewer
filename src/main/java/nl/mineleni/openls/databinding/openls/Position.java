@@ -9,6 +9,9 @@ package nl.mineleni.openls.databinding.openls;
 import nl.mineleni.openls.XmlNamespaceConstants;
 import nl.mineleni.openls.databinding.gml.Point;
 
+/**
+ * The Class Position.
+ */
 public class Position implements XmlNamespaceConstants {
 
 	/**
@@ -20,6 +23,8 @@ public class Position implements XmlNamespaceConstants {
 	private Point point;
 
 	/**
+	 * Gets the point dat deze positie beschrijft.
+	 *
 	 * @return the point
 	 */
 	public Point getPoint() {
@@ -27,6 +32,8 @@ public class Position implements XmlNamespaceConstants {
 	}
 
 	/**
+	 * Sets the point dat deze positie beschrijft.
+	 *
 	 * @param point
 	 *            the point to set
 	 */
@@ -34,6 +41,11 @@ public class Position implements XmlNamespaceConstants {
 		this.point = point;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
 	@Override
 	public String toXML() {
 		final StringBuilder sb = new StringBuilder("<"

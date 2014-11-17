@@ -8,11 +8,20 @@ package nl.mineleni.openls.databinding.openls;
 
 import nl.mineleni.openls.XmlNamespaceConstants;
 
+/**
+ * The Class SearchCentreDistance.
+ */
 public class SearchCentreDistance implements XmlNamespaceConstants {
 	/** serialisation id. */
 	private static final long serialVersionUID = 6413552036187763149L;
+
+	/** The Units of Measure. */
 	private String uom = null;
+
+	/** The value. */
 	private double value = Double.NaN;
+
+	/** The accuracy. */
 	private double accuracy = Double.NaN;
 
 	/**
@@ -72,6 +81,11 @@ public class SearchCentreDistance implements XmlNamespaceConstants {
 		this.accuracy = accuracy;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nl.mineleni.openls.XmlNamespaceConstants#toXML()
+	 */
 	@Override
 	public String toXML() {
 		// <xls:SearchCentreDistance uom="M" value="115.6" />
