@@ -33,7 +33,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -870,22 +869,6 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	protected void service(final HttpServletRequest request,
 			final HttpServletResponse response) throws ServletException,
 			IOException {
-
-		if (LOGGER.isDebugEnabled()) {
-			Enumeration e = request.getAttributeNames();
-			while (e.hasMoreElements()) {
-				String name = (String) e.nextElement();
-				Object value = request.getAttribute(name);
-				LOGGER.debug("request attribute:" + name + " = ;" + value);
-			}
-
-			e = request.getParameterNames();
-			while (e.hasMoreElements()) {
-				String name = (String) e.nextElement();
-				String value = request.getParameter(name);
-				LOGGER.debug("request parameters:" + name + " = " + value);
-			}
-		}
 
 		final int[] dXcoordYCoordStraal = this.parseLocation(request);
 		final int xcoord = dXcoordYCoordStraal[0];

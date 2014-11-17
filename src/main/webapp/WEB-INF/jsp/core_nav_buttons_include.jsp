@@ -24,11 +24,11 @@
 	<c:set var="naarBeneden" value="${ycoord-zoomin}" />
 
 	<c:choose>
-		<c:when test="${achtergrond == 'topografie'}">
+		<c:when test="${achtergrond eq 'topografie'}">
 			<c:set var="wisselachtergrond" value="luchtfoto" />
 			<fmt:message key="KEY_TOGGLE_BASEMAP_LUFO" var="wisselachtergrondBtn" />
 		</c:when>
-		<c:when test="${achtergrond == 'luchtfoto'}">
+		<c:when test="${achtergrond eq 'luchtfoto'}">
 			<c:set var="wisselachtergrond" value="topografie" />
 			<fmt:message key="KEY_TOGGLE_BASEMAP_TOPO" var="wisselachtergrondBtn" />
 		</c:when>
@@ -137,8 +137,6 @@
 				<legend>
 					<fmt:message key="KEY_NAVIGATIE_BASEMAP_LEGEND" />
 				</legend>
-
-
 				<label for="wisselBtn"><fmt:message
 						key="KEY_TOGGLE_BASEMAP_TITLE" /></label>
 				<button id="wisselBtn" type="submit" name="achtergrond"
@@ -151,8 +149,6 @@
 				<input type="hidden" name="straal" value="${straal}" /> <input
 					type="hidden" name="xcoord" value="${xcoord}" /> <input
 					type="hidden" name="ycoord" value="${ycoord}" />
-				<!-- 
-					input type="hidden" name="achtergrond" value="${param.achtergrond}" / -->
 				<input type="hidden" name="mapid" value="${mapid}" /> <input
 					type="hidden" name="gevonden" value="${param.gevonden}" /><input
 					type="hidden" name="doorzicht" value="${doorzicht}" />
@@ -193,7 +189,7 @@
 				<input type="hidden" name="straal" value="${straal}" /> <input
 					type="hidden" name="xcoord" value="${xcoord}" /> <input
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
-					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
+					type="hidden" name="achtergrond" value="${achtergrond}" /> <input
 					type="hidden" name="mapid" value="${param.mapid}" /> <input
 					type="hidden" name="gevonden" value="${param.gevonden}" />
 			</p>

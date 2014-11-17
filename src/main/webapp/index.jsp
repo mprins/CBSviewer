@@ -5,17 +5,23 @@
 	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
 	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false" trimDirectiveWhitespaces="false"
-		language="java" isThreadSafe="false" isErrorPage="false" 
-		import="nl.mineleni.cbsviewer.util.CookieNamesConstants"/>
+		language="java" isThreadSafe="false" isErrorPage="false"
+		import="nl.mineleni.cbsviewer.util.CookieNamesConstants" />
 	<jsp:output doctype-root-element="html"
 		doctype-system="about:legacy-compat" omit-xml-declaration="true" />
-
 
 	<fmt:setBundle basename="LabelsBundle" />
 
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 <head>
 <jsp:include page="WEB-INF/jsp/head_include.jsp" />
+
+<jsp:scriptlet>
+// namen van de cookie enum beschikbaar maken
+for (CookieNamesConstants e : CookieNamesConstants.values()) {
+	  request.setAttribute(e.name(), e.value);
+}
+</jsp:scriptlet>
 
 <c:if test="${not empty xcoord}">
 	<c:set value="${xcoord}" var="xcoord" />
@@ -28,16 +34,14 @@
 </c:if>
 
 <c:if test="${empty param.xcoord}">
-	<!-- TODO cookie namen uit enum halen -->
-	<c:set value='${cookie["x"].value}' var="xcoord" />
+	<c:set value="${cookie[COOKIE_X].value}" var="xcoord" />
+
 </c:if>
 <c:if test="${empty param.ycoord}">
-	<!-- TODO cookie namen uit enum halen -->
-	<c:set value='${cookie["y"].value}' var="ycoord" />
+	<c:set value="${cookie[COOKIE_Y].value}" var="ycoord" />
 </c:if>
 <c:if test="${empty param.straal}">
-	<!-- TODO cookie namen uit enum halen -->
-	<c:set value='${cookie["s"].value}' var="straal" />
+	<c:set value="${cookie[COOKIE_S].value}" var="straal" />
 </c:if>
 
 <!-- meer adressen -->
@@ -53,29 +57,25 @@
 
 <c:if test="${empty param.mapid}">
 	<!-- default thema kaartlaag -->
-	<c:set value="gemeenten2012_bevolkingsdichtheid_inwoners_per_km2" var="mapid" />
-	<!-- TODO cookie namen uit enum halen -->
-	<c:if test='${not empty cookie["mapid"].value }'>
-		<!-- TODO cookie namen uit enum halen -->
-		<c:set value='${cookie["mapid"].value}' var="mapid" />
+	<c:set value="gemeenten2012_bevolkingsdichtheid_inwoners_per_km2"
+		var="mapid" />
+	<c:if test='${not empty cookie[COOKIE_mapid].value }'>
+		<c:set value='${cookie[COOKIE_mapid].value}' var="mapid" />
 	</c:if>
 </c:if>
 
 <c:if test="${not empty param.mapid}">
 	<c:set value="${param.mapid}" var="mapid" />
 </c:if>
-<!-- TODO cookie namen uit enum halen -->
 
 <c:if test="${(empty achtergrond) }">
-<!--
-or (empty param.achtergrond)  -->
-	<c:set value="topografie" var="achtergrond" /> 
-	<c:if test='${not empty cookie["baselyr"].value }'>
-		<c:set value='${cookie["baselyr"].value}' var="achtergrond" />
+	<c:set value="topografie" var="achtergrond" />
+	<c:if test='${not empty cookie[COOKIE_baselyr].value }'>
+		<c:set value='${cookie[COOKIE_baselyr].value}' var="achtergrond" />
 	</c:if>
 </c:if>
 <c:if test="${!empty param.achtergrond}">
-	<c:set value="${param.achtergrond}" var="achtergrond" /> 
+	<c:set value="${param.achtergrond}" var="achtergrond" />
 </c:if>
 
 
