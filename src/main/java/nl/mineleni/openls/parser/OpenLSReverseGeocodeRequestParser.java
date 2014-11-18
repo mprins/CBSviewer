@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
+ */
 package nl.mineleni.openls.parser;
 
 import java.io.IOException;
@@ -15,6 +21,12 @@ import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+/**
+ * Parse reverse geocode requests.
+ * 
+ * @author prinsmc
+ *
+ */
 public class OpenLSReverseGeocodeRequestParser extends AbstractOpenLSParser {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory

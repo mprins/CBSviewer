@@ -141,4 +141,14 @@
 	<listener>
 		<listener-class>nl.mineleni.cbsviewer.servlet.GeotoolsContextListener</listener-class>
 	</listener>
+	<filter>
+		<description>Stelet response headers in</description>
+		<display-name>ResponseHeadersFilter</display-name>
+		<filter-name>ResponseHeadersFilter</filter-name>
+		<filter-class>nl.mineleni.cbsviewer.servlet.ResponseHeadersFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ResponseHeadersFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>

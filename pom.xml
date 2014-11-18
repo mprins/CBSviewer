@@ -992,7 +992,7 @@
 								<configLocation>${basedir}/checkstyle-ruleset.xml</configLocation>
 								<suppressionsLocation>${basedir}/checkstyle-suppressions.xml</suppressionsLocation>
 								<enableRSS>true</enableRSS>
-								<excludes>**/WMSComplexTypes.java</excludes>
+								<excludes>**/WMSComplexTypes.java, **/xml/**.java</excludes>
 							</configuration>
 							<reportSets>
 								<reportSet>

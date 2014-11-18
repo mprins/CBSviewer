@@ -254,6 +254,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * @param baseMapType
 	 *            het type basemap, {@code "luchtfoto"} of (default)
 	 *            {@code "topografie"}
+	 * @param response
+	 *            de servlet response die terug gaat naar de client
 	 * @return background/basemap image
 	 * @throws ServletException
 	 *             Geeft aan dat er een fout is opgetreden bij het benaderen van

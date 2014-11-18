@@ -136,8 +136,8 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 	 *            de waarde voor de cookie
 	 * 
 	 */
-	protected void setCookie(HttpServletResponse response,
-			CookieNamesConstants name, String value) {
+	protected void setCookie(final HttpServletResponse response,
+			final CookieNamesConstants name, final String value) {
 		Cookie cookie = new Cookie(name.value, value);
 		cookie.setMaxAge(AGE);
 		response.addCookie(cookie);
@@ -154,8 +154,8 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 	 *            de waarde voor de cookie
 	 * 
 	 */
-	protected void setCookie(HttpServletResponse response,
-			CookieNamesConstants name, Integer value) {
+	protected void setCookie(final HttpServletResponse response,
+			final CookieNamesConstants name, final Integer value) {
 		Cookie cookie = new Cookie(name.value, Integer.toString(value));
 		cookie.setMaxAge(AGE);
 		response.addCookie(cookie);
