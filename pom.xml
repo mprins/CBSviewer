@@ -122,6 +122,15 @@
 	</properties>
 	<profiles>
 		<profile>
+			<id>jdk8</id>
+			<activation>
+				<jdk>1.8</jdk>
+			</activation>
+			<properties>
+				<jdk.version>1.8</jdk.version>
+			</properties>
+		</profile>
+		<profile>
 			<id>developer</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
