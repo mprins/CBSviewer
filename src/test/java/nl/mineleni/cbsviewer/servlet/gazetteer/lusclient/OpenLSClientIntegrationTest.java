@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -28,8 +28,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Testcases voor
- * {@link nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient}.
+ * Testcases voor {@link OpenLSClient}.
  * 
  * @author mprins
  * @since 1.7
@@ -38,6 +37,12 @@ public class OpenLSClientIntegrationTest extends AbstractTestUtils {
 	/** test subject. */
 	private OpenLSClient openLSClient = null;
 
+	/**
+	 * Maak een nieuwe OpenLSClient.
+	 * 
+	 * @throws Exception
+	 *             als t niet lukt
+	 */
 	@Before
 	public void setUp() throws Exception {
 		this.openLSClient = new OpenLSClient();

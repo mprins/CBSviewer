@@ -296,11 +296,13 @@ public class ReverseProxyServletTest {
 
 	/**
 	 * Test methode voor
-	 * {@link nl.mineleni.cbsviewer.servlet.ReverseProxyServlet#checkUrlAllowed(java.lang.String)}
-	 * . Deze test maakt een mock servletconfig en configureert de servlet. Met
-	 * de reflection API wordt de private method van de echte
-	 * ReverseProxyServlet aangeroepen.
+	 * {@link ReverseProxyServlet#checkUrlAllowed(java.lang.String)} . Deze test
+	 * maakt een mock servletconfig en configureert de servlet. Met de
+	 * reflection API wordt de private method van de echte ReverseProxyServlet
+	 * aangeroepen.
 	 */
+	@SuppressWarnings("javadoc")
+	// checkUrlAllowed is private
 	@Test
 	public void testCheckUrlAllowed() {
 		// init is called in setUp()

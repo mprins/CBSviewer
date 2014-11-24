@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -97,11 +97,11 @@ public class WMSClientServletIntegrationTest {
 
 				this.oneOf(WMSClientServletIntegrationTest.this.servletConfig)
 						.getInitParameter("bgCapabilitiesURL");
-				//this.will(returnValue("http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&SERVICE=WMS&amp;VERSION=1.1.1"));
+				// this.will(returnValue("http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&SERVICE=WMS&amp;VERSION=1.1.1"));
 				this.will(returnValue("http://www.openbasiskaart.nl/mapcache/?SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetCapabilities"));
 				this.oneOf(WMSClientServletIntegrationTest.this.servletConfig)
 						.getInitParameter("bgWMSlayers");
-				//this.will(returnValue("Grenzen"));
+				// this.will(returnValue("Grenzen"));
 				this.will(returnValue("osm-nb"));
 				this.oneOf(WMSClientServletIntegrationTest.this.servletConfig)
 						.getInitParameter("lufoCapabilitiesURL");
@@ -132,13 +132,9 @@ public class WMSClientServletIntegrationTest {
 
 	/**
 	 * Test methode voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet#service(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)}
+	 * {@link WMSClientServlet#service(HttpServletRequest, HttpServletResponse) }
 	 * .
 	 * 
-	 * @throws ServletException
-	 *             the servlet exception
-	 * @throws IOException
-	 *             Signals that an I/O exception has occurred.
 	 */
 	@Test
 	// @Ignore("needs more work")

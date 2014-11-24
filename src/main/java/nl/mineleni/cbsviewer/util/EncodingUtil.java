@@ -13,9 +13,7 @@ import java.net.URLEncoder;
 /**
  * Utility class for JavaScript compatible UTF-8 encoding and decoding.
  * 
- * @see "http://stackoverflow.com/questions/607176/
- *      java-equivalent-to-javascripts
- *      -encodeuricomponent-that-produces-identical-output"
+ * @see "http://stackoverflow.com/questions/607176/java-equivalent-to-javascripts-encodeuricomponent-that-produces-identical-output"
  * @author John Topley
  */
 public final class EncodingUtil {

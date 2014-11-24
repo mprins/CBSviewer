@@ -13,6 +13,12 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+/**
+ * gedeelde code voor OpenLS parsing.
+ * 
+ * @author prinsmc
+ *
+ */
 public abstract class AbstractOpenLSParser extends DefaultHandler {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory

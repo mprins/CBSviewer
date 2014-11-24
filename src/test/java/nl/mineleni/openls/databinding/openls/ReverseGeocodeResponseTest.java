@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -21,12 +21,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
+/**
+ * Testcases voor {@link ReverseGeocodeResponse}.
+ * 
+ * @author mprins
+ */
 public class ReverseGeocodeResponseTest extends AbstractTestUtils {
 	private ReverseGeocodeResponse response;
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(ReverseGeocodeRequestTest.class);
 
+	/**
+	 * set up testdata en xmlunit.
+	 */
 	@Before
 	public void setUp() {
 		XMLUnit.setIgnoreWhitespace(true);
@@ -63,9 +71,16 @@ public class ReverseGeocodeResponseTest extends AbstractTestUtils {
 
 		response = new ReverseGeocodeResponse();
 		response.setReverseGeocodedLocation(reverseGeocodedLocation);
-
 	}
 
+	/**
+	 * Testcase voor {@link ReverseGeocodeResponse#toXML()}.
+	 * 
+	 * @throws IOException
+	 *             als er een fout optreed bij inlezen xml bestand
+	 * @throws SAXException
+	 *             als er een fout optreed bij parsen xml bestand
+	 */
 	@Test
 	public void testToXML() throws IOException, SAXException {
 		String control = readFileAsString("/sampleresponses/reversegeocode/response.xml");

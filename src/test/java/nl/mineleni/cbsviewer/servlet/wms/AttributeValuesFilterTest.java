@@ -1,15 +1,17 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms;
 
-import java.io.File;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import static org.junit.Assume.assumeNotNull;
+
+import java.io.File;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -20,11 +22,9 @@ import org.custommonkey.xmlunit.exceptions.XMLUnitRuntimeException;
 import org.custommonkey.xmlunit.jaxp13.Validator;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assume.assumeNotNull;
 
 /**
- * Test case voor
- * {@link nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter}.
+ * Test case voor {@link AttributeValuesFilter}.
  * 
  * @author prinsmc
  */
@@ -46,9 +46,7 @@ public class AttributeValuesFilterTest {
 	}
 
 	/**
-	 * Test voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter#hasFilters()}
-	 * .
+	 * Test voor {@link AttributeValuesFilter#hasFilters()} .
 	 */
 	@Test
 	public void testHasFilters() {
@@ -56,9 +54,7 @@ public class AttributeValuesFilterTest {
 	}
 
 	/**
-	 * Test voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter#filterValue(String)}
-	 * .
+	 * Test voor {@link AttributeValuesFilter#filterValue(Object)} .
 	 */
 	@Test
 	public void testFilterValue() {
@@ -67,8 +63,8 @@ public class AttributeValuesFilterTest {
 	}
 
 	/**
-	 * XML testcase voor deployment {@link validAttributeValuesFilter.xml} en
-	 * {@link invalidAttributeValuesFilter.xml}.
+	 * XML testcase voor deployment {@code validAttributeValuesFilter.xml} en
+	 * {@code invalidAttributeValuesFilter.xml}.
 	 */
 	@Test
 	public void testAttributeValuesFilterXML() {
@@ -96,7 +92,7 @@ public class AttributeValuesFilterTest {
 	}
 
 	/**
-	 * XML testcase voor {@link AttributeValuesFilter.xsd}.
+	 * XML testcase voor {@code AttributeValuesFilter.xsd}.
 	 */
 	@Test
 	public void testAttributeValuesFilterXSD() {
@@ -114,7 +110,7 @@ public class AttributeValuesFilterTest {
 	}
 
 	/**
-	 * XML testcase voor deployment {@link AttributeValuesFilter.xml}.
+	 * XML testcase voor deployment {@code AttributeValuesFilter.xml}.
 	 */
 	@Test
 	public void testDeploymentAttributeValuesFilterXML() {
@@ -124,11 +120,11 @@ public class AttributeValuesFilterTest {
 				.getResourceAsStream("AttributeValuesFilter.xsd"));
 		v.addSchemaSource(schema);
 		// deployment resource
-		//final Source doc = new StreamSource(Thread.currentThread()
-		//		.getContextClassLoader()
-		//		.getResourceAsStream("../classes/AttributeValuesFilter.xml"));
-		final Source doc = new StreamSource(
-				new File("target/classes/AttributeValuesFilter.xml"));
+		// final Source doc = new StreamSource(Thread.currentThread()
+		// .getContextClassLoader()
+		// .getResourceAsStream("../classes/AttributeValuesFilter.xml"));
+		final Source doc = new StreamSource(new File(
+				"target/classes/AttributeValuesFilter.xml"));
 		assumeNotNull(doc);
 		assertTrue(v.isInstanceValid(doc));
 

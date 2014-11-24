@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -39,7 +39,8 @@ import org.junit.Test;
 import org.xml.sax.SAXException;
 
 /**
- * Test case voor {@link AvailableLayers.xml} en {@link AvailableLayers.xsd}.
+ * Test cases voor {@code AvailableLayers.xml} en schema
+ * {@code AvailableLayers.xsd}.
  * 
  * @author mprins
  */
@@ -113,8 +114,8 @@ public class AvailableLayersXMLTest {
 	}
 
 	/**
-	 * XML testcase voor test {@link AvailableLayers.xml} en
-	 * {@link invalidAvailableLayers.xml}, valideer documenten.
+	 * XML testcase voor test {@code AvailableLayers.xml} en
+	 * {@code invalidAvailableLayers.xml}, valideer documenten.
 	 * 
 	 * @throws IOException
 	 */
@@ -139,8 +140,8 @@ public class AvailableLayersXMLTest {
 	}
 
 	/**
-	 * XML testcase voor test {@link AvailableLayers.xml} en
-	 * {@link invalidAvailableLayers.xml}.
+	 * XML testcase voor test {@code AvailableLayers.xml} en
+	 * {@code invalidAvailableLayers.xml}.
 	 */
 	@Test
 	public void testAvailableLayersXMLXPath() {
@@ -178,7 +179,7 @@ public class AvailableLayersXMLTest {
 	}
 
 	/**
-	 * XML testcase voor {@link AvailableLayers.xsd}, valideer de xsd.
+	 * XML testcase voor {@code AvailableLayers.xsd}, valideert de xsd.
 	 */
 	@Test
 	public void testAvailableLayersXSD() {
@@ -192,19 +193,19 @@ public class AvailableLayersXMLTest {
 	}
 
 	/**
-	 * XML testcase voor deployment {@link AvailableLayers.xml}, valideert het
-	 * document dat in de war terecht komt.
+	 * XML testcase voor deployment {@code AvailableLayers.xml}, valideert het
+	 * document dat in de .war file terecht komt.
 	 */
 	@Test
 	public void testDeploymentAvailableLayersXML() {
 		// final Source schema = new
 		// StreamSource(this.getClass().getClassLoader()
 		// .getResourceAsStream("AvailableLayers.xsd"));
-		//final Source doc = new StreamSource(Thread.currentThread()
-		//		.getContextClassLoader()
-		//		.getResourceAsStream("../classes/AvailableLayers.xml"));
-		final Source doc = new StreamSource(
-				new File("target/classes/AvailableLayers.xml"));
+		// final Source doc = new StreamSource(Thread.currentThread()
+		// .getContextClassLoader()
+		// .getResourceAsStream("../classes/AvailableLayers.xml"));
+		final Source doc = new StreamSource(new File(
+				"target/classes/AvailableLayers.xml"));
 		assumeNotNull(doc);
 		assertTrue(this.v.isInstanceValid(doc));
 	}

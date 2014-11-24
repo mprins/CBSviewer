@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -23,8 +23,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Test case voor
- * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter}.
+ * Test case voor {@link FeatureInfoResponseConverter}.
  * 
  * @author prinsmc
  */
@@ -32,6 +31,7 @@ public class FeatureInfoResponseConverterTest {
 	/** resource bundle. */
 	private static final LabelsBundle RESOURCES = new LabelsBundle();
 
+	/** The layer. */
 	private LayerDescriptor layer;
 
 	/**
@@ -64,11 +64,11 @@ public class FeatureInfoResponseConverterTest {
 
 	/**
 	 * Test methode voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
+	 * {@link FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.CONVERTER_TYPE, LayerDescriptor) }
 	 * . Test met een lege response.
 	 * 
 	 * @throws Exception
-	 *             the exception
+	 *             als er een fout optreed bij inlezen of parsen GML bestand.
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML0() throws Exception {
@@ -84,11 +84,11 @@ public class FeatureInfoResponseConverterTest {
 
 	/**
 	 * Test methode voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
+	 * {@link FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.CONVERTER_TYPE, LayerDescriptor) }
 	 * . Test met een response met 1 item.
 	 * 
 	 * @throws Exception
-	 *             the exception
+	 *             als er een fout optreed bij inlezen of parsen GML bestand.
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML1() throws Exception {
@@ -113,11 +113,11 @@ public class FeatureInfoResponseConverterTest {
 
 	/**
 	 * Test methode voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
+	 * {@link FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.CONVERTER_TYPE, LayerDescriptor) }
 	 * . Test met een response met 3 items.
 	 * 
 	 * @throws Exception
-	 *             the exception
+	 *             als er een fout optreed bij inlezen of parsen GML bestand.
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML3() throws Exception {
@@ -144,10 +144,11 @@ public class FeatureInfoResponseConverterTest {
 
 	/**
 	 * Test methode voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
+	 * {@link FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.CONVERTER_TYPE, LayerDescriptor) }
 	 * . Test met een response met 0 items.
-	 * 
+	 *
 	 * @throws IOException
+	 *             als er een fout optreed bij inlezen html bestand.
 	 */
 	@Test
 	public final void testConvertToHTMLTableHTML0() throws IOException {
@@ -162,10 +163,11 @@ public class FeatureInfoResponseConverterTest {
 
 	/**
 	 * Test methode voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
+	 * {@link FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.CONVERTER_TYPE, LayerDescriptor) }
 	 * . Test met een response met 1 item.
-	 * 
+	 *
 	 * @throws IOException
+	 *             als er een fout optreed bij inlezen html bestand.
 	 */
 	@Test
 	public final void testConvertToHTMLTableHTML1() throws IOException {
@@ -179,10 +181,11 @@ public class FeatureInfoResponseConverterTest {
 
 	/**
 	 * Test methode voor
-	 * {@link nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type, java.lang.String[])}
+	 * {@link FeatureInfoResponseConverter#convertToHTMLTable(java.io.InputStream, nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.CONVERTER_TYPE, LayerDescriptor) }
 	 * . Test met een response met 3 items.
-	 * 
+	 *
 	 * @throws IOException
+	 *             als er een fout optreed bij inlezen html bestand.
 	 */
 	@Test
 	public final void testConvertToHTMLTableHTML3() throws IOException {
@@ -194,6 +197,12 @@ public class FeatureInfoResponseConverterTest {
 		assertNotNull(test);
 	}
 
+	/**
+	 * Test voor gelijke output met GML en HTML input, 0 features.
+	 *
+	 * @throws IOException
+	 *             als er een fout optreed bij inlezen gml of html bestand.
+	 */
 	public final void testConvert0() throws IOException {
 		final String testHTML = FeatureInfoResponseConverter
 				.convertToHTMLTable(this.getClass().getClassLoader()
@@ -208,6 +217,12 @@ public class FeatureInfoResponseConverterTest {
 		assertEquals(testHTML, testXML);
 	}
 
+	/**
+	 * Test voor gelijke output met GML en HTML input, 1 feature.
+	 *
+	 * @throws IOException
+	 *             als er een fout optreed bij inlezen gml of html bestand.
+	 */
 	public final void testConvert2() throws IOException {
 		final String testHTML = FeatureInfoResponseConverter
 				.convertToHTMLTable(this.getClass().getClassLoader()
@@ -222,6 +237,12 @@ public class FeatureInfoResponseConverterTest {
 		assertEquals(testHTML, testXML);
 	}
 
+	/**
+	 * Test voor gelijke output met GML en HTML input, 3 features.
+	 *
+	 * @throws IOException
+	 *             als er een fout optreed bij inlezen gml of html bestand.
+	 */
 	public final void testConvert3() throws IOException {
 		final String testHTML = FeatureInfoResponseConverter
 				.convertToHTMLTable(this.getClass().getClassLoader()

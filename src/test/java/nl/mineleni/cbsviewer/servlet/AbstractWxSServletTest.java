@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -26,6 +26,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
+ * Testcases voor {@link AbstractWxSServlet}.
+ * 
  * @author Mark
  */
 public class AbstractWxSServletTest {
@@ -67,8 +69,7 @@ public class AbstractWxSServletTest {
 
 	/**
 	 * test methode voor
-	 * {@link AbstractWxSServlet#parseForward(javax.servlet.http.HttpServletRequest)}
-	 * .
+	 * {@link AbstractWxSServlet#parseForward(HttpServletRequest)} .
 	 */
 	@Test
 	public void testParseForwardFalse() {
@@ -85,8 +86,7 @@ public class AbstractWxSServletTest {
 
 	/**
 	 * test methode voor
-	 * {@link AbstractWxSServlet#parseForward(javax.servlet.http.HttpServletRequest)}
-	 * .
+	 * {@link AbstractWxSServlet#parseForward(HttpServletRequest)} .
 	 */
 	@Test
 	public void testParseForwardNull() {
@@ -103,8 +103,7 @@ public class AbstractWxSServletTest {
 
 	/**
 	 * test methode voor
-	 * {@link AbstractWxSServlet#parseForward(javax.servlet.http.HttpServletRequest)}
-	 * .
+	 * {@link AbstractWxSServlet#parseForward(HttpServletRequest)} .
 	 */
 	@Test
 	public void testParseForwardTrue() {
@@ -122,8 +121,7 @@ public class AbstractWxSServletTest {
 
 	/**
 	 * test methode voor
-	 * {@link AbstractWxSServlet#parseLocation(javax.servlet.http.HttpServletRequest)}
-	 * .
+	 * {@link AbstractWxSServlet#parseLocation(HttpServletRequest)}.
 	 * 
 	 * @throws ServletException
 	 */
@@ -149,8 +147,8 @@ public class AbstractWxSServletTest {
 
 	/**
 	 * test methode voor
-	 * {@link AbstractWxSServlet#parseLocation(javax.servlet.http.HttpServletRequest)}
-	 * .
+	 * {@link AbstractWxSServlet#parseLocation(HttpServletRequest)} met null
+	 * locatie.
 	 * 
 	 * @throws ServletException
 	 */
@@ -186,9 +184,7 @@ public class AbstractWxSServletTest {
 
 	/**
 	 * test methode voor
-	 * {@link AbstractWxSServlet#isNotNullNotEmptyNotWhiteSpaceOnly(String) }.
-	 * 
-	 * @throws ServletException
+	 * {@link AbstractWxSServlet#isNotNullNotEmptyNotWhiteSpaceOnly(String)}.
 	 */
 	@Test
 	public void testIsNotNullNotEmptyNotWhiteSpaceOnly() {

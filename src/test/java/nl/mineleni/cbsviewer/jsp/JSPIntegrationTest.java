@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
@@ -10,9 +10,6 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
-
-import java.io.IOException;
-
 import nl.mineleni.cbsviewer.IntegrationTestConstants;
 
 import org.apache.http.HttpEntity;
@@ -55,6 +52,12 @@ public abstract class JSPIntegrationTest extends IntegrationTestConstants {
 	/** http client voor communicatie met de validator. */
 	private static CloseableHttpClient validatorclient;
 
+	/**
+	 * close http connecties.
+	 * 
+	 * @throws Exception
+	 *             als er een fout optreed tijdens afsluiten connecties.
+	 */
 	@AfterClass
 	public static void disconnect() throws Exception {
 		client.close();
@@ -121,7 +124,8 @@ public abstract class JSPIntegrationTest extends IntegrationTestConstants {
 	/**
 	 * http verbindingen sluiten na afloop testcases.
 	 * 
-	 * @throws IOException
+	 * @throws Exception
+	 *             als er een fout optreedt bij het afsluiten.
 	 */
 	@After
 	public void closeConnection() throws Exception {
@@ -138,6 +142,9 @@ public abstract class JSPIntegrationTest extends IntegrationTestConstants {
 
 	/**
 	 * test of de response geldig is.
+	 * 
+	 * @throws Exception
+	 *             als er een fout optreedt tijdens de test.
 	 */
 	public abstract void testIfValidResponse() throws Exception;
 }

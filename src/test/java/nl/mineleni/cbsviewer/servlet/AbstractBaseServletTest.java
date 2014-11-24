@@ -38,6 +38,9 @@ public class AbstractBaseServletTest {
 
 	/**
 	 * Set up for the tests, init()'s the servlet to test.
+	 * 
+	 * @throws Exception
+	 *             als er een fout optreedt in de configuratie.
 	 */
 	@SuppressWarnings("serial")
 	@Before

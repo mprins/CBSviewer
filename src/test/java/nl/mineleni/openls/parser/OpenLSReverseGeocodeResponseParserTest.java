@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -42,6 +42,7 @@ public class OpenLSReverseGeocodeResponseParserTest extends AbstractTestUtils {
 	 * test de parser.
 	 * 
 	 * @throws IOException
+	 *             als er een fout optreed bij inlezen xml bestand
 	 */
 	@Test
 	public void testParser() throws IOException {
@@ -64,6 +65,9 @@ public class OpenLSReverseGeocodeResponseParserTest extends AbstractTestUtils {
 		}
 	}
 
+	/**
+	 * round trip test van zoeken en parsen.
+	 */
 	@Test
 	public void testRoundTrip() {
 		final ReverseGeocodedLocation reverseGeocodedLocation = new ReverseGeocodedLocation();

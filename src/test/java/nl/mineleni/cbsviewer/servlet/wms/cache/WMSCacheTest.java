@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -24,6 +24,8 @@ import org.junit.Test;
 import org.opengis.geometry.BoundingBox;
 
 /**
+ * Testcases voor {@link WMSCache}.
+ * 
  * @author prinsmc
  * @since 1.7
  */
@@ -115,8 +117,8 @@ public class WMSCacheTest {
 	}
 
 	/**
-	 * Test methode voor {@link WMSCache#WMSCache(String) } test een ongeldig pad
-	 * .
+	 * Test methode voor {@link WMSCache#WMSCache(String, int)} test een
+	 * ongeldig pad.
 	 */
 	@Test
 	public final void testInvalidCachePath() {
@@ -141,7 +143,7 @@ public class WMSCacheTest {
 	}
 
 	/**
-	 * Test methode voor {@link WMSCache#put(BoundingBox, BufferedImage) } .
+	 * Test methode voor {@link WMSCache#put(BoundingBox, CacheImage)}.
 	 */
 	@Test
 	public final void testPut() {

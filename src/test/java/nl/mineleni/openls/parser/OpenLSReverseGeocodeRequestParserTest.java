@@ -64,6 +64,9 @@ public class OpenLSReverseGeocodeRequestParserTest extends AbstractTestUtils {
 
 	/**
 	 * round trip test parsing van een request met xml serialisatie.
+	 * 
+	 * @throws Exception
+	 *             als er een fout optreedt tijdens de test.
 	 */
 	@Test
 	public void testRoundTrip() throws Exception {

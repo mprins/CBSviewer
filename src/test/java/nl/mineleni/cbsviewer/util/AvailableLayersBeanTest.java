@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -21,7 +21,7 @@ import org.junit.Test;
 import flexjson.JSONDeserializer;
 
 /**
- * Test case voor {@link nl.mineleni.cbsviewer.util.AvailableLayersBean}.
+ * Test case voor {@link AvailableLayersBean}.
  * 
  * @author prinsmc
  */
@@ -55,12 +55,18 @@ public class AvailableLayersBeanTest {
 		this.bean = null;
 	}
 
+	/**
+	 * testcase voor {@link AvailableLayersBean#asJSON()}.
+	 */
 	@Test
 	public void testAsJSON() {
 		assertTrue(this.bean.asJSON().startsWith(
 				"\n/* <![CDATA[ */ var _layers="));
 	}
 
+	/**
+	 * testcase voor {@link AvailableLayersBean#asJSON(boolean) }.
+	 */
 	@Test
 	public void testAsJSONBoolean() {
 		assertTrue(this.bean.asJSON(true).startsWith(
@@ -77,9 +83,7 @@ public class AvailableLayersBeanTest {
 	}
 
 	/**
-	 * testcase voor
-	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByID(String)}
-	 * .
+	 * testcase voor {@link AvailableLayersBean#getLayerByID(String)}.
 	 */
 	@Test
 	public void testGetLayerByID() {
@@ -89,8 +93,7 @@ public class AvailableLayersBeanTest {
 
 	/**
 	 * testcase voor
-	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByLayers(String, String) }
-	 * .
+	 * {@link AvailableLayersBean#getLayerByLayers(String, String) }.
 	 * 
 	 * 
 	 */
@@ -101,10 +104,7 @@ public class AvailableLayersBeanTest {
 
 	/**
 	 * testcase voor
-	 * {@link nl.mineleni.cbsviewer.util.AvailableLayersBean#getLayerByLayers(String,String, String) }
-	 * .
-	 * 
-	 * 
+	 * {@link AvailableLayersBean#getLayerByLayers(String,String, String) }.
 	 */
 	@Test
 	public void testGetLayerByLayersStringStringString() {
