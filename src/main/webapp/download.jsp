@@ -29,7 +29,7 @@
 		
 		<table class="download">
 		  <tr>
-			<th colspan="2"><fmt:message key="KEY_TABLE_HEADER" /></th>
+			<th colspan="3"><fmt:message key="KEY_TABLE_HEADER" /></th>
 		  </tr>
 		  <tr class="yellow"> 
 			<td><fmt:message key="KEY_TABLE_COLUMNHEADER1" /></td>
