@@ -45,8 +45,8 @@ public class ResponseHeadersFilter implements Filter {
 	 * 
 	 */
 	@Override
-	public void doFilter(ServletRequest req, ServletResponse res,
-			FilterChain chain) throws IOException, ServletException {
+	public void doFilter(final ServletRequest req, final ServletResponse res,
+			final FilterChain chain) throws IOException, ServletException {
 
 		HttpServletResponse response = (HttpServletResponse) res;
 		response.setHeader("X-UA-Compatible", "IE=edge");
@@ -60,7 +60,7 @@ public class ResponseHeadersFilter implements Filter {
 	 * @see javax.servlet.Filter#init(javax.servlet.FilterConfig)
 	 */
 	@Override
-	public void init(FilterConfig filterConfig) throws ServletException {
+	public void init(final FilterConfig filterConfig) throws ServletException {
 		// do nothing
 	}
 
