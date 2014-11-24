@@ -85,30 +85,43 @@ public abstract class JSPIntegrationTest extends IntegrationTestConstants {
 	 */
 	protected HttpResponse response;
 
+	/**
+	 * response validatie test tegen validator.nu
+	 * 
+	 * @param response
+	 *            test object
+	 * @throws Exception
+	 *             als er een fout optreedt tijdens de test.
+	 */
 	protected void boilerplateValidationTests(final HttpResponse response)
 			throws Exception {
 
 		final String body = new String(EntityUtils.toByteArray(response
 				.getEntity()), "UTF-8");
-		assertNotNull("Response body mag geen null zijn.", body);
+		assertNotNull("De response body mag geen null zijn.", body);
 		assertTrue("Response body dient met juiste prolog te starten.",
 				body.startsWith(RESPONSEPROLOG));
 
 		// online validation
 		final HttpPost validatorrequest = new HttpPost(
-				"http://html5.validator.nu/");
+		/* "http://html5.validator.nu/" */
+		"https://validator.nu/");
 		final HttpEntity entity = MultipartEntityBuilder
 				.create()
 				.setMode(HttpMultipartMode.STRICT)
 				.addTextBody("content", body, ContentType.APPLICATION_XHTML_XML)
+				.addTextBody(
+						"schema",
+						"http://s.validator.nu/xhtml5-rdfalite.rnc http://s.validator.nu/html5/assertions.sch http://c.validator.nu/all/",
+						ContentType.DEFAULT_TEXT)
 				.addTextBody("level", "error", ContentType.DEFAULT_TEXT)
 				.addTextBody("parser", "xml", ContentType.DEFAULT_TEXT)
 				// .addTextBody("parser", "html5", ContentType.DEFAULT_TEXT)
 				.addTextBody("out", "json", ContentType.DEFAULT_TEXT).build();
 		validatorrequest.setEntity(entity);
-
 		final HttpResponse validatorresponse = validatorclient
 				.execute(validatorrequest);
+
 		assertThat("Validator response code.",
 				Integer.valueOf(validatorresponse.getStatusLine()
 						.getStatusCode()), equalTo(SC_OK));
@@ -116,6 +129,7 @@ public abstract class JSPIntegrationTest extends IntegrationTestConstants {
 		final String validatorbody = new String(
 				EntityUtils.toByteArray(validatorresponse.getEntity()), "UTF-8");
 		LOGGER.debug("validator body:\n" + validatorbody);
+
 		// controle op succes paragraaf in valadator response
 		assertTrue("(X)HTML is niet geldig.",
 				validatorbody.contains("<p class=\"success\">"));

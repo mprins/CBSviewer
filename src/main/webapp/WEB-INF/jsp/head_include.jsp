@@ -14,9 +14,8 @@
 		<link rel="dns-prefetch" href="http://geodata1.nationaalgeoregister.nl/" />
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 		<meta name="description" content="Kaart applicatie" />
-		
-		<!-- Dublin Core metadata tags geven fouten in sommige validators.. -->
-		<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+		<!-- Dublin Core metadata tags geven fouten in sommige validators..
+		link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" / -->
 		<meta name="DCTERMS.type" content="Text" />
 		<meta name="DCTERMS.language" title="XSD.language" content="nl-NL" />
 		<meta name="DCTERMS.coverage" content="Nederland" />
