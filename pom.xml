@@ -329,6 +329,9 @@
 								<source>src/main/java</source>
 								<source>target/generated-sources/jaxb</source>
 							</sourceDirectories>
+							<sagaReports>
+								<source>${project.build.directory}/site</source>
+							</sagaReports>
 						</configuration>
 					</plugin>
 				</plugins>
