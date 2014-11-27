@@ -419,7 +419,7 @@
 				<configuration>
 					<doCheck>false</doCheck>
 					<doUpdate>false</doUpdate>
-					<timestampFormat>{0,date,yyyy-MM-dd HH:mm}</timestampFormat>
+					<timestampFormat>{0,date,yyyy-MM-dd HH:mm:ssa}</timestampFormat>
 					<shortRevisionLength>10</shortRevisionLength>
 				</configuration>
 			</plugin>
