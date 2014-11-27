@@ -1,8 +1,8 @@
 /*
  * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ *
+ * Gepubliceerd onder de BSD 2-clause licentie,
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet;
 
@@ -43,7 +43,7 @@ import org.slf4j.LoggerFactory;
  * Dit is een proxy servlet voor WxS services; ter verhelping van het single
  * domain javascript policy fenomeen. <br>
  * Servlet configuratie:
- * 
+ *
  * <pre>
  *  &lt;servlet&gt;
  *     &lt;servlet-name&gt;ReverseProxyServlet&lt;/servlet-name&gt;
@@ -63,7 +63,7 @@ import org.slf4j.LoggerFactory;
  *    &lt;load-on-startup&gt;2&lt;/load-on-startup&gt;
  *  &lt;/servlet&gt;
  * </pre>
- * 
+ *
  * @author prinsmc
  * @since 1.7
  */
@@ -82,7 +82,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 
 	/** log4j logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(ReverseProxyServlet.class);
+	        .getLogger(ReverseProxyServlet.class);
 
 	/** generated serialVersionUID. */
 	private static final long serialVersionUID = 1512103319305509379L;
@@ -94,10 +94,10 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 
 	/**
 	 * Set van toegestane hosts voor proxy-ing.
-	 * 
+	 *
 	 * @see #ALLOWED_HOSTS
 	 */
-	private final transient Set<String> allowedHosts = new HashSet<>();
+	private final Set<String> allowedHosts = new HashSet<>();
 
 	/** layers bean. */
 	private final transient AvailableLayersBean layers = new AvailableLayersBean();
@@ -108,7 +108,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	/**
 	 * optie om text/xml mime type voor response te forceren. default waarde is
 	 * <code>false</code>
-	 * 
+	 *
 	 * @see #FORCE_XML_MIME
 	 * @see #init(ServletConfig)
 	 */
@@ -120,14 +120,14 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	/**
 	 * Parse out the server name and check if the specified server name is in
 	 * the list of allowed servernames.
-	 * 
+	 *
 	 * @param serverUrl
 	 *            the url to check
 	 * @return <code>true</code> if the name of the server is found in the list
 	 */
 	private boolean checkUrlAllowed(final String serverUrl) {
 		String sUrl = serverUrl.toLowerCase().substring(
-				serverUrl.indexOf("//") + 2);
+		        serverUrl.indexOf("//") + 2);
 		if (serverUrl.contains("/")) {
 			sUrl = sUrl.substring(0, sUrl.indexOf('/'));
 		}
@@ -139,7 +139,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see javax.servlet.GenericServlet#destroy()
 	 */
 	@Override
@@ -157,7 +157,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 * iets van: <br>
 	 * <code>WMSproxy/proxy?</code> <br>
 	 * waarin WMSproxy de naam van de webapp is en proxy de servlet mapping.
-	 * 
+	 *
 	 * @param request
 	 *            the request
 	 * @param response
@@ -167,35 +167,35 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 */
 	@Override
 	protected void doGet(final HttpServletRequest request,
-			final HttpServletResponse response) throws ServletException {
+	        final HttpServletResponse response) throws ServletException {
 		try {
 			String serverUrl = request.getQueryString();
 			serverUrl = URLDecoder.decode(serverUrl, "UTF-8");
 			if (serverUrl.startsWith("http://")
-					|| serverUrl.startsWith("https://")) {
+			        || serverUrl.startsWith("https://")) {
 				// check if allowed
 				if (!this.checkUrlAllowed(serverUrl)) {
 					LOGGER.warn(serverUrl + ERR_MSG_FORBIDDEN);
 					response.sendError(SC_FORBIDDEN, serverUrl
-							+ ERR_MSG_FORBIDDEN);
+					        + ERR_MSG_FORBIDDEN);
 					response.flushBuffer();
 				} else {
 					// intercept and modify request
 					if (serverUrl.contains("GetFeatureInfo")) {
 						serverUrl = serverUrl.replace("text%2Fhtml",
-								URLEncoder.encode(type.toString(), "UTF-8"));
+						        URLEncoder.encode(type.toString(), "UTF-8"));
 						serverUrl = serverUrl.replace("text/html",
-								URLEncoder.encode(type.toString(), "UTF-8"));
+						        URLEncoder.encode(type.toString(), "UTF-8"));
 						if (LOGGER.isDebugEnabled()) {
 							LOGGER.debug("proxy GetFeatureInfo GET param: "
-									+ serverUrl);
+							        + serverUrl);
 						}
 					}
 					if (LOGGER.isDebugEnabled()) {
 						LOGGER.debug("Execute proxy GET param:" + serverUrl);
 					}
 					final HttpGet httpget = new HttpGet(serverUrl);
-					httpget.setConfig(requestConfig);
+					httpget.setConfig(this.requestConfig);
 					final HttpResponse get = this.client.execute(httpget);
 					if (get.getStatusLine().getStatusCode() == SC_OK) {
 						String responseBody;
@@ -207,32 +207,32 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 							for (final String s : params) {
 								if (s.contains("QUERY_LAYERS=")) {
 									lName = EncodingUtil.decodeURIComponent(s
-											.substring(
-													"QUERY_LAYERS=".length(),
-													s.length()));
+									        .substring(
+									                "QUERY_LAYERS=".length(),
+									                s.length()));
 									if (LOGGER.isDebugEnabled()) {
 										LOGGER.debug("Query layers = " + lName);
 									}
 								}
 								if (s.contains("STYLES=")) {
 									styles = EncodingUtil.decodeURIComponent(s
-											.substring("STYLES=".length(),
-													s.length()));
+									        .substring("STYLES=".length(),
+									                s.length()));
 									if (LOGGER.isDebugEnabled()) {
 										LOGGER.debug("Layer styles = " + styles);
 									}
 								}
 							}
 							final String wmsUrl = serverUrl.substring(0,
-									serverUrl.indexOf('?'));
+							        serverUrl.indexOf('?'));
 							if (LOGGER.isDebugEnabled()) {
 								LOGGER.debug("WMS url = " + wmsUrl);
 							}
 							responseBody = FeatureInfoResponseConverter
-									.convertToHTMLTable(get.getEntity()
-											.getContent(), type, this.layers
-											.getLayerByLayers(lName, wmsUrl,
-													styles));
+							        .convertToHTMLTable(get.getEntity()
+							                .getContent(), type, this.layers
+							                .getLayerByLayers(lName, wmsUrl,
+							                        styles));
 							response.setContentType("text/html; charset=UTF-8");
 						} else {
 							// force the response to have XML content type (WMS
@@ -241,7 +241,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 								response.setContentType("text/xml");
 							}
 							responseBody = EntityUtils
-									.toString(get.getEntity()).trim();
+							        .toString(get.getEntity()).trim();
 						}
 						response.setCharacterEncoding("UTF-8");
 						// in het geval van multi byte chars, bijv 'Skarsterlân'
@@ -253,9 +253,9 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 						response.flushBuffer();
 					} else {
 						LOGGER.warn("Onverwachte fout(server url=" + serverUrl
-								+ "): " + get.getStatusLine().toString());
+						        + "): " + get.getStatusLine().toString());
 						response.sendError(get.getStatusLine().getStatusCode(),
-								get.getStatusLine().toString());
+						        get.getStatusLine().toString());
 					}
 					httpget.reset();
 				}
@@ -343,7 +343,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 * Initialize variables called when context is initialized. Leest de waarden
 	 * van {@link #ALLOWED_HOSTS} (verplichte optie) en {@link #FORCE_XML_MIME}
 	 * uit de configuratie.
-	 * 
+	 *
 	 * @param config
 	 *            the <code>ServletConfig</code> object that contains
 	 *            configutation information for this servlet
@@ -356,7 +356,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 		super.init(config);
 		final String forceXML = config.getInitParameter(FORCE_XML_MIME);
 		this.forceXmlResponse = (null != forceXML ? Boolean
-				.parseBoolean(forceXML) : false);
+		        .parseBoolean(forceXML) : false);
 
 		String csvHostnames = config.getInitParameter(ALLOWED_HOSTS);
 		if (csvHostnames == null) {
@@ -374,14 +374,14 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 		}
 
 		// http client set up
-		client = HttpClients.createSystem();
-		requestConfig = RequestConfig.custom()
-				.setCookieSpec(CookieSpecs.IGNORE_COOKIES).build();
+		this.client = HttpClients.createSystem();
+		this.requestConfig = RequestConfig.custom()
+		        .setCookieSpec(CookieSpecs.IGNORE_COOKIES).build();
 		if ((null != this.getProxyHost()) && (this.getProxyPort() > 0)) {
 			final HttpHost proxy = new HttpHost(this.getProxyHost(),
-					this.getProxyPort(), "http");
-			requestConfig = RequestConfig.copy(requestConfig).setProxy(proxy)
-					.build();
+			        this.getProxyPort(), "http");
+			this.requestConfig = RequestConfig.copy(this.requestConfig)
+			        .setProxy(proxy).build();
 		}
 
 		// voorgond feature info response type
