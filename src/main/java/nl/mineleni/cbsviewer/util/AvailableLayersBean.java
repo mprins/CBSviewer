@@ -7,6 +7,7 @@
 package nl.mineleni.cbsviewer.util;
 
 import java.io.File;
+import java.net.URL;
 import java.util.Collections;
 import java.util.List;
 
@@ -53,13 +54,19 @@ public class AvailableLayersBean {
 			final JAXBContext jc = JAXBContext
 			        .newInstance("nl.mineleni.cbsviewer.util.xml");
 			final Unmarshaller u = jc.createUnmarshaller();
-			final File f = new File(this.getClass().getClassLoader()
-			        .getResource("AvailableLayers.xml").getFile());
-			@SuppressWarnings("unchecked")
-			final JAXBElement<LayersList> element = (JAXBElement<LayersList>) u
-			        .unmarshal(f);
-			final LayersList layerslist = element.getValue();
-			this.layers = layerslist.getLayerdescriptor();
+			final URL r = this.getClass().getClassLoader()
+			        .getResource("AvailableLayers.xml");
+			if (r != null) {
+				final File f = new File(r.getFile());
+				@SuppressWarnings("unchecked")
+				final JAXBElement<LayersList> element = (JAXBElement<LayersList>) u
+				        .unmarshal(f);
+				final LayersList layerslist = element.getValue();
+				this.layers = layerslist.getLayerdescriptor();
+			} else {
+				throw new JAXBException(
+				        "Bestand 'AvailableLayers.xml' niet gevonden");
+			}
 		} catch (final JAXBException e) {
 			LOGGER.error(
 			        "Er is een fout opgetreden bij het inlezen van de layers.",
