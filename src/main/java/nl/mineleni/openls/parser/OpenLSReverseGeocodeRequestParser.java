@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
+ *
+ * Gepubliceerd onder de BSD 2-clause licentie,
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.openls.parser;
@@ -23,24 +23,24 @@ import org.xml.sax.SAXException;
 
 /**
  * Parse reverse geocode requests.
- * 
+ *
  * @author prinsmc
  *
  */
 public class OpenLSReverseGeocodeRequestParser extends AbstractOpenLSParser {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(OpenLSReverseGeocodeRequestParser.class);
+	        .getLogger(OpenLSReverseGeocodeRequestParser.class);
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.xml.sax.helpers.DefaultHandler#endElement(java.lang.String,
 	 * java.lang.String, java.lang.String)
 	 */
 	@Override
 	public void endElement(final String uri, final String localName,
-			final String qName) throws SAXException {
+	        final String qName) throws SAXException {
 		final String[] nsName = qName.split(":");
 		String eName = "";
 		if (nsName.length > 1) {
@@ -54,33 +54,31 @@ public class OpenLSReverseGeocodeRequestParser extends AbstractOpenLSParser {
 			break;
 		case "position":
 			final Position position = (Position) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new ReverseGeocodeRequest()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == ReverseGeocodeRequest.class) {
 				((ReverseGeocodeRequest) (this.objStack.peek()))
-						.setPosition(position);
+				        .setPosition(position);
 			}
 			break;
 		case "point":
 			final Point point = (Point) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new Position().getClass()) {
+			if (this.objStack.peek().getClass() == Position.class) {
 				((Position) (this.objStack.peek())).setPoint(point);
 			}
 			break;
 		case "pos":
 			final Pos pos = (Pos) (this.objStack.pop());
 			pos.setXY(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Point().getClass()) {
+			if (this.objStack.peek().getClass() == Point.class) {
 				((Point) (this.objStack.peek())).addPos(pos);
 			}
 			break;
 		case "reversegeocodepreference":
 			final ReverseGeocodePreference rcp = (ReverseGeocodePreference) (this.objStack
-					.pop());
+			        .pop());
 			rcp.setPreference(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new ReverseGeocodeRequest()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == ReverseGeocodeRequest.class) {
 				((ReverseGeocodeRequest) (this.objStack.peek()))
-						.setReverseGeocodePreference(rcp);
+				        .setReverseGeocodePreference(rcp);
 			}
 			break;
 		default:
@@ -91,50 +89,49 @@ public class OpenLSReverseGeocodeRequestParser extends AbstractOpenLSParser {
 
 	/**
 	 * Gets the reverse geocode request.
-	 * 
+	 *
 	 * @return the reverse geocode request
 	 */
 	public ReverseGeocodeRequest getReverseGeocodeRequest() {
 		ReverseGeocodeRequest geocodeRequest = null;
 		if ((this.objStack.firstElement() != null)
-				&& (this.objStack.firstElement().getClass() == new ReverseGeocodeRequest()
-						.getClass())) {
+		        && (this.objStack.firstElement().getClass() == ReverseGeocodeRequest.class)) {
 			geocodeRequest = (ReverseGeocodeRequest) this.objStack
-					.firstElement();
+			        .firstElement();
 		}
 		return geocodeRequest;
 	}
 
 	/**
 	 * Parses the open ls reverse geocode response.
-	 * 
+	 *
 	 * @param data
 	 *            the data which is an OpenLS response xml document
 	 * @return the geocode response object, will return null if parsing the data
 	 *         failed
 	 */
 	public ReverseGeocodeRequest parseOpenLSReverseGeocodeRequest(
-			final String data) {
+	        final String data) {
 		this.objStack.clear();
 		try {
 			this.parser.parse(new InputSource(new StringReader(data)), this);
 		} catch (final SAXException | IOException e) {
 			LOGGER.error("OpenLS request XML verwerken is mislukt: " + data
-					+ ": ", e);
+			        + ": ", e);
 		}
 		return this.getReverseGeocodeRequest();
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.xml.sax.helpers.DefaultHandler#startElement(java.lang.String,
 	 * java.lang.String, java.lang.String, org.xml.sax.Attributes)
 	 */
 	@Override
 	public void startElement(final String uri, final String localName,
-			final String qName, final Attributes attributes)
-			throws SAXException {
+	        final String qName, final Attributes attributes)
+	        throws SAXException {
 		this.eValBuf = new StringBuffer();
 		final String[] nsName = qName.split(":");
 		String eName = nsName[0];

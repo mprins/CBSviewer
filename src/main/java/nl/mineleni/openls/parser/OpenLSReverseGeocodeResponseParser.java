@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
+ *
+ * Gepubliceerd onder de BSD 2-clause licentie,
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.openls.parser;
@@ -29,7 +29,7 @@ import org.xml.sax.SAXException;
 
 /**
  * Parse reverse geocode response.
- * 
+ *
  * @author prinsmc
  *
  */
@@ -60,80 +60,74 @@ public class OpenLSReverseGeocodeResponseParser extends AbstractOpenLSParser {
 			break;
 		case "reversegeocodedlocation":
 			final ReverseGeocodedLocation loc = (ReverseGeocodedLocation) this.objStack
-					.pop();
-			if (this.objStack.peek().getClass() == new ReverseGeocodeResponse()
-					.getClass()) {
+			.pop();
+			if (this.objStack.peek().getClass() == ReverseGeocodeResponse.class) {
 				((ReverseGeocodeResponse) (this.objStack.peek()))
-						.setReverseGeocodedLocation(loc);
+				.setReverseGeocodedLocation(loc);
 			}
 			break;
 		case "point":
 			final Point point = (Point) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new ReverseGeocodedLocation()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == ReverseGeocodedLocation.class) {
 				((ReverseGeocodedLocation) (this.objStack.peek()))
-						.setPoint(point);
+				.setPoint(point);
 			}
 			break;
 		case "pos":
 			final Pos pos = (Pos) (this.objStack.pop());
 			pos.setXY(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Point().getClass()) {
+			if (this.objStack.peek().getClass() == Point.class) {
 				((Point) (this.objStack.peek())).addPos(pos);
 			}
 			break;
 		case "address":
 			final Address address = (Address) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new ReverseGeocodedLocation()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == ReverseGeocodedLocation.class) {
 				((ReverseGeocodedLocation) (this.objStack.peek()))
-						.setAddress(address);
+				.setAddress(address);
 			}
 			break;
 		case "streetaddress":
 			final StreetAddress streetaddress = (StreetAddress) (this.objStack
 					.pop());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek()))
-						.setStreetAddress(streetaddress);
+				.setStreetAddress(streetaddress);
 			}
 			break;
 		case "building":
 			final Building building = (Building) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setBuilding(building);
 			}
 			break;
 		case "street":
 			final Street street = (Street) (this.objStack.pop());
 			street.setStreet(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setStreet(street);
 			}
 			break;
 		case "place":
 			final Place place = (Place) (this.objStack.pop());
 			place.setPlace(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).addPlace(place);
 			}
 			break;
 		case "postalcode":
 			final PostalCode pc = (PostalCode) (this.objStack.pop());
 			pc.setPostalCode(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
 			break;
 		case "searchcentredistance":
 			final SearchCentreDistance dist = (SearchCentreDistance) (this.objStack
 					.pop());
-			if (this.objStack.peek().getClass() == new ReverseGeocodedLocation()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == ReverseGeocodedLocation.class) {
 				((ReverseGeocodedLocation) (this.objStack.peek()))
-						.setSearchCentreDistance(dist);
+				.setSearchCentreDistance(dist);
 			}
 			break;
 		default:
@@ -143,14 +137,13 @@ public class OpenLSReverseGeocodeResponseParser extends AbstractOpenLSParser {
 
 	/**
 	 * Gets the reverse geocode response.
-	 * 
+	 *
 	 * @return the reverse geocode response
 	 */
 	public ReverseGeocodeResponse getReverseGeocodeResponse() {
 		ReverseGeocodeResponse geocodeResponse = null;
 		if ((this.objStack.firstElement() != null)
-				&& (this.objStack.firstElement().getClass() == new ReverseGeocodeResponse()
-						.getClass())) {
+				&& (this.objStack.firstElement().getClass() == ReverseGeocodeResponse.class)) {
 			geocodeResponse = (ReverseGeocodeResponse) this.objStack
 					.firstElement();
 		}
@@ -160,7 +153,7 @@ public class OpenLSReverseGeocodeResponseParser extends AbstractOpenLSParser {
 
 	/**
 	 * Parses the open ls reverse geocode response.
-	 * 
+	 *
 	 * @param data
 	 *            the data which is an OpenLS response xml document
 	 * @return the geocode response object, will return null if parsing the data
@@ -189,7 +182,7 @@ public class OpenLSReverseGeocodeResponseParser extends AbstractOpenLSParser {
 	@Override
 	public void startElement(final String uri, final String localName,
 			final String qName, final Attributes attributes)
-			throws SAXException {
+					throws SAXException {
 		this.eValBuf = new StringBuffer();
 		final String[] nsName = qName.split(":");
 		String eName = nsName[0];
