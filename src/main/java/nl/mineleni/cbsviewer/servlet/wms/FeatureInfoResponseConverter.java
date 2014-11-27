@@ -92,7 +92,7 @@ public final class FeatureInfoResponseConverter {
 
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(FeatureInfoResponseConverter.class);
+	        .getLogger(FeatureInfoResponseConverter.class);
 
 	/** attribuut namen filter. */
 	private static final AttributesNamesFilter NAMESFILTER = new AttributesNamesFilter();
@@ -123,38 +123,40 @@ public final class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	private static String cleanupHTML(final InputStream htmlStream,
-			final LayerDescriptor layer) throws IOException {
+	        final LayerDescriptor layer) throws IOException {
 		final Element table = Jsoup.parse(convertStreamToString(htmlStream))
-				.select("table").first();
+		        .select("table").first();
 		if (table == null) {
 			LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo.");
 			return RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
 		}
 
 		final DefaultFeatureCollection featureCollection = new DefaultFeatureCollection(
-				"internal");
+		        "internal");
 		final SimpleFeatureTypeBuilder b = new SimpleFeatureTypeBuilder();
 
 		// 1e rij zijn headers, andere rijen zijn data, geheel converteren naar
 		// een SimpleFeatureCollection
 		final Element headers = table.select("tr:first-child").first();
-		final Iterator<Element> iterTHs = headers.select("th").iterator();
-		while (iterTHs.hasNext()) {
-			b.add(iterTHs.next().text(), String.class);
+		if (headers != null) {
+			final Iterator<Element> iterTHs = headers.select("th").iterator();
+			while (iterTHs.hasNext()) {
+				b.add(iterTHs.next().text(), String.class);
+			}
 		}
 		b.setDefaultGeometry("point");
 		b.setCRS(null);
 		b.nillable(true).add("point", Point.class,
-				(CoordinateReferenceSystem) null);
+		        (CoordinateReferenceSystem) null);
 		b.setName("tablerow");
 		final SimpleFeatureType type = b.buildFeatureType();
 		final SimpleFeatureBuilder builder = new SimpleFeatureBuilder(type);
 		final Iterator<Element> rows = table.select("tr:not(:first-child)")
-				.iterator();
+		        .iterator();
 		while (rows.hasNext()) {
 			final Iterator<Element> iterTH = headers.select("th").iterator();
 			final Iterator<Element> iterTDs = rows.next().select("td")
-					.iterator();
+			        .iterator();
 			final SimpleFeature f = builder.buildFeature(null);
 			while (iterTDs.hasNext()) {
 				f.setAttribute(iterTH.next().text(), iterTDs.next().text());
@@ -162,6 +164,7 @@ public final class FeatureInfoResponseConverter {
 			f.setDefaultGeometry(null);
 			featureCollection.add(f);
 		}
+
 		return featureCollectionConverter(featureCollection, layer);
 	}
 
@@ -177,11 +180,11 @@ public final class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	private static String convertGML(final InputStream gmlStream,
-			final LayerDescriptor layer) throws IOException {
+	        final LayerDescriptor layer) throws IOException {
 		try {
 			final GML gml = new GML(Version.WFS1_0);
 			return featureCollectionConverter(
-					gml.decodeFeatureCollection(gmlStream), layer);
+			        gml.decodeFeatureCollection(gmlStream), layer);
 		} catch (ParserConfigurationException | SAXException e) {
 			LOGGER.error("Fout tijdens parsen van GML. ", e);
 			return "";
@@ -201,14 +204,14 @@ public final class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	private static String convertStreamToString(final InputStream is)
-			throws IOException {
+	        throws IOException {
 		final Writer writer = new StringWriter();
 		if (is != null) {
 
 			final char[] buffer = new char[BUFFERSIZE];
 			try {
 				final Reader reader = new BufferedReader(new InputStreamReader(
-						is, "UTF-8"));
+				        is, "UTF-8"));
 				int n;
 				while ((n = reader.read(buffer)) != -1) {
 					writer.write(buffer, 0, n);
@@ -235,8 +238,8 @@ public final class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public static String convertToHTMLTable(final InputStream input,
-			final CONVERTER_TYPE type, final LayerDescriptor layer)
-			throws IOException {
+	        final CONVERTER_TYPE type, final LayerDescriptor layer)
+	        throws IOException {
 		switch (type) {
 		case GMLTYPE:
 			return convertGML(input, layer);
@@ -244,7 +247,7 @@ public final class FeatureInfoResponseConverter {
 			return cleanupHTML(input, layer);
 		case XMLTYPE:
 			throw new IOException(CONVERTER_TYPE.XMLTYPE
-					+ " (XMLTYPE) wordt niet ondersteund.");
+			        + " (XMLTYPE) wordt niet ondersteund.");
 		default:
 			return convertStreamToString(input);
 		}
@@ -260,7 +263,7 @@ public final class FeatureInfoResponseConverter {
 	 * @return the string
 	 */
 	private static String featureCollectionConverter(
-			final SimpleFeatureCollection features, final LayerDescriptor layer) {
+	        final SimpleFeatureCollection features, final LayerDescriptor layer) {
 
 		final StringBuilder sb = new StringBuilder();
 		final String[] fieldNames = layer.getAttributes().split(",\\s*");
@@ -281,17 +284,17 @@ public final class FeatureInfoResponseConverter {
 			SimpleFeatureIterator iter = features.features();
 			while (iter.hasNext()) {
 				sb.append("<tr class=\"")
-						.append(((i++ % 2) == 0) ? "odd" : "even")
-						.append("\">");
+				        .append(((i++ % 2) == 0) ? "odd" : "even")
+				        .append("\">");
 				final SimpleFeature f = iter.next();
 				for (final String n : fieldNames) {
 					if (VALUESFILTER.hasFilters()) {
 						sb.append("<td>")
-								.append(VALUESFILTER.filterValue(f
-										.getAttribute(n))).append("</td>");
+						        .append(VALUESFILTER.filterValue(f
+						                .getAttribute(n))).append("</td>");
 					} else {
 						sb.append("<td>").append(f.getAttribute(n))
-								.append("</td>");
+						        .append("</td>");
 					}
 				}
 				sb.append("</tr>");
