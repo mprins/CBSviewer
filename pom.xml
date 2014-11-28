@@ -329,6 +329,9 @@
 								<source>src/main/java</source>
 								<source>target/generated-sources/jaxb</source>
 							</sourceDirectories>
+							<sagaReports>
+								<source>${project.build.directory}/site</source>
+							</sagaReports>
 						</configuration>
 					</plugin>
 				</plugins>
@@ -419,7 +422,7 @@
 				<configuration>
 					<doCheck>false</doCheck>
 					<doUpdate>false</doUpdate>
-					<timestampFormat>{0,date,yyyy-MM-dd HH:mm}</timestampFormat>
+					<timestampFormat>{0,date,yyyy-MM-dd HH:mm:ssa}</timestampFormat>
 					<shortRevisionLength>10</shortRevisionLength>
 				</configuration>
 			</plugin>
