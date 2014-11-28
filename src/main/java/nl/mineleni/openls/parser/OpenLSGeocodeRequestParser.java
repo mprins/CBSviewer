@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
+ *
+ * Gepubliceerd onder de BSD 2-clause licentie,
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.openls.parser;
@@ -25,24 +25,24 @@ import org.xml.sax.SAXException;
 
 /**
  * The Class OpenLSGeocodeRequestParser.
- * 
+ *
  * @since 1.7
  */
 public class OpenLSGeocodeRequestParser extends AbstractOpenLSParser {
 
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(OpenLSGeocodeRequestParser.class);
+	        .getLogger(OpenLSGeocodeRequestParser.class);
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.xml.sax.helpers.DefaultHandler#endElement(java.lang.String,
 	 * java.lang.String, java.lang.String)
 	 */
 	@Override
 	public void endElement(final String uri, final String localName,
-			final String qName) throws SAXException {
+	        final String qName) throws SAXException {
 		final String[] nsName = qName.split(":");
 		String eName = "";
 		if (nsName.length > 1) {
@@ -53,45 +53,42 @@ public class OpenLSGeocodeRequestParser extends AbstractOpenLSParser {
 		switch (eName.toLowerCase()) {
 		case "address":
 			final Address address = (Address) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new GeocodeRequest()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == GeocodeRequest.class) {
 				((GeocodeRequest) (this.objStack.peek())).addAddress(address);
 			}
 			break;
 		case "streetaddress":
 			final StreetAddress streetaddress = (StreetAddress) (this.objStack
-					.pop());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			        .pop());
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek()))
-						.setStreetAddress(streetaddress);
+				        .setStreetAddress(streetaddress);
 			}
 			break;
 		case "building":
 			final Building building = (Building) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setBuilding(building);
 			}
 			break;
 		case "street":
 			final Street street = (Street) (this.objStack.pop());
 			street.setStreet(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setStreet(street);
 			}
 			break;
 		case "place":
 			final Place place = (Place) (this.objStack.pop());
 			place.setPlace(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).addPlace(place);
 			}
 			break;
 		case "postalcode":
 			final PostalCode pc = (PostalCode) (this.objStack.pop());
 			pc.setPostalCode(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
 			break;
@@ -102,14 +99,13 @@ public class OpenLSGeocodeRequestParser extends AbstractOpenLSParser {
 
 	/**
 	 * Gets the geocode request.
-	 * 
+	 *
 	 * @return the geocode request
 	 */
 	public GeocodeRequest getGeocodeRequest() {
 		GeocodeRequest geocodeRequest = null;
 		if ((this.objStack.firstElement() != null)
-				&& (this.objStack.firstElement().getClass() == new GeocodeRequest()
-						.getClass())) {
+		        && (this.objStack.firstElement().getClass() == GeocodeRequest.class)) {
 			geocodeRequest = (GeocodeRequest) this.objStack.firstElement();
 		}
 		return geocodeRequest;
@@ -117,7 +113,7 @@ public class OpenLSGeocodeRequestParser extends AbstractOpenLSParser {
 
 	/**
 	 * Parses the open ls request.
-	 * 
+	 *
 	 * @param data
 	 *            the data
 	 * @return the geocode request
@@ -128,21 +124,21 @@ public class OpenLSGeocodeRequestParser extends AbstractOpenLSParser {
 			this.parser.parse(new InputSource(new StringReader(data)), this);
 		} catch (final SAXException | IOException e) {
 			LOGGER.error("OpenLS response XML verwerken is mislukt: " + data
-					+ ": ", e);
+			        + ": ", e);
 		}
 		return this.getGeocodeRequest();
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.xml.sax.helpers.DefaultHandler#startElement(java.lang.String,
 	 * java.lang.String, java.lang.String, org.xml.sax.Attributes)
 	 */
 	@Override
 	public void startElement(final String uri, final String localName,
-			final String qName, final Attributes attributes)
-			throws SAXException {
+	        final String qName, final Attributes attributes)
+	        throws SAXException {
 		this.eValBuf = new StringBuffer();
 		final String[] nsName = qName.split(":");
 		String eName = nsName[0];

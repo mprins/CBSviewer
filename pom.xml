@@ -119,6 +119,7 @@
 		<jetty.port>8021</jetty.port>
 		<jetty.stopPort>8007</jetty.stopPort>
 		<repo_token />
+		<surefire.argline>-XX:-UseSplitVerifier</surefire.argline>
 	</properties>
 	<profiles>
 		<profile>
@@ -128,6 +129,7 @@
 			</activation>
 			<properties>
 				<jdk.version>1.8</jdk.version>
+				<surefire.argline />
 			</properties>
 		</profile>
 		<profile>
@@ -553,7 +555,7 @@
 					<!-- work around voor java 7. see: 
 					http://stackoverflow.com/questions/10869127/maven-build-causes-verifyerror-with-java-1-7
 					-->
-					<argLine>-XX:-UseSplitVerifier</argLine>
+					<argLine>${surefire.argline}</argLine>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
+ *
+ * Gepubliceerd onder de BSD 2-clause licentie,
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.openls.parser;
@@ -29,7 +29,7 @@ import org.xml.sax.SAXException;
 
 /**
  * The Class OpenLSGeocodeResponseParser.
- * 
+ *
  * @since 1.7
  */
 public class OpenLSGeocodeResponseParser extends AbstractOpenLSParser {
@@ -58,76 +58,70 @@ public class OpenLSGeocodeResponseParser extends AbstractOpenLSParser {
 		case "geocoderesponselist":
 			final GeocodeResponseList gcResList = (GeocodeResponseList) (this.objStack
 					.pop());
-			if (this.objStack.peek().getClass() == new GeocodeResponse()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == GeocodeResponse.class) {
 				((GeocodeResponse) (this.objStack.peek()))
-						.addGeocodeResponseList(gcResList);
+				.addGeocodeResponseList(gcResList);
 			}
 			break;
 		case "geocodedaddress":
 			final GeocodedAddress gcaddress = (GeocodedAddress) (this.objStack
 					.pop());
-			if (this.objStack.peek().getClass() == new GeocodeResponseList()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == GeocodeResponseList.class) {
 				((GeocodeResponseList) (this.objStack.peek()))
-						.addGeocodedAddress(gcaddress);
+				.addGeocodedAddress(gcaddress);
 			}
 			break;
 		case "point":
 			final Point point = (Point) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new GeocodedAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == GeocodedAddress.class) {
 				((GeocodedAddress) (this.objStack.peek())).setPoint(point);
 			}
 			break;
 		case "pos":
 			final Pos pos = (Pos) (this.objStack.pop());
 			pos.setXY(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Point().getClass()) {
+			if (this.objStack.peek().getClass() == Point.class) {
 				((Point) (this.objStack.peek())).addPos(pos);
 			}
 			break;
 		case "address":
 			final Address address = (Address) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new GeocodedAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == GeocodedAddress.class) {
 				((GeocodedAddress) (this.objStack.peek())).setAddress(address);
 			}
 			break;
 		case "streetaddress":
 			final StreetAddress streetaddress = (StreetAddress) (this.objStack
 					.pop());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek()))
-						.setStreetAddress(streetaddress);
+				.setStreetAddress(streetaddress);
 			}
 			break;
 		case "building":
 			final Building building = (Building) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setBuilding(building);
 			}
 			break;
 		case "street":
 			final Street street = (Street) (this.objStack.pop());
 			street.setStreet(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setStreet(street);
 			}
 			break;
 		case "place":
 			final Place place = (Place) (this.objStack.pop());
 			place.setPlace(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).addPlace(place);
 			}
 			break;
 		case "postalcode":
 			final PostalCode pc = (PostalCode) (this.objStack.pop());
 			pc.setPostalCode(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
 			break;
@@ -138,14 +132,13 @@ public class OpenLSGeocodeResponseParser extends AbstractOpenLSParser {
 
 	/**
 	 * Gets the geocode response.
-	 * 
+	 *
 	 * @return the geocode response
 	 */
 	public GeocodeResponse getGeocodeResponse() {
 		GeocodeResponse geocodeResponse = null;
 		if ((this.objStack.firstElement() != null)
-				&& (this.objStack.firstElement().getClass() == new GeocodeResponse()
-						.getClass())) {
+				&& (this.objStack.firstElement().getClass() == GeocodeResponse.class)) {
 			geocodeResponse = (GeocodeResponse) this.objStack.firstElement();
 		}
 		return geocodeResponse;
@@ -153,7 +146,7 @@ public class OpenLSGeocodeResponseParser extends AbstractOpenLSParser {
 
 	/**
 	 * Parses the open ls response.
-	 * 
+	 *
 	 * @param data
 	 *            the data which is an OpenLS response xml document
 	 * @return the geocode response object, will return null if parsing the data
@@ -179,7 +172,7 @@ public class OpenLSGeocodeResponseParser extends AbstractOpenLSParser {
 	@Override
 	public void startElement(final String uri, final String localName,
 			final String qName, final Attributes attributes)
-			throws SAXException {
+					throws SAXException {
 		this.eValBuf = new StringBuffer();
 		final String[] nsName = qName.split(":");
 		String eName = nsName[0];
