@@ -138,6 +138,14 @@
 		<servlet-name>AdresZoekServlet</servlet-name>
 		<url-pattern>/adres</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>toegankelijkheid</servlet-name>
+		<jsp-file>/toegankelijkheid.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>toegankelijkheid</servlet-name>
+		<url-pattern>/toegankelijkheid</url-pattern>
+	</servlet-mapping>
 	<listener>
 		<listener-class>nl.mineleni.cbsviewer.servlet.GeotoolsContextListener</listener-class>
 	</listener>
