@@ -513,7 +513,6 @@
 		<attributes>wijknaam, percentage_personen_0_tot_15_jaar</attributes>
 		<aliases>Wijk, Percentage</aliases>
 		<zoom>5</zoom>
-		<zoom>5</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijken2009_perc_personen_tot_15_jaar</id>
@@ -2472,7 +2471,7 @@
 		<aliases>Kern naam, Aantal</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_westers_allochtonen_2012</id>
+		<id>vierkanten100m_westers_allochtonen_2012</id>
 		<name>Percentage westerse allochtonen 2012 - Vierkant 100m</name>
 		<layers>westerse_allochtonen_2012</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
@@ -2482,7 +2481,7 @@
 		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
-		<id>vierkanten500m_westers_allochtonen_2011</id>
+		<id>vierkanten100m_westers_allochtonen_2011</id>
 		<name>Percentage westerse allochtonen 2011 - Vierkant 100m</name>
 		<layers>westerse_allochtonen_2011</layers>
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten100m/wms</url>
