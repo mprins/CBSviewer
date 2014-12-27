@@ -80,8 +80,8 @@
 		<tag>master</tag>
 	</scm>
 	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://gisdemo.agro.nl/jenkins/job/CBS-viewer/</url>
+		<system>Travis-CI</system>
+		<url>https://travis-ci.org/MinELenI/CBSviewer/</url>
 		<notifiers />
 	</ciManagement>
 	<prerequisites>
