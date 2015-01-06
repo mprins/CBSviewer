@@ -37,7 +37,7 @@
 			<td><fmt:message key="KEY_TABLE_COLUMNHEADER3" /></td>
 		  </tr>
 		  <tr>
-			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2013-wijk-en-buurtkaart-2012-versie-1.htm">Gemeente, wijk- en buurtkaart 2013</a></td>
+			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2013-buurtkaart-shape-versie-1-el.htm">Gemeente, wijk- en buurtkaart 2013</a></td>
 			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
 			<td>51 MB</td>
 		  </tr>
