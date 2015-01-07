@@ -12,7 +12,7 @@
 	<nav id="mainMenu" class="mainMenu">
 		<ul>
 			<li>
-				<c:url value="/index.jsp" var="indexLink">
+				<c:url value="./index.jsp" var="indexLink">
 					<c:param name="coreonly" value="${param.coreonly}" />
 				</c:url>
 				<a href="${fn:escapeXml(indexLink)}" id="mainMenu_Home">
@@ -20,7 +20,7 @@
 				</a>
 			</li>
 			<li>
-				<c:url value="/about.jsp" var="aboutLink">
+				<c:url value="./about.jsp" var="aboutLink">
 					<c:param name="coreonly" value="${param.coreonly}" />
 				</c:url>
 				<a class="fancybox fancybox.ajax" href="${fn:escapeXml(aboutLink)}">
@@ -28,7 +28,7 @@
 				</a>
 			</li>
 			<li>
-				<c:url value="/faq.jsp" var="faqLink">
+				<c:url value="./faq.jsp" var="faqLink">
 					<c:param name="coreonly" value="${param.coreonly}" />
 				</c:url> 
 				<a class="fancybox fancybox.ajax" href="${fn:escapeXml(faqLink)}">
@@ -36,7 +36,7 @@
 				</a>
 			</li>
 			<li>
-				<c:url value="/download.jsp" var="downloadLink">
+				<c:url value="./download.jsp" var="downloadLink">
 					<c:param name="coreonly" value="${param.coreonly}" />
 				</c:url>
 				<a class="fancybox fancybox.ajax" href="${fn:escapeXml(downloadLink)}">

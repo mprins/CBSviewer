@@ -112,7 +112,7 @@ for (CookieNamesConstants e : CookieNamesConstants.values()) {
 	<div class="page">
 		<header class="header">
 			<div class="h1">
-				<c:url value="/index.jsp" var="indexLink">
+				<c:url value="./index.jsp" var="indexLink">
 					<c:param name="coreonly" value="${param.coreonly}" />
 				</c:url>
 				<a href="${fn:escapeXml(indexLink)}" title="www.cbsinuwbuurt.nl"
