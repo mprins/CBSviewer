@@ -10,12 +10,16 @@
 	let op dat dit bestand vanuit de root van de webapplicatie wordt ingevoegd  
 	 -->
 	<jsp:text>
-		<footer id="footerWrapper">
+	<![CDATA[
+		<div id="footerWrapper">
 			<span class="introduction">
+	]]>
 	</jsp:text>
 	<fmt:message key="KEY_COPYRIGHT" />
 	<jsp:text>
+	<![CDATA[
 			</span>
-		</footer>
+		</div>
+	]]>	
 	</jsp:text>
 </jsp:root>
