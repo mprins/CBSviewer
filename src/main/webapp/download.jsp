@@ -62,6 +62,11 @@
 			<td>11 MB</td>
 		  </tr>
 		  <tr> 
+			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2014-bevolkingskernen-in-nederland-2011-el.htm">Bevolkingskernen 2011</a></td>
+			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
+			<td>8 MB</td>
+		  </tr>
+		  <tr> 
 			<td><a href="http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/links/2012-bevolkingskernen-2008-el.htm">Bevolkingskernen 2008</a></td>
 			<td><fmt:message key="KEY_TABLE_FILETYPE" /></td>
 			<td>8 MB</td>
