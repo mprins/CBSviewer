@@ -344,7 +344,8 @@
 							<li class="menuTitle">Bodemgebruik</li>
 							<li><a href="#">Bestand bodemgebruik<span><fmt:message key="KEY_TOOLTIP82" /></span></a>
 								<ul class="submenu">    
-									<li><fmt:message key="KEY_LAYERTYPE_SOIL" /><br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bodemgebruik2010')}">2010</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bodemgebruik2008')}">2008</a></li>
+									<li><fmt:message key="KEY_LAYERTYPE_SOIL" /><br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bodemgebruik2010')}">2010 hoofdgroep</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bodemgebruik2010sub')}">2010</a></li>
+									<li><fmt:message key="KEY_LAYERTYPE_SOIL" /><br /><a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bodemgebruik2008')}">2008 hoofdgroep</a> | <a href="${fn:replace(fn:escapeXml(adreslink), 'cID', 'bodemgebruik2008sub')}">2008</a></li>
 								</ul>
 							</li>
 							<li><a href="#">Omgevingsadressendichtheid<span><fmt:message key="KEY_TOOLTIP81" /></span></a>

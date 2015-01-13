@@ -4902,21 +4902,43 @@
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bodemgebruik2010</id>
-		<name>Bestand Bodemgebruik 2010</name>
+		<name>Bestand Bodemgebruik 2010 hoofdgroep</name>
 		<layers>bbg2010_hoofdgroep</layers>
 		<url>http://geodata.nationaalgeoregister.nl/bestandbodemgebruik2010/wms</url>
 		<styles>bbg_2010_hoofdgroep</styles>
-		<attributes>bg2008a</attributes>
+		<attributes>Hoofdgroep</attributes>
 		<aliases>Hoofdgroep</aliases>
+		<zoom>1</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>bodemgebruik2010sub</id>
+		<name>Bestand Bodemgebruik 2010</name>
+		<layers>bbg2010</layers>
+		<url>http://geodata.nationaalgeoregister.nl/bestandbodemgebruik2010/wms</url>
+		<styles>bbg_2010</styles>
+		<attributes>Hoofdgroep</attributes>
+		<aliases>Hoofdgroep</aliases>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>bodemgebruik2008</id>
-		<name>Bestand Bodemgebruik 2008</name>
+		<name>Bestand Bodemgebruik 2008 hoofdgroep</name>
 		<layers>bbg2008_hoofdgroep</layers>
 		<url>http://geodata.nationaalgeoregister.nl/bestandbodemgebruik2008/wms</url>
 		<styles>bestandbodemgebruik2008_bbg2008hoofdgroep</styles>
-		<attributes>bg2008a</attributes>
+		<attributes>Hoofdgroep</attributes>
 		<aliases>Hoofdgroep</aliases>
+		<zoom>1</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>bodemgebruik2008sub</id>
+		<name>Bestand Bodemgebruik 2008</name>
+		<layers>bbg2008</layers>
+		<url>http://geodata.nationaalgeoregister.nl/bestandbodemgebruik2008/wms</url>
+		<styles>bestandbodemgebruik2008_bbg2008</styles>
+		<attributes>Hoofdgroep</attributes>
+		<aliases>Hoofdgroep</aliases>
+		<zoom>7</zoom>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>gemeenten2012_omgevingsadressendichtheid</id>
