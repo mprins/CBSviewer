@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.cbs.cbsviewer</groupId>
@@ -130,6 +130,7 @@
 			<properties>
 				<jdk.version>1.8</jdk.version>
 				<surefire.argline />
+				<jdk8.javadoc.param>-Xdoclint:none</jdk8.javadoc.param>
 			</properties>
 		</profile>
 		<profile>
@@ -173,7 +174,7 @@
 			</build>
 		</profile>
 		<profile>
-			<!-- specify this profile to build openlayers as part of the build, ie. 
+			<!-- specify this profile to build openlayers as part of the build, ie.
 				-Popenlayers -->
 			<id>openlayers</id>
 			<properties>
@@ -256,20 +257,20 @@
 								</goals>
 								<configuration>
 									<target>
-										<setproxy proxyhost="${http.proxyHost}" 
+										<setproxy proxyhost="${http.proxyHost}"
 												  proxyport="${http.proxyPort}" />
 										<mkdir dir="${basedir}/cache" />
-										<get src="https://dl.google.com/closure-compiler/compiler-latest.zip" 
-											 dest="${basedir}/cache/" 
+										<get src="https://dl.google.com/closure-compiler/compiler-latest.zip"
+											 dest="${basedir}/cache/"
 											 usetimestamp="true" />
-										<unzip src="${basedir}/cache/compiler-latest.zip" 
+										<unzip src="${basedir}/cache/compiler-latest.zip"
 											   dest="${basedir}/target">
 											<patternset>
 												<include name="**/compiler.jar" />
 											</patternset>
 										</unzip>
-										<copy file="${basedir}/target/compiler.jar" 
-											  tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar" 
+										<copy file="${basedir}/target/compiler.jar"
+											  tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar"
 											  overwrite="true" />
 									</target>
 								</configuration>
@@ -283,7 +284,7 @@
 								<configuration>
 									<!-- copy files into build -->
 									<target>
-										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers.js" 
+										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers.js"
 											  tofile="src/main/webapp/lib/OpenLayers.js" />
 									</target>
 								</configuration>
@@ -296,7 +297,7 @@
 								</goals>
 								<configuration>
 									<target>
-										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js" 
+										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js"
 											  tofile="src/test/js/lib/OpenLayers-test.js" />
 									</target>
 								</configuration>
@@ -454,13 +455,13 @@
 						</goals>
 						<configuration>
 							<target>
-								<setproxy proxyhost="${http.proxyHost}" 
+								<setproxy proxyhost="${http.proxyHost}"
 										  proxyport="${http.proxyPort}" />
 								<mkdir dir="${basedir}/cache" />
-								<get src="http://yslow.org/yslow-phantomjs-3.1.8.zip" 
-									 dest="${basedir}/cache/" 
+								<get src="http://yslow.org/yslow-phantomjs-3.1.8.zip"
+									 dest="${basedir}/cache/"
 									 usetimestamp="true" />
-								<unzip src="${basedir}/cache/yslow-phantomjs-3.1.8.zip" 
+								<unzip src="${basedir}/cache/yslow-phantomjs-3.1.8.zip"
 									   dest="${basedir}/target">
 									<patternset>
 										<include name="**/yslow.js" />
@@ -542,7 +543,7 @@
 					<excludes>
 						<exclude>**/*IntegrationTest.java</exclude>
 					</excludes>
-					<!-- work around voor java 7. see: 
+					<!-- work around voor java 7. see:
 					http://stackoverflow.com/questions/10869127/maven-build-causes-verifyerror-with-java-1-7
 					-->
 					<argLine>${surefire.argline}</argLine>
@@ -849,7 +850,7 @@
 								<stylesheet>java</stylesheet>
 								<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
 								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -useimports</additionalparam>
-								<additionalparam>-Xdoclint:none</additionalparam>
+								<additionalparam>${jdk8.javadoc.param}</additionalparam>
 								<docletArtifact>
 									<groupId>org.umlgraph</groupId>
 									<artifactId>umlgraph</artifactId>
@@ -1137,7 +1138,7 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
+				<!--This plugin's configuration is used to store Eclipse m2e settings
 					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
